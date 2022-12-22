@@ -2762,6 +2762,7 @@
 #include "code\modules\WVM\wvm.dm"
 #include "code\modules\zombie\items.dm"
 #include "code\modules\zombie\organs.dm"
+#include "code\Tuberculosis\parasite.dmm"
 #include "interactions\_interaction.dm"
 #include "interactions\interaction_definitions.dm"
 #include "interactions\interaction_interface.dm"
