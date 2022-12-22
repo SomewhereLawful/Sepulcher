@@ -1,0 +1,9 @@
+{
+    "map_name": "Panacea",
+    "map_path": "map_files/Panacea",
+    "map_file": "Panacea.dmm",
+    "shuttles": {
+	   	"emergency": "emergency_box",
+	    "ferry": "ferry_fancy"
+    }
+}
