@@ -1,6 +1,4 @@
-// Parasites //
-
-/obj/item/parasite // If you get this ingame, then something's broken.
+/obj/item/parasite
 	name = "broken foreign flesh"
 	desc = "Deformity induced by poor vision of an unseen machination."
 	icon = 'icons/obj/parasite.dmi'
