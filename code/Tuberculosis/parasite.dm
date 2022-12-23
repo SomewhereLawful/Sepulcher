@@ -26,9 +26,3 @@
 	//infect_desc = "They wheeze with each breath."
 	//tox_adjust = 0
 	//will_adjust = 0
-
-/obj/item/parasite/sewer_polyp
-	name = "sewer polyp"
-	desc = "A parasite found in sewer water."
-	icon_state = "broken"
-	//infect_desc = "Their body appears to be wasting from malnutrition."

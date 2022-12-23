@@ -1281,12 +1281,6 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					facial_hair_color = random_short_color()
 				if("facial_hair_style")
 					facial_hair_style = random_facial_hair_style(gender)
-				if("underwear")
-					underwear = random_underwear(gender)
-				if("undershirt")
-					undershirt = random_undershirt(gender)
-				if("socks")
-					socks = random_socks()
 				if(BODY_ZONE_PRECISE_EYES)
 					eye_color = random_eye_color()
 				if("s_tone")
@@ -1590,9 +1584,6 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 						gender = FEMALE
 					else
 						gender = MALE
-					underwear = random_underwear(gender)
-					undershirt = random_undershirt(gender)
-					socks = random_socks()
 					facial_hair_style = random_facial_hair_style(gender)
 					hair_style = random_hair_style(gender)
 
