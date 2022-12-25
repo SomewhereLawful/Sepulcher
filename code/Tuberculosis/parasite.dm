@@ -1,4 +1,4 @@
-/obj/item/parasite
+/obj/item/parasite // Something done broke if you get this
 	name = "broken foreign flesh"
 	desc = "Deformity induced by poor vision of an unseen machination."
 	icon = 'icons/obj/parasite.dmi'
