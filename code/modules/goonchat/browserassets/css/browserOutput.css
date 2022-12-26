@@ -242,9 +242,9 @@ a.popt {text-decoration: none;}
 ******************************************/
 
 /* MOTD */
-.motd {color: #638500;	font-family: Verdana, sans-serif;}
-.motd h1, .motd h2, .motd h3, .motd h4, .motd h5, .motd h6 {color: #638500;	text-decoration: underline;}
-.motd a, .motd a:link, .motd a:visited, .motd a:active, .motd a:hover {color: #638500;}
+.motd {color: #810a7f;	font-family: Verdana, sans-serif;}
+.motd h1, .motd h2, .motd h3, .motd h4, .motd h5, .motd h6 {color: #810a7f;	text-decoration: underline;}
+.motd a, .motd a:link, .motd a:visited, .motd a:active, .motd a:hover {color: #810a7f;}
 
 /* ADD HERE FOR BOLD */
 .bold, .name, .prefix, .ooc, .looc, .adminooc, .admin, .medal, .yell {font-weight: bold;}
@@ -403,7 +403,7 @@ h1.alert, h2.alert		{color: #000000;}
 
 .icon 					{height: 1em;	width: auto;}
 
-.memo					{color: #638500;	text-align: center;}
+.memo					{color: #810a7f;	text-align: center;}
 .memoedit				{text-align: center;	font-size: 16px;}
 .abductor				{color: #800080; font-style: italic;}
 .mind_control				{color: #A00D6F; font-size: 3; font-weight: bold; font-style: italic;}
