@@ -519,7 +519,7 @@
 
 /mob/dead/new_player/proc/ViewManifest()
 	var/dat = "<html><body>"
-	dat += "<h4>Wasteland Census</h4>"
+	dat += "<h4>The Flesh That Has Walked</h4>"
 	dat += GLOB.data_core.get_manifest(OOC = 1)
 
 	src << browse(dat, "window=manifest;size=387x420;can_close=1")
