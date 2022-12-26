@@ -8,7 +8,7 @@
     top: 100%;
     padding: 0 4px;
     margin-top: 1px;
-    border: 1px solid #40628a;
+    border: 1px solid #411d1e;
     background: black;
     color: white;
     content: attr(data-tooltip);
