@@ -1,7 +1,7 @@
 <!-- Most valid html will work in here, excluding images. -->
 
 <h1>Tuberculosis</h1>
-
+<b>Contains disturbing content, do not play if you cannot handle such themes.</b>
 <b>Witness our rules: </b>
 
 <i>
