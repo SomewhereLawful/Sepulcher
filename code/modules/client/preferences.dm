@@ -607,7 +607,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	dat += "<a href='?_src_=prefs;preference=reset_all'>Reset Setup</a>"
 	dat += "</center>"
 
-	var/datum/browser/popup = new(user, "preferences", "<div align='center'>Shape Your Flesh</div>", 640, 770)
+	var/datum/browser/popup = new(user, "preferences", "<div align='center'>Shape Your Flesh</div>", 640, 670)
 	popup.set_content(dat.Join())
 	popup.open(0)
 
