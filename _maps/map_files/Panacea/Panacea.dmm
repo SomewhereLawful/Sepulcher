@@ -1,17 +1,23 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "aj" = (
-/obj/structure/table,
-/turf/open/floor/f13/wood,
+/obj/effect/decal/waste{
+	tag = "icon-goo5";
+	icon_state = "goo5"
+	},
+/turf/open/indestructible/ground/outside/sidewalk,
 /area/f13/wasteland)
-"bl" = (
-/obj/effect/landmark/latejoin,
-/turf/open/indestructible/ground/outside/road,
+"al" = (
+/obj/structure/decoration/vent/rusty,
+/turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
 /area/f13/wasteland)
 "bn" = (
 /turf/open/floor/f13{
 	tag = "icon-floorrusty";
 	icon_state = "floorrusty"
 	},
+/area/f13/wasteland)
+"br" = (
+/turf/closed/indestructible,
 /area/f13/wasteland)
 "cb" = (
 /obj/structure/decoration/hatch,
@@ -20,8 +26,13 @@
 "cn" = (
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
 /area/f13/wasteland)
+"cw" = (
+/obj/structure/closet/crate/trashcart,
+/turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
+/area/f13/wasteland)
 "cF" = (
-/turf/closed/indestructible,
+/obj/structure/closet/crate/trashcart,
+/turf/open/indestructible/ground/outside/sidewalk,
 /area/f13/wasteland)
 "da" = (
 /turf/open/floor/f13/wood,
@@ -29,32 +40,21 @@
 "ft" = (
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/wasteland)
-"jX" = (
-/obj/structure/closet/crate/trashcart,
-/turf/open/indestructible/ground/outside/sidewalk,
-/area/f13/wasteland)
 "lD" = (
 /turf/open/indestructible/ground/outside/sidewalk{
 	tag = "icon-verticalleftborderleft0";
 	icon_state = "verticalleftborderleft0"
 	},
 /area/f13/wasteland)
-"mF" = (
-/turf/open/space/basic,
-/area/f13/wasteland)
-"oh" = (
-/obj/effect/decal/waste{
-	tag = "icon-goo12";
-	icon_state = "goo12"
-	},
-/turf/open/indestructible/ground/outside/road,
-/area/f13/wasteland)
-"om" = (
+"nj" = (
 /obj/structure/table,
 /turf/open/indestructible/ground/outside/sidewalk,
 /area/f13/wasteland)
 "oO" = (
 /turf/open/indestructible/ground/outside/dirt,
+/area/f13/wasteland)
+"oR" = (
+/turf/open/space/basic,
 /area/f13/wasteland)
 "pC" = (
 /turf/open/floor/f13{
@@ -74,12 +74,9 @@
 	icon_state = "riverwater"
 	},
 /area/f13/wasteland)
-"sR" = (
-/obj/effect/decal/waste{
-	tag = "icon-goo5";
-	icon_state = "goo5"
-	},
-/turf/open/indestructible/ground/outside/sidewalk,
+"sg" = (
+/obj/structure/fluff/rails,
+/turf/open/indestructible/ground/outside/desert,
 /area/f13/wasteland)
 "sS" = (
 /turf/open/floor/plating,
@@ -87,9 +84,12 @@
 "tv" = (
 /turf/closed/wall/r_wall,
 /area/f13/wasteland)
-"vc" = (
-/obj/structure/closet/crate/trashcart,
-/turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
+"xq" = (
+/obj/effect/decal/waste{
+	tag = "icon-goo12";
+	icon_state = "goo12"
+	},
+/turf/open/indestructible/ground/outside/road,
 /area/f13/wasteland)
 "xS" = (
 /obj/structure/fluff/arc,
@@ -107,10 +107,6 @@
 /area/f13/wasteland)
 "zp" = (
 /turf/open/indestructible/ground/outside/desert,
-/area/f13/wasteland)
-"zC" = (
-/obj/structure/decoration/vent/rusty,
-/turf/open/indestructible/ground/outside/sidewalk,
 /area/f13/wasteland)
 "BY" = (
 /obj/machinery/door/poddoor/gate{
@@ -135,6 +131,10 @@
 "HO" = (
 /obj/structure/simple_door/room,
 /turf/open/indestructible/ground/outside/sidewalk,
+/area/f13/wasteland)
+"IV" = (
+/obj/effect/landmark/latejoin,
+/turf/open/indestructible/ground/outside/road,
 /area/f13/wasteland)
 "JJ" = (
 /obj/structure/simple_door/room,
@@ -167,13 +167,9 @@
 "NO" = (
 /turf/open/indestructible/ground/outside/sidewalk,
 /area/f13/wasteland)
-"OW" = (
+"Ql" = (
 /obj/structure/decoration/vent/rusty,
-/turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
-/area/f13/wasteland)
-"Pf" = (
-/obj/structure/fluff/rails,
-/turf/open/indestructible/ground/outside/desert,
+/turf/open/indestructible/ground/outside/sidewalk,
 /area/f13/wasteland)
 "Tu" = (
 /turf/open/floor/f13{
@@ -187,6 +183,10 @@
 	tag = "icon-bluedirtychess2";
 	icon_state = "bluedirtychess2"
 	},
+/area/f13/wasteland)
+"Wh" = (
+/obj/structure/table,
+/turf/open/floor/f13/wood,
 /area/f13/wasteland)
 "Wv" = (
 /obj/structure/decoration/hatch{
@@ -244,10 +244,10 @@ zp
 zp
 zp
 zp
-Pf
+sg
 zp
 zp
-Pf
+sg
 zp
 zp
 zp
@@ -501,10 +501,10 @@ zp
 zp
 zp
 zp
-Pf
+sg
 zp
 zp
-Pf
+sg
 zp
 zp
 zp
@@ -758,10 +758,10 @@ zp
 zp
 zp
 zp
-Pf
+sg
 zp
 zp
-Pf
+sg
 zp
 zp
 zp
@@ -1015,10 +1015,10 @@ zp
 zp
 zp
 zp
-Pf
+sg
 zp
 zp
-Pf
+sg
 zp
 zp
 zp
@@ -1272,10 +1272,10 @@ zp
 zp
 zp
 zp
-Pf
+sg
 zp
 zp
-Pf
+sg
 zp
 zp
 zp
@@ -1529,10 +1529,10 @@ zp
 zp
 zp
 zp
-Pf
+sg
 zp
 zp
-Pf
+sg
 zp
 zp
 zp
@@ -1786,10 +1786,10 @@ zp
 zp
 zp
 zp
-Pf
+sg
 zp
 zp
-Pf
+sg
 zp
 zp
 zp
@@ -2043,10 +2043,10 @@ zp
 zp
 zp
 zp
-Pf
+sg
 zp
 zp
-Pf
+sg
 zp
 zp
 zp
@@ -2300,10 +2300,10 @@ zp
 zp
 zp
 zp
-Pf
+sg
 zp
 zp
-Pf
+sg
 zp
 zp
 zp
@@ -2557,10 +2557,10 @@ zp
 zp
 zp
 zp
-Pf
+sg
 zp
 zp
-Pf
+sg
 zp
 zp
 zp
@@ -2814,10 +2814,10 @@ zp
 zp
 zp
 zp
-Pf
+sg
 zp
 zp
-Pf
+sg
 zp
 zp
 zp
@@ -3071,10 +3071,10 @@ zp
 zp
 zp
 zp
-Pf
+sg
 zp
 zp
-Pf
+sg
 zp
 zp
 zp
@@ -3328,10 +3328,10 @@ zp
 zp
 zp
 zp
-Pf
+sg
 zp
 zp
-Pf
+sg
 zp
 zp
 zp
@@ -3585,10 +3585,10 @@ zp
 zp
 zp
 zp
-Pf
+sg
 zp
 zp
-Pf
+sg
 zp
 zp
 zp
@@ -3842,10 +3842,10 @@ zp
 zp
 zp
 zp
-Pf
+sg
 zp
 zp
-Pf
+sg
 zp
 zp
 zp
@@ -4099,10 +4099,10 @@ zp
 zp
 zp
 zp
-Pf
+sg
 zp
 zp
-Pf
+sg
 zp
 zp
 zp
@@ -4356,10 +4356,10 @@ zp
 zp
 zp
 zp
-Pf
+sg
 zp
 zp
-Pf
+sg
 zp
 zp
 zp
@@ -4613,10 +4613,10 @@ zp
 zp
 zp
 zp
-Pf
+sg
 zp
 zp
-Pf
+sg
 zp
 zp
 zp
@@ -4870,10 +4870,10 @@ zp
 zp
 zp
 zp
-Pf
+sg
 zp
 zp
-Pf
+sg
 zp
 zp
 zp
@@ -5127,10 +5127,10 @@ zp
 zp
 zp
 zp
-Pf
+sg
 zp
 zp
-Pf
+sg
 zp
 zp
 zp
@@ -5384,10 +5384,10 @@ zp
 zp
 zp
 zp
-Pf
+sg
 zp
 zp
-Pf
+sg
 zp
 zp
 zp
@@ -5641,10 +5641,10 @@ zp
 zp
 zp
 zp
-Pf
+sg
 zp
 zp
-Pf
+sg
 zp
 zp
 zp
@@ -5898,10 +5898,10 @@ zp
 zp
 zp
 zp
-Pf
+sg
 zp
 zp
-Pf
+sg
 zp
 zp
 zp
@@ -6155,10 +6155,10 @@ zp
 zp
 zp
 zp
-Pf
+sg
 zp
 zp
-Pf
+sg
 zp
 zp
 zp
@@ -6412,10 +6412,10 @@ zp
 zp
 zp
 zp
-Pf
+sg
 zp
 zp
-Pf
+sg
 zp
 zp
 zp
@@ -6669,10 +6669,10 @@ zp
 zp
 zp
 zp
-Pf
+sg
 zp
 zp
-Pf
+sg
 zp
 zp
 zp
@@ -6926,10 +6926,10 @@ zp
 zp
 zp
 zp
-Pf
+sg
 zp
 zp
-Pf
+sg
 zp
 zp
 zp
@@ -7183,10 +7183,10 @@ zp
 zp
 zp
 zp
-Pf
+sg
 zp
 zp
-Pf
+sg
 zp
 zp
 zp
@@ -7440,10 +7440,10 @@ zp
 zp
 zp
 zp
-Pf
+sg
 zp
 zp
-Pf
+sg
 zp
 zp
 zp
@@ -7697,10 +7697,10 @@ zp
 zp
 zp
 zp
-Pf
+sg
 zp
 zp
-Pf
+sg
 zp
 zp
 zp
@@ -7954,10 +7954,10 @@ zp
 zp
 zp
 zp
-Pf
+sg
 zp
 zp
-Pf
+sg
 zp
 zp
 zp
@@ -8211,10 +8211,10 @@ zp
 zp
 zp
 zp
-Pf
+sg
 zp
 zp
-Pf
+sg
 zp
 zp
 zp
@@ -8468,10 +8468,10 @@ zp
 zp
 zp
 zp
-Pf
+sg
 zp
 zp
-Pf
+sg
 zp
 zp
 zp
@@ -8725,10 +8725,10 @@ zp
 zp
 zp
 zp
-Pf
+sg
 zp
 zp
-Pf
+sg
 zp
 zp
 zp
@@ -8982,10 +8982,10 @@ zp
 zp
 zp
 zp
-Pf
+sg
 zp
 zp
-Pf
+sg
 zp
 zp
 zp
@@ -9239,10 +9239,10 @@ zp
 zp
 zp
 zp
-Pf
+sg
 zp
 zp
-Pf
+sg
 zp
 zp
 zp
@@ -9496,10 +9496,10 @@ zp
 zp
 zp
 zp
-Pf
+sg
 zp
 zp
-Pf
+sg
 zp
 zp
 zp
@@ -9753,10 +9753,10 @@ zp
 zp
 zp
 zp
-Pf
+sg
 zp
 zp
-Pf
+sg
 zp
 zp
 zp
@@ -10010,10 +10010,10 @@ zp
 zp
 zp
 zp
-Pf
+sg
 zp
 zp
-Pf
+sg
 zp
 zp
 zp
@@ -10267,10 +10267,10 @@ zp
 zp
 zp
 zp
-Pf
+sg
 zp
 zp
-Pf
+sg
 zp
 zp
 zp
@@ -10524,10 +10524,10 @@ zp
 zp
 zp
 zp
-Pf
+sg
 zp
 zp
-Pf
+sg
 zp
 zp
 zp
@@ -10781,10 +10781,10 @@ zp
 zp
 zp
 zp
-Pf
+sg
 zp
 zp
-Pf
+sg
 zp
 zp
 zp
@@ -11038,10 +11038,10 @@ zp
 zp
 zp
 zp
-Pf
+sg
 zp
 zp
-Pf
+sg
 zp
 zp
 zp
@@ -11295,10 +11295,10 @@ zp
 zp
 zp
 zp
-Pf
+sg
 zp
 zp
-Pf
+sg
 zp
 zp
 zp
@@ -11552,10 +11552,10 @@ zp
 zp
 zp
 zp
-Pf
+sg
 zp
 zp
-Pf
+sg
 zp
 zp
 zp
@@ -11809,10 +11809,10 @@ zp
 zp
 zp
 zp
-Pf
+sg
 zp
 zp
-Pf
+sg
 zp
 zp
 zp
@@ -12066,7 +12066,7 @@ zp
 zp
 zp
 zp
-Pf
+sg
 zp
 zp
 zp
@@ -12323,7 +12323,7 @@ zp
 zp
 zp
 zp
-Pf
+sg
 zp
 zp
 zp
@@ -12580,7 +12580,7 @@ zp
 zp
 zp
 zp
-Pf
+sg
 zp
 zp
 zp
@@ -23161,7 +23161,7 @@ tv
 NO
 tv
 tv
-om
+nj
 tv
 tv
 tv
@@ -24956,14 +24956,14 @@ tv
 tv
 tv
 tv
-jX
+cF
 NO
 NO
 NO
 NO
 NO
 NO
-zC
+Ql
 NO
 NO
 NO
@@ -25230,7 +25230,7 @@ tv
 tv
 tv
 tv
-tv
+NO
 NO
 NO
 tv
@@ -25733,15 +25733,15 @@ NO
 NO
 NO
 NO
-jX
-jX
+cF
+cF
 NO
 NO
 NO
 NO
 tv
 NO
-zC
+Ql
 NO
 tv
 tv
@@ -26512,7 +26512,7 @@ NO
 NO
 tv
 NO
-sR
+aj
 tv
 tv
 NO
@@ -27554,7 +27554,7 @@ tv
 tv
 tv
 tv
-OW
+al
 NO
 NO
 NO
@@ -27803,8 +27803,8 @@ cn
 cn
 cn
 cn
-vc
-vc
+cw
+cw
 cn
 cn
 NO
@@ -29596,7 +29596,7 @@ cn
 cn
 cn
 Wv
-bl
+IV
 zc
 xS
 zc
@@ -30338,7 +30338,7 @@ tv
 NO
 NO
 NO
-zC
+Ql
 NO
 NO
 NO
@@ -30366,7 +30366,7 @@ cn
 cn
 cn
 Tu
-oh
+xq
 zc
 zc
 zc
@@ -31633,8 +31633,8 @@ tv
 tv
 tv
 tv
-om
-om
+nj
+nj
 tv
 tv
 tv
@@ -33462,10 +33462,10 @@ NO
 NO
 NO
 NO
-om
-om
-om
-om
+nj
+nj
+nj
+nj
 tv
 tv
 NO
@@ -33719,7 +33719,7 @@ NO
 NO
 NO
 NO
-om
+nj
 NO
 NO
 NO
@@ -33948,9 +33948,9 @@ da
 da
 da
 tv
-aj
-aj
-aj
+Wh
+Wh
+Wh
 tv
 tv
 tv
@@ -47225,9 +47225,9 @@ zp
 zp
 zp
 zp
-cF
-cF
-cF
+br
+br
+br
 zp
 zp
 zp
@@ -47482,9 +47482,9 @@ zp
 zp
 zp
 zp
-cF
-mF
-cF
+br
+oR
+br
 zp
 zp
 zp
@@ -47739,9 +47739,9 @@ zp
 zp
 zp
 zp
-cF
-cF
-cF
+br
+br
+br
 zp
 zp
 zp
