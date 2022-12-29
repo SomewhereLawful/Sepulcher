@@ -6,6 +6,7 @@
 	default_features = list("mcolor" = "FFF", "tail_human" = "None", "ears" = "None", "wings" = "None")
 	use_skintones = 0 // They all look like burnt corpses
 	skinned_type = /obj/item/stack/sheet/animalhide/human
+	sexes = 0
 
 	var/info_text = "Proving you're capable of carting shit and scrap metal, you are now on of the city's rank and file proletariat. You can do more mentally challenging work without dying immediately."
 

@@ -7,31 +7,14 @@
 	var/t_has = p_have()
 	var/t_is = p_are()
 	var/obscure_name
-	var/ex_age
 
 	if(isliving(user))
 		var/mob/living/L = user
 		if(L.has_trait(TRAIT_PROSOPAGNOSIA))
 			obscure_name = TRUE
 
-	switch(age)
-		if(1 to 19) //Children are non-essential.
-			ex_age = "teenage"
-		if(20 to 29)
-			ex_age = "young adult"
-		if(30 to 44)
-			ex_age = "adult"
-		if(45 to 64)
-			ex_age = "middle-aged"
-		if(65 to INFINITY) //Respect your immortal elders.
-			ex_age = "elderly"
-	var/fuckbyond = ""
-	if(gender == MALE)
-		fuckbyond = "man"
-	else
-		fuckbyond = "woman"
 	var/skipface = (wear_mask && (wear_mask.flags_inv & HIDEFACE)) || (head && (head.flags_inv & HIDEFACE))
-	var/msg = "<span class='info'>*---------*\nThis is <EM>[!obscure_name ? name : "Unknown"]</EM>[skipface ? "!\n" : ", \an [ex_age] [fuckbyond]!\n"]" //a whole lotta shitcode
+	var/msg = "<span class='info'>*---------*\nThis is <EM>[!obscure_name ? name : "Unknown"]</EM>[skipface ? "!\n" : ".\n"]" //a whole lotta shitcode
 	var/list/obscured = check_obscured_slots()
 
 	//uniform

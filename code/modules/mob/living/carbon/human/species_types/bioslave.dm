@@ -8,6 +8,7 @@
 	skinned_type = /obj/item/stack/sheet/animalhide/human
 	no_equip = list(SLOT_WEAR_MASK, SLOT_WEAR_SUIT, SLOT_GLOVES, SLOT_SHOES, SLOT_W_UNIFORM, SLOT_S_STORE)
 	nojumpsuit = 1
+	sexes = 0
 
 	var/info_text = "Birthed whole, you awake from dreams of soft, undefiled life. You are little more than rough, callous flesh without purpose. Get to carting shit and scrap metal."
 
