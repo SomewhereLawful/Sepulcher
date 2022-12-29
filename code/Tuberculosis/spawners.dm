@@ -10,8 +10,8 @@
 	permanent = TRUE
 	roundstart = FALSE
 	death = FALSE
-	mob_species = /datum/species/pod // Bioslave later
-	flavour_text = "Birthed whole, you awake from dreams of soft, undefiled life. You are little more than rough, callous flesh without purpose. Get to carting shit and scrap metal."
+	mob_species = /datum/species/bioslave
+	flavour_text = null
 	assignedrole = "Bioslave"
 
 /obj/effect/mob_spawn/human/bioslave/special(mob/living/new_spawn)

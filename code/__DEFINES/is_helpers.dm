@@ -59,8 +59,6 @@
 #define isluminescent(A) (is_species(A, /datum/species/jelly/luminescent))
 #define iszombie(A) (is_species(A, /datum/species/zombie))
 #define ishumanbasic(A) (is_species(A, /datum/species/human))
-//f13 edit
-#define isghoul(A) (is_species(A, /datum/species/ghoul))
 
 //why arent catpeople a subspecies
 #define iscatperson(A) (ishumanbasic(A) && ( A.dna.features["ears"] == "Cat" || A.dna.features["tail_human"] == "Cat") )
