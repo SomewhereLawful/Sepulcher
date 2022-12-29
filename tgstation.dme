@@ -2761,6 +2761,7 @@
 #include "code\modules\WVM\wvm.dm"
 #include "code\modules\zombie\items.dm"
 #include "code\modules\zombie\organs.dm"
+#include "code\Tuberculosis\floors.dm"
 #include "code\Tuberculosis\parasite.dm"
 #include "code\Tuberculosis\spawners.dm"
 #include "code\Tuberculosis\walls.dm"

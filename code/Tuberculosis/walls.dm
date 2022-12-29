@@ -9,3 +9,8 @@
 
 /turf/closed/indestructible/tuberculosis/brown_brick
 	name = "wall"
+
+/turf/closed/indestructible/nothing
+	name = "nothing"
+	desc = "The nothingness of the world, unseen as it should. If found, dark omens are afoot."
+	icon_state = "black"
