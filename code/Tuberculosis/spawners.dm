@@ -20,6 +20,25 @@
 		H.underwear = "Nude"
 		H.update_body()
 
+/obj/effect/mob_spawn/human/prole
+	name = "utilitarian birthing machine"
+	desc = "Births Proletariat workers."
+	icon = 'icons/obj/tuberculosis_spawners.dmi'
+	icon_state = "prole"
+	density = TRUE
+	permanent = TRUE
+	roundstart = FALSE
+	death = FALSE
+	mob_species = /datum/species/proletariat
+	flavour_text = null
+	assignedrole = "Proletariat"
+
+/obj/effect/mob_spawn/human/prole/special(mob/living/new_spawn)
+	if(ishuman(new_spawn))
+		var/mob/living/carbon/human/H = new_spawn
+		H.underwear = "Nude"
+		H.update_body()
+
 /obj/effect/mob_spawn/human/kommandant
 	name = "kommandant casket"
 	desc = "Broken saintly flesh goes here to be reformed."
