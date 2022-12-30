@@ -10,11 +10,8 @@
 	nojumpsuit = 1
 	sexes = 0
 
-	var/info_text = "Birthed whole, you awake from dreams of soft, undefiled life. You are little more than rough, callous flesh without purpose. Get to carting shit and scrap metal."
-
 /datum/species/bioslave/on_species_gain(mob/living/carbon/C, datum/species/old_species)
 	. = ..()
-	to_chat(C, "[info_text]")
 
 	C.real_name = "[pick(GLOB.bioslave_first)] [pick(GLOB.bioslave_synonym)]"
 	C.name = C.real_name // This is copied from Shadowpeople, could probably be made better
