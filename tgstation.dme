@@ -2767,6 +2767,8 @@
 #include "code\Tuberculosis\parasite.dm"
 #include "code\Tuberculosis\spawners.dm"
 #include "code\Tuberculosis\walls.dm"
+#include "code\Tuberculosis\consumables\food.dm"
+#include "code\Tuberculosis\consumables\medicine.dm"
 #include "interactions\_interaction.dm"
 #include "interactions\interaction_definitions.dm"
 #include "interactions\interaction_interface.dm"
