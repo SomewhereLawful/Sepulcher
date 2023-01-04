@@ -39,6 +39,25 @@
 		H.underwear = "Nude"
 		H.update_body()
 
+/obj/effect/mob_spawn/human/bougie
+	name = "embraced birth casket"
+	desc = "Reforms Bourgeoise, those without taint of body."
+	icon = 'icons/obj/tuberculosis_spawners.dmi'
+	icon_state = "prole"
+	density = TRUE
+	permanent = TRUE
+	roundstart = FALSE
+	death = FALSE
+	mob_species = /datum/species/human
+	flavour_text = "<span class='danger'>You are the few of a dead breed. Without bodily taint, you have shed sin and live now as the city's high caste responsible for export and fine art.</span>"
+	assignedrole = "Bourgeoise"
+
+/obj/effect/mob_spawn/human/bougie/special(mob/living/new_spawn)
+	if(ishuman(new_spawn))
+		var/mob/living/carbon/human/H = new_spawn
+		H.underwear = "Nude"
+		H.update_body()
+
 /obj/effect/mob_spawn/human/kommandant
 	name = "kommandant casket"
 	desc = "Broken saintly flesh goes here to be reformed."
