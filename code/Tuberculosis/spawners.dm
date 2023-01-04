@@ -10,6 +10,7 @@
 	permanent = TRUE
 	roundstart = FALSE
 	death = FALSE
+	uses = -1
 	mob_species = /datum/species/bioslave
 	flavour_text = "<span class='danger'>Birthed whole, you awake from dreams of soft, undefiled life. You are little more than rough, callous flesh without purpose. Get to carting shit and scrap metal.</span>"
 	assignedrole = "Bioslave"
@@ -29,6 +30,7 @@
 	permanent = TRUE
 	roundstart = FALSE
 	death = FALSE
+	uses = -1
 	mob_species = /datum/species/proletariat
 	flavour_text = "<span class='danger'>Proving you're capable of carting shit and scrap metal, you are now on of the city's rank and file proletariat. You can do more mentally challenging work without dying immediately.</span>"
 	assignedrole = "Proletariat"
@@ -48,6 +50,7 @@
 	permanent = TRUE
 	roundstart = FALSE
 	death = FALSE
+	uses = -1
 	mob_species = /datum/species/human
 	flavour_text = "<span class='danger'>You are the few of a dead breed. Without bodily taint, you have shed sin and live now as the city's high caste responsible for export and fine art.</span>"
 	assignedrole = "Bourgeoise"
@@ -67,8 +70,9 @@
 	permanent = TRUE
 	roundstart = FALSE
 	death = FALSE
+	uses = -1
 	mob_species = /datum/species/pod // Kommandant later
-	flavour_text = "<span class='danger'>You are not reborn, but rebuilt. The heavy clothes you wear are stitched to your inhuman body. You are this city's leader, their god and guide. Lead them well.</span>"
+	flavour_text = "<span class='danger'>You are rebuilt flesh of saints. Your duty is to the people; ascention and guidance are in your hands. Your word is law, your will manifest.</span>"
 	assignedrole = "Kommandant"
 
 /obj/effect/mob_spawn/human/kommandant/special(mob/living/new_spawn)
