@@ -3,4 +3,4 @@
 
 /obj/structure/shitheap
 	name = "shitheap"
-	desc = "The base of the city;s cultivation. Add dung and fluid to grow mushrooms."
+	desc = "The base of the city's cultivation. Add dung and fluid to grow mushrooms."

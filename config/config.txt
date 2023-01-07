@@ -21,7 +21,7 @@ $include antag_rep.txt
  SERVERSQLNAME baddeathclaw
 
 ## Station name: The name of the station as it is referred to in-game. If commented out, the game will generate a random name instead.
-STATIONNAME Mojave Wasteland
+STATIONNAME Tuberculosis
 
 ## Put on byond hub: Uncomment this to put your server on the byond hub.
 HUB
