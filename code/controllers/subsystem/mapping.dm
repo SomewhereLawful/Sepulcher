@@ -217,10 +217,10 @@ SUBSYSTEM_DEF(mapping)
 	// ensure we have space_level datums for compiled-in maps
 	InitializeDefaultZLevels()
 
-	// load the wasteland
+	// load the city map
 	station_start = world.maxz + 1
 	INIT_ANNOUNCE("Loading [config.map_name]...")
-	LoadGroup(FailedZs, "Wasteland", config.map_path, config.map_file, config.traits, ZTRAITS_STATION)
+	LoadGroup(FailedZs, "The City", config.map_path, config.map_file, config.traits, ZTRAITS_STATION)
 
 	// load the dungeons
 	LoadGroup(FailedZs, "Dungeons", config.map_path, "Dungeons.dmm", default_traits = ZTRAITS_DUNGEON)
@@ -263,7 +263,7 @@ GLOBAL_LIST_EMPTY(the_station_areas)
 				GLOB.the_station_areas.Add(A.type)
 
 	if(!GLOB.the_station_areas.len)
-		log_world("ERROR: Wasteland areas list failed to generate!")
+		log_world("ERROR: The City areas list failed to generate!")
 
 /datum/controller/subsystem/mapping/proc/maprotate()
 	var/players = GLOB.clients.len

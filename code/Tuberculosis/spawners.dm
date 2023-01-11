@@ -71,7 +71,7 @@
 	roundstart = FALSE
 	death = FALSE
 	uses = -1
-	mob_species = /datum/species/pod // Kommandant later
+	mob_species = /datum/species/kommandant
 	flavour_text = "<span class='danger'>You are rebuilt flesh of saints. Your duty is to the people; ascention and guidance are in your hands. Your word is law, your will manifest.</span>"
 	assignedrole = "Kommandant"
 
