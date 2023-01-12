@@ -293,7 +293,7 @@ SUBSYSTEM_DEF(ticker)
 	round_start_time = world.time
 	SSdbcore.SetRoundStart()
 
-	to_chat(world, "<FONT color='blue'><B>The sunless sky smiles with eternal malice upon [station_name()].</B></FONT>")
+	to_chat(world, "<FONT color='purple'><B>The sunless sky smiles with eternal malice upon [station_name()].</B></FONT>")
 	SEND_SOUND(world, sound(begin_music))
 
 	current_state = GAME_STATE_PLAYING
