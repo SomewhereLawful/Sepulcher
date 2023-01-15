@@ -407,15 +407,15 @@ SUBSYSTEM_DEF(ticker)
 	if(selected_tip)
 		m = selected_tip
 	else
-		var/list/randomtips = world.file2list("strings/tips.txt")
-		var/list/memetips = world.file2list("strings/sillytips.txt")
+		var/list/randomtips = world.file2list("strings/tips/tips.txt")
+		var/list/memetips = world.file2list("strings/tips/loretips.txt")
 		if(randomtips.len && prob(95))
 			m = pick(randomtips)
 		else if(memetips.len)
 			m = pick(memetips)
 
 	if(m)
-		to_chat(world, "<font color='purple'><b>Tip of the round: </b>[html_encode(m)]</font>")
+		to_chat(world, "<font color='purple'><b>Transfered Arcana: </b>[html_encode(m)]</font>")
 
 /datum/controller/subsystem/ticker/proc/check_queue()
 	if(!queued_players.len)
