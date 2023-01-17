@@ -32,7 +32,7 @@
 	death = FALSE
 	uses = -1
 	mob_species = /datum/species/proletariat
-	flavour_text = "<span class='danger'>Proving you're capable of carting shit and scrap metal, you are now on of the city's rank and file proletariat. You can do more mentally challenging work without dying immediately.</span>"
+	flavour_text = "<span class='danger'>Proving you're capable of carting shit and scrap metal, you are now one of the city's rank and file proletariat. You can do more mentally challenging work without dying immediately.</span>"
 	assignedrole = "Proletariat"
 
 /obj/effect/mob_spawn/human/prole/special(mob/living/new_spawn)
