@@ -1,7 +1,5 @@
 GLOBAL_LIST_INIT(command_positions, list(
     "Elder",
-    "Head Scribe",
-    "Paladin",
     "Legion Centurion",
 	"Legion Venator",
     "NCR Captain",
@@ -11,70 +9,6 @@ GLOBAL_LIST_INIT(command_positions, list(
     "Chief of Security",
     "Mayor",
     "Sheriff"
-))
-
-GLOBAL_LIST_INIT(brotherhood_positions, list(
-	"Elder",
-	"Head Scribe",
-	"Paladin",
-	"Knight",
-	"Scribe",
-	"Initiate Knight",
-	"Initiate Scribe"
-))
-
-GLOBAL_LIST_INIT(den_positions, list(
-	"Mayor",
-	"Sheriff",
-	"Doctor",
-	"Settler",
-	"Deputy",
-	"Farmer",
-	"Prospector"
-))
-
-GLOBAL_LIST_INIT(legion_positions, list(
-	"Legion Centurion",
-	"Legion Veteran Decanus",
-	"Legion Libritor",
-	"Veteran Legionnaire",
-	"Legion Prime Decanus",
-	"Prime Legionnaire",
-	"Legion Recruit Decanus",
-	"Recruit Legionnaire",
-	"Legion Vexillarius",
-	"Legion Venator",
-	"Legion Explorer",
-	"Legion Scout",
-	"Camp Follower"
-))
-
-GLOBAL_LIST_INIT(ncr_positions, list(
-	"NCR Captain",
-	"NCR Lieutenant",
-	"NCR Sergeant",
-	"NCR Medical Officer",
-	"NCR Engineer",
-	"NCR Heavy Trooper",
-	"NCR Corporal",
-	"NCR Trooper",
-	"NCR Recruit",
-	"NCR Scout Lieutenant",
-	"NCR Scout Sergeant",
-	"NCR Scout",
-	"NCR Veteran Ranger",
-	"NCR Patrol Ranger",
-	"NCR Recon Ranger"
-))
-
-GLOBAL_LIST_INIT(vault_positions, list(
-	"Overseer",
-	"Chief of Security",
-	"Vault-tec Doctor",
-	"Vault-tec Scientist",
-	"Vault-tec Security",
-	"Vault-tec Engineer",
-	"Vault Dweller"
 ))
 
 GLOBAL_LIST_INIT(wasteland_positions, list(
@@ -141,13 +75,8 @@ GLOBAL_LIST_INIT(nonhuman_positions, list(
 	ROLE_PAI))
 */
 GLOBAL_LIST_INIT(exp_jobsmap, list(
-	EXP_TYPE_CREW		 = list("titles" = command_positions | brotherhood_positions | den_positions | legion_positions | ncr_positions | vault_positions | wasteland_positions),
+	EXP_TYPE_CREW		 = list("titles" = command_positions | wasteland_positions),
 	EXP_TYPE_COMMAND     = list("titles" = command_positions	),
-	EXP_TYPE_BROTHERHOOD = list("titles" = brotherhood_positions),
-	EXP_TYPE_DEN         = list("titles" = den_positions		),
-	EXP_TYPE_LEGION      = list("titles" = legion_positions		),
-	EXP_TYPE_NCR         = list("titles" = ncr_positions		),
-	EXP_TYPE_VAULT       = list("titles" = vault_positions		),
 	EXP_TYPE_WASTELAND	 = list("titles" = wasteland_positions	),
 	EXP_TYPE_SECURITY 	= list("titles" = security_positions),
 	EXP_TYPE_NCRCOMMAND = list("titles" = list("NCR Lieutenant","NCR Sergeant","NCR Heavy Trooper","NCR Captain","NCR Medical Officer","NCR Scout Sergeant","NCR Scout Lieutenant")),

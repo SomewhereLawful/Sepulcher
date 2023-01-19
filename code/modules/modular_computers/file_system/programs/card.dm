@@ -372,11 +372,6 @@
 
 			/* TODO: update this + tgui with new job lists */
 			if(show_assignments)
-				data["engineering_jobs"] = format_jobs(GLOB.brotherhood_positions)
-				data["medical_jobs"] = format_jobs(GLOB.den_positions)
-				data["science_jobs"] = format_jobs(GLOB.ncr_positions)
-				data["security_jobs"] = format_jobs(GLOB.legion_positions)
-				data["cargo_jobs"] = format_jobs(GLOB.vault_positions)
 				data["civilian_jobs"] = format_jobs(GLOB.wasteland_positions)
 				data["centcom_jobs"] = format_jobs(get_all_centcom_jobs())
 
