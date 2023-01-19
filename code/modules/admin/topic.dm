@@ -658,25 +658,6 @@
 				counter = 0
 		dat += "</tr></table>"
 
-	//wasteland_positions (Green)
-		counter = 0
-		dat += "<table cellpadding='1' cellspacing='0' width='100%'>"
-		dat += "<tr align='center' bgcolor='99af5d'><th colspan='[length(GLOB.wasteland_positions)]'><a href='?src=[REF(src)];[HrefToken()];jobban3=wasteland;jobban4=[REF(M)]'>Wasteland Positions</a></th></tr><tr align='center'>"
-		for(var/jobPos in GLOB.wasteland_positions)
-			if(!jobPos)
-				continue
-			if(jobban_isbanned(M, jobPos))
-				dat += "<td width='15%'><a href='?src=[REF(src)];[HrefToken()];jobban3=[jobPos];jobban4=[REF(M)]'><font color=red>[jobPos]</font></a></td>"
-				counter++
-			else
-				dat += "<td width='15%'><a href='?src=[REF(src)];[HrefToken()];jobban3=[jobPos];jobban4=[REF(M)]'>[jobPos]</a></td>"
-				counter++
-
-			if(counter >= 6) //So things dont get squiiiiished!
-				dat += "</tr><tr>"
-				counter = 0
-		dat += "</tr></table>"
-
 		//Ghost Roles (light light gray)
 		dat += "<table cellpadding='1' cellspacing='0' width='100%'>"
 		dat += "<tr bgcolor='eeeeee'><th colspan='5'><a href='?src=[REF(src)];[HrefToken()];jobban3=ghostroles;jobban4=[REF(M)]'>Ghost Roles</a></th></tr><tr align='center'>"
