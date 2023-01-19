@@ -1,6 +1,7 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "aT" = (
 /obj/structure/simple_door/room,
+/obj/structure/barricade/wooden/planks,
 /turf/closed/wall/r_wall,
 /area/f13/wasteland)
 "bl" = (
@@ -149,8 +150,9 @@
 /turf/open/lava,
 /area/f13/wasteland)
 "vZ" = (
-/turf/open/space/basic,
-/area/f13/void)
+/obj/structure/simple_door/room,
+/turf/open/indestructible/ground/outside/sidewalk/tile,
+/area/f13/wasteland)
 "wX" = (
 /turf/open/indestructible/ground/outside/sidewalk,
 /turf/open/indestructible/ground/outside/sidewalk,
@@ -14065,7 +14067,7 @@ NO
 NO
 tv
 tv
-NO
+HO
 tv
 tv
 NO
@@ -14836,7 +14838,7 @@ tv
 tv
 tv
 tv
-NO
+HO
 tv
 tv
 tv
@@ -15090,8 +15092,8 @@ tv
 NO
 NO
 tv
-vZ
-vZ
+ic
+ic
 tv
 NO
 NO
@@ -15334,7 +15336,7 @@ ic
 tv
 NO
 NO
-NO
+qs
 NO
 NO
 bl
@@ -15348,7 +15350,7 @@ NO
 NO
 tv
 tv
-vZ
+ic
 tv
 NO
 NO
@@ -15605,7 +15607,7 @@ NO
 NO
 NO
 tv
-vZ
+ic
 tv
 NO
 NO
@@ -15862,7 +15864,7 @@ NO
 NO
 NO
 tv
-vZ
+ic
 tv
 NO
 NO
@@ -16119,7 +16121,7 @@ NO
 NO
 NO
 tv
-vZ
+ic
 tv
 tv
 tv
@@ -16376,7 +16378,7 @@ NO
 NO
 tv
 tv
-vZ
+ic
 ic
 ic
 ic
@@ -16632,8 +16634,8 @@ tv
 NO
 NO
 tv
-vZ
-vZ
+ic
+ic
 tv
 tv
 tv
@@ -17669,8 +17671,8 @@ tv
 tv
 tv
 tv
-tv
-HO
+NO
+NO
 tv
 tv
 tv
@@ -17918,18 +17920,18 @@ tv
 ic
 ic
 ic
+ic
+ic
 tv
 da
 da
-da
 tv
-da
-da
-da
+ic
 tv
-da
-da
-da
+HO
+tv
+tv
+ic
 tv
 NO
 NO
@@ -18175,18 +18177,18 @@ tv
 ic
 ic
 ic
+ic
+ic
 tv
 da
 da
-da
+tv
+tv
 tv
 da
 da
-da
 tv
-da
-da
-da
+tv
 tv
 NO
 NO
@@ -18432,13 +18434,13 @@ tv
 ic
 ic
 ic
+ic
+ic
 tv
 da
 da
 da
 tv
-da
-da
 da
 da
 da
@@ -18689,15 +18691,15 @@ tv
 ic
 ic
 ic
+ic
+ic
 tv
 da
 da
 da
 tv
-tv
-tv
-tv
-tv
+da
+da
 da
 da
 da
@@ -18930,7 +18932,7 @@ Pq
 Pq
 Pq
 NO
-NO
+HO
 NO
 NO
 NO
@@ -18946,13 +18948,13 @@ tv
 ic
 ic
 ic
+ic
+tv
 tv
 tv
 da
 tv
 tv
-da
-da
 da
 da
 da
@@ -19446,7 +19448,7 @@ Pq
 NO
 tv
 tv
-NO
+HO
 tv
 tv
 tv
@@ -19721,7 +19723,7 @@ ic
 tv
 tv
 tv
-da
+tv
 tv
 tv
 tv
@@ -19976,10 +19978,10 @@ ic
 ic
 ic
 ic
-tv
-da
-da
-da
+ic
+ic
+ic
+ic
 tv
 pC
 pC
@@ -20234,9 +20236,9 @@ tv
 tv
 tv
 tv
-da
-da
-da
+ic
+ic
+ic
 tv
 pC
 pC
@@ -20491,9 +20493,9 @@ NO
 NO
 NO
 tv
-da
-da
-da
+ic
+ic
+ic
 tv
 TO
 pC
@@ -20748,9 +20750,9 @@ NO
 NO
 NO
 tv
-da
-da
-da
+ic
+ic
+ic
 tv
 TO
 pC
@@ -21005,9 +21007,9 @@ NO
 NO
 tv
 tv
-tv
-tv
-tv
+ic
+ic
+ic
 tv
 WP
 pC
@@ -21231,7 +21233,7 @@ gW
 gW
 NO
 NO
-NO
+HO
 NO
 NO
 NO
@@ -21751,7 +21753,7 @@ NO
 NO
 NO
 NO
-NO
+HO
 NO
 Pq
 Pq
@@ -22357,8 +22359,8 @@ ic
 ic
 tv
 tv
-HO
-HO
+aT
+aT
 tv
 tv
 ic
@@ -22590,7 +22592,7 @@ Pq
 NO
 NO
 NO
-NO
+qs
 NO
 NO
 NO
@@ -23104,7 +23106,7 @@ Pq
 NO
 yR
 NO
-NO
+qs
 NO
 NO
 NO
@@ -24130,7 +24132,7 @@ Pq
 Pq
 Pq
 NO
-NO
+MN
 NO
 NO
 NO
@@ -24577,7 +24579,7 @@ NO
 NO
 tv
 tv
-NO
+HO
 tv
 tv
 NO
@@ -24670,7 +24672,7 @@ NO
 NO
 tv
 tv
-NO
+HO
 tv
 tv
 ic
@@ -25089,7 +25091,7 @@ NO
 NO
 NO
 NO
-NO
+HO
 NO
 NO
 NO
@@ -25159,8 +25161,8 @@ Pq
 Pq
 NO
 tv
-NO
-NO
+tv
+tv
 NO
 NO
 NO
@@ -25182,7 +25184,7 @@ NO
 NO
 NO
 NO
-NO
+HO
 NO
 NO
 NO
@@ -26131,7 +26133,7 @@ tv
 tv
 tv
 tv
-NO
+HO
 tv
 tv
 tv
@@ -26951,7 +26953,7 @@ NO
 NO
 NO
 NO
-NO
+HO
 NO
 Pq
 Pq
@@ -27208,7 +27210,7 @@ NO
 NO
 NO
 NO
-NO
+HO
 NO
 Pq
 Pq
@@ -28972,7 +28974,7 @@ NO
 NO
 NO
 NO
-Pq
+vZ
 Pq
 Pq
 Pq
@@ -29486,7 +29488,7 @@ NO
 NO
 NO
 NO
-Pq
+vZ
 Pq
 Pq
 Pq
@@ -30537,7 +30539,7 @@ ic
 tv
 tv
 tv
-NO
+HO
 tv
 tv
 ic
@@ -30806,8 +30808,8 @@ ic
 ic
 tv
 tv
-NO
-NO
+HO
+HO
 tv
 tv
 ic
@@ -31560,7 +31562,7 @@ Pq
 Pq
 Pq
 NO
-NO
+HO
 NO
 NO
 NO

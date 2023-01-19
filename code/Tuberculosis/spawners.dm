@@ -12,7 +12,7 @@
 	death = FALSE
 	uses = -1
 	mob_species = /datum/species/bioslave
-	flavour_text = "<span class='danger'>Birthed whole, you awake from dreams of soft, undefiled life. You are little more than rough, callous flesh without purpose. Get to carting shit and scrap metal.</span>"
+	flavour_text = "<span class='danger'><b>Birthed whole, you awake from dreams of soft, undefiled life. You are little more than rough, callous flesh without purpose. Get to carting shit and scrap metal.</b></span>"
 	assignedrole = "Bioslave"
 
 /obj/effect/mob_spawn/human/bioslave/special(mob/living/new_spawn)
@@ -32,7 +32,7 @@
 	death = FALSE
 	uses = -1
 	mob_species = /datum/species/proletariat
-	flavour_text = "<span class='danger'>Proving you're capable of carting shit and scrap metal, you are now one of the city's rank and file proletariat. You can do more mentally challenging work without dying immediately.</span>"
+	flavour_text = "<span class='danger'><b>Proving you're capable of carting shit and scrap metal, you are now one of the city's rank and file proletariat. You can do more mentally challenging work without dying immediately.</b></span>"
 	assignedrole = "Proletariat"
 
 /obj/effect/mob_spawn/human/prole/special(mob/living/new_spawn)
@@ -52,7 +52,7 @@
 	death = FALSE
 	uses = -1
 	mob_species = /datum/species/human
-	flavour_text = "<span class='danger'>You are the few of a dead breed. Without bodily taint, you have shed sin and live now as the city's high caste responsible for export and fine art.</span>"
+	flavour_text = "<span class='danger'><b>You are the few of a dead breed. Without bodily taint, you have shed sin and live now as the city's high caste responsible for export and fine art.</b></span>"
 	assignedrole = "Bourgeoise"
 
 /obj/effect/mob_spawn/human/bougie/special(mob/living/new_spawn)
@@ -72,7 +72,7 @@
 	death = FALSE
 	uses = -1
 	mob_species = /datum/species/kommandant
-	flavour_text = "<span class='danger'>You are rebuilt flesh of saints. Your duty is to the people; ascention and guidance are in your hands. Your word is law, your will manifest.</span>"
+	flavour_text = "<span class='danger'><b>You are rebuilt flesh of saints. Your duty is to the people; ascention and guidance are in your hands. Your word is law, your will manifest.</b></span>"
 	assignedrole = "Kommandant"
 
 /obj/effect/mob_spawn/human/kommandant/special(mob/living/new_spawn)
