@@ -26,3 +26,14 @@
 	name = "pavement"
 	icon_state = "darkrustysolid"
 	icon = 'icons/turf/f13floors2.dmi'
+
+// Foundry chasm //
+/turf/open/chasm/foundry
+	planetary_atmos = TRUE
+	smooth = SMOOTH_FALSE
+	icon_state = "foundry"
+	icon = 'icons/turf/floors.dmi'
+	baseturfs = /turf/open/chasm/foundry
+	light_range = 1.9
+	light_power = 1
+	light_color = LIGHT_COLOR_LAVA
