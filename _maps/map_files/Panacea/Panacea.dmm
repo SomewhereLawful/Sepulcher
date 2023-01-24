@@ -28,6 +28,11 @@
 "da" = (
 /turf/open/floor/f13/wood,
 /area/f13/wasteland)
+"dm" = (
+/obj/structure/table,
+/obj/item/gun/ballistic/shotgun/boltaction,
+/turf/open/indestructible/ground/outside/sidewalk,
+/area/f13/void)
 "ez" = (
 /obj/structure/fence/post{
 	dir = 4
@@ -43,6 +48,10 @@
 "gW" = (
 /turf/open/indestructible/ground/outside/water/sea,
 /area/f13/wasteland)
+"hC" = (
+/obj/structure/table,
+/turf/open/indestructible/ground/outside/sidewalk,
+/area/f13/void)
 "hK" = (
 /obj/structure/closet/crate/trashcart,
 /turf/open/indestructible/ground/outside/sidewalk,
@@ -126,6 +135,9 @@
 /obj/effect/landmark/observer_start,
 /turf/open/indestructible/ground/outside/road,
 /area/f13/wasteland)
+"tK" = (
+/turf/closed/wall/r_wall,
+/area/f13/void)
 "ud" = (
 /obj/structure/rack,
 /turf/open/indestructible/ground/outside/sidewalk,
@@ -303,6 +315,11 @@
 /obj/structure/fence/end,
 /turf/open/indestructible/ground/outside/sidewalk,
 /area/f13/wasteland)
+"Kq" = (
+/obj/structure/table,
+/obj/item/clothing/head/wizard/marisa/fake,
+/turf/open/indestructible/ground/outside/sidewalk,
+/area/f13/void)
 "Lw" = (
 /turf/closed/indestructible/nothing,
 /area/space)
@@ -323,6 +340,11 @@
 "NO" = (
 /turf/open/indestructible/ground/outside/sidewalk,
 /area/f13/wasteland)
+"NV" = (
+/obj/structure/table,
+/obj/item/gun/ballistic/revolver/nagant,
+/turf/open/indestructible/ground/outside/sidewalk,
+/area/f13/void)
 "Pg" = (
 /obj/structure/sign/warning/biohazard,
 /turf/closed/wall/r_wall,
@@ -334,6 +356,11 @@
 /obj/effect/mob_spawn/human/bougie,
 /turf/open/indestructible/ground/outside/sidewalk/tile,
 /area/f13/wasteland)
+"Qt" = (
+/obj/structure/table,
+/obj/item/gun/ballistic/automatic/pistol,
+/turf/open/indestructible/ground/outside/sidewalk,
+/area/f13/void)
 "RS" = (
 /obj/item/flashlight/lantern,
 /turf/open/floor/f13{
@@ -341,6 +368,9 @@
 	icon_state = "floorrusty"
 	},
 /area/f13/wasteland)
+"RX" = (
+/turf/open/indestructible/ground/outside/sidewalk,
+/area/f13/void)
 "Tu" = (
 /turf/open/floor/f13{
 	tag = "icon-stagestairs";
@@ -368,6 +398,11 @@
 /obj/machinery/hydroponics/soil,
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/wasteland)
+"VH" = (
+/obj/structure/table,
+/obj/item/gun/ballistic/shotgun/trench,
+/turf/open/indestructible/ground/outside/sidewalk,
+/area/f13/void)
 "Wv" = (
 /obj/structure/decoration/hatch{
 	icon_state = "hatch";
@@ -400,6 +435,9 @@
 	pixel_y = 7
 	},
 /turf/open/indestructible/ground/outside/sidewalk,
+/area/f13/wasteland)
+"Zi" = (
+/turf/open/indestructible/binary,
 /area/f13/wasteland)
 
 (1,1,1) = {"
@@ -17701,10 +17739,10 @@ tv
 NO
 ve
 tv
-ic
-ic
-ic
-ic
+dm
+NV
+Qt
+VH
 tv
 NO
 NO
@@ -17958,10 +17996,10 @@ tv
 tv
 tv
 tv
-ic
-ic
-ic
-ic
+hC
+RX
+RX
+RX
 tv
 NO
 NO
@@ -18214,12 +18252,12 @@ tv
 ic
 ic
 ic
-ic
-ic
-ic
-ic
-ic
-tv
+tK
+Kq
+RX
+RX
+RX
+Zi
 NO
 NO
 tv
@@ -18471,11 +18509,11 @@ tv
 tv
 ic
 zp
-ic
-ic
-ic
-ic
-ic
+tK
+RX
+RX
+RX
+RX
 tv
 NO
 NO
@@ -18728,11 +18766,11 @@ NO
 tv
 ic
 oO
-ic
-ic
-ic
-ic
-ic
+tK
+tK
+tK
+tK
+tK
 tv
 tv
 NO
