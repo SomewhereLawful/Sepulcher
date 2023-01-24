@@ -147,7 +147,7 @@
 /area/f13/void)
 "vB" = (
 /obj/structure/lattice/catwalk,
-/turf/open/lava,
+/turf/open/foundry,
 /area/f13/wasteland)
 "vZ" = (
 /obj/structure/simple_door/room,
