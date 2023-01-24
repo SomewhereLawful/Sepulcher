@@ -4,6 +4,10 @@
 /obj/structure/barricade/wooden/planks,
 /turf/closed/wall/r_wall,
 /area/game/city)
+"aU" = (
+/obj/structure/campfire/drum,
+/turf/open/indestructible/ground/outside/sidewalk/tile,
+/area/game/city)
 "bl" = (
 /obj/structure/table,
 /turf/open/indestructible/ground/outside/sidewalk,
@@ -247,7 +251,7 @@
 /turf/open/indestructible/ground/outside/sidewalk,
 /area/game/void)
 "yR" = (
-/obj/structure/campfire/barrel,
+/obj/structure/campfire/drum,
 /turf/open/indestructible/ground/outside/sidewalk,
 /area/game/city)
 "yX" = (
@@ -340,7 +344,7 @@
 /turf/open/chasm/foundry,
 /area/game/foundry)
 "Hg" = (
-/obj/structure/campfire/barrel,
+/obj/structure/campfire/drum,
 /turf/open/indestructible/ground/outside/road,
 /area/game/city)
 "Hq" = (
@@ -29647,7 +29651,7 @@ Pq
 Pq
 Pq
 Pq
-Pq
+aU
 Pq
 Pq
 Pq
