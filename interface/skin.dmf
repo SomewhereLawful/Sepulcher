@@ -191,7 +191,17 @@ window "infowindow"
 		saved-params = "is-checked"
 		text = "Changelog"
 		command = "changelog"
-
+	elem "rules"
+		type = BUTTON
+		pos = 120,4
+		size = 100x20
+		anchor1 = 19,0
+		anchor2 = 34,0
+		text-color = #ffffff
+		background-color = #210a0a
+		saved-params = "is-checked"
+		text = "Rules"
+		command = "rules"
 window "outputwindow"
 	elem "outputwindow"
 		type = MAIN
