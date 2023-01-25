@@ -3,8 +3,10 @@
 /area/game
 	name = "error"
 	icon_state = "error"
-	has_gravity = 1
 	blob_allowed = 0
+	requires_power = 0
+	has_gravity = STANDARD_GRAVITY
+	dynamic_lighting = DYNAMIC_LIGHTING_FORCED
 
 // Used on non-accessible
 /area/game/void

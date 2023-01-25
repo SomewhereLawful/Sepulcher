@@ -3,7 +3,6 @@
 
 //water
 /turf/open/indestructible/ground/outside/water
-	name = "\proper sidewalk"
 	name = "water"
 	desc = "Mundane fluids that facilitate life."
 	icon = 'icons/turf/floors.dmi'
@@ -13,13 +12,15 @@
 	name = "sea water"
 	desc = "Fluids from beyond. Fishermen make use of this."
 
-/turf/open/indestructible/ground/outside/water/sewer
-	name = "waste"
-	desc = "Slurry of shit and urine. Repugnant and fermented."
-
 /turf/open/indestructible/ground/outside/water/knee_high
 	name = "water"
 	desc = "Mundane fluids used in ritual."
+
+/turf/open/indestructible/ground/sewer_water
+	name = "waste"
+	desc = "Slurry of shit and urine. Repugnant and fermented."
+	icon = 'icons/turf/floors.dmi'
+	icon_state = "riverwater"
 
 //pavement
 /turf/open/indestructible/ground/outside/sidewalk/tile
