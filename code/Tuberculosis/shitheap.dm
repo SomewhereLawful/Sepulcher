@@ -11,3 +11,5 @@
 	icon = 'icons/obj/shitpiles.dmi'
 	icon_state = "sanctified"
 	density = TRUE
+	anchored = TRUE
+	bound_width = 64 // Double wide
