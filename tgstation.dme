@@ -2765,6 +2765,7 @@
 #include "code\Tuberculosis\foundry.dm"
 #include "code\Tuberculosis\objects.dm"
 #include "code\Tuberculosis\parasite.dm"
+#include "code\Tuberculosis\scrapheap.dm"
 #include "code\Tuberculosis\shitheap.dm"
 #include "code\Tuberculosis\spawners.dm"
 #include "code\Tuberculosis\walls.dm"
