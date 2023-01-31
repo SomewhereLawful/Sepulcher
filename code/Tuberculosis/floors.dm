@@ -52,3 +52,11 @@
 	light_range = 1.9
 	light_power = 1
 	light_color = "#FAECCF"
+
+/turf/open/indestructible/ground/floor
+	name = "floor"
+	icon = 'icons/tuberculosis/floor.dmi'
+
+/turf/open/indestructible/ground/floor/lattice
+	name = "floor"
+	icon_state = "lattice_new1"

@@ -10,10 +10,7 @@
 /area/game/city)
 "bg" = (
 /obj/effect/mob_spawn/human/prole,
-/turf/open/floor/f13{
-	tag = "icon-floorrusty";
-	icon_state = "floorrustysolid"
-	},
+/turf/open/indestructible/ground/floor/lattice,
 /area/game/spawning/prole)
 "bl" = (
 /obj/structure/table,
@@ -440,6 +437,11 @@
 	icon_state = "floorrusty"
 	},
 /area/game/foundry)
+"wN" = (
+/turf/open/indestructible/ground/floor/lattice{
+	icon_state = "lattice_new14"
+	},
+/area/game/spawning/prole)
 "wX" = (
 /obj/structure/lattice/catwalk,
 /obj/structure/ladder/unbreakable{
@@ -510,10 +512,7 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
-/turf/open/floor/f13{
-	tag = "icon-floorrusty";
-	icon_state = "floorrustysolid"
-	},
+/turf/open/indestructible/ground/floor/lattice,
 /area/game/spawning/prole)
 "yX" = (
 /obj/structure/lattice/catwalk,
@@ -1060,17 +1059,14 @@
 /turf/closed/indestructible/nothing,
 /area/game/city)
 "Yd" = (
-/obj/item/storage/trash_stack,
+/obj/structure/scrapheap,
 /turf/open/indestructible/ground/outside/dirt,
 /area/game/city)
 "Yn" = (
 /turf/closed/wall/r_wall,
 /area/game/spawning/kommandant)
 "Yw" = (
-/turf/open/floor/f13{
-	tag = "icon-floorrusty";
-	icon_state = "floorrustysolid"
-	},
+/turf/open/indestructible/ground/floor/lattice,
 /area/game/spawning/prole)
 "YI" = (
 /obj/machinery/microwave/stove{
@@ -27259,7 +27255,7 @@ oO
 oO
 oO
 oO
-Yd
+oO
 oO
 oO
 oO
@@ -27512,7 +27508,7 @@ ic
 Cp
 oO
 oO
-Yd
+oO
 oO
 oO
 oO
@@ -27773,7 +27769,7 @@ oO
 oO
 oO
 oO
-oO
+Yd
 oO
 oO
 oO
@@ -28032,10 +28028,10 @@ oO
 oO
 oO
 oO
-Yd
 oO
 oO
-Yd
+oO
+oO
 oO
 oO
 oO
@@ -28544,7 +28540,7 @@ oO
 oO
 oO
 oO
-Yd
+oO
 oO
 oO
 oO
@@ -28798,7 +28794,7 @@ Cp
 oO
 oO
 oO
-Yd
+oO
 oO
 oO
 oO
@@ -29063,7 +29059,7 @@ oO
 oO
 oO
 oO
-oO
+Yd
 oO
 oO
 oO
@@ -29313,12 +29309,12 @@ oO
 oO
 oO
 oO
-Yd
 oO
 oO
 oO
 oO
-Yd
+oO
+oO
 oO
 oO
 oO
@@ -29566,7 +29562,7 @@ ic
 ic
 Cp
 oO
-Yd
+oO
 oO
 Yd
 oO
@@ -29837,7 +29833,7 @@ oO
 oO
 oO
 oO
-Yd
+oO
 oO
 ic
 ic
@@ -30085,6 +30081,7 @@ oO
 oO
 oO
 oO
+Yd
 oO
 oO
 oO
@@ -30093,7 +30090,6 @@ oO
 oO
 oO
 Yd
-oO
 oO
 oO
 ic
@@ -30340,7 +30336,7 @@ oO
 oO
 oO
 oO
-Yd
+oO
 oO
 oO
 oO
@@ -30601,7 +30597,7 @@ oO
 oO
 oO
 oO
-Yd
+oO
 oO
 oO
 oO
@@ -31116,10 +31112,10 @@ oO
 oO
 oO
 oO
-oO
-oO
-oO
 Yd
+oO
+oO
+oO
 oO
 cn
 oO
@@ -31367,7 +31363,7 @@ tQ
 oO
 oO
 oO
-Yd
+oO
 oO
 oO
 cn
@@ -31887,7 +31883,7 @@ oO
 oO
 oO
 oO
-Yd
+oO
 oO
 oO
 oO
@@ -32145,7 +32141,7 @@ oO
 oO
 oO
 oO
-oO
+Yd
 oO
 oO
 oO
@@ -32395,10 +32391,10 @@ oO
 oO
 oO
 oO
-oO
-oO
-oO
 Yd
+oO
+oO
+oO
 oO
 oO
 oO
@@ -32662,7 +32658,7 @@ oO
 oO
 oO
 oO
-Yd
+oO
 oO
 oO
 oO
@@ -32907,7 +32903,7 @@ ic
 Cp
 oO
 oO
-Yd
+oO
 oO
 oO
 oO
@@ -33426,7 +33422,7 @@ oO
 oO
 oO
 oO
-Yd
+oO
 oO
 oO
 oO
@@ -42362,7 +42358,7 @@ Cp
 ic
 Vy
 Vy
-Yw
+wN
 Yw
 Vy
 Vy
@@ -42619,10 +42615,10 @@ Cp
 ic
 Vy
 bg
+wN
 Yw
 Yw
-Yw
-Yw
+wN
 Yw
 da
 da
@@ -42876,10 +42872,10 @@ Cp
 ic
 Vy
 yS
+wN
 Yw
 Yw
-Yw
-Yw
+wN
 Yw
 da
 da
@@ -43133,10 +43129,10 @@ Cp
 ic
 Vy
 bg
+wN
 Yw
 Yw
-Yw
-Yw
+wN
 Yw
 da
 da
@@ -43390,7 +43386,7 @@ Cp
 ic
 Vy
 Vy
-Yw
+wN
 Yw
 Vy
 Vy

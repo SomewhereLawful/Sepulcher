@@ -4,6 +4,7 @@
 /obj/item/food/shit_clump
 	name = "shit gobbet"
 	desc = "A filthy mass of waste. It piles nicely, so wet and repugnant."
+	icon_state = "poop"
 
 /obj/structure/shitheap
 	name = "shitheap"
