@@ -6,3 +6,10 @@
 	desc = "A beacon of warmth. Huddle around when the air goes frigid."
 	icon_state = "drumfire"
 	density = 1
+
+// Decorative objects
+/obj/structure/decor
+	icon = 'icons/tuberculosis/decor.dmi'
+	density = 0
+	anchored = 1
+	layer = OBJ_LAYER
