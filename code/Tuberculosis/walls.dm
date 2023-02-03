@@ -67,3 +67,9 @@
 	icon_state = "brickwall"
 	smooth = SMOOTH_TRUE
 	canSmoothWith = list(/turf/closed/wall/brickdark)
+
+/turf/closed/wall/ship_hull
+	name = "hull"
+	icon = 'icons/tuberculosis/walls/ship_hull.dmi'
+	icon_state = "hull1"
+	smooth = SMOOTH_FALSE
