@@ -7,6 +7,15 @@
 	icon_state = "drumfire"
 	density = 1
 
+/obj/structure/bed/mattress
+	name = "mattress"
+	desc = "Cushion for the body. Has seen much more horror than you."
+	icon_state = "mattress1"
+
+/obj/structure/bed/mattress/New()
+	..()
+	icon_state = "mattress[rand(1,6)]"
+
 // Decorative objects
 /obj/structure/decor
 	icon = 'icons/tuberculosis/decor.dmi'

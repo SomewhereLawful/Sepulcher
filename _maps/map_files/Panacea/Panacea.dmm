@@ -2,7 +2,7 @@
 "aT" = (
 /obj/structure/simple_door/room,
 /obj/structure/barricade/wooden/planks,
-/turf/closed/wall/r_wall,
+/turf/open/indestructible/ground/floor/wood_floor,
 /area/game/city)
 "aU" = (
 /obj/structure/campfire/drum,
@@ -23,7 +23,7 @@
 /turf/closed/wall/brickdark,
 /area/game/train_yard)
 "bT" = (
-/obj/structure/bed/mattress/pregame,
+/obj/structure/bed/mattress,
 /turf/open/floor/f13{
 	tag = "icon-floorrusty";
 	icon_state = "floorrustysolid"
@@ -43,7 +43,17 @@
 /turf/closed/indestructible/nothing,
 /area/game/void)
 "da" = (
-/turf/open/floor/f13/wood,
+/turf/open/indestructible/ground/floor/wood_floor,
+/area/game/city)
+"dJ" = (
+/obj/structure/decor/spool{
+	pixel_y = 15;
+	pixel_x = -23
+	},
+/obj/structure/decor/spool{
+	pixel_x = -5
+	},
+/turf/open/indestructible/ground/outside/sidewalk,
 /area/game/city)
 "ez" = (
 /obj/structure/fence/post{
@@ -51,13 +61,6 @@
 	},
 /turf/open/indestructible/ground/outside/sidewalk,
 /area/game/city)
-"eJ" = (
-/obj/structure/decor/wood_scrap,
-/turf/open/floor/f13{
-	tag = "icon-floorrusty";
-	icon_state = "floorrusty"
-	},
-/area/game/foundry)
 "eT" = (
 /turf/open/indestructible/ground/outside/water/knee_high,
 /area/game/city)
@@ -72,16 +75,6 @@
 /obj/item/flashlight/lantern,
 /turf/open/indestructible/ground/sewer_water,
 /area/game/sewer)
-"fK" = (
-/obj/structure/window/fulltile/house{
-	tag = "icon-housewindow";
-	icon_state = "housewindow";
-	dir = 2
-	},
-/turf/open/indestructible/ground/floor{
-	icon_state = "wood1"
-	},
-/area/game/city)
 "fL" = (
 /obj/structure/simple_door/metal/store,
 /turf/open/indestructible/ground/outside/sidewalk,
@@ -118,9 +111,7 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/turf/open/indestructible/ground/floor{
-	icon_state = "wood1"
-	},
+/turf/open/indestructible/ground/floor/wood_floor,
 /area/game/city)
 "hG" = (
 /turf/closed/indestructible/nothing,
@@ -161,6 +152,12 @@
 	icon_state = "floorrusty"
 	},
 /area/game/spawning/bougie)
+"iC" = (
+/obj/structure/decor/spool{
+	pixel_x = 4
+	},
+/turf/open/indestructible/ground/outside/sidewalk,
+/area/game/city)
 "iG" = (
 /obj/structure/fence/post{
 	dir = 4
@@ -175,8 +172,12 @@
 	},
 /area/game/spawning/bioslave)
 "kb" = (
-/turf/open/indestructible/ground/floor/lattice,
-/area/game/city)
+/obj/structure/decor/wood_scrap,
+/turf/open/floor/f13{
+	tag = "icon-floorrusty";
+	icon_state = "floorrusty"
+	},
+/area/game/foundry)
 "ke" = (
 /turf/open/floor/f13{
 	tag = "icon-floorrusty";
@@ -202,10 +203,12 @@
 /turf/closed/wall/brickdark,
 /area/game/sewer)
 "mK" = (
-/turf/closed/wall/ship_hull{
-	icon_state = "hull2"
+/obj/structure/decor/dump_bin/red,
+/turf/open/floor/f13{
+	tag = "icon-floorrusty";
+	icon_state = "floorrusty"
 	},
-/area/game/city)
+/area/game/foundry)
 "mO" = (
 /obj/effect/mob_spawn/human/kommandant,
 /turf/open/indestructible/ground/outside/sidewalk/tile,
@@ -216,6 +219,10 @@
 	tag = "icon-floorrusty";
 	icon_state = "floorrusty"
 	},
+/area/game/city)
+"oJ" = (
+/obj/structure/decor/dump_bin,
+/turf/open/indestructible/ground/outside/sidewalk,
 /area/game/city)
 "oO" = (
 /turf/open/indestructible/ground/outside/dirt,
@@ -277,17 +284,14 @@
 	},
 /area/game/foundry)
 "pS" = (
-/obj/structure/decor/dump_bin/red,
-/turf/open/floor/f13{
-	tag = "icon-floorrusty";
-	icon_state = "floorrusty"
-	},
-/area/game/foundry)
+/obj/structure/decor/wood_scrap,
+/turf/open/indestructible/ground/outside/sidewalk,
+/area/game/city)
 "pX" = (
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
 /area/game/void)
 "qs" = (
-/turf/open/floor/f13/wood,
+/turf/open/indestructible/ground/floor/wood_floor,
 /area/game/spawning/kommandant)
 "qN" = (
 /obj/structure/barricade/bars,
@@ -341,7 +345,7 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/turf/open/floor/f13/wood,
+/turf/open/indestructible/ground/floor/wood_floor,
 /area/game/spawning/kommandant)
 "tb" = (
 /obj/structure/table,
@@ -367,11 +371,6 @@
 	},
 /turf/open/indestructible/ground/outside/sidewalk,
 /area/game/city)
-"tD" = (
-/turf/open/indestructible/ground/floor{
-	icon_state = "wood1"
-	},
-/area/game/city)
 "tH" = (
 /obj/effect/landmark/observer_start,
 /turf/open/indestructible/ground/outside/road,
@@ -380,7 +379,7 @@
 /obj/structure/decor/carpet{
 	icon_state = "oldcovertatteredtwo"
 	},
-/turf/open/floor/f13/wood,
+/turf/open/indestructible/ground/floor/wood_floor,
 /area/game/city)
 "tQ" = (
 /turf/open/indestructible/ground/outside/sidewalk,
@@ -479,7 +478,7 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
-/turf/open/floor/f13/wood,
+/turf/open/indestructible/ground/floor/wood_floor,
 /area/game/city)
 "vZ" = (
 /obj/structure/simple_door/room,
@@ -536,9 +535,7 @@
 /area/game/city)
 "ye" = (
 /obj/structure/table,
-/turf/open/indestructible/ground/floor{
-	icon_state = "wood1"
-	},
+/turf/open/indestructible/ground/floor/wood_floor,
 /area/game/city)
 "yi" = (
 /turf/open/floor/f13{
@@ -548,7 +545,7 @@
 /area/game/foundry)
 "yl" = (
 /obj/structure/table/wood,
-/turf/open/floor/f13/wood,
+/turf/open/indestructible/ground/floor/wood_floor,
 /area/game/city)
 "yD" = (
 /obj/structure/rack,
@@ -627,29 +624,21 @@
 	icon_state = "floorrusty"
 	},
 /area/game/city)
-"AB" = (
-/obj/machinery/light,
-/turf/open/floor/f13/wood,
-/area/game/city)
 "AP" = (
-/obj/structure/bed/mattress/pregame,
-/obj/machinery/light/small{
-	dir = 4
-	},
-/turf/open/floor/f13{
-	tag = "icon-floorrusty";
-	icon_state = "floorrustysolid"
-	},
-/area/game/spawning/bioslave)
+/obj/structure/decor/dump_bin/full,
+/turf/open/indestructible/ground/outside/sidewalk,
+/area/game/city)
 "BY" = (
 /obj/structure/table/wood/settler,
 /turf/open/indestructible/ground/outside/sidewalk/tile,
 /area/game/spawning/kommandant)
 "Cf" = (
-/turf/closed/wall/ship_hull{
-	icon_state = "hull3"
+/obj/structure/decor/dump_bin/red/full,
+/turf/open/floor/f13{
+	tag = "icon-floorrusty";
+	icon_state = "floorrusty"
 	},
-/area/game/city)
+/area/game/foundry)
 "CJ" = (
 /obj/structure/closet/crate/miningcar,
 /turf/open/indestructible/ground/outside/dirt,
@@ -661,7 +650,7 @@
 /obj/structure/chair/wood/normal{
 	dir = 1
 	},
-/turf/open/floor/f13/wood,
+/turf/open/indestructible/ground/floor/wood_floor,
 /area/game/spawning/kommandant)
 "Dz" = (
 /obj/structure/fence{
@@ -673,7 +662,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/turf/open/floor/f13/wood,
+/turf/open/indestructible/ground/floor/wood_floor,
 /area/game/city)
 "DK" = (
 /obj/structure/flora/tree/tall,
@@ -737,16 +726,12 @@
 /area/game/city)
 "EZ" = (
 /obj/structure/simple_door/room,
-/turf/open/floor/f13/wood,
+/turf/open/indestructible/ground/floor/wood_floor,
 /area/game/city)
 "Fm" = (
 /obj/structure/closet/bus,
 /turf/closed/indestructible/nothing,
 /area/game/void)
-"Fp" = (
-/obj/structure/decor/wood_scrap,
-/turf/open/indestructible/ground/outside/sidewalk,
-/area/game/city)
 "FA" = (
 /turf/open/floor/f13{
 	tag = "icon-yellowdirtyfull";
@@ -912,7 +897,7 @@
 	icon_state = "housewindow";
 	dir = 2
 	},
-/turf/open/floor/f13/wood,
+/turf/open/indestructible/ground/floor/wood_floor,
 /area/game/city)
 "Nt" = (
 /obj/structure/simple_door/metal/store,
@@ -944,7 +929,7 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/turf/open/floor/f13/wood,
+/turf/open/indestructible/ground/floor/wood_floor,
 /area/game/spawning/kommandant)
 "Oj" = (
 /turf/closed/wall/beton,
@@ -953,7 +938,7 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
-/turf/open/floor/f13/wood,
+/turf/open/indestructible/ground/floor/wood_floor,
 /area/game/city)
 "Pg" = (
 /obj/structure/sign/warning/biohazard,
@@ -970,13 +955,6 @@
 /obj/effect/mob_spawn/human/bougie,
 /turf/open/indestructible/ground/floor/lattice,
 /area/game/spawning/bougie)
-"PX" = (
-/obj/structure/decor/dump_bin/red/full,
-/turf/open/floor/f13{
-	tag = "icon-floorrusty";
-	icon_state = "floorrusty"
-	},
-/area/game/foundry)
 "Qs" = (
 /turf/open/floor/f13{
 	tag = "icon-floorrusty";
@@ -1111,6 +1089,16 @@
 	},
 /turf/open/indestructible/ground/outside/sidewalk,
 /area/game/train_yard)
+"Wj" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/structure/bed/mattress,
+/turf/open/floor/f13{
+	tag = "icon-floorrusty";
+	icon_state = "floorrustysolid"
+	},
+/area/game/spawning/bioslave)
 "Wv" = (
 /obj/structure/decoration/hatch{
 	icon_state = "hatch";
@@ -1138,9 +1126,7 @@
 /area/game/city)
 "Xg" = (
 /obj/machinery/light,
-/turf/open/indestructible/ground/floor{
-	icon_state = "wood1"
-	},
+/turf/open/indestructible/ground/floor/wood_floor,
 /area/game/city)
 "XA" = (
 /obj/structure/decoration/vent/rusty,
@@ -1177,7 +1163,7 @@
 /obj/structure/decor/carpet{
 	icon_state = "oldcovertattered"
 	},
-/turf/open/floor/f13/wood,
+/turf/open/indestructible/ground/floor/wood_floor,
 /area/game/city)
 "Yw" = (
 /turf/open/indestructible/ground/floor/lattice,
@@ -26534,7 +26520,7 @@ ic
 ic
 ic
 eY
-EV
+bT
 EV
 EV
 DZ
@@ -27050,14 +27036,14 @@ ic
 eY
 EV
 WG
-bT
-qN
-EV
 EV
 qN
 EV
-WG
-bT
+EV
+qN
+EV
+Wj
+EV
 eY
 ic
 ic
@@ -28333,15 +28319,15 @@ TQ
 TQ
 TQ
 eY
-EV
-AP
-EV
-qN
-EV
+bT
+WG
 EV
 qN
 EV
-AP
+EV
+qN
+bT
+WG
 EV
 eY
 ic
@@ -30921,7 +30907,7 @@ yP
 yi
 yi
 yi
-eJ
+kb
 NV
 yi
 yi
@@ -30952,7 +30938,7 @@ ic
 ic
 ic
 wH
-tQ
+iC
 tQ
 Pq
 Pq
@@ -31177,8 +31163,8 @@ NV
 yP
 yi
 yi
-PX
-pS
+Cf
+mK
 NV
 yi
 yi
@@ -31209,7 +31195,7 @@ wH
 ic
 ic
 wH
-tQ
+dJ
 tQ
 Pq
 Pq
@@ -31606,16 +31592,16 @@ gW
 gW
 gW
 gW
-mK
-Cf
-mK
-Cf
-mK
-Cf
-mK
-Cf
-mK
-mK
+gW
+gW
+gW
+gW
+gW
+gW
+gW
+gW
+gW
+gW
 gW
 gW
 gW
@@ -31688,7 +31674,7 @@ uE
 uE
 uE
 uW
-Fp
+pS
 tQ
 tQ
 Jx
@@ -31863,17 +31849,17 @@ gW
 gW
 gW
 gW
-kb
-kb
-kb
-kb
-mK
-kb
-kb
-kb
-kb
-mK
-mK
+gW
+gW
+gW
+gW
+gW
+gW
+gW
+gW
+gW
+gW
+gW
 gW
 gW
 gW
@@ -32121,17 +32107,17 @@ gW
 gW
 gW
 gW
-kb
-kb
-kb
-mK
-kb
-kb
-kb
-kb
-kb
-mK
-mK
+gW
+gW
+gW
+gW
+gW
+gW
+gW
+gW
+gW
+gW
+gW
 gW
 gW
 gW
@@ -32378,18 +32364,18 @@ gW
 gW
 gW
 gW
-kb
-kb
-kb
-mK
-kb
-kb
-kb
-kb
-kb
-kb
-mK
-mK
+gW
+gW
+gW
+gW
+gW
+gW
+gW
+gW
+gW
+gW
+gW
+gW
 gW
 gW
 tQ
@@ -32633,21 +32619,21 @@ gW
 gW
 gW
 gW
-kb
-kb
-kb
-kb
-kb
-mK
-mK
-kb
-mK
-mK
-mK
-mK
-mK
-mK
-mK
+gW
+gW
+gW
+gW
+gW
+gW
+gW
+gW
+gW
+gW
+gW
+gW
+gW
+gW
+gW
 gW
 tQ
 tQ
@@ -32892,18 +32878,18 @@ gW
 gW
 gW
 gW
-kb
-kb
-kb
-mK
-kb
-kb
-kb
-kb
-kb
-kb
-mK
-mK
+gW
+gW
+gW
+gW
+gW
+gW
+gW
+gW
+gW
+gW
+gW
+gW
 gW
 gW
 tQ
@@ -33013,8 +32999,8 @@ tQ
 tQ
 tQ
 tQ
-tQ
-tQ
+oJ
+AP
 wH
 ic
 ic
@@ -33148,18 +33134,18 @@ gW
 gW
 gW
 gW
-kb
-kb
-kb
-kb
-kb
-kb
-kb
-kb
-kb
-kb
-mK
-mK
+gW
+gW
+gW
+gW
+gW
+gW
+gW
+gW
+gW
+gW
+gW
+gW
 gW
 gW
 gW
@@ -33406,16 +33392,16 @@ gW
 gW
 gW
 gW
-kb
-kb
-kb
-mK
-kb
-kb
-kb
-kb
-mK
-mK
+gW
+gW
+gW
+gW
+gW
+gW
+gW
+gW
+gW
+gW
 gW
 gW
 gW
@@ -33663,15 +33649,15 @@ gW
 gW
 gW
 gW
-Cf
-mK
-Cf
-mK
-Cf
-mK
-Cf
-mK
-mK
+gW
+gW
+gW
+gW
+gW
+gW
+gW
+gW
+gW
 gW
 gW
 gW
@@ -34259,7 +34245,7 @@ ic
 uE
 tQ
 tQ
-Fp
+pS
 tQ
 Pq
 Pq
@@ -35748,15 +35734,15 @@ tQ
 tQ
 wH
 wH
-fK
-fK
+MP
+MP
 wH
-fK
-fK
+MP
+MP
 wH
 wH
 wH
-vo
+EZ
 wH
 wH
 wH
@@ -36004,17 +35990,17 @@ wH
 tQ
 tQ
 wH
-tD
-tD
-tD
-tD
-tD
-tD
-tD
+da
+da
+da
+yl
+da
+da
+da
 wH
-tD
-tD
-tD
+da
+da
+da
 wH
 ic
 ic
@@ -36261,17 +36247,17 @@ wH
 Nz
 Nz
 wH
-tD
-tD
-tD
-tD
-tD
-tD
-tD
-tD
-tD
-tD
-tD
+yl
+da
+da
+da
+da
+da
+da
+da
+da
+da
+da
 wH
 ic
 ic
@@ -36518,16 +36504,16 @@ wH
 tQ
 tQ
 wH
-tD
-tD
-tD
-tD
-tD
-tD
-tD
+da
+da
+da
+yl
+da
+da
+da
 wH
-tD
-tD
+da
+da
 Xg
 wH
 ic
@@ -36775,13 +36761,13 @@ wH
 tQ
 tQ
 wH
-tD
-tD
-tD
-tD
-tD
-tD
-tD
+da
+da
+da
+da
+da
+da
+da
 wH
 ye
 ye
@@ -37032,17 +37018,17 @@ wH
 tQ
 tQ
 wH
-tD
-tD
+da
+da
 ht
-tD
-tD
-tD
-tD
+da
+da
+da
+da
 wH
-tD
-tD
-tD
+da
+da
+da
 wH
 ic
 ic
@@ -37298,7 +37284,7 @@ vo
 wH
 wH
 wH
-sc
+EZ
 wH
 wH
 ic
@@ -42229,7 +42215,7 @@ da
 da
 tL
 da
-AB
+Xg
 wH
 ic
 bN

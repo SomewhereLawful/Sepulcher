@@ -60,3 +60,26 @@
 /turf/open/indestructible/ground/floor/lattice
 	name = "floor"
 	icon_state = "lattice_new1"
+
+/turf/open/indestructible/ground/floor/lattice/New()
+	if(icon_state == "lattice_new1")
+		icon_state = "lattice_new[rand(1,21)]"
+	..()
+
+/turf/open/indestructible/ground/floor/wood_floor
+	name = "floor"
+	icon_state = "wood1"
+
+/turf/open/indestructible/ground/floor/wood_floor/New()
+	if(icon_state == "wood1")
+		icon_state = "wood[rand(1,25)]"
+	..()
+
+/turf/open/indestructible/ground/floor/wood_floor/horizontal
+	name = "floor"
+	icon_state = "woodd1"
+
+/turf/open/indestructible/ground/floor/wood_floor/horizontal/New()
+	if(icon_state == "woodd1")
+		icon_state = "woodd[rand(1,25)]"
+	..()
