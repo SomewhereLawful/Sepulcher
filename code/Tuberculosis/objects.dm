@@ -34,10 +34,29 @@
 /obj/structure/decor/apc
 	name = "broken panel"
 	icon_state = "apc1"
+	density = 0
 
 /obj/structure/decor/apc/New()
 	if(icon_state == "apc1")
 		icon_state = "apc[rand(1,3)]"
+	..()
+
+/obj/structure/decor/wood_scrap
+	name = "wood scrap"
+	icon_state = "doski_oblomki_alt1"
+
+/obj/structure/decor/wood_scrap/New()
+	if(icon_state == "doski_oblomki_alt1")
+		icon_state = "doski_oblomki_alt[rand(1,4)]"
+	..()
+
+/obj/structure/decor/tire
+	name = "tiring"
+	icon_state = "shina1"
+
+/obj/structure/decor/apc/New()
+	if(icon_state == "shina1")
+		icon_state = "shina[rand(1,5)]"
 	..()
 
 // decor objects with their own icon files

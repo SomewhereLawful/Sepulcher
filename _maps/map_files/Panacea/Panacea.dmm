@@ -52,8 +52,12 @@
 /turf/open/indestructible/ground/outside/sidewalk,
 /area/game/city)
 "eJ" = (
-/turf/closed/wall/bricks_white,
-/area/game/city)
+/obj/structure/decor/wood_scrap,
+/turf/open/floor/f13{
+	tag = "icon-floorrusty";
+	icon_state = "floorrusty"
+	},
+/area/game/foundry)
 "eT" = (
 /turf/open/indestructible/ground/outside/water/knee_high,
 /area/game/city)
@@ -273,11 +277,12 @@
 	},
 /area/game/foundry)
 "pS" = (
-/obj/structure/decor{
-	icon_state = "transformator2"
+/obj/structure/decor/dump_bin/red,
+/turf/open/floor/f13{
+	tag = "icon-floorrusty";
+	icon_state = "floorrusty"
 	},
-/turf/open/indestructible/ground/outside/sidewalk,
-/area/game/city)
+/area/game/foundry)
 "pX" = (
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
 /area/game/void)
@@ -306,9 +311,7 @@
 	},
 /area/game/city)
 "sj" = (
-/obj/structure/decor{
-	icon_state = "doski_oblomki_alt2"
-	},
+/obj/structure/decor/tire,
 /turf/open/indestructible/ground/outside/sidewalk,
 /area/game/city)
 "sm" = (
@@ -410,8 +413,8 @@
 	},
 /area/game/city)
 "uW" = (
-/obj/structure/decor{
-	icon_state = "shina3a"
+/obj/structure/decor/tire{
+	icon_state = "shina5"
 	},
 /turf/open/indestructible/ground/outside/sidewalk,
 /area/game/city)
@@ -740,6 +743,10 @@
 /obj/structure/closet/bus,
 /turf/closed/indestructible/nothing,
 /area/game/void)
+"Fp" = (
+/obj/structure/decor/wood_scrap,
+/turf/open/indestructible/ground/outside/sidewalk,
+/area/game/city)
 "FA" = (
 /turf/open/floor/f13{
 	tag = "icon-yellowdirtyfull";
@@ -963,6 +970,13 @@
 /obj/effect/mob_spawn/human/bougie,
 /turf/open/indestructible/ground/floor/lattice,
 /area/game/spawning/bougie)
+"PX" = (
+/obj/structure/decor/dump_bin/red/full,
+/turf/open/floor/f13{
+	tag = "icon-floorrusty";
+	icon_state = "floorrusty"
+	},
+/area/game/foundry)
 "Qs" = (
 /turf/open/floor/f13{
 	tag = "icon-floorrusty";
@@ -1013,7 +1027,7 @@
 /obj/machinery/light,
 /turf/open/floor/f13{
 	tag = "icon-floorrusty";
-	icon_state = "floorrusty"
+	icon_state = "yellowdirtychess"
 	},
 /area/game/city)
 "RS" = (
@@ -1058,6 +1072,7 @@
 /obj/structure/decor/apc{
 	pixel_y = 29
 	},
+/obj/structure/decor/wood_scrap,
 /turf/open/indestructible/ground/outside/sidewalk,
 /area/game/city)
 "TO" = (
@@ -30906,7 +30921,7 @@ yP
 yi
 yi
 yi
-yi
+eJ
 NV
 yi
 yi
@@ -31162,8 +31177,8 @@ NV
 yP
 yi
 yi
-yi
-yi
+PX
+pS
 NV
 yi
 yi
@@ -31673,7 +31688,7 @@ uE
 uE
 uE
 uW
-tQ
+Fp
 tQ
 tQ
 Jx
@@ -33408,11 +33423,11 @@ gW
 tQ
 tQ
 wH
-eJ
-eJ
-eJ
-eJ
-eJ
+wH
+wH
+wH
+wH
+wH
 wH
 tQ
 Pq
@@ -33466,7 +33481,7 @@ Kj
 Pq
 Pq
 Pq
-pS
+tQ
 uE
 ic
 ic
@@ -34244,7 +34259,7 @@ ic
 uE
 tQ
 tQ
-tQ
+Fp
 tQ
 Pq
 Pq
@@ -37066,10 +37081,10 @@ uG
 uG
 uG
 uG
-TQ
-TQ
-TQ
-TQ
+uG
+uG
+uG
+uG
 Oj
 ic
 wH
@@ -37323,10 +37338,10 @@ uG
 uG
 uG
 uG
-TQ
-TQ
-TQ
-TQ
+uG
+uG
+uG
+uG
 Oj
 ic
 wH
@@ -37580,9 +37595,9 @@ uG
 uG
 uG
 uG
-TQ
-TQ
-TQ
+uG
+uG
+uG
 QK
 Oj
 wH
@@ -40926,8 +40941,8 @@ tQ
 tQ
 tQ
 tQ
-tQ
-tQ
+Pq
+Pq
 tQ
 tQ
 tQ
@@ -41174,21 +41189,21 @@ tQ
 tQ
 tQ
 tQ
+wH
+wH
+wH
+wH
+wH
+wH
+wH
+wH
 tQ
+Pq
+Pq
 tQ
-tQ
-tQ
-tQ
-tQ
-tQ
-tQ
-tQ
-tQ
-tQ
-tQ
-tQ
-tQ
-tQ
+wH
+wH
+wH
 bN
 CR
 CR
@@ -41432,20 +41447,20 @@ tQ
 tQ
 wH
 wH
-wH
-wH
-wH
-wH
-wH
-wH
+ic
+ic
+ic
+ic
+ic
+ic
 wH
 tQ
-tQ
-tQ
+Pq
+Pq
 tQ
 wH
-wH
-wH
+ic
+ic
 bN
 CR
 xv
@@ -41696,10 +41711,10 @@ ic
 ic
 ic
 wH
-tQ
-tQ
-tQ
-tQ
+wH
+EZ
+EZ
+wH
 wH
 ic
 ic
@@ -41947,18 +41962,18 @@ TQ
 uE
 ic
 ic
-ic
-ic
-ic
-ic
+Vy
+Vy
+Vy
+Vy
 ic
 wH
+da
+Yv
+da
+da
 wH
-EZ
-EZ
 wH
-wH
-ic
 ic
 bN
 CR
@@ -42203,18 +42218,18 @@ TQ
 TQ
 uE
 ic
-ic
 Vy
 Vy
+wN
+Yw
 Vy
 Vy
-ic
-wH
-da
-Yv
+Il
 da
 da
-wH
+tL
+da
+AB
 wH
 ic
 bN
@@ -42461,18 +42476,18 @@ TQ
 uE
 ic
 Vy
-Vy
+bg
 wN
 Yw
-Vy
-Vy
-Il
+Yw
+wN
+Yw
 da
 da
-tL
 da
-AB
-wH
+da
+da
+aT
 ic
 bN
 CR
@@ -42718,7 +42733,7 @@ Ha
 uE
 ic
 Vy
-bg
+yS
 wN
 Yw
 Yw
@@ -42975,7 +42990,7 @@ TQ
 uE
 ic
 Vy
-yS
+bg
 wN
 Yw
 Yw
@@ -42986,7 +43001,7 @@ da
 da
 da
 da
-aT
+wH
 ic
 bN
 CR
@@ -43232,17 +43247,17 @@ TQ
 uE
 ic
 Vy
-bg
+Vy
 wN
 Yw
-Yw
-wN
-Yw
+Vy
+Vy
+Il
 da
 da
 da
 da
-da
+wH
 wH
 ic
 bN
@@ -43488,19 +43503,19 @@ uE
 TQ
 uE
 ic
+ic
 Vy
 Vy
-wN
-Yw
 Vy
 Vy
-Il
-da
+ic
+wH
+DG
 da
 da
 da
 wH
-wH
+ic
 ic
 ic
 ic
@@ -43746,13 +43761,13 @@ TQ
 uE
 ic
 ic
-Vy
-Vy
-Vy
-Vy
+ic
+ic
+ic
+ic
 ic
 wH
-DG
+da
 da
 da
 da
@@ -44009,10 +44024,10 @@ ic
 ic
 ic
 wH
-da
-da
-da
-da
+wH
+wH
+wH
+wH
 wH
 ic
 ic
@@ -44265,12 +44280,12 @@ ic
 ic
 ic
 ic
-wH
-wH
-wH
-wH
-wH
-wH
+ic
+ic
+ic
+ic
+ic
+ic
 ic
 ic
 ic
