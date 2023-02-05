@@ -142,8 +142,8 @@
 
 // Indestructible away mission ladders which link based on a mapped ID and height value rather than X/Y/Z.
 /obj/structure/ladder/unbreakable
-	name = "sturdy ladder"
-	desc = "An extremely sturdy metal ladder."
+	name = "manhole"
+	desc = "A portal to a dizzying realm of shit and sepsis."
 	resistance_flags = INDESTRUCTIBLE
 	var/id
 	var/height = 0  // higher numbers are considered physically higher

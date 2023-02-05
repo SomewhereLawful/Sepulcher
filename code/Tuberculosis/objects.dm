@@ -53,6 +53,7 @@
 /obj/structure/decor/wood_scrap
 	name = "wood scrap"
 	icon_state = "doski_oblomki_alt1"
+	density = 0
 
 /obj/structure/decor/wood_scrap/New()
 	if(icon_state == "doski_oblomki_alt1")

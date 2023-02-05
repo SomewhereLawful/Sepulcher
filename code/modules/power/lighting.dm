@@ -186,7 +186,7 @@
 	var/overlayicon = 'icons/obj/lighting_overlay.dmi'
 	var/base_state = "tube"		// base description and icon_state
 	icon_state = "tube"
-	desc = "A lighting fixture."
+	desc = null
 	layer = WALL_OBJ_LAYER
 	max_integrity = 100
 	use_power = ACTIVE_POWER_USE
@@ -239,7 +239,6 @@
 	base_state = "bulb"
 	fitting = "bulb"
 	brightness = 4
-	desc = "A small lighting fixture."
 	light_type = /obj/item/light/bulb
 
 /obj/machinery/light/small/broken
