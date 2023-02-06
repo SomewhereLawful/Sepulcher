@@ -11,6 +11,7 @@
 	roundstart = FALSE
 	death = FALSE
 	uses = -1
+	mob_gender = MALE
 	mob_species = /datum/species/bioslave
 	flavour_text = "<span class='danger'><b>Birthed whole, you awake from dreams of soft, undefiled life. You are little more than rough, callous flesh without purpose. Get to carting shit and scrap metal.</b></span>"
 	assignedrole = "Bioslave"
@@ -31,6 +32,7 @@
 	roundstart = FALSE
 	death = FALSE
 	uses = -1
+	mob_gender = MALE
 	mob_species = /datum/species/proletariat
 	flavour_text = "<span class='danger'><b>Proving you're capable of carting shit and scrap metal, you are now one of the city's rank and file proletariat. You can do more mentally challenging work without dying immediately.</b></span>"
 	assignedrole = "Proletariat"
@@ -71,6 +73,7 @@
 	roundstart = FALSE
 	death = FALSE
 	uses = -1
+	mob_gender = MALE
 	mob_species = /datum/species/kommandant
 	flavour_text = "<span class='danger'><b>You are rebuilt flesh of saints. Your duty is to the people; ascention and guidance are in your hands. Your word is law, your will manifest.</b></span>"
 	assignedrole = "Kommandant"
