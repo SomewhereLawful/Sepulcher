@@ -72,21 +72,6 @@
 		return
 	M.OpenCraftingMenu()
 
-/obj/screen/area_creator
-	name = "create new area"
-	icon = 'icons/mob/screen_midnight.dmi'
-	icon_state = "area_edit"
-	screen_loc = ui_building
-
-/obj/screen/area_creator/Click()
-	if(usr.incapacitated() || (isobserver(usr) && !IsAdminGhost(usr)))
-		return TRUE
-	var/area/A = get_area(usr)
-	if(!A.outdoors)
-		to_chat(usr, "<span class='warning'>There is already a defined structure here.</span>")
-		return TRUE
-	create_area(usr)
-
 /obj/screen/language_menu
 	name = "language menu"
 	icon = 'icons/mob/screen_midnight.dmi'

@@ -51,6 +51,15 @@
 "dr" = (
 /turf/closed/wall/brickdark,
 /area/game/void)
+"dz" = (
+/obj/structure/ladder/unbreakable{
+	id = "Sew2"
+	},
+/turf/open/floor/f13{
+	tag = "icon-floorrusty";
+	icon_state = "floorrusty"
+	},
+/area/game/sewer)
 "dJ" = (
 /obj/structure/decor/spool{
 	pixel_y = 15;
@@ -134,6 +143,17 @@
 	icon_state = "floorrusty"
 	},
 /area/game/spawning/bougie)
+"hj" = (
+/obj/structure/decor/spool{
+	pixel_x = 11;
+	pixel_y = 1
+	},
+/obj/structure/decor/spool{
+	pixel_x = -15;
+	pixel_y = 4
+	},
+/turf/open/indestructible/ground/outside/road,
+/area/game/city)
 "ht" = (
 /obj/machinery/light{
 	dir = 4
@@ -220,6 +240,10 @@
 	icon_state = "floorrusty"
 	},
 /area/game/city)
+"kO" = (
+/obj/structure/decor/dump_bin/red,
+/turf/open/indestructible/ground/outside/road,
+/area/game/city)
 "lD" = (
 /turf/open/indestructible/ground/outside/sidewalk{
 	tag = "icon-verticalleftborderleft0";
@@ -229,6 +253,13 @@
 "lY" = (
 /turf/closed/wall/brickdark,
 /area/game/sewer)
+"mi" = (
+/obj/structure/ladder/unbreakable{
+	height = 1;
+	id = "Sew4"
+	},
+/turf/open/indestructible/ground/outside/road,
+/area/game/city)
 "mK" = (
 /obj/structure/decor/dump_bin/red,
 /turf/open/floor/f13{
@@ -278,7 +309,10 @@
 /turf/open/indestructible/ground/outside/dirt,
 /area/game/city)
 "oR" = (
-/obj/structure/decoration/vent/rusty,
+/obj/structure/ladder/unbreakable{
+	height = 1;
+	id = "Sew3"
+	},
 /turf/open/indestructible/ground/outside/road,
 /area/game/city)
 "oS" = (
@@ -460,6 +494,13 @@
 	icon_state = "floorrusty"
 	},
 /area/game/city)
+"uj" = (
+/obj/structure/ladder/unbreakable{
+	height = 1;
+	id = "Sew2"
+	},
+/turf/open/indestructible/ground/outside/sidewalk/tile,
+/area/game/city)
 "ux" = (
 /obj/structure/table,
 /turf/open/floor/f13{
@@ -548,6 +589,9 @@
 /obj/structure/barricade/wooden/planks,
 /turf/closed/wall/brickdark,
 /area/game/train_yard)
+"vU" = (
+/turf/open/indestructible/ground/floor/lattice,
+/area/game/void)
 "vW" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -814,6 +858,15 @@
 /obj/structure/chair/wood/normal,
 /turf/open/indestructible/ground/floor/wood_floor,
 /area/game/city)
+"Fl" = (
+/obj/structure/ladder/unbreakable{
+	id = "Sew3"
+	},
+/turf/open/floor/f13{
+	tag = "icon-floorrusty";
+	icon_state = "floorrusty"
+	},
+/area/game/sewer)
 "Fm" = (
 /turf/open/floor/f13{
 	tag = "icon-floorrusty";
@@ -834,11 +887,11 @@
 	},
 /area/game/spawning/bioslave)
 "Gp" = (
-/obj/structure/decoration/vent/rusty,
-/turf/open/floor/f13{
-	tag = "icon-floorrusty";
-	icon_state = "floorrusty"
+/obj/structure/ladder/unbreakable{
+	height = 1;
+	id = "Sew1"
 	},
+/turf/open/indestructible/ground/floor,
 /area/game/city)
 "Gt" = (
 /obj/structure/table/wood,
@@ -892,8 +945,8 @@
 /turf/open/indestructible/ground/outside/road,
 /area/game/city)
 "Il" = (
-/turf/closed/wall/brickdark,
-/area/game/spawning/prole)
+/turf/open/indestructible/ground/sewer_water,
+/area/game/void)
 "Im" = (
 /obj/machinery/light,
 /turf/open/floor/f13{
@@ -937,6 +990,15 @@
 "Jm" = (
 /obj/structure/constructshell,
 /turf/closed/indestructible/nothing,
+/area/game/void)
+"Jn" = (
+/obj/structure/ladder/unbreakable{
+	id = "Sew1"
+	},
+/turf/open/floor/f13{
+	tag = "icon-floorrusty";
+	icon_state = "floorrusty"
+	},
 /area/game/void)
 "Jx" = (
 /obj/structure/closet/crate/miningcar,
@@ -1055,6 +1117,15 @@
 	},
 /turf/open/indestructible/ground/floor/wood_floor,
 /area/game/spawning/kommandant)
+"Og" = (
+/obj/structure/ladder/unbreakable{
+	id = "Sew4"
+	},
+/turf/open/floor/f13{
+	tag = "icon-floorrusty";
+	icon_state = "floorrusty"
+	},
+/area/game/sewer)
 "Oj" = (
 /turf/closed/wall/beton,
 /area/game/city)
@@ -23290,7 +23361,7 @@ ic
 zc
 zc
 zc
-zc
+pS
 zc
 zc
 zc
@@ -23550,7 +23621,7 @@ zc
 zc
 zc
 zc
-zc
+pS
 wH
 ic
 wH
@@ -24063,7 +24134,7 @@ ic
 ic
 ic
 wH
-zc
+pS
 zc
 wH
 ic
@@ -25101,7 +25172,7 @@ TQ
 TQ
 TQ
 wH
-zc
+Pu
 zc
 wH
 ic
@@ -25615,8 +25686,8 @@ zc
 zc
 zc
 ez
-zc
-zc
+AP
+hj
 wH
 ic
 Oj
@@ -25870,10 +25941,10 @@ zc
 zc
 zc
 zc
-zc
+pS
 ez
-zc
-zc
+kO
+pS
 wH
 ic
 Oj
@@ -27937,7 +28008,7 @@ zc
 zc
 zc
 zc
-oR
+mi
 zc
 zc
 zc
@@ -35102,7 +35173,7 @@ zc
 Pq
 Pq
 Pq
-XA
+uj
 Pq
 Pq
 Pq
@@ -42089,11 +42160,11 @@ TQ
 uE
 ic
 ic
-Vy
-Vy
-Vy
-Vy
 ic
+Vy
+Vy
+Vy
+Vy
 wH
 da
 Yv
@@ -42345,13 +42416,13 @@ TQ
 TQ
 uE
 ic
+ic
 Vy
 Vy
 wN
 Yw
-Vy
-Vy
-Il
+Yw
+wH
 da
 da
 tL
@@ -42602,13 +42673,13 @@ TQ
 TQ
 uE
 ic
+ic
 Vy
 bg
 wN
 Yw
 Yw
 wN
-Yw
 da
 da
 da
@@ -42859,13 +42930,13 @@ bn
 Ha
 uE
 ic
+ic
 Vy
 yS
 wN
 Yw
 Yw
 wN
-Yw
 da
 da
 da
@@ -43116,13 +43187,13 @@ TQ
 TQ
 uE
 ic
+ic
 Vy
 bg
 wN
 Yw
 Yw
 wN
-Yw
 da
 da
 da
@@ -43373,13 +43444,13 @@ TQ
 TQ
 uE
 ic
+ic
 Vy
 Vy
 wN
 Yw
-Vy
-Vy
-Il
+Yw
+wH
 da
 da
 da
@@ -43631,11 +43702,11 @@ TQ
 uE
 ic
 ic
-Vy
-Vy
-Vy
-Vy
 ic
+Vy
+Vy
+Vy
+Vy
 wH
 DG
 da
@@ -92454,14 +92525,14 @@ ic
 ic
 ic
 ic
-ic
-ic
-ic
-ic
-ic
-ic
-ic
-ic
+dr
+dr
+dr
+dr
+dr
+dr
+dr
+dr
 ic
 ic
 ic
@@ -92711,14 +92782,14 @@ ic
 ic
 ic
 ic
-ic
-ic
-ic
-ic
-ic
-ic
-ic
-ic
+Il
+Il
+Il
+Il
+Il
+Il
+Il
+Il
 ic
 ic
 ic
@@ -92969,12 +93040,12 @@ ic
 ic
 ic
 ic
-ic
-ic
-ic
-ic
-ic
-ic
+Il
+Il
+Il
+Il
+Il
+Il
 ic
 ic
 ic
@@ -93226,12 +93297,12 @@ ic
 ic
 ic
 ic
-ic
-ic
-ic
-ic
-ic
-ic
+dr
+dr
+Il
+Il
+dr
+dr
 ic
 ic
 ic
@@ -93473,24 +93544,24 @@ NF
 Lw
 lY
 Lw
-Lw
+Og
 lY
 ic
 ic
-ic
 dr
 dr
 dr
 dr
-ic
-ic
-ic
-ic
-ic
-ic
-ic
-ic
-ic
+dr
+dr
+dr
+dr
+Il
+Il
+dr
+dr
+dr
+dr
 ic
 ic
 ic
@@ -93734,20 +93805,20 @@ Lw
 lY
 ic
 ic
-ic
+dr
+Fm
+Jn
+Fm
 dr
 Fm
 Fm
+Fm
+Il
+Il
+Fm
+Fm
+Fm
 dr
-ic
-ic
-ic
-ic
-ic
-ic
-ic
-ic
-ic
 ic
 ic
 ic
@@ -93991,20 +94062,20 @@ Lw
 lY
 ic
 ic
-ic
 dr
 Fm
 Fm
 Fm
-ic
-ic
-ic
-ic
-ic
-ic
-ic
-ic
-ic
+dr
+Fm
+Fm
+Fm
+Il
+Il
+Fm
+Fm
+Fm
+dr
 ic
 ic
 ic
@@ -94248,20 +94319,20 @@ Lw
 lY
 ic
 ic
-ic
 dr
 Fm
 Fm
+Fm
 dr
-ic
-ic
-ic
-ic
-ic
-ic
-ic
-ic
-ic
+Fm
+Fm
+vU
+vU
+vU
+vU
+Fm
+Fm
+dr
 ic
 ic
 ic
@@ -94505,20 +94576,20 @@ lY
 lY
 ic
 ic
-ic
 dr
 dr
+Fm
 dr
 dr
-ic
-ic
-ic
-ic
-ic
-ic
-ic
-ic
-ic
+Fm
+Fm
+Il
+Il
+Il
+Il
+Fm
+Fm
+dr
 ic
 ic
 ic
@@ -94763,19 +94834,19 @@ ic
 ic
 ic
 ic
-ic
-ic
-ic
-ic
-ic
-ic
-ic
-ic
-ic
-ic
-ic
-ic
-ic
+dr
+vU
+vU
+dr
+Fm
+Fm
+vU
+vU
+vU
+vU
+Fm
+Fm
+dr
 ic
 ic
 ic
@@ -95020,19 +95091,19 @@ ic
 ic
 ic
 ic
-ic
-ic
-ic
-ic
-ic
-ic
-ic
-ic
-ic
-ic
-ic
-ic
-ic
+dr
+vU
+vU
+dr
+Fm
+Fm
+Il
+Il
+Il
+Il
+Fm
+Fm
+dr
 ic
 ic
 ic
@@ -95277,19 +95348,19 @@ ic
 ic
 ic
 ic
-ic
-ic
-ic
-ic
-ic
-ic
-ic
-ic
-ic
-ic
-ic
-ic
-ic
+dr
+vU
+vU
+dr
+Fm
+Fm
+vU
+vU
+vU
+vU
+Fm
+Fm
+dr
 ic
 ic
 ic
@@ -95534,19 +95605,19 @@ lY
 lY
 lY
 ic
-ic
-ic
-ic
-ic
-ic
-ic
-ic
-ic
-ic
-ic
-ic
-ic
-ic
+dr
+vU
+vU
+vU
+Fm
+Fm
+Fm
+Il
+Il
+Fm
+Fm
+Fm
+dr
 ic
 ic
 ic
@@ -95791,19 +95862,19 @@ Lw
 Lw
 lY
 ic
-ic
-ic
-ic
-ic
-ic
-ic
-ic
-ic
-ic
-ic
-ic
-ic
-ic
+dr
+dr
+vU
+vU
+Fm
+Fm
+Fm
+Il
+Il
+Fm
+Fm
+Fm
+dr
 ic
 ic
 ic
@@ -96049,18 +96120,18 @@ Lw
 lY
 ic
 ic
-ic
-ic
-ic
-ic
-ic
-ic
-ic
-ic
-ic
-ic
-ic
-ic
+dr
+dr
+dr
+dr
+dr
+dr
+Il
+Il
+dr
+dr
+dr
+dr
 ic
 ic
 ic
@@ -96310,12 +96381,12 @@ ic
 ic
 ic
 ic
-ic
-ic
-ic
-ic
-ic
-ic
+dr
+dr
+Il
+Il
+dr
+dr
 ic
 ic
 ic
@@ -96567,12 +96638,12 @@ ic
 ic
 ic
 ic
-ic
-ic
-ic
-ic
-ic
-ic
+Il
+Il
+Il
+Il
+Il
+Il
 ic
 ic
 ic
@@ -96823,14 +96894,14 @@ lY
 ic
 ic
 ic
-ic
-ic
-ic
-ic
-ic
-ic
-ic
-ic
+Il
+Il
+Il
+Il
+Il
+Il
+Il
+Il
 ic
 ic
 ic
@@ -97080,14 +97151,14 @@ lY
 ic
 ic
 ic
-ic
-ic
-ic
-ic
-ic
-ic
-ic
-ic
+dr
+dr
+dr
+dr
+dr
+dr
+dr
+dr
 ic
 ic
 ic
@@ -98848,7 +98919,7 @@ ic
 ic
 ic
 lY
-Lw
+Fl
 Lw
 Lw
 Lw
@@ -100638,7 +100709,7 @@ ic
 lY
 Lw
 Lw
-Lw
+dz
 lY
 ic
 ic
