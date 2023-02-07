@@ -116,8 +116,9 @@
 	},
 /area/game/train_yard)
 "gq" = (
-/obj/structure/decor{
-	icon_state = "musorok"
+/obj/structure/decor/wood_scrap{
+	pixel_x = -9;
+	pixel_y = 11
 	},
 /turf/open/indestructible/ground/outside/road,
 /area/game/city)
@@ -891,7 +892,10 @@
 	height = 1;
 	id = "Sew1"
 	},
-/turf/open/indestructible/ground/floor,
+/turf/open/floor/f13{
+	tag = "icon-floorrusty";
+	icon_state = "floorrusty"
+	},
 /area/game/city)
 "Gt" = (
 /obj/structure/table/wood,
@@ -24896,12 +24900,12 @@ ic
 ic
 ic
 ic
-wH
-wH
-wH
-wH
-wH
-wH
+ic
+ic
+ic
+ic
+ic
+ic
 ic
 ic
 wH
@@ -25154,10 +25158,10 @@ ic
 ic
 ic
 wH
-pC
-Ix
-pC
-pC
+wH
+wH
+wH
+wH
 wH
 ic
 ic
@@ -25412,7 +25416,7 @@ ic
 ic
 wH
 pC
-pC
+Ix
 pC
 pC
 wH
@@ -26266,11 +26270,11 @@ ic
 ic
 zc
 zc
-zc
+sj
 zc
 hK
 hK
-zc
+sj
 zc
 zc
 zc
@@ -26783,7 +26787,7 @@ wH
 wH
 zc
 zc
-zc
+sj
 zc
 wH
 wH
@@ -27038,7 +27042,7 @@ ic
 ic
 ic
 wH
-zc
+pS
 zc
 wH
 wH
@@ -27553,7 +27557,7 @@ ic
 wH
 wH
 eX
-zc
+gq
 wH
 ic
 ic
@@ -33460,7 +33464,7 @@ wH
 wH
 wH
 wH
-zc
+HO
 zc
 zc
 zc
@@ -34199,7 +34203,7 @@ ic
 ic
 uE
 tv
-gq
+zc
 zc
 zc
 Pq
