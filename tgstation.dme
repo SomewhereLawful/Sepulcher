@@ -2764,6 +2764,7 @@
 #include "code\Tuberculosis\clothing.dm"
 #include "code\Tuberculosis\floors.dm"
 #include "code\Tuberculosis\foundry.dm"
+#include "code\Tuberculosis\items.dm"
 #include "code\Tuberculosis\objects.dm"
 #include "code\Tuberculosis\parasite.dm"
 #include "code\Tuberculosis\scrapheap.dm"

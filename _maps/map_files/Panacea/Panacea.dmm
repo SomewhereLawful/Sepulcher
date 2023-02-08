@@ -541,12 +541,6 @@
 	icon_state = "floorrusty"
 	},
 /area/game/foundry)
-"vo" = (
-/obj/structure/simple_door/room,
-/turf/open/indestructible/ground/floor{
-	icon_state = "wood1"
-	},
-/area/game/city)
 "vq" = (
 /obj/structure/campfire/drum,
 /turf/open/floor/f13{
@@ -25146,8 +25140,8 @@ ic
 ic
 ic
 NH
-MN
-MN
+Qs
+Qs
 YY
 MN
 MN
@@ -25403,7 +25397,7 @@ ic
 ic
 ic
 NH
-Qs
+MN
 Qs
 ZA
 Qs
@@ -25660,7 +25654,7 @@ pu
 pu
 pu
 NH
-Qs
+MN
 Qs
 Qs
 Qs
@@ -28314,7 +28308,7 @@ yi
 yi
 yi
 NV
-zc
+HO
 zc
 wH
 wH
@@ -37496,7 +37490,7 @@ wH
 wH
 wH
 wH
-vo
+EZ
 wH
 wH
 wH

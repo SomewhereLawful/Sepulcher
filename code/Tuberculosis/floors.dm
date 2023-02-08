@@ -7,6 +7,7 @@
 	desc = "Mundane fluids that facilitate life."
 	icon = 'icons/turf/floors.dmi'
 	icon_state = "riverwater"
+	slowdown = 2
 
 /turf/open/indestructible/ground/outside/water/sea
 	name = "sea water"
