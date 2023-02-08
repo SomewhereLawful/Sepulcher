@@ -78,6 +78,14 @@
 	flavour_text = "<span class='danger'><b>You are rebuilt flesh of saints. Your duty is to the people; ascention and guidance are in your hands. Your word is law, your will manifest.</b></span>"
 	assignedrole = "Kommandant"
 
+	head = /obj/item/clothing/head/kommandant
+	mask = /obj/item/clothing/mask/gas/kommandant
+	uniform = /obj/item/clothing/under/kommandant
+	shoes = /obj/item/clothing/shoes/kommandant
+	suit = /obj/item/clothing/suit/armor/kommandant
+	gloves = /obj/item/clothing/gloves/kommandant
+
+
 /obj/effect/mob_spawn/human/kommandant/special(mob/living/new_spawn)
 	if(ishuman(new_spawn))
 		var/mob/living/carbon/human/H = new_spawn
