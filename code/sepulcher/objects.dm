@@ -1,4 +1,4 @@
-// Tuberculosis objects //
+// Sepulcher objects //
 // This is effectively a dump file until it's safe to sort into specific files //
 
 /obj/structure/campfire/drum
@@ -18,7 +18,7 @@
 
 // Decorative objects
 /obj/structure/decor
-	icon = 'icons/tuberculosis/decor.dmi'
+	icon = 'icons/sepulcher/decor.dmi'
 	density = 1
 	anchored = 1
 	layer = OBJ_LAYER
@@ -72,13 +72,13 @@
 // decor objects with their own icon files
 /obj/structure/decor/carpet
 	name = "carpet"
-	icon = 'icons/tuberculosis/carpet.dmi'
+	icon = 'icons/sepulcher/carpet.dmi'
 	icon_state = "cover"
 	bound_width = 64
 	density = 0
 
 /obj/structure/decor/water_tank
 	name = "fluid tank"
-	icon = 'icons/tuberculosis/farm.dmi'
+	icon = 'icons/sepulcher/farm.dmi'
 	icon_state = "watertank1"
 	bound_width = 64

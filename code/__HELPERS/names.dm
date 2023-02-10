@@ -1,4 +1,4 @@
-// Tuberculosis name stuff, for spawners.
+// Sepulcher name stuff, for spawners.
 /proc/bioslave_name()
 	return "[pick(GLOB.bioslave_first)] [pick(GLOB.bioslave_synonym)]"
 

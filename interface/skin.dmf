@@ -57,7 +57,7 @@ window "mainwindow"
 		background-color = #210a0a
 		is-default = true
 		saved-params = "pos;size;is-minimized;is-maximized"
-		title = "Tuberculosis"
+		title = "Sepulcher"
 		icon = 'icons\\innervoid.png'
 		macro = "default"
 		menu = "menu"

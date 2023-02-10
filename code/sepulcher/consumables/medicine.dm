@@ -1,4 +1,4 @@
-// Tuberculosis medicines //
+// Sepulcher medicines //
 
 /obj/item/medicine
 	name = "health orb"

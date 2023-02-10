@@ -1,4 +1,4 @@
-// Tuberculosis foodstuffs //
+// Sepulcher foodstuffs //
 // No reagents, instead simply adjusts the hunger bar
 // Some food gives special effects, but that should be the exception - and rarely should it be good
 

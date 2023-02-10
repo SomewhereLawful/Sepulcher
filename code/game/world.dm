@@ -251,7 +251,7 @@ GLOBAL_PROTECT(security_mode)
 			features += "vote"
 		hostedby = CONFIG_GET(string/hostedby)
 
-	s += "<b>\[ENG]Tuberculosis<br>"
+	s += "<b>\[ENG]Sepulcher<br>"
 	s += "<br>"
 	s += "Affected machinations of raging heads<br>"
 	s += "Hosted by Damocles"

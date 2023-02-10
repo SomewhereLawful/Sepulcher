@@ -4,7 +4,7 @@
 /obj/effect/mob_spawn/human/bioslave
 	name = "enslaved birthing womb"
 	desc = "Where all city-dwellers begin."
-	icon = 'icons/obj/tuberculosis_spawners.dmi'
+	icon = 'icons/obj/spawners.dmi'
 	icon_state = "bioslave"
 	density = TRUE
 	permanent = TRUE
@@ -25,7 +25,7 @@
 /obj/effect/mob_spawn/human/prole
 	name = "utilitarian birthing machine"
 	desc = "Births Proletariat workers."
-	icon = 'icons/obj/tuberculosis_spawners.dmi'
+	icon = 'icons/obj/spawners.dmi'
 	icon_state = "prole"
 	density = TRUE
 	permanent = TRUE
@@ -46,7 +46,7 @@
 /obj/effect/mob_spawn/human/bougie
 	name = "embraced birth casket"
 	desc = "Reforms Bourgeoise, those without taint of body."
-	icon = 'icons/obj/tuberculosis_spawners.dmi'
+	icon = 'icons/obj/spawners.dmi'
 	icon_state = "prole"
 	density = TRUE
 	permanent = TRUE
@@ -66,7 +66,7 @@
 /obj/effect/mob_spawn/human/kommandant
 	name = "kommandant casket"
 	desc = "Broken saintly flesh goes here to be reformed."
-	icon = 'icons/obj/tuberculosis_spawners.dmi'
+	icon = 'icons/obj/spawners.dmi'
 	icon_state = "kommandant"
 	density = TRUE
 	permanent = TRUE

@@ -1,4 +1,4 @@
-// Tuberculosis floors
+// Sepulcher floors
 // NOTE: Some flooring used ingame may not be here.
 
 //water
@@ -56,7 +56,7 @@
 
 /turf/open/indestructible/ground/floor
 	name = "floor"
-	icon = 'icons/tuberculosis/floor.dmi'
+	icon = 'icons/sepulcher/floor.dmi'
 
 /turf/open/indestructible/ground/floor/lattice
 	name = "floor"

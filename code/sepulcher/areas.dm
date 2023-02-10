@@ -1,4 +1,4 @@
-// Tuberculosis areas //
+// Sepulcher areas //
 
 /area/game
 	name = "error"

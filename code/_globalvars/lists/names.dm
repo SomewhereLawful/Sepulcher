@@ -1,4 +1,4 @@
-// TUBERCULOSIS STUFF
+// Sepulcher STUFF
 GLOBAL_LIST_INIT(bioslave_first, world.file2list("strings/names/bioslave_first.txt"))
 GLOBAL_LIST_INIT(bioslave_synonym, world.file2list("strings/names/bioslave_synonym.txt"))
 GLOBAL_LIST_INIT(prole_first, world.file2list("strings/names/prole_first.txt"))
