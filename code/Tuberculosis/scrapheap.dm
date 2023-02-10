@@ -10,10 +10,15 @@
 /obj/structure/scrapheap
 	name = "scrap heap"
 	desc = "Pile of metal from nowhere. Many pieces look sharp."
-	icon_state = "drumfire"
+	icon = 'icons/obj/scrapheaps.dmi'
+	icon_state = "scrap1"
 	density = TRUE
 	anchored = TRUE
 	bound_width = 64 // Double wide
+
+/obj/structure/scrapheap/New()
+	..()
+	icon_state = "scrap[rand(1,4)]"
 
 /obj/structure/scrapheap/attack_hand(mob/user)
 	if(do_after(user, 14.4, target = src))
