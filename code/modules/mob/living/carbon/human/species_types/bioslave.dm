@@ -6,7 +6,7 @@
 	default_features = list("mcolor" = "FFF", "tail_human" = "None", "ears" = "None", "wings" = "None")
 	use_skintones = 0 // They all look like burnt corpses
 	skinned_type = /obj/item/stack/sheet/animalhide/human
-	no_equip = list(SLOT_WEAR_MASK, SLOT_WEAR_SUIT, SLOT_GLOVES, SLOT_SHOES, SLOT_W_UNIFORM, SLOT_S_STORE)
+	no_equip = list(SLOT_WEAR_MASK, SLOT_WEAR_SUIT, SLOT_GLOVES, SLOT_SHOES, SLOT_S_STORE, SLOT_EARS, SLOT_NECK)
 	nojumpsuit = 1
 	sexes = 0
 

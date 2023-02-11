@@ -6,6 +6,7 @@
 	desc = "A beacon of warmth. Huddle around when the air goes frigid."
 	icon_state = "drumfire"
 	density = 1
+	fuel = 999999999 // Basically infinite
 
 /obj/structure/bed/mattress
 	name = "mattress"
@@ -82,3 +83,18 @@
 	icon = 'icons/sepulcher/farm.dmi'
 	icon_state = "watertank1"
 	bound_width = 64
+
+/obj/structure/laundry_bin
+	name = "laundry bin"
+	desc = "Full of old rags and shoes. Cover your shame."
+	density = TRUE
+	anchored = TRUE
+	icon_state = "laundrybin"
+
+/obj/structure/laundry_bin/attack_hand(mob/user)
+	to_chat(user, "You dig through for something of passable quality.")
+	if(do_after(user, 14.4, target = src))
+		new /obj/item/food/scrap(get_turf(user))
+		to_chat(user, "You pull out an article of clothing.")
+		playsound(src, 'sound/effects/junk_rustling.ogg', 50, 0)
+	..()

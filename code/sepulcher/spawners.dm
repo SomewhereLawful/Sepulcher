@@ -16,6 +16,8 @@
 	flavour_text = "<span class='danger'><b>Birthed whole, you awake from dreams of soft, undefiled life. You are little more than rough, callous flesh without purpose. Get to carting shit and scrap metal.</b></span>"
 	assignedrole = "Bioslave"
 
+	uniform = /obj/item/clothing/under/pants/bioslave_rags
+
 /obj/effect/mob_spawn/human/bioslave/special(mob/living/new_spawn)
 	if(ishuman(new_spawn))
 		var/mob/living/carbon/human/H = new_spawn

@@ -219,6 +219,10 @@
 	icon_state = "floorrustysolid"
 	},
 /area/game/spawning/bioslave)
+"jk" = (
+/obj/structure/table/wood/settler,
+/turf/open/indestructible/ground/floor/wood_floor,
+/area/game/city)
 "kb" = (
 /obj/structure/decor/wood_scrap,
 /turf/open/floor/f13{
@@ -494,6 +498,10 @@
 	tag = "icon-floorrusty";
 	icon_state = "floorrusty"
 	},
+/area/game/city)
+"ui" = (
+/obj/structure/laundry_bin,
+/turf/open/indestructible/ground/floor/wood_floor,
 /area/game/city)
 "uj" = (
 /obj/structure/ladder/unbreakable{
@@ -25160,7 +25168,7 @@ wH
 ic
 ic
 wH
-zc
+tv
 zc
 zc
 zc
@@ -30314,9 +30322,9 @@ wH
 wH
 da
 da
-yl
-yl
-yl
+jk
+jk
+jk
 MP
 zc
 zc
@@ -43708,8 +43716,8 @@ Vy
 wH
 DG
 da
-da
-da
+Yv
+ui
 wH
 ic
 ic
@@ -43963,8 +43971,8 @@ ic
 ic
 ic
 wH
-da
-da
+ui
+ui
 da
 da
 wH
