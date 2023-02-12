@@ -132,9 +132,9 @@ h4
 {
 	clear: both;
 	padding: 6px 8px 6px 8px;
-	border-bottom: 2px solid #161616;
-	background: #383838;
-	color: #98B0C3;
+	border-bottom: 2px solid #210a0a;
+	background: #210a0a;
+	color: #ffffff;
 	font-size: 16px;
 }
 
@@ -221,7 +221,7 @@ div.notice
 	width: 138px;
 	float: left;
 	overflow: hidden;
-	color: #98B0C3;
+	color: #ffffff;
 }
 
 .statusValue
@@ -333,7 +333,7 @@ div.notice
   width: 18px;
   left: 4px;
   bottom: 4px;
-  background-color: #98B0C3;
+  background-color: #ffffff;
   transition: .4s;
 }
 
