@@ -450,13 +450,13 @@
 			else
 				dat += " [a.title]. </div>"
 
-	dat += "<div class='jobs'><div class='jobsColumn'>"
+	dat += "<div class='jobs'><div align='center'><div class='jobsColumn'></div>"
 	var/job_count = 0
 	for(var/datum/job/job in SSjob.occupations)
 		if(job && IsJobUnavailable(job.title, TRUE) == JOB_AVAILABLE)
 			job_count++;
 			if (job_count > round(available_job_count / 2))
-				dat += "</div><div class='jobsColumn'>"
+				dat += "</div><div align='center'><div class='jobsColumn'></div>"
 			var/position_class = "otherPosition"
 			if (job.title in GLOB.command_positions)
 				position_class = "commandPosition"
