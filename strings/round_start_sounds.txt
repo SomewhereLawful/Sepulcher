@@ -1,4 +1,4 @@
-sound/f13/song10.ogg
-sound/f13/cof_twistedmind.ogg
-sound/f13/cof_anxiety.ogg
-sound/f13/cof_sorrow.ogg
+sound/lobbymusic/song10.ogg
+sound/lobbymusic/cof_twistedmind.ogg
+sound/lobbymusic/cof_anxiety.ogg
+sound/lobbymusic/cof_sorrow.ogg
