@@ -80,22 +80,22 @@ SUBSYSTEM_DEF(nightcycle)
 /datum/controller/subsystem/nightcycle/proc/updateLight(newTime)
 	switch (newTime)
 		if ("SUNRISE")
-			sunColour = "#ffd1b3"
+			sunColour = "#e26060"
 			sunPower = 0.3
 		if ("MORNING")
-			sunColour = "#fff2e6"
+			sunColour = "#e26060"
 			sunPower = 0.5
 		if ("DAYTIME")
-			sunColour = "#FFFFFF"
+			sunColour = "#e26060"
 			sunPower = 0.75
 		if ("AFTERNOON")
-			sunColour = "#fff2e6"
+			sunColour = "#e26060"
 			sunPower = 0.5
 		if ("SUNSET")
-			sunColour = "#ffcccc"
+			sunColour = "#e26060"
 			sunPower = 0.3
 		if("NIGHTTIME")
-			sunColour = "#00111a"
+			sunColour = "#e26060"
 			sunPower = 0.20
 
 

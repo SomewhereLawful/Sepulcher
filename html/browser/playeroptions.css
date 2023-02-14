@@ -6,7 +6,7 @@
 
 .jobsColumn
 {
-	float: left;
+	float: none;
 	width: 200px;
 	text-align: center;
 }

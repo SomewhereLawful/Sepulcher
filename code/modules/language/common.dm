@@ -1,7 +1,7 @@
 // 'basic' language; spoken by default.
 /datum/language/common
-	name = "Galactic Common"
-	desc = "The common galactic tongue."
+	name = "City Speak"
+	desc = "The common, artless tongue of proletariat and slaves alike."
 	speech_verb = "says"
 	whisper_verb = "whispers"
 	key = "0"

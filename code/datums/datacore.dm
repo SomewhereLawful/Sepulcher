@@ -119,21 +119,6 @@
 		if(rank in GLOB.command_positions)
 			command[name] = rank
 			department = 1
-		if(rank in GLOB.brotherhood_positions)
-			bos[name] = rank
-			department = 1
-		if(rank in GLOB.den_positions)
-			den[name] = rank
-			department = 1
-		if(rank in GLOB.legion_positions)
-			leg[name] = rank
-			department = 1
-		if(rank in GLOB.ncr_positions)
-			ncr[name] = rank
-			department = 1
-		if(rank in GLOB.vault_positions)
-			vault[name] = rank
-			department = 1
 		if(rank in GLOB.wasteland_positions)
 			was[name] = rank
 			department = 1

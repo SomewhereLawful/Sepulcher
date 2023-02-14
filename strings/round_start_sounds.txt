@@ -1,6 +1,4 @@
-sound/f13/lobby1.ogg
-sound/f13/lobby2.ogg
-sound/f13/lobby3.ogg
-sound/f13/lobby4.ogg
-sound/f13/lobby5.ogg
-sound/f13/lobby6.ogg
+sound/lobbymusic/song10.ogg
+sound/lobbymusic/cof_twistedmind.ogg
+sound/lobbymusic/cof_anxiety.ogg
+sound/lobbymusic/cof_sorrow.ogg

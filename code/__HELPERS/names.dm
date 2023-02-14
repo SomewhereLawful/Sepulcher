@@ -1,3 +1,11 @@
+// Sepulcher name stuff, for spawners.
+/proc/bioslave_name()
+	return "[pick(GLOB.bioslave_first)] [pick(GLOB.bioslave_synonym)]"
+
+/proc/prole_name()
+	return "[pick(GLOB.prole_first)] [pick(GLOB.prole_synonym)]"
+
+// Standard SS13 stuff
 /proc/lizard_name(gender)
 	if(gender == MALE)
 		return "[pick(GLOB.lizard_names_male)]-[pick(GLOB.lizard_names_male)]"
