@@ -63,9 +63,6 @@
 /turf/open/indestructible/ground/outside/desert
 	name = "desert"
 	icon_state = "wasteland"
-//	step_sounds = list("human" = "dirtfootsteps")
-//	allowed_plants = list(/obj/item/seeds/poppy/broc, /obj/item/seeds/xander, /obj/item/seeds/mutfruit, \
-//	/obj/item/seeds/feracactus, /obj/item/seeds/corn,/obj/item/seeds/shroom, /obj/item/seeds/agave)
 	slowdown = 1
 	flags_1 = CAN_HAVE_NATURE | ADJACENCIES_OVERLAY
 	var/dug = FALSE				//FALSE = has not yet been dug, TRUE = has already been dug
@@ -123,9 +120,6 @@
 /turf/open/indestructible/ground/outside/dirt
 	name = "dirt"
 	icon_state = "dirtfull"
-//	step_sounds = list("human" = "dirtfootsteps")
-//	allowed_plants = list(/obj/item/seeds/poppy/broc, /obj/item/seeds/xander, /obj/item/seeds/mutfruit, \
-//	/obj/item/seeds/potato, /obj/item/seeds/carrot, /obj/item/seeds/pumpkin, /obj/item/seeds/corn, /obj/item/seeds/agave)
 	slowdown = 0.2
 	flags_1 = CAN_HAVE_NATURE
 

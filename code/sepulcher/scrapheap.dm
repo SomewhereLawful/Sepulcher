@@ -21,6 +21,7 @@
 	icon_state = "scrap[rand(1,4)]"
 
 /obj/structure/scrapheap/attack_hand(mob/user)
+	playsound(src, 'sound/effects/junk_rustling.ogg', 50, 0)
 	to_chat(user, "You begin to sift through the metal.")
 	if(do_after(user, 14.4, target = src))
 		new /obj/item/food/scrap(get_turf(user))

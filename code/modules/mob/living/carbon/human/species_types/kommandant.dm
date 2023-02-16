@@ -2,7 +2,7 @@
 	name = "Kommandant"
 	id = "kommandant"
 	default_color = "FFFFFF"
-	species_traits = list()
+	species_traits = list(NO_UNDERWEAR)
 	default_features = list("mcolor" = "FFF", "tail_human" = "None", "ears" = "None", "wings" = "None")
 	use_skintones = 0 // They all look like burnt corpses
 	sexes = 0

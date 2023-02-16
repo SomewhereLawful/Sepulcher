@@ -25,7 +25,7 @@
 	category = CAT_CLOTHING
 	subcategory = CAT_CLOTHING
 
-	/datum/crafting_recipe/bandolier
+/datum/crafting_recipe/bandolier
 	name = "Bandolier"
 	result = /obj/item/storage/belt/bandolier
 	reqs = list(/obj/item/stack/sheet/hay = 3,
