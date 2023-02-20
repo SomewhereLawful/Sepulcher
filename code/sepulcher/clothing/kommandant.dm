@@ -1,6 +1,3 @@
-// Clothing
-
-// Kommandant
 /obj/item/clothing/mask/gas/kommandant
 	name = "steel-stitched respirator"
 	desc = "Mask that conceals the raw flesh, a rubber second-skin."
@@ -74,29 +71,3 @@
 	cold_protection = CHEST|GROIN|LEGS|ARMS
 	heat_protection = CHEST|GROIN|LEGS|ARMS
 	dog_fashion = null
-
-// City Common clothes
-
-/obj/item/clothing/under/pants/bioslave_rags
-	name = "ripped pants"
-	desc = "Unremarkable, dirty rags. Bioslaves require warmth as any other does."
-	icon_state = "ghoul"
-	item_color = "ghoul"
-
-/obj/item/clothing/mask/hypo_mask
-	name = "smoke hood"
-	desc = "Little more than a bag and visor."
-	icon_state = "hypo"
-	item_state = "hypo"
-
-/obj/item/clothing/mask/ph_mask
-	name = "burlap mask"
-	desc = "Odd looking bag, with a small tongue."
-	icon_state = "ph_mask"
-	item_state = "ph_mask"
-
-/obj/item/clothing/mask/gp5
-	name = "rubber mask"
-	desc = "Common and durable."
-	icon_state = "gas_alt"
-	item_state = "gas_alt"

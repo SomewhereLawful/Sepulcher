@@ -103,7 +103,7 @@
 				playsound(src, 'sound/effects/cloth_rustle1.ogg', 50, 0)
 		if("Masks")
 			if(do_after(user, 14.4, target = src))
-				new /obj/item/clothing/mask/hypo_mask(get_turf(user))
+				new /obj/item/clothing/mask/ph_mask(get_turf(user))
 				to_chat(user, "You pull out an article of clothing.")
 				playsound(src, 'sound/effects/cloth_rustle1.ogg', 50, 0)
 		if("Shirts")
