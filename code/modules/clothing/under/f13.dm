@@ -88,13 +88,6 @@
 	item_state = "doctor_f"
 	item_color = "doctor_f"
 
-/obj/item/clothing/under/f13/caravan
-	name = "caravan pants"
-	desc = "Brown thick caravaneer pants."
-	icon_state = "caravan"
-	item_state = "caravan"
-	item_color = "caravan"
-
 /obj/item/clothing/under/f13/settler
 	name = "settler outfit"
 	desc = "A crudely made cloth robe with a belt worn over grey pants."
@@ -512,22 +505,6 @@
 	item_color = "rag"
 	can_adjust = 0
 
-/obj/item/clothing/under/f13/tribal
-	name = "male tribal outfit"
-	desc = "A male outfit made of gecko hides.<br>It doesn't cover some parts of body, yet it's better than to walk around naked..."
-	icon_state = "tribal_m"
-	item_state = "lgloves"
-	item_color = "tribal_m"
-	can_adjust = 0
-
-/obj/item/clothing/under/f13/female/tribal
-	name = "female tribal outfit"
-	desc = "A female outfit made of gecko hides.<br>It doesn't cover some parts of body, yet it's better than to walk around naked..."
-	icon_state = "tribal_f"
-	item_state = "lgloves"
-	item_color = "tribal_f"
-	can_adjust = 0
-
 /obj/item/clothing/under/f13/settler
 	name = "settler outfit"
 	desc = "A more or less a crudely made tan robe with a makeshift belt made from cloth.<br>Paired with worn grey pants."
@@ -875,12 +852,6 @@
 	desc = "A pair of worn dusty cloth pants made of various textile pieces.<br>Commonly found all over the wasteland."
 	icon_state = "cloth"
 	item_color = "cloth"
-
-/obj/item/clothing/under/pants/f13/caravan //Caravanner - someone who travels with caravan. Caravaneer - caravan leader.
-	name = "caravanner pants"
-	desc = "A pair of wide dusty cargo pants.<br>Commonly worn by caravanners or caravan robbers."
-	icon_state = "caravan"
-	item_color = "caravan"
 
 /obj/item/clothing/under/pants/f13/khan
 	name = "Great Khan pants"
