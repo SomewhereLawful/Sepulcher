@@ -83,3 +83,9 @@
 	icon = 'icons/sepulcher/farm.dmi'
 	icon_state = "watertank1"
 	bound_width = 64
+
+/obj/structure/fence/church
+	name = "wrought iron fence"
+	desc = "Beautiful facets of lost craftsmen."
+	icon_state = "churchfence"
+	cuttable= FALSE

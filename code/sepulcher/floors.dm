@@ -29,6 +29,10 @@
 	icon_state = "darkrustysolid"
 	icon = 'icons/turf/f13floors2.dmi'
 
+/turf/open/indestructible/ground/outside/sidewalk/stairs
+	icon_state = "rampupbottom"
+	icon = 'icons/turf/f13floors2.dmi'
+
 // Foundry chasm //
 /turf/open/chasm/foundry
 	name = "foundry pit"

@@ -2760,6 +2760,7 @@
 #include "code\modules\zombie\items.dm"
 #include "code\modules\zombie\organs.dm"
 #include "code\sepulcher\areas.dm"
+#include "code\sepulcher\floor_effects.dm"
 #include "code\sepulcher\floors.dm"
 #include "code\sepulcher\foundry.dm"
 #include "code\sepulcher\items.dm"
