@@ -475,6 +475,10 @@
 	layer = UI_DAMAGE_LAYER
 	plane = FULLSCREEN_PLANE
 
+/obj/screen/stats_panel
+	icon = 'icons/mob/stats_bg.dmi'
+	icon_state = "stats"
+
 /obj/screen/healths
 	name = "health"
 	icon_state = "health0"

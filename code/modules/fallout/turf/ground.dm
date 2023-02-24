@@ -121,7 +121,6 @@
 	name = "dirt"
 	icon_state = "dirtfull"
 	slowdown = 0.2
-	flags_1 = CAN_HAVE_NATURE
 
 /turf/open/indestructible/ground/outside/dirt/MakeSlippery(wet_setting, min_wet_time, wet_time_to_add, max_wet_time, permanent)
 	return

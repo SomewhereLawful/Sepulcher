@@ -23,6 +23,12 @@
 	icon = 'icons/turf/floors.dmi'
 	icon_state = "riverwater"
 
+// Dirt
+/turf/open/indestructible/ground/outside/waste
+	name = "dirt"
+	icon_state = "railsnone"
+	slowdown = 0.2
+
 //pavement
 /turf/open/indestructible/ground/outside/sidewalk/tile
 	name = "pavement"

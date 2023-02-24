@@ -298,6 +298,10 @@
 	devilsouldisplay = new /obj/screen/devil/soul_counter
 	infodisplay += devilsouldisplay
 
+	using = new /obj/screen/stats_panel()
+	using.screen_loc = ui_health
+	static_inventory += using
+	
 	zone_select =  new /obj/screen/zone_sel()
 	zone_select.icon = ui_style
 	zone_select.update_icon(mymob)

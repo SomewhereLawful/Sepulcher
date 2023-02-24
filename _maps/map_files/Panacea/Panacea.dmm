@@ -124,7 +124,7 @@
 /turf/closed/wall/bricks_white,
 /area/game/spawning/bioslave)
 "ft" = (
-/turf/open/indestructible/ground/inside/subway,
+/turf/open/indestructible/ground/outside/waste,
 /area/game/city)
 "fz" = (
 /obj/item/flashlight/lantern,
