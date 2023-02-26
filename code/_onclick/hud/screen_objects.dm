@@ -475,12 +475,27 @@
 	layer = UI_DAMAGE_LAYER
 	plane = FULLSCREEN_PLANE
 
-/obj/screen/stats_panel
+/obj/screen/stats_panel // The health vials
 	icon = 'icons/mob/stats_bg.dmi'
-	icon_state = "stats"
+	icon_state = "stats_mono"
 
 /obj/screen/healths
-	name = "health"
+	name = "vigor"
+	icon_state = "health0"
+	screen_loc = ui_health
+
+/obj/screen/will_bar
+	name = "will"
+	icon_state = "health0"
+	screen_loc = ui_health
+
+/obj/screen/hunger_bar
+	name = "hunger"
+	icon_state = "health0"
+	screen_loc = ui_health
+
+/obj/screen/tox_bar
+	name = "toxicity"
 	icon_state = "health0"
 	screen_loc = ui_health
 

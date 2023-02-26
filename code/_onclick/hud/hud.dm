@@ -6,7 +6,7 @@
 
 // The default UI style is the first one in the list
 GLOBAL_LIST_INIT(available_ui_styles, list(
-	"Midnight" = 'icons/mob/screen_midnight.dmi'
+	"Midnight" = 'icons/mob/screen_default.dmi'
 ))
 
 /proc/ui_style2icon(ui_style)

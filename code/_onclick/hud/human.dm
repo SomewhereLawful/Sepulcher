@@ -135,7 +135,7 @@
 
 	using = new /obj/screen/swap_hand()
 	using.icon = ui_style
-	using.icon_state = "swap_1"
+	using.icon_state = "swap_1_m"
 	using.screen_loc = ui_swaphand_position(owner,1)
 	static_inventory += using
 
@@ -299,7 +299,7 @@
 	infodisplay += devilsouldisplay
 
 	using = new /obj/screen/stats_panel()
-	using.screen_loc = ui_health
+	using.screen_loc = ui_drop_throw
 	static_inventory += using
 	
 	zone_select =  new /obj/screen/zone_sel()
