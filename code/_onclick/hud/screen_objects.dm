@@ -479,76 +479,79 @@
 	icon = 'icons/mob/stats_bg.dmi'
 	icon_state = "stats_mono"
 
-/obj/screen/healths
+/obj/screen/bar_stat
+	icon = 'icons/mob/stats_bars.dmi'
+
+/obj/screen/bar_stat/health
 	name = "vigor"
 	icon_state = "health0"
-	screen_loc = ui_health
+	screen_loc = ui_drop_throw
 
-/obj/screen/will_bar
+/obj/screen/bar_stat/will
 	name = "will"
-	icon_state = "health0"
-	screen_loc = ui_health
+	icon_state = "will0"
+	screen_loc = ui_drop_throw
 
-/obj/screen/hunger_bar
+/obj/screen/bar_stat/hunger
 	name = "hunger"
-	icon_state = "health0"
-	screen_loc = ui_health
+	icon_state = "hunger0"
+	screen_loc = ui_drop_throw
 
-/obj/screen/tox_bar
+/obj/screen/bar_stat/toxicity
 	name = "toxicity"
-	icon_state = "health0"
-	screen_loc = ui_health
+	icon_state = "toxicity100"
+	screen_loc = ui_drop_throw
 
-/obj/screen/healths/alien
+/obj/screen/bar_stat/health/alien
 	icon = 'icons/mob/screen_alien.dmi'
 	screen_loc = ui_alien_health
 
-/obj/screen/healths/robot
+/obj/screen/bar_stat/health/robot
 	icon = 'icons/mob/screen_cyborg.dmi'
 	screen_loc = ui_borg_health
 
-/obj/screen/healths/blob
+/obj/screen/bar_stat/health/blob
 	name = "blob health"
 	icon_state = "block"
 	screen_loc = ui_internal
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 
-/obj/screen/healths/blob/naut
+/obj/screen/bar_stat/health/blob/naut
 	name = "health"
 	icon = 'icons/mob/blob.dmi'
 	icon_state = "nauthealth"
 
-/obj/screen/healths/blob/naut/core
+/obj/screen/bar_stat/health/blob/naut/core
 	name = "overmind health"
 	screen_loc = ui_health
 	icon_state = "corehealth"
 
-/obj/screen/healths/guardian
+/obj/screen/bar_stat/health/guardian
 	name = "summoner health"
 	icon = 'icons/mob/guardian.dmi'
 	icon_state = "base"
 	screen_loc = ui_health
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 
-/obj/screen/healths/clock
+/obj/screen/bar_stat/health/clock
 	icon = 'icons/mob/actions.dmi'
 	icon_state = "bg_clock"
 	screen_loc = ui_health
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 
-/obj/screen/healths/clock/gear
+/obj/screen/bar_stat/health/clock/gear
 	icon = 'icons/mob/clockwork_mobs.dmi'
 	icon_state = "bg_gear"
 	screen_loc = ui_internal
 
-/obj/screen/healths/revenant
+/obj/screen/bar_stat/health/revenant
 	name = "essence"
 	icon = 'icons/mob/actions.dmi'
 	icon_state = "bg_revenant"
 	screen_loc = ui_health
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 
-/obj/screen/healths/construct
+/obj/screen/bar_stat/health/construct
 	icon = 'icons/mob/screen_construct.dmi'
 	icon_state = "artificer_health0"
 	screen_loc = ui_construct_health

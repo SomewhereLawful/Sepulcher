@@ -48,7 +48,11 @@ GLOBAL_LIST_INIT(available_ui_styles, list(
 	var/obj/screen/movable/action_button/hide_toggle/hide_actions_toggle
 	var/action_buttons_hidden = FALSE
 
-	var/obj/screen/healths
+	var/obj/screen/bar_stat/health
+	var/obj/screen/bar_stat/will
+	var/obj/screen/bar_stat/hunger
+	var/obj/screen/bar_stat/toxicity
+
 	var/obj/screen/healthdoll
 	var/obj/screen/internals
 	var/obj/screen/mood
@@ -93,7 +97,10 @@ GLOBAL_LIST_INIT(available_ui_styles, list(
 	throw_icon = null
 	QDEL_LIST(infodisplay)
 
-	healths = null
+	health = null
+	will = null
+	hunger = null
+	toxicity = null
 	healthdoll = null
 	internals = null
 	mood = null

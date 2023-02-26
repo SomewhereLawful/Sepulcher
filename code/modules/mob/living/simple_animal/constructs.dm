@@ -452,15 +452,15 @@
 /mob/living/simple_animal/hostile/construct/update_health_hud()
 	if(hud_used)
 		if(health >= maxHealth)
-			hud_used.healths.icon_state = "[icon_state]_health0"
+			hud_used.health.icon_state = "[icon_state]_health0"
 		else if(health > maxHealth*0.8)
-			hud_used.healths.icon_state = "[icon_state]_health2"
+			hud_used.health.icon_state = "[icon_state]_health2"
 		else if(health > maxHealth*0.6)
-			hud_used.healths.icon_state = "[icon_state]_health3"
+			hud_used.health.icon_state = "[icon_state]_health3"
 		else if(health > maxHealth*0.4)
-			hud_used.healths.icon_state = "[icon_state]_health4"
+			hud_used.health.icon_state = "[icon_state]_health4"
 		else if(health > maxHealth*0.2)
-			hud_used.healths.icon_state = "[icon_state]_health5"
+			hud_used.health.icon_state = "[icon_state]_health5"
 		else
-			hud_used.healths.icon_state = "[icon_state]_health6"
+			hud_used.health.icon_state = "[icon_state]_health6"
 

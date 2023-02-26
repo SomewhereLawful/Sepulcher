@@ -135,7 +135,7 @@
 
 	using = new /obj/screen/swap_hand()
 	using.icon = ui_style
-	using.icon_state = "swap_1_m"
+	using.icon_state = "swap_1"
 	using.screen_loc = ui_swaphand_position(owner,1)
 	static_inventory += using
 
@@ -273,8 +273,17 @@
 	internals = new /obj/screen/internals()
 	infodisplay += internals
 
-	healths = new /obj/screen/healths()
-	infodisplay += healths
+	health = new /obj/screen/bar_stat/health()
+	infodisplay += health
+
+	will = new /obj/screen/bar_stat/will()
+	infodisplay += will
+
+	hunger = new /obj/screen/bar_stat/hunger()
+	infodisplay += hunger
+
+	toxicity = new /obj/screen/bar_stat/toxicity()
+	infodisplay += toxicity
 
 	healthdoll = new /obj/screen/healthdoll()
 	infodisplay += healthdoll
