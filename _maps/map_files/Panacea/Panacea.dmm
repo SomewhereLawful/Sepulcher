@@ -399,7 +399,7 @@
 /area/game/foundry)
 "mO" = (
 /obj/effect/mob_spawn/human/kommandant,
-/turf/open/indestructible/ground/outside/sidewalk/tile,
+/turf/open/indestructible/ground/floor/lattice,
 /area/game/spawning/kommandant)
 "np" = (
 /obj/machinery/light/small,
@@ -591,7 +591,7 @@
 /turf/open/indestructible/ground/outside/road,
 /area/game/city)
 "sm" = (
-/turf/open/indestructible/ground/outside/sidewalk/tile,
+/turf/open/indestructible/ground/floor/lattice,
 /area/game/spawning/kommandant)
 "sO" = (
 /obj/structure/table,
@@ -847,7 +847,7 @@
 	},
 /area/game/city)
 "xS" = (
-/obj/structure/fluff/arc,
+/obj/structure/fluff/plaza_statue,
 /turf/open/indestructible/ground/outside/road,
 /area/game/city)
 "ye" = (
@@ -1004,6 +1004,11 @@
 /obj/structure/decor/dump_bin/full,
 /turf/open/indestructible/ground/outside/road,
 /area/game/city)
+"Bf" = (
+/turf/open/indestructible/ground/floor/lattice{
+	icon_state = "lattice_new14"
+	},
+/area/game/spawning/kommandant)
 "BE" = (
 /obj/structure/campfire/drum,
 /obj/effect/turf_decal/line{
@@ -40213,7 +40218,7 @@ ic
 Yn
 sm
 sm
-sm
+Bf
 sS
 sS
 sS
@@ -40470,7 +40475,7 @@ ic
 Yn
 mO
 sm
-sm
+Bf
 sS
 sS
 sS
@@ -40727,7 +40732,7 @@ ic
 Yn
 sm
 sm
-sm
+Bf
 sS
 sS
 sS
