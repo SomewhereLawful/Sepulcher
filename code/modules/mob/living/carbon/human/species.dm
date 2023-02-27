@@ -1022,6 +1022,15 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 /datum/species/proc/update_health_hud(mob/living/carbon/human/H)
 	return 0
 
+/datum/species/proc/update_willstat_hud(mob/living/carbon/human/H)
+	return 0
+
+/datum/species/proc/update_hungerstat_hud(mob/living/carbon/human/H)
+	return 0
+
+/datum/species/proc/update_toxicitystat_hud(mob/living/carbon/human/H)
+	return 0
+
 /datum/species/proc/handle_mutations_and_radiation(mob/living/carbon/human/H)
 	. = FALSE
 	var/radiation = H.radiation

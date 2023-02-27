@@ -859,6 +859,15 @@
 /mob/proc/update_health_hud()
 	return
 
+/mob/proc/update_willstat_hud()
+	return
+
+/mob/proc/update_hungerstat_hud()
+	return
+
+/mob/proc/update_toxicitystat_hud()
+	return
+
 /mob/proc/update_sight()
 	for(var/O in orbiters)
 		var/datum/orbit/orbit = O
