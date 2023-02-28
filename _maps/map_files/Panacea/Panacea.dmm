@@ -920,6 +920,13 @@
 	},
 /turf/open/indestructible/ground/floor/lattice,
 /area/game/spawning/prole)
+"yU" = (
+/obj/item/food/goyslop,
+/turf/open/floor/f13{
+	tag = "icon-floorrusty";
+	icon_state = "floorrustysolid"
+	},
+/area/game/spawning/bioslave)
 "yW" = (
 /obj/effect/turf_decal/roadline/noshadow{
 	dir = 8
@@ -27927,7 +27934,7 @@ WG
 Ln
 qN
 EV
-EV
+yU
 qN
 AO
 Wj

@@ -86,7 +86,7 @@
 
 /obj/structure/fence/church
 	name = "wrought iron fence"
-	desc = "Beautiful facets of lost craftsmen."
+	desc = null
 	icon_state = "churchfence"
 	cuttable= FALSE
 
