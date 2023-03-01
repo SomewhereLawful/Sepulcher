@@ -30,7 +30,6 @@
 	uses = -1
 	mob_gender = MALE
 	mob_species = /datum/species/proletariat
-	flavour_text = "<span class='danger'><b>Proving you're capable of carting shit and scrap metal, you are now one of the city's rank and file proletariat. You can do more mentally challenging work without dying immediately.</b></span>"
 	assignedrole = "Proletariat"
 
 /obj/effect/mob_spawn/human/bougie
@@ -44,7 +43,6 @@
 	death = FALSE
 	uses = -1
 	mob_species = /datum/species/human
-	flavour_text = "<span class='danger'><b>You are the few of a dead breed. Without bodily taint, you have shed sin and live now as the city's high caste responsible for export and fine art.</b></span>"
 	assignedrole = "Bourgeoise"
 
 /obj/effect/mob_spawn/human/kommandant
@@ -59,7 +57,6 @@
 	uses = -1
 	mob_gender = MALE
 	mob_species = /datum/species/kommandant
-	flavour_text = "<span class='danger'><b>You are rebuilt flesh of saints. Your duty is to the people; ascention and guidance are in your hands. Your word is law, your will manifest.</b></span>"
 	assignedrole = "Kommandant"
 
 	head = /obj/item/clothing/head/kommandant

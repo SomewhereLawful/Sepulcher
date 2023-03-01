@@ -79,9 +79,9 @@
 		
 		if(food_volume)	//Handle ingestion of the reagent.
 			playsound(M.loc,'sound/items/eatfood.ogg', rand(10,50), 1)
-			if(food_volume > 0)
+			if(food_volume >= 0)
 				food_volume--
-				M.adjustwillstat(-10)
+				M.adjustBruteLoss(10)
 			if(food_volume == 0)
 				SEND_SIGNAL(src, COMSIG_FOOD_EATEN, M, user)
 				On_Consume(M)
