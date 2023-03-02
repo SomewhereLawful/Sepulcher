@@ -41,9 +41,9 @@
 	spawn_positions = -1
 	description = "You are at the very bottom of the city's hierarchy and suited best for chattel labor. Proletariat will use you to cart shit or pull scrap from heaps, as your life is cheap. Perhaps they may impart some experience upon you."
 
-/datum/job/vagrant
+/datum/job/city/vagrant
 	title = "Vagrant"
-	faction = "None"
+	faction = "City"
 	total_positions = -1
 	spawn_positions = -1
 	selection_color = "#42401b"

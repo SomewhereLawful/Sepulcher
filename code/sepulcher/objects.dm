@@ -84,6 +84,11 @@
 	icon_state = "watertank1"
 	bound_width = 64
 
+/obj/structure/decor/candle
+	name = "candles"
+	icon_state = "cover"
+	density = 0
+
 /obj/structure/fence/church
 	name = "wrought iron fence"
 	desc = null

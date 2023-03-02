@@ -30,6 +30,7 @@
 	uses = -1
 	mob_gender = MALE
 	mob_species = /datum/species/proletariat
+	flavour_text = ""
 	assignedrole = "Proletariat"
 
 /obj/effect/mob_spawn/human/bougie
@@ -43,6 +44,7 @@
 	death = FALSE
 	uses = -1
 	mob_species = /datum/species/human
+	flavour_text = ""
 	assignedrole = "Bourgeoise"
 
 /obj/effect/mob_spawn/human/kommandant
@@ -57,6 +59,7 @@
 	uses = -1
 	mob_gender = MALE
 	mob_species = /datum/species/kommandant
+	flavour_text = ""
 	assignedrole = "Kommandant"
 
 	head = /obj/item/clothing/head/kommandant
@@ -65,3 +68,19 @@
 	shoes = /obj/item/clothing/shoes/kommandant
 	suit = /obj/item/clothing/suit/armor/kommandant
 	gloves = /obj/item/clothing/gloves/kommandant
+
+// Testing spawners
+/obj/effect/mob_spawn/human/vagrant
+	name = "scvm burthr"
+	desc = "Births Vagrants."
+	icon = 'icons/obj/spawners.dmi'
+	icon_state = "prole"
+	density = TRUE
+	permanent = TRUE
+	roundstart = FALSE
+	death = FALSE
+	uses = -1
+	mob_gender = MALE
+	mob_species = /datum/species/vagrant
+	flavour_text = ""
+	assignedrole = "Vagrant"
