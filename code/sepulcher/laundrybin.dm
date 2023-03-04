@@ -12,16 +12,22 @@
 	if(do_after(user, 14.4, target = src))
 		switch(choice) // Note to self: Make items received appear in hands and make them randomized via pickweight list
 			if("Hats")
-				new /obj/item/clothing/under/boiler(get_turf(user))
+				new /obj/item/clothing/head/flatcap(get_turf(user))
 				to_chat(user, "You grab some headwear from the bin.")
 			if("Masks")
-				new /obj/item/clothing/mask/ph_mask(get_turf(user))
+				var/masks = pick(/obj/item/clothing/mask/ph_mask,
+								/obj/item/clothing/mask/hypo_mask)
+				new masks(get_turf(user))
 				to_chat(user, "You pull a mask from the bin.")
 			if("Shirts")
-				new /obj/item/clothing/under/boiler(get_turf(user))
+				var/shirts = pick(/obj/item/clothing/under/boiler,
+								/obj/item/clothing/under/vest_slacks)
+				new shirts(get_turf(user))
 				to_chat(user, "You pull out an article of clothing.")
 			if("Coats")
-				new /obj/item/food/scrap(get_turf(user))
+				var/coats = pick(/obj/item/clothing/suit/hooded/bandit_coat,
+								/obj/item/clothing/suit/hooded/bandit_coat/brown)
+				new coats(get_turf(user))
 				to_chat(user, "You pull out an article of clothing.")
 			if("Gloves")
 				new /obj/item/food/scrap(get_turf(user))
