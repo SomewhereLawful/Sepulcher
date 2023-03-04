@@ -397,13 +397,16 @@
 /mob/living/proc/updatewill() // Be sure to do that soon, gramps
 	if(status_flags & GODMODE)
 		return
-	will = maxWill
 	update_stat()
 
-/mob/living/proc/updatetoxicity() // Be sure to do that soon, gramps
+/mob/living/proc/updatehunger()
 	if(status_flags & GODMODE)
 		return
-	toxicity = maxToxicity
+	update_stat()
+
+/mob/living/proc/updatetoxicity()
+	if(status_flags & GODMODE)
+		return
 	update_stat()
 
 //proc used to ressuscitate a mob

@@ -6,6 +6,7 @@
 	name = "scrap piece"
 	desc = "Some broken metal of unknown origin."
 	icon_state = "goyslop"
+	feed_points = 5
 
 /obj/structure/scrapheap
 	name = "scrap heap"
@@ -14,7 +15,7 @@
 	icon_state = "scrap1"
 	density = TRUE
 	anchored = TRUE
-	bound_width = 64 // Double wide
+	pixel_x = -16
 
 /obj/structure/scrapheap/New()
 	..()
@@ -23,8 +24,26 @@
 /obj/structure/scrapheap/attack_hand(mob/user)
 	playsound(src, 'sound/effects/junk_rustling.ogg', 50, 0)
 	to_chat(user, "You begin to sift through the metal.")
-	if(do_after(user, 14.4, target = src))
+	var/mob/living/carbon/human/H = user
+	if(do_after(user, 20, target = src))
+		if(isbioslave(H) || isvagrant(H)) // Don't kid yourself, vagrant - you're as dumb as a bioslave
+			if(prob(30))
+				H.bleed_rate = 5
+				if(prob(50))
+					to_chat(user, "<span class='warning'>You jagged yourself, but you manage to obtain some scrap regardless.</span>")
+				else
+					to_chat(user, "<span class='warning'>You jagged yourself and lost grip on the scrap.</span>")
+					return
+		
+		if(isproletariat(H))
+			if(prob(15))
+				H.bleed_rate = 5
+				if(prob(50))
+					to_chat(user, "<span class='warning'>You jagged yourself, but you manage to obtain some scrap regardless.</span>")
+				else
+					to_chat(user, "<span class='warning'>You jagged yourself and lost grip on the scrap.</span>")
+					return
+
 		new /obj/item/food/scrap(get_turf(user))
-		to_chat(user, "You pull some metal from the heap.")
 		playsound(src, 'sound/effects/junk_rustling.ogg', 50, 0)
 	..()

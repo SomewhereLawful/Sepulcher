@@ -81,7 +81,7 @@
 			playsound(M.loc,'sound/items/eatfood.ogg', rand(10,50), 1)
 			if(food_volume >= 0)
 				food_volume--
-				M.adjustWill(-10)
+				M.adjustHunger(feed_points)
 			if(food_volume == 0)
 				SEND_SIGNAL(src, COMSIG_FOOD_EATEN, M, user)
 				On_Consume(M)
@@ -115,19 +115,19 @@
 	name = "food pack"
 	desc = "Staple food of bioslave and the proletariat. Tasteless."
 	icon_state = "goyslop"
-	// feed_points = 10
+	feed_points = 20
 
 /obj/item/food/abortion
 	name = "failed abortion"
 	desc = "Waste not, want not."
-	// feed_points = 10
+	feed_points = 25
 
 /obj/item/food/thinhelmet
 	name = "thin helmet"
 	desc = "Cultivate of shitheaps. Used in food packs."
-	// feed_points = 10
+	feed_points = 5
 
 /obj/item/food/sinew
 	name = "sinew strand"
 	desc = "Grown on shitheaps. Used for sutures."
-	// feed_points = 10
+	feed_points = 3

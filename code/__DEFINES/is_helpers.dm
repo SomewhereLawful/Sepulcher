@@ -60,6 +60,12 @@
 #define iszombie(A) (is_species(A, /datum/species/zombie))
 #define ishumanbasic(A) (is_species(A, /datum/species/human))
 
+//Sepulcher species
+#define isvagrant(A) (is_species(A, /datum/species/vagrant))
+#define isbioslave(A) (is_species(A, /datum/species/bioslave))
+#define isproletariat(A) (is_species(A, /datum/species/proletariat))
+#define iskommandant(A) (is_species(A, /datum/species/kommandant))
+
 //why arent catpeople a subspecies
 #define iscatperson(A) (ishumanbasic(A) && ( A.dna.features["ears"] == "Cat" || A.dna.features["tail_human"] == "Cat") )
 

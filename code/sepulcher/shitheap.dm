@@ -5,6 +5,7 @@
 	name = "shit gobbet"
 	desc = "A filthy mass of waste. It piles nicely, so wet and repugnant."
 	icon_state = "poop"
+	feed_points = 10
 
 /obj/structure/shitheap
 	name = "shitheap"
@@ -13,4 +14,4 @@
 	icon_state = "sanctified"
 	density = TRUE
 	anchored = TRUE
-	bound_width = 64 // Double wide
+	pixel_x = -16

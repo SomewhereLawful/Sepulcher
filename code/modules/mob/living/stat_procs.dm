@@ -1,3 +1,4 @@
+// Will Procs
 /mob/living/proc/getWill()
 	return will
 
@@ -17,6 +18,27 @@
 		updatewill()
 	return amount
 
+// Hunger Procs
+/mob/living/proc/getHunger()
+	return will
+
+/mob/living/proc/adjustHunger(amount, updating_hunger = TRUE, forced = FALSE)
+	if(!forced && (status_flags & GODMODE))
+		return FALSE
+	hunger = CLAMP((hunger + (amount * CONFIG_GET(number/damage_multiplier))), 0, maxHunger * 2)
+	if(updating_hunger)
+		updatehunger()
+	return amount
+
+/mob/living/proc/setHunger(amount, updating_hunger = TRUE, forced = FALSE)
+	if(status_flags & GODMODE)
+		return 0
+	hunger = amount
+	if(updating_hunger)
+		updatehunger()
+	return amount
+
+// Toxicity procs
 /mob/living/proc/getToxicity()
 	return toxicity
 
