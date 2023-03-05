@@ -47,3 +47,9 @@
 		new /obj/item/food/scrap(get_turf(user))
 		playsound(src, 'sound/effects/junk_rustling.ogg', 50, 0)
 	..()
+
+/obj/structure/scrapheap/attackby(obj/item/O, mob/user, params) // Instead of burning the excess, just put it back
+	if(/obj/item/food/scrap)
+		to_chat(user, "You toss the scrap into the pile.")
+		playsound(src, 'sound/effects/junk_rustling.ogg', 50, 0)
+		qdel(O)
