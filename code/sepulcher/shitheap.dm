@@ -7,8 +7,13 @@
 	icon_state = "poop"
 	feed_points = 10
 
+/obj/item/water_adder
+	name = "water adding item"
+	desc = "For adding water to shitheaps, alert if found outside of testing."
+	icon = 'icons/obj/food.dmi'
+
 // Rundown for readability (cause I suck at code)
-// Uses a system reminicent of hydroponics on SS13
+// Uses a system reminicent of (or horridly copy and pasted from) hydroponics on SS13
 // However, instead of tending a crop on a plot
 // A single plot grows from a picklist so long as there's fertilizer(poop)
 
@@ -18,8 +23,8 @@
 #define SHITHEAP_PRODUCTS_SEWER list(/obj/structure/flora/grass/wasteland = 10, /obj/structure/flora/wasteplant/wild_broc = 7, /obj/structure/flora/wasteplant/wild_feracactus = 5, /obj/structure/flora/wasteplant/wild_mutfruit = 5, /obj/structure/flora/wasteplant/wild_xander = 5, /obj/structure/flora/wasteplant/wild_agave = 5, /obj/structure/flora/tree/joshua = 3, /obj/structure/flora/tree/cactus = 2, /obj/structure/flora/tree/wasteland = 2)
 
 /obj/structure/shitheap
-	name = "shitheap"
-	desc = "The base of the city's cultivation. Add dung and fluid to grow mushrooms."
+	name = "exaulted shitheap"
+	desc = "The city's cultivation plots. Located upon hallowed ground."
 	icon = 'icons/obj/shitpiles.dmi'
 	icon_state = "sanctified"
 	density = TRUE
@@ -35,6 +40,7 @@
 	var/maxfertilizer = 10
 	var/lastcycle = 0		//Used for timing of cycles.
 	var/cycledelay = 200	//About 10 seconds / cycle
+	var/rating = 1
 
 	/// Explicitly for sewer
 	var/self_sustaining = FALSE //If the tray generates nutrients and water on its own
@@ -45,7 +51,12 @@
 		to_chat(user, "You add some dung to the heap.")
 		playsound(src, 'sound/effects/blobattack.ogg', 50, 0)
 		qdel(I)
-		fertilizerlevel + 1
+		adjustFertilizer(1)
+	if(/obj/item/water_adder)
+		to_chat(user, "You add some water to the heap.")
+		playsound(src, 'sound/effects/blobattack.ogg', 50, 0)
+		qdel(I)
+		adjustWater(10)
 	return ..()
 
 /obj/structure/shitheap/process()
@@ -58,17 +69,12 @@
 		lastcycle = world.time
 		generatePlant()
 
-//Nutrients//////////////////////////////////////////////////////////////
-			// Nutrients deplete slowly
-			if(prob(50))
-				adjustFertilizer(-1 / rating)
-
-//Water//////////////////////////////////////////////////////////////////
+		// Nutrients deplete slowly
+		if(prob(50))
+			adjustFertilizer(-1 / rating)
 			// Drink random amount of water
 			adjustWater(-rand(1,6) / rating)
 
-		if (needs_update)
-			update_icon()
 	return
 
 /obj/structure/shitheap/proc/adjustFertilizer(adjustamt)
@@ -81,3 +87,26 @@
 	var/randPlant = null
 	if(fertilizerlevel > 0 && waterlevel > 0)
 		randPlant = pickweight(SHITHEAP_PRODUCTS_NORMAL)
+		new randPlant(src)
+
+/obj/structure/shitheap/examine(user)
+	..()
+	if(!self_sustaining)
+		if(fertilizerlevel > maxfertilizer*0.75)
+			to_chat(user, "<span class='info'>The stench tells of ample fertilized.</span>")
+		else if(fertilizerlevel > maxfertilizer*0.5)
+			to_chat(user, "<span class='info'>The heap is sufficiently fertilized.</span>")
+		else if(fertilizerlevel > maxfertilizer*0.25)
+			to_chat(user, "<span class='info'>The soil is yearning for new dung.</span>")
+		else if(fertilizerlevel == 0)
+			to_chat(user, "<span class='info'>The pile is starved. It needs more shit to grow more.</span>")
+		if(waterlevel > maxwater*0.75)
+			to_chat(user, "<span class='info'>It is rich in dampness.</span>")
+		else if(waterlevel > maxwater*0.5)
+			to_chat(user, "<span class='info'>The nightsoil is beginning to dry.</span>")
+		else if(waterlevel > maxwater*0.25)
+			to_chat(user, "<span class='info'>The heap is only ever so moisturized.</span>")
+		else if(waterlevel == 0)
+			to_chat(user, "<span class='info'>The shit is dry. Arid. Screaming for water.</span>")
+	else
+		to_chat(user, "<span class='info'>It does not require water or fertilizer.</span>")

@@ -5,7 +5,7 @@
 /mob/living/proc/adjustWill(amount, updating_will = TRUE, forced = FALSE)
 	if(!forced && (status_flags & GODMODE))
 		return FALSE
-	will = CLAMP((will + (amount * CONFIG_GET(number/damage_multiplier))), 0, maxWill * 2)
+	will = CLAMP((will + (amount)), 0, maxWill)
 	if(updating_will)
 		updatewill()
 	return amount
@@ -25,7 +25,7 @@
 /mob/living/proc/adjustHunger(amount, updating_hunger = TRUE, forced = FALSE)
 	if(!forced && (status_flags & GODMODE))
 		return FALSE
-	hunger = CLAMP((hunger + (amount * CONFIG_GET(number/damage_multiplier))), 0, maxHunger * 2)
+	hunger = CLAMP((hunger + (amount)), 0, maxHunger)
 	if(updating_hunger)
 		updatehunger()
 	return amount
@@ -45,7 +45,7 @@
 /mob/living/proc/adjustToxicity(amount, updating_toxicity = TRUE, forced = FALSE)
 	if(!forced && (status_flags & GODMODE))
 		return FALSE
-	toxicity = CLAMP((toxicity + (amount * CONFIG_GET(number/damage_multiplier))), 0, maxToxicity * 2)
+	toxicity = CLAMP((toxicity + (amount)), 0, maxToxicity)
 	if(updating_toxicity)
 		updatetoxicity()
 	return amount

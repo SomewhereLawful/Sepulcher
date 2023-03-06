@@ -4,6 +4,8 @@
 	density = TRUE
 	anchored = TRUE
 	icon_state = "laundrybin"
+	
+	//M.put_in_active_hand(holy_weapon)
 
 /obj/structure/laundry_bin/attack_hand(mob/user)
 	to_chat(user, "You dig through for something of passable quality.")
@@ -17,7 +19,7 @@
 			if("Masks")
 				var/masks = pick(/obj/item/clothing/mask/ph_mask,
 								/obj/item/clothing/mask/hypo_mask)
-				new masks(get_turf(user))
+				user.put_in_active_hand(masks)
 				to_chat(user, "You pull a mask from the bin.")
 			if("Shirts")
 				var/shirts = pick(/obj/item/clothing/under/boiler,
