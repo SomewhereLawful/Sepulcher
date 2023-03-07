@@ -1289,6 +1289,7 @@
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/structure/rack,
 /turf/open/floor/f13{
 	tag = "icon-bluedirtychess2";
 	icon_state = "bluedirtychess2"
@@ -25878,10 +25879,10 @@ ic
 ic
 ic
 uI
-pC
+yD
 Ix
-pC
-pC
+yD
+yD
 uI
 ic
 ic

@@ -57,12 +57,13 @@
 
 #define GRASS_SPONTANEOUS_GROUND 		2
 #define GRASS_WEIGHT_GROUND			4
-#define LUSH_PLANT_SPAWN_LIST_GROUND list(/obj/structure/flora/grass/wasteland = 10, /obj/structure/flora/wasteplant/wild_broc = 7, /obj/structure/flora/wasteplant/wild_feracactus = 5, /obj/structure/flora/wasteplant/wild_mutfruit = 5, /obj/structure/flora/wasteplant/wild_xander = 5, /obj/structure/flora/wasteplant/wild_agave = 5, /obj/structure/flora/tree/joshua = 3, /obj/structure/flora/tree/cactus = 2, /obj/structure/flora/tree/wasteland = 2)
+#define LUSH_PLANT_SPAWN_LIST_GROUND list(/obj/structure/flora/grass/wasteland = 10, /obj/structure/flora/tree/wasteland = 2)
 #define DESOLATE_PLANT_SPAWN_LIST_GROUND list(/obj/structure/flora/grass/wasteland = 1)
 
 /turf/open/indestructible/ground/outside/desert
 	name = "desert"
-	icon_state = "wasteland"
+	icon = 'icons/turf/desert.dmi'
+	icon_state = "desert1"
 	slowdown = 1
 	flags_1 = CAN_HAVE_NATURE | ADJACENCIES_OVERLAY
 	var/dug = FALSE				//FALSE = has not yet been dug, TRUE = has already been dug
@@ -78,8 +79,8 @@
 	. = ..()
 	if(!((locate(/obj/structure) in src) || (locate(/obj/machinery) in src)))
 		plantGrass()
-	if(icon_state != "wasteland")
-		icon_state = "wasteland[rand(1,31)]"
+	if(icon_state == "desert1")
+		icon_state = "desert[rand(1,31)]"
 
 /turf/open/indestructible/ground/outside/desert/proc/plantGrass(Plantforce = FALSE)
 	var/Weight = 0

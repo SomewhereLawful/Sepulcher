@@ -33,8 +33,7 @@
 					to_chat(user, "<span class='warning'>You jagged yourself, but you manage to obtain some scrap regardless.</span>")
 				else
 					to_chat(user, "<span class='warning'>You jagged yourself and lost grip on the scrap.</span>")
-					return
-		
+					return		
 		if(isproletariat(H))
 			if(prob(15))
 				H.bleed_rate = 5

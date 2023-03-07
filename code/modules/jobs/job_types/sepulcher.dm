@@ -48,3 +48,4 @@
 	spawn_positions = -1
 	selection_color = "#42401b"
 	description = "Blithering and stricken, you live from the blurred edges of this dying dream. Your home is gone, if it ever was at all. The horizon screams with the sounds of metal and work."
+	forbids = "You are unbound to any civil codes. Act freely, die quickly."
