@@ -10,16 +10,17 @@
 	if(!proximity_flag)
 		return
 	if(in_use)
-		to_chat(user, "<span class='warning'>You are already fishing!</span>")
+		to_chat(user, "<span class='warning'>You are already fishing.</span>")
 		return
 	in_use = TRUE
-	if(istype(target, /turf/open/water))
-		if(!do_after(user, rand(10,30), target = target))
+	if(istype(target, /obj/structure/fishing_spot))
+		if(!do_after(user, rand(10,30) SECONDS, target = target))
 			in_use = FALSE
 			return
 		var/obj/structure/fishing_spot/W = target
 		var/chosen_fish = pickweight(W.fish_list)
-		new chosen_fish(get_turf(target))
+		new chosen_fish(get_turf(user))
+		to_chat(user, "<span class='warning'>You have caught a [chosen_fish].</span>")
 		in_use = FALSE
 		return
 	in_use = FALSE

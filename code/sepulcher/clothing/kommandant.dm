@@ -1,3 +1,12 @@
+/obj/item/clothing/head/kommandant
+	name = "faded furazhka"
+	desc = "Authority avatar, set upon your head and secured with steel thread."
+	icon_state = "kommandant"
+	item_state = "kommandant"
+	armor = list(melee = 10, bullet = 16, laser = 0, energy = 0, bomb = 25, bio = 0, rad = 0)
+	dynamic_hair_suffix = ""
+	item_flags = NODROP
+
 /obj/item/clothing/mask/gas/kommandant
 	name = "steel-stitched respirator"
 	desc = "Mask that conceals the raw flesh, a rubber second-skin."
@@ -25,29 +34,15 @@
 	has_sensor = NO_SENSORS
 	item_flags = NODROP
 
-/obj/item/clothing/shoes/kommandant
-	name = "sapogi"
-	desc = "Pair of long worn marching boots."
-	icon_state = "jackboots"
-	item_state = "jackboots"
-	lefthand_file = 'icons/mob/inhands/equipment/security_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/security_righthand.dmi'
-	item_color = "hosred"
-	strip_delay = 50
-	equip_delay_other = 50
-	resistance_flags = NONE
-	permeability_coefficient = 0.05 //Thick soles, and covers the ankle
-	pocket_storage_component_path = /datum/component/storage/concrete/pockets/shoes
-	item_flags = NODROP
-
-/obj/item/clothing/head/kommandant
-	name = "faded furazhka"
-	desc = "Authority avatar, set upon your head and secured with steel thread."
-	icon_state = "kommandant"
-	item_state = "kommandant"
-	armor = list(melee = 10, bullet = 16, laser = 0, energy = 0, bomb = 25, bio = 0, rad = 0)
-	dynamic_hair_suffix = ""
-	item_flags = NODROP
+/obj/item/clothing/suit/armor/kommandant
+	name = "leather trenchcoat"
+	desc = "Heavy and durable."
+	icon_state = "leathercoat-sec"
+	item_state = "hostrench"
+	body_parts_covered = CHEST|GROIN|ARMS|LEGS
+	cold_protection = CHEST|GROIN|LEGS|ARMS
+	heat_protection = CHEST|GROIN|LEGS|ARMS
+	dog_fashion = null
 
 /obj/item/clothing/gloves/kommandant
 	name = "leather gloves"
@@ -62,12 +57,17 @@
 	min_cold_protection_temperature = GLOVES_MIN_TEMP_PROTECT
 	item_flags = NODROP
 
-/obj/item/clothing/suit/armor/kommandant
-	name = "leather trenchcoat"
-	desc = "Heavy and durable."
-	icon_state = "leathercoat-sec"
-	item_state = "hostrench"
-	body_parts_covered = CHEST|GROIN|ARMS|LEGS
-	cold_protection = CHEST|GROIN|LEGS|ARMS
-	heat_protection = CHEST|GROIN|LEGS|ARMS
-	dog_fashion = null
+/obj/item/clothing/shoes/kommandant
+	name = "sapogi"
+	desc = "Pair of long worn marching boots."
+	icon_state = "jackboots"
+	item_state = "jackboots"
+	lefthand_file = 'icons/mob/inhands/equipment/security_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/equipment/security_righthand.dmi'
+	item_color = "hosred"
+	strip_delay = 50
+	equip_delay_other = 50
+	resistance_flags = NONE
+	permeability_coefficient = 0.05 //Thick soles, and covers the ankle
+	pocket_storage_component_path = /datum/component/storage/concrete/pockets/shoes
+	item_flags = NODROP

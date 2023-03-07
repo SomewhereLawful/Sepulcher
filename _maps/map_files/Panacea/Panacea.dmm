@@ -94,6 +94,13 @@
 	},
 /turf/open/indestructible/ground/outside/road,
 /area/game/city)
+"ec" = (
+/obj/effect/turf_decal/roadline/noshadow{
+	dir = 9
+	},
+/obj/item/fishing_rod,
+/turf/open/indestructible/ground/outside/road,
+/area/game/city)
 "ez" = (
 /obj/structure/fence/post{
 	dir = 4
@@ -1041,6 +1048,10 @@
 	icon_state = "lattice_new14"
 	},
 /area/game/spawning/kommandant)
+"Bl" = (
+/obj/item/fishing_rod,
+/turf/open/indestructible/ground/outside/road,
+/area/game/city)
 "BE" = (
 /obj/structure/campfire/drum,
 /obj/effect/turf_decal/line{
@@ -1771,6 +1782,10 @@
 	dir = 1
 	},
 /turf/open/indestructible/ground/outside/road,
+/area/game/city)
+"Wx" = (
+/obj/structure/fishing_spot,
+/turf/open/indestructible/ground/outside/water/sea,
 /area/game/city)
 "WG" = (
 /obj/machinery/light/small{
@@ -34590,7 +34605,7 @@ gW
 gW
 gW
 gW
-gW
+Wx
 gW
 gW
 gW
@@ -34847,7 +34862,7 @@ gW
 gW
 gW
 gW
-gj
+ec
 yW
 yW
 yW
@@ -35362,7 +35377,7 @@ gW
 gW
 gW
 jL
-zc
+Bl
 zc
 zc
 zc
@@ -35617,7 +35632,7 @@ gW
 gW
 gW
 gW
-gW
+Wx
 Ax
 lk
 lk
@@ -35876,7 +35891,7 @@ gW
 gW
 gW
 gW
-gW
+Wx
 gW
 gW
 gW

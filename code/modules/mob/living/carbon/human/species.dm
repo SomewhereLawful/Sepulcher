@@ -937,7 +937,7 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 /datum/species/proc/check_weakness(obj/item, mob/living/attacker)
 	return FALSE
 
-////////
+	////////
 	//LIFE//
 	////////
 
@@ -1018,6 +1018,8 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 		if(0 to NUTRITION_LEVEL_STARVING)
 			SEND_SIGNAL(H, COMSIG_ADD_MOOD_EVENT, "nutrition", /datum/mood_event/nutrition/starving)
 			H.throw_alert("nutrition", /obj/screen/alert/starving)
+
+
 
 /datum/species/proc/update_health_hud(mob/living/carbon/human/H)
 	return 0
