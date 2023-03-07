@@ -86,9 +86,8 @@
 	waterlevel = CLAMP(waterlevel + adjustamt, 0, maxwater)
 
 /obj/structure/shitheap/proc/generatePlant()
-	var/randPlant = null
-	randPlant = pickweight(SHITHEAP_PRODUCTS_NORMAL)
-	plant = new randPlant(src)
+	var/randPlant = pickweight(SHITHEAP_PRODUCTS_NORMAL)
+	plant = new randPlant(get_turf(src))
 	. = TRUE
 
 /obj/structure/shitheap/examine(user)
