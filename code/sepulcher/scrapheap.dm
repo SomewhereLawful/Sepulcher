@@ -5,8 +5,14 @@
 /obj/item/food/scrap // edible, for fun
 	name = "scrap piece"
 	desc = "Some broken metal of unknown origin."
-	icon_state = "goyslop"
-	feed_points = 5
+	icon_state = "scrap1"
+	food_volume = 1
+	feed_points = 2
+	health_points = -25 // Eating sharp metal hurts you????
+
+/obj/item/food/scrap/New()
+	..()
+	icon_state = "scrap[rand(1,2)]"
 
 /obj/structure/scrapheap
 	name = "scrap heap"

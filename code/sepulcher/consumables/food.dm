@@ -9,8 +9,14 @@
 	icon_state = "broken"
 	/// Muliple of feed_points, also used to determine how many bites until the food is gone.
 	var/food_volume = 3
-	/// How much hunger is given per bite
-	var/feed_points = 5
+	/// How much health is given per bite, or damage
+	var/health_points = 0
+	/// Percentage of the hunger given per bite
+	var/feed_points = 0
+	/// How much will is given per bite
+	var/will_points = 0
+	/// How much toxicity is given per bite
+	var/toxicity_points = 0
 	/// Used for flavortext in eating /attack
 	var/eatverb
 	/// Use sparingly. Determines what item is generated upon total consumption of the food.
@@ -81,7 +87,10 @@
 			playsound(M.loc,'sound/items/eatfood.ogg', rand(10,50), 1)
 			if(food_volume >= 0)
 				food_volume--
-				M.adjustHunger(feed_points)
+				M.adjustHealth_stat(health_points)
+				M.adjustHunger(feed_points *= 6)
+				M.adjustWill(will_points)
+				M.adjustToxicity(toxicity_points)
 			if(food_volume == 0)
 				SEND_SIGNAL(src, COMSIG_FOOD_EATEN, M, user)
 				On_Consume(M)

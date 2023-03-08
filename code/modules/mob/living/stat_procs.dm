@@ -1,3 +1,23 @@
+// Health Procs
+/mob/living/proc/getHealth()
+	return health
+
+/mob/living/proc/adjustHealth_stat(amount, updating_health = TRUE, forced = FALSE)
+	if(!forced && (status_flags & GODMODE))
+		return FALSE
+	health = CLAMP((health + (amount)), 0, maxHealth)
+	if(updating_health)
+		updatehealth()
+	return amount
+
+/mob/living/proc/setHealth(amount, updating_health = TRUE, forced = FALSE)
+	if(status_flags & GODMODE)
+		return 0
+	health = amount
+	if(updating_health)
+		updatehealth()
+	return amount
+
 // Will Procs
 /mob/living/proc/getWill()
 	return will

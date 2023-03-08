@@ -30,6 +30,7 @@
 	desc = "The red water bubbles, creatures of the deep swirl nearby."
 	icon = 'icons/obj/fishing.dmi'
 	icon_state = "fishing_spot" // this sprite gives me cancer
+	anchored = TRUE
 	var/list/fish_list = list(
 			/obj/item/food/fish = 25,
 			/obj/item/food/fish/sturgeon = 25,

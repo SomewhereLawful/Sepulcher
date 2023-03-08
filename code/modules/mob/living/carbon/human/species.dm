@@ -1019,7 +1019,21 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 			SEND_SIGNAL(H, COMSIG_ADD_MOOD_EVENT, "nutrition", /datum/mood_event/nutrition/starving)
 			H.throw_alert("nutrition", /obj/screen/alert/starving)
 
+/datum/species/proc/handle_hunger(mob/living/carbon/human/H)
+	if (H.hunger > 0 && H.stat != DEAD && !H.has_trait(TRAIT_NOHUNGER))
+		var/hunger_rate = HUNGER_FACTOR
+		if(H.hunger > 0)
+			H.hunger--
+		if(H.hunger < 0)
+			H.hunger++
+		H.hunger = max(0, H.hunger - hunger_rate)
 
+	if (H.hunger > H.maxHunger)
+		if(H.overeatduration < 600) //capped so people don't take forever to unfat
+			H.overeatduration++
+	else
+		if(H.overeatduration > 1)
+			H.overeatduration -= 2 //doubled the unfat rate
 
 /datum/species/proc/update_health_hud(mob/living/carbon/human/H)
 	return 0

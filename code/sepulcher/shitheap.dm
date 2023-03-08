@@ -42,6 +42,7 @@
 	var/cycledelay = 200	//About 10 seconds / cycle
 	var/rating = 1
 	var/obj/structure/farm_plant/plant = null
+	var/generating_plant = 0
 
 	/// Explicitly for sewer
 	var/self_sustaining = FALSE //If the tray generates nutrients and water on its own
@@ -69,6 +70,7 @@
 	if(world.time > (lastcycle + cycledelay))
 		lastcycle = world.time
 		if(fertilizerlevel > 0 && waterlevel > 0)
+			generating_plant = 1
 			generatePlant()
 
 		// Nutrients deplete slowly
@@ -77,6 +79,7 @@
 			// Drink random amount of water
 			adjustWater(-rand(1,6) / rating)
 
+	generating_plant = 0
 	return ..()
 
 /obj/structure/shitheap/proc/adjustFertilizer(adjustamt)
@@ -85,10 +88,11 @@
 /obj/structure/shitheap/proc/adjustWater(adjustamt)
 	waterlevel = CLAMP(waterlevel + adjustamt, 0, maxwater)
 
-/obj/structure/shitheap/proc/generatePlant(obj/structure/shitheap)
-	var/randPlant = pickweight(SHITHEAP_PRODUCTS_NORMAL)
-	plant = new randPlant(get_turf(src))
-	. = TRUE
+/obj/structure/shitheap/proc/generatePlant()
+	var/randPlant
+	if(generating_plant == 1)
+		randPlant = pickweight(SHITHEAP_PRODUCTS_NORMAL)
+		plant = new randPlant(src)
 
 /obj/structure/shitheap/examine(user)
 	..()
