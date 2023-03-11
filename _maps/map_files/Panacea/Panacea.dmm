@@ -101,6 +101,12 @@
 /obj/item/fishing_rod,
 /turf/open/indestructible/ground/outside/road,
 /area/game/city)
+"ei" = (
+/obj/structure/lattice/catwalk{
+	icon_state = "catwalk15-13"
+	},
+/turf/open/foundry,
+/area/game/foundry)
 "ez" = (
 /obj/structure/fence/post{
 	dir = 4
@@ -146,6 +152,12 @@
 	icon_state = "floorrusty"
 	},
 /area/game/train_yard)
+"fP" = (
+/obj/structure/lattice/catwalk{
+	icon_state = "catwalk12-0"
+	},
+/turf/open/foundry,
+/area/game/foundry)
 "fU" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -323,6 +335,12 @@
 	},
 /turf/open/indestructible/ground/outside/dirt,
 /area/game/city)
+"jI" = (
+/obj/structure/lattice/catwalk{
+	icon_state = "catwalk15-7"
+	},
+/turf/open/foundry,
+/area/game/foundry)
 "jL" = (
 /obj/effect/turf_decal/roadline/noshadow{
 	dir = 1
@@ -402,6 +420,18 @@
 	},
 /turf/open/indestructible/ground/outside/road,
 /area/game/city)
+"mz" = (
+/obj/structure/lattice/catwalk{
+	icon_state = "catwalk13-5"
+	},
+/turf/open/foundry,
+/area/game/foundry)
+"mH" = (
+/obj/structure/lattice/catwalk{
+	icon_state = "catwalk11-12"
+	},
+/turf/open/foundry,
+/area/game/foundry)
 "mK" = (
 /obj/structure/decor/dump_bin/red,
 /turf/open/floor/f13{
@@ -549,6 +579,12 @@
 "pX" = (
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
 /area/game/void)
+"pY" = (
+/obj/structure/lattice/catwalk{
+	icon_state = "catwalk14-10"
+	},
+/turf/open/foundry,
+/area/game/foundry)
 "qc" = (
 /obj/structure/chair/wood/normal,
 /turf/open/floor/carpet,
@@ -733,6 +769,12 @@
 "uI" = (
 /turf/closed/wall/brickdark,
 /area/game/city/interior)
+"uS" = (
+/obj/structure/lattice/catwalk{
+	icon_state = "catwalk5-1"
+	},
+/turf/open/foundry,
+/area/game/foundry)
 "uW" = (
 /obj/structure/decor/tire{
 	icon_state = "shina5"
@@ -780,7 +822,9 @@
 /turf/open/foundry,
 /area/game/void)
 "vB" = (
-/obj/structure/lattice/catwalk,
+/obj/structure/lattice/catwalk{
+	icon_state = "catwalk10-8"
+	},
 /turf/open/foundry,
 /area/game/foundry)
 "vC" = (
@@ -807,6 +851,12 @@
 /obj/structure/scrapheap,
 /turf/open/foundry,
 /area/game/city)
+"vR" = (
+/obj/structure/lattice/catwalk{
+	icon_state = "catwalk13-1"
+	},
+/turf/open/foundry,
+/area/game/foundry)
 "vU" = (
 /turf/open/indestructible/ground/floor/lattice,
 /area/game/void)
@@ -877,6 +927,12 @@
 	icon_state = "floorrusty"
 	},
 /area/game/city/interior)
+"xP" = (
+/obj/structure/lattice/catwalk{
+	icon_state = "catwalk13-4"
+	},
+/turf/open/foundry,
+/area/game/foundry)
 "xS" = (
 /obj/structure/fluff/plaza_statue,
 /turf/open/indestructible/ground/outside/road,
@@ -982,6 +1038,12 @@
 "zp" = (
 /turf/open/indestructible/ground/outside/desert,
 /area/game/city)
+"zu" = (
+/obj/structure/lattice/catwalk{
+	icon_state = "catwalk6-2"
+	},
+/turf/open/foundry,
+/area/game/foundry)
 "zC" = (
 /obj/machinery/light{
 	dir = 4;
@@ -1171,6 +1233,12 @@
 /obj/structure/simple_door/room,
 /turf/open/indestructible/ground/floor/wood_floor,
 /area/game/city/interior)
+"Fc" = (
+/obj/structure/lattice/catwalk{
+	icon_state = "catwalk4-0"
+	},
+/turf/open/foundry,
+/area/game/foundry)
 "Fi" = (
 /obj/structure/chair/wood/normal,
 /turf/open/indestructible/ground/floor/wood_floor,
@@ -1268,6 +1336,12 @@
 /obj/structure/decor/spool,
 /turf/open/indestructible/ground/outside/road,
 /area/game/city)
+"HE" = (
+/obj/structure/lattice/catwalk{
+	icon_state = "catwalk7-3"
+	},
+/turf/open/foundry,
+/area/game/foundry)
 "HO" = (
 /obj/structure/decor/apc{
 	pixel_y = 29
@@ -1367,6 +1441,12 @@
 /obj/structure/closet/bus,
 /turf/open/indestructible/ground/outside/desert,
 /area/game/train_yard)
+"Kh" = (
+/obj/structure/lattice/catwalk{
+	icon_state = "catwalk9-4"
+	},
+/turf/open/foundry,
+/area/game/foundry)
 "Kj" = (
 /obj/effect/turf_decal/line,
 /turf/open/indestructible/ground/outside/dirt,
@@ -1706,6 +1786,12 @@
 	icon_state = "floorrusty"
 	},
 /area/game/city)
+"Ua" = (
+/obj/structure/lattice/catwalk{
+	icon_state = "catwalk8-0"
+	},
+/turf/open/foundry,
+/area/game/foundry)
 "Ue" = (
 /obj/structure/table,
 /turf/open/floor/f13{
@@ -28015,7 +28101,7 @@ Hd
 Hd
 Hd
 Hd
-vB
+Fc
 NV
 NV
 NV
@@ -28272,7 +28358,7 @@ Hd
 Hd
 Hd
 Hd
-vB
+fP
 yi
 yi
 yi
@@ -28523,13 +28609,13 @@ yi
 NV
 yi
 yi
-vB
-vB
+zu
+uS
 Hd
 Hd
 Hd
 Hd
-vB
+fP
 yi
 td
 yi
@@ -28780,13 +28866,13 @@ yi
 yi
 yi
 yi
-vB
-vB
-vB
-vB
-vB
-vB
-vB
+pY
+jI
+HE
+HE
+HE
+HE
+vR
 yi
 yi
 yi
@@ -29037,13 +29123,13 @@ yi
 yi
 yi
 yi
-vB
-vB
-vB
-vB
-vB
-vB
-vB
+pY
+ei
+mH
+mH
+mH
+mH
+xP
 yi
 yi
 yi
@@ -29294,13 +29380,13 @@ yi
 yi
 yi
 yi
-vB
-vB
+pY
+mz
 Hd
 Hd
 Hd
 Hd
-vB
+fP
 yi
 yi
 yi
@@ -29552,12 +29638,12 @@ NV
 NV
 yi
 vB
-vB
+Kh
 Hd
 Hd
 Hd
 Hd
-vB
+Ua
 yi
 td
 yi
@@ -30579,13 +30665,13 @@ NV
 NV
 NV
 yi
-vB
-vB
+zu
+uS
 Hd
 Hd
 Hd
 Hd
-vB
+Fc
 yi
 Ue
 yi
@@ -30836,13 +30922,13 @@ yi
 yi
 yi
 yi
-vB
-vB
+pY
+mz
 Hd
 Hd
 Hd
 Hd
-vB
+fP
 yi
 yi
 yi
@@ -31093,13 +31179,13 @@ yi
 yi
 yi
 yi
-vB
-vB
-vB
-vB
-vB
-vB
-vB
+pY
+jI
+HE
+HE
+HE
+HE
+vR
 yi
 yi
 yi
@@ -31350,13 +31436,13 @@ yi
 yi
 yi
 yi
-vB
-vB
-vB
-vB
-vB
-vB
-vB
+pY
+ei
+mH
+mH
+mH
+mH
+xP
 yi
 yi
 yi
@@ -31608,12 +31694,12 @@ NV
 yi
 yi
 vB
-vB
+Kh
 Hd
 Hd
 Hd
 Hd
-vB
+fP
 yi
 Ue
 yi
@@ -31870,7 +31956,7 @@ Hd
 Hd
 Hd
 Hd
-vB
+fP
 yi
 Ue
 Ue
@@ -32127,7 +32213,7 @@ Hd
 Hd
 Hd
 Hd
-vB
+Ua
 NV
 NV
 NV

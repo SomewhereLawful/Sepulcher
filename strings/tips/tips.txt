@@ -9,7 +9,7 @@ The prevention of thoughtcrime is a civic duty. All citizens are encouraged to p
 The Kommandant's word is law. His will manifest.
 Parasites are a common malady amoungst the populace. They are inevitable, but can be minimized by not dumpster diving or swimming in the sewer.
 The Proletariat are the city's workhorse. Cultivation, fishing, fabrication, and maintenance are all jobs the Proletariat are responsible of.
-Sins are invisible transgressions. Cleansing of them is needed for ascention.
+Sins are a disease of the soul - and body. Cleansing of them is needed for ascention.
 Just because you can fit it into your gullet doesn't mean it's food.
 The Vigor vial (red) located in the UI displays your general health, if it reaches zero you die.
 The Will vial (blue) located in the UI displays your general mental fortitude. Once it reaches zero, you become afflicted.

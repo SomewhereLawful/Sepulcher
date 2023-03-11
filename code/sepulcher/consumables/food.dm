@@ -85,7 +85,7 @@
 		
 		if(food_volume)	//Handle ingestion of the item.
 			playsound(M.loc,'sound/items/eatfood.ogg', rand(10,50), 1)
-			if(food_volume >= 0)
+			if(food_volume)
 				food_volume--
 				M.adjustHealth_stat(health_points)
 				M.adjustHunger(feed_points *= 6)
