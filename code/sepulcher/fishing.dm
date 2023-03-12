@@ -20,7 +20,7 @@
 		var/obj/structure/fishing_spot/W = target
 		var/chosen_fish = pickweight(W.fish_list)
 		new chosen_fish(get_turf(user))
-		to_chat(user, "<span class='warning'>You have caught a [chosen_fish].</span>")
+		to_chat(user, "<span class='warning'>You have caught something.</span>")
 		in_use = FALSE
 		return
 	in_use = FALSE
