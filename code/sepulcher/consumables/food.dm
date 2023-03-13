@@ -19,6 +19,8 @@
 	var/toxicity_points = 0
 	/// Used for flavortext in eating /attack
 	var/eatverb
+	/// Sound when the food is eaten
+	var/sound/eat_sound = 'sound/items/eatfood.ogg'
 	/// Use sparingly. Determines what item is generated upon total consumption of the food.
 	var/trash = null
 
@@ -84,7 +86,7 @@
 				return
 		
 		if(food_volume)	//Handle ingestion of the item.
-			playsound(M.loc,'sound/items/eatfood.ogg', rand(10,50), 1)
+			playsound(M.loc, eat_sound, rand(10,50), 1)
 			if(food_volume)
 				food_volume--
 				M.adjustHealth_stat(health_points)

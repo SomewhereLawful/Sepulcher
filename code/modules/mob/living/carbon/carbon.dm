@@ -989,3 +989,17 @@
 
 /mob/living/carbon/can_resist()
 	return bodyparts.len > 2 && ..()
+
+/mob/living/carbon/proc/update_top_overlay() // sepulcher todo - make this not shit
+	if(src.loc && istype(src.loc, /turf/open/indestructible/ground/outside/water))
+		remove_overlay(BODY_FRONT_LAYER)
+		var/icon/I
+		if(lying != 0)
+			I = turn(icon('icons/effects/water.dmi', "human_overlay_turned"), - lying)
+		else
+			I = icon('icons/effects/water.dmi', "human_overlay")
+
+		overlays_standing[BODY_FRONT_LAYER] = mutable_appearance(I, "", -BODY_FRONT_LAYER)
+		apply_overlay(BODY_FRONT_LAYER)
+	else
+		remove_overlay(BODY_FRONT_LAYER)

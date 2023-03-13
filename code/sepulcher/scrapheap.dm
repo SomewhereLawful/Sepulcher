@@ -49,7 +49,8 @@
 					to_chat(user, "<span class='warning'>You jagged yourself and lost grip on the scrap.</span>")
 					return
 
-		new /obj/item/food/scrap(get_turf(user))
+		var/obj/item/food/scrap/S = new /obj/item/food/scrap
+		user.put_in_active_hand(S)
 		playsound(src, 'sound/effects/junk_rustling.ogg', 50, 0)
 	..()
 

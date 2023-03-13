@@ -44,15 +44,15 @@
 				var/coat_choice = pickweight(coats)
 				var/obj/item/clothing/suit/C = new coat_choice
 				user.put_in_active_hand(C)
-				to_chat(user, "You pull out an article of clothing.")
+				to_chat(user, "You pull a coat from the bin.")
 			if("Gloves")
 				var/glove_choice = pickweight(gloves)
 				var/obj/item/clothing/gloves/G = new glove_choice
 				user.put_in_active_hand(G)
-				to_chat(user, "You pull out an article of clothing.")
+				to_chat(user, "You pull out a pair of gloves.")
 			if("Shoes")
 				new /obj/item/clothing/shoes/brown(get_turf(user))
-				to_chat(user, "You pull out an article of clothing.")
+				to_chat(user, "You pull a pair of shoes from the bin.")
 	
 	playsound(src, 'sound/effects/cloth_rustle1.ogg', 50, 0)
 	..()

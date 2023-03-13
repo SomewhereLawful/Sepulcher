@@ -9,9 +9,11 @@
 	icon_state = "riverwater"
 	slowdown = 2
 	baseturfs = /turf/open/indestructible/ground/outside/water
+
 /turf/open/indestructible/ground/outside/water/sea
 	name = "sea water"
-	desc = "Fluids from beyond. Fishermen make use of this."
+	desc = "Fluids from beyond."
+	icon_state = "redwater_motion"
 	baseturfs = /turf/open/indestructible/ground/outside/water/sea
 
 /turf/open/indestructible/ground/outside/water/knee_high
@@ -25,6 +27,26 @@
 	icon = 'icons/turf/floors.dmi'
 	icon_state = "riverwater"
 	baseturfs = /turf/open/indestructible/ground/sewer_water
+
+/turf/open/indestructible/ground/outside/water/Entered(atom/movable/A)
+	..()
+	if(istype(A, /mob/living/carbon))
+		var/mob/living/carbon/L = A
+		L.update_top_overlay()
+		if(istype(A, /mob/living/carbon/human))
+			var/mob/living/carbon/human/H = A
+			/*if(H.shoes)
+				H.shoes.clean_blood()*/
+			if(H.fire_stacks)
+				H.fire_stacks = 0
+				H.ExtinguishMob()
+
+/turf/open/indestructible/ground/outside/water/Exited(atom/movable/A)
+	..()
+	if(istype(A, /mob/living/carbon))
+		var/mob/living/carbon/L = A
+		L.update_top_overlay()
+		flick("water_splash_movement", src)
 
 // Dirt
 /turf/open/indestructible/ground/outside/waste
