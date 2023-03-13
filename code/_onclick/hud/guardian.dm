@@ -3,8 +3,8 @@
 	..()
 	var/obj/screen/using
 
-	healths = new /obj/screen/healths/guardian()
-	infodisplay += healths
+	health = new /obj/screen/bar_stat/health/guardian()
+	infodisplay += health
 
 	using = new /obj/screen/guardian/Manifest()
 	using.screen_loc = ui_hand_position(2)
@@ -58,8 +58,8 @@
 		using.screen_loc = ui_id
 		static_inventory += using
 
-	healths = new /obj/screen/healths/guardian()
-	infodisplay += healths
+	health = new /obj/screen/bar_stat/health/guardian()
+	infodisplay += health
 
 	using = new /obj/screen/guardian/Manifest()
 	using.screen_loc = ui_belt

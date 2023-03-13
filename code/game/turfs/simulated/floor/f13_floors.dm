@@ -29,7 +29,7 @@
 	name = "What the fuck mappers? why is this here"
 	desc = "If found, scream at the github repo about this"
 	icon_state = "wasteland1"
-	icon = 'icons/turf/f13desert.dmi'
+	icon = 'icons/turf/desert.dmi'
 	turf_light_range = 3
 	turf_light_power = 0.75
 
@@ -40,13 +40,13 @@
 
 #define GRASS_SPONTANEOUS 		2
 #define GRASS_WEIGHT 			4
-#define LUSH_PLANT_SPAWN_LIST list(/obj/structure/flora/grass/wasteland = 10, /obj/structure/flora/wasteplant/wild_broc = 7, /obj/structure/flora/wasteplant/wild_feracactus = 5, /obj/structure/flora/wasteplant/wild_mutfruit = 5, /obj/structure/flora/wasteplant/wild_xander = 5, /obj/structure/flora/wasteplant/wild_agave = 5, /obj/structure/flora/tree/joshua = 3, /obj/structure/flora/tree/cactus = 2, /obj/structure/flora/tree/wasteland = 2)
+#define LUSH_PLANT_SPAWN_LIST list(/obj/structure/flora/grass/wasteland = 10, /obj/structure/flora/tree/wasteland = 2)
 #define DESOLATE_PLANT_SPAWN_LIST list(/obj/structure/flora/grass/wasteland = 1)
 
 /turf/open/floor/plating/f13/outside/desert
 	name = "\proper desert"
 	desc = "A stretch of desert."
-	icon = 'icons/turf/f13desert.dmi'
+	icon = 'icons/turf/desert.dmi'
 	icon_state = "wasteland1"
 
 	archdrops = list(/obj/item/stack/ore/glass = list(ARCH_PROB = 100,ARCH_MAXDROP = 5)) //sand

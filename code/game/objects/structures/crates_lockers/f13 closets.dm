@@ -28,16 +28,6 @@
 	new /obj/item/assembly/signaler/electropack/shockcollar(src)
 	new /obj/item/assembly/signaler/electropack/shockcollar(src)
 
-/obj/structure/closet/f13/leigon/spants
-	name = "closet"
-
-/obj/structure/closet/f13/leigon/spants/PopulateContents()
-	..()
-	new /obj/item/clothing/under/f13/caravan(src)
-	new /obj/item/clothing/under/f13/caravan(src)
-	new /obj/item/clothing/under/f13/caravan(src)
-	new /obj/item/clothing/under/f13/caravan(src)
-
 /obj/structure/closet/f13/leigon/ssandals
 	name = "closet"
 

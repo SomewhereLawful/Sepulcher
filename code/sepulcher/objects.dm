@@ -84,17 +84,23 @@
 	icon_state = "watertank1"
 	bound_width = 64
 
-/obj/structure/laundry_bin
-	name = "laundry bin"
-	desc = "Full of old rags and shoes. Cover your shame."
+/obj/structure/decor/candle
+	name = "candles"
+	icon_state = "cover"
+	density = 0
+
+/obj/structure/fence/church
+	name = "wrought iron fence"
+	desc = null
+	icon_state = "churchfence"
+	cuttable= FALSE
+
+/obj/structure/fluff/plaza_statue
+	name = "Statue of the Warder"
+	desc = "He stands a vigil over this accursed city\nHe waits for us, our mission to persist\nMay he come bearing panacea to our sins"
+	icon = 'icons/obj/plaza_statue.dmi'
+	icon_state = "francis"
 	density = TRUE
 	anchored = TRUE
-	icon_state = "laundrybin"
-
-/obj/structure/laundry_bin/attack_hand(mob/user)
-	to_chat(user, "You dig through for something of passable quality.")
-	if(do_after(user, 14.4, target = src))
-		new /obj/item/food/scrap(get_turf(user))
-		to_chat(user, "You pull out an article of clothing.")
-		playsound(src, 'sound/effects/junk_rustling.ogg', 50, 0)
-	..()
+	deconstructible = FALSE
+	layer = FLY_LAYER

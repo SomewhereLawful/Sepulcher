@@ -273,8 +273,17 @@
 	internals = new /obj/screen/internals()
 	infodisplay += internals
 
-	healths = new /obj/screen/healths()
-	infodisplay += healths
+	health = new /obj/screen/bar_stat/health()
+	infodisplay += health
+
+	will = new /obj/screen/bar_stat/will()
+	infodisplay += will
+
+	hunger = new /obj/screen/bar_stat/hunger()
+	infodisplay += hunger
+
+	toxicity = new /obj/screen/bar_stat/toxicity()
+	infodisplay += toxicity
 
 	healthdoll = new /obj/screen/healthdoll()
 	infodisplay += healthdoll
@@ -298,6 +307,10 @@
 	devilsouldisplay = new /obj/screen/devil/soul_counter
 	infodisplay += devilsouldisplay
 
+	using = new /obj/screen/stats_panel()
+	using.screen_loc = ui_drop_throw
+	static_inventory += using
+	
 	zone_select =  new /obj/screen/zone_sel()
 	zone_select.icon = ui_style
 	zone_select.update_icon(mymob)

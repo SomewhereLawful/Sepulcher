@@ -89,8 +89,8 @@
 
 //begin indicators
 
-	healths = new /obj/screen/healths/alien()
-	infodisplay += healths
+	health = new /obj/screen/bar_stat/health/alien()
+	infodisplay += health
 
 	alien_plasma_display = new /obj/screen/alien/plasma_display()
 	infodisplay += alien_plasma_display

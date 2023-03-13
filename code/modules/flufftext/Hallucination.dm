@@ -885,7 +885,7 @@ GLOBAL_LIST_INIT(hallucination_list, list(
 		if("shuttle_dock")
 			to_chat(target, "<h1 class='alert'>Priority Announcement</h1>")
 			to_chat(target, "<br><br><span class='alert'>The train has arrived to the station. You have 3 minutes to board the train.</span><br><br>")
-			SEND_SOUND(target, 'sound/f13/quest.ogg')
+			SEND_SOUND(target, 'sound/effects/razortrain_horn.ogg')
 		if("malf_ai") //AI is doomsdaying!
 			to_chat(target, "<h1 class='alert'>Anomaly Alert</h1>")
 			to_chat(target, "<br><br><span class='alert'>Hostile runtimes detected in all station systems, please deactivate your AI to prevent possible damage to its morality core.</span><br><br>")

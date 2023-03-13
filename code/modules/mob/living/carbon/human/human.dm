@@ -773,16 +773,16 @@
 	if(dna.species.update_health_hud())
 		return
 	else
-		if(hud_used.healths)
+		if(hud_used.health)
 			var/health_amount = health - getStaminaLoss()
 			if(..(health_amount)) //not dead
 				switch(hal_screwyhud)
 					if(SCREWYHUD_CRIT)
-						hud_used.healths.icon_state = "health6"
+						hud_used.health.icon_state = "health6"
 					if(SCREWYHUD_DEAD)
-						hud_used.healths.icon_state = "health7"
+						hud_used.health.icon_state = "health7"
 					if(SCREWYHUD_HEALTHY)
-						hud_used.healths.icon_state = "health0"
+						hud_used.health.icon_state = "health0"
 		if(hud_used.healthdoll)
 			hud_used.healthdoll.cut_overlays()
 			if(stat != DEAD)

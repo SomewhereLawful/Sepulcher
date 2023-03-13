@@ -135,8 +135,8 @@
 	blobpwrdisplay.plane = ABOVE_HUD_PLANE
 	infodisplay += blobpwrdisplay
 
-	healths = new /obj/screen/healths/blob()
-	infodisplay += healths
+	health = new /obj/screen/bar_stat/health/blob()
+	infodisplay += health
 
 	using = new /obj/screen/blob/BlobHelp()
 	using.screen_loc = "WEST:6,NORTH:-3"

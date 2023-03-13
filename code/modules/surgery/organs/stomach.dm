@@ -12,7 +12,7 @@
 	var/mob/living/carbon/human/H = owner
 
 	if(istype(H))
-		H.dna.species.handle_digestion(H)
+		H.dna.species.handle_hunger(H)
 		handle_disgust(H)
 
 /obj/item/organ/stomach/proc/handle_disgust(mob/living/carbon/human/H)

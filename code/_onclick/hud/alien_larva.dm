@@ -10,8 +10,8 @@
 	static_inventory += using
 	action_intent = using
 
-	healths = new /obj/screen/healths/alien()
-	infodisplay += healths
+	health = new /obj/screen/bar_stat/health/alien()
+	infodisplay += health
 
 	alien_queen_finder = new /obj/screen/alien/alien_queen_finder()
 	infodisplay += alien_queen_finder

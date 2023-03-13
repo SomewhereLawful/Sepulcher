@@ -1,15 +1,9 @@
 
 /obj/item/clothing/gloves/fingerless
 	name = "fingerless gloves"
-	desc = "Plain black gloves without fingertips for the hard working."
 	icon_state = "fingerless"
 	item_state = "fingerless"
 	item_color = null	//So they don't wash.
-	transfer_prints = TRUE
-	strip_delay = 40
-	equip_delay_other = 20
-	cold_protection = HANDS
-	min_cold_protection_temperature = GLOVES_MIN_TEMP_PROTECT
 
 /obj/item/clothing/gloves/rifleman
 	name = "rifleman gloves"

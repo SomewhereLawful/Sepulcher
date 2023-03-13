@@ -394,6 +394,21 @@
 	med_hud_set_health()
 	med_hud_set_status()
 
+/mob/living/proc/updatewill() // Be sure to do that soon, gramps
+	if(status_flags & GODMODE)
+		return
+	update_stat()
+
+/mob/living/proc/updatehunger()
+	if(status_flags & GODMODE)
+		return
+	update_stat()
+
+/mob/living/proc/updatetoxicity()
+	if(status_flags & GODMODE)
+		return
+	update_stat()
+
 //proc used to ressuscitate a mob
 /mob/living/proc/revive(full_heal = 0, admin_revive = 0)
 	if(full_heal)

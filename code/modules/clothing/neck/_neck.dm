@@ -208,7 +208,8 @@
 	body_parts_covered = NECK
 	var/lock = FALSE
 	var/collarID = 0
-	GLOBAL_VAR_INIT(collar_number, 0)
+
+GLOBAL_VAR_INIT(collar_number, 0)
 
 /obj/item/clothing/neck/petcollar/locked/attackby(obj/item/K, mob/user, params)
 	if(istype(K, /obj/item/key/collar))

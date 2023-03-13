@@ -12,6 +12,9 @@
 
 	update_damage_hud()
 	update_health_hud()
+	update_willstat_hud()
+	update_hungerstat_hud()
+	update_toxicitystat_hud()
 
 	var/turf/T = get_turf(src)
 	if (isturf(T))

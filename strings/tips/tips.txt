@@ -9,7 +9,7 @@ The prevention of thoughtcrime is a civic duty. All citizens are encouraged to p
 The Kommandant's word is law. His will manifest.
 Parasites are a common malady amoungst the populace. They are inevitable, but can be minimized by not dumpster diving or swimming in the sewer.
 The Proletariat are the city's workhorse. Cultivation, fishing, fabrication, and maintenance are all jobs the Proletariat are responsible of.
-Sins are invisible transgressions. Cleansing of them is needed for ascention.
+Sins are a disease of the soul - and body. Cleansing of them is needed for ascention.
 Just because you can fit it into your gullet doesn't mean it's food.
 The Vigor vial (red) located in the UI displays your general health, if it reaches zero you die.
 The Will vial (blue) located in the UI displays your general mental fortitude. Once it reaches zero, you become afflicted.
@@ -19,5 +19,5 @@ You can be at full health without any limbs, however you'd be better more useful
 Your limbs can be completely destroyed and you may survive, but if your torso or head is destroyed you will immediately die.
 Bourgeoisie are weak to toxins and often require gas masks in many parts of The City.
 Bourgeoisie are responsible for handling export contracts, manufacturing goods, and selling goods to the Proletariats.
-Some weather can affect cultivation positively, as the same can be said for fishing.
+Some weather can affect cultivation positively, the same can be said for fishing.
 SAMOSBOR comes to reassemble the world periodically. His vision is deadly, yet shallow - seek shelter.

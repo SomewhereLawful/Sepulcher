@@ -9,8 +9,8 @@
 	pull_icon.screen_loc = ui_construct_pull
 	static_inventory += pull_icon
 
-	healths = new /obj/screen/healths/construct()
-	infodisplay += healths
+	health = new /obj/screen/bar_stat/health/construct()
+	infodisplay += health
 
 /mob/living/simple_animal/hostile/construct/create_mob_hud()
 	if(client && !hud_used)

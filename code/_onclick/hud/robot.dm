@@ -155,8 +155,8 @@
 	static_inventory += action_intent
 
 //Health
-	healths = new /obj/screen/healths/robot()
-	infodisplay += healths
+	health = new /obj/screen/bar_stat/health/robot()
+	infodisplay += health
 
 //Installed Module
 	mymobR.hands = new /obj/screen/robot/module()

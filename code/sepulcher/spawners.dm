@@ -18,12 +18,6 @@
 
 	uniform = /obj/item/clothing/under/pants/bioslave_rags
 
-/obj/effect/mob_spawn/human/bioslave/special(mob/living/new_spawn)
-	if(ishuman(new_spawn))
-		var/mob/living/carbon/human/H = new_spawn
-		H.underwear = "Nude"
-		H.update_body()
-
 /obj/effect/mob_spawn/human/prole
 	name = "utilitarian birthing machine"
 	desc = "Births Proletariat workers."
@@ -36,14 +30,8 @@
 	uses = -1
 	mob_gender = MALE
 	mob_species = /datum/species/proletariat
-	flavour_text = "<span class='danger'><b>Proving you're capable of carting shit and scrap metal, you are now one of the city's rank and file proletariat. You can do more mentally challenging work without dying immediately.</b></span>"
+	flavour_text = ""
 	assignedrole = "Proletariat"
-
-/obj/effect/mob_spawn/human/prole/special(mob/living/new_spawn)
-	if(ishuman(new_spawn))
-		var/mob/living/carbon/human/H = new_spawn
-		H.underwear = "Nude"
-		H.update_body()
 
 /obj/effect/mob_spawn/human/bougie
 	name = "embraced birth casket"
@@ -56,14 +44,8 @@
 	death = FALSE
 	uses = -1
 	mob_species = /datum/species/human
-	flavour_text = "<span class='danger'><b>You are the few of a dead breed. Without bodily taint, you have shed sin and live now as the city's high caste responsible for export and fine art.</b></span>"
+	flavour_text = ""
 	assignedrole = "Bourgeoise"
-
-/obj/effect/mob_spawn/human/bougie/special(mob/living/new_spawn)
-	if(ishuman(new_spawn))
-		var/mob/living/carbon/human/H = new_spawn
-		H.underwear = "Nude"
-		H.update_body()
 
 /obj/effect/mob_spawn/human/kommandant
 	name = "kommandant casket"
@@ -77,7 +59,7 @@
 	uses = -1
 	mob_gender = MALE
 	mob_species = /datum/species/kommandant
-	flavour_text = "<span class='danger'><b>You are rebuilt flesh of saints. Your duty is to the people; ascention and guidance are in your hands. Your word is law, your will manifest.</b></span>"
+	flavour_text = ""
 	assignedrole = "Kommandant"
 
 	head = /obj/item/clothing/head/kommandant
@@ -87,9 +69,18 @@
 	suit = /obj/item/clothing/suit/armor/kommandant
 	gloves = /obj/item/clothing/gloves/kommandant
 
-
-/obj/effect/mob_spawn/human/kommandant/special(mob/living/new_spawn)
-	if(ishuman(new_spawn))
-		var/mob/living/carbon/human/H = new_spawn
-		H.underwear = "Nude"
-		H.update_body()
+// Testing spawners
+/obj/effect/mob_spawn/human/vagrant
+	name = "scvm burthr"
+	desc = "Births Vagrants."
+	icon = 'icons/obj/spawners.dmi'
+	icon_state = "prole"
+	density = TRUE
+	permanent = TRUE
+	roundstart = FALSE
+	death = FALSE
+	uses = -1
+	mob_gender = MALE
+	mob_species = /datum/species/vagrant
+	flavour_text = ""
+	assignedrole = "Vagrant"
