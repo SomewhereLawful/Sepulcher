@@ -12,6 +12,11 @@
 	var/burnt = 0
 	var/list/icons
 
+	var/footstep = null
+	var/barefootstep = null
+	var/clawfootstep = null
+	var/heavyfootstep = null
+
 /turf/open/ComponentInitialize()
 	. = ..()
 	if(wet)
@@ -23,6 +28,10 @@
 	name = "floor"
 	icon = 'icons/turf/floors.dmi'
 	icon_state = "floor"
+	footstep = FOOTSTEP_FLOOR
+	barefootstep = FOOTSTEP_HARD_BAREFOOT
+	clawfootstep = FOOTSTEP_HARD_CLAW
+	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
 
 /turf/open/indestructible/Melt()
 	to_be_destroyed = FALSE

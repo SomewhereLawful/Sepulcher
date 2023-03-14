@@ -9,6 +9,10 @@
 	icon_state = "riverwater"
 	slowdown = 2
 	baseturfs = /turf/open/indestructible/ground/outside/water
+	footstep = FOOTSTEP_WATER
+	barefootstep = FOOTSTEP_WATER
+	clawfootstep = FOOTSTEP_WATER
+	heavyfootstep = FOOTSTEP_WATER
 
 /turf/open/indestructible/ground/outside/water/sea
 	name = "sea water"
@@ -53,6 +57,11 @@
 	name = "dirt"
 	icon_state = "railsnone"
 	slowdown = 0.2
+
+	footstep = FOOTSTEP_SAND
+	barefootstep = FOOTSTEP_SAND
+	clawfootstep = FOOTSTEP_SAND
+	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
 
 //pavement
 /turf/open/indestructible/ground/outside/sidewalk/tile
@@ -105,6 +114,11 @@
 /turf/open/indestructible/ground/floor/wood_floor
 	name = "floor"
 	icon_state = "wood1"
+
+	footstep = FOOTSTEP_WOOD
+	barefootstep = FOOTSTEP_WOOD_BAREFOOT
+	clawfootstep = FOOTSTEP_WOOD_CLAW
+	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
 
 /turf/open/indestructible/ground/floor/wood_floor/New()
 	if(icon_state == "wood1")

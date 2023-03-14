@@ -20,6 +20,9 @@
 	QDEL_NULL(dna)
 	GLOB.carbon_list -= src
 
+/mob/living/carbon/initialize_footstep()
+	AddComponent(/datum/component/footstep, 1, 2)
+
 /mob/living/carbon/relaymove(mob/user, direction)
 	if(user in src.stomach_contents)
 		if(prob(40))
@@ -994,11 +997,10 @@
 	if(src.loc && istype(src.loc, /turf/open/indestructible/ground/outside/water))
 		remove_overlay(BODY_FRONT_LAYER)
 		var/icon/I
-		if(lying != 0)
-			I = turn(icon('icons/effects/water.dmi', "human_overlay_turned"), - lying)
+		if(istype(src.loc, /turf/open/indestructible/ground/outside/water/sea))
+			I = icon('icons/effects/water.dmi', "standwater_motion")
 		else
-			I = icon('icons/effects/water.dmi', "human_overlay")
-
+			I = icon('icons/effects/water.dmi', "standwater")
 		overlays_standing[BODY_FRONT_LAYER] = mutable_appearance(I, "", -BODY_FRONT_LAYER)
 		apply_overlay(BODY_FRONT_LAYER)
 	else
