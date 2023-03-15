@@ -9,7 +9,8 @@
 /obj/item/clothing/head/hooded/bandit_hood
 	name = "coat hood"
 	desc = "Hides the face."
-	icon_state = "hidden" // invisible icon
+	icon_state = "banditcoat" // invisible icon
+	item_state = "banditcoat"
 	body_parts_covered = HEAD
 	flags_inv = HIDEHAIR|HIDEFACE|HIDEEARS
 
@@ -19,3 +20,5 @@
 	hoodtype = /obj/item/clothing/head/hooded/bandit_hood/brown
 
 /obj/item/clothing/head/hooded/bandit_hood/brown
+	icon_state = "banditcoatbrown" // invisible icon
+	item_state = "banditcoatbrown"

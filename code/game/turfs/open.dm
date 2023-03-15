@@ -1,5 +1,6 @@
 /turf/open
 	plane = FLOOR_PLANE
+	gender = PLURAL
 	var/slowdown = 0 //negative for faster, positive for slower
 
 	var/postdig_icon_change = FALSE

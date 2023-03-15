@@ -18,4 +18,13 @@
 	desc = "Old, but well-kept articles, reeking of meat long consumed."
 	icon_state = "vest_and_slacks"
 	item_state = "vest_and_slacks"
-	item_color = "vest_and_slacks"
+
+/obj/item/clothing/under/cleanser
+	name = "cleanser safesuit"
+	desc = "Keeps their filth out and your filth in."
+	icon_state = "cleanser"
+	item_state = "cleanser"
+
+/obj/item/clothing/under/cleanser/sealed
+	desc = "Keeps their filth out and your filth in. You are sealed in."
+	item_flags = NODROP // sealed in
