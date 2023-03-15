@@ -53,8 +53,9 @@
 /datum/outfit/city/cleanser
 	name = "Cleanser"
 
-	uniform = /obj/item/clothing/under/boiler
-	shoes = /obj/item/clothing/shoes/brown
+	uniform = /obj/item/clothing/under/cleanser
+	gloves = /obj/item/clothing/gloves/color/black
+	shoes = /obj/item/clothing/shoes/cleanser
 
 /datum/job/city/prole
 	title = "Proletariat"
