@@ -1,5 +1,5 @@
 /obj/screen/ai
-	icon = 'icons/mob/screen_ai.dmi'
+	icon = 'icons/mob/screen/screen_ai.dmi'
 
 /obj/screen/ai/Click()
 	if(isobserver(usr) || usr.incapacitated())
@@ -186,7 +186,7 @@
 
 
 /datum/hud/ai
-	ui_style = 'icons/mob/screen_ai.dmi'
+	ui_style = 'icons/mob/screen/screen_ai.dmi'
 
 /datum/hud/ai/New(mob/owner)
 	..()

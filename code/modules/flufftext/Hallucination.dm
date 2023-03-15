@@ -688,7 +688,7 @@ GLOBAL_LIST_INIT(hallucination_list, list(
 		if(!chosen)
 			chosen = capitalize(pick(speak_messages))
 		chosen = replacetext(chosen, "%TARGETNAME%", target_name)
-		var/image/speech_overlay = image('icons/mob/talk.dmi', person, "default0", layer = ABOVE_MOB_LAYER)
+		var/image/speech_overlay = image('icons/mob/screen/talk.dmi', person, "default0", layer = ABOVE_MOB_LAYER)
 		var/message = target.compose_message(person,understood_language,chosen,null,person.get_spans(),face_name = TRUE)
 		feedback_details += "Type: Talk, Source: [person.real_name], Message: [message]"
 		to_chat(target, message)

@@ -8,7 +8,7 @@
 */
 /obj/screen
 	name = ""
-	icon = 'icons/mob/screen_gen.dmi'
+	icon = 'icons/mob/screen/screen_gen.dmi'
 	layer = ABOVE_HUD_LAYER
 	plane = ABOVE_HUD_PLANE
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
@@ -62,7 +62,7 @@
 
 /obj/screen/craft
 	name = "crafting menu"
-	icon = 'icons/mob/screen_midnight.dmi'
+	icon = 'icons/mob/screen/screen_midnight.dmi'
 	icon_state = "craft"
 	screen_loc = ui_crafting
 
@@ -74,7 +74,7 @@
 
 /obj/screen/language_menu
 	name = "language menu"
-	icon = 'icons/mob/screen_midnight.dmi'
+	icon = 'icons/mob/screen/screen_midnight.dmi'
 	icon_state = "talk_wheel"
 	screen_loc = ui_language_menu
 
@@ -122,7 +122,7 @@
 
 /obj/screen/inventory/hand
 	var/mutable_appearance/handcuff_overlay
-	var/static/mutable_appearance/blocked_overlay = mutable_appearance('icons/mob/screen_gen.dmi', "blocked")
+	var/static/mutable_appearance/blocked_overlay = mutable_appearance('icons/mob/screen/screen_gen.dmi', "blocked")
 	var/held_index = 0
 
 /obj/screen/inventory/hand/update_icon()
@@ -130,7 +130,7 @@
 
 	if(!handcuff_overlay)
 		var/state = (!(held_index % 2)) ? "markus" : "gabrielle"
-		handcuff_overlay = mutable_appearance('icons/mob/screen_gen.dmi', state)
+		handcuff_overlay = mutable_appearance('icons/mob/screen/screen_gen.dmi', state)
 
 	cut_overlays()
 
@@ -183,7 +183,7 @@
 
 /obj/screen/drop
 	name = "drop"
-	icon = 'icons/mob/screen_midnight.dmi'
+	icon = 'icons/mob/screen/screen_midnight.dmi'
 	icon_state = "act_drop"
 	layer = HUD_LAYER
 	plane = HUD_PLANE
@@ -220,11 +220,11 @@
 		return ..()
 
 /obj/screen/act_intent/alien
-	icon = 'icons/mob/screen_alien.dmi'
+	icon = 'icons/mob/screen/screen_alien.dmi'
 	screen_loc = ui_movi
 
 /obj/screen/act_intent/robot
-	icon = 'icons/mob/screen_cyborg.dmi'
+	icon = 'icons/mob/screen/screen_cyborg.dmi'
 	screen_loc = ui_borg_intents
 
 /obj/screen/internals
@@ -289,7 +289,7 @@
 
 /obj/screen/mov_intent
 	name = "run/walk toggle"
-	icon = 'icons/mob/screen_midnight.dmi'
+	icon = 'icons/mob/screen/screen_midnight.dmi'
 	icon_state = "running"
 
 /obj/screen/mov_intent/Click()
@@ -309,7 +309,7 @@
 
 /obj/screen/pull
 	name = "stop pulling"
-	icon = 'icons/mob/screen_midnight.dmi'
+	icon = 'icons/mob/screen/screen_midnight.dmi'
 	icon_state = "pull"
 
 /obj/screen/pull/Click()
@@ -327,7 +327,7 @@
 
 /obj/screen/resist
 	name = "resist"
-	icon = 'icons/mob/screen_midnight.dmi'
+	icon = 'icons/mob/screen/screen_midnight.dmi'
 	icon_state = "act_resist"
 	layer = HUD_LAYER
 	plane = HUD_PLANE
@@ -363,7 +363,7 @@
 
 /obj/screen/throw_catch
 	name = "throw/catch"
-	icon = 'icons/mob/screen_midnight.dmi'
+	icon = 'icons/mob/screen/screen_midnight.dmi'
 	icon_state = "act_throw_off"
 
 /obj/screen/throw_catch/Click()
@@ -442,19 +442,19 @@
 
 /obj/screen/zone_sel/update_icon(mob/user)
 	cut_overlays()
-	add_overlay(mutable_appearance('icons/mob/screen_gen.dmi', "[selecting]"))
+	add_overlay(mutable_appearance('icons/mob/screen/screen_gen.dmi', "[selecting]"))
 	user.zone_selected = selecting
 
 /obj/screen/zone_sel/alien
-	icon = 'icons/mob/screen_alien.dmi'
+	icon = 'icons/mob/screen/screen_alien.dmi'
 
 /obj/screen/zone_sel/alien/update_icon(mob/user)
 	cut_overlays()
-	add_overlay(mutable_appearance('icons/mob/screen_alien.dmi', "[selecting]"))
+	add_overlay(mutable_appearance('icons/mob/screen/screen_alien.dmi', "[selecting]"))
 	user.zone_selected = selecting
 
 /obj/screen/zone_sel/robot
-	icon = 'icons/mob/screen_cyborg.dmi'
+	icon = 'icons/mob/screen/screen_cyborg.dmi'
 
 
 /obj/screen/flash
@@ -466,7 +466,7 @@
 	plane = FULLSCREEN_PLANE
 
 /obj/screen/damageoverlay
-	icon = 'icons/mob/screen_full.dmi'
+	icon = 'icons/mob/screen/screen_full.dmi'
 	icon_state = "oxydamageoverlay0"
 	name = "dmg"
 	blend_mode = BLEND_MULTIPLY
@@ -476,11 +476,11 @@
 	plane = FULLSCREEN_PLANE
 
 /obj/screen/stats_panel // The health vials
-	icon = 'icons/mob/stats_bg.dmi'
+	icon = 'icons/mob/screen/stats_bg.dmi'
 	icon_state = "stats_mono"
 
 /obj/screen/bar_stat
-	icon = 'icons/mob/stats_bars.dmi'
+	icon = 'icons/mob/screen/stats_bars.dmi'
 
 /obj/screen/bar_stat/health
 	name = "vigor"
@@ -503,11 +503,11 @@
 	screen_loc = ui_drop_throw
 
 /obj/screen/bar_stat/health/alien
-	icon = 'icons/mob/screen_alien.dmi'
+	icon = 'icons/mob/screen/screen_alien.dmi'
 	screen_loc = ui_alien_health
 
 /obj/screen/bar_stat/health/robot
-	icon = 'icons/mob/screen_cyborg.dmi'
+	icon = 'icons/mob/screen/screen_cyborg.dmi'
 	screen_loc = ui_borg_health
 
 /obj/screen/bar_stat/health/blob
@@ -552,7 +552,7 @@
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 
 /obj/screen/bar_stat/health/construct
-	icon = 'icons/mob/screen_construct.dmi'
+	icon = 'icons/mob/screen/screen_construct.dmi'
 	icon_state = "artificer_health0"
 	screen_loc = ui_construct_health
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
