@@ -1,6 +1,6 @@
 /obj/effect/manifest
 	name = "manifest"
-	icon = 'icons/mob/screen_gen.dmi'
+	icon = 'icons/mob/screen/screen_gen.dmi'
 	icon_state = "x"
 
 /obj/effect/manifest/Initialize()

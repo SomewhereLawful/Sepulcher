@@ -449,9 +449,8 @@
  */
 /obj/structure/rack
 	name = "rack"
-	desc = "Different from the Middle Ages version."
 	icon = 'icons/fallout/objects/structures/furniture.dmi'
-	icon_state = "rack"
+	icon_state = "polka"
 	layer = TABLE_LAYER
 	density = TRUE
 	anchored = TRUE

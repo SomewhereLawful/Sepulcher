@@ -44,6 +44,7 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 	var/siemens_coeff = 1 //base electrocution coefficient
 	var/damage_overlay_type = "human" //what kind of damage overlays (if any) appear on our species when wounded?
 	var/fixed_mut_color = "" //to use MUTCOLOR with a fixed color that's independent of dna.feature["mcolor"]
+	var/list/special_step_sounds //Sounds to override barefeet walkng
 
 	// species-only traits. Can be found in DNA.dm
 	var/list/species_traits = list()
@@ -937,7 +938,7 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 /datum/species/proc/check_weakness(obj/item, mob/living/attacker)
 	return FALSE
 
-////////
+	////////
 	//LIFE//
 	////////
 
@@ -1019,7 +1020,32 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 			SEND_SIGNAL(H, COMSIG_ADD_MOOD_EVENT, "nutrition", /datum/mood_event/nutrition/starving)
 			H.throw_alert("nutrition", /obj/screen/alert/starving)
 
+/datum/species/proc/handle_hunger(mob/living/carbon/human/H)
+	if (H.hunger > 0 && H.stat != DEAD && !H.has_trait(TRAIT_NOHUNGER))
+		var/hunger_rate = HUNGER_FACTOR
+		if(H.hunger > 0)
+			H.hunger--
+		if(H.hunger < 0)
+			H.hunger++
+		H.hunger = max(0, H.hunger - hunger_rate)
+
+	if (H.hunger > H.maxHunger)
+		if(H.overeatduration < 600) //capped so people don't take forever to unfat
+			H.overeatduration++
+	else
+		if(H.overeatduration > 1)
+			H.overeatduration -= 2 //doubled the unfat rate
+
 /datum/species/proc/update_health_hud(mob/living/carbon/human/H)
+	return 0
+
+/datum/species/proc/update_willstat_hud(mob/living/carbon/human/H)
+	return 0
+
+/datum/species/proc/update_hungerstat_hud(mob/living/carbon/human/H)
+	return 0
+
+/datum/species/proc/update_toxicitystat_hud(mob/living/carbon/human/H)
 	return 0
 
 /datum/species/proc/handle_mutations_and_radiation(mob/living/carbon/human/H)

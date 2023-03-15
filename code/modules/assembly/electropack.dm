@@ -101,7 +101,7 @@ Code:
 	icon = 'icons/obj/clothing/neck.dmi'
 	icon_state = "slavecollar"
 	item_state = "slavecollar"
-	alternate_worn_icon = 'icons/mob/neck.dmi'
+	alternate_worn_icon = 'icons/mob/clothing/neck.dmi'
 	slot_flags = ITEM_SLOT_NECK  //CEASE THE POCKET SHOCKER MEMES | Pocket shocker meme is hilarious. - Nappist
 	w_class = WEIGHT_CLASS_SMALL
 	body_parts_covered = NECK
@@ -194,7 +194,7 @@ Code:
 	icon = 'icons/obj/clothing/neck.dmi'
 	icon_state = "slavecollarb"
 	item_state = "slavecollarb"
-	alternate_worn_icon = 'icons/mob/neck.dmi'
+	alternate_worn_icon = 'icons/mob/clothing/neck.dmi'
 	slot_flags = ITEM_SLOT_NECK
 	w_class = WEIGHT_CLASS_SMALL
 	body_parts_covered = NECK

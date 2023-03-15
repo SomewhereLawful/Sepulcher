@@ -1,6 +1,6 @@
 /obj/effect/mob_spawner
 	name = "mob spawner"
-	icon = 'icons/mob/screen_gen.dmi'
+	icon = 'icons/mob/screen/screen_gen.dmi'
 	icon_state = "x2"
 	color = "#00FF00"
 	invisibility = 100

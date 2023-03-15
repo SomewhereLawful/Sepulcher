@@ -6,12 +6,7 @@
 
 // The default UI style is the first one in the list
 GLOBAL_LIST_INIT(available_ui_styles, list(
-	"Midnight" = 'icons/mob/screen_midnight.dmi',
-	"Retro" = 'icons/mob/screen_retro.dmi',
-	"Plasmafire" = 'icons/mob/screen_plasmafire.dmi',
-	"Slimecore" = 'icons/mob/screen_slimecore.dmi',
-	"Operative" = 'icons/mob/screen_operative.dmi',
-	"Clockwork" = 'icons/mob/screen_clockwork.dmi'
+	"Midnight" = 'icons/mob/screen/screen_default.dmi'
 ))
 
 /proc/ui_style2icon(ui_style)
@@ -53,7 +48,11 @@ GLOBAL_LIST_INIT(available_ui_styles, list(
 	var/obj/screen/movable/action_button/hide_toggle/hide_actions_toggle
 	var/action_buttons_hidden = FALSE
 
-	var/obj/screen/healths
+	var/obj/screen/bar_stat/health
+	var/obj/screen/bar_stat/will
+	var/obj/screen/bar_stat/hunger
+	var/obj/screen/bar_stat/toxicity
+
 	var/obj/screen/healthdoll
 	var/obj/screen/internals
 	var/obj/screen/mood
@@ -98,7 +97,10 @@ GLOBAL_LIST_INIT(available_ui_styles, list(
 	throw_icon = null
 	QDEL_LIST(infodisplay)
 
-	healths = null
+	health = null
+	will = null
+	hunger = null
+	toxicity = null
 	healthdoll = null
 	internals = null
 	mood = null

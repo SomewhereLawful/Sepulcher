@@ -135,7 +135,6 @@
 	products = list(/obj/item/clothing/suit/poncho = 5,
 					/obj/item/clothing/under/f13/brahminf = 2,
 					/obj/item/clothing/under/f13/brahminm = 2,
-					/obj/item/clothing/under/f13/caravan = 2,
 					/obj/item/clothing/under/f13/caravaneer = 2,
 					/obj/item/clothing/under/f13/cowboyb = 2,
 					/obj/item/clothing/under/f13/cowboyg = 2,

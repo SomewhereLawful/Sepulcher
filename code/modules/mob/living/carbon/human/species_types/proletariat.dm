@@ -2,7 +2,7 @@
 	name = "Proletariat"
 	id = "proletariat"
 	default_color = "FFFFFF"
-	species_traits = list(LIPS)
+	species_traits = list(LIPS,NO_UNDERWEAR)
 	default_features = list("mcolor" = "FFF", "tail_human" = "None", "ears" = "None", "wings" = "None")
 	use_skintones = 0 // They all look like burnt corpses
 	skinned_type = /obj/item/stack/sheet/animalhide/human

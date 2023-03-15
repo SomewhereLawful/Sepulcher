@@ -1,5 +1,5 @@
 /obj/screen/robot
-	icon = 'icons/mob/screen_cyborg.dmi'
+	icon = 'icons/mob/screen/screen_cyborg.dmi'
 
 /obj/screen/robot/module
 	name = "cyborg module"
@@ -89,7 +89,7 @@
 	R.toggle_ionpulse()
 
 /datum/hud/robot
-	ui_style = 'icons/mob/screen_cyborg.dmi'
+	ui_style = 'icons/mob/screen/screen_cyborg.dmi'
 
 /datum/hud/robot/New(mob/owner)
 	..()
@@ -155,8 +155,8 @@
 	static_inventory += action_intent
 
 //Health
-	healths = new /obj/screen/healths/robot()
-	infodisplay += healths
+	health = new /obj/screen/bar_stat/health/robot()
+	infodisplay += health
 
 //Installed Module
 	mymobR.hands = new /obj/screen/robot/module()
@@ -168,7 +168,7 @@
 	module_store_icon.screen_loc = ui_borg_store
 
 	pull_icon = new /obj/screen/pull()
-	pull_icon.icon = 'icons/mob/screen_cyborg.dmi'
+	pull_icon.icon = 'icons/mob/screen/screen_cyborg.dmi'
 	pull_icon.update_icon(mymob)
 	pull_icon.screen_loc = ui_borg_pull
 	hotkeybuttons += pull_icon

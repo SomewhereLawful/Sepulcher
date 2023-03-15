@@ -46,7 +46,7 @@
 			if(HUD_LIST_LIST)
 				hud_list[hud] = list()
 			else
-				var/image/I = image('icons/mob/hud.dmi', src, "")
+				var/image/I = image('icons/mob/screen/hud.dmi', src, "")
 				I.appearance_flags = RESET_COLOR|RESET_TRANSFORM
 				hud_list[hud] = I
 
@@ -857,6 +857,15 @@
 	return
 
 /mob/proc/update_health_hud()
+	return
+
+/mob/proc/update_willstat_hud()
+	return
+
+/mob/proc/update_hungerstat_hud()
+	return
+
+/mob/proc/update_toxicitystat_hud()
 	return
 
 /mob/proc/update_sight()

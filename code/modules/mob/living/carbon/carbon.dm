@@ -20,6 +20,9 @@
 	QDEL_NULL(dna)
 	GLOB.carbon_list -= src
 
+/mob/living/carbon/initialize_footstep()
+	AddComponent(/datum/component/footstep, 1, 2)
+
 /mob/living/carbon/relaymove(mob/user, direction)
 	if(user in src.stomach_contents)
 		if(prob(40))
@@ -700,27 +703,134 @@
 /mob/living/carbon/update_health_hud(shown_health_amount)
 	if(!client || !hud_used)
 		return
-	if(hud_used.healths)
+	if(hud_used.health)
 		if(stat != DEAD)
 			. = 1
 			if(!shown_health_amount)
 				shown_health_amount = health
 			if(shown_health_amount >= maxHealth)
-				hud_used.healths.icon_state = "health0"
+				hud_used.health.icon_state = "health100"
+			else if(shown_health_amount > maxHealth*0.9)
+				hud_used.health.icon_state = "health90"
 			else if(shown_health_amount > maxHealth*0.8)
-				hud_used.healths.icon_state = "health1"
+				hud_used.health.icon_state = "health80"
+			else if(shown_health_amount > maxHealth*0.7)
+				hud_used.health.icon_state = "health70"
 			else if(shown_health_amount > maxHealth*0.6)
-				hud_used.healths.icon_state = "health2"
+				hud_used.health.icon_state = "health60"
+			else if(shown_health_amount > maxHealth*0.5)
+				hud_used.health.icon_state = "health50"
 			else if(shown_health_amount > maxHealth*0.4)
-				hud_used.healths.icon_state = "health3"
+				hud_used.health.icon_state = "health40"
+			else if(shown_health_amount > maxHealth*0.3)
+				hud_used.health.icon_state = "health30"
 			else if(shown_health_amount > maxHealth*0.2)
-				hud_used.healths.icon_state = "health4"
+				hud_used.health.icon_state = "health20"
 			else if(shown_health_amount > 0)
-				hud_used.healths.icon_state = "health5"
+				hud_used.health.icon_state = "health10"
 			else
-				hud_used.healths.icon_state = "health6"
+				hud_used.health.icon_state = "health5"
 		else
-			hud_used.healths.icon_state = "health7"
+			hud_used.health.icon_state = "health0"
+
+/mob/living/carbon/update_willstat_hud(shown_willstat_amount)
+	if(!client || !hud_used)
+		return
+	if(hud_used.will)
+		if(stat != DEAD)
+			. = 1
+			if(!shown_willstat_amount)
+				shown_willstat_amount = will
+			if(shown_willstat_amount >= maxWill)
+				hud_used.will.icon_state = "will100"
+			else if(shown_willstat_amount > maxWill*0.9)
+				hud_used.will.icon_state = "will90"
+			else if(shown_willstat_amount > maxWill*0.8)
+				hud_used.will.icon_state = "will80"
+			else if(shown_willstat_amount > maxWill*0.7)
+				hud_used.will.icon_state = "will70"
+			else if(shown_willstat_amount > maxWill*0.6)
+				hud_used.will.icon_state = "will60"
+			else if(shown_willstat_amount > maxWill*0.5)
+				hud_used.will.icon_state = "will50"
+			else if(shown_willstat_amount > maxWill*0.4)
+				hud_used.will.icon_state = "will40"
+			else if(shown_willstat_amount > maxWill*0.3)
+				hud_used.will.icon_state = "will30"
+			else if(shown_willstat_amount > maxWill*0.2)
+				hud_used.will.icon_state = "will20"
+			else if(shown_willstat_amount > 0)
+				hud_used.will.icon_state = "will10"
+			else
+				hud_used.will.icon_state = "will5"
+		else
+			hud_used.will.icon_state = "will0"
+
+/mob/living/carbon/update_hungerstat_hud(shown_hungerstat_amount)
+	if(!client || !hud_used)
+		return
+	if(hud_used.hunger)
+		if(stat != DEAD)
+			. = 1
+			if(!shown_hungerstat_amount)
+				shown_hungerstat_amount = hunger
+			if(shown_hungerstat_amount >= maxHunger)
+				hud_used.hunger.icon_state = "hunger100"
+			else if(shown_hungerstat_amount > maxHunger*0.9)
+				hud_used.hunger.icon_state = "hunger90"
+			else if(shown_hungerstat_amount > maxHunger*0.8)
+				hud_used.hunger.icon_state = "hunger80"
+			else if(shown_hungerstat_amount > maxHunger*0.7)
+				hud_used.hunger.icon_state = "hunger70"
+			else if(shown_hungerstat_amount > maxHunger*0.6)
+				hud_used.hunger.icon_state = "hunger60"
+			else if(shown_hungerstat_amount > maxHunger*0.5)
+				hud_used.hunger.icon_state = "hunger50"
+			else if(shown_hungerstat_amount > maxHunger*0.4)
+				hud_used.hunger.icon_state = "hunger40"
+			else if(shown_hungerstat_amount > maxHunger*0.3)
+				hud_used.hunger.icon_state = "hunger30"
+			else if(shown_hungerstat_amount > maxHunger*0.2)
+				hud_used.hunger.icon_state = "hunger20"
+			else if(shown_hungerstat_amount > 0)
+				hud_used.hunger.icon_state = "hunger10"
+			else
+				hud_used.hunger.icon_state = "hunger5"
+		else
+			hud_used.hunger.icon_state = "hunger0"
+
+/mob/living/carbon/update_toxicitystat_hud(shown_toxicitystat_amount)
+	if(!client || !hud_used)
+		return
+	if(hud_used.toxicity)
+		if(stat != DEAD)
+			. = 1
+			if(!shown_toxicitystat_amount)
+				shown_toxicitystat_amount = toxicity
+			if(shown_toxicitystat_amount >= maxToxicity)
+				hud_used.toxicity.icon_state = "toxicity100"
+			else if(shown_toxicitystat_amount > maxToxicity*0.9)
+				hud_used.toxicity.icon_state = "toxicity90"
+			else if(shown_toxicitystat_amount > maxToxicity*0.8)
+				hud_used.toxicity.icon_state = "toxicity80"
+			else if(shown_toxicitystat_amount > maxToxicity*0.7)
+				hud_used.toxicity.icon_state = "toxicity70"
+			else if(shown_toxicitystat_amount > maxToxicity*0.6)
+				hud_used.toxicity.icon_state = "toxicity60"
+			else if(shown_toxicitystat_amount > maxToxicity*0.5)
+				hud_used.toxicity.icon_state = "toxicity50"
+			else if(shown_toxicitystat_amount > maxToxicity*0.4)
+				hud_used.toxicity.icon_state = "toxicity40"
+			else if(shown_toxicitystat_amount > maxToxicity*0.3)
+				hud_used.toxicity.icon_state = "toxicity30"
+			else if(shown_toxicitystat_amount > maxToxicity*0.2)
+				hud_used.toxicity.icon_state = "toxicity20"
+			else if(shown_toxicitystat_amount > 0)
+				hud_used.toxicity.icon_state = "toxicity10"
+			else
+				hud_used.toxicity.icon_state = "toxicity5"
+		else
+			hud_used.toxicity.icon_state = "toxicity0"
 
 /mob/living/carbon/proc/update_internals_hud_icon(internal_state = 0)
 	if(hud_used && hud_used.internals)
@@ -745,6 +855,9 @@
 		update_canmove()
 	update_damage_hud()
 	update_health_hud()
+	update_willstat_hud()
+	update_hungerstat_hud()
+	update_toxicitystat_hud()
 	med_hud_set_status()
 
 //called when we get cuffed/uncuffed
@@ -879,3 +992,16 @@
 
 /mob/living/carbon/can_resist()
 	return bodyparts.len > 2 && ..()
+
+/mob/living/carbon/proc/update_top_overlay() // sepulcher todo - make this not shit
+	if(src.loc && istype(src.loc, /turf/open/indestructible/ground/outside/water))
+		remove_overlay(BODY_FRONT_LAYER)
+		var/icon/I
+		if(istype(src.loc, /turf/open/indestructible/ground/outside/water/sea))
+			I = icon('icons/effects/water.dmi', "standwater_motion")
+		else
+			I = icon('icons/effects/water.dmi', "standwater")
+		overlays_standing[BODY_FRONT_LAYER] = mutable_appearance(I, "", -BODY_FRONT_LAYER)
+		apply_overlay(BODY_FRONT_LAYER)
+	else
+		remove_overlay(BODY_FRONT_LAYER)

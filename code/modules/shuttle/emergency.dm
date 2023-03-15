@@ -226,7 +226,7 @@
 	else
 		SSshuttle.emergencyLastCallLoc = null
 
-	priority_announce("The train has been called. [redAlert ? "Red Alert state confirmed: Dispatching priority train. " : "" ]It will arrive in [timeLeft(600)] minutes.[reason][SSshuttle.emergencyLastCallLoc ? "\n\nCall signal traced. Results can be viewed on any communications console." : "" ]", null, 'sound/f13/quest.ogg', "Priority")
+	priority_announce("The train has been called. [redAlert ? "Red Alert state confirmed: Dispatching priority train. " : "" ]It will arrive in [timeLeft(600)] minutes.[reason][SSshuttle.emergencyLastCallLoc ? "\n\nCall signal traced. Results can be viewed on any communications console." : "" ]", null, 'sound/effects/razortrain_horn.ogg', "Priority")
 
 /obj/docking_port/mobile/emergency/cancel(area/signalOrigin)
 	if(mode != SHUTTLE_CALL)
@@ -241,7 +241,7 @@
 		SSshuttle.emergencyLastCallLoc = signalOrigin
 	else
 		SSshuttle.emergencyLastCallLoc = null
-	priority_announce("The train has been recalled.[SSshuttle.emergencyLastCallLoc ? " Recall signal traced. Results can be viewed on any communications console." : "" ]", null, 'sound/f13/quest.ogg', "Priority")
+	priority_announce("The train has been recalled.[SSshuttle.emergencyLastCallLoc ? " Recall signal traced. Results can be viewed on any communications console." : "" ]", null, 'sound/effects/razortrain_horn.ogg', "Priority")
 
 /obj/docking_port/mobile/emergency/proc/is_hijacked()
 	var/has_people = FALSE
@@ -300,7 +300,7 @@
 				mode = SHUTTLE_DOCKED
 				setTimer(SSshuttle.emergencyDockTime)
 				send2irc("Server", "The train has arrived to the station.")
-				priority_announce("The train has arrived to the station. You have [timeLeft(600)] minutes to board the train.", null, 'sound/f13/quest.ogg', "Priority")
+				priority_announce("The train has arrived to the station. You have [timeLeft(600)] minutes to board the train.", null, 'sound/effects/razortrain_horn.ogg', "Priority")
 				ShuttleDBStuff()
 
 

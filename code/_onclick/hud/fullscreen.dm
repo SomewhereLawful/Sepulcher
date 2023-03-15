@@ -61,7 +61,7 @@
 				client.screen -= screen
 
 /obj/screen/fullscreen
-	icon = 'icons/mob/screen_full.dmi'
+	icon = 'icons/mob/screen/screen_full.dmi'
 	icon_state = "default"
 	screen_loc = "CENTER-7,CENTER-7"
 	layer = FULLSCREEN_LAYER
@@ -124,27 +124,27 @@
 	icon_state = "impairedoverlay"
 
 /obj/screen/fullscreen/blurry
-	icon = 'icons/mob/screen_gen.dmi'
+	icon = 'icons/mob/screen/screen_gen.dmi'
 	screen_loc = "WEST,SOUTH to EAST,NORTH"
 	icon_state = "blurry"
 
 /obj/screen/fullscreen/flash
-	icon = 'icons/mob/screen_gen.dmi'
+	icon = 'icons/mob/screen/screen_gen.dmi'
 	screen_loc = "WEST,SOUTH to EAST,NORTH"
 	icon_state = "flash"
 
 /obj/screen/fullscreen/flash/static
-	icon = 'icons/mob/screen_gen.dmi'
+	icon = 'icons/mob/screen/screen_gen.dmi'
 	screen_loc = "WEST,SOUTH to EAST,NORTH"
 	icon_state = "noise"
 
 /obj/screen/fullscreen/high
-	icon = 'icons/mob/screen_gen.dmi'
+	icon = 'icons/mob/screen/screen_gen.dmi'
 	screen_loc = "WEST,SOUTH to EAST,NORTH"
 	icon_state = "druggy"
 
 /obj/screen/fullscreen/color_vision
-	icon = 'icons/mob/screen_gen.dmi'
+	icon = 'icons/mob/screen/screen_gen.dmi'
 	screen_loc = "WEST,SOUTH to EAST,NORTH"
 	icon_state = "flash"
 	alpha = 80
@@ -159,7 +159,7 @@
 	color = "#0000ff"
 
 /obj/screen/fullscreen/lighting_backdrop
-	icon = 'icons/mob/screen_gen.dmi'
+	icon = 'icons/mob/screen/screen_gen.dmi'
 	icon_state = "flash"
 	transform = matrix(200, 0, 0, 0, 200, 0)
 	plane = LIGHTING_PLANE

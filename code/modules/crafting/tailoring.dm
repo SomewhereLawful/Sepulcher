@@ -25,7 +25,7 @@
 	category = CAT_CLOTHING
 	subcategory = CAT_CLOTHING
 
-	/datum/crafting_recipe/bandolier
+/datum/crafting_recipe/bandolier
 	name = "Bandolier"
 	result = /obj/item/storage/belt/bandolier
 	reqs = list(/obj/item/stack/sheet/hay = 3,
@@ -249,22 +249,6 @@
 	time = 15
 	category = CAT_CLOTHING
 	subcategory = CAT_BELTS
-
-/datum/crafting_recipe/maletribal
-	name = "Male Tribal Outfit"
-	result = /obj/item/clothing/under/f13/tribal
-	reqs = list(/obj/item/stack/sheet/cloth = 3)
-	time = 10
-	category = CAT_CLOTHING
-	subcategory = CAT_WASTELAND
-
-/datum/crafting_recipe/femaletribal
-	name = "Female Tribal Outfit"
-	result = /obj/item/clothing/under/f13/female/tribal
-	reqs = list(/obj/item/stack/sheet/cloth = 3)
-	time = 10
-	category = CAT_CLOTHING
-	subcategory = CAT_WASTELAND
 
 /datum/crafting_recipe/facewrap
 	name = "Desert Facewrap"

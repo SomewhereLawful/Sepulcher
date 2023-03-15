@@ -18,7 +18,13 @@
 	name = "city"
 	icon_state = "city"
 	ambientsounds = list('sound/f13ambience/battle_1.ogg','sound/f13ambience/battle_2.ogg','sound/f13ambience/battle_3.ogg')
-	outdoors = 1 // Hold for room-making removal.
+	outdoors = 1
+
+/area/game/city/interior
+	name = "city"
+	icon_state = "interior"
+	ambientsounds = list('sound/f13ambience/battle_1.ogg','sound/f13ambience/battle_2.ogg','sound/f13ambience/battle_3.ogg')
+	outdoors = 0
 
 // Spawn areas for City
 /area/game/spawning // Parented for shared ambientsounds

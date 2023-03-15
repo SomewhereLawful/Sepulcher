@@ -29,6 +29,7 @@
 	stop_automated_movement_when_pulled = 1
 	blood_volume = BLOOD_VOLUME_NORMAL
 	var/obj/item/udder/udder = null
+	do_footstep = TRUE
 
 /mob/living/simple_animal/hostile/retaliate/goat/Initialize()
 	udder = new()
@@ -133,6 +134,7 @@
 	var/has_calf = 0
 	var/young_type = /mob/living/simple_animal/cow/calf
 	var/obj/item/udder/udder = null
+	do_footstep = TRUE
 
 /mob/living/simple_animal/cow/Initialize()
 	if(!is_calf)
@@ -240,6 +242,7 @@
 	gold_core_spawnable = FRIENDLY_SPAWN
 	faction = list("neutral", "wastebot")
 	var/amount_grown = 0
+	do_footstep = TRUE
 
 /mob/living/simple_animal/chick/Initialize()
 	. = ..()
@@ -297,6 +300,7 @@
 	var/list/layMessage = EGG_LAYING_MESSAGES
 	var/list/validColors = list("brown","black","white")
 	var/static/chicken_count = 0
+	do_footstep = TRUE
 
 /mob/living/simple_animal/chicken/Initialize()
 	. = ..()

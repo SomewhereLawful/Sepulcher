@@ -254,7 +254,7 @@ GLOBAL_PROTECT(security_mode)
 	s += "<b>\[ENG]Sepulcher<br>"
 	s += "<br>"
 	s += "Affected machinations of raging heads<br>"
-	s += "Hosted by Damocles"
+	s += "Hosted by Dead Gods"
 
 	var/n = 0
 	for (var/mob/M in GLOB.player_list)

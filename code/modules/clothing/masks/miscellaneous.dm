@@ -164,7 +164,7 @@
 /obj/item/clothing/mask/cowmask
 	name = "Cowface"
 	desc = "It's a very stylish cow mask which seems to have a voice modulator built into it."
-	icon = 'icons/mob/mask.dmi'
+	icon = 'icons/mob/clothing/mask.dmi'
 	icon_state = "cowmask"
 	item_state = "cowmask"
 	flags_inv = HIDEFACE|HIDEHAIR|HIDEFACIALHAIR

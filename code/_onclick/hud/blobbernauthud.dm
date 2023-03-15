@@ -2,11 +2,11 @@
 /datum/hud/blobbernaut/New(mob/owner)
 	..()
 
-	blobpwrdisplay = new /obj/screen/healths/blob/naut/core()
+	blobpwrdisplay = new /obj/screen/bar_stat/health/blob/naut/core()
 	infodisplay += blobpwrdisplay
 
-	healths = new /obj/screen/healths/blob/naut()
-	infodisplay += healths
+	health = new /obj/screen/bar_stat/health/blob/naut()
+	infodisplay += health
 
 /mob/living/simple_animal/hostile/blob/blobbernaut/create_mob_hud()
 	if(client && !hud_used)

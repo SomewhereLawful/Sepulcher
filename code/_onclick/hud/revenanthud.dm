@@ -2,8 +2,8 @@
 /datum/hud/revenant/New(mob/owner)
 	..()
 
-	healths = new /obj/screen/healths/revenant()
-	infodisplay += healths
+	health = new /obj/screen/bar_stat/health/revenant()
+	infodisplay += health
 
 /mob/living/simple_animal/revenant/create_mob_hud()
 	if(client && !hud_used)

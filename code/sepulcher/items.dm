@@ -9,3 +9,4 @@
 	lefthand_file = 'icons/mob/inhands/equipment/mining_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/mining_righthand.dmi'
 	brightness_on = 4
+	light_color = "#E9CF48"

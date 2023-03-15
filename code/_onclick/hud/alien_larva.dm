@@ -1,5 +1,5 @@
 /datum/hud/larva
-	ui_style = 'icons/mob/screen_alien.dmi'
+	ui_style = 'icons/mob/screen/screen_alien.dmi'
 
 /datum/hud/larva/New(mob/owner)
 	..()
@@ -10,13 +10,13 @@
 	static_inventory += using
 	action_intent = using
 
-	healths = new /obj/screen/healths/alien()
-	infodisplay += healths
+	health = new /obj/screen/bar_stat/health/alien()
+	infodisplay += health
 
 	alien_queen_finder = new /obj/screen/alien/alien_queen_finder()
 	infodisplay += alien_queen_finder
 	pull_icon = new /obj/screen/pull()
-	pull_icon.icon = 'icons/mob/screen_alien.dmi'
+	pull_icon.icon = 'icons/mob/screen/screen_alien.dmi'
 	pull_icon.update_icon(mymob)
 	pull_icon.screen_loc = ui_pull_resist
 	hotkeybuttons += pull_icon

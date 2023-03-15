@@ -14,6 +14,7 @@
 	see_in_dark = 5
 	speak_chance = 1
 	turns_per_move = 10
+	do_footstep = TRUE
 
 //Corgis and pugs are now under one dog subtype
 

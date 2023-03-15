@@ -13,6 +13,18 @@
 	var/maxHealth = 100 //Maximum health that should be possible.
 	var/health = 100 	//A mob's health
 
+	//Will - The sanity stat - Affects movement speed, if it reaches zero you immediately die.
+	var/maxWill = 100 //Maximum will that should be possible.
+	var/will = 100 	//A mob's will
+
+	//Hunger - Slowly lowers with time, at zero hunger maxHealth lowers until it reaches zero.
+	var/maxHunger = 600 //Maximum hunger that should be possible.
+	var/hunger = 600 	//A mob's hunger
+
+	//Toxicity - Unlike other stats, you want this at zero. At certain thresholds, begins to tick health damage.
+	var/maxToxicity = 100 // Don't fuck with this, as threshold for toxicity is set with hard numbers.
+	var/toxicity = 0 	//A mob's toxicity
+
 	//Damage related vars, NOTE: THESE SHOULD ONLY BE MODIFIED BY PROCS
 	var/bruteloss = 0	//Brutal damage caused by brute force (punching, being clubbed by a toolbox ect... this also accounts for pressure damage)
 	var/oxyloss = 0		//Oxygen depravation damage (no air in lungs)

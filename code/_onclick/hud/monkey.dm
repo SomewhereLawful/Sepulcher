@@ -81,8 +81,8 @@
 	internals = new /obj/screen/internals()
 	infodisplay += internals
 
-	healths = new /obj/screen/healths()
-	infodisplay += healths
+	health = new /obj/screen/bar_stat/health()
+	infodisplay += health
 
 	pull_icon = new /obj/screen/pull()
 	pull_icon.icon = ui_style
