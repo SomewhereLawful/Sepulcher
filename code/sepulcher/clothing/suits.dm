@@ -22,3 +22,9 @@
 /obj/item/clothing/head/hooded/bandit_hood/brown
 	icon_state = "banditcoatbrown" // invisible icon
 	item_state = "banditcoatbrown"
+
+/obj/item/clothing/suit/cleansercoat
+	name = "cleanser cleancoat"
+	desc = "A rather grisly selection of cured hides and skin, sewn together to form a ragged mantle."
+	icon_state = "mantle_liz"
+	item_state = "det_suit"
