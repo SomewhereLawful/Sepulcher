@@ -11,19 +11,21 @@
 	item_state = "bl_suit"
 	item_color = "navy"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	can_adjust = 0
+	can_adjust = FALSE
 
 /obj/item/clothing/under/vest_slacks
 	name = "solicitor clothes"
 	desc = "Old, but well-kept articles, reeking of meat long consumed."
 	icon_state = "vest_and_slacks"
 	item_state = "vest_and_slacks"
+	can_adjust = FALSE
 
 /obj/item/clothing/under/cleanser
 	name = "cleanser safesuit"
 	desc = "Keeps their filth out and your filth in."
 	icon_state = "cleanser"
 	item_state = "cleanser"
+	can_adjust = FALSE
 
 /obj/item/clothing/under/cleanser/sealed
 	desc = "Keeps their filth out and your filth in. You are sealed in."
