@@ -55,6 +55,7 @@
 
 	head = /obj/item/clothing/head/cleanser
 	mask = /obj/item/clothing/mask/gp5
+	suit = /obj/item/clothing/suit/cleansercoat
 	uniform = /obj/item/clothing/under/cleanser
 	gloves = /obj/item/clothing/gloves/color/black
 	shoes = /obj/item/clothing/shoes/cleanser

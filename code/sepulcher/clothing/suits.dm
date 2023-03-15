@@ -25,6 +25,6 @@
 
 /obj/item/clothing/suit/cleansercoat
 	name = "cleanser cleancoat"
-	desc = "A rather grisly selection of cured hides and skin, sewn together to form a ragged mantle."
-	icon_state = "mantle_liz"
-	item_state = "det_suit"
+	desc = "More a raincoat."
+	icon_state = "cleansercoat"
+	item_state = "cleansercoat"

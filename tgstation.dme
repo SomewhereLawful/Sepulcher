@@ -2778,7 +2778,6 @@
 #include "code\sepulcher\spawners.dm"
 #include "code\sepulcher\walls.dm"
 #include "code\sepulcher\clothing\gloves.dm"
-#include "code\sepulcher\clothing\hats.dm"
 #include "code\sepulcher\clothing\kommandant.dm"
 #include "code\sepulcher\clothing\masks.dm"
 #include "code\sepulcher\clothing\shoes.dm"
