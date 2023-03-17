@@ -28,3 +28,8 @@
 	desc = "More a raincoat."
 	icon_state = "cleansercoat"
 	item_state = "cleansercoat"
+
+/obj/item/clothing/suit/smithingapron
+	name = "smithing apron"
+	icon_state = "smithing"
+	item_state = "smithing"
