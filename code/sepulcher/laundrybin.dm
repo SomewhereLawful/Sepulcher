@@ -21,6 +21,10 @@
 					/obj/item/clothing/gloves/worker = 50,
 					/obj/item/clothing/gloves/fingerless = 50)
 
+	var/list/shoes = list(
+					/obj/item/clothing/shoes/brown = 50,
+					/obj/item/clothing/shoes/black = 50)
+
 /obj/structure/laundry_bin/attack_hand(mob/user)
 	to_chat(user, "You dig through for something of passable quality.")
 	var/choice = input(user, "Choose an article to search for", "Digging for clothes") as null|anything in list("Hats","Masks","Shirts","Coats","Gloves","Shoes",)
@@ -51,7 +55,9 @@
 				user.put_in_active_hand(G)
 				to_chat(user, "You pull out a pair of gloves.")
 			if("Shoes")
-				new /obj/item/clothing/shoes/brown(get_turf(user))
+				var/shoe_choice = pickweight(shoes)
+				var/obj/item/clothing/shoes/F = new shoe_choice
+				user.put_in_active_hand(F)
 				to_chat(user, "You pull a pair of shoes from the bin.")
 	
 	playsound(src, 'sound/effects/cloth_rustle1.ogg', 50, 0)

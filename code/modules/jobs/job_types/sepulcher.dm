@@ -53,12 +53,12 @@
 /datum/outfit/city/cleanser
 	name = "Cleanser"
 
-	head = /obj/item/clothing/head/cleanser
-	mask = /obj/item/clothing/mask/gp5
+	head = /obj/item/clothing/head/cleanser/sealed
+	mask = /obj/item/clothing/mask/gp5/sealed
 	suit = /obj/item/clothing/suit/cleansercoat
-	uniform = /obj/item/clothing/under/cleanser
+	uniform = /obj/item/clothing/under/cleanser/sealed
 	gloves = /obj/item/clothing/gloves/color/black
-	shoes = /obj/item/clothing/shoes/cleanser
+	shoes = /obj/item/clothing/shoes/cleanser/sealed
 
 /datum/job/city/prole
 	title = "Proletariat"
