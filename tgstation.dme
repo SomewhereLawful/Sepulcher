@@ -2784,6 +2784,7 @@
 #include "code\sepulcher\clothing\shoes.dm"
 #include "code\sepulcher\clothing\suits.dm"
 #include "code\sepulcher\clothing\uniform.dm"
+#include "code\sepulcher\consumables\drinks.dm"
 #include "code\sepulcher\consumables\fish.dm"
 #include "code\sepulcher\consumables\food.dm"
 #include "code\sepulcher\consumables\medicine.dm"

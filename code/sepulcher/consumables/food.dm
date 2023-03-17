@@ -7,20 +7,15 @@
 	desc = "fucked up"
 	icon = 'icons/obj/food.dmi'
 	icon_state = "broken"
-	/// Muliple of feed_points, also used to determine how many bites until the food is gone.
-	var/food_volume = 3
-	/// How much health is given per bite, or damage
-	var/health_points = 0
-	/// Percentage of the hunger given per bite
 	var/feed_points = 0
-	/// How much will is given per bite
+	/// How much will is given
 	var/will_points = 0
-	/// How much toxicity is given per bite
+	/// How much toxicity is given
 	var/toxicity_points = 0
 	/// Used for flavortext in eating /attack
 	var/eatverb
 	/// Sound when the food is eaten
-	var/sound/eat_sound = 'sound/items/eatfood.ogg'
+	var/sound/eat_sound = 'sound/items/food_crunchy_1.ogg'
 	/// Use sparingly. Determines what item is generated upon total consumption of the food.
 	var/trash = null
 
@@ -46,10 +41,6 @@
 	
 	if(!eatverb)
 		eatverb = pick("bite","chew","nibble","gnaw","gobble","chomp")
-	if(!food_volume) //Shouldn't be needed but it checks to see if it has anything left in it.
-		to_chat(user, "<span class='notice'>None of [src] left, oh no!</span>")
-		qdel(src)
-		return 0
 	if(iscarbon(M))
 		if(!canconsume(M, user))
 			return 0
@@ -85,18 +76,16 @@
 				to_chat(user, "<span class='warning'>[M] doesn't seem to have a mouth!</span>")
 				return
 		
-		if(food_volume)	//Handle ingestion of the item.
-			playsound(M.loc, eat_sound, rand(10,50), 1)
-			if(food_volume)
-				food_volume--
-				M.adjustHealth_stat(health_points)
-				M.adjustHunger(feed_points *= 6)
-				M.adjustWill(will_points)
-				M.adjustToxicity(toxicity_points)
-			if(food_volume == 0)
-				SEND_SIGNAL(src, COMSIG_FOOD_EATEN, M, user)
-				On_Consume(M)
-				return 1
+//Handle ingestion of the item.
+		playsound(M.loc, eat_sound, rand(10,50), 1)
+		M.adjustHunger(feed_points *= 6)
+		M.adjustWill(will_points)
+		M.adjustToxicity(toxicity_points)
+		SEND_SIGNAL(src, COMSIG_FOOD_EATEN, M, user)
+		On_Consume(M)
+		qdel(src)
+
+		return 1
 	return 0
 
 /obj/item/food/proc/On_Consume(mob/living/eater)
