@@ -18,7 +18,13 @@
 	var/sound/eat_sound = 'sound/items/food_crunchy_1.ogg'
 	/// Use sparingly. Determines what item is generated upon total consumption of the food.
 	var/trash = null
+	var/cooked_item = null
 
+/obj/item/food/burn()
+	if(!cooked_item == null)
+		visible_message("[src] finishes cooking!")
+		new cooked_item(loc)
+		qdel(src)
 
 /obj/item/food/proc/canconsume(mob/eater, mob/user)
 	if(!iscarbon(eater))
