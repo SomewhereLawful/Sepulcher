@@ -2769,6 +2769,7 @@
 #include "code\sepulcher\floor_effects.dm"
 #include "code\sepulcher\floors.dm"
 #include "code\sepulcher\foundry.dm"
+#include "code\sepulcher\grill.dm"
 #include "code\sepulcher\items.dm"
 #include "code\sepulcher\laundrybin.dm"
 #include "code\sepulcher\objects.dm"
