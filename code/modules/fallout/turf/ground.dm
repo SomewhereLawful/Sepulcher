@@ -127,6 +127,10 @@
 	name = "dirt"
 	icon_state = "dirtfull"
 	slowdown = 0.2
+	footstep = FOOTSTEP_DIRT
+	barefootstep = FOOTSTEP_DIRT
+	clawfootstep = FOOTSTEP_DIRT
+	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
 
 /turf/open/indestructible/ground/outside/dirt/MakeSlippery(wet_setting, min_wet_time, wet_time_to_add, max_wet_time, permanent)
 	return
@@ -135,20 +139,25 @@
 	name = "\proper road"
 	icon_state = "innermiddle"
 	icon = 'icons/fallout/turfs/asphalt.dmi'
-//	step_sounds = list("human" = "erikafootsteps")
+	footstep = FOOTSTEP_CONCRETE
+	barefootstep = FOOTSTEP_CONCRETE
+	clawfootstep = FOOTSTEP_CONCRETE
+	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
 
 /turf/open/indestructible/ground/outside/sidewalk
 	name = "\proper sidewalk"
 	icon_state = "outermiddle"
 	icon = 'icons/fallout/turfs/sidewalk.dmi'
-//	step_sounds = list("human" = "erikafootsteps")
+	footstep = FOOTSTEP_CONCRETE
+	barefootstep = FOOTSTEP_CONCRETE
+	clawfootstep = FOOTSTEP_CONCRETE
+	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
 
 /turf/open/indestructible/ground/outside/ruins
 	name = "ruins"
 	desc = "It's just a pile of concrete rubble."
 	icon_state = "rubblefull"
 	icon = 'icons/fallout/turfs/ground.dmi'
-//	step_sounds = list("human" = "erikafootsteps")
 
 /turf/open/indestructible/ground/outside/ruins/ex_act(severity, target)
 	contents_explosion(severity, target)

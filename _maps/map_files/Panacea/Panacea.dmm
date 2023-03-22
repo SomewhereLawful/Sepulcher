@@ -142,6 +142,10 @@
 "ft" = (
 /turf/open/indestructible/ground/outside/waste,
 /area/game/city)
+"fx" = (
+/obj/structure/simple_door/room,
+/turf/open/indestructible/ground/floor/lattice,
+/area/game/spawning/kommandant)
 "fz" = (
 /obj/item/flashlight/lantern,
 /turf/open/floor/f13{
@@ -453,6 +457,12 @@
 /obj/effect/mob_spawn/human/kommandant,
 /turf/open/indestructible/ground/floor/lattice,
 /area/game/spawning/kommandant)
+"nn" = (
+/obj/effect/turf_decal/line,
+/turf/open/indestructible/ground/floor/lattice{
+	icon_state = "lattice_new14"
+	},
+/area/game/spawning/prole)
 "np" = (
 /obj/machinery/light/small,
 /turf/open/floor/f13{
@@ -1953,9 +1963,7 @@
 	},
 /area/game/spawning/bioslave)
 "WP" = (
-/obj/machinery/microwave/stove{
-	icon_state = "stoveb"
-	},
+/obj/structure/grill,
 /turf/open/floor/f13{
 	tag = "icon-bluedirtychess2";
 	icon_state = "bluedirtychess2"
@@ -2014,9 +2022,7 @@
 /turf/open/indestructible/ground/floor/wood_floor,
 /area/game/city/interior)
 "YI" = (
-/obj/machinery/microwave/stove{
-	icon_state = "stoveb"
-	},
+/obj/structure/grill,
 /turf/open/floor/f13{
 	tag = "icon-floorrusty";
 	icon_state = "floorrusty"
@@ -40179,7 +40185,7 @@ Yn
 Yn
 sm
 sm
-sm
+fx
 sm
 sm
 qs
@@ -41207,7 +41213,7 @@ Yn
 Yn
 sm
 sm
-sm
+fx
 sm
 sm
 qs
@@ -43561,7 +43567,7 @@ Vy
 bg
 wN
 Yw
-wN
+nn
 da
 da
 da
@@ -43818,7 +43824,7 @@ Vy
 yS
 pM
 Yw
-wN
+nn
 da
 da
 da
@@ -44075,7 +44081,7 @@ Vy
 bg
 wN
 Yw
-wN
+nn
 da
 da
 da

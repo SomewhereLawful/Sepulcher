@@ -47,6 +47,21 @@
 	flavour_text = ""
 	assignedrole = "Bourgeoise"
 
+/obj/effect/mob_spawn/human/cleanser
+	name = "sterile cleancasket"
+	desc = "Regenerates Cleansers, to ensure the health of the masses."
+	icon = 'icons/obj/spawners.dmi'
+	icon_state = "prole"
+	density = TRUE
+	permanent = TRUE
+	roundstart = FALSE
+	death = FALSE
+	uses = -1
+	mob_species = /datum/species/proletariat
+	flavour_text = ""
+	assignedrole = "Cleanser"
+	outfit = /datum/outfit/city/cleanser
+
 /obj/effect/mob_spawn/human/kommandant
 	name = "kommandant casket"
 	desc = "Broken saintly flesh goes here to be reformed."
@@ -61,17 +76,11 @@
 	mob_species = /datum/species/kommandant
 	flavour_text = ""
 	assignedrole = "Kommandant"
-
-	head = /obj/item/clothing/head/kommandant
-	mask = /obj/item/clothing/mask/gas/kommandant
-	uniform = /obj/item/clothing/under/kommandant
-	shoes = /obj/item/clothing/shoes/kommandant
-	suit = /obj/item/clothing/suit/armor/kommandant
-	gloves = /obj/item/clothing/gloves/kommandant
+	outfit = /datum/outfit/city/kommandant
 
 // Testing spawners
 /obj/effect/mob_spawn/human/vagrant
-	name = "scvm burthr"
+	name = "scvm birther"
 	desc = "Births Vagrants."
 	icon = 'icons/obj/spawners.dmi'
 	icon_state = "prole"
