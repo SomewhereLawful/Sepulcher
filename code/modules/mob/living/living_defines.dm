@@ -18,8 +18,8 @@
 	var/will = 100 	//A mob's will
 
 	//Hunger - Slowly lowers with time, at zero hunger maxHealth lowers until it reaches zero.
-	var/maxHunger = 600 //Maximum hunger that should be possible.
-	var/hunger = 600 	//A mob's hunger
+	var/maxHunger = 1000 //Maximum hunger that should be possible.
+	var/hunger = 1000 	//A mob's hunger
 
 	//Toxicity - Unlike other stats, you want this at zero. At certain thresholds, begins to tick health damage.
 	var/maxToxicity = 100 // Don't fuck with this, as threshold for toxicity is set with hard numbers.

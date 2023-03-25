@@ -84,7 +84,7 @@
 		
 //Handle ingestion of the item.
 		playsound(M.loc, eat_sound, rand(10,50), 1)
-		M.adjustHunger(feed_points *= 6)
+		M.adjustHunger(feed_points *= 10)
 		M.adjustWill(will_points)
 		M.adjustToxicity(toxicity_points)
 		SEND_SIGNAL(src, COMSIG_FOOD_EATEN, M, user)

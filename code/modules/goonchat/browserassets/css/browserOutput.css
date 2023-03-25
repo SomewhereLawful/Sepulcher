@@ -7,11 +7,11 @@ html, body {
 	padding: 0;
 	margin: 0;
 	height: 100%;
-	color: #000000;
+	color: #117c28;
 }
 body {
-	background: #fff8e8;
-    font-family: Verdana, sans-serif;
+	background: #0f0f0f;
+    font-family: Courier, monospace;
     font-size: 9pt;
     line-height: 1.2;
 	overflow-x: hidden;
@@ -256,7 +256,7 @@ a.popt {text-decoration: none;}
 .highlight {background: yellow;}
 
 h1, h2, h3, h4, h5, h6	{color: #0000ff;font-family: Georgia, Verdana, sans-serif;}
-h1.alert, h2.alert		{color: #000000;}
+h1.alert, h2.alert		{color: #DAAA18;}
 
 em						{font-style: normal;	font-weight: bold;}
 
@@ -271,7 +271,17 @@ em						{font-style: normal;	font-weight: bold;}
 .name					{					font-weight: bold;}
 
 .say					{}
-.deadsay				{color: #5c00e6;}
+/* Sepulcher Colors, based on MUSHClient ANSI colors - Minus black*/
+.red				{color: #960000;}
+.green				{color: #117c28;}
+.yellow				{color: #DAAA18;}
+.blue				{color: #0000CC;}
+.magenta			{color: #FF00FF;}
+.cyan				{color: #00FFFF;}
+.white				{color: #ffffff;}
+
+/* SS13 basic */
+.deadsay				{color: #5e2d79;}
 .binarysay    			{color: #20c20e; background-color: #000000; display: block;}
 .binarysay a  			{color: #00ff00;}
 .binarysay a:active, .binarysay a:visited {color: #88ff88;}
@@ -298,7 +308,7 @@ em						{font-style: normal;	font-weight: bold;}
 .yell					{					font-weight: bold;}
 
 .alert					{color: #ff0000;}
-h1.alert, h2.alert		{color: #000000;}
+h1.alert, h2.alert		{color: #DAAA18;}
 
 .emote					{					font-style: italic;}
 .selecteddna			{color: #ffffff; 	background-color: #001B1B}
@@ -307,22 +317,21 @@ h1.alert, h2.alert		{color: #000000;}
 .disarm					{color: #990000;}
 .passive				{color: #660000;}
 
-.userdanger				{color: #ff0000;	font-weight: bold; font-size: 24px;}
-.danger					{color: #ff0000;}
-.warning				{color: #ff0000;	font-style: italic;}
-.boldwarning			{color: #ff0000;	font-style: italic;	font-weight: bold}
+.userdanger				{color: #960000;	font-weight: bold; font-size: 24px;}
+.danger					{color: #960000;}
+.warning				{color: #960000;	font-style: italic;}
+.boldwarning			{color: #960000;	font-style: italic;	font-weight: bold}
 .announce 				{color: #228b22;	font-weight: bold;}
-.boldannounce			{color: #ff0000;	font-weight: bold;}
+.boldannounce			{color: #960000;	font-weight: bold;}
 .greenannounce			{color: #00ff00;	font-weight: bold;}
 .rose					{color: #ff5050;}
 .info					{color: #0000CC;}
 .notice					{color: #000099;}
-.boldnotice				{color: #000099;	font-weight: bold;}
-.adminnotice			{color: #0000ff;}
+.boldnotice				{color: #11ff00;	font-weight: bold;}
+.adminnotice			{color: #11ff00;}
 .adminhelp              {color: #ff0000;    font-weight: bold;}
 .unconscious			{color: #0000ff;	font-weight: bold;}
 .suicide				{color: #ff5050;	font-style: italic;}
-.green					{color: #03ff39;}
 .nicegreen					{color: #14a833;}
 .shadowling				{color: #3b2769;}
 .cult					{color: #960000;}
