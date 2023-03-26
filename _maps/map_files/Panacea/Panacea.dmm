@@ -592,6 +592,10 @@
 	icon_state = "floorrusty"
 	},
 /area/game/foundry)
+"pJ" = (
+/obj/structure/decor/spawner_part/bougie/left,
+/turf/open/indestructible/ground/floor/lattice,
+/area/game/spawning/bougie)
 "pM" = (
 /obj/structure/decor/carpet{
 	icon_state = "oldcovertattered"
@@ -617,6 +621,10 @@
 /obj/structure/chair/wood/normal,
 /turf/open/floor/carpet,
 /area/game/spawning/kommandant)
+"qj" = (
+/obj/structure/decor/spawner_part/bougie/right,
+/turf/open/indestructible/ground/floor/lattice,
+/area/game/spawning/bougie)
 "qs" = (
 /turf/open/indestructible/ground/floor/wood_floor,
 /area/game/spawning/kommandant)
@@ -1071,6 +1079,7 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
+/obj/structure/decor/spawner_part/prole/left,
 /turf/open/indestructible/ground/floor/lattice,
 /area/game/spawning/prole)
 "yU" = (
@@ -1629,6 +1638,10 @@
 	},
 /turf/open/indestructible/ground/floor/wood_floor,
 /area/game/city/interior)
+"MT" = (
+/obj/structure/decor/spawner_part/prole/right,
+/turf/open/indestructible/ground/floor/lattice,
+/area/game/spawning/prole)
 "Na" = (
 /obj/effect/turf_decal/line{
 	dir = 4
@@ -26810,7 +26823,7 @@ ic
 ic
 ic
 pu
-PJ
+pJ
 EI
 LQ
 EI
@@ -27067,7 +27080,7 @@ ic
 ic
 ic
 pu
-LQ
+PJ
 EI
 LQ
 EI
@@ -27324,7 +27337,7 @@ ic
 ic
 ic
 pu
-PJ
+qj
 EI
 LQ
 EI
@@ -43564,7 +43577,7 @@ BH
 Ut
 ic
 Vy
-bg
+yS
 wN
 Yw
 nn
@@ -43821,7 +43834,7 @@ Ut
 Ut
 ic
 Vy
-yS
+bg
 pM
 Yw
 nn
@@ -44078,7 +44091,7 @@ uI
 ic
 ic
 Vy
-bg
+MT
 wN
 Yw
 nn

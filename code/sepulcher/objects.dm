@@ -95,6 +95,27 @@
 	icon_state = "churchfence"
 	cuttable= FALSE
 
+// Used in Spawners, to ellicit the larger than 1x1 look
+/obj/structure/decor/spawner_part
+	icon = 'icons/obj/spawners.dmi'
+
+/obj/structure/decor/spawner_part/prole/left
+	name = "Birth-Blood Reservoir"
+	icon_state = "prole_left"
+
+/obj/structure/decor/spawner_part/prole/right
+	name = "Control Panel"
+	icon_state = "prole_right"
+
+/obj/structure/decor/spawner_part/bougie/left
+	name = "Enlightenment Machine"
+	icon_state = "bougie_left"
+
+/obj/structure/decor/spawner_part/bougie/right
+	name = "Vitalizing Percolator"
+	icon_state = "bougie_right"
+
+// statues
 /obj/structure/fluff/plaza_statue
 	name = "Statue of the Warder"
 	desc = "He stands a vigil over this accursed city\nHe waits for us, our mission to persist\nMay he come bearing panacea to our sins"

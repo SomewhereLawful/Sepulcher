@@ -15,7 +15,7 @@
 	/// Used for flavortext in eating /attack
 	var/eatverb
 	/// Sound when the food is eaten
-	var/sound/eat_sound = 'sound/items/food_crunchy_1.ogg'
+	var/eat_sound = 'sound/items/food_crunchy_1.ogg'
 	/// Use sparingly. Determines what item is generated upon total consumption of the food.
 	var/trash = null
 	var/cooked_item = null

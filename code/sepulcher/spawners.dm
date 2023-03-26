@@ -32,12 +32,13 @@
 	mob_species = /datum/species/proletariat
 	flavour_text = ""
 	assignedrole = "Proletariat"
+	spawn_sound = 'sound/effects/machine_done.ogg'
 
 /obj/effect/mob_spawn/human/bougie
 	name = "embraced birth casket"
 	desc = "Reforms Bourgeoise, those without taint of body."
 	icon = 'icons/obj/spawners.dmi'
-	icon_state = "prole"
+	icon_state = "bougie"
 	density = TRUE
 	permanent = TRUE
 	roundstart = FALSE
@@ -46,6 +47,7 @@
 	mob_species = /datum/species/human
 	flavour_text = ""
 	assignedrole = "Bourgeoise"
+	spawn_sound = 'sound/effects/machine_done2.ogg'
 
 /obj/effect/mob_spawn/human/cleanser
 	name = "sterile cleancasket"
@@ -83,7 +85,7 @@
 	name = "scvm birther"
 	desc = "Births Vagrants."
 	icon = 'icons/obj/spawners.dmi'
-	icon_state = "prole"
+	icon_state = "bioslave"
 	density = TRUE
 	permanent = TRUE
 	roundstart = FALSE
