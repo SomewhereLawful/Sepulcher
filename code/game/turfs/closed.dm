@@ -56,12 +56,12 @@
 	var/atom/movable/fullDark
 	bullet_bounce_sound = null
 	name = "Sepulcher"
-	desc = "A dying dream, dragging souls from aetherium back to a dead world for sins long forgotten..."
+	desc = "A dying dream dragging souls from aetherium, a dead world for sins long forgotten..."
 	layer = FLY_LAYER
 
 /turf/closed/indestructible/splashscreen/New()
 	icon = 'icons/misc/splashscreen.dmi'
-	icon_state = "title[rand(1,6)]"
+	icon_state = "title[rand(1,7)]"
 
 	src.fullDark = new/atom/movable{
 		icon = 'icons/misc/splashscreen.dmi' //Replace with actual icon

@@ -27,6 +27,7 @@
 	w_class = WEIGHT_CLASS_BULKY
 	attack_verb = list("chopped", "slashed", "sliced")
 	hitsound = 'sound/weapons/machetehit.ogg'
+	sharpness = IS_SHARP
 
 /obj/item/melee/knife
 	name = "combat knife"
@@ -42,3 +43,4 @@
 	w_class = WEIGHT_CLASS_SMALL
 	attack_verb = list("stabbed", "slashed", "sliced")
 	hitsound = 'sound/weapons/machetehit.ogg'
+	sharpness = IS_SHARP
