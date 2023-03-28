@@ -7,6 +7,7 @@
 	desc = "fucked up"
 	icon = 'icons/obj/food.dmi'
 	icon_state = "broken"
+	/// Percentage of total hunger given when eaten
 	var/feed_points = 0
 	/// How much will is given
 	var/will_points = 0
@@ -84,7 +85,7 @@
 		
 //Handle ingestion of the item.
 		playsound(M.loc, eat_sound, rand(10,50), 1)
-		M.adjustHunger(feed_points *= 10)
+		M.adjustHunger(feed_points *= 10) // It just works
 		M.adjustWill(will_points)
 		M.adjustToxicity(toxicity_points)
 		SEND_SIGNAL(src, COMSIG_FOOD_EATEN, M, user)

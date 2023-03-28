@@ -26,7 +26,7 @@
 	var/assignedrole
 	var/show_flavour = TRUE
 	var/banType = "lavaland"
-	var/spawn_sound = 'sound/machines/ping.ogg'
+	var/spawn_sound = 'sound/misc/null.ogg'
 	var/last_sound = 0
 
 //ATTACK GHOST IGNORING PARENT RETURN VALUE

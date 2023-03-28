@@ -126,6 +126,13 @@
 	icon_state = "floorrusty"
 	},
 /area/game/spawning/bougie)
+"eG" = (
+/obj/item/melee/machete,
+/turf/open/floor/f13{
+	tag = "icon-floorrusty";
+	icon_state = "floorrustysolid"
+	},
+/area/game/spawning/bioslave)
 "eT" = (
 /turf/open/indestructible/ground/outside/water/knee_high,
 /area/game/city/interior)
@@ -657,6 +664,13 @@
 	},
 /turf/open/indestructible/ground/floor/wood_floor,
 /area/game/city/interior)
+"rg" = (
+/obj/item/melee/pipe,
+/turf/open/floor/f13{
+	tag = "icon-floorrusty";
+	icon_state = "floorrustysolid"
+	},
+/area/game/spawning/bioslave)
 "rZ" = (
 /obj/effect/decal/waste{
 	tag = "icon-goo12";
@@ -779,6 +793,13 @@
 "tQ" = (
 /turf/open/indestructible/ground/outside/sidewalk,
 /area/game/city/interior)
+"tT" = (
+/obj/item/melee/knife,
+/turf/open/floor/f13{
+	tag = "icon-floorrusty";
+	icon_state = "floorrustysolid"
+	},
+/area/game/spawning/bioslave)
 "ua" = (
 /obj/effect/decal/cleanable/blood/tracks,
 /turf/open/floor/f13{
@@ -28937,8 +28958,8 @@ EV
 EV
 Ln
 DZ
-EV
-EV
+tT
+rg
 DZ
 AO
 EV
@@ -29194,7 +29215,7 @@ Gj
 EV
 Ln
 qN
-EV
+eG
 EV
 qN
 AO
