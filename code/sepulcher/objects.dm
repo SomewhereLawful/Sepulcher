@@ -41,6 +41,11 @@
 /obj/structure/decor/dump_bin/red/full
 	icon_state = "yashik_musor_red_full"
 
+/obj/structure/decor/foundry
+	name = "steel bucket"
+	desc = "capable of holding liquid steel - withstanding the foundry maw heat. Yet, this is broken and incapable of moving."
+	icon_state = "steel_bucket"
+
 /obj/structure/decor/apc
 	name = "broken panel"
 	icon_state = "apc1"
