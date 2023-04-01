@@ -150,6 +150,10 @@
 "eY" = (
 /turf/closed/wall/bricks_white,
 /area/game/spawning/bioslave)
+"ff" = (
+/obj/structure/foundry/steel_bucket,
+/turf/open/chasm/foundry,
+/area/game/foundry)
 "ft" = (
 /turf/open/indestructible/ground/outside/waste,
 /area/game/city)
@@ -343,6 +347,13 @@
 	},
 /turf/open/indestructible/ground/outside/sidewalk/stairs,
 /area/game/city)
+"ja" = (
+/obj/machinery/conveyor_switch/oneway,
+/turf/open/floor/f13{
+	tag = "icon-floorrusty";
+	icon_state = "floorrusty"
+	},
+/area/game/foundry)
 "jj" = (
 /obj/machinery/light,
 /turf/open/floor/f13{
@@ -383,6 +394,12 @@
 	icon_state = "floorrusty"
 	},
 /area/game/train_yard)
+"kn" = (
+/obj/structure/lattice/catwalk{
+	icon_state = "catwalk15-12"
+	},
+/turf/open/foundry,
+/area/game/foundry)
 "kJ" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -747,6 +764,12 @@
 	icon_state = "floorrusty"
 	},
 /area/game/foundry)
+"tj" = (
+/obj/structure/lattice/catwalk{
+	icon_state = "catwalk8-0"
+	},
+/turf/open/chasm/foundry,
+/area/game/foundry)
 "tp" = (
 /obj/effect/turf_decal/line{
 	dir = 1
@@ -875,6 +898,13 @@
 	icon_state = "floorrusty"
 	},
 /area/game/foundry)
+"vo" = (
+/obj/structure/lattice/catwalk{
+	icon_state = "catwalk12-0"
+	},
+/obj/structure/foundry/mould,
+/turf/open/foundry,
+/area/game/foundry)
 "vq" = (
 /obj/structure/campfire/drum,
 /turf/open/floor/f13{
@@ -894,6 +924,12 @@
 	},
 /turf/open/indestructible/ground/floor/lattice,
 /area/game/spawning/bougie)
+"vv" = (
+/obj/structure/lattice/catwalk{
+	icon_state = "catwalk4-0"
+	},
+/turf/open/chasm/foundry,
+/area/game/foundry)
 "vB" = (
 /obj/structure/lattice/catwalk{
 	icon_state = "catwalk10-8"
@@ -1732,6 +1768,12 @@
 	},
 /turf/open/indestructible/ground/floor/wood_floor,
 /area/game/city/interior)
+"Qf" = (
+/obj/structure/lattice/catwalk{
+	icon_state = "catwalk12-0"
+	},
+/turf/open/chasm/foundry,
+/area/game/foundry)
 "Qs" = (
 /turf/open/floor/f13{
 	tag = "icon-floorrusty";
@@ -1835,6 +1877,10 @@
 	},
 /turf/open/indestructible/ground/floor/wood_floor,
 /area/game/city/interior)
+"Tc" = (
+/obj/structure/decor/candle,
+/turf/open/indestructible/ground/floor/lattice,
+/area/game/spawning/kommandant)
 "Ti" = (
 /turf/open/indestructible/ground/outside/road,
 /area/game/spawning/bioslave)
@@ -1891,6 +1937,12 @@
 /obj/structure/shitheap,
 /turf/open/indestructible/ground/outside/dirt,
 /area/game/city)
+"US" = (
+/obj/structure/lattice/catwalk{
+	icon_state = "catwalk15-3"
+	},
+/turf/open/foundry,
+/area/game/foundry)
 "UX" = (
 /obj/effect/turf_decal/roadline/noshadow{
 	dir = 9
@@ -2019,6 +2071,12 @@
 "Yw" = (
 /turf/open/indestructible/ground/floor/lattice,
 /area/game/spawning/prole)
+"YD" = (
+/obj/structure/decor/candle,
+/turf/open/indestructible/ground/floor/lattice{
+	icon_state = "lattice_new14"
+	},
+/area/game/spawning/kommandant)
 "YE" = (
 /obj/effect/turf_decal/line{
 	dir = 4
@@ -24573,7 +24631,7 @@ ic
 NV
 yi
 vB
-mH
+kn
 mH
 mH
 mH
@@ -24830,12 +24888,12 @@ ic
 NV
 yi
 Hd
+Qf
+ff
 Hd
 Hd
 Hd
-Hd
-Hd
-fP
+vo
 yi
 yi
 yi
@@ -25087,12 +25145,12 @@ ic
 NV
 yi
 Hd
+Qf
 Hd
 Hd
 Hd
 Hd
-Hd
-fP
+vo
 yi
 yi
 td
@@ -25344,9 +25402,9 @@ ic
 NV
 yi
 Hd
+Qf
 Hd
-Hd
-Hd
+vv
 Hd
 Hd
 fP
@@ -25601,9 +25659,9 @@ ic
 NV
 yi
 Hd
+tj
 Hd
-Hd
-Hd
+tj
 Hd
 Hd
 Ua
@@ -25859,7 +25917,7 @@ NV
 oI
 yi
 yi
-yi
+ja
 yi
 yi
 yi
@@ -26373,7 +26431,7 @@ NV
 oI
 yi
 yi
-yi
+ja
 yi
 yi
 yi
@@ -26629,9 +26687,9 @@ ic
 NV
 yi
 Hd
+vv
 Hd
-Hd
-Hd
+vv
 Hd
 Hd
 Fc
@@ -26886,12 +26944,12 @@ ic
 NV
 yi
 Hd
+Qf
+Hd
+tj
 Hd
 Hd
-Hd
-Hd
-Hd
-fP
+vo
 yi
 yi
 yi
@@ -27143,12 +27201,12 @@ ic
 NV
 yi
 Hd
+Qf
+ff
 Hd
 Hd
 Hd
-Hd
-Hd
-fP
+vo
 yi
 yi
 yi
@@ -27400,7 +27458,7 @@ ic
 NV
 yi
 zu
-HE
+US
 HE
 HE
 HE
@@ -40448,7 +40506,7 @@ sm
 sm
 sm
 Yn
-sm
+Tc
 sm
 Bf
 sS
@@ -40964,7 +41022,7 @@ sm
 Yn
 sm
 sm
-Bf
+YD
 sS
 sS
 sS

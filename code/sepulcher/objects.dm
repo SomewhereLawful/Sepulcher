@@ -43,7 +43,7 @@
 
 /obj/structure/decor/foundry
 	name = "steel bucket"
-	desc = "capable of holding liquid steel - withstanding the foundry maw heat. Yet, this is broken and incapable of moving."
+	desc = "Capable of holding liquid steel - withstanding the foundry maw heat. Yet, this is broken and incapable of moving."
 	icon_state = "steel_bucket"
 
 /obj/structure/decor/apc
@@ -91,7 +91,7 @@
 
 /obj/structure/decor/candle
 	name = "candles"
-	icon_state = "cover"
+	icon_state = "candle"
 	density = 0
 
 /obj/structure/fence/church

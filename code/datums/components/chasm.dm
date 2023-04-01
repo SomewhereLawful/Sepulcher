@@ -20,7 +20,8 @@
 		/obj/effect/light_emitter/tendril,
 		/obj/effect/collapse,
 		/obj/effect/particle_effect/ion_trails,
-		/obj/structure/decor/foundry
+		/obj/structure/decor/foundry,
+		/obj/structure/foundry
 		))
 
 /datum/component/chasm/Initialize(turf/target)
