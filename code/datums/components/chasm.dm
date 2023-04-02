@@ -2,7 +2,7 @@
 /datum/component/chasm
 	var/turf/target_turf
 	var/fall_message = "GAH! Ah... where are you?"
-	var/oblivion_message = "You fall into the foundry pit maw. Your body vaporizes instantly, nothing to be recovered."
+	var/oblivion_message = "You fall into the foundry pit maw. Your body vaporizes instantly, swallowed whole."
 
 	var/static/list/falling_atoms = list() // Atoms currently falling into chasms
 	var/static/list/forbidden_types = typecacheof(list(

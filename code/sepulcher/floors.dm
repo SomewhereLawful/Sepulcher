@@ -85,10 +85,10 @@
 	light_range = 1.9
 	light_power = 1
 	light_color = "#FAECCF"
-
+	
 /turf/open/foundry // Fake chasm for foundry catwalks
 	name = "foundry pit"
-	desc = "It hungers for scrap metal. Watch your step, it'd be a waste of meat."
+	desc = "It hungers for scrap metal. Watch your step."
 	planetary_atmos = TRUE
 	smooth = SMOOTH_FALSE
 	icon_state = "foundry"
