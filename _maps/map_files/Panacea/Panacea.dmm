@@ -764,12 +764,6 @@
 	icon_state = "floorrusty"
 	},
 /area/game/foundry)
-"tj" = (
-/obj/structure/lattice/catwalk{
-	icon_state = "catwalk8-0"
-	},
-/turf/open/chasm/foundry,
-/area/game/foundry)
 "tp" = (
 /obj/effect/turf_decal/line{
 	dir = 1
@@ -924,12 +918,6 @@
 	},
 /turf/open/indestructible/ground/floor/lattice,
 /area/game/spawning/bougie)
-"vv" = (
-/obj/structure/lattice/catwalk{
-	icon_state = "catwalk4-0"
-	},
-/turf/open/chasm/foundry,
-/area/game/foundry)
 "vB" = (
 /obj/structure/lattice/catwalk{
 	icon_state = "catwalk10-8"
@@ -1768,12 +1756,6 @@
 	},
 /turf/open/indestructible/ground/floor/wood_floor,
 /area/game/city/interior)
-"Qf" = (
-/obj/structure/lattice/catwalk{
-	icon_state = "catwalk12-0"
-	},
-/turf/open/chasm/foundry,
-/area/game/foundry)
 "Qs" = (
 /turf/open/floor/f13{
 	tag = "icon-floorrusty";
@@ -24888,7 +24870,7 @@ ic
 NV
 yi
 Hd
-Qf
+fP
 ff
 Hd
 Hd
@@ -25145,7 +25127,7 @@ ic
 NV
 yi
 Hd
-Qf
+fP
 Hd
 Hd
 Hd
@@ -25402,9 +25384,9 @@ ic
 NV
 yi
 Hd
-Qf
+fP
 Hd
-vv
+Fc
 Hd
 Hd
 fP
@@ -25659,9 +25641,9 @@ ic
 NV
 yi
 Hd
-tj
+Ua
 Hd
-tj
+Ua
 Hd
 Hd
 Ua
@@ -26687,9 +26669,9 @@ ic
 NV
 yi
 Hd
-vv
+Fc
 Hd
-vv
+Fc
 Hd
 Hd
 Fc
@@ -26944,9 +26926,9 @@ ic
 NV
 yi
 Hd
-Qf
+fP
 Hd
-tj
+Ua
 Hd
 Hd
 vo
@@ -27201,7 +27183,7 @@ ic
 NV
 yi
 Hd
-Qf
+fP
 ff
 Hd
 Hd
