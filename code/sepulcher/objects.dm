@@ -1,6 +1,11 @@
 // Sepulcher objects //
 // This is effectively a dump file until it's safe to sort into specific files //
 
+/obj/structure/closet/crate/dumpster
+	name = "dumpster"
+	desc = null
+	icon_state = "dumpster"
+
 /obj/structure/campfire/drum
 	name = "firepit"
 	desc = "A beacon of warmth. Huddle around when the air goes frigid."
@@ -93,6 +98,9 @@
 	name = "candles"
 	icon_state = "candle"
 	density = 0
+	light_color = LIGHT_COLOR_TUNGSTEN
+	light_power = 1
+	light_range = 2
 
 /obj/structure/fence/church
 	name = "wrought iron fence"

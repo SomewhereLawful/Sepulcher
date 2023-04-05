@@ -1,5 +1,6 @@
 /obj/item/melee
 	item_flags = NEEDS_PERMIT
+	icon = 'icons/obj/weapons/melee.dmi'
 
 /obj/item/melee/proc/check_martial_counter(mob/living/carbon/human/target, mob/living/carbon/human/user)
 	if(target.check_block())
