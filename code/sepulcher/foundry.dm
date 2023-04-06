@@ -22,6 +22,12 @@
 	var/filling = FALSE
 	var/list/allowed_turfs = list(/turf/open/chasm/foundry,/turf/open/foundry)
 
+/obj/structure/foundry/steel_bucket/Move(newloc, direct)
+	if(!isturf(newloc) ||  moving_diagonally || get_dist(get_step(src,dir),get_turf(src)) > 1)
+		return 0
+	else
+		return ..()
+
 /obj/structure/foundry/steel_bucket/examine(mob/user)
 	..()
 	to_chat(user, "<span class='red'>A chain hangs from the side, allowing you to pull it to the molds. Go slowly.</span>")

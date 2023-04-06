@@ -6,6 +6,28 @@
 	desc = null
 	icon_state = "dumpster"
 
+/obj/structure/chair/pew
+	name = "pew"
+	icon_state = "bleacher"
+
+/obj/structure/chair/pew/left
+	icon_state = "bleacher_l"
+
+/obj/structure/chair/pew/right
+	icon_state = "bleacher_r"
+
+/obj/structure/table/stalker
+	name = "table"
+	desc = "A square piece of metal standing on four metal legs. It can not move."
+	icon = 'icons/obj/smooth_structures/stol_stalker.dmi'
+	icon_state = "stol"
+
+/obj/structure/table/bar
+	name = "table"
+	desc = "A square piece of metal standing on four metal legs. It can not move."
+	icon = 'icons/obj/smooth_structures/stol_stalker_bar.dmi'
+	icon_state = "bar"
+
 /obj/structure/campfire/drum
 	name = "firepit"
 	desc = "A beacon of warmth. Huddle around when the air goes frigid."
@@ -25,8 +47,8 @@
 // Decorative objects
 /obj/structure/decor
 	icon = 'icons/sepulcher/decor.dmi'
-	density = 1
-	anchored = 1
+	density = TRUE
+	anchored = TRUE
 	layer = OBJ_LAYER
 
 /obj/structure/decor/spool
@@ -79,6 +101,30 @@
 	if(icon_state == "shina1")
 		icon_state = "shina[rand(1,5)]"
 	..()
+
+/obj/structure/decor/grave
+	name = "grave"
+	desc = "Inscribed with unreadable text. The home of those who escaped this torment."
+	icon_state = "grave1"
+	density = FALSE
+
+/obj/structure/decor/grave/New()
+	if(icon_state == "grave1")
+		icon_state = "grave[rand(1,3)]"
+	..()
+
+/obj/structure/decor/iconostasis
+	name = "iconostasis"
+	icon_state = "deacon_door"
+	density = FALSE
+
+/obj/structure/decor/iconostasis/left
+	icon_state = "iconostasis_l"
+	density = TRUE
+
+/obj/structure/decor/iconostasis/right
+	icon_state = "iconostasis_r"
+	density = TRUE
 
 // decor objects with their own icon files
 /obj/structure/decor/carpet
