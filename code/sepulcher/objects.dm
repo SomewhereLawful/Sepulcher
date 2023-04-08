@@ -142,11 +142,16 @@
 
 /obj/structure/decor/candle
 	name = "candles"
-	icon_state = "candle"
+	icon_state = "candle1"
 	density = 0
 	light_color = LIGHT_COLOR_TUNGSTEN
 	light_power = 1
 	light_range = 2
+
+/obj/structure/decor/candle/New()
+	if(icon_state == "candle1")
+		icon_state = "candle[rand(1,3)]"
+	..()
 
 /obj/structure/fence/church
 	name = "wrought iron fence"
