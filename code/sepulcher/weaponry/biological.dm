@@ -4,7 +4,7 @@
 /obj/item/melee/festering_hand
 	name = "festering hand"
 	desc = "Rotted degits, gushing with toxicity."
-	icon_state = "fleshtostone"
+	icon_state = "knife"
 	item_state = "pipe"
 	lefthand_file = 'icons/mob/inhands/weapons/melee_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/melee_righthand.dmi'

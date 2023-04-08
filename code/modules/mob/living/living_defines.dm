@@ -31,7 +31,10 @@
 	var/toxloss = 0		//Toxic damage caused by being poisoned or radiated
 	var/fireloss = 0	//Burn damage caused by being way too hot, too cold or burnt.
 	var/cloneloss = 0	//Damage caused by being cloned or ejected from the cloner early. slimes also deal cloneloss damage to victims
-	var/staminaloss = 0		//Stamina damage, or exhaustion. You recover it slowly naturally, and are knocked down if it gets too high. Holodeck and hallucinations deal this.
+	var/staminaloss = 0	//Stamina damage, or exhaustion. You recover it slowly naturally, and are knocked down if it gets too high. Holodeck and hallucinations deal this.
+	var/willloss = 0	//Will damage, or sanity. Affects movement speed, affliction at zero. Dealt by certain weapons and exposure to various traumatic events.
+	var/toxicitygain = 0//Toxicity damage, handled inversely. At certain thresholds, starts lowering health. Dealt by various foods, touching dirty things, etc.
+
 
 	var/confused = 0	//Makes the mob move in random directions.
 

@@ -2,38 +2,22 @@
 /mob/living/proc/getHealth()
 	return health
 
-/mob/living/proc/adjustHealth_stat(amount, updating_health = TRUE, forced = FALSE)
-	if(!forced && (status_flags & GODMODE))
-		return FALSE
-	health = CLAMP((health + (amount)), 0, maxHealth)
-	if(updating_health)
-		updatehealth()
-	return amount
-
-/mob/living/proc/setHealth(amount, updating_health = TRUE, forced = FALSE)
-	if(status_flags & GODMODE)
-		return 0
-	health = amount
-	if(updating_health)
-		updatehealth()
-	return amount
-
 // Will Procs
-/mob/living/proc/getWill()
-	return will
+/mob/living/proc/getWillLoss()
+	return willloss
 
-/mob/living/proc/adjustWill(amount, updating_will = TRUE, forced = FALSE)
+/mob/living/proc/adjustWillLoss(amount, updating_will = TRUE, forced = FALSE)
 	if(!forced && (status_flags & GODMODE))
 		return FALSE
-	will = CLAMP((will + (amount)), 0, maxWill)
+	willloss = CLAMP((willloss + (amount)), 0, maxWill)
 	if(updating_will)
 		updatewill()
 	return amount
 
-/mob/living/proc/setWill(amount, updating_will = TRUE, forced = FALSE)
+/mob/living/proc/setWillLoss(amount, updating_will = TRUE, forced = FALSE)
 	if(status_flags & GODMODE)
 		return 0
-	will = amount
+	willloss = amount
 	if(updating_will)
 		updatewill()
 	return amount
@@ -59,21 +43,21 @@
 	return amount
 
 // Toxicity procs
-/mob/living/proc/getToxicity()
-	return toxicity
+/mob/living/proc/getToxicityGain()
+	return toxicitygain
 
-/mob/living/proc/adjustToxicity(amount, updating_toxicity = TRUE, forced = FALSE)
+/mob/living/proc/adjustToxicityGain(amount, updating_toxicity = TRUE, forced = FALSE)
 	if(!forced && (status_flags & GODMODE))
 		return FALSE
-	toxicity = CLAMP((toxicity + (amount)), 0, maxToxicity)
+	toxicitygain = CLAMP((toxicitygain + (amount)), 0, maxToxicity)
 	if(updating_toxicity)
 		updatetoxicity()
 	return amount
 
-/mob/living/proc/setToxicity(amount, updating_toxicity = TRUE, forced = FALSE)
+/mob/living/proc/setToxicityGain(amount, updating_toxicity = TRUE, forced = FALSE)
 	if(status_flags & GODMODE)
 		return 0
-	toxicity = amount
+	toxicitygain = amount
 	if(updating_toxicity)
 		updatetoxicity()
 	return amount
