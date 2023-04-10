@@ -754,7 +754,7 @@
 /area/game/spawning/kommandant)
 "tb" = (
 /obj/structure/table,
-/obj/item/gun/ballistic/revolver/nagant/tuberculosis,
+/obj/item/gun/ballistic/automatic/pistol/tt_38,
 /turf/open/floor/f13{
 	tag = "icon-floorrusty";
 	icon_state = "floorrusty"
