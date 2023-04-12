@@ -13,7 +13,15 @@ SUBSYSTEM_DEF(job)
 	var/list/prioritized_jobs = list()
 	var/list/latejoin_trackers = list()	//Don't read this list, use GetLateJoinTurfs() instead
 
-	var/overflow_role = "Wastelander" //CHANGE
+	// Sepulcher addition - ripped off from Stalker-13
+	var/list/latejoin_bioslave = list()
+	var/list/latejoin_proletariat = list()
+	var/list/latejoin_bougie = list()
+	var/list/latejoin_kommandant = list()
+	var/list/latejoin_cleanser = list()
+	var/list/latejoin_vagrant = list()
+
+	var/overflow_role = "Vagrant"
 
 /datum/controller/subsystem/job/Initialize(timeofday)
 	if(!occupations.len)
@@ -558,13 +566,27 @@ SUBSYSTEM_DEF(job)
 			return
 	M.forceMove(get_turf(A))
 
-/datum/controller/subsystem/job/proc/SendToLateJoin(mob/M, buckle = TRUE)
+/datum/controller/subsystem/job/proc/SendToLateJoin(mob/M, buckle = TRUE, rank = null)
 	if(M.mind && M.mind.assigned_role && length(GLOB.jobspawn_overrides[M.mind.assigned_role])) //We're doing something special today.
 		SendToAtom(M,pick(GLOB.jobspawn_overrides[M.mind.assigned_role]),FALSE)
 		return
 
 	if(latejoin_trackers.len)
-		SendToAtom(M, pick(latejoin_trackers), buckle)
+		switch (rank)
+			if ("Bioslave")
+				SendToAtom(M, safepick(latejoin_bioslave), buckle)
+			if ("Proletariat")
+				SendToAtom(M, safepick(latejoin_proletariat), buckle)
+			if ("Bourgeoisie")
+				SendToAtom(M, safepick(latejoin_bougie), buckle)
+			if ("Kommandant")
+				SendToAtom(M, safepick(latejoin_kommandant), buckle)
+			if ("Cleanser")
+				SendToAtom(M, safepick(latejoin_cleanser), buckle)
+			if ("Vagrant")
+				SendToAtom(M, safepick(latejoin_vagrant), buckle)
+			else
+				SendToAtom(M, pick(latejoin_trackers), buckle)
 	else
 		//bad mojo
 		var/area/shuttle/arrival/A = locate() in GLOB.sortedAreas

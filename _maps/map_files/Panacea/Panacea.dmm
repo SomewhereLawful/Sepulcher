@@ -17,6 +17,13 @@
 /obj/structure/campfire/drum,
 /turf/open/indestructible/ground/outside/sidewalk/tile,
 /area/game/city)
+"aY" = (
+/obj/effect/landmark/latejoin/cleanser,
+/turf/open/floor/f13{
+	tag = "icon-floorrusty";
+	icon_state = "yellowdirtychess"
+	},
+/area/game/city/interior)
 "bg" = (
 /obj/effect/mob_spawn/human/prole,
 /turf/open/indestructible/ground/floor/lattice,
@@ -494,6 +501,10 @@
 /obj/effect/mob_spawn/human/kommandant,
 /turf/open/indestructible/ground/floor/lattice,
 /area/game/spawning/kommandant)
+"mR" = (
+/obj/effect/landmark/latejoin/vagrant,
+/turf/open/indestructible/ground/outside/desert,
+/area/game/city)
 "nn" = (
 /obj/effect/turf_decal/line,
 /turf/open/indestructible/ground/floor/lattice{
@@ -638,6 +649,7 @@
 /obj/structure/decor/carpet{
 	icon_state = "oldcovertattered"
 	},
+/obj/effect/landmark/latejoin/proletariat,
 /turf/open/indestructible/ground/floor/lattice{
 	icon_state = "lattice_new14"
 	},
@@ -1282,6 +1294,12 @@
 /obj/structure/flora/tree/tall,
 /turf/open/indestructible/ground/outside/desert,
 /area/game/city)
+"DM" = (
+/obj/effect/landmark/latejoin/bougie,
+/turf/open/indestructible/ground/floor/lattice{
+	icon_state = "lattice_new14"
+	},
+/area/game/spawning/bougie)
 "DZ" = (
 /obj/structure/simple_door/metal/barred,
 /turf/open/floor/f13{
@@ -1373,6 +1391,10 @@
 	icon_state = "yellowdirtyfull"
 	},
 /area/game/city/interior)
+"FR" = (
+/obj/effect/landmark/latejoin/kommandant,
+/turf/open/indestructible/ground/floor/lattice,
+/area/game/spawning/kommandant)
 "Gj" = (
 /obj/effect/mob_spawn/human/bioslave,
 /turf/open/floor/f13{
@@ -1735,6 +1757,13 @@
 "Pg" = (
 /obj/structure/sign/warning/biohazard,
 /turf/closed/wall/bricks_white,
+/area/game/spawning/bioslave)
+"Pi" = (
+/obj/effect/landmark/latejoin/bioslave,
+/turf/open/floor/f13{
+	tag = "icon-floorrusty";
+	icon_state = "floorrustysolid"
+	},
 /area/game/spawning/bioslave)
 "Pq" = (
 /turf/open/indestructible/ground/outside/sidewalk/tile,
@@ -25442,7 +25471,7 @@ zp
 zp
 zp
 zp
-zp
+mR
 zp
 zp
 zp
@@ -27109,7 +27138,7 @@ ic
 ic
 pu
 PJ
-EI
+DM
 LQ
 EI
 LQ
@@ -27934,14 +27963,14 @@ ic
 ic
 eY
 Gj
-EV
+Pi
 Ln
 qN
 EV
 EV
 qN
 AO
-EV
+Pi
 Gj
 eY
 ic
@@ -29219,14 +29248,14 @@ lq
 lq
 eY
 Gj
-EV
+Pi
 Ln
 qN
 eG
 EV
 qN
 AO
-EV
+Pi
 Gj
 eY
 ic
@@ -38473,7 +38502,7 @@ ic
 ic
 Oj
 zD
-uG
+aY
 uG
 uG
 uG
@@ -40752,7 +40781,7 @@ ic
 ic
 Yn
 mO
-sm
+FR
 vZ
 Hq
 sm

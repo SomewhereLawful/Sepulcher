@@ -1,0 +1,13 @@
+#This allows easy configuration of the number of positions allowed for each job
+#Format is: [Job name]=[total positions],[spawn positions]
+#Job names must be identical to the title var of each job datum
+#Positions can be set to -1 to allow unlimited slots
+
+Kommandant=1,1
+
+Bioslave=-1,1
+Proletariat=-1,1
+Bourgeoise=-1,1
+Cleanser=-1,1
+
+Vagrant=-1,1

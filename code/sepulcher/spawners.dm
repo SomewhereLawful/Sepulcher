@@ -1,6 +1,8 @@
+//contents
+// 1 - mob_spawn
+// 2 - latejoin
 
 // Spawners//
-
 /obj/effect/mob_spawn/human/bioslave
 	name = "enslaved birthing womb"
 	desc = "Where all city-dwellers begin."
@@ -95,3 +97,22 @@
 	mob_species = /datum/species/vagrant
 	flavour_text = ""
 	assignedrole = "Vagrant"
+
+// Below this point is latejoins
+/obj/effect/landmark/latejoin/bioslave
+	name = "JoinLateBioslave"
+
+/obj/effect/landmark/latejoin/proletariat
+	name = "JoinLateProle"
+
+/obj/effect/landmark/latejoin/bougie
+	name = "JoinLateBougie"
+
+/obj/effect/landmark/latejoin/kommandant
+	name = "JoinLateKomm"
+
+/obj/effect/landmark/latejoin/cleanser
+	name = "JoinLateCleanser"
+
+/obj/effect/landmark/latejoin/vagrant
+	name = "JoinLateVagrant"
