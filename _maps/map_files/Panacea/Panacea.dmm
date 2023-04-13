@@ -574,12 +574,9 @@
 /turf/open/indestructible/ground/outside/road,
 /area/game/city)
 "oS" = (
-/obj/effect/landmark/latejoin,
-/turf/open/floor/f13{
-	tag = "icon-floorrusty";
-	icon_state = "floorrustysolid"
-	},
-/area/game/spawning/bioslave)
+/obj/item/food/goyslop,
+/turf/open/indestructible/ground/outside/road,
+/area/game/city)
 "oY" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -701,12 +698,9 @@
 /turf/open/indestructible/ground/floor/wood_floor,
 /area/game/city/interior)
 "rg" = (
-/obj/item/melee/pipe,
-/turf/open/floor/f13{
-	tag = "icon-floorrusty";
-	icon_state = "floorrustysolid"
-	},
-/area/game/spawning/bioslave)
+/obj/effect/landmark/latejoin,
+/turf/open/indestructible/ground/outside/road,
+/area/game/city)
 "rZ" = (
 /obj/effect/decal/waste{
 	tag = "icon-goo12";
@@ -1127,7 +1121,11 @@
 /turf/open/indestructible/ground/floor/lattice,
 /area/game/spawning/prole)
 "yU" = (
-/obj/item/food/goyslop,
+/obj/structure/table,
+/obj/item/melee/pipe{
+	pixel_y = 3;
+	pixel_x = -7
+	},
 /turf/open/floor/f13{
 	tag = "icon-floorrusty";
 	icon_state = "floorrustysolid"
@@ -24121,23 +24119,23 @@ ic
 ic
 ic
 ic
-NV
-NV
-NV
-NV
-NV
-NV
-NV
-NV
-NV
-NV
-NV
-NV
-NV
-NV
-NV
-NV
-NV
+ic
+ic
+ic
+ic
+ic
+ic
+ic
+ic
+ic
+ic
+ic
+ic
+ic
+ic
+ic
+ic
+ic
 ic
 ic
 ic
@@ -24379,21 +24377,21 @@ ic
 ic
 ic
 NV
-yi
-Hd
-Hd
-kb
-Hd
-kb
-Hd
-Fc
-yi
-yi
-td
-yi
-yi
-td
-yi
+NV
+NV
+NV
+NV
+NV
+NV
+NV
+NV
+NV
+NV
+NV
+NV
+NV
+NV
+NV
 NV
 ic
 ic
@@ -24637,19 +24635,19 @@ ic
 ic
 NV
 yi
-zu
-HE
-HE
-HE
-HE
-HE
-vR
+Hd
+Hd
+kb
+Hd
+kb
+Hd
+Fc
 yi
 yi
+td
 yi
 yi
-yi
-yi
+td
 yi
 NV
 ic
@@ -24894,20 +24892,20 @@ ic
 ic
 NV
 yi
-vB
-kn
-mH
-mH
-mH
-mH
-xP
+zu
+HE
+HE
+HE
+HE
+HE
+vR
 yi
 yi
 yi
 yi
 yi
 yi
-vk
+yi
 NV
 ic
 ic
@@ -25151,20 +25149,20 @@ ic
 ic
 NV
 yi
-Hd
-fP
-ff
-Hd
-Hd
-Hd
-vo
+vB
+kn
+mH
+mH
+mH
+mH
+xP
 yi
 yi
 yi
 yi
 yi
 yi
-yi
+vk
 NV
 ic
 ic
@@ -25410,17 +25408,17 @@ NV
 yi
 Hd
 fP
-Hd
+ff
 Hd
 Hd
 Hd
 vo
 yi
 yi
-td
 yi
 yi
-td
+yi
+yi
 yi
 NV
 ic
@@ -25671,13 +25669,13 @@ Hd
 Fc
 Hd
 Hd
-fP
+vo
 yi
 yi
+td
 yi
 yi
-yi
-yi
+td
 yi
 NV
 ic
@@ -25933,7 +25931,7 @@ yi
 yi
 yi
 yi
-pE
+yi
 yi
 yi
 NV
@@ -26155,7 +26153,7 @@ lq
 lq
 lq
 Oj
-lq
+YI
 lq
 bn
 Oj
@@ -26190,7 +26188,7 @@ yi
 yi
 yi
 yi
-yi
+pE
 yi
 yi
 NV
@@ -26927,7 +26925,7 @@ bn
 Oj
 Oj
 lq
-YI
+lq
 lq
 Oj
 ic
@@ -28224,7 +28222,7 @@ WG
 Ln
 qN
 EV
-yU
+EV
 qN
 AO
 Wj
@@ -28737,7 +28735,7 @@ bT
 EV
 Ln
 eY
-oS
+EV
 EV
 eY
 AO
@@ -28995,7 +28993,7 @@ EV
 Ln
 DZ
 tT
-rg
+EV
 DZ
 AO
 EV
@@ -30278,7 +30276,7 @@ ic
 wa
 ua
 EV
-ux
+yU
 EV
 EV
 eY
@@ -33361,7 +33359,7 @@ zc
 zc
 xS
 tH
-zc
+rg
 cb
 Pq
 Pq
@@ -35937,7 +35935,7 @@ Pq
 Mk
 zc
 zc
-zc
+oS
 Oj
 ic
 ic
