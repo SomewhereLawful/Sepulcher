@@ -13,6 +13,7 @@
 /datum/species/bioslave/on_species_gain(mob/living/carbon/C, datum/species/old_species)
 	. = ..()
 
+	C.gender = MALE
 	C.real_name = "[pick(GLOB.bioslave_first)] [pick(GLOB.bioslave_synonym)]"
 	C.name = C.real_name // This is copied from Shadowpeople, could probably be made better
 	if(C.mind)

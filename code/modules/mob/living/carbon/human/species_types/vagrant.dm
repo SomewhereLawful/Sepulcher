@@ -11,6 +11,7 @@
 /datum/species/vagrant/on_species_gain(mob/living/carbon/C, datum/species/old_species)
 	. = ..()
 
+	C.gender = MALE
 	C.real_name = "[pick(GLOB.vagrant_synonym)]"
 	C.name = C.real_name
 	if(C.mind)

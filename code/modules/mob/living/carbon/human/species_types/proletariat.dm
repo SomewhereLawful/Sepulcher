@@ -11,6 +11,7 @@
 /datum/species/proletariat/on_species_gain(mob/living/carbon/C, datum/species/old_species)
 	. = ..()
 
+	C.gender = MALE
 	C.real_name = "[pick(GLOB.prole_first)] [pick(GLOB.prole_synonym)]"
 	C.name = C.real_name // This is copied from Shadowpeople, could probably be made better
 	if(C.mind)

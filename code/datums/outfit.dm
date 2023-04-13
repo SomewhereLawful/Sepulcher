@@ -1,6 +1,7 @@
 /datum/outfit
 	var/name = "Naked"
 
+	var/equip_race = null
 	var/uniform = null
 	var/suit = null
 	var/toggle_helmet = TRUE
@@ -55,6 +56,9 @@
 
 /datum/outfit/proc/equip(mob/living/carbon/human/H, visualsOnly = FALSE, var/overwrite = FALSE)
 	pre_equip(H, visualsOnly)
+
+	if(equip_race)
+		H.set_species(equip_race)
 
 	//Start with uniform,suit,backpack for additional slots
 	if(uniform)

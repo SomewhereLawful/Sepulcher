@@ -18,6 +18,7 @@
 /datum/outfit/city/kommandant
 	name = "Kommandant"
 
+	equip_race = /datum/species/kommandant
 	head = /obj/item/clothing/head/kommandant
 	//ears = /obj/item/radio/headset/heads/cmo - Will add headset/earpiece when I get loudspeakers added.
 	mask = /obj/item/clothing/mask/gas/kommandant
@@ -54,6 +55,7 @@
 /datum/outfit/city/cleanser
 	name = "Cleanser"
 
+	equip_race = /datum/species/proletariat
 	head = /obj/item/clothing/head/cleanser/sealed
 	mask = /obj/item/clothing/mask/gp5/sealed
 	suit = /obj/item/clothing/suit/cleansercoat
@@ -73,6 +75,7 @@
 /datum/outfit/city/prole
 	name = "Proletariat"
 
+	equip_race = /datum/species/proletariat
 	uniform = /obj/item/clothing/under/boiler
 	shoes = /obj/item/clothing/shoes/brown
 
@@ -88,6 +91,7 @@
 /datum/outfit/city/bioslave
 	name = "Bioslave"
 
+	equip_race = /datum/species/bioslave
 	uniform = /obj/item/clothing/under/pants/bioslave_rags
 
 /datum/job/city/vagrant
@@ -104,5 +108,6 @@
 /datum/outfit/city/vagrant
 	name = "Vagrant"
 
+	equip_race = /datum/species/vagrant
 	uniform = /obj/item/clothing/under/boiler
 	shoes = /obj/item/clothing/shoes/brown
