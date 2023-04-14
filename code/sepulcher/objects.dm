@@ -179,6 +179,9 @@
 	name = "Vitalizing Percolator"
 	icon_state = "bougie_right"
 
+/obj/structure/decor/debris
+	name = "debris"
+
 // statues
 /obj/structure/fluff/plaza_statue
 	name = "Statue of the Warder"
