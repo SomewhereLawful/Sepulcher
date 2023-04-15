@@ -113,6 +113,10 @@
 		icon_state = "grave[rand(1,3)]"
 	..()
 
+/obj/structure/decor/saint_icon
+	name = "icon"
+	icon_state = "saint_icon"
+
 /obj/structure/decor/iconostasis
 	name = "iconostasis"
 	icon_state = "deacon_door"
