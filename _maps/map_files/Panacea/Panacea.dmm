@@ -735,6 +735,10 @@
 	},
 /turf/open/indestructible/ground/outside/road,
 /area/game/city)
+"sa" = (
+/obj/structure/decor/waste,
+/turf/open/indestructible/ground/outside/road,
+/area/game/city)
 "sc" = (
 /obj/structure/simple_door/room,
 /turf/open/floor/f13{
@@ -1017,6 +1021,13 @@
 /obj/structure/barricade/wooden/planks,
 /turf/closed/wall/bricks_white,
 /area/game/spawning/bioslave)
+"wo" = (
+/obj/effect/turf_decal/line{
+	dir = 1
+	},
+/obj/structure/decor/waste,
+/turf/open/indestructible/ground/outside/road,
+/area/game/city)
 "ww" = (
 /obj/machinery/light{
 	dir = 1
@@ -1649,6 +1660,10 @@
 	icon_state = "floorrusty"
 	},
 /area/game/foundry)
+"KP" = (
+/obj/structure/decor/cig_trash,
+/turf/open/indestructible/ground/outside/road,
+/area/game/city)
 "Ln" = (
 /obj/effect/turf_decal/line,
 /turf/open/floor/f13{
@@ -1829,6 +1844,10 @@
 	},
 /turf/open/indestructible/ground/floor/wood_floor,
 /area/game/city/interior)
+"PT" = (
+/obj/structure/decor/cig_trash,
+/turf/open/indestructible/ground/outside/sidewalk/tile,
+/area/game/city)
 "Qs" = (
 /turf/open/floor/f13{
 	tag = "icon-floorrusty";
@@ -28261,7 +28280,7 @@ uI
 uI
 uI
 uI
-zc
+sa
 zc
 zc
 uI
@@ -28519,11 +28538,11 @@ hg
 zc
 zc
 zc
-zc
+KP
 zc
 mi
 zc
-zc
+sa
 zc
 uI
 lq
@@ -28781,7 +28800,7 @@ Pq
 Pq
 Pq
 Pq
-zc
+KP
 uI
 lq
 Gp
@@ -29549,10 +29568,10 @@ zc
 hg
 hg
 zc
+PT
 Pq
 Pq
-Pq
-zc
+sa
 uI
 lq
 ve
@@ -30062,7 +30081,7 @@ uI
 uI
 XX
 uI
-GT
+wo
 Pq
 Pq
 Pq

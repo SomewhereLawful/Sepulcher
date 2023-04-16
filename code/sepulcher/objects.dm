@@ -157,6 +157,28 @@
 		icon_state = "candle[rand(1,3)]"
 	..()
 
+/obj/structure/decor/waste
+	name = "waste"
+	icon_state = "trash1"
+
+/obj/structure/decor/waste/New()
+	pixel_x = rand(-5,5)
+	pixel_y = rand(-5,5)
+	if(icon_state == "trash1")
+		icon_state = "trash[rand(1,4)]"
+	..()
+
+/obj/structure/decor/cig_trash
+	name = "debris"
+	icon_state = "cig_trash1"
+
+/obj/structure/decor/cig_trash/New()
+	pixel_x = rand(-5,5)
+	pixel_y = rand(-5,5)
+	if(icon_state == "cig_trash1")
+		icon_state = "cig_trash[rand(1,5)]"
+	..()
+
 /obj/structure/fence/church
 	name = "wrought iron fence"
 	desc = null
@@ -182,9 +204,6 @@
 /obj/structure/decor/spawner_part/bougie/right
 	name = "Vitalizing Percolator"
 	icon_state = "bougie_right"
-
-/obj/structure/decor/debris
-	name = "debris"
 
 // statues
 /obj/structure/fluff/plaza_statue
