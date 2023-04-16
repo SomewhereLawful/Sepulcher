@@ -1,10 +1,6 @@
 //Janitors!  Janitors, janitors, janitors!  -Sayu
-
-
 //Conspicuously not-recent versions of suspicious cleanables
-
 //This file was made not awful by Xhuis on September 13, 2016
-
 //Making the station dirty, one tile at a time. Called by master controller's setup_objects
 
 /turf/open/floor/proc/MakeDirty()
@@ -18,19 +14,18 @@
 		return
 
 	var/area/A = get_area(src)
-
 	if(A && !(A.flags_1 & CAN_BE_DIRTY_1))
 		return
 
 	//The code below here isn't exactly optimal, but because of the individual decals that each area uses it's still applicable.
 
 				//high dirt - 1/3 chance.
-	var/static/list/high_dirt_areas = typecacheof(list(/area/science/test_area,
-														/area/mine/production,
+	var/static/list/high_dirt_areas = typecacheof(list(/area/game/city, // Fix this
+														/area/game/train_yard, // Fix this
 														/area/mine/living_quarters,
 														/area/ruin/space))
 	if(is_type_in_typecache(A, high_dirt_areas))
-		new /obj/effect/decal/cleanable/dirt(src)	//vanilla, but it works
+		new /obj/structure/decor/waste(src)	//vanilla, but it works
 		return
 
 

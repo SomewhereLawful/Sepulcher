@@ -160,6 +160,7 @@
 /obj/structure/decor/waste
 	name = "waste"
 	icon_state = "trash1"
+	density = FALSE
 
 /obj/structure/decor/waste/New()
 	pixel_x = rand(-5,5)
@@ -171,6 +172,7 @@
 /obj/structure/decor/cig_trash
 	name = "debris"
 	icon_state = "cig_trash1"
+	density = FALSE
 
 /obj/structure/decor/cig_trash/New()
 	pixel_x = rand(-5,5)
