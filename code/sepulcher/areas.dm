@@ -12,6 +12,7 @@
 	ambientsounds = list('sound/f13ambience/battle_1.ogg','sound/f13ambience/battle_2.ogg','sound/f13ambience/battle_3.ogg')
 	outdoors = 1
 	dynamic_lighting = DYNAMIC_LIGHTING_FORCED
+	flags_1 = CAN_BE_DIRTY_1
 
 /area/exterior/city
 	name = "City Streets"
@@ -27,6 +28,7 @@
 	ambientsounds = list('sound/f13ambience/battle_1.ogg','sound/f13ambience/battle_2.ogg','sound/f13ambience/battle_3.ogg')
 	outdoors = 0
 	dynamic_lighting = DYNAMIC_LIGHTING_FORCED
+	flags_1 = CAN_BE_DIRTY_1
 
 /area/interior/city
 	name = "City Interiors"
