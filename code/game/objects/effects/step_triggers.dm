@@ -4,7 +4,7 @@
 	var/affect_ghosts = 0
 	var/stopper = 1 // stops throwers
 	var/mobs_only = FALSE
-	invisibility = INVISIBILITY_ABSTRACT // nope cant see this shit
+	invisibility = 0 // edit, was ABSTRACT but teleporters use sprites now
 	anchored = TRUE
 
 /obj/effect/step_trigger/proc/Trigger(atom/movable/A)
@@ -113,6 +113,9 @@
 	var/teleport_x = 0	// teleportation coordinates (if one is null, then no teleport!)
 	var/teleport_y = 0
 	var/teleport_z = 0
+	icon = 'icons/effects/teleporter.dmi'
+	icon_state = "down"
+	affect_ghosts = 1
 
 /obj/effect/step_trigger/teleporter/Trigger(atom/movable/A)
 	if(teleport_x && teleport_y && teleport_z)

@@ -13,7 +13,15 @@ SUBSYSTEM_DEF(job)
 	var/list/prioritized_jobs = list()
 	var/list/latejoin_trackers = list()	//Don't read this list, use GetLateJoinTurfs() instead
 
-	var/overflow_role = "Wastelander" //CHANGE
+	// Sepulcher addition - ripped off from Stalker-13
+	var/list/latejoin_bioslave = list()
+	var/list/latejoin_proletariat = list()
+	var/list/latejoin_bougie = list()
+	var/list/latejoin_kommandant = list()
+	var/list/latejoin_cleanser = list()
+	var/list/latejoin_vagrant = list()
+
+	var/overflow_role = "Vagrant"
 
 /datum/controller/subsystem/job/Initialize(timeofday)
 	if(!occupations.len)
@@ -435,17 +443,13 @@ SUBSYSTEM_DEF(job)
 
 		SSpersistence.antag_rep_change[M.client.ckey] += job.GetAntagRep()
 
-	to_chat(M, "<b>You are the [rank].</b>")
+	to_chat(M, "<font size='3'><font color='magenta'><b>You are the [rank].</b></font>")
 	if(job)
-		to_chat(M, "<b>As the [rank] you answer directly to [job.supervisors]. Special circumstances may change this.</b>")
-		to_chat(M, "<b>To speak on your departments radio, use the :h button. To see others, look closely at your headset.</b>")
-		to_chat(M, "<FONT color='blue'><B>[job.description]</b>")
+		to_chat(M, "<FONT color='yellow'><B>[job.description]</b>")
 		to_chat(M, "<FONT color='red'><b>[job.forbids]</b>")
 		to_chat(M, "<FONT color='green'><b>[job.enforces]</b>")
 		if(job.req_admin_notify)
 			to_chat(M, "<b>You are playing a job that is important for Game Progression. If you have to disconnect, please notify the admins via adminhelp.</b>")
-	/*	if(CONFIG_GET(number/minimal_access_threshold))
-			to_chat(M, "<FONT color='blue'><B>As this station was initially staffed with a [CONFIG_GET(flag/jobs_have_minimal_access) ? "full crew, only your job's necessities" : "skeleton crew, additional access may"] have been added to your ID card.</B></font>") */
 
 	if(job && H)
 		job.after_spawn(H, M, joined_late) // note: this happens before the mob has a key! M will always have a client, H might not.
@@ -562,13 +566,27 @@ SUBSYSTEM_DEF(job)
 			return
 	M.forceMove(get_turf(A))
 
-/datum/controller/subsystem/job/proc/SendToLateJoin(mob/M, buckle = TRUE)
+/datum/controller/subsystem/job/proc/SendToLateJoin(mob/M, buckle = TRUE, rank = null)
 	if(M.mind && M.mind.assigned_role && length(GLOB.jobspawn_overrides[M.mind.assigned_role])) //We're doing something special today.
 		SendToAtom(M,pick(GLOB.jobspawn_overrides[M.mind.assigned_role]),FALSE)
 		return
 
 	if(latejoin_trackers.len)
-		SendToAtom(M, pick(latejoin_trackers), buckle)
+		switch (rank)
+			if ("Bioslave")
+				SendToAtom(M, safepick(latejoin_bioslave), buckle)
+			if ("Proletariat")
+				SendToAtom(M, safepick(latejoin_proletariat), buckle)
+			if ("Bourgeoisie")
+				SendToAtom(M, safepick(latejoin_bougie), buckle)
+			if ("Kommandant")
+				SendToAtom(M, safepick(latejoin_kommandant), buckle)
+			if ("Cleanser")
+				SendToAtom(M, safepick(latejoin_cleanser), buckle)
+			if ("Vagrant")
+				SendToAtom(M, safepick(latejoin_vagrant), buckle)
+			else
+				SendToAtom(M, pick(latejoin_trackers), buckle)
 	else
 		//bad mojo
 		var/area/shuttle/arrival/A = locate() in GLOB.sortedAreas

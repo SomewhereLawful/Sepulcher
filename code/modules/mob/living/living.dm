@@ -392,7 +392,7 @@
 /mob/living/proc/updatehealth()
 	if(status_flags & GODMODE)
 		return
-	health = maxHealth - getOxyLoss() - getToxLoss() - getFireLoss() - getBruteLoss() - getCloneLoss()
+	health = maxHealth - getBruteLoss() - getFireLoss()
 	staminaloss = getStaminaLoss()
 	update_stat()
 	med_hud_set_health()
@@ -401,16 +401,19 @@
 /mob/living/proc/updatewill() // Be sure to do that soon, gramps
 	if(status_flags & GODMODE)
 		return
+	will = maxWill - getWillLoss()
 	update_stat()
 
 /mob/living/proc/updatehunger()
 	if(status_flags & GODMODE)
 		return
+	hunger = maxHunger - (getHunger()*10) // *10 For simplicity's sake - because Hunger starts at 1000
 	update_stat()
 
 /mob/living/proc/updatetoxicity()
 	if(status_flags & GODMODE)
 		return
+	toxicity = maxToxicity + getToxicityGain()
 	update_stat()
 
 //proc used to ressuscitate a mob

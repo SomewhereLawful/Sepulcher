@@ -55,14 +55,13 @@
 	var/tickerPeriod = 300 //in deciseconds
 	var/atom/movable/fullDark
 	bullet_bounce_sound = null
-	name = "Bad Deathclaw"
-	desc = "The wasteland is calling.."
-	//icon = 'icons/blank_title.png'
+	name = "Sepulcher"
+	desc = "A dying dream dragging souls from aetherium, a dead world for sins long forgotten..."
 	layer = FLY_LAYER
 
 /turf/closed/indestructible/splashscreen/New()
 	icon = 'icons/misc/splashscreen.dmi'
-	icon_state = "title[rand(1,12)]"
+	icon_state = "title[rand(1,7)]"
 
 	src.fullDark = new/atom/movable{
 		icon = 'icons/misc/splashscreen.dmi' //Replace with actual icon
@@ -95,7 +94,7 @@
 	return
 
 /turf/closed/indestructible/splashscreen/proc/chooseIcon()
-	var/chosen_icon = "title[rand(1,8)]" // Update the second number as needed
+	var/chosen_icon = "title[rand(1,6)]" // Update the second number as needed
 	if(icon_state != chosen_icon)
 		icon_state = chosen_icon
 	else

@@ -10,6 +10,7 @@
 /datum/species/kommandant/on_species_gain(mob/living/carbon/C, datum/species/old_species)
 	. = ..()
 
+	C.gender = MALE
 	C.real_name = "The Kommandant"
 	C.name = C.real_name // This is copied from Shadowpeople, could probably be made better
 	if(C.mind)

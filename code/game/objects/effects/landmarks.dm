@@ -279,7 +279,21 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 
 /obj/effect/landmark/latejoin/Initialize(mapload)
 	..()
-	SSjob.latejoin_trackers += loc
+	switch(name)
+		if ("JoinLateBioslave")
+			SSjob.latejoin_bioslave += loc
+		if ("JoinLateProle")
+			SSjob.latejoin_proletariat += loc
+		if ("JoinLateBougie")
+			SSjob.latejoin_bougie += loc
+		if ("JoinLateKomm")
+			SSjob.latejoin_kommandant += loc
+		if ("JoinLateCleanser")
+			SSjob.latejoin_cleanser += loc
+		if ("JoinLateVagrant")
+			SSjob.latejoin_vagrant += loc
+		else
+			SSjob.latejoin_trackers += loc
 	return INITIALIZE_HINT_QDEL
 
 // carp.

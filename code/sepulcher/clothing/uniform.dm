@@ -4,6 +4,11 @@
 	icon_state = "ghoul"
 	item_color = "ghoul"
 
+/obj/item/clothing/under/pants/vagrant
+	name = "tattered rags"
+	icon_state = "vagrant"
+	item_color = "vagrant"
+
 /obj/item/clothing/under/boiler
 	name = "boiler suit"
 	desc = "The defacto uniform of the proletariat."

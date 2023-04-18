@@ -4,7 +4,7 @@
 /obj/item/holodisk
 	name = "holodisk"
 	desc = "A durable laser-readable storage device produced by Wattz Electronics.<br>Based on tape holography technology, it can store information safely for extended periods of time."
-	icon = 'icons/fallout/objects/items.dmi'
+	icon = 'icons/obj/items_and_weapons.dmi'
 	icon_state = "holodisk"
 	item_state = "holodisk"
 	throwforce = 0

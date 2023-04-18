@@ -18,8 +18,8 @@
 	end_message = "<span class='boldannounce'>The red downpour gradually slows to a light, grim shower. The stench remains.</span>"
 	end_sound = 'sound/ambience/acidrain_end.ogg'
 
-	areas_type = list(/area/game/city)
-	protected_areas = list(/area/game/city/interior, /area/game/void, /area/game/spawning, /area/game/spawning/bioslave, /area/game/spawning/bougie, /area/game/spawning/kommandant, /area/game/spawning/prole, /area/game/foundry, /area/game/train_yard, /area/game/sewer)
+	areas_type = list(/area/exterior/city, /area/exterior/wastes)
+	protected_areas = list(/area/void, /area/interior)
 	target_trait = ZTRAIT_STATION
 
 	immunity_type = "acid" // temp

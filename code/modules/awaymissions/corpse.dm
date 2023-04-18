@@ -26,6 +26,8 @@
 	var/assignedrole
 	var/show_flavour = TRUE
 	var/banType = "lavaland"
+	var/spawn_sound = 'sound/misc/null.ogg'
+	var/last_sound = 0
 
 //ATTACK GHOST IGNORING PARENT RETURN VALUE
 /obj/effect/mob_spawn/attack_ghost(mob/user)
@@ -44,6 +46,11 @@
 		return
 	log_game("[key_name(user)] became [mob_name]")
 	create(ckey = user.ckey)
+
+	if(last_sound < world.time + 1)
+		playsound(src, spawn_sound, 50, 0, 0)
+		last_sound = world.time
+	sleep(5)
 
 /obj/effect/mob_spawn/Initialize(mapload)
 	. = ..()

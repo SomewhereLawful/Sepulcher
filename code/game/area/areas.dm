@@ -3,9 +3,9 @@
 
 /area
 	level = null
-	name = "Space"
+	name = "AREA"
 	icon = 'icons/turf/areas.dmi'
-	icon_state = "unknown"
+	icon_state = "dark128"
 	layer = AREA_LAYER
 	plane = BLACKNESS_PLANE //Keeping this on the default plane, GAME_PLANE, will make area overlays fail to render on FLOOR_PLANE.
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
@@ -24,7 +24,7 @@
 	var/poweralm = TRUE
 	var/lightswitch = TRUE
 
-	var/requires_power = TRUE
+	var/requires_power = FALSE
 	var/always_unpowered = FALSE	// This gets overriden to 1 for space in area/Initialize().
 
 	var/outdoors = FALSE //For space, the asteroid, lavaland, etc. Used with blueprints to determine if we are adding a new area (vs editing a station room)
@@ -42,7 +42,7 @@
 	var/static_light = 0
 	var/static_environ
 
-	var/has_gravity = 0
+	var/has_gravity = TRUE
 	var/noteleport = FALSE			//Are you forbidden from teleporting to the area? (centcom, mobs, wizard, hand teleporter)
 	var/hidden = FALSE 			//Hides area from player Teleport function.
 	var/safe = FALSE 				//Is the area teleport-safe: no space / radiation / aggresive mobs / other dangers

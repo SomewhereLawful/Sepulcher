@@ -155,14 +155,6 @@
 	pin = /obj/item/firing_pin
 	w_class = WEIGHT_CLASS_NORMAL
 
-/obj/item/gun/ballistic/revolver/nagant
-	name = "nagant revolver"
-	desc = "An old model of revolver that originated in Russia. Able to be suppressed. Uses 7.62x38mmR ammo."
-	icon_state = "nagant"
-	can_suppress = TRUE
-	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev762
-	w_class = WEIGHT_CLASS_NORMAL
-
 // A gun to play Russian Roulette!
 // You can spin the chamber to randomize the position of the bullet.
 

@@ -121,7 +121,7 @@
 
 // Chair types
 /obj/structure/chair/wood
-	icon_state = "wooden_chair_settler"
+	icon_state = "wooden_chair"
 	name = "wooden chair"
 	desc = "Old is never too old to not be in fashion."
 	resistance_flags = FLAMMABLE

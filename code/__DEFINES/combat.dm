@@ -3,6 +3,9 @@
 //Damage and status effect defines
 
 //Damage defines //TODO: merge these down to reduce on defines
+#define WILL		"will"
+#define HUNGER		"hunger"
+#define TOXICITY	"toxicity"
 #define BRUTE		"brute"
 #define BURN		"fire"
 #define TOX			"tox"

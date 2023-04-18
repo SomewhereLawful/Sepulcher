@@ -18,3 +18,9 @@
 	icon_state = "gp5"
 	item_state = "gp5"
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+
+/obj/item/clothing/mask/gp5/sealed
+	name = "cleanser safemask"
+	desc = "Sealed, safe, filtered air."
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+	item_flags = NODROP // sealed in

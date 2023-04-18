@@ -22,3 +22,14 @@
 /obj/item/clothing/head/hooded/bandit_hood/brown
 	icon_state = "banditcoatbrown" // invisible icon
 	item_state = "banditcoatbrown"
+
+/obj/item/clothing/suit/cleansercoat
+	name = "cleanser cleancoat"
+	desc = "More a raincoat."
+	icon_state = "cleansercoat"
+	item_state = "cleansercoat"
+
+/obj/item/clothing/suit/smithingapron
+	name = "smithing apron"
+	icon_state = "smithing"
+	item_state = "smithing"

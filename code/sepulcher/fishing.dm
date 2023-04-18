@@ -21,6 +21,7 @@
 		var/chosen_fish = pickweight(W.fish_list)
 		new chosen_fish(get_turf(user))
 		to_chat(user, "<span class='warning'>You have caught something.</span>")
+		W.spot_life--
 		in_use = FALSE
 		return
 	in_use = FALSE
@@ -31,12 +32,22 @@
 	icon = 'icons/obj/fishing.dmi'
 	icon_state = "fishing_spot" // this sprite gives me cancer
 	anchored = TRUE
+	var/spot_life = null
 	var/list/fish_list = list(
 			/obj/item/food/fish = 25,
 			/obj/item/food/fish/sturgeon = 25,
 			/obj/item/food/fish/crab = 25,
 			/obj/item/food/fish/lamprey = 25)
 
+/obj/structure/fishing_spot/Initialize()
+	spot_life = rand(5,13)
+	. = ..()
+
+/obj/structure/fishing_spot/attackby(obj/item/O, mob/user, params) // Instead of burning the excess, just put it back
+	if(/obj/item/fishing_rod)
+		if(spot_life == 0)
+			playsound(src, 'sound/effects/junk_rustling.ogg', 50, 0)
+			qdel(src)
 
 /obj/structure/fishing_spot/sewer
 	name = "fishing spot"
