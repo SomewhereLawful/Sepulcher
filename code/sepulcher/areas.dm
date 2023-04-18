@@ -1,65 +1,71 @@
 // Sepulcher areas //
 
-/area/game
-	name = "error"
-	icon_state = "error"
-	blob_allowed = 0
-	requires_power = 0
-	has_gravity = STANDARD_GRAVITY
-	dynamic_lighting = DYNAMIC_LIGHTING_FORCED
-
 // Used on non-accessible
-/area/game/void
+/area/void
 	name = "void"
 	icon_state = "dark128"
 	dynamic_lighting = DYNAMIC_LIGHTING_DISABLED
 
-/area/game/city
-	name = "city"
+/area/exterior
+	name = "EXTERIOR"
 	icon_state = "city"
 	ambientsounds = list('sound/f13ambience/battle_1.ogg','sound/f13ambience/battle_2.ogg','sound/f13ambience/battle_3.ogg')
 	outdoors = 1
+	dynamic_lighting = DYNAMIC_LIGHTING_FORCED
 
-/area/game/city/interior
-	name = "city"
+/area/exterior/city
+	name = "City Streets"
+	icon_state = "city"
+
+/area/exterior/wastes
+	name = "City Streets"
+	icon_state = "city"
+
+/area/interior
+	name = "INTERIOR"
 	icon_state = "interior"
 	ambientsounds = list('sound/f13ambience/battle_1.ogg','sound/f13ambience/battle_2.ogg','sound/f13ambience/battle_3.ogg')
 	outdoors = 0
+	dynamic_lighting = DYNAMIC_LIGHTING_FORCED
+
+/area/interior/city
+	name = "City Interiors"
+	icon_state = "interior"
 
 // Spawn areas for City
-/area/game/spawning // Parented for shared ambientsounds
+/area/interior/spawning // Parented for shared ambientsounds
 	name = "spawning area"
 	icon_state = "unknown"
 	ambientsounds = list('sound/f13ambience/battle_1.ogg','sound/f13ambience/battle_2.ogg','sound/f13ambience/battle_3.ogg')
 
-/area/game/spawning/bioslave
+/area/interior/spawning/bioslave
 	name = "bioslave prison"
 	icon_state = "bioslave"
 
-/area/game/spawning/prole
+/area/interior/spawning/prole
 	name = "prole spawn"
 	icon_state = "prole"
 
-/area/game/spawning/bougie
+/area/interior/spawning/bougie
 	name = "bourgeoisie spawn"
 	icon_state = "bougie"
 
-/area/game/spawning/kommandant
+/area/interior/spawning/kommandant
 	name = "kommandant"
 	icon_state = "kommandant"
 
 
-/area/game/foundry
+/area/interior/foundry
 	name = "foundry"
 	icon_state = "foundry"
 	ambientsounds = list('sound/f13ambience/battle_1.ogg','sound/f13ambience/battle_2.ogg','sound/f13ambience/battle_3.ogg')
 
-/area/game/train_yard
+/area/interior/train_yard
 	name = "train yard"
 	icon_state = "trainyard"
 	ambientsounds = list('sound/f13ambience/battle_1.ogg','sound/f13ambience/battle_2.ogg','sound/f13ambience/battle_3.ogg')
 
-/area/game/sewer
+/area/interior/sewer
 	name = "sewer"
 	icon_state = "trainyard"
 	ambientsounds = list('sound/f13ambience/battle_1.ogg','sound/f13ambience/battle_2.ogg','sound/f13ambience/battle_3.ogg')

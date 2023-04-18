@@ -152,6 +152,7 @@
 	barefootstep = FOOTSTEP_CONCRETE
 	clawfootstep = FOOTSTEP_CONCRETE
 	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
+	flags_1 = CAN_BE_DIRTY_1
 
 /turf/open/indestructible/ground/outside/ruins
 	name = "ruins"
