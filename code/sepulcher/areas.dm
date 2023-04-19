@@ -69,5 +69,5 @@
 
 /area/interior/sewer
 	name = "sewer"
-	icon_state = "trainyard"
+	icon_state = "sewer"
 	ambientsounds = list('sound/f13ambience/battle_1.ogg','sound/f13ambience/battle_2.ogg','sound/f13ambience/battle_3.ogg')
