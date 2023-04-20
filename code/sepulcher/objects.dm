@@ -187,6 +187,12 @@
 	icon_state = "churchfence"
 	cuttable= FALSE
 
+/obj/structure/fence/sewer_grate
+	name = "sewer grate"
+	desc = null
+	icon_state = "sewer_grate"
+	cuttable= FALSE
+
 // Used in Spawners, to ellicit the larger than 1x1 look
 /obj/structure/decor/spawner_part
 	icon = 'icons/obj/spawners.dmi'

@@ -9,7 +9,7 @@
 
 /sound/ambient
 	var/last_time = 0
-	var/real_cooldown = 100
+	var/real_cooldown = 0
 	var/transition = 0
 
 /mob/proc/handle_sounds()

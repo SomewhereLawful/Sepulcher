@@ -18,8 +18,14 @@
 	name = "City Streets"
 	icon_state = "city"
 
+/area/exterior/city/docks
+	name = "City Docks"
+	icon_state = "city"
+	ambient_music = list('sound/ambient_music/hl2_song32.ogg')
+	ambient_environment = list('sound/ambience/docks_tone.ogg')
+
 /area/exterior/wastes
-	name = "City Streets"
+	name = "The Wastes"
 	icon_state = "city"
 
 /area/interior
@@ -29,10 +35,6 @@
 	outdoors = 0
 	dynamic_lighting = DYNAMIC_LIGHTING_FORCED
 	flags_1 = CAN_BE_DIRTY_1
-
-/area/interior/city
-	name = "City Interiors"
-	icon_state = "interior"
 
 // Spawn areas for City
 /area/interior/spawning // Parented for shared ambientsounds
@@ -56,6 +58,21 @@
 	name = "kommandant"
 	icon_state = "kommandant"
 
+/area/interior/city
+	name = "City Interiors"
+	icon_state = "interior"
+
+/area/interior/parlor
+	name = "Parlor"
+	icon_state = "interior"
+
+/area/interior/apartments
+	name = "Apartments"
+	icon_state = "interior"
+
+/area/interior/clinic
+	name = "Clinic"
+	icon_state = "interior"
 
 /area/interior/foundry
 	name = "foundry"
@@ -71,3 +88,4 @@
 	name = "sewer"
 	icon_state = "sewer"
 	ambientsounds = list('sound/f13ambience/battle_1.ogg','sound/f13ambience/battle_2.ogg','sound/f13ambience/battle_3.ogg')
+	ambient_environment = list('sound/ambience/sewer/moan1.ogg','sound/ambience/sewer/muffled_cry1.ogg','sound/ambience/sewer/scared_breathing1.ogg','sound/ambience/sewer/scared_breathing2.ogg')

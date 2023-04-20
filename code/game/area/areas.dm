@@ -63,12 +63,16 @@
 	var/xenobiology_compatible = FALSE //Can the Xenobio management console transverse this area by default?
 	var/list/canSmoothWithAreas //typecache to limit the areas that atoms in this area can smooth with
 
-	var/ambient_music_cooldown				= 6000
-	var/ambient_environment_cooldown		= 666
-	var/list/ambient_background_cooldown = null
-	var/list/ambient_music = list('sound/f13ambience/ambigen_1.ogg','sound/f13ambience/ambigen_2.ogg')
+	/// Cooldown for ambient_music, randomized for amt * 0.8 to amt * 1.5
+	var/ambient_music_cooldown				= 2000
+	/// Cooldown for ambient_environment, randomized for amt * 0.3 to amt * 1.5
+	var/ambient_environment_cooldown		= 222
+	/// Ambient music, plays the entirety then takes a break for ambient_music_cooldown
+	var/list/ambient_music = list('sound/ambient_music/identity_theft.ogg', 'sound/ambient_music/maintenance_tunnels.ogg')
+	/// Plays a sound with a relatively short delay
 	var/list/ambient_environment = null
-	var/list/ambient_background = list('sound/f13ambience/ambigen_1.ogg','sound/f13ambience/ambigen_2.ogg')
+	/// Plays a sound constantly in the area, abit finicky and needs a '= num' at the end of the file
+	var/list/ambient_background = null
 
 /*Adding a wizard area teleport list because motherfucking lag -- Urist*/
 /*I am far too lazy to make it a proper list of areas so I'll just make it run the usual telepot routine at the start of the game*/
