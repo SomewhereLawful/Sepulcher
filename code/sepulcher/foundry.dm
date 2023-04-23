@@ -49,6 +49,18 @@
 			filling = FALSE
 	else
 		to_chat(user, "The bucket is empty.")
+		return
+
+/obj/structure/foundry/steel_bucket/AltClick(mob/user)
+	. = ..()
+	var/obj/structure/foundry/mould/M
+	if(filled == TRUE)
+		to_chat(user, "The bucket is already filled.")
+		return
+	else
+		flick("bucket_filling",src)
+		to_chat(user, "<span class='red'>The bucket decends into the desolation, retrieving liquid steel from the maw.</span>")
+		M.filled = TRUE
 
 /obj/structure/foundry/mould
 	name = "ingot mould"

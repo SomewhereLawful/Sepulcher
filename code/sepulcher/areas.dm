@@ -13,6 +13,7 @@
 	outdoors = 1
 	dynamic_lighting = DYNAMIC_LIGHTING_FORCED
 	flags_1 = CAN_BE_DIRTY_1
+	ambient_background = list('sound/ambience/city_wind2.ogg' = 10)
 
 /area/exterior/city
 	name = "City Streets"
