@@ -19,7 +19,6 @@
 	icon_state = "steel_bucket"
 	anchored = FALSE
 	var/filled = FALSE
-	var/filling = FALSE
 	var/list/allowed_turfs = list(/turf/open/chasm/foundry,/turf/open/foundry)
 
 /obj/structure/foundry/steel_bucket/Move(newloc, direct)
@@ -30,44 +29,51 @@
 
 /obj/structure/foundry/steel_bucket/examine(mob/user)
 	..()
-	to_chat(user, "<span class='red'>A chain hangs from the side, allowing you to pull it to the molds. Go slowly.</span>")
+	to_chat(user, "<span class='red'>A chain hangs from the side, allowing you to pull it into the maw. Go slowly.</span>")
+	if(filled == TRUE)
+		to_chat(user, "<span class='red'>It is filled to the brim with liquid steel.</span>")
 
 /obj/structure/foundry/steel_bucket/attack_hand(mob/user)
 	var/obj/structure/foundry/mould/M
 	if(filled == TRUE)
 		to_chat(user, "You pull the chain, the molten steel pours out.")
 		flick("bucket_draining",src)
-		filled = FALSE
-		if(Adjacent(M))
-			filling = TRUE
+		if(M in contents)
 			if(M.filled == TRUE)
 				to_chat(user, "<span class='red'>The mould already has steel within it. The excess is lost back to the maw.</span>")
 				return
 			if(M.filled == FALSE)
 				to_chat(user, "<span class='red'>The steel pours into the mould.</span>")
 				M.filled = TRUE
-			filling = FALSE
+		filled = FALSE
+		icon_state = "steel_bucket"
 	else
 		to_chat(user, "The bucket is empty.")
 		return
 
 /obj/structure/foundry/steel_bucket/AltClick(mob/user)
 	. = ..()
-	var/obj/structure/foundry/mould/M
 	if(filled == TRUE)
 		to_chat(user, "The bucket is already filled.")
 		return
 	else
 		flick("bucket_filling",src)
 		to_chat(user, "<span class='red'>The bucket decends into the desolation, retrieving liquid steel from the maw.</span>")
-		M.filled = TRUE
+		filled = TRUE
+		icon_state = "filled_bucket"
 
 /obj/structure/foundry/mould
 	name = "ingot mould"
 	desc = "Pour steel, make ingots."
 	icon_state = "mould_closed"
+	density = FALSE
 	var/opened = FALSE
 	var/filled = FALSE
+
+/obj/structure/foundry/mould/examine(mob/user)
+	..()
+	if(filled == TRUE)
+		to_chat(user, "<span class='red'>It is filled with liquid steel, ready to create ingots.</span>")
 
 /obj/structure/foundry/mould/attack_hand(mob/user)
 	if(opened == FALSE)

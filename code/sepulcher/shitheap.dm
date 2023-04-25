@@ -41,6 +41,8 @@
 	var/lastcycle = 0		//Used for timing of cycles.
 	var/cycledelay = 200	//About 10 seconds / cycle
 
+	/// What grows there
+	var/list/product_list = list(/obj/structure/farm_plant = 100)
 	/// Explicitly for sewer
 	var/self_sustaining = FALSE //If the tray generates nutrients and water on its own
 
@@ -59,7 +61,6 @@
 	return ..()
 
 /obj/structure/shitheap/process()
-
 	if(self_sustaining)
 		adjustFertilizer(1)
 		adjustWater(rand(3,5))
@@ -67,7 +68,7 @@
 	if(world.time > (lastcycle + cycledelay))
 		lastcycle = world.time
 		if(fertilizerlevel > 0 && waterlevel > 0)
-			var/randPlant = pickweight(SHITHEAP_PRODUCTS_NORMAL)
+			var/randPlant = pickweight(product_list)
 			new randPlant(src)
 
 		// Nutrients deplete slowly
@@ -118,4 +119,3 @@
 	. = ..()
 	pixel_x = rand(3,16)
 	pixel_y = rand(2,17)
-	START_PROCESSING(SSobj, src)
