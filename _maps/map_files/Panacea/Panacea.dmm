@@ -58,6 +58,12 @@
 	icon_state = "floorrustysolid"
 	},
 /area/interior/spawning/bioslave)
+"bU" = (
+/obj/structure/fence/church/end{
+	dir = 4
+	},
+/turf/open/indestructible/ground/outside/road,
+/area/exterior)
 "cb" = (
 /obj/structure/decoration/hatch,
 /obj/effect/turf_decal/line,
@@ -86,6 +92,12 @@
 	},
 /turf/open/indestructible/ground/floor/wood_floor,
 /area/interior/spawning/kommandant)
+"de" = (
+/obj/effect/turf_decal/line{
+	dir = 1
+	},
+/turf/open/indestructible/ground/floor/wood_floor/horizontal,
+/area/interior/city)
 "dr" = (
 /turf/open/indestructible/ground/outside/desert,
 /area/interior/train_yard)
@@ -365,6 +377,10 @@
 	},
 /turf/open/indestructible/ground/outside/road,
 /area/exterior)
+"iE" = (
+/obj/structure/fence/church/post,
+/turf/open/indestructible/ground/outside/road,
+/area/exterior)
 "iG" = (
 /obj/structure/fence/post{
 	dir = 4
@@ -481,6 +497,12 @@
 /obj/structure/decor/dump_bin/red,
 /turf/open/indestructible/ground/outside/road,
 /area/exterior)
+"kY" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/open/indestructible/ground/floor/wood_floor/horizontal,
+/area/interior/city)
 "kZ" = (
 /obj/effect/turf_decal/roadline/noshadow/corner{
 	dir = 1
@@ -760,6 +782,9 @@
 	icon_state = "floorrustysolid"
 	},
 /area/interior/spawning/bioslave)
+"qQ" = (
+/turf/open/indestructible/ground/floor/wood_floor/horizontal,
+/area/interior/city)
 "qW" = (
 /obj/structure/chair/wood/normal,
 /obj/effect/turf_decal/line{
@@ -1070,6 +1095,10 @@
 /obj/structure/barricade/wooden/planks,
 /turf/closed/wall/bricks_white,
 /area/interior/spawning/bioslave)
+"wb" = (
+/obj/structure/table/wood/settler,
+/turf/open/indestructible/ground/floor/wood_floor/horizontal,
+/area/interior/city)
 "wo" = (
 /obj/effect/turf_decal/line{
 	dir = 1
@@ -1365,6 +1394,10 @@
 /obj/structure/decor/dump_bin/red/full,
 /turf/open/indestructible/ground/outside/road,
 /area/exterior)
+"Cq" = (
+/obj/structure/table/bar,
+/turf/open/indestructible/ground/floor/wood_floor/horizontal,
+/area/interior/city)
 "CJ" = (
 /obj/structure/closet/crate/miningcar,
 /obj/effect/turf_decal/line,
@@ -1379,6 +1412,13 @@
 	},
 /turf/open/indestructible/ground/floor/wood_floor,
 /area/interior/spawning/kommandant)
+"Dm" = (
+/obj/effect/turf_decal/line{
+	dir = 1
+	},
+/obj/structure/table/bar,
+/turf/open/indestructible/ground/floor/wood_floor/horizontal,
+/area/interior/city)
 "Dz" = (
 /obj/structure/fence{
 	dir = 4
@@ -1457,6 +1497,12 @@
 	icon_state = "yellowdirtyfull"
 	},
 /area/interior/city)
+"EY" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/open/indestructible/ground/floor/wood_floor/horizontal,
+/area/interior/city)
 "EZ" = (
 /obj/structure/chair/pew/left{
 	dir = 1
@@ -1509,6 +1555,12 @@
 	icon_state = "yellowdirtyfull"
 	},
 /area/interior/city)
+"FI" = (
+/obj/structure/fence/church/end{
+	dir = 1
+	},
+/turf/open/indestructible/ground/outside/road,
+/area/exterior)
 "FR" = (
 /obj/effect/landmark/latejoin/kommandant,
 /turf/open/indestructible/ground/floor/lattice,
@@ -1684,6 +1736,12 @@
 /obj/structure/closet/crate/miningcar,
 /turf/open/indestructible/ground/outside/road,
 /area/exterior)
+"Jy" = (
+/obj/structure/fence/church/post{
+	dir = 4
+	},
+/turf/open/indestructible/ground/outside/road,
+/area/exterior)
 "JJ" = (
 /obj/structure/simple_door/room,
 /turf/open/floor/f13{
@@ -1749,6 +1807,10 @@
 	icon_state = "floorrusty"
 	},
 /area/interior/sewer)
+"LB" = (
+/obj/structure/fence/church/end,
+/turf/open/indestructible/ground/outside/road,
+/area/exterior)
 "LK" = (
 /turf/closed/wall/brickdark,
 /area/interior/spawning/prole)
@@ -1794,6 +1856,12 @@
 	icon_state = "floorrusty"
 	},
 /area/interior/spawning/bougie)
+"Mw" = (
+/obj/structure/fence/church/end{
+	dir = 8
+	},
+/turf/open/indestructible/ground/outside/road,
+/area/exterior)
 "MH" = (
 /obj/structure/chair/wood/normal{
 	dir = 1
@@ -30424,7 +30492,7 @@ XX
 XX
 XX
 XX
-XX
+sj
 sj
 sj
 sj
@@ -30681,8 +30749,8 @@ XX
 XX
 XX
 XX
-XX
 sj
+Zr
 nr
 Zr
 Zr
@@ -30938,8 +31006,8 @@ XX
 XX
 XX
 XX
-XX
 sj
+Zr
 nr
 Zr
 Zr
@@ -31195,7 +31263,7 @@ XX
 XX
 XX
 XX
-XX
+sj
 sj
 sj
 jk
@@ -36845,22 +36913,22 @@ sj
 sj
 sj
 sj
-VH
+Jy
 Ha
 Ha
-VH
+Jy
 Ha
 Ha
-VH
+bU
 Pq
 Pq
 Pq
-VH
+Mw
 Ha
 Ha
-VH
-VH
-VH
+Jy
+Ha
+LB
 Ti
 Pq
 Pq
@@ -37117,7 +37185,7 @@ VS
 VS
 VS
 Sg
-VH
+XP
 Ti
 Pq
 Pq
@@ -37374,7 +37442,7 @@ oO
 UH
 oO
 Kj
-VH
+iE
 Ti
 Pq
 Pq
@@ -38402,7 +38470,7 @@ sh
 oO
 oO
 Kj
-VH
+iE
 Ti
 Pq
 Pq
@@ -39430,7 +39498,7 @@ oO
 oO
 oO
 Kj
-VH
+iE
 Ti
 Pq
 Pq
@@ -40458,7 +40526,7 @@ GC
 GC
 GC
 BH
-VH
+FI
 Ti
 Pq
 Pq
@@ -41486,7 +41554,7 @@ VS
 VS
 VS
 Sg
-VH
+LB
 Ti
 Pq
 XA
@@ -42257,7 +42325,7 @@ oO
 oO
 oO
 Kj
-VH
+iE
 Ti
 Ti
 Ti
@@ -44042,16 +44110,16 @@ XX
 XX
 sj
 VH
-VH
-VH
+Ha
+Jy
 Ha
 Ha
 Ha
-VH
+Jy
 Ha
 Ha
 Ha
-VH
+Jy
 Ha
 Ha
 Ha
@@ -95955,14 +96023,14 @@ XX
 XX
 XX
 XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
+sj
+sj
+sj
+sj
+sj
+sj
+sj
+sj
 XX
 XX
 XX
@@ -96210,16 +96278,16 @@ XX
 XX
 XX
 XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
+sj
+sj
+sj
+de
+Cq
+kY
+qQ
+qQ
+qQ
+sj
 XX
 XX
 XX
@@ -96466,17 +96534,17 @@ XX
 XX
 XX
 XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
+sj
+sj
+Zr
+Zr
+de
+qQ
+qQ
+qQ
+qQ
+qQ
+sj
 XX
 XX
 XX
@@ -96723,17 +96791,17 @@ XX
 XX
 XX
 XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
+sj
+Zr
+Zr
+Zr
+de
+qQ
+qQ
+Cq
+qQ
+sj
+sj
 XX
 XX
 XX
@@ -96980,16 +97048,16 @@ XX
 XX
 XX
 XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
+sj
+OD
+Zr
+Zr
+de
+qQ
+qQ
+qQ
+qQ
+sj
 XX
 XX
 XX
@@ -97237,17 +97305,17 @@ XX
 XX
 XX
 XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
+sj
+Zr
+Zr
+Zr
+de
+qQ
+wb
+wb
+wb
+sj
+sj
 XX
 XX
 XX
@@ -97494,17 +97562,17 @@ XX
 XX
 XX
 XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
+sj
+sj
+Zr
+Zr
+de
+qQ
+wb
+qQ
+qQ
+qQ
+sj
 XX
 XX
 XX
@@ -97752,16 +97820,16 @@ XX
 XX
 XX
 XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
+sj
+sj
+sj
+Dm
+EY
+qQ
+qQ
+qQ
+qQ
+sj
 XX
 XX
 XX
@@ -98011,14 +98079,14 @@ XX
 XX
 XX
 XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
+sj
+sj
+sj
+sj
+qQ
+qQ
+qQ
+sj
 XX
 XX
 XX
@@ -98271,11 +98339,11 @@ XX
 XX
 XX
 XX
-XX
-XX
-XX
-XX
-XX
+sj
+sj
+sj
+sj
+sj
 XX
 XX
 XX
@@ -164033,7 +164101,7 @@ XX
 XX
 XX
 XX
-XX
+lY
 lY
 lY
 lY
@@ -164290,7 +164358,7 @@ XX
 XX
 XX
 XX
-XX
+NF
 NF
 NF
 NF
@@ -164547,7 +164615,7 @@ XX
 XX
 XX
 XX
-XX
+NF
 NF
 NF
 NF
@@ -164804,11 +164872,11 @@ XX
 XX
 XX
 XX
-XX
 lY
 lY
-lY
-lY
+NF
+NF
+NF
 lY
 lY
 lY
@@ -165062,11 +165130,11 @@ XX
 XX
 XX
 XX
-XX
-XX
-XX
-XX
-XX
+lY
+NF
+NF
+NF
+lY
 XX
 XX
 lY
@@ -165319,11 +165387,11 @@ XX
 XX
 XX
 XX
-XX
-XX
-XX
-XX
-XX
+lY
+NF
+NF
+NF
+lY
 XX
 XX
 lY
@@ -165576,11 +165644,11 @@ XX
 XX
 XX
 XX
-XX
-XX
-XX
-XX
-XX
+lY
+NF
+NF
+NF
+lY
 XX
 XX
 XX
@@ -165833,11 +165901,11 @@ XX
 XX
 XX
 XX
-XX
-XX
-XX
-XX
-XX
+lY
+NF
+NF
+NF
+lY
 XX
 XX
 XX
@@ -166090,14 +166158,14 @@ XX
 XX
 XX
 XX
+lY
+NF
+NF
+NF
+lY
 XX
 XX
-XX
-XX
-XX
-XX
-XX
-XX
+lY
 lY
 Lw
 NF
@@ -166348,14 +166416,14 @@ XX
 XX
 XX
 XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
+NF
+NF
+NF
 lY
+lY
+lY
+lY
+Lw
 Lw
 NF
 Lw
@@ -166605,15 +166673,15 @@ XX
 XX
 XX
 XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-lY
-Lw
+NF
+NF
+NF
+NF
+NF
+NF
+fJ
+NF
+NF
 NF
 Lw
 lY
@@ -166862,14 +166930,14 @@ XX
 XX
 XX
 XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
 lY
+lY
+lY
+lY
+lY
+lY
+lY
+Lw
 Lw
 Lw
 Lw
@@ -167125,7 +167193,7 @@ XX
 XX
 XX
 XX
-XX
+lY
 lY
 Lw
 Lw

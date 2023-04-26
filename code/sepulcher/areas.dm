@@ -6,10 +6,12 @@
 	icon_state = "dark128"
 	dynamic_lighting = DYNAMIC_LIGHTING_DISABLED
 
+//			 //
+// EXTERIORS //
+//			 //
 /area/exterior
 	name = "EXTERIOR"
 	icon_state = "city"
-	ambientsounds = list('sound/f13ambience/battle_1.ogg','sound/f13ambience/battle_2.ogg','sound/f13ambience/battle_3.ogg')
 	outdoors = 1
 	dynamic_lighting = DYNAMIC_LIGHTING_FORCED
 	flags_1 = CAN_BE_DIRTY_1
@@ -35,7 +37,6 @@
 /area/interior
 	name = "INTERIOR"
 	icon_state = "interior"
-	ambientsounds = list('sound/f13ambience/battle_1.ogg','sound/f13ambience/battle_2.ogg','sound/f13ambience/battle_3.ogg')
 	outdoors = 0
 	dynamic_lighting = DYNAMIC_LIGHTING_FORCED
 	flags_1 = CAN_BE_DIRTY_1
@@ -93,4 +94,4 @@
 	icon_state = "sewer"
 	ambientsounds = list('sound/f13ambience/battle_1.ogg','sound/f13ambience/battle_2.ogg','sound/f13ambience/battle_3.ogg')
 	ambient_environment = list('sound/ambience/sewer/moan1.ogg','sound/ambience/sewer/muffled_cry1.ogg','sound/ambience/sewer/scared_breathing1.ogg','sound/ambience/sewer/scared_breathing2.ogg')
-	ambient_background = list('sound/ambience/sewer/sewer_loop.ogg' = 100)
+	ambient_background = list('sound/ambience/sewer/sewer_loop.ogg' = 10)

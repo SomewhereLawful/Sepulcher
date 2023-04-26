@@ -187,6 +187,12 @@
 	icon_state = "churchfence"
 	cuttable= FALSE
 
+/obj/structure/fence/church/post
+	icon_state = "churchfencepost"
+
+/obj/structure/fence/church/end
+	icon_state = "churchfenceend"
+
 /obj/structure/fence/sewer_grate
 	name = "sewer grate"
 	desc = null
