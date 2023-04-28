@@ -15,7 +15,7 @@
 	outdoors = 1
 	dynamic_lighting = DYNAMIC_LIGHTING_FORCED
 	flags_1 = CAN_BE_DIRTY_1
-	ambient_background = list('sound/ambience/city_wind2.ogg' = 10)
+	ambient_background = list('sound/ambience/city_wind2.ogg' = 100)
 
 /area/exterior/city
 	name = "City Streets"
@@ -29,7 +29,8 @@
 
 /area/exterior/wastes
 	name = "The Wastes"
-	icon_state = "city"
+	icon_state = "wastes"
+	ambient_background = list('sound/ambience/wasteland/wasteland_wind.ogg' = 100)
 
 //			 //
 // INTERIORS //
@@ -94,4 +95,4 @@
 	icon_state = "sewer"
 	ambientsounds = list('sound/f13ambience/battle_1.ogg','sound/f13ambience/battle_2.ogg','sound/f13ambience/battle_3.ogg')
 	ambient_environment = list('sound/ambience/sewer/moan1.ogg','sound/ambience/sewer/muffled_cry1.ogg','sound/ambience/sewer/scared_breathing1.ogg','sound/ambience/sewer/scared_breathing2.ogg')
-	ambient_background = list('sound/ambience/sewer/sewer_loop.ogg' = 10)
+	ambient_background = list('sound/ambience/sewer/sewer_tone.ogg' = 100)

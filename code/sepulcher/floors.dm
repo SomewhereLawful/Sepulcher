@@ -133,3 +133,11 @@
 	if(icon_state == "woodd1")
 		icon_state = "woodd[rand(1,25)]"
 	..()
+
+/turf/open/indestructible/ground/floor/stairs
+	name = "stairs"
+	icon_state = "stairsup"
+	gender = PLURAL
+
+/turf/open/indestructible/ground/floor/stairs/down
+	icon_state = "stairsdown"
