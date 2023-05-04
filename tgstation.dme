@@ -2766,6 +2766,7 @@
 #include "code\modules\WVM\wvm.dm"
 #include "code\modules\zombie\items.dm"
 #include "code\modules\zombie\organs.dm"
+#include "code\sepulcher\animals.dm"
 #include "code\sepulcher\areas.dm"
 #include "code\sepulcher\fishing.dm"
 #include "code\sepulcher\floor_effects.dm"
