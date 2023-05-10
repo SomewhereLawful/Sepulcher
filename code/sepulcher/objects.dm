@@ -18,13 +18,13 @@
 
 /obj/structure/table/stalker
 	name = "table"
-	desc = "A square piece of metal standing on four metal legs. It can not move."
+	desc = null
 	icon = 'icons/obj/smooth_structures/stol_stalker.dmi'
 	icon_state = "stol"
 
 /obj/structure/table/bar
 	name = "table"
-	desc = "A square piece of metal standing on four metal legs. It can not move."
+	desc = null
 	icon = 'icons/obj/smooth_structures/stol_stalker_bar.dmi'
 	icon_state = "bar"
 
@@ -159,6 +159,8 @@
 
 /obj/structure/decor/waste
 	name = "waste"
+	desc = "Worthless and useless."
+	gender = PLURAL
 	icon_state = "trash1"
 	density = FALSE
 
@@ -171,6 +173,8 @@
 
 /obj/structure/decor/cig_trash
 	name = "debris"
+	desc = "Nails long since immolated and picked over."
+	gender = PLURAL
 	icon_state = "cig_trash1"
 	density = FALSE
 
