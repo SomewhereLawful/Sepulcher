@@ -354,10 +354,6 @@
 	},
 /turf/open/indestructible/ground/outside/road,
 /area/exterior/city/docks)
-"hK" = (
-/obj/structure/closet/crate/trashcart,
-/turf/open/indestructible/ground/outside/road,
-/area/exterior)
 "hW" = (
 /obj/structure/simple_door/bunker,
 /turf/open/floor/f13{
@@ -32235,7 +32231,7 @@ Pq
 Pq
 Pq
 Pq
-hK
+Oe
 uE
 XX
 XX
@@ -32492,7 +32488,7 @@ Pq
 Pq
 Pq
 Pq
-hK
+Oe
 uE
 XX
 XX
