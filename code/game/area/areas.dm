@@ -74,6 +74,9 @@
 	/// Plays a sound constantly in the area, abit finicky and needs a '= num' at the end of the file
 	var/list/ambient_background = null
 
+	var/narrate //A text-based description of what this area is for.
+	var/list/blurbed_stated_to = list() //This list of names is here to make sure we don't state our descriptive blurb to a person more than once.
+
 /*Adding a wizard area teleport list because motherfucking lag -- Urist*/
 /*I am far too lazy to make it a proper list of areas so I'll just make it run the usual telepot routine at the start of the game*/
 GLOBAL_LIST_EMPTY(teleportlocs)
@@ -447,6 +450,8 @@ GLOBAL_LIST_EMPTY(teleportlocs)
 			L.client.played = TRUE
 			addtimer(CALLBACK(L.client, /client/proc/ResetAmbiencePlayed), 600)
 
+	do_area_blurb(L)
+
 /area/Exited(atom/movable/M)
 	SEND_SIGNAL(src, COMSIG_AREA_EXITED, M)
 	SEND_SIGNAL(M, COMSIG_EXIT_AREA, src) //The atom that exits the area
@@ -513,3 +518,14 @@ GLOBAL_LIST_EMPTY(teleportlocs)
 // A hook so areas can modify the incoming args
 /area/proc/PlaceOnTopReact(list/new_baseturfs, turf/fake_turf_type, flags)
 	return flags
+
+/area/proc/do_area_blurb(var/mob/living/L)
+	if(!narrate)
+		return
+/*
+	if(L.client.prefs.toggles &! CHAT_SEE_AREA_BLURBS)  I would've left this active but figuring how to create a preference in the new system turned too painful - Cryleve
+		return
+*/
+	if(!(L.ckey in blurbed_stated_to))
+		blurbed_stated_to += L.ckey
+		to_chat(L,("[narrate]"))

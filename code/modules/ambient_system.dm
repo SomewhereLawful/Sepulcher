@@ -26,7 +26,6 @@
 		client.music = null
 
 	if(client.background && !client.background.transition && !(client.background.file in A.ambient_background))
-
 		client.background.Transition(src)
 		client.background = null
 

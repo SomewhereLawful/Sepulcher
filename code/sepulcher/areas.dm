@@ -31,6 +31,7 @@
 	name = "The Wastes"
 	icon_state = "wastes"
 	ambient_background = list('sound/ambience/wasteland/wasteland_wind.ogg' = 100)
+	narrate = "Red damp sand and burnt wooden spires stretch to the horizon. Birds glide amoungst the trees, looking for a meal."
 
 //			 //
 // INTERIORS //
@@ -95,4 +96,5 @@
 	icon_state = "sewer"
 	ambientsounds = list('sound/f13ambience/battle_1.ogg','sound/f13ambience/battle_2.ogg','sound/f13ambience/battle_3.ogg')
 	ambient_environment = list('sound/ambience/sewer/moan1.ogg','sound/ambience/sewer/muffled_cry1.ogg','sound/ambience/sewer/scared_breathing1.ogg','sound/ambience/sewer/scared_breathing2.ogg')
-	ambient_background = list('sound/ambience/sewer/sewer_tone.ogg' = 100)
+	ambient_background = list('sound/ambience/sewer/pipe1.ogg' = 100)
+	narrate = "The unmistakable odour of decaying waste bombards your nostrils."
