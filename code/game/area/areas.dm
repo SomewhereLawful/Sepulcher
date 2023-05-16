@@ -74,7 +74,8 @@
 	/// Plays a sound constantly in the area, abit finicky and needs a '= num' at the end of the file
 	var/list/ambient_background = null
 
-	var/narrate //A text-based description of what this area is for.
+	///A text-based description of what this area is for.
+	var/narrate
 	var/list/blurbed_stated_to = list() //This list of names is here to make sure we don't state our descriptive blurb to a person more than once.
 
 /*Adding a wizard area teleport list because motherfucking lag -- Urist*/

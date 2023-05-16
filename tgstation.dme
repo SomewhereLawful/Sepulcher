@@ -2784,6 +2784,7 @@
 #include "code\sepulcher\consumables\food.dm"
 #include "code\sepulcher\consumables\medicine.dm"
 #include "code\sepulcher\objects\effects\floor_effects.dm"
+#include "code\sepulcher\objects\effects\general_effects.dm"
 #include "code\sepulcher\objects\effects\spawners.dm"
 #include "code\sepulcher\objects\items\items.dm"
 #include "code\sepulcher\objects\items\parasite.dm"
