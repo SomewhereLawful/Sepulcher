@@ -2791,6 +2791,7 @@
 #include "code\sepulcher\objects\items\weaponry\biological.dm"
 #include "code\sepulcher\objects\items\weaponry\guns.dm"
 #include "code\sepulcher\objects\items\weaponry\melee.dm"
+#include "code\sepulcher\objects\structures\barrier.dm"
 #include "code\sepulcher\objects\structures\foundry.dm"
 #include "code\sepulcher\objects\structures\laundrybin.dm"
 #include "code\sepulcher\objects\structures\objects.dm"

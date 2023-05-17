@@ -2,7 +2,6 @@
 
 /turf/closed/wall
 	name = "wall"
-	desc = "A huge chunk of metal used to separate rooms."
 	icon = 'icons/turf/walls/wall.dmi'
 	icon_state = "wall"
 	explosion_block = 1

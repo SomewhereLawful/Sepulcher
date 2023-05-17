@@ -59,3 +59,18 @@
 		/obj/item/food/fish/crab = 50,
 		/obj/item/food/fish/axlotl = 40,
 		/obj/item/food/fish/burrower = 10)
+
+/obj/effect/spawner/fishing_spot_random
+	name = "fishing spot spawner"
+	icon = 'icons/effects/landmarks_static.dmi'
+	icon_state = "x2"
+	var/fishing_spot_type = /obj/structure/fishing_spot
+
+/obj/effect/spawner/fishing_spot_random/Initialize(mapload)
+	. = ..()
+	if(prob(20))
+		new fishing_spot_type(get_turf(src))
+	return INITIALIZE_HINT_QDEL
+
+/obj/effect/spawner/fishing_spot_random/sewer
+	fishing_spot_type = /obj/structure/fishing_spot/sewer
