@@ -718,7 +718,7 @@
 /turf/open/indestructible/ground/outside/road,
 /area/exterior)
 "oS" = (
-/obj/item/food/goyslop,
+/obj/item/consumable/goyslop,
 /turf/open/indestructible/ground/outside/road,
 /area/exterior)
 "oY" = (

@@ -2,13 +2,13 @@
 // Found outside city limits, Bioslaves or proles go and pull parts out
 // Risk of lacerating yourself, dependent on position (bioslave (highest) - prole (lowest) //
 
-/obj/item/food/scrap // edible, for fun
+/obj/item/consumable/scrap
 	name = "scrap piece"
 	desc = "Some broken metal of unknown origin."
 	icon_state = "scrap1"
 	feed_points = 2
 
-/obj/item/food/scrap/New()
+/obj/item/consumable/scrap/New()
 	..()
 	icon_state = "scrap[rand(1,2)]"
 
@@ -52,7 +52,7 @@
 					to_chat(user, "<span class='red'>You jagged yourself and lost grip on the scrap.</span>")
 					return
 
-		var/obj/item/food/scrap/S = new /obj/item/food/scrap
+		var/obj/item/consumable/scrap/S = new /obj/item/consumable/scrap
 		user.put_in_active_hand(S)
 		scrap_health--
 		if(scrap_health == 0)
@@ -65,7 +65,7 @@
 	..()
 
 /obj/structure/scrapheap/attackby(obj/item/O, mob/user, params) // Instead of burning the excess, just put it back
-	if(/obj/item/food/scrap)
+	if(/obj/item/consumable/scrap)
 		scrap_health++
 		to_chat(user, "You toss the scrap into the pile.")
 		playsound(src, 'sound/effects/junk_rustling.ogg', 50, 0)

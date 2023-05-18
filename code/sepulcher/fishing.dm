@@ -34,10 +34,10 @@
 	anchored = TRUE
 	var/spot_life = null
 	var/list/fish_list = list(
-			/obj/item/food/fish = 25,
-			/obj/item/food/fish/sturgeon = 25,
-			/obj/item/food/fish/crab = 25,
-			/obj/item/food/fish/lamprey = 25)
+			/obj/item/consumable/fish = 25,
+			/obj/item/consumable/fish/sturgeon = 25,
+			/obj/item/consumable/fish/crab = 25,
+			/obj/item/consumable/fish/lamprey = 25)
 
 /obj/structure/fishing_spot/Initialize()
 	spot_life = rand(5,13)
@@ -56,9 +56,9 @@
 	icon = 'icons/obj/fishing.dmi'
 	icon_state = "fishing_spot" // this sprite gives me cancer
 	fish_list = list(
-		/obj/item/food/fish/crab = 50,
-		/obj/item/food/fish/axlotl = 40,
-		/obj/item/food/fish/burrower = 10)
+		/obj/item/consumable/fish/crab = 50,
+		/obj/item/consumable/fish/axlotl = 40,
+		/obj/item/consumable/fish/burrower = 10)
 
 /obj/effect/spawner/fishing_spot_random
 	name = "fishing spot spawner"

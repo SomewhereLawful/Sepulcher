@@ -1,11 +1,12 @@
 // Shitheaps //
 // Cart shit to heap -> Add to heap -> Add water -> collect mushrooms //
 
-/obj/item/food/dung // How to get parasites 101 - eat poop
+/obj/item/consumable/dung
 	name = "shit gobbet"
 	desc = "A filthy mass of waste. It piles nicely, so wet and repugnant."
 	icon_state = "poop"
 	feed_points = 10
+	toxicity_points = 20
 
 /obj/item/water_adder
 	name = "water adding item"
@@ -48,7 +49,7 @@
 
 
 /obj/structure/shitheap/attackby(obj/item/I, mob/user, params)
-	if(/obj/item/food/dung)
+	if(/obj/item/consumable/dung)
 		to_chat(user, "You add some dung to the heap.")
 		playsound(src, 'sound/effects/blobattack.ogg', 50, 0)
 		qdel(I)
