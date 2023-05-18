@@ -86,7 +86,7 @@
 				return
 		
 //Handle ingestion of the item.
-		playsound(M.loc, eat_sound, rand(10,50))
+		playsound(M.loc, eat_sound, 60)
 		M.adjustBruteLoss(health_points) // It just works
 		M.adjustHunger(feed_points *= 10) // It just works
 		M.adjustWillLoss(will_points)

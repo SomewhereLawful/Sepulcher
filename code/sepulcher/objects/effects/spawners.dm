@@ -1,8 +1,8 @@
 //contents
-// 1 - mob_spawn
-// 2 - latejoin
+// (1 - mob_spawn
+// (2 - latejoin
 
-// Spawners//
+// Spawners // (1
 /obj/effect/mob_spawn/human/bioslave
 	name = "enslaved birthing womb"
 	desc = "Where all city-dwellers begin."
@@ -14,11 +14,9 @@
 	death = FALSE
 	uses = -1
 	mob_gender = MALE
-	mob_species = /datum/species/bioslave
 	flavour_text = "<span class='danger'><b>Birthed whole, you awake from dreams of soft, undefiled life. You are little more than rough, callous flesh without purpose. Get to carting shit and scrap metal.</b></span>"
 	assignedrole = "Bioslave"
-
-	uniform = /obj/item/clothing/under/pants/bioslave_rags
+	outfit = /datum/outfit/city/bioslave
 
 /obj/effect/mob_spawn/human/prole
 	name = "utilitarian birthing machine"
@@ -61,7 +59,6 @@
 	roundstart = FALSE
 	death = FALSE
 	uses = -1
-	mob_species = /datum/species/proletariat
 	flavour_text = ""
 	assignedrole = "Cleanser"
 	outfit = /datum/outfit/city/cleanser
@@ -77,7 +74,6 @@
 	death = FALSE
 	uses = -1
 	mob_gender = MALE
-	mob_species = /datum/species/kommandant
 	flavour_text = ""
 	assignedrole = "Kommandant"
 	outfit = /datum/outfit/city/kommandant
@@ -98,7 +94,7 @@
 	flavour_text = ""
 	assignedrole = "Vagrant"
 
-// Below this point is latejoins
+// latejoins (2
 /obj/effect/landmark/latejoin/bioslave
 	name = "JoinLateBioslave"
 

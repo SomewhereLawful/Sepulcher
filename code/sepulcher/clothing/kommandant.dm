@@ -1,3 +1,7 @@
+// Kommandant Outfit //
+// Put all together here cause it's
+// just one outfit for this job
+
 /obj/item/clothing/head/kommandant
 	name = "faded furazhka"
 	desc = "Authority avatar, set upon your head and secured with steel thread."
