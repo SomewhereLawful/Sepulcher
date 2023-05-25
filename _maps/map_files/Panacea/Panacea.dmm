@@ -4,13 +4,13 @@
 	dir = 9
 	},
 /turf/open/indestructible/ground/outside/road,
-/area/exterior)
+/area/exterior/city)
 "at" = (
 /obj/effect/turf_decal/line{
 	dir = 8
 	},
 /turf/open/indestructible/ground/outside/desert,
-/area/exterior)
+/area/exterior/city)
 "az" = (
 /obj/effect/particle_effect/smoke/reality_edge,
 /turf/closed/indestructible/nothing,
@@ -42,7 +42,7 @@
 "aU" = (
 /obj/structure/campfire/drum,
 /turf/open/indestructible/ground/outside/sidewalk/tile,
-/area/exterior)
+/area/exterior/city)
 "aY" = (
 /obj/effect/landmark/latejoin/cleanser,
 /turf/open/floor/f13{
@@ -61,6 +61,10 @@
 	icon_state = "floorrusty"
 	},
 /area/interior/city)
+"by" = (
+/obj/structure/decor/wood_scrap,
+/turf/open/indestructible/ground/outside/road,
+/area/exterior/city)
 "bN" = (
 /turf/closed/wall/brickdark,
 /area/interior/train_yard)
@@ -76,12 +80,19 @@
 	dir = 4
 	},
 /turf/open/indestructible/ground/outside/road,
-/area/exterior)
+/area/exterior/city)
 "cb" = (
 /obj/structure/decoration/hatch,
 /obj/effect/turf_decal/line,
 /turf/open/indestructible/ground/outside/road,
-/area/exterior)
+/area/exterior/city)
+"co" = (
+/obj/structure/decor/tire{
+	icon_state = "shina3";
+	pixel_x = -6
+	},
+/turf/open/indestructible/ground/outside/road,
+/area/exterior/city)
 "cA" = (
 /turf/open/floor/f13{
 	tag = "icon-floorrusty";
@@ -112,6 +123,10 @@
 	},
 /turf/open/indestructible/ground/floor/wood_floor,
 /area/interior/spawning/kommandant)
+"dc" = (
+/obj/structure/decor/spool,
+/turf/open/indestructible/ground/outside/road,
+/area/exterior/city)
 "de" = (
 /obj/effect/turf_decal/line{
 	dir = 1
@@ -135,7 +150,7 @@
 	dir = 4
 	},
 /turf/open/indestructible/ground/outside/road,
-/area/exterior)
+/area/exterior/city)
 "dJ" = (
 /obj/structure/decor/spool{
 	pixel_y = 15;
@@ -146,7 +161,7 @@
 	pixel_x = -5
 	},
 /turf/open/indestructible/ground/outside/road,
-/area/exterior)
+/area/exterior/city)
 "dZ" = (
 /obj/structure/fence/post{
 	dir = 4
@@ -175,7 +190,7 @@
 	dir = 4
 	},
 /turf/open/indestructible/ground/outside/road,
-/area/exterior)
+/area/exterior/city)
 "eB" = (
 /obj/structure/decor/carpet{
 	icon_state = "oldcovertattered"
@@ -204,7 +219,7 @@
 "eO" = (
 /obj/structure/decor/wood_scrap,
 /turf/open/indestructible/ground/outside/sidewalk/tile,
-/area/exterior)
+/area/exterior/city)
 "eT" = (
 /obj/effect/turf_decal/line{
 	dir = 8
@@ -213,14 +228,14 @@
 	dir = 8
 	},
 /turf/open/indestructible/ground/outside/dirt,
-/area/exterior)
+/area/exterior/city)
 "eX" = (
 /obj/structure/decor/dump_bin/full{
 	pixel_x = -11;
 	pixel_y = 10
 	},
 /turf/open/indestructible/ground/outside/road,
-/area/exterior)
+/area/exterior/city)
 "eY" = (
 /turf/closed/wall/bricks_white,
 /area/interior/spawning/bioslave)
@@ -230,7 +245,7 @@
 /area/interior/foundry)
 "ft" = (
 /turf/open/indestructible/ground/outside/waste,
-/area/exterior)
+/area/exterior/city)
 "fx" = (
 /obj/structure/simple_door/room,
 /turf/open/indestructible/ground/outside/sidewalk/tile,
@@ -280,7 +295,7 @@
 	pixel_y = 11
 	},
 /turf/open/indestructible/ground/outside/road,
-/area/exterior)
+/area/exterior/city)
 "gu" = (
 /obj/structure/simple_door/room,
 /turf/open/floor/f13{
@@ -319,7 +334,7 @@
 /obj/structure/campfire/drum,
 /obj/effect/turf_decal/line,
 /turf/open/indestructible/ground/outside/road,
-/area/exterior)
+/area/exterior/city)
 "hh" = (
 /obj/effect/turf_decal/line{
 	dir = 8
@@ -339,13 +354,13 @@
 	pixel_y = 4
 	},
 /turf/open/indestructible/ground/outside/road,
-/area/exterior)
+/area/exterior/city)
 "hs" = (
 /obj/structure/decor/spool{
 	pixel_y = -4
 	},
 /turf/open/indestructible/ground/outside/sidewalk/tile,
-/area/exterior)
+/area/exterior/city)
 "hB" = (
 /obj/effect/turf_decal/roadline/noshadow/corner{
 	dir = 4
@@ -401,17 +416,17 @@
 	pixel_x = 4
 	},
 /turf/open/indestructible/ground/outside/road,
-/area/exterior)
+/area/exterior/city)
 "iE" = (
 /obj/structure/fence/church/post,
 /turf/open/indestructible/ground/outside/road,
-/area/exterior)
+/area/exterior/city)
 "iJ" = (
 /obj/effect/turf_decal/line{
 	dir = 5
 	},
 /turf/open/indestructible/ground/outside/road,
-/area/exterior)
+/area/exterior/city)
 "iS" = (
 /obj/machinery/door/poddoor/preopen,
 /turf/open/floor/f13{
@@ -424,7 +439,7 @@
 	dir = 8
 	},
 /turf/open/indestructible/ground/outside/sidewalk/stairs,
-/area/exterior)
+/area/exterior/city)
 "ja" = (
 /obj/machinery/conveyor_switch/oneway,
 /turf/open/floor/f13{
@@ -452,7 +467,14 @@
 	dir = 1
 	},
 /turf/open/indestructible/ground/outside/dirt,
-/area/exterior)
+/area/exterior/city)
+"jr" = (
+/obj/structure/decor/wood_scrap,
+/obj/structure/decor/dump_bin/full{
+	pixel_x = -13
+	},
+/turf/open/indestructible/ground/outside/road,
+/area/exterior/city)
 "jv" = (
 /obj/structure/simple_door/bunker/glass,
 /turf/open/floor/f13{
@@ -525,11 +547,11 @@
 /obj/effect/turf_decal/line,
 /obj/structure/flora/tree/tall,
 /turf/open/indestructible/ground/outside/dirt,
-/area/exterior)
+/area/exterior/city)
 "kO" = (
 /obj/structure/decor/dump_bin/red,
 /turf/open/indestructible/ground/outside/road,
-/area/exterior)
+/area/exterior/city)
 "kY" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -548,7 +570,7 @@
 	dir = 4
 	},
 /turf/open/indestructible/ground/outside/road,
-/area/exterior)
+/area/exterior/city)
 "ly" = (
 /turf/closed/wall/ship_hull{
 	icon_state = "hull6"
@@ -560,7 +582,7 @@
 "lD" = (
 /obj/effect/turf_decal/line,
 /turf/open/indestructible/ground/outside/road,
-/area/exterior)
+/area/exterior/city)
 "lF" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -598,11 +620,11 @@
 	id = "Sew4"
 	},
 /turf/open/indestructible/ground/outside/road,
-/area/exterior)
+/area/exterior/city)
 "mk" = (
 /obj/structure/table/bar,
 /turf/open/indestructible/ground/outside/road,
-/area/exterior)
+/area/exterior/city)
 "mp" = (
 /obj/structure/decor/spool{
 	pixel_y = 16;
@@ -613,7 +635,7 @@
 	pixel_x = -2
 	},
 /turf/open/indestructible/ground/outside/road,
-/area/exterior)
+/area/exterior/city)
 "mr" = (
 /turf/closed/wall/beton,
 /area/interior/city)
@@ -668,7 +690,7 @@
 	pixel_y = 29
 	},
 /turf/open/indestructible/ground/outside/road,
-/area/exterior)
+/area/exterior/city)
 "nT" = (
 /obj/structure/bed/mattress,
 /obj/effect/turf_decal/line{
@@ -693,7 +715,7 @@
 /turf/open/indestructible/ground/outside/sidewalk/stairs{
 	dir = 1
 	},
-/area/exterior)
+/area/exterior/city)
 "oI" = (
 /obj/structure/decor/apc{
 	pixel_y = 29
@@ -706,27 +728,31 @@
 "oJ" = (
 /obj/structure/decor/dump_bin,
 /turf/open/indestructible/ground/outside/road,
-/area/exterior)
+/area/exterior/city)
 "oO" = (
 /turf/open/indestructible/ground/outside/dirt,
-/area/exterior)
+/area/exterior/city)
 "oR" = (
 /obj/structure/ladder/unbreakable{
 	height = 1;
 	id = "Sew3"
 	},
 /turf/open/indestructible/ground/outside/road,
-/area/exterior)
-"oS" = (
-/obj/item/consumable/goyslop,
-/turf/open/indestructible/ground/outside/road,
-/area/exterior)
+/area/exterior/city)
 "oY" = (
 /obj/machinery/light/small{
 	dir = 8
 	},
 /turf/open/indestructible/ground/floor/lattice,
 /area/interior/spawning/bougie)
+"pa" = (
+/obj/structure/decor/tire{
+	icon_state = "shina5";
+	pixel_x = 8;
+	pixel_y = 9
+	},
+/turf/open/indestructible/ground/outside/road,
+/area/exterior/city)
 "pm" = (
 /obj/effect/step_trigger/teleporter{
 	teleport_x = 162;
@@ -834,7 +860,7 @@
 	dir = 9
 	},
 /turf/open/indestructible/ground/outside/dirt,
-/area/exterior)
+/area/exterior/city)
 "qN" = (
 /obj/structure/barricade/bars,
 /turf/open/floor/f13{
@@ -848,7 +874,7 @@
 "rg" = (
 /obj/effect/landmark/latejoin,
 /turf/open/indestructible/ground/outside/road,
-/area/exterior)
+/area/exterior/city)
 "rI" = (
 /obj/effect/particle_effect/smoke/reality_edge,
 /obj/structure/flora/tree/tall,
@@ -867,11 +893,11 @@
 	dir = 4
 	},
 /turf/open/indestructible/ground/outside/road,
-/area/exterior)
+/area/exterior/city)
 "sa" = (
 /obj/structure/decor/waste,
 /turf/open/indestructible/ground/outside/road,
-/area/exterior)
+/area/exterior/city)
 "sc" = (
 /obj/structure/simple_door/room,
 /turf/open/floor/f13{
@@ -882,7 +908,7 @@
 "sh" = (
 /obj/structure/decor/grave,
 /turf/open/indestructible/ground/outside/dirt,
-/area/exterior)
+/area/exterior/city)
 "sj" = (
 /turf/closed/wall/brickdark,
 /area/interior/city)
@@ -891,7 +917,7 @@
 /area/interior/spawning/kommandant)
 "sJ" = (
 /turf/closed/wall/ship_hull,
-/area/exterior)
+/area/exterior/city)
 "sO" = (
 /obj/structure/table,
 /obj/machinery/light{
@@ -942,7 +968,7 @@
 	},
 /obj/structure/decor/wood_scrap,
 /turf/open/indestructible/ground/outside/road,
-/area/exterior)
+/area/exterior/city)
 "tq" = (
 /obj/machinery/light/small,
 /turf/open/floor/f13{
@@ -962,7 +988,7 @@
 	icon_state = "watertank2"
 	},
 /turf/open/indestructible/ground/outside/road,
-/area/exterior)
+/area/exterior/city)
 "tB" = (
 /obj/structure/decor/saint_icon{
 	pixel_x = -8;
@@ -981,7 +1007,7 @@
 "tH" = (
 /obj/effect/landmark/observer_start,
 /turf/open/indestructible/ground/outside/road,
-/area/exterior)
+/area/exterior/city)
 "tL" = (
 /obj/structure/decor/carpet{
 	icon_state = "oldcovertatteredtwo"
@@ -1057,14 +1083,14 @@
 	icon_state = "shina5"
 	},
 /turf/open/indestructible/ground/outside/road,
-/area/exterior)
+/area/exterior/city)
 "va" = (
 /obj/structure/ladder/unbreakable{
 	height = 1;
 	id = "Sew1"
 	},
 /turf/open/indestructible/ground/outside/road,
-/area/exterior)
+/area/exterior/city)
 "ve" = (
 /obj/effect/decal/waste{
 	tag = "icon-goo5";
@@ -1131,7 +1157,7 @@
 /obj/effect/turf_decal/line,
 /obj/structure/decor/cig_trash,
 /turf/open/indestructible/ground/outside/road,
-/area/exterior)
+/area/exterior/city)
 "vH" = (
 /obj/structure/simple_door/room,
 /obj/structure/barricade/wooden/planks,
@@ -1174,7 +1200,7 @@
 	},
 /obj/structure/decor/waste,
 /turf/open/indestructible/ground/outside/road,
-/area/exterior)
+/area/exterior/city)
 "ww" = (
 /obj/machinery/light{
 	dir = 1
@@ -1234,7 +1260,7 @@
 "xv" = (
 /obj/structure/fluff/rails,
 /turf/open/indestructible/ground/outside/desert,
-/area/exterior)
+/area/exterior/city)
 "xO" = (
 /obj/structure/table,
 /obj/item/gun/ballistic/revolver/nagant,
@@ -1252,7 +1278,7 @@
 "xS" = (
 /obj/structure/fluff/plaza_statue,
 /turf/open/indestructible/ground/outside/road,
-/area/exterior)
+/area/exterior/city)
 "ye" = (
 /obj/structure/table,
 /turf/open/indestructible/ground/floor/wood_floor,
@@ -1271,7 +1297,7 @@
 /area/exterior/wastes)
 "yu" = (
 /turf/open/indestructible/ground/floor/lattice,
-/area/exterior)
+/area/exterior/city)
 "yD" = (
 /obj/structure/rack,
 /turf/open/floor/f13{
@@ -1285,7 +1311,7 @@
 	pixel_y = 29
 	},
 /turf/open/indestructible/ground/outside/road,
-/area/exterior)
+/area/exterior/city)
 "yN" = (
 /obj/structure/rack,
 /turf/open/floor/f13{
@@ -1330,7 +1356,7 @@
 	dir = 8
 	},
 /turf/open/indestructible/ground/outside/road,
-/area/exterior)
+/area/exterior/city)
 "zj" = (
 /obj/machinery/button/door{
 	id = 12;
@@ -1373,6 +1399,10 @@
 	icon_state = "floorrusty"
 	},
 /area/interior/city)
+"zX" = (
+/obj/structure/decor/tire,
+/turf/open/indestructible/ground/outside/road,
+/area/exterior/city)
 "Au" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -1387,7 +1417,7 @@
 	dir = 5
 	},
 /turf/open/indestructible/ground/outside/dirt,
-/area/exterior)
+/area/exterior/city)
 "Ax" = (
 /obj/effect/turf_decal/roadline/noshadow{
 	dir = 5
@@ -1401,7 +1431,7 @@
 /turf/open/indestructible/ground/outside/sidewalk/stairs{
 	dir = 1
 	},
-/area/exterior)
+/area/exterior/city)
 "AL" = (
 /obj/effect/turf_decal/roadline/noshadow{
 	dir = 8
@@ -1420,7 +1450,7 @@
 "AP" = (
 /obj/structure/decor/dump_bin/full,
 /turf/open/indestructible/ground/outside/road,
-/area/exterior)
+/area/exterior/city)
 "Be" = (
 /obj/structure/closet/crate/dumpster,
 /turf/open/indestructible/ground/outside/road,
@@ -1447,13 +1477,13 @@
 	dir = 1
 	},
 /turf/open/indestructible/ground/outside/road,
-/area/exterior)
+/area/exterior/city)
 "BH" = (
 /obj/effect/turf_decal/line{
 	dir = 6
 	},
 /turf/open/indestructible/ground/outside/dirt,
-/area/exterior)
+/area/exterior/city)
 "BL" = (
 /turf/closed/wall/bricks_white,
 /area/interior/city)
@@ -1482,11 +1512,11 @@
 	},
 /obj/structure/decor/cig_trash,
 /turf/open/indestructible/ground/outside/road,
-/area/exterior)
+/area/exterior/city)
 "Cj" = (
 /obj/structure/decor/dump_bin/red/full,
 /turf/open/indestructible/ground/outside/road,
-/area/exterior)
+/area/exterior/city)
 "Cq" = (
 /obj/structure/table/bar,
 /turf/open/indestructible/ground/floor/wood_floor/horizontal,
@@ -1495,10 +1525,10 @@
 /obj/structure/closet/crate/miningcar,
 /obj/effect/turf_decal/line,
 /turf/open/indestructible/ground/outside/dirt,
-/area/exterior)
+/area/exterior/city)
 "CR" = (
 /turf/open/indestructible/ground/outside/desert,
-/area/exterior)
+/area/exterior/city)
 "CZ" = (
 /obj/structure/chair/pew{
 	dir = 1
@@ -1667,7 +1697,7 @@
 	dir = 1
 	},
 /turf/open/indestructible/ground/outside/road,
-/area/exterior)
+/area/exterior/city)
 "FR" = (
 /obj/effect/landmark/latejoin/kommandant,
 /turf/open/indestructible/ground/floor/lattice,
@@ -1711,7 +1741,7 @@
 	dir = 4
 	},
 /turf/open/indestructible/ground/outside/dirt,
-/area/exterior)
+/area/exterior/city)
 "GD" = (
 /obj/structure/simple_door/room,
 /turf/open/indestructible/ground/floor/lattice,
@@ -1728,20 +1758,20 @@
 	dir = 1
 	},
 /turf/open/indestructible/ground/outside/road,
-/area/exterior)
+/area/exterior/city)
 "Ha" = (
 /obj/structure/fence/church{
 	dir = 4
 	},
 /turf/open/indestructible/ground/outside/road,
-/area/exterior)
+/area/exterior/city)
 "Hd" = (
 /turf/open/chasm/foundry,
 /area/interior/foundry)
 "Hg" = (
 /obj/structure/campfire/drum,
 /turf/open/indestructible/ground/outside/road,
-/area/exterior)
+/area/exterior/city)
 "Hq" = (
 /obj/structure/decor/iconostasis,
 /turf/open/indestructible/ground/floor/lattice,
@@ -1761,12 +1791,12 @@
 	pixel_y = 29
 	},
 /turf/open/indestructible/ground/outside/road,
-/area/exterior)
+/area/exterior/city)
 "HP" = (
 /obj/structure/decor/wood_scrap,
 /obj/effect/turf_decal/line,
 /turf/open/indestructible/ground/outside/road,
-/area/exterior)
+/area/exterior/city)
 "Il" = (
 /obj/effect/step_trigger/teleporter{
 	dir = 1;
@@ -1808,7 +1838,7 @@
 /turf/open/indestructible/ground/outside/sidewalk/stairs{
 	dir = 8
 	},
-/area/exterior)
+/area/exterior/city)
 "Jg" = (
 /obj/structure/table,
 /turf/open/floor/f13{
@@ -1832,13 +1862,13 @@
 "Jx" = (
 /obj/structure/closet/crate/miningcar,
 /turf/open/indestructible/ground/outside/road,
-/area/exterior)
+/area/exterior/city)
 "Jy" = (
 /obj/structure/fence/church/post{
 	dir = 4
 	},
 /turf/open/indestructible/ground/outside/road,
-/area/exterior)
+/area/exterior/city)
 "JJ" = (
 /obj/structure/simple_door/room,
 /turf/open/floor/f13{
@@ -1855,7 +1885,7 @@
 /obj/structure/fluff/rails,
 /obj/structure/closet/bus,
 /turf/open/indestructible/ground/outside/desert,
-/area/exterior)
+/area/exterior/city)
 "Kc" = (
 /obj/structure/decor/waste,
 /turf/open/indestructible/ground/outside/road,
@@ -1863,7 +1893,7 @@
 "Kj" = (
 /obj/effect/turf_decal/line,
 /turf/open/indestructible/ground/outside/dirt,
-/area/exterior)
+/area/exterior/city)
 "Kk" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -1876,7 +1906,7 @@
 "Ko" = (
 /obj/structure/fence/end,
 /turf/open/indestructible/ground/outside/road,
-/area/exterior)
+/area/exterior/city)
 "Kq" = (
 /obj/structure/table,
 /obj/item/gun/ballistic/shotgun/trench,
@@ -1900,14 +1930,14 @@
 "KP" = (
 /obj/structure/decor/cig_trash,
 /turf/open/indestructible/ground/outside/road,
-/area/exterior)
+/area/exterior/city)
 "KZ" = (
 /obj/effect/turf_decal/roadline/noshadow{
 	dir = 4
 	},
 /obj/structure/decor/wood_scrap,
 /turf/open/indestructible/ground/outside/road,
-/area/exterior)
+/area/exterior/city)
 "Ln" = (
 /obj/effect/turf_decal/line,
 /turf/open/floor/f13{
@@ -1921,10 +1951,13 @@
 	icon_state = "floorrusty"
 	},
 /area/interior/sewer)
+"Ly" = (
+/turf/open/indestructible/ground/outside/road,
+/area/exterior/city)
 "LB" = (
 /obj/structure/fence/church/end,
 /turf/open/indestructible/ground/outside/road,
-/area/exterior)
+/area/exterior/city)
 "LK" = (
 /turf/closed/wall/brickdark,
 /area/interior/spawning/prole)
@@ -1960,7 +1993,7 @@
 /turf/open/indestructible/ground/outside/sidewalk/stairs{
 	dir = 1
 	},
-/area/exterior)
+/area/exterior/city)
 "Mo" = (
 /obj/structure/decor/carpet{
 	icon_state = "oldcovertatteredtwo"
@@ -1975,7 +2008,7 @@
 	dir = 8
 	},
 /turf/open/indestructible/ground/outside/road,
-/area/exterior)
+/area/exterior/city)
 "MN" = (
 /obj/structure/rack,
 /turf/open/floor/f13{
@@ -1995,16 +2028,12 @@
 /obj/structure/decor/spawner_part/prole/right,
 /turf/open/indestructible/ground/floor/lattice,
 /area/interior/spawning/prole)
-"MZ" = (
-/obj/structure/sign/warning/biohazard,
-/turf/closed/wall/brickdark,
-/area/interior/city)
 "Na" = (
 /obj/effect/turf_decal/line{
 	dir = 4
 	},
 /turf/open/indestructible/ground/outside/sidewalk/stairs,
-/area/exterior)
+/area/exterior/city)
 "Nt" = (
 /obj/structure/simple_door/metal/store,
 /turf/open/floor/f13{
@@ -2021,7 +2050,7 @@
 "Nz" = (
 /obj/structure/fence/post,
 /turf/open/indestructible/ground/outside/road,
-/area/exterior)
+/area/exterior/city)
 "NF" = (
 /turf/open/indestructible/ground/sewer_water,
 /area/interior/sewer)
@@ -2040,7 +2069,7 @@
 "Oe" = (
 /obj/structure/closet/crate/dumpster,
 /turf/open/indestructible/ground/outside/road,
-/area/exterior)
+/area/exterior/city)
 "Og" = (
 /obj/structure/ladder/unbreakable{
 	id = "Sew4"
@@ -2054,7 +2083,7 @@
 /obj/structure/shitheap,
 /obj/effect/turf_decal/line,
 /turf/open/indestructible/ground/outside/dirt,
-/area/exterior)
+/area/exterior/city)
 "Ov" = (
 /turf/open/floor/f13{
 	tag = "icon-floorrusty";
@@ -2089,11 +2118,11 @@
 "OH" = (
 /obj/structure/decor/tire,
 /turf/open/indestructible/ground/outside/sidewalk/tile,
-/area/exterior)
+/area/exterior/city)
 "OR" = (
 /obj/structure/flora/tree/tall,
 /turf/open/indestructible/ground/outside/dirt,
-/area/exterior)
+/area/exterior/city)
 "OZ" = (
 /obj/structure/chair/wood/normal,
 /turf/open/indestructible/ground/floor/wood_floor,
@@ -2120,11 +2149,11 @@
 /area/interior/spawning/bioslave)
 "Pq" = (
 /turf/open/indestructible/ground/outside/sidewalk/tile,
-/area/exterior)
+/area/exterior/city)
 "Pu" = (
 /obj/structure/decor/water_tank,
 /turf/open/indestructible/ground/outside/road,
-/area/exterior)
+/area/exterior/city)
 "Py" = (
 /obj/effect/step_trigger/teleporter{
 	dir = 1;
@@ -2147,13 +2176,13 @@
 "PT" = (
 /obj/structure/decor/cig_trash,
 /turf/open/indestructible/ground/outside/sidewalk/tile,
-/area/exterior)
+/area/exterior/city)
 "Qb" = (
 /obj/machinery/door/poddoor/gate{
 	id = 43
 	},
 /turf/open/indestructible/ground/outside/road,
-/area/exterior)
+/area/exterior/city)
 "Qo" = (
 /obj/machinery/light,
 /turf/open/indestructible/ground/floor/wood_floor,
@@ -2207,7 +2236,7 @@
 "QE" = (
 /obj/structure/fence/post,
 /turf/open/indestructible/ground/outside/sidewalk/tile,
-/area/exterior)
+/area/exterior/city)
 "QK" = (
 /obj/machinery/light,
 /turf/open/floor/f13{
@@ -2231,7 +2260,7 @@
 	dir = 8
 	},
 /turf/open/indestructible/ground/outside/road,
-/area/exterior)
+/area/exterior/city)
 "RS" = (
 /obj/item/flashlight/lantern,
 /turf/open/floor/f13{
@@ -2262,7 +2291,7 @@
 	dir = 10
 	},
 /turf/open/indestructible/ground/outside/dirt,
-/area/exterior)
+/area/exterior/city)
 "Ss" = (
 /obj/machinery/light{
 	dir = 8
@@ -2294,7 +2323,7 @@
 /area/exterior/wastes)
 "Tu" = (
 /turf/open/indestructible/ground/outside/sidewalk/stairs,
-/area/exterior)
+/area/exterior/city)
 "TE" = (
 /obj/structure/decor/apc{
 	pixel_y = 29
@@ -2304,7 +2333,7 @@
 	dir = 8
 	},
 /turf/open/indestructible/ground/outside/road,
-/area/exterior)
+/area/exterior/city)
 "TO" = (
 /obj/structure/table,
 /turf/open/floor/f13{
@@ -2329,11 +2358,11 @@
 	pixel_x = 6
 	},
 /turf/open/indestructible/ground/outside/road,
-/area/exterior)
+/area/exterior/city)
 "UH" = (
 /obj/structure/shitheap,
 /turf/open/indestructible/ground/outside/dirt,
-/area/exterior)
+/area/exterior/city)
 "US" = (
 /obj/structure/lattice/catwalk{
 	icon_state = "catwalk15-3"
@@ -2351,14 +2380,21 @@
 	dir = 10
 	},
 /turf/open/indestructible/ground/outside/road,
-/area/exterior)
+/area/exterior/city)
+"Va" = (
+/obj/structure/decor/dump_bin/full{
+	pixel_y = 4;
+	pixel_x = 1
+	},
+/turf/open/indestructible/ground/outside/road,
+/area/exterior/city)
 "Vg" = (
 /obj/effect/turf_decal/line{
 	dir = 4
 	},
 /obj/structure/decor/grave,
 /turf/open/indestructible/ground/outside/dirt,
-/area/exterior)
+/area/exterior/city)
 "Vy" = (
 /turf/closed/wall/ship,
 /area/interior/spawning/prole)
@@ -2375,7 +2411,7 @@
 	dir = 8
 	},
 /turf/open/indestructible/ground/outside/dirt,
-/area/exterior)
+/area/exterior/city)
 "VX" = (
 /obj/machinery/door/poddoor/gate{
 	id = 12
@@ -2400,7 +2436,7 @@
 	pixel_x = 4
 	},
 /turf/open/indestructible/ground/outside/sidewalk/tile,
-/area/exterior)
+/area/exterior/city)
 "Wj" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -2420,7 +2456,7 @@
 	dir = 1
 	},
 /turf/open/indestructible/ground/outside/road,
-/area/exterior)
+/area/exterior/city)
 "Wx" = (
 /obj/effect/spawner/fishing_spot_random,
 /turf/open/indestructible/ground/outside/water/sea,
@@ -2454,7 +2490,7 @@
 "XA" = (
 /obj/structure/decoration/vent/rusty,
 /turf/open/indestructible/ground/outside/sidewalk/tile,
-/area/exterior)
+/area/exterior/city)
 "XE" = (
 /obj/structure/closet/crate/miningcar,
 /turf/open/floor/f13{
@@ -2476,7 +2512,7 @@
 "XP" = (
 /obj/structure/fence/church,
 /turf/open/indestructible/ground/outside/road,
-/area/exterior)
+/area/exterior/city)
 "XX" = (
 /turf/closed/indestructible/nothing,
 /area/void)
@@ -2574,7 +2610,7 @@
 "ZI" = (
 /obj/structure/decor/waste,
 /turf/open/indestructible/ground/outside/sidewalk/tile,
-/area/exterior)
+/area/exterior/city)
 "ZV" = (
 /obj/structure/chair/stool/bar,
 /turf/open/indestructible/ground/floor/wood_floor/horizontal,
@@ -22988,12 +23024,12 @@ Zr
 Zr
 Zr
 sj
-Ti
-Ti
-Ti
+Ly
+Ly
+Ly
 Pq
 Pq
-Ti
+Ly
 uI
 XX
 XX
@@ -23247,10 +23283,10 @@ Zr
 sj
 Pq
 Pq
-Ti
+Ly
 Pq
 Pq
-Ti
+Ly
 uI
 XX
 XX
@@ -23507,7 +23543,7 @@ Pq
 Pq
 Pq
 Pq
-Ti
+Ly
 uI
 XX
 XX
@@ -23764,7 +23800,7 @@ Pq
 Pq
 Pq
 Pq
-Ti
+Ly
 uI
 XX
 XX
@@ -24018,10 +24054,10 @@ Zr
 sj
 Pq
 Pq
-Ti
+Ly
 Pq
 Pq
-Ti
+Ly
 sj
 XX
 sj
@@ -24273,12 +24309,12 @@ Zr
 Zr
 Zr
 sj
-Ti
-Ti
-Ti
+Ly
+Ly
+Ly
 Pq
 Pq
-Ti
+Ly
 sj
 XX
 sj
@@ -24532,10 +24568,10 @@ sj
 sj
 sj
 sj
-Ti
+Ly
 Pq
 Pq
-Ti
+Ly
 sj
 XX
 sj
@@ -25046,10 +25082,10 @@ Zr
 Zr
 Zr
 sj
-Ti
+Ly
 Pq
 Pq
-Ti
+Ly
 sj
 TQ
 bn
@@ -25303,10 +25339,10 @@ Zr
 Zr
 Zr
 sj
-Ti
+Ly
 Pq
 Pq
-Ti
+Ly
 sj
 TQ
 bn
@@ -25560,10 +25596,10 @@ Zr
 Zr
 Zr
 sj
+Ly
 Pq
 Pq
-Pq
-Ti
+Ly
 ud
 TQ
 bn
@@ -25817,10 +25853,10 @@ sj
 sj
 sj
 sj
+Ly
 Pq
 Pq
-Pq
-Ti
+Ly
 Nt
 TQ
 TQ
@@ -25831,7 +25867,7 @@ sj
 sj
 sj
 Pu
-Ti
+Ly
 sj
 XX
 XX
@@ -26070,14 +26106,14 @@ sj
 sj
 sj
 sj
-MZ
-Ti
-Ti
-ez
+sj
+XX
+XX
+sj
+Ly
 Pq
 Pq
-Pq
-Ti
+Ly
 ud
 TQ
 TQ
@@ -26087,8 +26123,8 @@ sj
 Oe
 Oe
 sj
-Ti
-Ti
+Ly
+Ly
 sj
 XX
 XX
@@ -26327,22 +26363,22 @@ XX
 XX
 XX
 XX
-MZ
-Ti
-Ti
-ez
-Ti
+XX
+XX
+XX
+sj
+Ly
 Pq
 Pq
-Ti
+Ly
 sj
 sj
 sj
 sj
 sj
-Ti
-Ti
-Ti
+Ly
+Ly
+Ly
 ez
 AP
 hj
@@ -26409,7 +26445,7 @@ zp
 zp
 zp
 zp
-zp
+jl
 zp
 zp
 zp
@@ -26584,25 +26620,25 @@ XX
 XX
 XX
 XX
+XX
+XX
+XX
 sj
-sj
-sj
-sj
-Ti
+Ly
 Pq
 Pq
-Ti
+Ly
 sj
 XX
 XX
 XX
 sj
-Ti
-Ti
-Ti
+Ly
+Ly
+Ly
 ez
 kO
-pS
+by
 sj
 XX
 XX
@@ -26845,18 +26881,18 @@ XX
 XX
 XX
 sj
-Ti
+Ly
 Pq
 Pq
-Ti
+Ly
 sj
 sj
 sj
 sj
 sj
-Ti
-Ti
-Ti
+Ly
+Ly
+Ly
 sj
 sj
 sj
@@ -26920,7 +26956,7 @@ sj
 zp
 zp
 zp
-zp
+jl
 zp
 zp
 zp
@@ -27105,15 +27141,15 @@ sj
 tv
 Pq
 Pq
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
 sj
 XX
 XX
@@ -27359,18 +27395,18 @@ yD
 sj
 XX
 sj
-Ti
+Ly
 Pq
 Pq
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
-pS
-Ti
-Ti
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+by
+Ly
+Ly
 sj
 XX
 XX
@@ -27434,7 +27470,7 @@ sj
 zp
 zp
 zp
-zp
+jl
 zp
 zp
 zp
@@ -27619,8 +27655,8 @@ sj
 tv
 Pq
 Pq
-Ti
-Ti
+Ly
+Ly
 sj
 sj
 sj
@@ -27873,10 +27909,10 @@ ZG
 sj
 XX
 sj
-Ti
+Ly
 Pq
 Pq
-Ti
+Ly
 sj
 sj
 XX
@@ -28133,7 +28169,7 @@ sj
 sj
 Pq
 Pq
-Ti
+Ly
 sj
 XX
 XX
@@ -28390,7 +28426,7 @@ XX
 sj
 Pq
 Pq
-Ti
+Ly
 sj
 XX
 XX
@@ -28462,7 +28498,7 @@ sj
 zp
 zp
 zp
-zp
+jl
 zp
 zp
 zp
@@ -28633,7 +28669,7 @@ Qs
 Qs
 Qs
 gI
-Ti
+Ly
 va
 sa
 sj
@@ -28647,7 +28683,7 @@ XX
 sj
 Pq
 Pq
-Ti
+Ly
 sj
 XX
 XX
@@ -28664,8 +28700,8 @@ sj
 sj
 sj
 sa
-Ti
-Ti
+Ly
+Ly
 sj
 sj
 sj
@@ -28721,11 +28757,11 @@ zp
 zp
 zp
 zp
+jl
 zp
 zp
 zp
-zp
-zp
+jl
 zp
 zp
 zp
@@ -28904,7 +28940,7 @@ sj
 sj
 Pq
 Pq
-Ti
+Ly
 sj
 sj
 sj
@@ -28914,15 +28950,15 @@ sj
 sj
 sj
 Oe
-Ti
-Ti
-Ti
+Ly
+Ly
+Ly
 KP
-Ti
+Ly
 mi
-Ti
+Ly
 sa
-Ti
+Ly
 sj
 TQ
 Au
@@ -28956,18 +28992,18 @@ yi
 yi
 NV
 XX
-Ti
-Ti
-Ti
-wH
-Ti
+Ly
+Ly
+Ly
+zX
+Ly
 Oe
 Oe
-wH
-Ti
-Ti
-Ti
-Ti
+zX
+Ly
+Ly
+Ly
+Ly
 XX
 XX
 XX
@@ -28986,7 +29022,7 @@ zp
 zp
 zp
 zp
-zp
+jl
 zp
 zp
 zp
@@ -29150,35 +29186,35 @@ Qs
 Pq
 Pq
 Pq
-Ti
-Ti
-Ti
-Ti
+Ly
+Ly
+Ly
+Ly
 sa
-Ti
-Ti
-Ti
-Ti
+Ly
+Ly
+Ly
+Ly
 Pq
 Pq
-Ti
-Ti
-Ti
-pS
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
+Ly
+Ly
+Ly
+by
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
 KP
 sj
 TQ
@@ -29213,18 +29249,18 @@ yi
 yi
 NV
 XX
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
 XX
 XX
 XX
@@ -29233,7 +29269,7 @@ sj
 zp
 zp
 zp
-zp
+jl
 zp
 zp
 zp
@@ -29435,8 +29471,8 @@ Pq
 Pq
 Pq
 Pq
-Ti
-Ti
+Ly
+Ly
 sj
 TQ
 TQ
@@ -29474,10 +29510,10 @@ sj
 sj
 sj
 sj
-Ti
-Ti
-wH
-Ti
+Ly
+Ly
+zX
+Ly
 sj
 sj
 sj
@@ -29502,7 +29538,7 @@ zp
 zp
 zp
 zp
-zp
+jl
 zp
 zp
 zp
@@ -29692,8 +29728,8 @@ Pq
 Pq
 Pq
 Pq
-Ti
-Ti
+Ly
+Ly
 sc
 TQ
 TQ
@@ -29731,8 +29767,8 @@ XX
 XX
 XX
 sj
-pS
-Ti
+by
+Ly
 sj
 sj
 sj
@@ -29916,12 +29952,12 @@ dZ
 Kc
 lz
 sa
-Ti
-Ti
-Ti
+Ly
+Ly
+Ly
 Pq
 Pq
-Ti
+Ly
 sa
 sj
 sj
@@ -29929,27 +29965,27 @@ sj
 sj
 sj
 sa
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
 sa
-Ti
-Ti
-Ti
+Ly
+Ly
+Ly
 Oe
 Oe
-Ti
+Ly
 PT
 Pq
-Ti
+Ly
 sa
 sj
 TQ
@@ -30008,11 +30044,11 @@ zp
 zp
 zp
 zp
+jl
 zp
 zp
 zp
-zp
-zp
+jl
 zp
 zp
 zp
@@ -30172,13 +30208,13 @@ lz
 uz
 lz
 lz
-Ti
-Ti
-Ti
-Ti
+Ly
+Ly
+Ly
+Ly
 Pq
 Pq
-Ti
+Ly
 sj
 sj
 GJ
@@ -30189,8 +30225,8 @@ sj
 sj
 sj
 sj
-Ti
-Ti
+Ly
+Ly
 sj
 sj
 sj
@@ -30198,16 +30234,16 @@ sj
 sj
 sj
 sj
-Ti
-pS
+Ly
+by
 sj
 sj
 sj
 GT
 Pq
 Pq
-Ti
-Ti
+Ly
+Ly
 sj
 sj
 sj
@@ -30435,7 +30471,7 @@ sj
 sa
 Pq
 Pq
-Ti
+Ly
 sj
 TQ
 TQ
@@ -30446,8 +30482,8 @@ XX
 XX
 XX
 sj
-Ti
-Ti
+Ly
+Ly
 sj
 XX
 XX
@@ -30463,7 +30499,7 @@ sj
 wo
 Pq
 Pq
-Ti
+Ly
 sj
 sj
 XX
@@ -30501,9 +30537,9 @@ XX
 XX
 XX
 RX
-Ti
-Ti
-Ti
+Ly
+Ly
+Ly
 sj
 sj
 sj
@@ -30689,10 +30725,10 @@ sj
 sj
 XX
 sj
-Ti
+Ly
 Pq
 Pq
-Ti
+Ly
 ud
 TQ
 TQ
@@ -30704,7 +30740,7 @@ XX
 sj
 sj
 sa
-Ti
+Ly
 sj
 XX
 XX
@@ -30720,7 +30756,7 @@ sj
 iJ
 Pq
 Pq
-Ti
+Ly
 sj
 XX
 XX
@@ -30758,11 +30794,11 @@ XX
 XX
 XX
 sj
-Ti
-Ti
-Ti
-Ti
-Ti
+Ly
+Ly
+Ly
+Ly
+Ly
 sj
 XX
 XX
@@ -30782,11 +30818,11 @@ zp
 zp
 zp
 zp
+jl
 zp
 zp
 zp
-zp
-zp
+jl
 zp
 zp
 zp
@@ -30946,10 +30982,10 @@ XX
 XX
 XX
 sj
-Ti
+Ly
 Pq
 Pq
-Ti
+Ly
 ud
 TQ
 TQ
@@ -30960,8 +30996,8 @@ sj
 XX
 sj
 sa
-Ti
-pS
+Ly
+by
 sj
 sj
 XX
@@ -30977,7 +31013,7 @@ nr
 Tu
 Pq
 Pq
-Ti
+Ly
 sj
 sj
 XX
@@ -31016,10 +31052,10 @@ XX
 sj
 sj
 HO
-Ti
-Ti
-Ti
-Ti
+Ly
+Ly
+Ly
+Ly
 RX
 XX
 XX
@@ -31203,10 +31239,10 @@ XX
 XX
 XX
 sj
-Ti
+Ly
 eO
 Pq
-Ti
+Ly
 Nt
 TQ
 TQ
@@ -31217,8 +31253,8 @@ sj
 XX
 sj
 Oe
-Ti
-Ti
+Ly
+Ly
 sa
 sj
 XX
@@ -31272,11 +31308,11 @@ XX
 XX
 sj
 mk
-Ti
-Ti
-Ti
-Ti
-Ti
+Ly
+Ly
+Ly
+Ly
+Ly
 sj
 XX
 XX
@@ -31301,7 +31337,7 @@ zp
 zp
 zp
 zp
-zp
+jl
 zp
 zp
 zp
@@ -31460,10 +31496,10 @@ XX
 XX
 XX
 sj
-Ti
+Ly
 Pq
 Pq
-Ti
+Ly
 ud
 TQ
 TQ
@@ -31474,8 +31510,8 @@ sj
 XX
 sj
 Oe
-Ti
-Ti
+Ly
+Ly
 sa
 sj
 XX
@@ -31528,12 +31564,12 @@ NV
 XX
 XX
 sj
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
 sj
 XX
 XX
@@ -31706,7 +31742,7 @@ ds
 ds
 ds
 VJ
-gW
+Wx
 jL
 lz
 lz
@@ -31717,10 +31753,10 @@ uE
 uE
 uE
 sj
-Ti
+Ly
 Pq
 Pq
-Ti
+Ly
 ud
 TQ
 TQ
@@ -31731,9 +31767,9 @@ sj
 XX
 sj
 sj
-pS
-Ti
-Ti
+by
+Ly
+Ly
 sj
 XX
 XX
@@ -31759,8 +31795,8 @@ BL
 BL
 BL
 BL
-Ti
-Ti
+Ly
+Ly
 Pg
 BL
 BL
@@ -31785,10 +31821,10 @@ NV
 XX
 XX
 sj
-pS
-Ti
-Ti
-Ti
+by
+Ly
+Ly
+Ly
 sj
 sj
 sj
@@ -31974,7 +32010,7 @@ TQ
 GJ
 GJ
 sj
-pS
+by
 Pq
 Pq
 sa
@@ -31989,8 +32025,8 @@ XX
 XX
 sj
 sa
-Ti
-Ti
+Ly
+Ly
 sj
 XX
 XX
@@ -32004,7 +32040,7 @@ sj
 sj
 sj
 sj
-Ti
+Ly
 Pq
 Pq
 Pq
@@ -32020,7 +32056,7 @@ Pq
 Pq
 ZI
 Pq
-pS
+by
 uE
 XX
 XX
@@ -32042,10 +32078,10 @@ NV
 XX
 XX
 sj
-Ti
-Ti
-Ti
-Ti
+Ly
+Ly
+Ly
+Ly
 sj
 XX
 XX
@@ -32220,7 +32256,7 @@ ds
 Cd
 kd
 kd
-gW
+Wx
 jL
 lz
 lz
@@ -32231,10 +32267,10 @@ TQ
 TQ
 TQ
 sj
-Ti
+Ly
 Pq
 Pq
-Ti
+Ly
 ud
 GJ
 sj
@@ -32246,8 +32282,8 @@ sj
 sj
 sj
 sj
-Ti
-Ti
+Ly
+Ly
 sj
 XX
 XX
@@ -32261,7 +32297,7 @@ pC
 pC
 pC
 sj
-Ti
+Ly
 Pq
 Pq
 Pq
@@ -32300,9 +32336,9 @@ XX
 XX
 sj
 Pu
-Ti
-Ti
-pS
+Ly
+Ly
+by
 sj
 XX
 XX
@@ -32476,7 +32512,7 @@ ly
 ly
 ly
 kd
-gW
+Wx
 gW
 jL
 lz
@@ -32488,10 +32524,10 @@ TQ
 TQ
 GJ
 sj
-Ti
+Ly
 Pq
 Pq
-Ti
+Ly
 ud
 TQ
 sc
@@ -32503,8 +32539,8 @@ TQ
 TQ
 TQ
 sj
-Ti
-Ti
+Ly
+Ly
 sj
 sj
 XX
@@ -32518,7 +32554,7 @@ Eu
 pC
 pC
 sj
-Ti
+Ly
 eO
 Pq
 Pq
@@ -32556,10 +32592,10 @@ NV
 XX
 XX
 sj
-Ti
-Ti
-Ti
-Ti
+Ly
+Ly
+Ly
+Ly
 sj
 XX
 sj
@@ -32745,10 +32781,10 @@ TQ
 TQ
 GJ
 sj
-Ti
+Ly
 Pq
 Pq
-Ti
+Ly
 ud
 ei
 sj
@@ -32760,8 +32796,8 @@ TQ
 TQ
 TQ
 sc
-Ti
-Ti
+Ly
+Ly
 oJ
 sj
 XX
@@ -32815,14 +32851,14 @@ XX
 sj
 sj
 sj
-pS
-Ti
+by
+Ly
 sj
 sj
 sj
 nO
 Jx
-Ti
+Ly
 sj
 sj
 sj
@@ -33002,7 +33038,7 @@ uE
 TQ
 uE
 sj
-Ti
+Ly
 eO
 Pq
 sa
@@ -33017,9 +33053,9 @@ TQ
 TQ
 TQ
 sj
-pS
-Ti
-Ti
+by
+Ly
+Ly
 sj
 XX
 XX
@@ -33032,7 +33068,7 @@ pC
 pC
 pC
 Qz
-Ti
+Ly
 Pq
 Pq
 Pq
@@ -33048,16 +33084,16 @@ AF
 Pq
 Pq
 Pq
-Ti
+Ly
 uE
 uE
 uE
 uE
 uW
-pS
+by
 Pq
 Pq
-Ti
+Ly
 sa
 NV
 NV
@@ -33073,16 +33109,16 @@ XX
 XX
 sj
 sa
-Ti
-Ti
+Ly
+Ly
 sa
-Ti
-Ti
-Ti
-Ti
+Ly
+Ly
+Ly
+Ly
 sa
 sj
-cQ
+pa
 KP
 gK
 BY
@@ -33259,10 +33295,10 @@ Fq
 hh
 hh
 sj
-Ti
+Ly
 Pq
 Pq
-Ti
+Ly
 ud
 zU
 sj
@@ -33274,8 +33310,8 @@ TQ
 TQ
 TQ
 sj
-Ti
-Ti
+Ly
+Ly
 sa
 sj
 XX
@@ -33289,35 +33325,35 @@ pC
 pC
 pC
 sj
-Ti
+Ly
 Pq
 Pq
 Pq
 Tu
-Ti
-Ti
-Ti
+Ly
+Ly
+Ly
 KP
-Ti
+Ly
 Hg
-Ti
+Ly
 Mk
 Pq
 Pq
 Pq
-Ti
-Ti
+Ly
+Ly
 sa
-Ti
-Ti
-Ti
-Ti
+Ly
+Ly
+Ly
+Ly
 Pq
 Pq
-Ti
-Ti
-Ti
-Ti
+Ly
+Ly
+Ly
+Ly
 sj
 XX
 XX
@@ -33329,19 +33365,19 @@ XX
 XX
 XX
 sj
-cQ
+pa
 KP
-Ti
-Ti
+Ly
+Ly
 KP
-Ti
-Ti
-Ti
-Ti
+Ly
+Ly
+Ly
+Ly
 Qb
-Ti
-Ti
-Ti
+Ly
+Ly
+Ly
 yl
 zp
 zp
@@ -33519,7 +33555,7 @@ Qz
 sa
 Pq
 Pq
-Ti
+Ly
 ud
 TQ
 sc
@@ -33531,9 +33567,9 @@ TQ
 TQ
 TQ
 sj
-Ti
-Ti
-Ti
+Ly
+Ly
+Ly
 sj
 XX
 XX
@@ -33546,17 +33582,17 @@ pC
 pC
 pC
 JJ
-Ti
+Ly
 Pq
 Pq
 Pq
 Pq
 GT
-Ti
-Ti
-Ti
-Ti
-Ti
+Ly
+Ly
+Ly
+Ly
+Ly
 vG
 ZI
 Pq
@@ -33587,18 +33623,18 @@ XX
 XX
 sj
 iC
-Ti
+Ly
 Hg
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
 yl
 zp
 zp
@@ -33773,10 +33809,10 @@ pC
 pC
 TO
 Qz
-Ti
+Ly
 PT
 Pq
-Ti
+Ly
 ud
 GJ
 sj
@@ -33788,9 +33824,9 @@ TQ
 TQ
 TQ
 sj
-Ti
-Ti
-Ti
+Ly
+Ly
+Ly
 sj
 XX
 XX
@@ -33803,14 +33839,14 @@ pC
 pC
 pC
 sj
-Ti
+Ly
 Pq
 Pq
 Pq
 Pq
 Wv
-Ti
-Ti
+Ly
+Ly
 xS
 tH
 rg
@@ -33831,7 +33867,7 @@ Pq
 Pq
 XA
 Pq
-Ti
+Ly
 sj
 XX
 XX
@@ -33845,17 +33881,17 @@ XX
 sj
 dJ
 sa
-Ti
+Ly
 KP
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
 yl
 zp
 zp
@@ -34030,10 +34066,10 @@ pC
 pC
 pC
 sj
-Ti
+Ly
 Pq
 Pq
-Ti
+Ly
 sj
 sj
 sj
@@ -34046,8 +34082,8 @@ sj
 sj
 sj
 sa
-Ti
-Ti
+Ly
+Ly
 sj
 XX
 XX
@@ -34066,11 +34102,11 @@ Pq
 Pq
 Pq
 GT
-Ti
-Ti
-Ti
-Ti
-Ti
+Ly
+Ly
+Ly
+Ly
+Ly
 lD
 Pq
 Pq
@@ -34088,7 +34124,7 @@ Pq
 eO
 Pq
 Pq
-Ti
+Ly
 sj
 sj
 sj
@@ -34101,16 +34137,16 @@ sj
 sj
 sj
 mk
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
 sa
 sj
-Ti
+Ly
 sa
 UX
 xo
@@ -34287,24 +34323,24 @@ pC
 pC
 pC
 JJ
-Ti
+Ly
 Pq
 Pq
-Ti
+Ly
 sj
 TQ
 bn
 TQ
 TQ
 sj
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
 sj
 XX
 XX
@@ -34317,51 +34353,51 @@ FA
 xg
 FA
 sj
-Ti
+Ly
 Pq
 Pq
 Pq
 Tu
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
 Mk
 Pq
 Pq
 Pq
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
 Pq
 Pq
 Pq
-Ti
-Ti
+Ly
+Ly
 sa
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
 sa
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
 sa
 sj
 bn
@@ -34544,10 +34580,10 @@ Ef
 pC
 pC
 sj
-Ti
+Ly
 Pq
 Pq
-Ti
+Ly
 ud
 TQ
 bn
@@ -34556,12 +34592,12 @@ TQ
 sj
 sa
 oR
-Ti
+Ly
 sa
-Ti
-Ti
+Ly
+Ly
 sa
-Ti
+Ly
 sj
 XX
 XX
@@ -34574,7 +34610,7 @@ FA
 FA
 FA
 vC
-Ti
+Ly
 Pq
 Pq
 Pq
@@ -34590,7 +34626,7 @@ oC
 Pq
 Pq
 Pq
-Ti
+Ly
 uE
 uE
 uE
@@ -34598,28 +34634,28 @@ uE
 TE
 Re
 UZ
-Ti
+Ly
 Pq
 Pq
 Pq
-Ti
-Ti
-Ti
-Ti
-Ti
+Ly
+Ly
+Ly
+Ly
+Ly
 sa
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
 sj
 TQ
 TQ
@@ -34801,20 +34837,20 @@ sj
 sj
 sj
 sj
-Ti
+Ly
 Pq
 Pq
-Ti
+Ly
 Nt
 TQ
 TQ
 TQ
 TQ
 sj
-Ti
-Ti
-Ti
-Ti
+Ly
+Ly
+Ly
+Ly
 sj
 sc
 sj
@@ -34831,7 +34867,7 @@ FA
 FA
 sj
 sj
-pS
+by
 Pq
 Pq
 Pq
@@ -34853,30 +34889,30 @@ XX
 XX
 uE
 Pu
-Ti
+Ly
 ha
-Ti
+Ly
 Pq
 Pq
 eO
-Ti
-Ti
-Ti
-pS
+Ly
+Ly
+Ly
+by
 sj
 sj
 sj
 sj
 sj
-pS
-Ti
-Ti
-Ti
+by
+Ly
+Ly
+Ly
 sa
-pS
-Ti
-Ti
-Ti
+by
+Ly
+Ly
+Ly
 sj
 Pd
 TQ
@@ -35058,10 +35094,10 @@ XX
 XX
 XX
 sj
-Ti
+Ly
 Pq
 Pq
-Ti
+Ly
 ud
 TQ
 TQ
@@ -35069,8 +35105,8 @@ np
 sj
 sj
 sj
-Ti
-Ti
+Ly
+Ly
 sj
 sj
 TQ
@@ -35087,8 +35123,8 @@ Jg
 Jg
 FA
 EW
-Ti
-Ti
+Ly
+Ly
 Pq
 Pq
 Pq
@@ -35104,19 +35140,19 @@ Pq
 eO
 Pq
 Pq
-Ti
+Ly
 uE
 XX
 XX
 uE
-Ti
-Ti
+Ly
+Ly
 lD
-Ti
+Ly
 Pq
 Pq
 Pq
-Ti
+Ly
 sj
 sj
 sj
@@ -35127,13 +35163,13 @@ XX
 sj
 HO
 KP
-Ti
+Ly
 sa
 sj
 sj
 sj
 sa
-Ti
+Ly
 Nt
 TQ
 ei
@@ -35315,10 +35351,10 @@ XX
 sj
 sj
 sj
-Ti
+Ly
 Pq
 Pq
-pS
+by
 sj
 GJ
 GJ
@@ -35326,8 +35362,8 @@ GJ
 sj
 XX
 sj
-Ti
-Ti
+Ly
+Ly
 sj
 TQ
 TQ
@@ -35344,8 +35380,8 @@ FA
 Jg
 FA
 EW
-Ti
-Ti
+Ly
+Ly
 Pq
 Pq
 Pq
@@ -35361,19 +35397,19 @@ Pq
 Pq
 Pq
 Pq
-Ti
+Ly
 uE
 XX
 XX
 uE
 tv
-Ti
+Ly
 lD
-Ti
+Ly
 Pq
 Pq
 Pq
-Ti
+Ly
 sj
 XX
 XX
@@ -35389,8 +35425,8 @@ sj
 sj
 XX
 sj
-Ti
-Ti
+Ly
+Ly
 sj
 sj
 sj
@@ -35571,11 +35607,11 @@ XX
 sj
 sj
 sa
-Ti
-Ti
+Ly
+Ly
 Pq
 Pq
-Ti
+Ly
 sj
 sj
 sj
@@ -35583,8 +35619,8 @@ sj
 sj
 XX
 sj
-Ti
-Ti
+Ly
+Ly
 sj
 TQ
 kJ
@@ -35602,7 +35638,7 @@ Jg
 FA
 sj
 yF
-Ti
+Ly
 Pq
 eO
 Pq
@@ -35623,14 +35659,14 @@ mr
 XX
 XX
 uE
-Ti
-Ti
+Ly
+Ly
 HP
-Ti
+Ly
 Pq
 Pq
 Pq
-Ti
+Ly
 bN
 bN
 bN
@@ -35826,22 +35862,22 @@ sj
 sj
 sj
 sj
-cQ
-Ti
-Ti
-Ti
+pa
+Ly
+Ly
+Ly
 Pq
 Pq
-Ti
-Ti
+Ly
+Ly
 sj
 XX
 XX
 XX
 XX
 sj
-Ti
-Ti
+Ly
+Ly
 sj
 sj
 sj
@@ -35884,10 +35920,10 @@ sj
 sj
 sj
 sa
-Ti
-Ti
-Ti
-Ti
+Ly
+Ly
+Ly
+Ly
 bN
 ke
 Ss
@@ -36083,41 +36119,41 @@ lz
 dZ
 PD
 lz
-Ti
+Ly
 KP
-Ti
+Ly
 sa
 Pq
 Pq
-Ti
-Ti
+Ly
+Ly
 sj
 sj
 sj
 sj
 sj
 sj
-Ti
-Ti
+Ly
+Ly
 sa
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
 sa
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
 Pq
 Pq
 Pq
@@ -36130,8 +36166,8 @@ Pq
 Pq
 Pq
 Mk
-Ti
-Ti
+Ly
+Ly
 sa
 mr
 XX
@@ -36140,11 +36176,11 @@ XX
 XX
 XX
 sj
-wH
-Ti
+zX
+Ly
 sa
-Ti
-Ti
+Ly
+Ly
 fL
 ke
 ke
@@ -36340,10 +36376,10 @@ lz
 dZ
 Be
 Kc
-Ti
+Ly
 Hg
-Ti
-Ti
+Ly
+Ly
 Pq
 Pq
 Pq
@@ -36387,9 +36423,9 @@ Pq
 Pq
 Pq
 Mk
-Ti
-Ti
-oS
+Ly
+Ly
+Ly
 mr
 XX
 XX
@@ -36398,10 +36434,10 @@ XX
 XX
 sj
 sj
-Ti
-Ti
-wH
-cQ
+Ly
+Ly
+zX
+pa
 bN
 ke
 ke
@@ -36598,9 +36634,9 @@ sj
 sj
 sj
 Uc
-Ti
+Ly
 KP
-Ti
+Ly
 Pq
 Pq
 Pq
@@ -36644,9 +36680,9 @@ Pq
 Pq
 ft
 ft
-Ti
-Ti
-Ti
+Ly
+Ly
+Ly
 mr
 XX
 XX
@@ -36655,10 +36691,10 @@ XX
 XX
 XX
 sj
-Ti
+Ly
 KP
-WZ
-Hw
+co
+dc
 Yt
 ke
 ke
@@ -36855,51 +36891,51 @@ TQ
 TQ
 sj
 mp
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
 sa
-Ti
-Ti
-Ti
-Ti
+Ly
+Ly
+Ly
+Ly
 sa
-Ti
-Ti
-Ti
-Ti
+Ly
+Ly
+Ly
+Ly
 sa
-Ti
-Ti
-Ti
-Ti
-Ti
+Ly
+Ly
+Ly
+Ly
+Ly
 Pq
 Pq
 Pq
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
 Pq
 Pq
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
 sa
-pS
-Ti
+by
+Ly
 pD
 pD
 ig
@@ -36913,9 +36949,9 @@ XX
 XX
 sj
 Hg
-Ti
-Md
-yR
+Ly
+jr
+Va
 bN
 ke
 ke
@@ -37100,7 +37136,7 @@ gW
 gW
 gW
 gW
-gW
+Wx
 jL
 lz
 sj
@@ -37116,7 +37152,7 @@ sc
 sj
 sj
 sa
-Ti
+Ly
 sj
 sj
 sj
@@ -37145,11 +37181,11 @@ Ha
 Jy
 Ha
 LB
-Ti
+Ly
 Pq
 Pq
-Ti
-Ti
+Ly
+Ly
 pD
 pD
 pD
@@ -37405,8 +37441,8 @@ XP
 sa
 Pq
 Pq
-Ti
-Ti
+Ly
+Ly
 pD
 XX
 XX
@@ -37659,11 +37695,11 @@ UH
 oO
 Kj
 iE
-Ti
+Ly
 Pq
 Pq
-Ti
-Ti
+Ly
+Ly
 pD
 XX
 XX
@@ -37916,10 +37952,10 @@ oO
 oO
 Kj
 XP
-Ti
+Ly
 Pq
 Pq
-Ti
+Ly
 pD
 pD
 XX
@@ -38173,10 +38209,10 @@ oO
 sh
 Kj
 XP
-Ti
+Ly
 Pq
 Pq
-Ti
+Ly
 pD
 XX
 XX
@@ -38430,10 +38466,10 @@ OR
 oO
 Kj
 XP
-Ti
+Ly
 Pq
 Pq
-Ti
+Ly
 pD
 XX
 XX
@@ -38687,10 +38723,10 @@ oO
 oO
 Kj
 iE
-Ti
+Ly
 Pq
 Pq
-Ti
+Ly
 pD
 XX
 XX
@@ -38944,10 +38980,10 @@ oO
 oO
 Kj
 XP
-Ti
+Ly
 Pq
 Pq
-Ti
+Ly
 pD
 XX
 XX
@@ -39204,7 +39240,7 @@ XP
 sa
 Pq
 Pq
-Ti
+Ly
 pD
 XX
 XX
@@ -39458,10 +39494,10 @@ oO
 oO
 Kj
 XP
-Ti
+Ly
 Pq
 Pq
-Ti
+Ly
 pD
 XX
 XX
@@ -39715,10 +39751,10 @@ oO
 oO
 Kj
 iE
-Ti
+Ly
 Pq
 Pq
-Ti
+Ly
 pD
 XX
 XX
@@ -39972,10 +40008,10 @@ oO
 sh
 Kj
 XP
-Ti
+Ly
 Pq
 Pq
-Ti
+Ly
 pD
 XX
 XX
@@ -40229,10 +40265,10 @@ oO
 OR
 CJ
 XP
-Ti
+Ly
 Pq
 Pq
-Ti
+Ly
 pD
 XX
 XX
@@ -40486,10 +40522,10 @@ oO
 oO
 CJ
 XP
-Ti
+Ly
 Pq
 Pq
-Ti
+Ly
 pD
 pD
 XX
@@ -40743,10 +40779,10 @@ GC
 GC
 BH
 FI
-Ti
+Ly
 Pq
 Pq
-Ti
+Ly
 sa
 pD
 XX
@@ -41004,15 +41040,15 @@ Pq
 Pq
 Pq
 Pq
-Ti
+Ly
 pD
 pD
 pD
 sa
-Ti
+Ly
 Pq
 Pq
-Ti
+Ly
 sj
 XX
 XX
@@ -41261,12 +41297,12 @@ Pq
 Pq
 Pq
 Pq
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
 Pq
 Pq
 sa
@@ -41771,7 +41807,7 @@ VS
 VS
 Sg
 LB
-Ti
+Ly
 Pq
 XA
 Pq
@@ -42028,7 +42064,7 @@ oO
 oO
 Kj
 XP
-Ti
+Ly
 Pq
 Pq
 Pq
@@ -42289,15 +42325,15 @@ sa
 Pq
 Pq
 Pq
-Ti
-Ti
-pS
+Ly
+Ly
+by
 Pq
 Pq
 BE
 KP
-Ti
-pS
+Ly
+by
 sj
 XX
 XX
@@ -42542,18 +42578,18 @@ oO
 oO
 Kj
 iE
-Ti
-Ti
-Ti
+Ly
+Ly
+Ly
 sa
-Ti
-Ti
-Ti
+Ly
+Ly
+Ly
 PT
 Pq
 GT
-Ti
-Ti
+Ly
+Ly
 kO
 sj
 XX
@@ -42805,11 +42841,11 @@ sj
 sj
 sj
 sj
-Ti
+Ly
 Pq
 Pq
 tp
-Ti
+Ly
 sa
 Cj
 sj
@@ -43296,7 +43332,7 @@ sj
 sj
 sj
 sj
-Ti
+Ly
 jm
 oO
 oO
@@ -43549,11 +43585,11 @@ XX
 XX
 XX
 sj
-Ti
-Ti
+Ly
+Ly
 ez
-Ti
-Ti
+Ly
+Ly
 jm
 oO
 oO
@@ -43806,11 +43842,11 @@ XX
 XX
 XX
 px
-Ti
-Ti
+Ly
+Ly
 ez
-Ti
-Ti
+Ly
+Ly
 jm
 OR
 oO
@@ -44063,8 +44099,8 @@ sj
 sj
 sj
 sj
-Ti
-Ti
+Ly
+Ly
 sj
 sj
 sj
@@ -44315,13 +44351,13 @@ XX
 XX
 XX
 XX
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
 sj
 XX
 sj
@@ -44572,13 +44608,13 @@ XX
 XX
 XX
 XX
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
-Ti
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
 sj
 XX
 sj
@@ -44595,7 +44631,7 @@ Pq
 Pq
 Pq
 Pq
-Ti
+Ly
 sj
 XX
 XX
@@ -44834,8 +44870,8 @@ sj
 px
 sj
 sj
-Ti
-Ti
+Ly
+Ly
 sj
 XX
 sj
@@ -44852,7 +44888,7 @@ Pq
 eO
 Pq
 Pq
-Ti
+Ly
 sj
 XX
 XX
@@ -45091,8 +45127,8 @@ XX
 XX
 XX
 sj
-Ti
-Ti
+Ly
+Ly
 sj
 XX
 sj
@@ -45109,7 +45145,7 @@ OH
 Pq
 Pq
 eO
-Ti
+Ly
 sj
 XX
 XX
@@ -45353,7 +45389,7 @@ sj
 sj
 XX
 sj
-Ti
+Ly
 Pq
 Pq
 sj
@@ -45366,7 +45402,7 @@ sj
 sj
 Pu
 Pq
-wH
+zX
 sj
 XX
 XX
@@ -45610,7 +45646,7 @@ XX
 XX
 XX
 sj
-Ti
+Ly
 Pq
 Pq
 sj
@@ -45621,9 +45657,9 @@ px
 sj
 XX
 sj
-Ti
-Ti
-Ti
+Ly
+Ly
+Ly
 sj
 XX
 XX
@@ -45867,7 +45903,7 @@ XX
 XX
 XX
 sj
-Ti
+Ly
 Pq
 Pq
 sj
@@ -45879,8 +45915,8 @@ XX
 XX
 sj
 sj
-wH
-Ti
+zX
+Ly
 sj
 XX
 XX
@@ -46124,7 +46160,7 @@ XX
 XX
 XX
 sj
-Ti
+Ly
 Pq
 Pq
 sj
@@ -46136,8 +46172,8 @@ XX
 XX
 XX
 sj
-Ti
-Ti
+Ly
+Ly
 sj
 XX
 XX
@@ -46381,7 +46417,7 @@ XX
 XX
 XX
 sj
-Ti
+Ly
 Pq
 Pq
 sj
@@ -46393,8 +46429,8 @@ XX
 XX
 sj
 sj
-Ti
-Ti
+Ly
+Ly
 sj
 XX
 XX
@@ -46648,10 +46684,10 @@ XX
 XX
 XX
 XX
-Ti
-Ti
-Ti
-Ti
+Ly
+Ly
+Ly
+Ly
 sj
 XX
 XX
@@ -46905,10 +46941,10 @@ XX
 XX
 XX
 XX
-Ti
-Ti
-Ti
-Ti
+Ly
+Ly
+Ly
+Ly
 sj
 XX
 XX

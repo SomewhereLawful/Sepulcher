@@ -2,7 +2,7 @@
 /client
 	var/sound/ambient/music			= null		//Музыка (Music)
 	var/sound/ambient/music_juke	= null		//Музыка из джукбокса (Jukebox Music)
-	var/sound/ambient/environment	= null		//Случайные короткие звуки длительностью не более 12 секунд
+	var/sound/ambient/environment	= null		//Случайные короткие звуки длительностью не более 12 секунд (Short sounds no longer than 12 seconds)
 	var/sound/ambient/background	= null		//Залупленный звук
 	var/sound/ambient/psy			= null		//Пси-звук (Psy-Sound, editted into WILL stat usage)
 	var/sound/ambient/campfire		= null		//Звук от костра - campfire.dm
@@ -49,10 +49,8 @@
 
 	if(!client.environment || (world.time >= client.environment.last_time + client.environment.real_cooldown))
 
-		var/list/environment_ambience
-
-		if(environment_ambience != null && environment_ambience.len > 0)
-			client.environment = new/sound/ambient(file = safepick(environment_ambience))
+		if(A.ambient_environment != null && A.ambient_environment.len > 0)
+			client.environment = new/sound/ambient(file = safepick(A.ambient_environment))
 
 			////////////////////////
 			client.environment.last_time = world.time
@@ -95,7 +93,7 @@
 		src << client.psy
 
 
-/sound/ambient/proc/Transition(var/mob/M, var/new_volume = 0)
+/sound/ambient/proc/Transition(mob/M, new_volume = 0)
 	transition = 1
 	status = SOUND_STREAM | SOUND_UPDATE
 	//animate(src, volume = new_volume, time = 2.5, loop = 1)
@@ -109,7 +107,7 @@
 	status = SOUND_STREAM
 	transition = 0
 
-/sound/proc/Set_Sound(var/channel_, var/volume_, var/pan_ , var/environment_)
+/sound/proc/Set_Sound(channel_, volume_, pan_, environment_)
 	status = SOUND_STREAM
 	repeat = 0
 	wait = 0

@@ -64,9 +64,9 @@
 	var/list/canSmoothWithAreas //typecache to limit the areas that atoms in this area can smooth with
 
 	/// Cooldown for ambient_music, randomized for amt * 0.8 to amt * 1.5
-	var/ambient_music_cooldown				= 2000
+	var/ambient_music_cooldown = 2000
 	/// Cooldown for ambient_environment, randomized for amt * 0.3 to amt * 1.5
-	var/ambient_environment_cooldown		= 222
+	var/ambient_environment_cooldown = 666
 	/// Ambient music, plays the entirety then takes a break for ambient_music_cooldown
 	var/list/ambient_music = list('sound/ambient_music/identity_theft.ogg', 'sound/ambient_music/maintenance_tunnels.ogg')
 	/// Plays a sound with a relatively short delay
@@ -74,7 +74,7 @@
 	/// Plays a sound constantly in the area, abit finicky and needs a '= num' at the end of the file
 	var/list/ambient_background = null
 
-	///A text-based description of what this area is for.
+	///A text-based description of what this area is for. Similar-ish to MUDs.
 	var/narrate
 	var/list/blurbed_stated_to = list() //This list of names is here to make sure we don't state our descriptive blurb to a person more than once.
 
