@@ -66,7 +66,7 @@
 	/// Cooldown for ambient_music, randomized for amt * 0.8 to amt * 1.5
 	var/ambient_music_cooldown = 2000
 	/// Cooldown for ambient_environment, randomized for amt * 0.3 to amt * 1.5
-	var/ambient_environment_cooldown = 666
+	var/ambient_environment_cooldown = 1998
 	/// Ambient music, plays the entirety then takes a break for ambient_music_cooldown
 	var/list/ambient_music = list('sound/ambient_music/identity_theft.ogg', 'sound/ambient_music/maintenance_tunnels.ogg')
 	/// Plays a sound with a relatively short delay
@@ -76,7 +76,8 @@
 
 	///A text-based description of what this area is for. Similar-ish to MUDs.
 	var/narrate
-	var/list/blurbed_stated_to = list() //This list of names is here to make sure we don't state our descriptive blurb to a person more than once.
+	///This list of names is here to make sure we don't state our descriptive blurb to a person more than once.
+	var/list/blurbed_stated_to = list()
 
 /*Adding a wizard area teleport list because motherfucking lag -- Urist*/
 /*I am far too lazy to make it a proper list of areas so I'll just make it run the usual telepot routine at the start of the game*/

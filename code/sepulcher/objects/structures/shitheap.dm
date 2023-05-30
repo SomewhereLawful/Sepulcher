@@ -56,13 +56,16 @@
 		adjustFertilizer(1)
 	else if(/obj/item/water_adder)
 		to_chat(user, "You add some water to the heap.")
-		playsound(src, 'sound/effects/blobattack.ogg', 50, 0)
+		playsound(src, 'sound/effects/slosh.ogg', 50, 0)
 		qdel(I)
 		adjustWater(10)
 	return ..()
 
+/obj/structure/shitheap/Initialize()
+	START_PROCESSING(SSobj, src)
+
 /obj/structure/shitheap/process()
-	if(self_sustaining)
+	if(self_sustaining == TRUE)
 		adjustFertilizer(1)
 		adjustWater(rand(3,5))
 
@@ -96,7 +99,7 @@
 		else if(fertilizerlevel > maxfertilizer*0.25)
 			to_chat(user, "<span class='info'>The soil is yearning for new dung.</span>")
 		else if(fertilizerlevel == 0)
-			to_chat(user, "<span class='info'>The pile is starved. It needs more shit to grow more.</span>")
+			to_chat(user, "<span class='info'>The pile is starved. It needs more shit.</span>")
 		if(waterlevel > maxwater*0.75)
 			to_chat(user, "<span class='info'>It is rich in dampness.</span>")
 		else if(waterlevel > maxwater*0.5)

@@ -510,6 +510,14 @@
 	icon_state = "floorrusty"
 	},
 /area/interior/train_yard)
+"kg" = (
+/obj/structure/decor/tire{
+	icon_state = "shina5";
+	pixel_x = 8;
+	pixel_y = 9
+	},
+/turf/open/indestructible/ground/outside/road,
+/area/exterior/wastes)
 "kk" = (
 /obj/machinery/light/small,
 /turf/open/indestructible/ground/floor/wood_floor,
@@ -850,6 +858,10 @@
 "qs" = (
 /turf/open/indestructible/ground/floor/wood_floor,
 /area/interior/spawning/kommandant)
+"qC" = (
+/obj/structure/decor/waste,
+/turf/open/indestructible/ground/outside/road,
+/area/exterior/wastes)
 "qJ" = (
 /obj/structure/simple_door/room,
 /obj/structure/barricade/wooden/planks,
@@ -915,6 +927,9 @@
 "sm" = (
 /turf/open/indestructible/ground/floor/lattice,
 /area/interior/spawning/kommandant)
+"sI" = (
+/turf/open/indestructible/ground/outside/road,
+/area/exterior/wastes)
 "sJ" = (
 /turf/closed/wall/ship_hull,
 /area/exterior/city)
@@ -2395,6 +2410,10 @@
 /obj/structure/decor/grave,
 /turf/open/indestructible/ground/outside/dirt,
 /area/exterior/city)
+"Vr" = (
+/obj/structure/decor/cig_trash,
+/turf/open/indestructible/ground/outside/road,
+/area/exterior/wastes)
 "Vy" = (
 /turf/closed/wall/ship,
 /area/interior/spawning/prole)
@@ -33118,8 +33137,8 @@ Ly
 Ly
 sa
 sj
-pa
-KP
+kg
+Vr
 gK
 BY
 zp
@@ -33375,9 +33394,9 @@ Ly
 Ly
 Ly
 Qb
-Ly
-Ly
-Ly
+sI
+sI
+sI
 yl
 zp
 zp
@@ -33632,9 +33651,9 @@ Ly
 Ly
 Ly
 Ly
-Ly
-Ly
-Ly
+sI
+sI
+sI
 yl
 zp
 zp
@@ -33889,9 +33908,9 @@ Ly
 Ly
 Ly
 Ly
-Ly
-Ly
-Ly
+sI
+sI
+sI
 yl
 zp
 zp
@@ -34146,8 +34165,8 @@ Ly
 Ly
 sa
 sj
-Ly
-sa
+sI
+qC
 UX
 xo
 zp
