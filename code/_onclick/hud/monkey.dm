@@ -15,10 +15,6 @@
 	using.screen_loc = ui_movi
 	static_inventory += using
 
-	using = new/obj/screen/language_menu
-	using.icon = ui_style
-	static_inventory += using
-
 	using = new /obj/screen/drop()
 	using.icon = ui_style
 	using.screen_loc = ui_drop_throw
@@ -77,9 +73,6 @@
 	throw_icon.icon = ui_style
 	throw_icon.screen_loc = ui_drop_throw
 	hotkeybuttons += throw_icon
-
-	internals = new /obj/screen/internals()
-	infodisplay += internals
 
 	health = new /obj/screen/bar_stat/health()
 	infodisplay += health

@@ -44,10 +44,6 @@
 	zone_select.update_icon(mymob)
 	static_inventory += zone_select
 
-	using = new /obj/screen/craft
-	using.icon = ui_style
-	static_inventory += using
-
 	mymob.client.screen = list()
 
 	for(var/obj/screen/inventory/inv in (static_inventory + toggleable_inventory))

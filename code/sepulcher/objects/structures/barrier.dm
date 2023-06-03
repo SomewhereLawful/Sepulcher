@@ -1,6 +1,6 @@
 /obj/structure/barrier // used for border, basically an invisible wall under smoke
-	name = "edge of a dying reality"
-	desc = "The blurred reality gasps, breathes. An impenetrable barrier."
+	name = "edge of a decaying reality"
+	desc = "The veil gasps, breathes. An impenetrable barrier."
 	anchored = TRUE
 	density = TRUE
 	icon = 'icons/effects/landmarks_static.dmi'

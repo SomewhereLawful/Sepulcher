@@ -60,29 +60,6 @@
 		M.swap_hand()
 	return 1
 
-/obj/screen/craft
-	name = "crafting menu"
-	icon = 'icons/mob/screen/screen_midnight.dmi'
-	icon_state = "craft"
-	screen_loc = ui_crafting
-
-/obj/screen/craft/Click()
-	var/mob/living/M = usr
-	if(isobserver(usr))
-		return
-	M.OpenCraftingMenu()
-
-/obj/screen/language_menu
-	name = "language menu"
-	icon = 'icons/mob/screen/screen_midnight.dmi'
-	icon_state = "talk_wheel"
-	screen_loc = ui_language_menu
-
-/obj/screen/language_menu/Click()
-	var/mob/M = usr
-	var/datum/language_holder/H = M.get_language_holder()
-	H.open_language_menu(usr)
-
 /obj/screen/inventory
 	var/slot_id	// The indentifier for the slot. It has nothing to do with ID cards.
 	var/icon_empty // Icon when empty. For now used only by humans.
@@ -227,66 +204,6 @@
 	icon = 'icons/mob/screen/screen_cyborg.dmi'
 	screen_loc = ui_borg_intents
 
-/obj/screen/internals
-	name = "toggle internals"
-	icon_state = "internal0"
-	screen_loc = ui_internal
-
-/obj/screen/internals/Click()
-	if(!iscarbon(usr))
-		return
-	var/mob/living/carbon/C = usr
-	if(C.incapacitated())
-		return
-
-	if(C.internal)
-		C.internal = null
-		to_chat(C, "<span class='notice'>You are no longer running on internals.</span>")
-		icon_state = "internal0"
-	else
-		if(!C.getorganslot(ORGAN_SLOT_BREATHING_TUBE))
-			if(!istype(C.wear_mask, /obj/item/clothing/mask))
-				to_chat(C, "<span class='warning'>You are not wearing an internals mask!</span>")
-				return 1
-			else
-				var/obj/item/clothing/mask/M = C.wear_mask
-				if(M.mask_adjusted) // if mask on face but pushed down
-					M.adjustmask(C) // adjust it back
-				if( !(M.clothing_flags & MASKINTERNALS) )
-					to_chat(C, "<span class='warning'>You are not wearing an internals mask!</span>")
-					return
-
-		var/obj/item/I = C.is_holding_item_of_type(/obj/item/tank)
-		if(I)
-			to_chat(C, "<span class='notice'>You are now running on internals from [I] in your [C.get_held_index_name(C.get_held_index_of_item(I))].</span>")
-			C.internal = I
-		else if(ishuman(C))
-			var/mob/living/carbon/human/H = C
-			if(istype(H.s_store, /obj/item/tank))
-				to_chat(H, "<span class='notice'>You are now running on internals from [H.s_store] on your [H.wear_suit.name].</span>")
-				H.internal = H.s_store
-			else if(istype(H.belt, /obj/item/tank))
-				to_chat(H, "<span class='notice'>You are now running on internals from [H.belt] on your belt.</span>")
-				H.internal = H.belt
-			else if(istype(H.l_store, /obj/item/tank))
-				to_chat(H, "<span class='notice'>You are now running on internals from [H.l_store] in your left pocket.</span>")
-				H.internal = H.l_store
-			else if(istype(H.r_store, /obj/item/tank))
-				to_chat(H, "<span class='notice'>You are now running on internals from [H.r_store] in your right pocket.</span>")
-				H.internal = H.r_store
-
-		//Separate so CO2 jetpacks are a little less cumbersome.
-		if(!C.internal && istype(C.back, /obj/item/tank))
-			to_chat(C, "<span class='notice'>You are now running on internals from [C.back] on your back.</span>")
-			C.internal = C.back
-
-		if(C.internal)
-			icon_state = "internal1"
-		else
-			to_chat(C, "<span class='warning'>You don't have an oxygen tank!</span>")
-			return
-	C.update_action_buttons_icon()
-
 /obj/screen/mov_intent
 	name = "run/walk toggle"
 	icon = 'icons/mob/screen/screen_midnight.dmi'
@@ -373,8 +290,9 @@
 
 /obj/screen/zone_sel
 	name = "damage zone"
-	icon_state = "zone_sel"
+	icon_state = "zone_sel1"
 	screen_loc = ui_zonesel
+	plane = 22 //since it's overlapping the healthdoll. Can't ever see how this might be a problem ever!
 	var/selecting = BODY_ZONE_CHEST
 
 /obj/screen/zone_sel/Click(location, control,params)

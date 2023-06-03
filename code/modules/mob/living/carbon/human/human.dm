@@ -9,7 +9,6 @@
 /mob/living/carbon/human/Initialize()
 	verbs += /mob/living/proc/mob_sleep
 	verbs += /mob/living/proc/lay_down
-	verbs += /mob/living/proc/surrender
 
 	//initialize limbs first
 	create_bodyparts()
@@ -786,7 +785,6 @@
 		if(hud_used.healthdoll)
 			hud_used.healthdoll.cut_overlays()
 			if(stat != DEAD)
-				hud_used.healthdoll.icon_state = "healthdoll_OVERLAY"
 				for(var/X in bodyparts)
 					var/obj/item/bodypart/BP = X
 					var/damage = BP.burn_dam + BP.brute_dam

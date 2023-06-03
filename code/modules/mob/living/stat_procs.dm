@@ -24,7 +24,7 @@
 
 // Hunger Procs
 /mob/living/proc/getHunger()
-	return will
+	return hunger
 
 /mob/living/proc/adjustHunger(amount, updating_hunger = TRUE, forced = FALSE)
 	if(!forced && (status_flags & GODMODE))

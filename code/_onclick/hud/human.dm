@@ -92,14 +92,6 @@
 	var/obj/screen/using
 	var/obj/screen/inventory/inv_box
 
-	using = new /obj/screen/craft
-	using.icon = ui_style
-	static_inventory += using
-
-	using = new/obj/screen/language_menu
-	using.icon = ui_style
-	static_inventory += using
-
 	action_intent = new /obj/screen/act_intent/segmented
 	action_intent.icon_state = mymob.a_intent
 	static_inventory += action_intent
@@ -269,9 +261,6 @@
 	throw_icon.icon = ui_style
 	throw_icon.screen_loc = ui_drop_throw
 	hotkeybuttons += throw_icon
-
-	internals = new /obj/screen/internals()
-	infodisplay += internals
 
 	health = new /obj/screen/bar_stat/health()
 	infodisplay += health
