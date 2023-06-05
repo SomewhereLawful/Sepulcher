@@ -290,7 +290,7 @@
 
 /obj/screen/zone_sel
 	name = "damage zone"
-	icon_state = "zone_sel1"
+	icon_state = "zone_sel_transparent"
 	screen_loc = ui_zonesel
 	plane = 22 //since it's overlapping the healthdoll. Can't ever see how this might be a problem ever!
 	var/selecting = BODY_ZONE_CHEST
@@ -544,3 +544,8 @@
 /obj/screen/component_button/Click(params)
 	if(parent)
 		parent.component_click(src, params)
+
+// Fluff screen objects
+// Stem code for future job-specific HUD variants
+
+/obj/screen/fluff

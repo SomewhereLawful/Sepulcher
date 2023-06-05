@@ -23,16 +23,6 @@
 
 	targetmob.hud_used.hidden_inventory_update(usr)
 
-/obj/screen/human/equip
-	name = "equip"
-	icon_state = "act_equip"
-
-/obj/screen/human/equip/Click()
-	if(ismecha(usr.loc)) // stops inventory actions in a mech
-		return 1
-	var/mob/living/carbon/human/H = usr
-	H.quick_equip()
-
 /obj/screen/devil
 	invisibility = INVISIBILITY_ABSTRACT
 
@@ -138,14 +128,6 @@
 	static_inventory += using
 
 	inv_box = new /obj/screen/inventory()
-	inv_box.name = "id"
-	inv_box.icon = ui_style
-	inv_box.icon_state = "id"
-	inv_box.screen_loc = ui_id
-	inv_box.slot_id = SLOT_WEAR_ID
-	static_inventory += inv_box
-
-	inv_box = new /obj/screen/inventory()
 	inv_box.name = "mask"
 	inv_box.icon = ui_style
 	inv_box.icon_state = "mask"
@@ -201,11 +183,6 @@
 	using = new /obj/screen/human/toggle()
 	using.icon = ui_style
 	using.screen_loc = ui_inventory
-	static_inventory += using
-
-	using = new /obj/screen/human/equip()
-	using.icon = ui_style
-	using.screen_loc = ui_equip_position(mymob)
 	static_inventory += using
 
 	inv_box = new /obj/screen/inventory()

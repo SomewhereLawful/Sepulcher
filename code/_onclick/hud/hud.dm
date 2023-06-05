@@ -282,8 +282,6 @@ GLOBAL_LIST_INIT(available_ui_styles, list(
 	for(var/obj/screen/swap_hand/SH in static_inventory)
 		SH.screen_loc = ui_swaphand_position(mymob,!(i % 2) ? 2: 1)
 		i++
-	for(var/obj/screen/human/equip/E in static_inventory)
-		E.screen_loc = ui_equip_position(mymob)
 
 	if(ismob(mymob) && mymob.hud_used == src)
 		show_hud(hud_version)
