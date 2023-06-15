@@ -8,3 +8,4 @@
 	item_color = "navy"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	can_adjust = FALSE
+	equip_sound = 'sound/items/equip/jumpsuit_equip.ogg'

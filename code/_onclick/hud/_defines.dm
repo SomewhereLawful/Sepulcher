@@ -29,7 +29,7 @@
 //Lower center, persistent menu
 #define ui_sstore1 "CENTER-4:12,SOUTH:5"
 #define ui_id "CENTER-4:12,SOUTH:5"
-#define ui_belt "CENTER-3:14,SOUTH:5"
+#define ui_belt "CENTER-3:12,SOUTH:5"
 #define ui_back "CENTER-2:14,SOUTH:5"
 
 /proc/ui_hand_position(i) //values based on old hand ui positions (CENTER:-/+16,SOUTH:5)

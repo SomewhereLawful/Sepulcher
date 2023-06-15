@@ -32,6 +32,9 @@ GLOBAL_VAR_INIT(rpg_loot_items, FALSE)
 	var/hitsound = null
 	var/usesound = null
 	var/throwhitsound = null
+	var/equip_sound = null
+	var/pickup_sound = null
+	var/drop_sound = null
 	var/w_class = WEIGHT_CLASS_NORMAL
 	var/slot_flags = 0		//This is used to determine on which slots an item can fit.
 	pass_flags = PASSTABLE
@@ -364,6 +367,8 @@ GLOBAL_VAR_INIT(rpg_loot_items, FALSE)
 		qdel(src)
 	item_flags &= ~IN_INVENTORY
 	SEND_SIGNAL(src, COMSIG_ITEM_DROPPED,user)
+	if(drop_sound)
+		playsound(src, drop_sound, DROP_SOUND_VOLUME, ignore_walls = FALSE)
 
 // called just as an item is picked up (loc is not yet changed)
 /obj/item/proc/pickup(mob/user)
@@ -386,6 +391,11 @@ GLOBAL_VAR_INIT(rpg_loot_items, FALSE)
 		if(item_action_slot_check(slot, user)) //some items only give their actions buttons when in a specific slot.
 			A.Grant(user)
 	item_flags |= IN_INVENTORY
+	if(pickup_sound)
+		if(equip_sound && (slot_flags & slot))
+			playsound(src, equip_sound, EQUIP_SOUND_VOLUME, TRUE, ignore_walls = FALSE)
+		else if(slot & SLOT_HANDS)
+			playsound(src, pickup_sound, PICKUP_SOUND_VOLUME, ignore_walls = FALSE)
 
 //sometimes we only want to grant the item's action if it's equipped in a specific slot.
 /obj/item/proc/item_action_slot_check(slot, mob/user)
