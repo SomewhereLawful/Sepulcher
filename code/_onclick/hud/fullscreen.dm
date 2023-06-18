@@ -119,6 +119,7 @@
 	icon_state = "curse"
 	layer = CURSE_LAYER
 	plane = FULLSCREEN_PLANE
+	show_when_dead = TRUE
 
 /obj/screen/fullscreen/impaired
 	icon_state = "impairedoverlay"

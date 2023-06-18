@@ -260,13 +260,13 @@ Works together with spawning an observer, noted above.
 			stop_sound_channel(CHANNEL_HEARTBEAT) //Stop heartbeat sounds because You Are A Ghost Now
 			var/mob/dead/observer/ghost = new(src)	// Transfer safety to observer spawning proc.
 			SStgui.on_transfer(src, ghost) // Transfer NanoUIs.
+			ghost.overlay_fullscreen("curse", /obj/screen/fullscreen/curse, 1) // Adds the scary overlay
 			ghost.can_reenter_corpse = can_reenter_corpse
 			ghost.key = key
 			ghost.timeofdeath = src.timeofdeath /* used for respawn */
 			if(src.timeofdeath == 0)
 				ghost.timeofdeath = world.time
 			return ghost
-
 /*
 This is the proc mobs get to turn into a ghost. Forked from ghostize due to compatibility issues.
 */

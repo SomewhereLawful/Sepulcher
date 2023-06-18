@@ -26,9 +26,7 @@
 					/obj/item/clothing/shoes/black = 50)
 
 /obj/structure/laundry_bin/attack_hand(mob/user)
-	to_chat(user, "You dig through for something of passable quality.")
 	var/choice = input(user, "Choose an article to search for", "Digging for clothes") as null|anything in list("Hats","Masks","Shirts","Coats","Gloves","Shoes",)
-	playsound(src, 'sound/effects/cloth_rustle1.ogg', 50, 0)
 	if(do_after(user, 14.4, target = src))
 		switch(choice)
 			if("Hats")

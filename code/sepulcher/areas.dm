@@ -25,7 +25,7 @@
 	name = "City Docks"
 	icon_state = "city"
 	ambient_music = list('sound/ambient_music/hl2_song32.ogg')
-	ambient_environment = list('sound/ambience/docks_tone.ogg')
+	ambient_background = list('sound/ambience/shore/wave1.ogg' = 100, 'sound/ambience/shore/wave2.ogg' = 100, 'sound/ambience/shore/wave3.ogg' = 100, 'sound/ambience/shore/wave4.ogg' = 100, 'sound/ambience/shore/wave5.ogg' = 100, 'sound/ambience/shore/wave6.ogg' = 100)
 
 /area/exterior/wastes
 	name = "The Wastes"
