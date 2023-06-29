@@ -85,7 +85,8 @@
 	light_range = 1.9
 	light_power = 1
 	light_color = "#FAECCF"
-	
+	footstep = FOOTSTEP_CATWALK
+
 /turf/open/foundry // Fake chasm for foundry catwalks
 	name = "foundry pit"
 	desc = "It hungers for scrap metal. Watch your step."
@@ -97,6 +98,7 @@
 	light_range = 1.9
 	light_power = 1
 	light_color = "#FAECCF"
+	footstep = FOOTSTEP_CATWALK
 
 /turf/open/indestructible/ground/floor
 	name = "floor"

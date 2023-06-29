@@ -32,7 +32,7 @@
 	icon_state = "wastes"
 	ambient_music = list('sound/ambient_music/hl2_song27.ogg')
 	ambient_background = list('sound/ambience/wasteland/wasteland_wind.ogg' = 100)
-	narrate = "Red damp sand and burnt wooden spires stretch to the horizon. Birds glide amoungst the trees looking for a meal."
+	narrate = "Red, damp sand and burnt wooden spires stretch to the horizon. Birds glide amoungst the trees looking for a meal."
 
 //			 //
 // INTERIORS //

@@ -271,7 +271,7 @@ em						{font-style: normal;	font-weight: bold;}
 .name					{					font-weight: bold;}
 
 .say					{}
-/* Sepulcher Colors, based on MUSHClient ANSI colors - Minus black*/
+/* Sepulcher Colors, based on MUSHClient ANSI colors - black is for VERY RARE occasions*/
 .red				{color: #960000;}
 .green				{color: #117c28;}
 .yellow				{color: #DAAA18;}
@@ -279,6 +279,7 @@ em						{font-style: normal;	font-weight: bold;}
 .magenta			{color: #FF00FF;}
 .cyan				{color: #00FFFF;}
 .white				{color: #ffffff;}
+.black				{color: #0f0f0f;}
 
 /* SS13 basic */
 .deadsay				{color: #5e2d79;}
