@@ -83,7 +83,7 @@
 	if(!..())
 		return
 
-	if(src.willloss >= 25 && (!client.psy || (world.time >= client.psy.last_time + client.psy.real_cooldown)))
+	if(src.willloss >= 50 && (!client.psy || (world.time >= client.psy.last_time + client.psy.real_cooldown)))
 		client.psy = new/sound/ambient(file = 'sound/ambience/psy_amb.ogg')
 		////////////////////////
 		client.psy.last_time = world.time
