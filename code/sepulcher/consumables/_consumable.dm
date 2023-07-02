@@ -11,7 +11,7 @@
 	var/health_points = 0
 	/// Percentage of total hunger given when eaten
 	var/feed_points = 0
-	/// How much will is given
+	/// How much will is lost
 	var/will_points = 0
 	/// How much toxicity is given
 	var/toxicity_points = 0
@@ -22,6 +22,8 @@
 	/// Use sparingly. Determines what item is generated upon total consumption of the food.
 	var/trash = null
 	var/cooking_product = null
+	/// Description of eating the item for the user, predominantly taste and texture.
+	var/flavour_text = null
 
 /obj/item/consumable/burn()
 	if(!cooking_product == null)
@@ -90,11 +92,12 @@
 		M.adjustBruteLoss(health_points) // It just works
 		M.adjustHunger(feed_points *= 10) // It just works
 		M.adjustWillLoss(will_points)
-		M.adjustToxicityGain(toxicity_points*-1)
+		M.adjustToxicityGain(toxicity_points)
 		SEND_SIGNAL(src, COMSIG_FOOD_EATEN, M, user)
 		On_Consume(M)
 		qdel(src)
-
+		if(flavour_text)
+			to_chat(user, flavour_text)
 		return 1
 	return 0
 

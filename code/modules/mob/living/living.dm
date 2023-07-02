@@ -395,13 +395,13 @@
 /mob/living/proc/updatehunger()
 	if(status_flags & GODMODE)
 		return
-	hunger = maxHunger - (getHunger()*10) // *10 For simplicity's sake - because Hunger starts at 1000
+	hunger = getHunger() // *10 For simplicity's sake - because Hunger starts at 1000
 	update_stat()
 
 /mob/living/proc/updatetoxicity()
 	if(status_flags & GODMODE)
 		return
-	toxicity = maxToxicity + getToxicityGain()
+	toxicity = getToxicityGain()
 	update_stat()
 
 //proc used to ressuscitate a mob

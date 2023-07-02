@@ -1520,6 +1520,10 @@
 	icon_state = "lattice_new14"
 	},
 /area/interior/spawning/kommandant)
+"Bg" = (
+/obj/structure/simple_door/room,
+/turf/closed/wall/brickdark,
+/area/interior/city)
 "Bl" = (
 /obj/item/fishing_rod,
 /turf/open/indestructible/ground/outside/road,
@@ -1852,10 +1856,7 @@
 /area/interior/foundry)
 "HM" = (
 /obj/structure/bed/mattress,
-/turf/open/floor/f13{
-	tag = "icon-floorrusty";
-	icon_state = "floorrusty"
-	},
+/turf/open/indestructible/ground/floor/wood_floor,
 /area/interior/city)
 "HO" = (
 /obj/structure/decor/apc{
@@ -28031,9 +28032,9 @@ TQ
 sj
 XX
 XX
-sc
-TQ
-TQ
+Bg
+Zr
+Zr
 HM
 mr
 TQ
@@ -28289,9 +28290,9 @@ sj
 XX
 XX
 sj
-TQ
-TQ
-TQ
+Zr
+Zr
+Zr
 mr
 kJ
 TQ
@@ -28547,8 +28548,8 @@ XX
 XX
 sj
 HM
-TQ
-TQ
+Zr
+Zr
 sj
 sj
 sc
@@ -30336,8 +30337,8 @@ sj
 Ly
 Ly
 sj
-sj
-sj
+tF
+tF
 sj
 sj
 sj
@@ -30593,9 +30594,9 @@ sj
 Ly
 Ly
 sj
-XX
-XX
-XX
+Zr
+Zr
+sj
 XX
 XX
 sj
@@ -30850,8 +30851,8 @@ sj
 sa
 Ly
 sj
-XX
-XX
+Zr
+Zr
 sj
 sj
 sj
@@ -31108,7 +31109,7 @@ Ly
 by
 sj
 sj
-XX
+Bg
 sj
 XL
 nr
