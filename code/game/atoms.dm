@@ -249,7 +249,7 @@
 		. = override.Join("")
 
 /atom/proc/get_examine_string(mob/user, thats = FALSE)
-	. = "[icon2html(src, user)] [thats? "That's ":""][get_examine_name(user)]"
+	. = "[icon2html(src, user)] [thats? "That's ":""]<span class='yellow'>[get_examine_name(user)]</span>"
 
 /atom/proc/examine(mob/user)
 	to_chat(user, get_examine_string(user, TRUE))

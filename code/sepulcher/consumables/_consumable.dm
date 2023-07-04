@@ -85,19 +85,9 @@
 //Handle ingestion of the item.
 		playsound(M.loc, eat_sound, 60)
 		M.adjustHunger(feed_points *= 10)
-
-		if(health_points < 0)
-			M.adjustBruteLoss(health_points * -1)
-		else
-			M.adjustBruteLoss(health_points)		
-		if(will_points < 0)
-			M.adjustWillLoss(will_points * -1)
-		else
-			M.adjustWillLoss(will_points)
-		if(toxicity_points < 0)
-			M.adjustToxicityGain(toxicity_points * -1)
-		else
-			M.adjustToxicityGain(toxicity_points)
+		M.adjustBruteLoss(health_points)		
+		M.adjustWillLoss(will_points)
+		M.adjustToxicityGain(toxicity_points)
 
 		SEND_SIGNAL(src, COMSIG_FOOD_EATEN, M, user)
 		On_Consume(M)

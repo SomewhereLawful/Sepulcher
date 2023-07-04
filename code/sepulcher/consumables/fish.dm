@@ -3,6 +3,7 @@
 	desc = "Common, edible. Cook it, it squirms with parasites."
 	icon_state = "fish"
 	feed_points = 3
+	toxicity_points = 10
 
 /obj/item/consumable/food/fish/sturgeon
 	name = "spine fish"
