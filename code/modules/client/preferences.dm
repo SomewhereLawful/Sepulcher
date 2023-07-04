@@ -245,7 +245,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 			dat += "<h2>Body</h2>"
 			dat += "<a href='?_src_=prefs;preference=all;task=random'>Random Body</A><br>"
 
-			dat += "Note: This field is only used by the Bourgeoisie.<table width='100%'><tr><valign='top'>"
+			dat += "This is your Bourgeoisie form. It does not extend to other positions.<table width='100%'><tr><valign='top'>"
 
 			var/use_skintones = pref_species.use_skintones
 			if(use_skintones)

@@ -1,7 +1,7 @@
 // Shitheaps //
 // Cart shit to heap -> Add to heap -> Add water -> collect mushrooms //
 
-/obj/item/consumable/dung
+/obj/item/consumable/food/dung
 	name = "shit gobbet"
 	desc = "A filthy mass of waste. It piles nicely, so wet and repugnant."
 	icon_state = "poop"
@@ -51,7 +51,7 @@
 
 
 /obj/structure/shitheap/attackby(obj/item/I, mob/user, params)
-	if(/obj/item/consumable/dung)
+	if(/obj/item/consumable/food/dung)
 		to_chat(user, "You add some dung to the heap.")
 		playsound(src, 'sound/effects/blobattack.ogg', 50, 0)
 		qdel(I)

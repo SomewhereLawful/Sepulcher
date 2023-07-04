@@ -32,9 +32,9 @@
 
 /datum/quirk/willdraining
 	name = "Slipping Mind"
-	desc = "The desire to continue weakens. Your will constantly drains."
+	desc = "The desire to continue weakens. Your Will constantly drains."
 	value = -3
-	gain_text = "<span class='danger'>You feel your will slowly fading away.</span>"
+	gain_text = "<span class='danger'>You feel a draining of the soul.</span>"
 	lose_text = "<span class='notice'>You feel confident in your mind again.</span>"
 
 /datum/quirk/willdraining/on_process()

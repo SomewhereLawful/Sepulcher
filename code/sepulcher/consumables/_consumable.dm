@@ -20,7 +20,8 @@
 	/// Use sparingly. Determines what item is generated upon total consumption of the food.
 	var/trash = null
 	var/cooking_product = null
-
+	/// For mouth/face cover check. If TRUE, checks.
+	var/ingest_consumption = TRUE
 	// string stuff for visiblemessage
 	var/uses_verb = "uses"
 	var/use_verb = "use"
@@ -42,10 +43,12 @@
 		covered = "headgear"
 	else if(C.is_mouth_covered(mask_only = 1))
 		covered = "mask"
-	if(covered)
-		var/who = (isnull(user) || eater == user) ? "your" : "[eater.p_their()]"
-		to_chat(user, "<span class='warning'>You have to remove [who] [covered] first!</span>")
-		return 0
+	if(ingest_consumption == TRUE)
+		if(covered)
+			var/who = (isnull(user) || eater == user) ? "your" : "[eater.p_their()]"
+			to_chat(user, "<span class='warning'>You have to remove [who] [covered] first.</span>")
+			return 0
+	else return 1
 	return 1
 
 /obj/item/consumable/attack(mob/living/M, mob/living/user, def_zone)
@@ -78,7 +81,7 @@
 			else
 				to_chat(user, "<span class='warning'>[M] doesn't seem to have a mouth!</span>")
 				return
-		
+
 //Handle ingestion of the item.
 		playsound(M.loc, eat_sound, 60)
 		M.adjustHunger(feed_points *= 10)
