@@ -15,13 +15,15 @@
 	var/will_points = 0
 	/// How much toxicity is given
 	var/toxicity_points = 0
-	/// Used for flavortext in eating /attack
-	var/eatverb
 	/// Sound when the food is eaten
 	var/eat_sound = 'sound/items/food_crunchy_1.ogg'
 	/// Use sparingly. Determines what item is generated upon total consumption of the food.
 	var/trash = null
 	var/cooking_product = null
+
+	// string stuff for visiblemessage
+	var/uses_verb = "uses"
+	var/use_verb = "use"
 	/// Description of eating the item for the user, predominantly taste and texture.
 	var/flavour_text = null
 
@@ -50,23 +52,13 @@
 	if(user.a_intent == INTENT_HARM)
 		return ..()
 	
-	if(!eatverb)
-		eatverb = pick("bite","chew","nibble","gnaw","gobble","chomp")
 	if(iscarbon(M))
 		if(!canconsume(M, user))
 			return 0
 
 		if(M == user)								//If you're eating it yourself.
-			if(M.hunger <= 40)
-				user.visible_message("<span class='notice'>[user] hungrily takes a [eatverb] from \the [src], gobbling it down!</span>", "<span class='notice'>You hungrily take a [eatverb] from \the [src], gobbling it down!</span>")
-			else if(M.hunger > 50)
-				user.visible_message("<span class='notice'>[user] hungrily takes a [eatverb] from \the [src].</span>", "<span class='notice'>You hungrily take a [eatverb] from \the [src].</span>")
-			else if(M.hunger > 70)
-				user.visible_message("<span class='notice'>[user] takes a [eatverb] from \the [src].</span>", "<span class='notice'>You take a [eatverb] from \the [src].</span>")
-			else if(M.hunger > 90)
-				user.visible_message("<span class='notice'>[user] unwillingly takes a [eatverb] of a bit of \the [src].</span>", "<span class='notice'>You unwillingly take a [eatverb] of a bit of \the [src].</span>")
-			else if(M.hunger == 100)
-				user.visible_message("<span class='warning'>[user] cannot force any more of \the [src] to go down [user.p_their()] throat!</span>", "<span class='warning'>You cannot force any more of \the [src] to go down your throat!</span>")
+			if(M.hunger == 100)
+				user.visible_message("<span class='warning'>[user] fails to force \the [src] down [user.p_their()] maw!</span>", "<span class='warning'>You fail to force \the [src] down your maw!</span>")
 				return 0
 		else
 			if(!isbrain(M))		//If you're feeding it to someone else.
@@ -89,15 +81,29 @@
 		
 //Handle ingestion of the item.
 		playsound(M.loc, eat_sound, 60)
-		M.adjustBruteLoss(health_points) // It just works
-		M.adjustHunger(feed_points *= 10) // It just works
-		M.adjustWillLoss(will_points)
-		M.adjustToxicityGain(toxicity_points)
+		M.adjustHunger(feed_points *= 10)
+
+		if(health_points < 0)
+			M.adjustBruteLoss(health_points * -1)
+		else
+			M.adjustBruteLoss(health_points)		
+		if(will_points < 0)
+			M.adjustWillLoss(will_points * -1)
+		else
+			M.adjustWillLoss(will_points)
+		if(toxicity_points < 0)
+			M.adjustToxicityGain(toxicity_points * -1)
+		else
+			M.adjustToxicityGain(toxicity_points)
+
 		SEND_SIGNAL(src, COMSIG_FOOD_EATEN, M, user)
 		On_Consume(M)
 		qdel(src)
+
+		user.visible_message("[user] [uses_verb] \the [src].", "<span class='magenta'>You [use_verb] \the [src].</span>")
 		if(flavour_text)
 			to_chat(user, flavour_text)
+
 		return 1
 	return 0
 

@@ -395,7 +395,7 @@
 /mob/living/proc/updatehunger()
 	if(status_flags & GODMODE)
 		return
-	hunger = getHunger() // *10 For simplicity's sake - because Hunger starts at 1000
+	hunger = getHunger()
 	update_stat()
 
 /mob/living/proc/updatetoxicity()
