@@ -1,7 +1,8 @@
 /obj/item/consumable/food/drink
 	name = "broken fluid"
 	desc = "fluid broken"
-	icon_state = "fish"
+	icon = 'icons/obj/drink.dmi'
+	icon_state = "broken"
 
 	uses_verb = "drinks"
 	use_verb = "drink"

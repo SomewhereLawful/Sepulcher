@@ -21,6 +21,11 @@
 	},
 /turf/open/indestructible/ground/outside/road,
 /area/exterior/city/docks)
+"aD" = (
+/obj/structure/decor/waste,
+/obj/structure/chair/stool/wood,
+/turf/open/indestructible/ground/outside/road,
+/area/exterior/city)
 "aO" = (
 /obj/effect/step_trigger/teleporter{
 	teleport_x = 111;
@@ -65,6 +70,13 @@
 /obj/structure/decor/wood_scrap,
 /turf/open/indestructible/ground/outside/road,
 /area/exterior/city)
+"bF" = (
+/obj/structure/chair/stool/wood,
+/turf/open/floor/f13{
+	tag = "icon-floorrusty";
+	icon_state = "floorrusty"
+	},
+/area/interior/city)
 "bN" = (
 /turf/closed/wall/brickdark,
 /area/interior/train_yard)
@@ -99,6 +111,10 @@
 	icon_state = "darkrustysolid"
 	},
 /area/interior/spawning/bougie)
+"cE" = (
+/obj/structure/chair/stool/wood,
+/turf/open/indestructible/ground/outside/road,
+/area/exterior/city)
 "cG" = (
 /obj/effect/turf_decal/line{
 	dir = 1
@@ -505,6 +521,13 @@
 	},
 /turf/open/indestructible/ground/outside/road,
 /area/exterior/city/docks)
+"jX" = (
+/obj/structure/chair/stool/wood,
+/turf/open/floor/f13{
+	tag = "icon-bluedirtychess2";
+	icon_state = "bluedirtychess2"
+	},
+/area/interior/city)
 "kb" = (
 /obj/structure/decor/foundry,
 /turf/open/chasm/foundry,
@@ -1216,6 +1239,13 @@
 /obj/structure/barricade/wooden/planks,
 /turf/open/indestructible/ground/outside/road,
 /area/interior/train_yard)
+"vN" = (
+/obj/structure/chair/stool/wood,
+/turf/open/floor/f13{
+	tag = "icon-floorrusty";
+	icon_state = "floorrustysolid"
+	},
+/area/interior/spawning/bioslave)
 "vR" = (
 /obj/structure/lattice/catwalk{
 	icon_state = "catwalk13-1"
@@ -1633,6 +1663,7 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
+/obj/structure/chair/stool/wood,
 /turf/open/floor/f13{
 	tag = "icon-bluedirtychess2";
 	icon_state = "bluedirtychess2"
@@ -1827,6 +1858,13 @@
 	},
 /turf/open/indestructible/ground/outside/road,
 /area/exterior/city)
+"GU" = (
+/obj/effect/turf_decal/line{
+	dir = 1
+	},
+/obj/structure/chair/stool/wood,
+/turf/open/indestructible/ground/outside/road,
+/area/exterior/city)
 "Ha" = (
 /obj/structure/fence/church{
 	dir = 4
@@ -1844,6 +1882,10 @@
 /obj/structure/decor/iconostasis,
 /turf/open/indestructible/ground/floor/lattice,
 /area/interior/spawning/kommandant)
+"Hv" = (
+/obj/structure/chair/stool/wood,
+/turf/open/indestructible/ground/outside/road,
+/area/exterior/city/docks)
 "Hw" = (
 /obj/structure/decor/spool,
 /turf/open/indestructible/ground/outside/road,
@@ -1854,6 +1896,13 @@
 	},
 /turf/open/foundry,
 /area/interior/foundry)
+"HH" = (
+/obj/effect/turf_decal/roadline/noshadow{
+	dir = 5
+	},
+/obj/item/chair/stool/wood,
+/turf/open/indestructible/ground/outside/road,
+/area/exterior/city/docks)
 "HM" = (
 /obj/structure/bed/mattress,
 /turf/open/indestructible/ground/floor/wood_floor,
@@ -2054,6 +2103,13 @@
 "LQ" = (
 /turf/open/indestructible/ground/floor/lattice,
 /area/interior/spawning/bougie)
+"LR" = (
+/obj/effect/turf_decal/roadline/noshadow{
+	dir = 8
+	},
+/obj/structure/chair/stool/wood,
+/turf/open/indestructible/ground/outside/road,
+/area/exterior/city/docks)
 "Md" = (
 /obj/structure/decor/wood_scrap,
 /obj/structure/decor/dump_bin/full{
@@ -2145,6 +2201,13 @@
 "NH" = (
 /turf/closed/wall/beton,
 /area/interior/spawning/bougie)
+"NL" = (
+/obj/effect/turf_decal/roadline/noshadow{
+	dir = 4
+	},
+/obj/structure/chair/stool/wood,
+/turf/open/indestructible/ground/outside/road,
+/area/exterior/city/docks)
 "NV" = (
 /turf/closed/wall/brickdark,
 /area/interior/foundry)
@@ -2483,6 +2546,13 @@
 	},
 /turf/open/indestructible/ground/outside/road,
 /area/exterior/city)
+"Ve" = (
+/obj/item/chair/stool/wood,
+/turf/open/floor/f13{
+	tag = "icon-bluedirtychess2";
+	icon_state = "bluedirtychess2"
+	},
+/area/interior/city)
 "Vg" = (
 /obj/effect/turf_decal/line{
 	dir = 4
@@ -2505,6 +2575,10 @@
 	icon_state = "hull3"
 	},
 /area/interior/city)
+"VP" = (
+/obj/item/chair/stool/wood,
+/turf/open/indestructible/ground/outside/road,
+/area/exterior/city)
 "VS" = (
 /obj/effect/turf_decal/line{
 	dir = 8
@@ -27780,7 +27854,7 @@ sj
 sj
 sj
 mr
-TQ
+bF
 TQ
 TQ
 TQ
@@ -28037,7 +28111,7 @@ Zr
 Zr
 HM
 mr
-TQ
+bF
 TQ
 TQ
 mr
@@ -31391,7 +31465,7 @@ eY
 eY
 eY
 EV
-EV
+vN
 eY
 XX
 XX
@@ -33385,7 +33459,7 @@ gW
 gW
 gW
 jL
-lz
+Hv
 lz
 lz
 lz
@@ -33476,7 +33550,7 @@ XX
 sj
 pa
 KP
-Ly
+cE
 Ly
 KP
 Ly
@@ -33641,7 +33715,7 @@ gW
 gW
 gW
 Wx
-Ax
+HH
 aA
 aA
 aA
@@ -33656,7 +33730,7 @@ lz
 lz
 sj
 pC
-pC
+Ve
 pC
 pC
 TO
@@ -33915,7 +33989,7 @@ JJ
 pC
 pC
 pC
-pC
+jX
 TO
 Qz
 Ly
@@ -33989,7 +34063,7 @@ XX
 XX
 sj
 dJ
-sa
+aD
 Ly
 KP
 Ly
@@ -34766,7 +34840,7 @@ Ly
 Ly
 Ly
 sj
-TQ
+bF
 TQ
 QC
 sj
@@ -35255,7 +35329,7 @@ XX
 XX
 uE
 Ly
-Ly
+VP
 lD
 Ly
 Pq
@@ -35698,7 +35772,7 @@ gW
 gW
 Wx
 ec
-RY
+LR
 RY
 RY
 RY
@@ -35957,7 +36031,7 @@ gW
 jL
 lz
 lz
-lz
+Hv
 vn
 lz
 lz
@@ -36472,7 +36546,7 @@ Ax
 aA
 aA
 aA
-aA
+NL
 Oh
 aA
 hB
@@ -42696,7 +42770,7 @@ Ly
 Ly
 PT
 Pq
-GT
+GU
 Ly
 Ly
 kO

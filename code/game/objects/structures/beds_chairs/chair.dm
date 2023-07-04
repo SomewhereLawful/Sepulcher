@@ -257,6 +257,14 @@
 		usr.put_in_hands(C)
 		qdel(src)
 
+/obj/structure/chair/stool/wood
+	name = "stool"
+	desc = null
+	icon_state = "stool_wood"
+	can_buckle = 0
+	buildstackamount = 1
+	item_chair = /obj/item/chair/stool/wood
+
 /obj/structure/chair/stool/bar
 	name = "bar stool"
 	desc = "It has some unsavory stains on it..."
@@ -348,6 +356,13 @@
 	item_state = "stool"
 	origin_type = /obj/structure/chair/stool
 	break_chance = 0 //It's too sturdy.
+
+/obj/item/chair/stool/wood
+	name = "stool"
+	icon_state = "stool_wood_toppled"
+	item_state = "stool_wood"
+	origin_type = /obj/structure/chair/stool/wood
+	break_chance = 0
 
 /obj/item/chair/stool/bar
 	name = "bar stool"
