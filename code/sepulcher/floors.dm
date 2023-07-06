@@ -20,6 +20,13 @@
 	icon_state = "redwater_motion"
 	baseturfs = /turf/open/indestructible/ground/outside/water/sea
 
+/turf/open/indestructible/ground/outside/water/sea/deep
+	name = "deep sea water"
+	desc = "An apparent ledge lay before you. This is the boundry."
+	icon_state = "deepred_motion"
+	baseturfs = /turf/open/indestructible/ground/outside/water/sea/deep
+	density = TRUE
+
 /turf/open/indestructible/ground/outside/water/knee_high
 	name = "water"
 	desc = "Mundane fluids used in ritual."

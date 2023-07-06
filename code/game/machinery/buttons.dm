@@ -251,8 +251,8 @@
 /obj/machinery/button/crematorium
 	name = "crematorium igniter"
 	desc = "Burn baby burn!"
-	icon_state = "launcher"
-	skin = "launcher"
+	icon_state = "button"
+	skin = "button"
 	device_type = /obj/item/assembly/control/crematorium
 	req_access = list()
 	id = 1

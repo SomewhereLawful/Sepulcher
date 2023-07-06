@@ -59,28 +59,28 @@
 		if(!canconsume(M, user))
 			return 0
 
-		if(M == user)								//If you're eating it yourself.
-			if(M.hunger == 100)
-				user.visible_message("<span class='warning'>[user] fails to force \the [src] down [user.p_their()] maw!</span>", "<span class='warning'>You fail to force \the [src] down your maw!</span>")
-				return 0
-		else
-			if(!isbrain(M))		//If you're feeding it to someone else.
-				if(M.hunger <= 50)
-					M.visible_message("<span class='danger'>[user] attempts to feed [M] [src].</span>", \
-										"<span class='userdanger'>[user] attempts to feed [M] [src].</span>")
-				else
-					M.visible_message("<span class='warning'>[user] cannot force any more of [src] down [M]'s throat!</span>", \
-										"<span class='warning'>[user] cannot force any more of [src] down [M]'s throat!</span>")
+		if(ingest_consumption == TRUE)
+			if(M == user)								//If you're eating it yourself.
+				if(M.hunger <= 100)
+					user.visible_message("<span class='warning'>[user] fails to force \the [src] down [user.p_their()] maw!</span>", "<span class='warning'>You fail to force \the [src] down your maw!</span>")
 					return 0
-
-				if(!do_mob(user, M))
-					return
-				M.visible_message("<span class='danger'>[user] forces [M] to eat [src].</span>", \
-									"<span class='userdanger'>[user] forces [M] to eat [src].</span>")
-
 			else
-				to_chat(user, "<span class='warning'>[M] doesn't seem to have a mouth!</span>")
-				return
+				if(!isbrain(M))		//If you're feeding it to someone else.
+					if(M.hunger <= 50)
+						M.visible_message("<span class='danger'>[user] attempts to feed [M] [src].</span>", \
+											"<span class='userdanger'>[user] attempts to feed [M] [src].</span>")
+					else
+						M.visible_message("<span class='warning'>[user] cannot force any more of [src] down [M]'s throat!</span>", \
+											"<span class='warning'>[user] cannot force any more of [src] down [M]'s throat!</span>")
+						return 0
+
+					if(!do_mob(user, M))
+						return
+					M.visible_message("<span class='danger'>[user] forces [M] to eat [src].</span>", \
+										"<span class='userdanger'>[user] forces [M] to eat [src].</span>")
+				else
+					to_chat(user, "<span class='warning'>[M] doesn't seem to have a mouth!</span>")
+					return
 
 //Handle ingestion of the item.
 		playsound(M.loc, eat_sound, 60)
