@@ -16,3 +16,8 @@
 
 /obj/effect/turf_decal/roadline/noshadow/corner
 	icon_state = "roadborder_noshadow_corner"
+
+/obj/effect/turf_decal/water_edge // I swear this is temporary
+	icon = 'icons/sepulcher/floor_effects.dmi'
+	icon_state = "redwater_motion_corner"
+	anchored = TRUE

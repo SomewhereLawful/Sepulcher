@@ -2,8 +2,8 @@
 	name = "button"
 	desc = "A remote control switch."
 	icon = 'icons/obj/stationobjs.dmi'
-	icon_state = "doorctrl"
-	var/skin = "doorctrl"
+	icon_state = "button"
+	var/skin = "button"
 	power_channel = ENVIRON
 	var/obj/item/assembly/device
 	var/obj/item/electronics/airlock/board

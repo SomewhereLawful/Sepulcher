@@ -7,6 +7,7 @@
 	icon_state = "broken"
 	ingest_consumption = FALSE
 	health_points = -100
+	eat_sound = 'sound/items/medicine_tablet.ogg'
 
 /obj/item/consumable/medicine/citalopram
 	name = "citalopram pill"
@@ -14,6 +15,14 @@
 	icon_state = "citalopram"
 	ingest_consumption = TRUE
 	will_points = -15
+
+/obj/item/consumable/medicine/potassium_iodide
+	name = "iodide pill"
+	desc = "Toxicity Purgative. Effective, yet bitter."
+	icon_state = "iodide"
+	ingest_consumption = TRUE
+	toxicity_points = -15
+	will_points = 5
 
 /obj/item/consumable/medicine/bruise_salve
 	name = "bruise salve"

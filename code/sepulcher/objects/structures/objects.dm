@@ -87,6 +87,7 @@
 	name = "wood scrap"
 	icon_state = "doski_oblomki_alt1"
 	density = 0
+	layer = TURF_DECAL_LAYER
 
 /obj/structure/decor/wood_scrap/New()
 	if(icon_state == "doski_oblomki_alt1")
@@ -107,6 +108,7 @@
 	desc = "Inscribed with unreadable text. The home of those who escaped this torment."
 	icon_state = "grave1"
 	density = FALSE
+	layer = TURF_DECAL_LAYER
 
 /obj/structure/decor/grave/New()
 	if(icon_state == "grave1")
@@ -137,6 +139,7 @@
 	icon_state = "cover"
 	bound_width = 64
 	density = 0
+	layer = TURF_DECAL_LAYER
 
 /obj/structure/decor/water_tank
 	name = "fluid tank"
@@ -151,6 +154,7 @@
 	light_color = LIGHT_COLOR_TUNGSTEN
 	light_power = 1
 	light_range = 2
+	layer = TURF_DECAL_LAYER
 
 /obj/structure/decor/candle/New()
 	if(icon_state == "candle1")
@@ -163,6 +167,7 @@
 	gender = PLURAL
 	icon_state = "trash1"
 	density = FALSE
+	layer = TURF_DECAL_LAYER
 
 /obj/structure/decor/waste/New()
 	pixel_x = rand(-5,5)
@@ -177,6 +182,7 @@
 	gender = PLURAL
 	icon_state = "cig_trash1"
 	density = FALSE
+	layer = TURF_DECAL_LAYER
 
 /obj/structure/decor/cig_trash/New()
 	pixel_x = rand(-5,5)
