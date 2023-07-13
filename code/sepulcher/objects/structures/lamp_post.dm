@@ -34,3 +34,6 @@
 		update_brightness()
 	else
 		return
+
+/obj/structure/lamp_post/lantern
+	lantern_having = TRUE

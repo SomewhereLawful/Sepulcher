@@ -29,7 +29,7 @@
 	desc = "Neurotoxin, o' burst vessels."
 	icon_state = "redeye"
 	feed_points = 3
-	toxicity_points = 10
+	toxicity_points = 20
 	will_points = -30
 
 /obj/item/consumable/food/drink/moleworm

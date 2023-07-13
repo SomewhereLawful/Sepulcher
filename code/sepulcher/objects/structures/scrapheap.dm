@@ -7,7 +7,8 @@
 	desc = "Some broken metal of unknown origin."
 	icon_state = "scrap1"
 	feed_points = 2
-	health_points = 33 // eating sharp metal wrecks your organs
+	health_points = 99 // eating sharp metal wrecks your organs
+	flavour_text = "You shove the metal down your maw. Slicing, stabbing, poking - you feel your throat turn to fleshy ribbons."
 
 /obj/item/consumable/food/scrap/New()
 	..()

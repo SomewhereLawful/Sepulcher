@@ -1,15 +1,25 @@
 /obj/item/consumable/food/fish //goby
 	name = "prole-fish"
-	desc = "Common, edible. Cook it, it squirms with parasites."
+	desc = "Common, edible."
 	icon_state = "fish"
-	feed_points = 3
-	toxicity_points = 10
+	feed_points = 10
+	toxicity_points = 20
+	flavour_text = "Bones and scales all. The offal within is sour."
+	var/gutted = FALSE
+
+/obj/item/consumable/food/fish/examine(mob/user)
+	..()
+	if(gutted)
+		to_chat(user, "<span class='red'>Gutted. Requires cooking to purge remaining gralloch.</span>")
+	else
+		to_chat(user, "<span class='red'>Requires gutting, to rend out the filthy organs within.</span>")
 
 /obj/item/consumable/food/fish/sturgeon
 	name = "spine fish"
 	desc = "Known for their eggs, a delicacy."
 	icon_state = "broken"
-	feed_points = 3
+	feed_points = 20
+	toxicity_points = 25
 
 /obj/item/consumable/food/fish/crab // Time for crab
 	name = "bottom feeder"

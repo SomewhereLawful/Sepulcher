@@ -92,6 +92,16 @@
 	icon_state = "floorrusty"
 	},
 /area/interior/city)
+"bw" = (
+/obj/effect/turf_decal/roadline/noshadow{
+	dir = 1
+	},
+/obj/structure/lamp_post{
+	pixel_y = 19;
+	pixel_x = 11
+	},
+/turf/open/indestructible/ground/outside/road,
+/area/exterior/city/docks)
 "by" = (
 /obj/structure/decor/wood_scrap,
 /turf/open/indestructible/ground/outside/road,
@@ -443,6 +453,10 @@
 "hB" = (
 /obj/effect/turf_decal/roadline/noshadow/corner{
 	dir = 4
+	},
+/obj/structure/lamp_post{
+	pixel_y = 19;
+	pixel_x = 11
 	},
 /turf/open/indestructible/ground/outside/road,
 /area/exterior/city/docks)
@@ -1475,10 +1489,9 @@
 /turf/open/indestructible/ground/outside/desert,
 /area/exterior/wastes)
 "yt" = (
-/obj/effect/turf_decal/roadline/noshadow{
-	dir = 1
+/obj/structure/decor/spool{
+	pixel_x = 6
 	},
-/obj/structure/lamp_post,
 /turf/open/indestructible/ground/outside/road,
 /area/exterior/city/docks)
 "yu" = (
@@ -1589,6 +1602,10 @@
 	icon_state = "yellowdirtychess"
 	},
 /area/interior/clinic)
+"zH" = (
+/obj/structure/lamp_post,
+/turf/open/indestructible/ground/outside/desert,
+/area/exterior/wastes)
 "zJ" = (
 /obj/structure/decor/iconostasis/left,
 /turf/open/indestructible/ground/floor/lattice,
@@ -1644,7 +1661,10 @@
 /obj/effect/turf_decal/roadline/noshadow{
 	dir = 5
 	},
-/obj/structure/lamp_post,
+/obj/structure/lamp_post{
+	pixel_y = 20;
+	pixel_x = 11
+	},
 /turf/open/indestructible/ground/outside/road,
 /area/exterior/city/docks)
 "AF" = (
@@ -2051,6 +2071,10 @@
 	dir = 5
 	},
 /obj/item/chair/stool/wood,
+/obj/structure/lamp_post{
+	pixel_y = 20;
+	pixel_x = 11
+	},
 /turf/open/indestructible/ground/outside/road,
 /area/exterior/city/docks)
 "HM" = (
@@ -2212,6 +2236,10 @@
 	icon_state = "floorrusty"
 	},
 /area/interior/foundry)
+"Ky" = (
+/obj/structure/decor/wood_scrap,
+/turf/open/indestructible/ground/outside/road,
+/area/exterior/city/docks)
 "KM" = (
 /obj/effect/particle_effect/smoke/reality_edge,
 /turf/open/indestructible/ground/outside/water/sea/deep,
@@ -2339,6 +2367,17 @@
 	},
 /turf/open/indestructible/ground/floor/wood_floor,
 /area/interior/city)
+"MS" = (
+/obj/structure/decor/spool{
+	pixel_y = 16;
+	pixel_x = -15;
+	plane = 0
+	},
+/obj/structure/decor/spool{
+	pixel_x = -2
+	},
+/turf/open/indestructible/ground/outside/road,
+/area/exterior/city/docks)
 "MT" = (
 /obj/structure/decor/spawner_part/prole/right,
 /turf/open/indestructible/ground/floor/lattice,
@@ -30562,9 +30601,9 @@ lz
 lz
 uz
 lz
-lz
+yt
 Ly
-Ly
+by
 Ly
 Ly
 Pq
@@ -30813,13 +30852,13 @@ gW
 gW
 gW
 gW
-yt
+jL
 lz
 lz
 Kc
 dZ
-lz
-lz
+Ky
+MS
 sj
 sj
 sj
@@ -31327,7 +31366,7 @@ gW
 gW
 gW
 gW
-jL
+bw
 Kc
 lz
 sj
@@ -34154,7 +34193,7 @@ Wx
 gW
 Wx
 gW
-yt
+jL
 lz
 lz
 JJ
@@ -34761,7 +34800,7 @@ sj
 sj
 AL
 xo
-zp
+zH
 zp
 zp
 zp
@@ -34926,7 +34965,7 @@ gW
 gW
 gW
 jL
-lz
+Ky
 lz
 sj
 TO
@@ -36207,7 +36246,7 @@ Hv
 vn
 lz
 lz
-lz
+Ky
 lz
 lz
 vn
@@ -36723,7 +36762,7 @@ Oh
 aA
 hB
 lz
-lz
+Ky
 lz
 Kc
 lz
@@ -36978,7 +37017,7 @@ Wx
 Wx
 gW
 gW
-yt
+jL
 lz
 Kc
 lz
