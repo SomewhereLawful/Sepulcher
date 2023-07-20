@@ -34,11 +34,22 @@
 		to_chat(user, "<span class='red'>It is filled to the brim with liquid steel.</span>")
 
 /obj/structure/foundry/steel_bucket/attack_hand(mob/user)
+	if(filled == TRUE)
+		to_chat(user, "You pull the chain, the steel pours.")
+		flick("bucket_draining",src)
+		filled = FALSE
+		icon_state = "steel_bucket"
+	else
+		to_chat(user, "The bucket is empty.")
+		return
+
+/*
+/obj/structure/foundry/steel_bucket/attack_hand(mob/user)
 	var/obj/structure/foundry/mould/M
 	if(filled == TRUE)
-		to_chat(user, "You pull the chain, the molten steel pours out.")
+		to_chat(user, "You pull the chain, the steel pours.")
 		flick("bucket_draining",src)
-		if(M in contents)
+		if(M in src.loc.contents)
 			if(M.filled == TRUE)
 				to_chat(user, "<span class='red'>The mould already has steel within it. The excess is lost back to the maw.</span>")
 				return
@@ -50,6 +61,7 @@
 	else
 		to_chat(user, "The bucket is empty.")
 		return
+*/
 
 /obj/structure/foundry/steel_bucket/AltClick(mob/user)
 	. = ..()
@@ -73,7 +85,7 @@
 /obj/structure/foundry/mould/examine(mob/user)
 	..()
 	if(filled == TRUE)
-		to_chat(user, "<span class='red'>It is filled with liquid steel, ready to create ingots.</span>")
+		to_chat(user, "<span class='red'>It is filled with liquid steel, ingots forming.</span>")
 
 /obj/structure/foundry/mould/attack_hand(mob/user)
 	if(opened == FALSE)

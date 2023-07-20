@@ -29,3 +29,13 @@
 	desc = "Painkiller and balm for bruises. Stings."
 	icon_state = "bruise_salve"
 	health_points = -10
+	uses_verb = "applies"
+	use_verb = "apply"
+
+/obj/item/consumable/medicine/gauze
+	name = "sterile gauze"
+	desc = "Staunches bleeding."
+	icon_state = "bruise_salve"
+	health_points = -10
+	uses_verb = "applies"
+	use_verb = "apply"

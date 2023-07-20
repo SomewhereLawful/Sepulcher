@@ -12,4 +12,4 @@
 
 /obj/structure/barrier/examine(mob/user)
 	..()
-	to_chat(user, "<span class='red'>The formless wall has holes, pinpoint slips to other sections of this reality.</span>")
+	to_chat(user, "<span class='magenta'>The formless wall has holes, pinpoint slips to other sections of this reality.</span>")

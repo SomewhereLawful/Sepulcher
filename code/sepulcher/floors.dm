@@ -38,6 +38,11 @@
 	icon = 'icons/turf/floors.dmi'
 	icon_state = "riverwater"
 	baseturfs = /turf/open/indestructible/ground/sewer_water
+	slowdown = 2
+	footstep = FOOTSTEP_WATER
+	barefootstep = FOOTSTEP_WATER
+	clawfootstep = FOOTSTEP_WATER
+	heavyfootstep = FOOTSTEP_WATER
 
 /turf/open/indestructible/ground/outside/water/Entered(atom/movable/A)
 	..()

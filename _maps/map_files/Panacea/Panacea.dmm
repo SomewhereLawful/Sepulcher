@@ -544,11 +544,11 @@
 /turf/open/indestructible/ground/outside/sidewalk/stairs,
 /area/exterior/city)
 "ja" = (
-/obj/machinery/conveyor_switch/oneway,
-/turf/open/floor/f13{
-	tag = "icon-floorrusty";
-	icon_state = "floorrusty"
+/obj/structure/lattice/catwalk{
+	icon_state = "catwalk4-0"
 	},
+/obj/machinery/conveyor_switch/oneway,
+/turf/open/foundry,
 /area/interior/foundry)
 "jj" = (
 /obj/machinery/light,
@@ -2551,6 +2551,13 @@
 	},
 /turf/open/indestructible/ground/outside/road,
 /area/exterior/city)
+"Qe" = (
+/obj/structure/lattice/catwalk{
+	icon_state = "catwalk8-0"
+	},
+/obj/machinery/conveyor_switch/oneway,
+/turf/open/foundry,
+/area/interior/foundry)
 "Qo" = (
 /obj/machinery/light,
 /turf/open/indestructible/ground/floor/wood_floor,
@@ -28348,7 +28355,7 @@ NV
 Hd
 fP
 Hd
-Fc
+ja
 Hd
 vo
 yi
@@ -28861,7 +28868,7 @@ XX
 NV
 oI
 yi
-ja
+yi
 yi
 yi
 yi
@@ -29375,7 +29382,7 @@ XX
 NV
 oI
 yi
-ja
+yi
 yi
 yi
 yi
@@ -29890,7 +29897,7 @@ NV
 Hd
 fP
 Hd
-Ua
+Qe
 Hd
 vo
 yi

@@ -30,25 +30,27 @@
 	desc = "The city's cultivation plots. Located upon hallowed ground."
 	icon = 'icons/obj/shitpiles.dmi'
 	icon_state = "sanctified"
+	obj_flags = INDESTRUCTIBLE
 	density = TRUE
 	anchored = TRUE
 	pixel_x = -16
-	/// Amount of water in the heap
+
+	/// Amount of water
 	var/waterlevel = 100
-	/// Maximum amount of water in the heap
+	/// Maximum amount of water
 	var/maxwater = 100
-	/// How much fertilizer is in the heap
+	/// How much fertilizer
 	var/fertilizerlevel = 10
-	/// Maximum amount of fertilizer in the heap
+	/// Maximum amount of fertilizer
 	var/maxfertilizer = 10
-	var/lastcycle = 0		//Used for timing of cycles.
+
+	var/lastcycle = 0
 	var/cycledelay = 200	//About 10 seconds / cycle
 
 	/// What grows there
-	var/list/product_list = list(/obj/structure/farm_plant = 100)
-	/// Explicitly for sewer
-	var/self_sustaining = FALSE //If the tray generates nutrients and water on its own
+	var/product_list = SHITHEAP_PRODUCTS_NORMAL
 
+	var/self_sustaining = FALSE
 
 /obj/structure/shitheap/attackby(obj/item/I, mob/user, params)
 	if(/obj/item/consumable/food/dung)
@@ -63,14 +65,7 @@
 		adjustWater(10)
 	return ..()
 
-/obj/structure/shitheap/Initialize()
-	START_PROCESSING(SSobj, src)
-
 /obj/structure/shitheap/process()
-	if(self_sustaining == TRUE)
-		adjustFertilizer(1)
-		adjustWater(rand(3,5))
-
 	if(world.time > (lastcycle + cycledelay))
 		lastcycle = world.time
 		if(fertilizerlevel > 0 && waterlevel > 0)
@@ -79,39 +74,41 @@
 
 		// Nutrients deplete slowly
 		if(prob(50))
-			adjustFertilizer(-1)
-			// Drink random amount of water
-			adjustWater(-rand(1,6))
-
+			if(!self_sustaining)
+				adjustFertilizer(-1)
+				adjustWater(-rand(1,6))
 	return ..()
 
 /obj/structure/shitheap/proc/adjustFertilizer(adjustamt)
-	fertilizerlevel = CLAMP(fertilizerlevel + adjustamt, 0, maxfertilizer)
+	fertilizerlevel = CLAMP((fertilizerlevel + (adjustamt)), 0, maxfertilizer)
+	return adjustamt
 
 /obj/structure/shitheap/proc/adjustWater(adjustamt)
-	waterlevel = CLAMP(waterlevel + adjustamt, 0, maxwater)
+	waterlevel = CLAMP((waterlevel + (adjustamt)), 0, maxwater)
+	return adjustamt
 
 /obj/structure/shitheap/examine(user)
 	..()
 	if(!self_sustaining)
 		if(fertilizerlevel > maxfertilizer*0.75)
-			to_chat(user, "<span class='info'>The stench tells of ample fertilization.</span>")
+			to_chat(user, "<span class='magenta'>The stench tells of ample fertilization.</span>")
 		else if(fertilizerlevel > maxfertilizer*0.5)
-			to_chat(user, "<span class='info'>The heap is sufficiently fertilized.</span>")
+			to_chat(user, "<span class='magenta'>The heap is sufficiently fertilized.</span>")
 		else if(fertilizerlevel > maxfertilizer*0.25)
-			to_chat(user, "<span class='info'>The soil is yearning for new dung.</span>")
+			to_chat(user, "<span class='magenta'>The soil is yearning for new dung.</span>")
 		else if(fertilizerlevel == 0)
-			to_chat(user, "<span class='info'>The pile is starved. It needs more shit.</span>")
+			to_chat(user, "<span class='magenta'>The pile is starved. It needs more shit.</span>")
 		if(waterlevel > maxwater*0.75)
-			to_chat(user, "<span class='info'>It is rich in dampness.</span>")
+			to_chat(user, "<span class='magenta'>It is rich in dampness.</span>")
 		else if(waterlevel > maxwater*0.5)
-			to_chat(user, "<span class='info'>The nightsoil is beginning to dry.</span>")
+			to_chat(user, "<span class='magenta'>The nightsoil is beginning to dry.</span>")
 		else if(waterlevel > maxwater*0.25)
-			to_chat(user, "<span class='info'>The heap is only ever so moisturized.</span>")
+			to_chat(user, "<span class='magenta'>The heap is only ever so moisturized.</span>")
 		else if(waterlevel == 0)
-			to_chat(user, "<span class='info'>The shit is dry. Arid. Screaming for water.</span>")
+			to_chat(user, "<span class='magenta'>The shit is dry. Arid. Screaming for water.</span>")
 	else
-		to_chat(user, "<span class='info'>It does not require water or fertilizer.</span>")
+		to_chat(user, "<span class='magenta'>It does not require water or fertilizer.</span>")
+
 
 // Spawns when shitheaps have sufficient 
 /obj/structure/farm_plant
@@ -123,5 +120,12 @@
 
 /obj/structure/farm_plant/Initialize()
 	. = ..()
-	pixel_x = rand(3,16)
+	pixel_x = rand(-16,16)
 	pixel_y = rand(2,17)
+
+
+/obj/structure/shitheap/sewer
+	name = "repugnant cessheap"
+	desc = "Heap of shit, not sanctified. It grows dangerous product."
+	product_list = SHITHEAP_PRODUCTS_SEWER
+	self_sustaining = TRUE
