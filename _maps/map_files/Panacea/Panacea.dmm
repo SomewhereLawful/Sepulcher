@@ -222,6 +222,12 @@
 	},
 /turf/open/indestructible/ground/outside/road,
 /area/exterior/city)
+"dB" = (
+/obj/structure/lore_altar/church,
+/turf/open/indestructible/ground/floor/lattice{
+	icon_state = "lattice_new14"
+	},
+/area/interior/spawning/kommandant)
 "dJ" = (
 /obj/structure/decor/spool{
 	pixel_y = 15;
@@ -41674,7 +41680,7 @@ FR
 vZ
 Hq
 sm
-Bf
+dB
 sS
 sS
 sS

@@ -2799,6 +2799,7 @@
 #include "code\sepulcher\objects\structures\foundry.dm"
 #include "code\sepulcher\objects\structures\lamp_post.dm"
 #include "code\sepulcher\objects\structures\laundrybin.dm"
+#include "code\sepulcher\objects\structures\lore_altar.dm"
 #include "code\sepulcher\objects\structures\objects.dm"
 #include "code\sepulcher\objects\structures\scrapheap.dm"
 #include "code\sepulcher\objects\structures\shitheap.dm"
