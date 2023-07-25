@@ -191,6 +191,12 @@
 		icon_state = "cig_trash[rand(1,5)]"
 	..()
 
+/obj/structure/decor/jangseung
+	name = "boundry marker"
+	desc = "Here ends the protection of the city. There is much worse beyond."
+	gender = PLURAL
+	icon_state = "cig_trash1"
+
 /obj/structure/fence/church
 	name = "wrought iron fence"
 	desc = null

@@ -1,11 +1,11 @@
 /obj/item/organ/stomach
 	name = "stomach"
+	desc = "Churning flesh cauldron of acid."
 	icon_state = "stomach"
 	w_class = WEIGHT_CLASS_NORMAL
 	zone = BODY_ZONE_CHEST
 	slot = ORGAN_SLOT_STOMACH
 	attack_verb = list("gored", "squished", "slapped", "digested")
-	desc = "Onaka ga suite imasu."
 	var/disgust_metabolism = 1
 
 /obj/item/organ/stomach/on_life()

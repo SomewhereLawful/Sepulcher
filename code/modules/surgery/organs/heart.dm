@@ -1,6 +1,6 @@
 /obj/item/organ/heart
 	name = "heart"
-	desc = "I feel bad for the heartless bastard who lost this."
+	desc = "Where poison resides. Small and bruised."
 	icon_state = "heart-on"
 	zone = BODY_ZONE_CHEST
 	slot = ORGAN_SLOT_HEART
@@ -49,10 +49,14 @@
 	return S
 
 /obj/item/organ/heart/on_life()
+	var/mob/living/carbon/H = owner
+
+	if(istype(H)) // A heart full of poison.
+		H.dna.species.handle_toxicity(H)
+
 	if(owner.client && beating)
 		var/sound/slowbeat = sound('sound/health/slowbeat.ogg', repeat = TRUE)
 		var/sound/fastbeat = sound('sound/health/fastbeat.ogg', repeat = TRUE)
-		var/mob/living/carbon/H = owner
 
 		if(H.health <= H.crit_modifier() && beat != BEAT_SLOW)
 			beat = BEAT_SLOW

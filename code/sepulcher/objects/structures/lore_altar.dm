@@ -11,7 +11,7 @@
 		user << browse("[altar_content]", "window=changes")
 		playsound(src, 'sound/effects/page_flip.ogg', 50, 0)
 	else
-		to_chat(user, "<span class='notice'>The book is blank.</span>")
+		to_chat(user, "<span class='red'>The book is blank.</span>")
 
 /obj/structure/lore_altar/church
 	icon_state = "altar_church"

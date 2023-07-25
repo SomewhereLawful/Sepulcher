@@ -70,8 +70,8 @@
 						M.visible_message("<span class='danger'>[user] attempts to feed [M] [src].</span>", \
 											"<span class='userdanger'>[user] attempts to feed [M] [src].</span>")
 					else
-						M.visible_message("<span class='warning'>[user] cannot force any more of [src] down [M]'s throat!</span>", \
-											"<span class='warning'>[user] cannot force any more of [src] down [M]'s throat!</span>")
+						M.visible_message("<span class='warning'>[user] cannot force any more of [src] down [M]'s throat.</span>", \
+											"<span class='warning'>[user] cannot force any more of [src] down [M]'s throat.</span>")
 						return 0
 
 					if(!do_mob(user, M))
