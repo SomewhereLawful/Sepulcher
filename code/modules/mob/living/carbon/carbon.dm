@@ -710,26 +710,48 @@
 				shown_health_amount = health
 			if(shown_health_amount >= maxHealth)
 				hud_used.health.icon_state = "health100"
+			else if(shown_health_amount > maxHealth*0.95)
+				hud_used.health.icon_state = "health95"
 			else if(shown_health_amount > maxHealth*0.9)
 				hud_used.health.icon_state = "health90"
+			else if(shown_health_amount > maxHealth*0.85)
+				hud_used.health.icon_state = "health85"
 			else if(shown_health_amount > maxHealth*0.8)
 				hud_used.health.icon_state = "health80"
+			else if(shown_health_amount > maxHealth*0.75)
+				hud_used.health.icon_state = "health75"
 			else if(shown_health_amount > maxHealth*0.7)
 				hud_used.health.icon_state = "health70"
+			else if(shown_health_amount > maxHealth*0.65)
+				hud_used.health.icon_state = "health65"
 			else if(shown_health_amount > maxHealth*0.6)
 				hud_used.health.icon_state = "health60"
+			else if(shown_health_amount > maxHealth*0.55)
+				hud_used.health.icon_state = "health55"
 			else if(shown_health_amount > maxHealth*0.5)
 				hud_used.health.icon_state = "health50"
+			else if(shown_health_amount > maxHealth*0.45)
+				hud_used.health.icon_state = "health45"
 			else if(shown_health_amount > maxHealth*0.4)
 				hud_used.health.icon_state = "health40"
+			else if(shown_health_amount > maxHealth*0.35)
+				hud_used.health.icon_state = "health35"
 			else if(shown_health_amount > maxHealth*0.3)
 				hud_used.health.icon_state = "health30"
+			else if(shown_health_amount > maxHealth*0.25)
+				hud_used.health.icon_state = "health25"
 			else if(shown_health_amount > maxHealth*0.2)
 				hud_used.health.icon_state = "health20"
-			else if(shown_health_amount > 0)
+			else if(shown_health_amount > maxHealth*0.15)
+				hud_used.health.icon_state = "health15"
+			else if(shown_health_amount > maxHealth*0.1)
 				hud_used.health.icon_state = "health10"
-			else
+			else if(shown_health_amount > maxHealth*0.05)
 				hud_used.health.icon_state = "health5"
+			else if(shown_health_amount > 0)
+				hud_used.health.icon_state = "health1"
+			else
+				hud_used.health.icon_state = "health1"
 		else
 			hud_used.health.icon_state = "health0"
 
@@ -743,26 +765,48 @@
 				shown_willstat_amount = will
 			if(shown_willstat_amount >= maxWill)
 				hud_used.will.icon_state = "will100"
+			else if(shown_willstat_amount > maxWill*0.95)
+				hud_used.will.icon_state = "will95"
 			else if(shown_willstat_amount > maxWill*0.9)
 				hud_used.will.icon_state = "will90"
+			else if(shown_willstat_amount > maxWill*0.85)
+				hud_used.will.icon_state = "will85"
 			else if(shown_willstat_amount > maxWill*0.8)
 				hud_used.will.icon_state = "will80"
+			else if(shown_willstat_amount > maxWill*0.75)
+				hud_used.will.icon_state = "will75"
 			else if(shown_willstat_amount > maxWill*0.7)
 				hud_used.will.icon_state = "will70"
+			else if(shown_willstat_amount > maxWill*0.65)
+				hud_used.will.icon_state = "will65"
 			else if(shown_willstat_amount > maxWill*0.6)
 				hud_used.will.icon_state = "will60"
+			else if(shown_willstat_amount > maxWill*0.55)
+				hud_used.will.icon_state = "will55"
 			else if(shown_willstat_amount > maxWill*0.5)
 				hud_used.will.icon_state = "will50"
+			else if(shown_willstat_amount > maxWill*0.45)
+				hud_used.will.icon_state = "will45"
 			else if(shown_willstat_amount > maxWill*0.4)
 				hud_used.will.icon_state = "will40"
+			else if(shown_willstat_amount > maxWill*0.35)
+				hud_used.will.icon_state = "will35"
 			else if(shown_willstat_amount > maxWill*0.3)
 				hud_used.will.icon_state = "will30"
+			else if(shown_willstat_amount > maxWill*0.25)
+				hud_used.will.icon_state = "will25"
 			else if(shown_willstat_amount > maxWill*0.2)
 				hud_used.will.icon_state = "will20"
-			else if(shown_willstat_amount > 0)
+			else if(shown_willstat_amount > maxWill*0.15)
+				hud_used.will.icon_state = "will15"
+			else if(shown_willstat_amount > maxWill*0.1)
 				hud_used.will.icon_state = "will10"
-			else
+			else if(shown_willstat_amount > maxWill*0.05)
 				hud_used.will.icon_state = "will5"
+			else if(shown_willstat_amount > 0)
+				hud_used.will.icon_state = "will1"
+			else
+				hud_used.will.icon_state = "will1"
 		else
 			hud_used.will.icon_state = "will0"
 
@@ -776,26 +820,48 @@
 				shown_hungerstat_amount = hunger
 			if(shown_hungerstat_amount >= maxHunger)
 				hud_used.hunger.icon_state = "hunger100"
+			else if(shown_hungerstat_amount > maxHunger*0.95)
+				hud_used.hunger.icon_state = "hunger95"
 			else if(shown_hungerstat_amount > maxHunger*0.9)
 				hud_used.hunger.icon_state = "hunger90"
+			else if(shown_hungerstat_amount > maxHunger*0.85)
+				hud_used.hunger.icon_state = "hunger85"
 			else if(shown_hungerstat_amount > maxHunger*0.8)
 				hud_used.hunger.icon_state = "hunger80"
+			else if(shown_hungerstat_amount > maxHunger*0.75)
+				hud_used.hunger.icon_state = "hunger75"
 			else if(shown_hungerstat_amount > maxHunger*0.7)
 				hud_used.hunger.icon_state = "hunger70"
+			else if(shown_hungerstat_amount > maxHunger*0.65)
+				hud_used.hunger.icon_state = "hunger65"
 			else if(shown_hungerstat_amount > maxHunger*0.6)
 				hud_used.hunger.icon_state = "hunger60"
+			else if(shown_hungerstat_amount > maxHunger*0.55)
+				hud_used.hunger.icon_state = "hunger55"
 			else if(shown_hungerstat_amount > maxHunger*0.5)
 				hud_used.hunger.icon_state = "hunger50"
+			else if(shown_hungerstat_amount > maxHunger*0.45)
+				hud_used.hunger.icon_state = "hunger45"
 			else if(shown_hungerstat_amount > maxHunger*0.4)
 				hud_used.hunger.icon_state = "hunger40"
+			else if(shown_hungerstat_amount > maxHunger*0.35)
+				hud_used.hunger.icon_state = "hunger35"
 			else if(shown_hungerstat_amount > maxHunger*0.3)
 				hud_used.hunger.icon_state = "hunger30"
+			else if(shown_hungerstat_amount > maxHunger*0.25)
+				hud_used.hunger.icon_state = "hunger25"
 			else if(shown_hungerstat_amount > maxHunger*0.2)
 				hud_used.hunger.icon_state = "hunger20"
-			else if(shown_hungerstat_amount > 0)
+			else if(shown_hungerstat_amount > maxHunger*0.15)
+				hud_used.hunger.icon_state = "hunger15"
+			else if(shown_hungerstat_amount > maxHunger*0.1)
 				hud_used.hunger.icon_state = "hunger10"
-			else
+			else if(shown_hungerstat_amount > maxHunger*0.05)
 				hud_used.hunger.icon_state = "hunger5"
+			else if(shown_hungerstat_amount > 0)
+				hud_used.hunger.icon_state = "hunger1"
+			else
+				hud_used.hunger.icon_state = "hunger1"
 		else
 			hud_used.hunger.icon_state = "hunger0"
 
@@ -809,26 +875,48 @@
 				shown_toxicitystat_amount = toxicity
 			if(shown_toxicitystat_amount >= maxToxicity)
 				hud_used.toxicity.icon_state = "toxicity100"
+			else if(shown_toxicitystat_amount > maxToxicity*0.95)
+				hud_used.toxicity.icon_state = "toxicity95"
 			else if(shown_toxicitystat_amount > maxToxicity*0.9)
 				hud_used.toxicity.icon_state = "toxicity90"
+			else if(shown_toxicitystat_amount > maxToxicity*0.85)
+				hud_used.toxicity.icon_state = "toxicity85"
 			else if(shown_toxicitystat_amount > maxToxicity*0.8)
 				hud_used.toxicity.icon_state = "toxicity80"
+			else if(shown_toxicitystat_amount > maxToxicity*0.75)
+				hud_used.toxicity.icon_state = "toxicity75"
 			else if(shown_toxicitystat_amount > maxToxicity*0.7)
 				hud_used.toxicity.icon_state = "toxicity70"
+			else if(shown_toxicitystat_amount > maxToxicity*0.65)
+				hud_used.toxicity.icon_state = "toxicity65"
 			else if(shown_toxicitystat_amount > maxToxicity*0.6)
 				hud_used.toxicity.icon_state = "toxicity60"
+			else if(shown_toxicitystat_amount > maxToxicity*0.55)
+				hud_used.toxicity.icon_state = "toxicity55"
 			else if(shown_toxicitystat_amount > maxToxicity*0.5)
 				hud_used.toxicity.icon_state = "toxicity50"
+			else if(shown_toxicitystat_amount > maxToxicity*0.45)
+				hud_used.toxicity.icon_state = "toxicity45"
 			else if(shown_toxicitystat_amount > maxToxicity*0.4)
 				hud_used.toxicity.icon_state = "toxicity40"
+			else if(shown_toxicitystat_amount > maxToxicity*0.35)
+				hud_used.toxicity.icon_state = "toxicity35"
 			else if(shown_toxicitystat_amount > maxToxicity*0.3)
 				hud_used.toxicity.icon_state = "toxicity30"
+			else if(shown_toxicitystat_amount > maxToxicity*0.25)
+				hud_used.toxicity.icon_state = "toxicity25"
 			else if(shown_toxicitystat_amount > maxToxicity*0.2)
 				hud_used.toxicity.icon_state = "toxicity20"
-			else if(shown_toxicitystat_amount > 0)
+			else if(shown_toxicitystat_amount > maxToxicity*0.15)
+				hud_used.toxicity.icon_state = "toxicity15"
+			else if(shown_toxicitystat_amount > maxToxicity*0.1)
 				hud_used.toxicity.icon_state = "toxicity10"
-			else
+			else if(shown_toxicitystat_amount > maxToxicity*0.05)
 				hud_used.toxicity.icon_state = "toxicity5"
+			else if(shown_toxicitystat_amount > 0)
+				hud_used.toxicity.icon_state = "toxicity1"
+			else
+				hud_used.toxicity.icon_state = "toxicity1"
 		else
 			hud_used.toxicity.icon_state = "toxicity0"
 

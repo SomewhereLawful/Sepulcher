@@ -394,11 +394,11 @@
 	plane = FULLSCREEN_PLANE
 
 /obj/screen/stats_panel // The health vials
-	icon = 'icons/mob/screen/stats_bg.dmi'
-	icon_state = "stats_mono"
+	icon = 'icons/mob/screen/stat_bars.dmi'
+	icon_state = "stat_background"
 
 /obj/screen/bar_stat
-	icon = 'icons/mob/screen/stats_bars.dmi'
+	icon = 'icons/mob/screen/stat_bars.dmi'
 
 /obj/screen/bar_stat/health
 	name = "vigor"
