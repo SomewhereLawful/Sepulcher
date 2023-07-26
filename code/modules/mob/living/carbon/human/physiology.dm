@@ -3,6 +3,8 @@
 /datum/physiology
 	var/brute_mod = 1   	// % of brute damage taken from all sources
 	var/burn_mod = 1    	// % of burn damage taken from all sources
+	var/will_mod = 1     	// % of will damage taken from all sources
+	var/hunger_mod = 1     	// % of hunger damage taken from all sources, no effect on natural hunger decrease
 	var/tox_mod = 1     	// % of toxin damage taken from all sources
 	var/oxy_mod = 1     	// % of oxygen damage taken from all sources
 	var/clone_mod = 1   	// % of clone damage taken from all sources
@@ -22,8 +24,6 @@
 	var/datum/armor/armor 	// internal armor datum
 
 	var/speed_mod = 0     	//tick modifier for each step. Positive is slower, negative is faster.
-
-	var/hunger_mod = 1		//% of hunger rate taken per tick.
 
 	var/do_after_speed = 1 //Speed mod for do_after. Lower is better. If temporarily adjusting, please only modify using *= and /=, so you don't interrupt other calculations.
 

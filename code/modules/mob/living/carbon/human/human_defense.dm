@@ -656,7 +656,7 @@
 	if(health >= 0)
 		if(src == M)
 			visible_message("[src] examines [p_them()]self.", \
-				"<span class='magenta'>You check yourself for injuries.</span>")
+				"<span class='magenta'>You observe your vessel...</span>")
 
 			var/list/missing = list(BODY_ZONE_HEAD, BODY_ZONE_CHEST, BODY_ZONE_L_ARM, BODY_ZONE_R_ARM, BODY_ZONE_L_LEG, BODY_ZONE_R_LEG)
 			for(var/X in bodyparts)
@@ -697,9 +697,9 @@
 						status += LB.light_burn_msg
 
 					if(status == "")
-						status = "OK"
+						status = "fine"
 				var/no_damage
-				if(status == "OK" || status == "no damage")
+				if(status == "fine" || status == "no damage")
 					no_damage = TRUE
 				to_chat(src, "\t <span class='[no_damage ? "magenta" : "red"]'>Your [LB.name] [has_trait(TRAIT_SELF_AWARE) ? "has" : "is"] [status].</span>")
 
@@ -729,7 +729,7 @@
 					to_chat(src, "<span class='cyan'>Your mindflesh burns. Seek aid.</span>")
 				if(60 to 89)
 					to_chat(src, "<span class='cyan'>Your mindflesh is searing. The bitterness is setting in.</span>")
-				if(90 to 100)
+				if(90 to INFINITY)
 					to_chat(src, "<span class='red'>Needling fear of the unseen... Dull this mind pain!</span>")
 
 			switch(hunger)
@@ -753,7 +753,7 @@
 					to_chat(src, "<span class='green'>Your veins hurt, sickness grows within.</span>")
 				if(50 to 99)
 					to_chat(src, "<span class='red'>Your veins burn! Cleanse your body!</span>")
-				if(100)
+				if(100 to INFINITY)
 					to_chat(src, "<span class='red'>Your veins scream, burning with invasion!</span>")
 
 			if(roundstart_quirks.len)

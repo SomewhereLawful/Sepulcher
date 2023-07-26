@@ -35,6 +35,9 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 	var/armor = 0		// overall defense for the race... or less defense, if it's negative.
 	var/brutemod = 1	// multiplier for brute damage
 	var/burnmod = 1		// multiplier for burn damage
+	var/willmod = 1		// multiplier for will damage
+	var/hungermod = 1		// multiplier for hunger damage
+	var/toxicitymod = 1		// multiplier for toxicity damage
 	var/coldmod = 1		// multiplier for cold damage
 	var/heatmod = 1		// multiplier for heat damage
 	var/stunmod = 1		// multiplier for stun duration
@@ -947,7 +950,19 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 	if(H.willloss > 0 && H.stat != DEAD)
 		if(H.willloss < 0)
 			H.willloss++
-	update_willstat_hud()
+
+		switch(H.willloss)
+			if(0 to 29)
+				H.clear_fullscreen("depression")
+			if(30 to 59)
+				H.overlay_fullscreen("depression", /obj/screen/fullscreen/depression, 1)
+				H.physiology.speed_mod = 1
+			if(60 to 89)
+				H.overlay_fullscreen("depression", /obj/screen/fullscreen/depression, 2)
+				H.physiology.speed_mod = 2
+			if(90 to 100)
+				H.overlay_fullscreen("depression", /obj/screen/fullscreen/depression, 3)
+				H.physiology.speed_mod = 3
 
 // Stomach
 /datum/species/proc/handle_hunger(mob/living/carbon/human/H)
@@ -1420,8 +1435,12 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 					H.update_damage_overlays()
 			else
 				H.adjustFireLoss(damage * hit_percent * burnmod * H.physiology.burn_mod)
-		if(TOX)
-			H.adjustToxLoss(damage * hit_percent * H.physiology.tox_mod)
+		if(WILL)
+			H.adjustWillLoss(damage * hit_percent * willmod * H.physiology.will_mod)
+		if(HUNGER)
+			H.adjustHunger(damage * hit_percent * hungermod * H.physiology.hunger_mod)
+		if(TOXICITY)
+			H.adjustToxicityGain(damage * hit_percent * toxicitymod * H.physiology.tox_mod)
 		if(OXY)
 			H.adjustOxyLoss(damage * hit_percent * H.physiology.oxy_mod)
 		if(CLONE)

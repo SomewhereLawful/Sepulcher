@@ -1824,6 +1824,16 @@
 	icon_state = "lattice_new14"
 	},
 /area/interior/spawning/bougie)
+"DO" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/structure/table,
+/turf/open/floor/f13{
+	tag = "icon-floorrusty";
+	icon_state = "floorrusty"
+	},
+/area/interior/city)
 "DZ" = (
 /obj/structure/simple_door/metal/barred,
 /turf/open/floor/f13{
@@ -25240,7 +25250,7 @@ sj
 sj
 sj
 sj
-TQ
+sc
 sj
 sj
 XX
@@ -27331,7 +27341,7 @@ XX
 XX
 NV
 Hd
-Hd
+kb
 kb
 Hd
 kb
@@ -29900,7 +29910,7 @@ XX
 XX
 XX
 NV
-Hd
+kb
 fP
 Hd
 Qe
@@ -30929,8 +30939,8 @@ XX
 XX
 NV
 Hd
-kb
 Hd
+kb
 Hd
 kb
 Ua
@@ -31185,8 +31195,8 @@ XX
 XX
 NV
 NV
-NV
-NV
+yi
+yi
 NV
 NV
 NV
@@ -37035,7 +37045,7 @@ lz
 Kc
 lz
 sj
-sj
+sc
 sj
 sj
 sj
@@ -37292,7 +37302,7 @@ lz
 sj
 sj
 sj
-bn
+TQ
 Au
 TQ
 TQ
@@ -37550,8 +37560,8 @@ sj
 ok
 TQ
 TQ
-TQ
-TQ
+bn
+bn
 TQ
 sj
 sj
@@ -38062,7 +38072,7 @@ sj
 sc
 sj
 ok
-TQ
+bn
 TQ
 TQ
 TQ
@@ -38319,9 +38329,9 @@ TQ
 TQ
 sj
 TQ
-kJ
-TQ
-TQ
+DO
+bn
+bn
 TQ
 TQ
 sj
