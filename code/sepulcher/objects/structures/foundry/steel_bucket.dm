@@ -1,17 +1,3 @@
-// Foundry //
-// Use scrap to make weapons, some clothing, or other commodities
-/obj/item/ingot
-	name = "steel ingot"
-	desc = "Hammers of iron beget sickles of steel."
-	icon = 'icons/obj/foundry.dmi'
-	icon_state = "ingot"
-
-/obj/structure/foundry
-	name = "foundry machine"
-	desc = "A machine of spectral machination."
-	icon = 'icons/obj/foundry.dmi'
-	density = TRUE
-	anchored = TRUE
 
 /obj/structure/foundry/steel_bucket
 	name = "steel bucket"
