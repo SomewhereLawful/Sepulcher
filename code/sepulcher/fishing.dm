@@ -14,7 +14,7 @@
 		return
 	in_use = TRUE
 	if(istype(target, /obj/structure/fishing_spot))
-		if(!do_after(user, rand(10,30) SECONDS, target = target))
+		if(!do_after(user, rand(10,20) SECONDS, target = target))
 			in_use = FALSE
 			return
 		var/obj/structure/fishing_spot/W = target

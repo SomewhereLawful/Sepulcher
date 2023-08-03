@@ -27,3 +27,9 @@
 	desc = "Bolt action, five shot rifle. Effective at long range, it accepts a bayonet."
 	icon_state = "moistnugget"
 	item_state = "moistnugget"
+
+/obj/item/gun/ballistic/shotgun/ks_23
+	name = "boomstick"
+	desc = "Pump action, five shot shotgun. Beast of a weapon, fires special-made shells."
+	icon_state = "moistnugget"
+	item_state = "moistnugget"
