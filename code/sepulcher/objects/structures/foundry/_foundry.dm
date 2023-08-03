@@ -5,4 +5,7 @@
 	icon = 'icons/obj/foundry.dmi'
 	density = TRUE
 	anchored = TRUE
-	//var/failure_message = You fail to operate the machine. You die.
+
+	/// Has item within it?
+	var/occupied = FALSE
+	var/failure_message = "You fail to operate the machine. You die."

@@ -4,6 +4,7 @@
 	name = "Doltish"
 	desc = "Of you is a simple mind. Regardless of your form, machines are god-shaped - you cannot understand them."
 	value = -3
+	mob_trait = TRAIT_MONKEYLIKE
 
 /datum/quirk/nearsighted
 	name = "Clouded Irises"

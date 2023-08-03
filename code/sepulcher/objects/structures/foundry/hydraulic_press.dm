@@ -3,5 +3,42 @@
 /obj/structure/foundry/hydraulic_press
 	name = "metal press"
 	desc = "Flattens ingots into sheets. Appreciate from a distance."
-	icon_state = "mould_closed"
-	//failure_message = "Your arm is within the recess as the press reaches the product. The limb is flattened, now useless."
+	icon_state = "press"
+	occupied = FALSE
+	failure_message = "Your arm is within the recess as the press reaches the product. The limb is flattened, now useless."
+
+/obj/structure/foundry/hydraulic_press/examine(mob/user)
+	..()
+	if(occupied == TRUE)
+		to_chat(user, "<span class='red'>There is an ingot within.</span>")
+
+/obj/structure/foundry/hydraulic_press/attackby(obj/item/O, mob/user, params)
+	if(/obj/item/ingot)
+		occupied = TRUE
+		icon_state = "press_filled"
+		qdel(O)
+
+/obj/structure/foundry/hydraulic_press/attack_hand(mob/user)
+	if(!user.IsAdvancedToolUser())
+		to_chat(user, "<span class='warning'>The machine confounds you. It's purpose and operation enigmatic.</span>")
+		return
+
+	var/mob/living/carbon/human/H = user
+	if(occupied == TRUE)
+		visible_message("<span class='magenta'>The machine's bolster decends, flattening the contents within.</span>")
+		occupied = FALSE
+		flick("press_action",src)
+		sleep(35) // length of flick
+		icon_state = "press"
+		new /obj/item/ingot/sheet(get_turf(src))
+
+		if(prob(10)) // horrible industrial accident
+			var/obj/item/bodypart/affecting = H.get_bodypart("[(user.active_hand_index % 2 == 0) ? "r" : "l" ]_arm")
+			if(affecting && affecting.receive_damage(100))
+				H.update_damage_overlays()
+				to_chat(user, "[failure_message]")
+				playsound(src, 'sound/effects/gib.ogg', 50, 0)
+
+	else
+		to_chat(user, "The machine is empty.")
+		return

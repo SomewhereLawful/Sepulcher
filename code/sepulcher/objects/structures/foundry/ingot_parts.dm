@@ -12,11 +12,10 @@
 
 /obj/item/ingot/crude_part
 	name = "crude part"
-	desc = "Inaccurate artifice. Serves more base purposes."
-	icon_state = "ingot"
+	desc = "Lowly artifice. Serves more base purposes."
+	icon_state = "crude"
 
 /obj/item/ingot/precision_part
 	name = "precision part"
 	desc = "High accuracy artifice. Required within projectile weaponry."
-	icon_state = "ingot"
-
+	icon_state = "precision"

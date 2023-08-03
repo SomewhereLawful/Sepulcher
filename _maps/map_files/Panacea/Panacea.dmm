@@ -141,6 +141,13 @@
 /obj/effect/turf_decal/line,
 /turf/open/indestructible/ground/outside/road,
 /area/exterior/city)
+"cn" = (
+/obj/structure/foundry/hydraulic_press,
+/turf/open/floor/f13{
+	tag = "icon-floorrusty";
+	icon_state = "floorrusty"
+	},
+/area/interior/foundry)
 "co" = (
 /obj/structure/decor/tire{
 	icon_state = "shina3";
@@ -772,7 +779,7 @@
 /turf/closed/wall/beton,
 /area/interior/city)
 "mz" = (
-/obj/machinery/autolathe,
+/obj/item/ingot,
 /turf/open/floor/f13{
 	tag = "icon-floorrusty";
 	icon_state = "floorrusty"
@@ -1113,7 +1120,7 @@
 /turf/open/indestructible/ground/outside/road,
 /area/interior/train_yard)
 "td" = (
-/obj/machinery/ammobench,
+/obj/structure/foundry/milling_machine,
 /turf/open/floor/f13{
 	tag = "icon-floorrusty";
 	icon_state = "floorrusty"
@@ -1247,8 +1254,12 @@
 	},
 /area/interior/clinic)
 "uI" = (
-/turf/closed/wall/brickdark,
-/area/void)
+/obj/structure/foundry/anvil,
+/turf/open/floor/f13{
+	tag = "icon-floorrusty";
+	icon_state = "floorrusty"
+	},
+/area/interior/foundry)
 "uR" = (
 /turf/closed/wall/brickdark,
 /area/interior/apartments)
@@ -1381,6 +1392,13 @@
 	},
 /turf/open/indestructible/ground/outside/water/sea/deep,
 /area/exterior/city/docks)
+"wm" = (
+/obj/structure/decor/grave,
+/obj/effect/turf_decal/line{
+	dir = 1
+	},
+/turf/open/indestructible/ground/outside/dirt,
+/area/exterior/city)
 "wo" = (
 /obj/effect/turf_decal/line{
 	dir = 1
@@ -1818,6 +1836,13 @@
 	},
 /turf/open/indestructible/ground/floor/wood_floor,
 /area/interior/apartments)
+"DH" = (
+/obj/structure/foundry/lathe,
+/turf/open/floor/f13{
+	tag = "icon-floorrusty";
+	icon_state = "floorrusty"
+	},
+/area/interior/foundry)
 "DM" = (
 /obj/effect/landmark/latejoin/bougie,
 /turf/open/indestructible/ground/floor/lattice{
@@ -2463,6 +2488,13 @@
 /obj/structure/decor/cig_trash,
 /turf/open/indestructible/ground/outside/road,
 /area/exterior/city/docks)
+"Om" = (
+/obj/structure/flora/tree/tall,
+/obj/effect/turf_decal/line{
+	dir = 1
+	},
+/turf/open/indestructible/ground/outside/dirt,
+/area/exterior/city)
 "On" = (
 /obj/structure/shitheap,
 /obj/effect/turf_decal/line,
@@ -2719,6 +2751,15 @@
 	},
 /turf/open/indestructible/ground/outside/road,
 /area/exterior/city)
+"TI" = (
+/obj/effect/turf_decal/line{
+	dir = 1
+	},
+/turf/open/floor/f13{
+	tag = "icon-floorrusty";
+	icon_state = "floorrusty"
+	},
+/area/interior/city)
 "TO" = (
 /obj/structure/table,
 /turf/open/floor/f13{
@@ -23184,13 +23225,13 @@ Zr
 Zr
 sj
 sj
-uI
-uI
-uI
-uI
-uI
-uI
-uI
+sj
+sj
+sj
+sj
+sj
+sj
+sj
 XX
 XX
 XX
@@ -23447,7 +23488,7 @@ Ly
 Pq
 Pq
 Ly
-uI
+sj
 XX
 XX
 XX
@@ -23704,7 +23745,7 @@ Ly
 Pq
 Pq
 Ly
-uI
+sj
 XX
 XX
 XX
@@ -23961,7 +24002,7 @@ Pq
 Pq
 Pq
 Ly
-uI
+sj
 XX
 XX
 XX
@@ -24218,7 +24259,7 @@ Pq
 Pq
 Pq
 Ly
-uI
+sj
 XX
 XX
 XX
@@ -27604,7 +27645,7 @@ HE
 HE
 vR
 yi
-td
+yi
 yi
 yi
 yi
@@ -27861,7 +27902,7 @@ mH
 mH
 xP
 yi
-yi
+td
 yi
 td
 yi
@@ -28375,9 +28416,9 @@ ja
 Hd
 vo
 yi
-td
+uI
 yi
-yi
+uI
 yi
 NV
 XX
@@ -28634,7 +28675,7 @@ Ua
 yi
 yi
 yi
-td
+yi
 yi
 NV
 XX
@@ -28889,9 +28930,9 @@ yi
 yi
 yi
 yi
+DH
 yi
-yi
-yi
+DH
 yi
 NV
 XX
@@ -29146,7 +29187,7 @@ yi
 yi
 NV
 yi
-mz
+yi
 pE
 yi
 yi
@@ -29402,8 +29443,8 @@ yi
 yi
 yi
 yi
-yi
-yi
+mz
+mz
 yi
 yi
 yi
@@ -29659,10 +29700,10 @@ Hd
 Fc
 Hd
 Fc
+mz
 yi
 yi
-yi
-yi
+cn
 yi
 NV
 XX
@@ -29916,7 +29957,7 @@ Hd
 Qe
 Hd
 vo
-yi
+mz
 yi
 yi
 yi
@@ -30433,7 +30474,7 @@ vR
 yi
 yi
 yi
-yi
+cn
 yi
 NV
 XX
@@ -33466,7 +33507,7 @@ sj
 sj
 sj
 TQ
-TQ
+TI
 TQ
 TQ
 sj
@@ -37840,7 +37881,7 @@ OZ
 lM
 VZ
 sj
-VS
+qM
 VS
 VS
 VS
@@ -38097,7 +38138,7 @@ Zr
 Zr
 Zr
 sj
-oO
+jm
 sh
 oO
 UH
@@ -38354,7 +38395,7 @@ Zr
 Zr
 rX
 sj
-OR
+Om
 oO
 oO
 oO
@@ -38611,7 +38652,7 @@ Zr
 Zr
 lM
 sj
-sh
+wm
 oO
 oO
 oO
@@ -38868,7 +38909,7 @@ ye
 Zr
 Nu
 sj
-oO
+jm
 oO
 oO
 oO
@@ -39125,7 +39166,7 @@ ye
 Zr
 Zr
 sj
-oO
+jm
 UH
 oO
 oO
@@ -39382,7 +39423,7 @@ ye
 sj
 sj
 sj
-oO
+jm
 oO
 oO
 oO
@@ -39639,7 +39680,7 @@ sj
 sj
 XX
 sj
-oO
+jm
 OR
 oO
 oO
@@ -39896,7 +39937,7 @@ XX
 XX
 XX
 sj
-oO
+jm
 oO
 sh
 oO
@@ -40153,7 +40194,7 @@ XX
 XX
 XX
 sj
-sh
+wm
 oO
 oO
 OR
@@ -44522,7 +44563,7 @@ sj
 sj
 sj
 Av
-oO
+GC
 GC
 GC
 GC
