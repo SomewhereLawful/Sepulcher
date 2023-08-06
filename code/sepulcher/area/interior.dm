@@ -50,6 +50,7 @@
 	name = "foundry"
 	icon_state = "foundry"
 	ambientsounds = list('sound/f13ambience/battle_1.ogg','sound/f13ambience/battle_2.ogg','sound/f13ambience/battle_3.ogg')
+	ambient_background = list('sound/ambience/interiors/foundry.ogg' = 40)
 
 /area/interior/train_yard
 	name = "train yard"
@@ -61,5 +62,5 @@
 	icon_state = "sewer"
 	ambientsounds = list('sound/f13ambience/battle_1.ogg','sound/f13ambience/battle_2.ogg','sound/f13ambience/battle_3.ogg')
 	ambient_environment = list('sound/ambience/sewer/moan1.ogg','sound/ambience/sewer/muffled_cry1.ogg','sound/ambience/sewer/scared_breathing1.ogg','sound/ambience/sewer/scared_breathing2.ogg')
-	ambient_background = list('sound/ambience/sewer/undercity_loop1.ogg' = 20)
+	ambient_background = list('sound/ambience/sewer/undercity_loop1.ogg' = 30)
 	narrate = "The unmistakable odour of decaying waste bombards your nostrils."

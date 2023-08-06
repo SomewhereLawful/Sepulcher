@@ -1301,7 +1301,9 @@
 /obj/structure/lattice/catwalk{
 	icon_state = "catwalk12-0"
 	},
-/obj/structure/foundry/mould,
+/obj/structure/foundry/mould{
+	pixel_y = -16
+	},
 /turf/open/foundry,
 /area/interior/foundry)
 "vq" = (
