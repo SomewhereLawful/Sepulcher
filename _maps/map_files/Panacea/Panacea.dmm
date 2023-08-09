@@ -42,9 +42,8 @@
 /area/exterior/city/docks)
 "aC" = (
 /obj/structure/lattice/catwalk{
-	icon_state = "catwalk4-0"
+	icon_state = "catwalk12-0"
 	},
-/obj/structure/object_pass/foundry_bucket_rails,
 /turf/open/foundry,
 /area/interior/foundry)
 "aD" = (
@@ -664,6 +663,14 @@
 /obj/structure/lattice/catwalk{
 	icon_state = "catwalk15-12"
 	},
+/obj/structure/object_pass/foundry_bucket_rails,
+/turf/open/foundry,
+/area/interior/foundry)
+"ko" = (
+/obj/structure/lattice/catwalk{
+	icon_state = "catwalk13-1"
+	},
+/obj/structure/object_pass/foundry_bucket_rails,
 /turf/open/foundry,
 /area/interior/foundry)
 "kx" = (
@@ -1524,6 +1531,13 @@
 /obj/structure/table,
 /turf/open/indestructible/ground/floor/wood_floor,
 /area/interior/city)
+"yg" = (
+/obj/structure/lattice/catwalk{
+	icon_state = "catwalk10-0"
+	},
+/obj/structure/object_pass/foundry_bucket_rails,
+/turf/open/foundry,
+/area/interior/foundry)
 "yi" = (
 /turf/open/floor/f13{
 	tag = "icon-floorrusty";
@@ -1561,6 +1575,13 @@
 	},
 /turf/open/indestructible/ground/outside/road,
 /area/exterior/city)
+"yK" = (
+/obj/structure/object_pass/foundry_bucket_rails,
+/obj/structure/lattice/catwalk{
+	icon_state = "catwalk11-0"
+	},
+/turf/open/foundry,
+/area/interior/foundry)
 "yN" = (
 /obj/structure/rack,
 /turf/open/floor/f13{
@@ -1767,10 +1788,10 @@
 /turf/open/indestructible/ground/outside/road,
 /area/exterior/city/docks)
 "By" = (
-/obj/structure/lattice/catwalk{
-	icon_state = "catwalk8-0"
-	},
 /obj/structure/object_pass/foundry_bucket_rails,
+/obj/structure/lattice/catwalk{
+	icon_state = "catwalk12-0"
+	},
 /turf/open/foundry,
 /area/interior/foundry)
 "BE" = (
@@ -1828,6 +1849,13 @@
 /obj/effect/turf_decal/line,
 /turf/open/indestructible/ground/outside/dirt,
 /area/exterior/city)
+"CO" = (
+/obj/structure/lattice/catwalk{
+	icon_state = "catwalk6-0"
+	},
+/obj/structure/object_pass/foundry_bucket_rails,
+/turf/open/foundry,
+/area/interior/foundry)
 "CR" = (
 /turf/open/indestructible/ground/outside/desert,
 /area/exterior/city)
@@ -1844,6 +1872,13 @@
 /obj/structure/table/bar,
 /turf/open/indestructible/ground/floor/wood_floor/horizontal,
 /area/interior/city)
+"Dr" = (
+/obj/structure/object_pass/foundry_bucket_rails,
+/obj/structure/lattice/catwalk{
+	icon_state = "catwalk3-0"
+	},
+/turf/open/foundry,
+/area/interior/foundry)
 "Ds" = (
 /turf/open/indestructible/ground/outside/water/sea/deep,
 /area/exterior/city/docks)
@@ -1876,10 +1911,10 @@
 /area/interior/foundry)
 "DI" = (
 /obj/structure/object_pass/foundry_bucket_rails,
-/turf/open/floor/f13{
-	tag = "icon-floorrusty";
-	icon_state = "floorrusty"
+/obj/structure/lattice/catwalk{
+	icon_state = "catwalk7-0"
 	},
+/turf/open/foundry,
 /area/interior/foundry)
 "DM" = (
 /obj/effect/landmark/latejoin/bougie,
@@ -2319,6 +2354,13 @@
 /obj/structure/decor/wood_scrap,
 /turf/open/indestructible/ground/outside/road,
 /area/exterior/city/docks)
+"KC" = (
+/obj/structure/lattice/catwalk{
+	icon_state = "catwalk5-0"
+	},
+/obj/structure/object_pass/foundry_bucket_rails,
+/turf/open/foundry,
+/area/interior/foundry)
 "KM" = (
 /obj/effect/particle_effect/smoke/reality_edge,
 /turf/open/indestructible/ground/outside/water/sea/deep,
@@ -2353,6 +2395,13 @@
 	icon_state = "floorrusty"
 	},
 /area/interior/sewer)
+"Lx" = (
+/obj/structure/lattice/catwalk{
+	icon_state = "catwalk9-0"
+	},
+/obj/structure/object_pass/foundry_bucket_rails,
+/turf/open/foundry,
+/area/interior/foundry)
 "Ly" = (
 /turf/open/indestructible/ground/outside/road,
 /area/exterior/city)
@@ -2710,6 +2759,13 @@
 /obj/structure/decor/iconostasis/right,
 /turf/open/indestructible/ground/floor/lattice,
 /area/interior/spawning/kommandant)
+"QW" = (
+/obj/structure/lattice/catwalk{
+	icon_state = "catwalk13-4"
+	},
+/obj/structure/object_pass/foundry_bucket_rails,
+/turf/open/foundry,
+/area/interior/foundry)
 "Re" = (
 /obj/effect/turf_decal/line{
 	dir = 8
@@ -2831,6 +2887,7 @@
 /obj/structure/lattice/catwalk{
 	icon_state = "catwalk15-3"
 	},
+/obj/structure/object_pass/foundry_bucket_rails,
 /turf/open/foundry,
 /area/interior/foundry)
 "UX" = (
@@ -27938,7 +27995,7 @@ kn
 kL
 kL
 kL
-xP
+QW
 yi
 td
 yi
@@ -28707,7 +28764,7 @@ NV
 Hd
 By
 Hd
-Ua
+aC
 vo
 By
 yi
@@ -28962,11 +29019,11 @@ XX
 XX
 NV
 oI
-yi
-DI
-DI
-DI
-yi
+yg
+Dr
+yK
+Dr
+Lx
 yi
 DH
 yi
@@ -29220,10 +29277,10 @@ XX
 NV
 ww
 yi
-yi
-yi
-yi
 NV
+NV
+yi
+yi
 yi
 yi
 pE
@@ -29476,11 +29533,11 @@ XX
 XX
 NV
 oI
-yi
+CO
+Dr
 DI
-DI
-DI
-yi
+Dr
+KC
 mz
 mz
 yi
@@ -29733,11 +29790,11 @@ XX
 XX
 NV
 Hd
-aC
+By
 Hd
-Fc
-vo
 aC
+vo
+By
 mz
 yi
 yi
@@ -30508,7 +30565,7 @@ US
 qx
 qx
 qx
-vR
+ko
 yi
 yi
 yi

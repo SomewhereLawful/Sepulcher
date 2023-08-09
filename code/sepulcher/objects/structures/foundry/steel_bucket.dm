@@ -24,12 +24,7 @@
 		sleep(28) // length of flick
 		occupied = FALSE
 		icon_state = "steel_bucket"
-
-		// This block checks if src is on the same turf as the mould, if so - the mould is "filled"
-		for(var/obj/structure/foundry/mould/M in range(0, src))
-			if(M.Adjacent(src) && ((get_dir(src, M) & dir) || M.loc == loc))
-				M.occupied = TRUE
-				M.icon_state = "mould_filled"
+		ingot_formation()
 	else
 		to_chat(user, "The bucket is empty.")
 		return
@@ -45,3 +40,15 @@
 		sleep(49) // length of flick
 		occupied = TRUE
 		icon_state = "filled_bucket"
+
+/obj/structure/foundry/steel_bucket/proc/ingot_formation()
+	var/obj/structure/foundry/mould/M
+	for(M in range(0, src))
+		if(M.Adjacent(src) && ((get_dir(src, M) & dir) || M.loc == loc))
+			if(M.opened == TRUE)
+				return
+			else
+				M.occupied = TRUE
+				M.cooling = TRUE
+				M.icon_state = "mould_filled"
+				M.ingot_cooling_start()
