@@ -70,7 +70,7 @@
 
 /obj/structure/decor/foundry
 	name = "steel bucket"
-	desc = "Capable of holding liquid steel - withstanding the foundry maw heat. Yet, this is broken and incapable of moving."
+	desc = "A vessel yet unable to function."
 	icon_state = "steel_bucket"
 
 /obj/structure/decor/apc

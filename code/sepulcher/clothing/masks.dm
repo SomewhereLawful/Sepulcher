@@ -8,7 +8,7 @@
 
 /obj/item/clothing/mask/ph_mask
 	name = "burlap mask"
-	desc = "Odd looking bag, with a small tongue."
+	desc = "Small leather tongue, dead mica eyes."
 	icon_state = "ph"
 	item_state = "ph"
 	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR

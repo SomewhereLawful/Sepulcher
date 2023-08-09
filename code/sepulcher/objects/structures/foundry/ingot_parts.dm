@@ -8,7 +8,7 @@
 /obj/item/ingot/sheet
 	name = "steel sheet"
 	desc = "Lathe to make pipes and barrels."
-	icon_state = "ingot"
+	icon_state = "sheet"
 
 /obj/item/ingot/crude_part
 	name = "crude part"

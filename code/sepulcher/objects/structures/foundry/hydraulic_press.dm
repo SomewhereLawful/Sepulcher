@@ -14,9 +14,13 @@
 
 /obj/structure/foundry/hydraulic_press/attackby(obj/item/O, mob/user, params)
 	if(/obj/item/ingot)
-		occupied = TRUE
-		icon_state = "press_filled"
-		qdel(O)
+		if(occupied == TRUE)
+			to_chat(user, "<span class='warning'>It is already occupied.</span>")
+			return
+		else
+			occupied = TRUE
+			icon_state = "press_filled"
+			qdel(O)
 
 /obj/structure/foundry/hydraulic_press/attack_hand(mob/user)
 	if(!user.IsAdvancedToolUser())
@@ -24,6 +28,8 @@
 		return
 
 	var/mob/living/carbon/human/H = user
+	var/accident_chance = (H.will * -0.2) + 10
+
 	if(occupied == TRUE)
 		visible_message("<span class='magenta'>The machine's bolster decends, flattening the contents within.</span>")
 		occupied = FALSE
@@ -32,7 +38,7 @@
 		icon_state = "press"
 		new /obj/item/ingot/sheet(get_turf(src))
 
-		if(prob(10)) // horrible industrial accident
+		if(prob(accident_chance)) // horrible industrial accident
 			var/obj/item/bodypart/affecting = H.get_bodypart("[(user.active_hand_index % 2 == 0) ? "r" : "l" ]_arm")
 			if(affecting && affecting.receive_damage(100))
 				H.update_damage_overlays()

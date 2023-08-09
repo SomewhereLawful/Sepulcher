@@ -4,6 +4,8 @@
 	desc = "Pour steel, make ingots."
 	icon_state = "mould_closed"
 	density = FALSE
+	pixel_y = -16
+
 	var/opened = FALSE
 
 /obj/structure/foundry/mould/examine(mob/user)

@@ -13,9 +13,13 @@
 
 /obj/structure/foundry/milling_machine/attackby(obj/item/O, mob/user, params)
 	if(/obj/item/ingot)
-		occupied = TRUE
-		icon_state = "milling_filled"
-		qdel(O)
+		if(occupied == TRUE)
+			to_chat(user, "<span class='warning'>It is already occupied.</span>")
+			return
+		else
+			occupied = TRUE
+			icon_state = "milling_filled"
+			qdel(O)
 
 /obj/structure/foundry/milling_machine/attack_hand(mob/user)
 	if(!user.IsAdvancedToolUser())
@@ -32,7 +36,7 @@
 		visible_message("<span class='magenta'>[user] begins to carefully carve an ingot to shape.</span>")
 		flick("milling_action",src)
 		playsound(src, 'sound/effects/steel_milling.ogg', 50, 0)
-		if(do_after(user, 20, target = src))
+		if(do_after(user, 35, target = src))
 			occupied = FALSE
 			sleep(35) // length of flick
 			icon_state = "milling"
