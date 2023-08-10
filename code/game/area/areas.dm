@@ -67,11 +67,13 @@
 	var/ambient_music_cooldown = 2000
 	/// Cooldown for ambient_environment, randomized for amt * 0.3 to amt * 1.5
 	var/ambient_environment_cooldown = 1998
+	/// Cooldown for ambient_background
+	var/ambient_background_cooldown = 100
 	/// Ambient music, plays the entirety then takes a break for ambient_music_cooldown
 	var/list/ambient_music = list('sound/ambient_music/identity_theft.ogg', 'sound/ambient_music/maintenance_tunnels.ogg')
 	/// Plays a sound with a relatively short delay
 	var/list/ambient_environment = null
-	/// Plays a sound constantly in the area, abit finicky and needs a '= num' at the end of the file
+	/// Plays a sound constantly in the area
 	var/list/ambient_background = null
 
 	///A text-based description of what this area is for. Similar-ish to MUDs.

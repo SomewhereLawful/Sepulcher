@@ -59,22 +59,16 @@
 			client.environment.Set_Sound(AMBIENT_ENVIRONMENT_CHANNEL, rand(25, 60), rand(-100, 100), A.environment)
 			src << client.environment
 
-	if(!client.background || (!client.background.transition && (world.time >= client.background.last_time + client.background.real_cooldown)))
+	if(!client.background || (world.time >= client.background.last_time + client.background.real_cooldown))
 
-		if(A.ambient_background)
-			var/file = safepick(A.ambient_background)
-			client.background = new/sound/ambient(file)
-			client.background.real_cooldown = A.ambient_background[file]
-			if(!isnum(client.background.real_cooldown))
-				message_admins("Error: ambient background sfx \'[file]\' for \type[A] has no cooldown set, defaulting to 100...")
-				client.background.real_cooldown = 100
-				A.ambient_background[file] = 100
+		if(A.ambient_background != null && A.ambient_background.len > 0)
+			client.background = new/sound/ambient(file = safepick(A.ambient_background))
 
-		if(client.background)
 			////////////////////////
 			client.background.last_time = world.time
+			client.background.real_cooldown = A.ambient_background_cooldown
 			////////////////////////
-			client.background.Set_Sound(AMBIENT_BACKGROUND_CHANNEL, 35, 0, A.environment)
+			client.background.Set_Sound(AMBIENT_BACKGROUND_CHANNEL, 30, 0, A.environment)
 			src << client.background
 
 	return 1

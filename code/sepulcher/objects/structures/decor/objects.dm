@@ -117,6 +117,7 @@
 
 /obj/structure/decor/saint_icon
 	name = "icon"
+	desc = "The spiritual look to him. Whoever he was."
 	icon_state = "saint_icon"
 
 /obj/structure/decor/iconostasis
