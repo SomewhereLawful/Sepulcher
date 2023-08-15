@@ -45,9 +45,9 @@
 			icon_state = "mould_open"
 			opened = TRUE
 			if(occupied == TRUE) // Three ingots
-				new /obj/item/ingot(T)
-				new /obj/item/ingot(T)
-				new /obj/item/ingot(T)
+				new /obj/item/parts/ingot(T)
+				new /obj/item/parts/ingot(T)
+				new /obj/item/parts/ingot(T)
 		else
 			to_chat(user, "You close the mould.")
 			icon_state = "mould_closed"

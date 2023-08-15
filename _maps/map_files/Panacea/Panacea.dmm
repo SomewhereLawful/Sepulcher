@@ -807,13 +807,6 @@
 "mr" = (
 /turf/closed/wall/beton,
 /area/interior/city)
-"mz" = (
-/obj/item/ingot,
-/turf/open/floor/f13{
-	tag = "icon-floorrusty";
-	icon_state = "floorrusty"
-	},
-/area/interior/foundry)
 "mH" = (
 /obj/structure/lattice/catwalk{
 	icon_state = "catwalk11-12"
@@ -29561,8 +29554,8 @@ DI
 Fa
 DI
 og
-mz
-mz
+yi
+yi
 yi
 yi
 yi
@@ -29818,7 +29811,7 @@ Hd
 lH
 vo
 aC
-mz
+yi
 yi
 yi
 cn
@@ -30075,7 +30068,7 @@ Hd
 Qe
 Hd
 fP
-mz
+yi
 yi
 yi
 yi

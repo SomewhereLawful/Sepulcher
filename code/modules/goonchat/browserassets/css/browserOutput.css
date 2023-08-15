@@ -271,14 +271,24 @@ em						{font-style: normal;	font-weight: bold;}
 .name					{					font-weight: bold;}
 
 .say					{}
-/* Sepulcher Colors, based on MUSHClient ANSI colors - black is for VERY RARE occasions*/
+
+/* Sepulcher Colors, based on MUSHClient ANSI colors*/
+
+/* Danger, attacks, and HEALTH notifications */
 .red				{color: #960000;}
+/* TOXICITY notifications */
 .green				{color: #117c28;}
+/* HUNGER notifications, object/mob names */
 .yellow				{color: #DAAA18;}
+/* WILL notifications, depression msgs, and medicine */
 .blue				{color: #0000CC;}
+/* Standard notifications, in stating what can be see */
 .magenta			{color: #FF00FF;}
+/* Ethereal things */
 .cyan				{color: #00FFFF;}
+/* Sublimination, used in inner-gold */
 .white				{color: #ffffff;}
+/* hidden messages, something secret is wrong */
 .black				{color: #0f0f0f;}
 
 /* SS13 basic */

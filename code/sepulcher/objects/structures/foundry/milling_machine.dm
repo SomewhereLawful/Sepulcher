@@ -6,29 +6,24 @@
 	icon_state = "milling"
 	failure_message = "Your arm is still on the machine's knee, the drill rends your arm - leaving it damaged beyond repair."
 
-/obj/structure/foundry/milling_machine/examine(mob/user)
-	..()
-	if(occupied == TRUE)
-		to_chat(user, "<span class='red'>There is an ingot within.</span>")
-
 /obj/structure/foundry/milling_machine/attackby(obj/item/O, mob/user, params)
-	if(/obj/item/ingot)
-		if(occupied == TRUE)
-			to_chat(user, "<span class='warning'>It is already occupied.</span>")
-			return
-		else
+	if(/obj/item/parts/ingot)
+		if(occupied == FALSE)
 			occupied = TRUE
 			icon_state = "milling_filled"
+			occupying_item = /obj/item/parts/ingot
 			qdel(O)
+		else
+			to_chat(user, "<span class='magenta'>It is already occupied.</span>")
+			return
 
 /obj/structure/foundry/milling_machine/attack_hand(mob/user)
 	if(!user.IsAdvancedToolUser())
-		to_chat(user, "<span class='warning'>The machine confounds you. It's purpose and operation enigmatic.</span>")
+		to_chat(user, "<span class='magenta'>The machine confounds you. It's purpose and operation enigmatic.</span>")
 		return
 
 	var/mob/living/carbon/human/H = user
 	var/accident_chance = (H.will * -0.2) + 10
-
 	if(H.has_trait(TRAIT_POOR_AIM))
 		accident_chance += 10 // Trembling fingers make terrible mistakes
 
@@ -40,7 +35,8 @@
 			occupied = FALSE
 			sleep(35) // length of flick
 			icon_state = "milling"
-			new /obj/item/ingot/precision_part(get_turf(src))
+			new /obj/item/parts/precision_part(get_turf(src))
+			occupying_item = null
 
 			// horrible industrial accident
 			if(prob(accident_chance))
