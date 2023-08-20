@@ -45,6 +45,7 @@
 /area/interior/clinic
 	name = "Clinic"
 	icon_state = "interior"
+	narrate = "Acrid spirits billow through the thick air. A bite of gangrene hides within, here no respite from this world's decay."
 
 /area/interior/foundry
 	name = "foundry"
@@ -52,6 +53,7 @@
 	ambientsounds = list('sound/f13ambience/battle_1.ogg','sound/f13ambience/battle_2.ogg','sound/f13ambience/battle_3.ogg')
 	ambient_background_cooldown = 26
 	ambient_background = list('sound/ambience/interiors/foundry.ogg')
+	narrate = "Opressively hot."
 
 /area/interior/train_yard
 	name = "train yard"
@@ -65,4 +67,4 @@
 	ambient_environment = list('sound/ambience/sewer/moan1.ogg','sound/ambience/sewer/muffled_cry1.ogg','sound/ambience/sewer/scared_breathing1.ogg','sound/ambience/sewer/scared_breathing2.ogg')
 	ambient_background_cooldown = 120
 	ambient_background = list('sound/ambience/sewer/sewer_air.ogg')
-	narrate = "The unmistakable odour of decaying waste bombards your nostrils."
+	narrate = "Air thick with effluvium and stagnant sewage. Here one collects fertilizer, and parasites."

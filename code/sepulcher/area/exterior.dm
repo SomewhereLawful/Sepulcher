@@ -19,9 +19,11 @@
 	ambient_music = list('sound/ambient_music/hl2_song32.ogg')
 	ambient_background_cooldown = 100
 	ambient_background = list('sound/ambience/shore/wave1.ogg', 'sound/ambience/shore/wave2.ogg', 'sound/ambience/shore/wave3.ogg', 'sound/ambience/shore/wave4.ogg', 'sound/ambience/shore/wave5.ogg', 'sound/ambience/shore/wave6.ogg')
+	narrate = "Red waters lap at the docks. The horizon hazes into the sky, companioned by the stench of salt and ocean air."
 
 /area/exterior/wastes
 	name = "The Wastes"
 	icon_state = "wastes"
 	ambient_music = list('sound/ambient_music/hl2_song27.ogg')
 	ambient_background = list('sound/ambience/wasteland/wasteland_wind.ogg')
+	narrate = "The wastes expand outward to moaning, fogged edges. There's nothing out here worth dying over."

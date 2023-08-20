@@ -599,6 +599,17 @@
 	},
 /turf/open/indestructible/ground/outside/dirt,
 /area/exterior/city)
+"jq" = (
+/obj/structure/decor/spool{
+	pixel_y = 15;
+	pixel_x = -23;
+	plane = 0
+	},
+/obj/structure/decor/spool{
+	pixel_x = -5
+	},
+/turf/open/indestructible/ground/outside/sidewalk/tile,
+/area/exterior/city)
 "jr" = (
 /obj/structure/decor/wood_scrap,
 /obj/structure/decor/dump_bin/full{
@@ -776,6 +787,18 @@
 "lY" = (
 /turf/closed/wall/brickdark,
 /area/interior/sewer)
+"mc" = (
+/obj/structure/decor/tire{
+	icon_state = "shina5";
+	pixel_x = 8;
+	pixel_y = 9
+	},
+/obj/structure/decor/dump_bin/full{
+	pixel_x = -15;
+	pixel_y = 4
+	},
+/turf/open/indestructible/ground/outside/sidewalk/tile,
+/area/exterior/city)
 "md" = (
 /obj/structure/chair/wood/normal{
 	dir = 8
@@ -841,6 +864,12 @@
 	icon_state = "floorrusty"
 	},
 /area/interior/city)
+"nq" = (
+/obj/structure/fence/end{
+	dir = 8
+	},
+/turf/open/indestructible/ground/outside/sidewalk/tile,
+/area/exterior/city)
 "nr" = (
 /obj/structure/simple_door/room,
 /turf/open/indestructible/ground/floor/wood_floor,
@@ -1068,10 +1097,15 @@
 /turf/open/indestructible/ground/outside/desert,
 /area/exterior/wastes)
 "rP" = (
-/obj/structure/foundry/steel_bucket,
-/obj/structure/foundry/mould,
-/turf/open/chasm/foundry,
-/area/interior/foundry)
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/structure/decor/tire{
+	pixel_y = 13;
+	pixel_x = 3
+	},
+/turf/open/indestructible/ground/outside/sidewalk/tile,
+/area/exterior/city)
 "rX" = (
 /obj/machinery/light,
 /obj/structure/chair/wood/normal{
@@ -1295,12 +1329,11 @@
 	},
 /area/interior/clinic)
 "uI" = (
-/obj/structure/foundry/anvil,
-/turf/open/floor/f13{
-	tag = "icon-floorrusty";
-	icon_state = "floorrusty"
+/obj/structure/decor/dump_bin/red/full{
+	pixel_y = 8
 	},
-/area/interior/foundry)
+/turf/open/indestructible/ground/outside/sidewalk/tile,
+/area/exterior/city)
 "uR" = (
 /turf/closed/wall/brickdark,
 /area/interior/apartments)
@@ -2266,6 +2299,13 @@
 	icon_state = "floorrusty"
 	},
 /area/interior/sewer)
+"Jt" = (
+/obj/structure/decor/wood_scrap,
+/obj/structure/decor/dump_bin{
+	pixel_x = -8
+	},
+/turf/open/indestructible/ground/outside/sidewalk/tile,
+/area/exterior/city)
 "Jx" = (
 /obj/structure/closet/crate/miningcar,
 /turf/open/indestructible/ground/outside/road,
@@ -2354,6 +2394,13 @@
 /obj/structure/decor/wood_scrap,
 /turf/open/indestructible/ground/outside/road,
 /area/exterior/city/docks)
+"KL" = (
+/obj/structure/decor/tire{
+	icon_state = "shina3";
+	pixel_x = -6
+	},
+/turf/open/indestructible/ground/outside/sidewalk/tile,
+/area/exterior/city)
 "KM" = (
 /obj/effect/particle_effect/smoke/reality_edge,
 /turf/open/indestructible/ground/outside/water/sea/deep,
@@ -27245,7 +27292,7 @@ NV
 NV
 NV
 NV
-XX
+NV
 XX
 XX
 XX
@@ -27498,10 +27545,10 @@ kb
 Hd
 kb
 Fc
-yi
-yi
-yi
 NV
+td
+yi
+td
 NV
 NV
 XX
@@ -28013,9 +28060,9 @@ kL
 kL
 By
 yi
-td
 yi
-td
+yi
+yi
 yi
 NV
 XX
@@ -28267,10 +28314,10 @@ Hd
 fP
 ff
 Hd
-vo
+Hd
 fP
 yi
-yi
+DH
 yi
 yi
 vk
@@ -28524,12 +28571,12 @@ Hd
 fP
 Hd
 ja
-Hd
+vo
 fP
 yi
-uI
 yi
-uI
+yi
+yi
 yi
 NV
 XX
@@ -28781,7 +28828,7 @@ Hd
 aC
 Hd
 lH
-vo
+Hd
 aC
 yi
 yi
@@ -29043,7 +29090,7 @@ Sl
 yi
 DH
 yi
-DH
+yi
 yi
 NV
 XX
@@ -29809,12 +29856,12 @@ Hd
 aC
 Hd
 lH
-vo
+Hd
 aC
 yi
-yi
-yi
 cn
+yi
+yi
 yi
 NV
 XX
@@ -30066,7 +30113,7 @@ kb
 fP
 Hd
 Qe
-Hd
+vo
 fP
 yi
 yi
@@ -30323,7 +30370,7 @@ Hd
 fP
 Hd
 Hd
-rP
+ff
 fP
 yi
 yi
@@ -30583,10 +30630,10 @@ qx
 qx
 TF
 yi
-yi
-yi
 cn
 yi
+yi
+jI
 NV
 XX
 XX
@@ -30843,7 +30890,7 @@ yi
 yi
 yi
 yi
-yi
+jI
 NV
 XX
 XX
@@ -31311,7 +31358,7 @@ sj
 sa
 Ly
 sj
-Zr
+HM
 Zr
 sj
 sj
@@ -40079,7 +40126,7 @@ pD
 Ov
 Ov
 Ov
-Ov
+ht
 pD
 pD
 pD
@@ -40590,9 +40637,9 @@ Ov
 uG
 aG
 pD
-Ov
-Ov
-Ov
+ht
+ht
+ht
 Mh
 pD
 XX
@@ -41619,15 +41666,15 @@ Pq
 Pq
 Ly
 sj
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
+sj
+sj
+sj
+sj
+Bg
+Bg
+sj
+sj
+sj
 XX
 XX
 XX
@@ -41875,16 +41922,16 @@ Ly
 Pq
 Pq
 sa
+ez
+iC
+Oe
+Oe
+sa
+Pq
+Pq
+Ly
+Ly
 sj
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
 XX
 XX
 XX
@@ -42132,16 +42179,16 @@ Pq
 Pq
 Pq
 Pq
+nq
+jq
+eO
+PT
+Pq
+Pq
+eO
+Pq
+Pq
 sj
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
 XX
 XX
 XX
@@ -42388,17 +42435,17 @@ Pq
 Pq
 Pq
 Pq
+eO
+KL
+mc
+ZI
+Pq
+Pq
+eO
+Pq
+Pq
 Pq
 sj
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
 XX
 XX
 XX
@@ -42646,16 +42693,16 @@ Pq
 Pq
 Pq
 Pq
+uI
+Jt
+rP
+ZI
+Pq
+PT
+Pq
+Pq
+Pq
 sj
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
 XX
 XX
 XX
@@ -42904,15 +42951,15 @@ KP
 Ly
 by
 sj
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
+sj
+sj
+HO
+by
+Ly
+Pq
+eO
+Pq
+sj
 XX
 XX
 XX
@@ -43162,14 +43209,14 @@ Ly
 kO
 sj
 XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
+sj
+sj
+sj
+Ly
+Pq
+Pq
+Pq
+sj
 XX
 XX
 XX
@@ -43421,12 +43468,12 @@ sj
 XX
 XX
 XX
-XX
-XX
-XX
-XX
-XX
-XX
+Bg
+Pq
+Pq
+Pq
+Pq
+sj
 XX
 XX
 XX
@@ -43678,12 +43725,12 @@ sj
 XX
 XX
 XX
-XX
-XX
-XX
-XX
-XX
-XX
+sj
+Ly
+Pq
+Pq
+Pq
+sj
 XX
 XX
 XX
@@ -43936,10 +43983,10 @@ XX
 XX
 XX
 XX
-XX
-XX
-XX
-XX
+Ly
+Pq
+Pq
+Pq
 XX
 XX
 XX
