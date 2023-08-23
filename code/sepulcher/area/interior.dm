@@ -17,18 +17,22 @@
 /area/interior/spawning/bioslave
 	name = "bioslave prison"
 	icon_state = "bioslave"
+	narrate = "Rancid smell of shit and blood. There is nothing soft, nothing elegant of this pit."
 
 /area/interior/spawning/prole
 	name = "prole spawn"
 	icon_state = "prole"
+	narrate = "The first breaths of a proletariat's life are of black grease and offal."
 
 /area/interior/spawning/bougie
 	name = "bourgeoisie spawn"
 	icon_state = "bougie"
+	narrate = "A subtle hint of flowers and leather dances in this air. Unheard opulence in this city."
 
 /area/interior/spawning/kommandant
 	name = "kommandant"
 	icon_state = "kommandant"
+	narrate = "The air is electric, rubber and shoe polish come from the kasket. Here saints are remade -- and recycled."
 
 /area/interior/city
 	name = "City Interiors"
@@ -41,6 +45,7 @@
 /area/interior/apartments
 	name = "Apartments"
 	icon_state = "interior"
+	narrate = "Someone cooks nearby. Packed like canfish, here the safest solitude."
 
 /area/interior/clinic
 	name = "Clinic"
@@ -59,6 +64,7 @@
 	name = "train yard"
 	icon_state = "trainyard"
 	ambientsounds = list('sound/f13ambience/battle_1.ogg','sound/f13ambience/battle_2.ogg','sound/f13ambience/battle_3.ogg')
+	narrate = "Dust and gravel inhabit the air. Corpse-cold engines live here, bringing and taking."
 
 /area/interior/sewer
 	name = "sewer"

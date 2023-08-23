@@ -2,6 +2,7 @@
 /mob/verb/narrate_area(mob/user)
 	set name = "Inspect Location"
 	set category = "IC"
+	set desc = "Gain small insight of your location."
 	var/area/N = get_area(user)
 
 	if(!N.narrate)
