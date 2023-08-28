@@ -1,6 +1,6 @@
 /obj/item/organ/brain
 	name = "brain"
-	desc = "A piece of juicy meat found in a person's head."
+	desc = "The tessellation of logic. Beacon to beyond."
 	icon_state = "brain"
 	throw_speed = 3
 	throw_range = 5
@@ -14,6 +14,12 @@
 	var/decoy_override = FALSE	//I apologize to the security players, and myself, who abused this, but this is going to go.
 
 	var/list/datum/brain_trauma/traumas = list()
+
+/obj/item/organ/brain/on_life()
+	var/mob/living/carbon/human/H = owner
+
+	if(istype(H))
+		H.dna.species.handle_will(H)
 
 /obj/item/organ/brain/Insert(mob/living/carbon/C, special = 0,no_id_transfer = FALSE)
 	..()

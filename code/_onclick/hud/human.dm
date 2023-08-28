@@ -23,16 +23,6 @@
 
 	targetmob.hud_used.hidden_inventory_update(usr)
 
-/obj/screen/human/equip
-	name = "equip"
-	icon_state = "act_equip"
-
-/obj/screen/human/equip/Click()
-	if(ismecha(usr.loc)) // stops inventory actions in a mech
-		return 1
-	var/mob/living/carbon/human/H = usr
-	H.quick_equip()
-
 /obj/screen/devil
 	invisibility = INVISIBILITY_ABSTRACT
 
@@ -92,14 +82,6 @@
 	var/obj/screen/using
 	var/obj/screen/inventory/inv_box
 
-	using = new /obj/screen/craft
-	using.icon = ui_style
-	static_inventory += using
-
-	using = new/obj/screen/language_menu
-	using.icon = ui_style
-	static_inventory += using
-
 	action_intent = new /obj/screen/act_intent/segmented
 	action_intent.icon_state = mymob.a_intent
 	static_inventory += action_intent
@@ -116,18 +98,20 @@
 	static_inventory += using
 
 	inv_box = new /obj/screen/inventory()
-	inv_box.name = "i_clothing"
+	inv_box.name = "uniform"
 	inv_box.icon = ui_style
 	inv_box.slot_id = SLOT_W_UNIFORM
 	inv_box.icon_state = "uniform"
+	inv_box.icon_full = "template_active"
 	inv_box.screen_loc = ui_iclothing
 	toggleable_inventory += inv_box
 
 	inv_box = new /obj/screen/inventory()
-	inv_box.name = "o_clothing"
+	inv_box.name = "outerwear"
 	inv_box.icon = ui_style
 	inv_box.slot_id = SLOT_WEAR_SUIT
 	inv_box.icon_state = "suit"
+	inv_box.icon_full = "template_active"
 	inv_box.screen_loc = ui_oclothing
 	toggleable_inventory += inv_box
 
@@ -146,17 +130,10 @@
 	static_inventory += using
 
 	inv_box = new /obj/screen/inventory()
-	inv_box.name = "id"
-	inv_box.icon = ui_style
-	inv_box.icon_state = "id"
-	inv_box.screen_loc = ui_id
-	inv_box.slot_id = SLOT_WEAR_ID
-	static_inventory += inv_box
-
-	inv_box = new /obj/screen/inventory()
 	inv_box.name = "mask"
 	inv_box.icon = ui_style
 	inv_box.icon_state = "mask"
+	inv_box.icon_full = "template_active"
 	inv_box.screen_loc = ui_mask
 	inv_box.slot_id = SLOT_WEAR_MASK
 	toggleable_inventory += inv_box
@@ -165,6 +142,7 @@
 	inv_box.name = "neck"
 	inv_box.icon = ui_style
 	inv_box.icon_state = "neck"
+	inv_box.icon_full = "template_active"
 	inv_box.screen_loc = ui_neck
 	inv_box.slot_id = SLOT_NECK
 	toggleable_inventory += inv_box
@@ -178,7 +156,7 @@
 	static_inventory += inv_box
 
 	inv_box = new /obj/screen/inventory()
-	inv_box.name = "storage1"
+	inv_box.name = "pockets"
 	inv_box.icon = ui_style
 	inv_box.icon_state = "pocket"
 	inv_box.screen_loc = ui_storage1
@@ -186,19 +164,11 @@
 	static_inventory += inv_box
 
 	inv_box = new /obj/screen/inventory()
-	inv_box.name = "storage2"
+	inv_box.name = "pockets"
 	inv_box.icon = ui_style
 	inv_box.icon_state = "pocket"
 	inv_box.screen_loc = ui_storage2
 	inv_box.slot_id = SLOT_R_STORE
-	static_inventory += inv_box
-
-	inv_box = new /obj/screen/inventory()
-	inv_box.name = "suit storage"
-	inv_box.icon = ui_style
-	inv_box.icon_state = "suit_storage"
-	inv_box.screen_loc = ui_sstore1
-	inv_box.slot_id = SLOT_S_STORE
 	static_inventory += inv_box
 
 	using = new /obj/screen/resist()
@@ -211,15 +181,11 @@
 	using.screen_loc = ui_inventory
 	static_inventory += using
 
-	using = new /obj/screen/human/equip()
-	using.icon = ui_style
-	using.screen_loc = ui_equip_position(mymob)
-	static_inventory += using
-
 	inv_box = new /obj/screen/inventory()
 	inv_box.name = "gloves"
 	inv_box.icon = ui_style
 	inv_box.icon_state = "gloves"
+	inv_box.icon_full = "template_active"
 	inv_box.screen_loc = ui_gloves
 	inv_box.slot_id = SLOT_GLOVES
 	toggleable_inventory += inv_box
@@ -228,6 +194,7 @@
 	inv_box.name = "eyes"
 	inv_box.icon = ui_style
 	inv_box.icon_state = "glasses"
+	inv_box.icon_full = "template_active"
 	inv_box.screen_loc = ui_glasses
 	inv_box.slot_id = SLOT_GLASSES
 	toggleable_inventory += inv_box
@@ -236,6 +203,7 @@
 	inv_box.name = "ears"
 	inv_box.icon = ui_style
 	inv_box.icon_state = "ears"
+	inv_box.icon_full = "template_active"
 	inv_box.screen_loc = ui_ears
 	inv_box.slot_id = SLOT_EARS
 	toggleable_inventory += inv_box
@@ -244,6 +212,7 @@
 	inv_box.name = "head"
 	inv_box.icon = ui_style
 	inv_box.icon_state = "head"
+	inv_box.icon_full = "template_active"
 	inv_box.screen_loc = ui_head
 	inv_box.slot_id = SLOT_HEAD
 	toggleable_inventory += inv_box
@@ -252,6 +221,7 @@
 	inv_box.name = "shoes"
 	inv_box.icon = ui_style
 	inv_box.icon_state = "shoes"
+	inv_box.icon_full = "template_active"
 	inv_box.screen_loc = ui_shoes
 	inv_box.slot_id = SLOT_SHOES
 	toggleable_inventory += inv_box
@@ -269,9 +239,6 @@
 	throw_icon.icon = ui_style
 	throw_icon.screen_loc = ui_drop_throw
 	hotkeybuttons += throw_icon
-
-	internals = new /obj/screen/internals()
-	infodisplay += internals
 
 	health = new /obj/screen/bar_stat/health()
 	infodisplay += health

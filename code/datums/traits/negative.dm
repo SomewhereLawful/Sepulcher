@@ -1,56 +1,49 @@
 //predominantly negative traits
 
-/datum/quirk/blooddeficiency
-	name = "Acute Blood Deficiency"
-	desc = "Your body can't produce enough blood to sustain itself."
+/datum/quirk/no_machines
+	name = "Doltish"
+	desc = "Of you is a simple mind. Regardless of your form, machines are god-shaped - you cannot understand them."
+	value = -3
+	mob_trait = TRAIT_MONKEYLIKE
+
+/datum/quirk/nearsighted
+	name = "Clouded Irises"
+	desc = "Something has taken your farsight. Spectacles may help."
 	value = -2
+	gain_text = "<span class='danger'>Things far away from you start looking blurry.</span>"
+	lose_text = "<span class='notice'>You start seeing faraway things normally again.</span>"
+
+/datum/quirk/nearsighted/add()
+	quirk_holder.become_nearsighted(ROUNDSTART_TRAIT)
+
+/datum/quirk/blooddeficiency
+	name = "Wasting Sickness"
+	desc = "Your body rots. Constant attention is required."
+	value = -3
 	gain_text = "<span class='danger'>You feel your vigor slowly fading away.</span>"
 	lose_text = "<span class='notice'>You feel vigorous again.</span>"
-	medical_record_text = "Patient requires regular treatment for blood loss due to low production of blood."
+	// medical_record_text = "Patient requires regular treatment for blood loss due to low production of blood."
 
 /datum/quirk/blooddeficiency/on_process()
 	var/mob/living/carbon/human/H = quirk_holder
 	if(NOBLOOD in H.dna.species.species_traits) //can't lose blood if your species doesn't have any
 		return
 	else 
-		quirk_holder.blood_volume -= 0.275
+		quirk_holder.adjustBruteLoss(0.1)
 
-
-/*
-/datum/quirk/depression
-	name = "Depression"
-	desc = "You sometimes just hate life."
-	mob_trait = TRAIT_DEPRESSION
-	value = -1
-	gain_text = "<span class='danger'>You start feeling depressed.</span>"
-	lose_text = "<span class='notice'>You no longer feel depressed.</span>" //if only it were that easy!
-	medical_record_text = "Patient has a severe mood disorder causing them to experience sudden moments of sadness."
-	mood_quirk = TRUE
-
-
-/datum/quirk/heavy_sleeper
-	name = "Heavy Sleeper"
-	desc = "You sleep like a rock! Whenever you're put to sleep, you sleep for a little bit longer."
-	value = -1
-	mob_trait = TRAIT_HEAVY_SLEEPER
-	gain_text = "<span class='danger'>You feel sleepy.</span>"
-	lose_text = "<span class='notice'>You feel awake again.</span>"
-	medical_record_text = "Patient has abnormal sleep study results and is difficult to wake up."
-*/
-/datum/quirk/brainproblems
-	name = "Brain Tumor"
-	desc = "You have a little friend in your brain that is slowly destroying it. Better bring some mannitol!"
+/datum/quirk/willdraining
+	name = "Slipping Mind"
+	desc = "The desire to continue weakens. Your Will constantly drains."
 	value = -3
-	gain_text = "<span class='danger'>You feel smooth.</span>"
-	lose_text = "<span class='notice'>You feel wrinkled again.</span>"
-	medical_record_text = "Patient has a tumor in their brain that is slowly driving them to brain death."
+	gain_text = "<span class='danger'>You feel a draining of the soul.</span>"
+	lose_text = "<span class='notice'>You feel confident in your mind again.</span>"
 
-/datum/quirk/brainproblems/on_process()
-	quirk_holder.adjustBrainLoss(0.2)
+/datum/quirk/willdraining/on_process()
+	quirk_holder.adjustWillLoss(0.1)
 
 /datum/quirk/nyctophobia
-	name = "Nyctophobia"
-	desc = "As far as you can remember, you've always been afraid of the dark. While in the dark without a light source, you instinctually act careful, and constantly feel a sense of dread."
+	name = "Fear of Dark"
+	desc = "Dark places are homes to monstrosity. You've accepted this fact and tread carefully because of it."
 	value = -2
 
 /datum/quirk/nyctophobia/on_process()
@@ -61,51 +54,26 @@
 	var/lums = T.get_lumcount()
 	if(lums <= 0.2)
 		if(quirk_holder.m_intent == MOVE_INTENT_RUN)
-			to_chat(quirk_holder, "<span class='warning'>Easy, easy, take it slow... you're in the dark...</span>")
+			to_chat(quirk_holder, "<span class='warning'>The darkness absorbs you...</span>")
 			quirk_holder.toggle_move_intent()
 		SEND_SIGNAL(quirk_holder, COMSIG_ADD_MOOD_EVENT, "nyctophobia", /datum/mood_event/nyctophobia)
 	else
 		SEND_SIGNAL(quirk_holder, COMSIG_CLEAR_MOOD_EVENT, "nyctophobia")
 
-
-
-/datum/quirk/nonviolent
-	name = "Pacifist"
-	desc = "The thought of violence makes you sick. So much so, in fact, that you can't hurt anyone."
-	value = -3
-	mob_trait = TRAIT_PACIFISM
-	gain_text = "<span class='danger'>You feel repulsed by the thought of violence!</span>"
-	lose_text = "<span class='notice'>You think you can defend yourself again.</span>"
-	medical_record_text = "Patient is unusually pacifistic and cannot bring themselves to cause physical harm."
-
-/datum/quirk/nonviolent/on_process()
-	if(quirk_holder.mind && LAZYLEN(quirk_holder.mind.antag_datums))
-		to_chat(quirk_holder, "<span class='boldannounce'>Your antagonistic nature has caused you to renounce your pacifism.</span>")
-		qdel(src)
-
-
-
 /datum/quirk/poor_aim
-	name = "Poor Aim"
-	desc = "You're terrible with guns and can't line up a straight shot to save your life. Dual-wielding is right out."
+	name = "Tremoring Hands"
+	desc = "Your hands shake constantly. Your aim is terrible."
 	value = -1
 	mob_trait = TRAIT_POOR_AIM
 	medical_record_text = "Patient possesses a strong tremor in both hands."
 
-
-
-
-
-
-
 /datum/quirk/insanity
-	name = "Reality Dissociation Syndrome"
-	desc = "You suffer from a severe disorder that causes very vivid hallucinations. Mindbreaker toxin can suppress its effects, and you are immune to mindbreaker's hallucinogenic properties. <b>This is not a license to grief.</b>"
+	name = "Invoked Bedlam"
+	desc = "Leaking seams in the mind. You see the unreal, hear the unspoken. The madness leads many to forsake you."
 	value = -2
 	//no mob trait because it's handled uniquely
-	gain_text = "<span class='userdanger'>...</span>"
 	lose_text = "<span class='notice'>You feel in tune with the world again.</span>"
-	medical_record_text = "Patient suffers from acute Reality Dissociation Syndrome and experiences vivid hallucinations."
+	//medical_record_text = "Patient suffers from acute Reality Dissociation Syndrome and experiences vivid hallucinations."
 
 /datum/quirk/insanity/on_process()
 	if(quirk_holder.reagents.has_reagent("mindbreaker"))
@@ -120,14 +88,11 @@
 /datum/quirk/insanity/post_add() //I don't /think/ we'll need this but for newbies who think "roleplay as insane" = "license to kill" it's probably a good thing to have
 	if(!quirk_holder.mind || quirk_holder.mind.special_role)
 		return
-	to_chat(quirk_holder, "<span class='big bold info'>Please note that your dissociation syndrome does NOT give you the right to attack people or otherwise cause any interference to \
-	the round. You are not an antagonist, and the rules will treat you the same as other crewmembers.</span>")
-
-
+	to_chat(quirk_holder, "<span class='magenta'>Your visions, even when understood, offer no use to others. Excuses, they say... Best to keep them to yourself.</span>")
 
 /datum/quirk/social_anxiety
-	name = "Social Anxiety"
-	desc = "Talking to people is very difficult for you, and you often stutter or even lock up."
+	name = "Social Neurosis"
+	desc = "You torment yourself with the expectations of others. You fall mute and jittery to observers."
 	value = -2
 	gain_text = "<span class='danger'>You start worrying about what you're saying.</span>"
 	lose_text = "<span class='notice'>You feel easier about talking again.</span>" //if only it were that easy!

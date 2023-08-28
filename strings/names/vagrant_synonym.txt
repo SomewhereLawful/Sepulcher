@@ -17,3 +17,4 @@ Traveler
 Wayfarer
 Tramp
 Tribal
+Wildman

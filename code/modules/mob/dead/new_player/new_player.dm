@@ -449,7 +449,8 @@
 				dat += " [a.title], "
 			else
 				dat += " [a.title]. </div>"
-
+	dat += "<div align='center'>All must begin their first rebirth as Bioslave.<br/>Death is not an escape. Ablution at the chapel is required.</div>"
+	dat += "<br/>"
 	dat += "<div class='jobs'><div align='center'><div class='jobsColumn'></div>"
 	var/job_count = 0
 	for(var/datum/job/job in SSjob.occupations)

@@ -337,18 +337,6 @@
 	key_third_person = "sulks"
 	message = "sulks down sadly."
 
-/datum/emote/living/surrender
-	key = "surrender"
-	key_third_person = "surrenders"
-	message = "puts their hands on their head and falls to the ground, they surrender!"
-	emote_type = EMOTE_AUDIBLE
-
-/datum/emote/living/surrender/run_emote(mob/user, params)
-	. = ..()
-	if(. && isliving(user))
-		var/mob/living/L = user
-		L.Knockdown(200)
-
 /datum/emote/living/sway
 	key = "sway"
 	key_third_person = "sways"

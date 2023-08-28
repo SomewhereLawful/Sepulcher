@@ -97,8 +97,8 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 //FINE SMOKABLES//
 //////////////////
 /obj/item/clothing/mask/cigarette
-	name = "cigarette"
-	desc = "A roll of tobacco and nicotine."
+	name = "coffin nail"
+	desc = "Soothing immolation, embracing aspect. Can't be good for you."
 	icon_state = "cigoff"
 	throw_speed = 0.5
 	item_state = "cigoff"
@@ -373,8 +373,8 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	chem_volume = 50
 
 /obj/item/cigbutt
-	name = "cigarette butt"
-	desc = "A manky old cigarette butt."
+	name = "nail butt"
+	desc = "Spent nail."
 	icon = 'icons/obj/clothing/masks.dmi'
 	icon_state = "cigbutt"
 	w_class = WEIGHT_CLASS_TINY

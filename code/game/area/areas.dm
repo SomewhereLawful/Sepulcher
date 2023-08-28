@@ -63,6 +63,22 @@
 	var/xenobiology_compatible = FALSE //Can the Xenobio management console transverse this area by default?
 	var/list/canSmoothWithAreas //typecache to limit the areas that atoms in this area can smooth with
 
+	/// Cooldown for ambient_music, randomized for amt * 0.8 to amt * 1.5
+	var/ambient_music_cooldown = 2000
+	/// Cooldown for ambient_environment, randomized for amt * 0.3 to amt * 1.5
+	var/ambient_environment_cooldown = 1998
+	/// Cooldown for ambient_background
+	var/ambient_background_cooldown = 100
+	/// Ambient music, plays the entirety then takes a break for ambient_music_cooldown
+	var/list/ambient_music = list('sound/ambient_music/identity_theft.ogg', 'sound/ambient_music/maintenance_tunnels.ogg')
+	/// Plays a sound with a relatively short delay
+	var/list/ambient_environment = null
+	/// Plays a sound constantly in the area
+	var/list/ambient_background = null
+
+	///A text-based description of what this area is for, called by verb. Similar to MUDs.
+	var/narrate = null
+
 /*Adding a wizard area teleport list because motherfucking lag -- Urist*/
 /*I am far too lazy to make it a proper list of areas so I'll just make it run the usual telepot routine at the start of the game*/
 GLOBAL_LIST_EMPTY(teleportlocs)
@@ -423,7 +439,7 @@ GLOBAL_LIST_EMPTY(teleportlocs)
 	// Ambience goes down here -- make sure to list each area separately for ease of adding things in later, thanks! Note: areas adjacent to each other should have the same sounds to prevent cutoff when possible.- LastyScratch
 	if(L.client && !L.client.ambience_playing && L.client.prefs.toggles & SOUND_SHIP_AMBIENCE)
 		L.client.ambience_playing = 1
-		SEND_SOUND(L, sound('sound/ambience/ambience_base.ogg', repeat = 1, wait = 0, volume = 35, channel = CHANNEL_BUZZ))
+		//SEND_SOUND(L, sound('sound/ambience/ambience_base.ogg', repeat = 1, wait = 0, volume = 35, channel = CHANNEL_BUZZ))
 
 	if(!(L.client && (L.client.prefs.toggles & SOUND_AMBIENCE)))
 		return //General ambience check is below the ship ambience so one can play without the other
@@ -435,6 +451,7 @@ GLOBAL_LIST_EMPTY(teleportlocs)
 			SEND_SOUND(L, sound(sound, repeat = 0, wait = 0, volume = 25, channel = CHANNEL_AMBIENCE))
 			L.client.played = TRUE
 			addtimer(CALLBACK(L.client, /client/proc/ResetAmbiencePlayed), 600)
+
 
 /area/Exited(atom/movable/M)
 	SEND_SIGNAL(src, COMSIG_AREA_EXITED, M)

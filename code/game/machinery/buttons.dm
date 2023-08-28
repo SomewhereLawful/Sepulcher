@@ -2,8 +2,8 @@
 	name = "button"
 	desc = "A remote control switch."
 	icon = 'icons/obj/stationobjs.dmi'
-	icon_state = "doorctrl"
-	var/skin = "doorctrl"
+	icon_state = "button"
+	var/skin = "button"
 	power_channel = ENVIRON
 	var/obj/item/assembly/device
 	var/obj/item/electronics/airlock/board
@@ -251,8 +251,8 @@
 /obj/machinery/button/crematorium
 	name = "crematorium igniter"
 	desc = "Burn baby burn!"
-	icon_state = "launcher"
-	skin = "launcher"
+	icon_state = "button"
+	skin = "button"
 	device_type = /obj/item/assembly/control/crematorium
 	req_access = list()
 	id = 1

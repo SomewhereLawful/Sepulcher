@@ -1,7 +1,6 @@
 The Bioslaves have superior toxicity resistance. The sullen flesh can most effectively cart shit.
 Bioslaves are weak and pitiful. Their bodies are fragile to blows and must rely on their masters for protection.
 All must begin from the fetid depths.
-Bioslaves cannot wear most clothing.
 Hauling carts are available near both the Kommandant's Chapel and The Foundry.
 Weather conditions change often, just as machinations. Prepare accordingly.
 While most armaments and basic equipment is made in The Foundry, ammunition and medicine is acquired via import.
@@ -21,3 +20,4 @@ Bourgeoisie are weak to toxins and often require gas masks in many parts of The 
 Bourgeoisie are responsible for handling export contracts, manufacturing goods, and selling goods to the Proletariats.
 Some weather can affect cultivation positively, the same can be said for fishing.
 SAMOSBOR comes to reassemble the world periodically. His vision is deadly, yet shallow - seek shelter.
+Having low WILL increases chances of terrible accidents with machines. Replenish yourself.

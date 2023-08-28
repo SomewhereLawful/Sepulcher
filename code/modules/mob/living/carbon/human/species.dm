@@ -35,6 +35,9 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 	var/armor = 0		// overall defense for the race... or less defense, if it's negative.
 	var/brutemod = 1	// multiplier for brute damage
 	var/burnmod = 1		// multiplier for burn damage
+	var/willmod = 1		// multiplier for will damage
+	var/hungermod = 1		// multiplier for hunger damage
+	var/toxicitymod = 1		// multiplier for toxicity damage
 	var/coldmod = 1		// multiplier for cold damage
 	var/heatmod = 1		// multiplier for heat damage
 	var/stunmod = 1		// multiplier for stun duration
@@ -942,88 +945,30 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 	//LIFE//
 	////////
 
-/datum/species/proc/handle_digestion(mob/living/carbon/human/H)
+// Mind
+/datum/species/proc/handle_will(mob/living/carbon/human/H)
+	if(H.willloss > 0 && H.stat != DEAD)
+		if(H.willloss < 0)
+			H.willloss++
 
-	//The fucking TRAIT_FAT mutation is the dumbest shit ever. It makes the code so difficult to work with
-	if(H.has_trait(TRAIT_FAT))//I share your pain, past coder.
-		if(H.overeatduration < 100)
-			to_chat(H, "<span class='notice'>You feel fit again!</span>")
-			H.remove_trait(TRAIT_FAT, OBESITY)
-			H.update_inv_w_uniform()
-			H.update_inv_wear_suit()
-	else
-		if(H.overeatduration >= 100)
-			to_chat(H, "<span class='danger'>You suddenly feel blubbery!</span>")
-			H.add_trait(TRAIT_FAT, OBESITY)
-			H.update_inv_w_uniform()
-			H.update_inv_wear_suit()
+		switch(H.willloss)
+			if(0 to 29)
+				H.clear_fullscreen("depression")
+			if(30 to 59)
+				H.overlay_fullscreen("depression", /obj/screen/fullscreen/depression, 1)
+				H.physiology.speed_mod = 1
+			if(60 to 89)
+				H.overlay_fullscreen("depression", /obj/screen/fullscreen/depression, 2)
+				H.physiology.speed_mod = 2
+			if(90 to 100)
+				H.overlay_fullscreen("depression", /obj/screen/fullscreen/depression, 3)
+				H.physiology.speed_mod = 3
 
-	// nutrition decrease and satiety
-	if (H.nutrition > 0 && H.stat != DEAD && !H.has_trait(TRAIT_NOHUNGER))
-		// THEY HUNGER
-		var/hunger_rate = HUNGER_FACTOR
-		GET_COMPONENT_FROM(mood, /datum/component/mood, H)
-		if(mood && mood.sanity > SANITY_DISTURBED)
-			hunger_rate *= max(0.5, 1 - 0.002 * mood.sanity) //0.85 to 0.75
-
-		if(H.satiety > 0)
-			H.satiety--
-		if(H.satiety < 0)
-			H.satiety++
-			if(prob(round(-H.satiety/40)))
-				H.Jitter(5)
-			hunger_rate = 3 * HUNGER_FACTOR
-		hunger_rate *= H.physiology.hunger_mod
-		H.nutrition = max(0, H.nutrition - hunger_rate)
-
-
-	if (H.nutrition > NUTRITION_LEVEL_FULL)
-		if(H.overeatduration < 600) //capped so people don't take forever to unfat
-			H.overeatduration++
-	else
-		if(H.overeatduration > 1)
-			H.overeatduration -= 2 //doubled the unfat rate
-
-	//metabolism change
-	if(H.nutrition > NUTRITION_LEVEL_FAT)
-		H.metabolism_efficiency = 1
-	else if(H.nutrition > NUTRITION_LEVEL_FED && H.satiety > 80)
-		if(H.metabolism_efficiency != 1.25 && !H.has_trait(TRAIT_NOHUNGER))
-			to_chat(H, "<span class='notice'>You feel vigorous.</span>")
-			H.metabolism_efficiency = 1.25
-	else if(H.nutrition < NUTRITION_LEVEL_STARVING + 50)
-		if(H.metabolism_efficiency != 0.8)
-			to_chat(H, "<span class='notice'>You feel sluggish.</span>")
-		H.metabolism_efficiency = 0.8
-	else
-		if(H.metabolism_efficiency == 1.25)
-			to_chat(H, "<span class='notice'>You no longer feel vigorous.</span>")
-		H.metabolism_efficiency = 1
-
-	switch(H.nutrition)
-		if(NUTRITION_LEVEL_FULL to INFINITY)
-			SEND_SIGNAL(H, COMSIG_ADD_MOOD_EVENT, "nutrition", /datum/mood_event/nutrition/fat)
-			H.throw_alert("nutrition", /obj/screen/alert/fat)
-		if(NUTRITION_LEVEL_WELL_FED to NUTRITION_LEVEL_FULL)
-			SEND_SIGNAL(H, COMSIG_ADD_MOOD_EVENT, "nutrition", /datum/mood_event/nutrition/wellfed)
-			H.clear_alert("nutrition")
-		if( NUTRITION_LEVEL_FED to NUTRITION_LEVEL_WELL_FED)
-			SEND_SIGNAL(H, COMSIG_ADD_MOOD_EVENT, "nutrition", /datum/mood_event/nutrition/fed)
-			H.clear_alert("nutrition")
-		if(NUTRITION_LEVEL_HUNGRY to NUTRITION_LEVEL_FED)
-			SEND_SIGNAL(H, COMSIG_CLEAR_MOOD_EVENT, "nutrition")
-			H.clear_alert("nutrition")
-		if(NUTRITION_LEVEL_STARVING to NUTRITION_LEVEL_HUNGRY)
-			SEND_SIGNAL(H, COMSIG_ADD_MOOD_EVENT, "nutrition", /datum/mood_event/nutrition/hungry)
-			H.throw_alert("nutrition", /obj/screen/alert/hungry)
-		if(0 to NUTRITION_LEVEL_STARVING)
-			SEND_SIGNAL(H, COMSIG_ADD_MOOD_EVENT, "nutrition", /datum/mood_event/nutrition/starving)
-			H.throw_alert("nutrition", /obj/screen/alert/starving)
-
+// Stomach
 /datum/species/proc/handle_hunger(mob/living/carbon/human/H)
 	if (H.hunger > 0 && H.stat != DEAD && !H.has_trait(TRAIT_NOHUNGER))
 		var/hunger_rate = HUNGER_FACTOR
-		if(H.hunger > 0)
+		if(H.hunger > H.maxHunger)
 			H.hunger--
 		if(H.hunger < 0)
 			H.hunger++
@@ -1035,6 +980,20 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 	else
 		if(H.overeatduration > 1)
 			H.overeatduration -= 2 //doubled the unfat rate
+
+// Heart
+/datum/species/proc/handle_toxicity(mob/living/carbon/human/H)
+	if(H.toxicitygain > 0 && H.stat != DEAD)
+		if(H.toxicitygain < 0)
+			H.toxicitygain++
+
+	//when toxicity hits certain thresholds, begin dealing damage.
+		if(H.toxicitygain > 10)
+			H.adjustBruteLoss(1)
+		else if(H.toxicitygain > 40)
+			H.adjustBruteLoss(2)
+		else if(H.toxicitygain > 99)
+			H.adjustBruteLoss(3)
 
 /datum/species/proc/update_health_hud(mob/living/carbon/human/H)
 	return 0
@@ -1476,8 +1435,12 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 					H.update_damage_overlays()
 			else
 				H.adjustFireLoss(damage * hit_percent * burnmod * H.physiology.burn_mod)
-		if(TOX)
-			H.adjustToxLoss(damage * hit_percent * H.physiology.tox_mod)
+		if(WILL)
+			H.adjustWillLoss(damage * hit_percent * willmod * H.physiology.will_mod)
+		if(HUNGER)
+			H.adjustHunger(damage * hit_percent * hungermod * H.physiology.hunger_mod)
+		if(TOXICITY)
+			H.adjustToxicityGain(damage * hit_percent * toxicitymod * H.physiology.tox_mod)
 		if(OXY)
 			H.adjustOxyLoss(damage * hit_percent * H.physiology.oxy_mod)
 		if(CLONE)

@@ -347,18 +347,6 @@
 	to_chat(src, "<span class='notice'>You are now [resting ? "resting" : "getting up"].</span>")
 	update_canmove()
 
-/mob/living/proc/surrender()
-	set name = "Surrender"
-	set category = "IC"
-
-	if(canmove)
-		if(!lying)
-			lay_down()
-
-		Knockdown(200)
-		visible_message("<span class='big bold'>[src] surrenders!</span>")
-		playsound(loc, 'sound/f13effects/surrender.ogg', 50, 1)
-
 //Recursive function to find everything a mob is holding. Really shitty proc tbh.
 /mob/living/get_contents()
 	var/list/ret = list()
@@ -407,13 +395,13 @@
 /mob/living/proc/updatehunger()
 	if(status_flags & GODMODE)
 		return
-	hunger = maxHunger - (getHunger()*10) // *10 For simplicity's sake - because Hunger starts at 1000
+	hunger = getHunger()
 	update_stat()
 
 /mob/living/proc/updatetoxicity()
 	if(status_flags & GODMODE)
 		return
-	toxicity = maxToxicity + getToxicityGain()
+	toxicity = getToxicityGain()
 	update_stat()
 
 //proc used to ressuscitate a mob

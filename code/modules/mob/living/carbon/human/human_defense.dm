@@ -656,7 +656,7 @@
 	if(health >= 0)
 		if(src == M)
 			visible_message("[src] examines [p_them()]self.", \
-				"<span class='notice'>You check yourself for injuries.</span>")
+				"<span class='magenta'>You observe your vessel...</span>")
 
 			var/list/missing = list(BODY_ZONE_HEAD, BODY_ZONE_CHEST, BODY_ZONE_L_ARM, BODY_ZONE_R_ARM, BODY_ZONE_L_LEG, BODY_ZONE_R_LEG)
 			for(var/X in bodyparts)
@@ -697,54 +697,64 @@
 						status += LB.light_burn_msg
 
 					if(status == "")
-						status = "OK"
+						status = "fine"
 				var/no_damage
-				if(status == "OK" || status == "no damage")
+				if(status == "fine" || status == "no damage")
 					no_damage = TRUE
-				to_chat(src, "\t <span class='[no_damage ? "notice" : "warning"]'>Your [LB.name] [has_trait(TRAIT_SELF_AWARE) ? "has" : "is"] [status].</span>")
+				to_chat(src, "\t <span class='[no_damage ? "magenta" : "red"]'>Your [LB.name] [has_trait(TRAIT_SELF_AWARE) ? "has" : "is"] [status].</span>")
 
 				for(var/obj/item/I in LB.embedded_objects)
-					to_chat(src, "\t <a href='?src=[REF(src)];embedded_object=[REF(I)];embedded_limb=[REF(LB)]' class='warning'>There is \a [I] embedded in your [LB.name]!</a>")
+					to_chat(src, "\t <a href='?src=[REF(src)];embedded_object=[REF(I)];embedded_limb=[REF(LB)]' class='red'>There is \a [I] embedded in your [LB.name]!</a>")
 
 			for(var/t in missing)
-				to_chat(src, "<span class='boldannounce'>Your [parse_zone(t)] is missing!</span>")
+				to_chat(src, "<span class='red'>Your [parse_zone(t)] is missing!</span>")
 
 			if(bleed_rate)
-				to_chat(src, "<span class='danger'>You are bleeding!</span>")
+				to_chat(src, "<span class='red'>You are bleeding!</span>")
 			if(getStaminaLoss())
 				if(getStaminaLoss() > 30)
-					to_chat(src, "<span class='info'>You're completely exhausted.</span>")
+					to_chat(src, "<span class='yellow'>You're completely exhausted.</span>")
 				else
-					to_chat(src, "<span class='info'>You feel fatigued.</span>")
-			if(has_trait(TRAIT_SELF_AWARE))
-				if(toxloss)
-					if(toxloss > 10)
-						to_chat(src, "<span class='danger'>You feel sick.</span>")
-					else if(toxloss > 20)
-						to_chat(src, "<span class='danger'>You feel nauseated.</span>")
-					else if(toxloss > 40)
-						to_chat(src, "<span class='danger'>You feel very unwell!</span>")
-				if(oxyloss)
-					if(oxyloss > 10)
-						to_chat(src, "<span class='danger'>You feel lightheaded.</span>")
-					else if(oxyloss > 20)
-						to_chat(src, "<span class='danger'>Your thinking is clouded and distant.</span>")
-					else if(oxyloss > 30)
-						to_chat(src, "<span class='danger'>You're choking!</span>")
+					to_chat(src, "<span class='yellow'>You feel fatigued.</span>")
+			// if(has_trait(TRAIT_SELF_AWARE)) reuse this for something
+				
+			switch(willloss)
+				if(0)
+					to_chat(src, "<span class='cyan'>Your mindflesh is stable.</span>")
+				if(1 to 15)
+					to_chat(src, "<span class='cyan'>Your mindflesh feels disturbed, yet manageable.</span>")
+				if(16 to 29)
+					to_chat(src, "<span class='cyan'>Your mindflesh hurts. Seek aid.</span>")
+				if(30 to 59)
+					to_chat(src, "<span class='cyan'>Your mindflesh burns. Seek aid.</span>")
+				if(60 to 89)
+					to_chat(src, "<span class='cyan'>Your mindflesh is searing. The bitterness is setting in.</span>")
+				if(90 to INFINITY)
+					to_chat(src, "<span class='red'>Needling fear of the unseen... Dull this mind pain!</span>")
 
-			switch(nutrition)
-				if(NUTRITION_LEVEL_FULL to INFINITY)
-					to_chat(src, "<span class='info'>You're completely stuffed!</span>")
-				if(NUTRITION_LEVEL_WELL_FED to NUTRITION_LEVEL_FULL)
-					to_chat(src, "<span class='info'>You're well fed!</span>")
-				if(NUTRITION_LEVEL_FED to NUTRITION_LEVEL_WELL_FED)
-					to_chat(src, "<span class='info'>You're not hungry.</span>")
-				if(NUTRITION_LEVEL_HUNGRY to NUTRITION_LEVEL_FED)
-					to_chat(src, "<span class='info'>You could use a bite to eat.</span>")
-				if(NUTRITION_LEVEL_STARVING to NUTRITION_LEVEL_HUNGRY)
-					to_chat(src, "<span class='info'>You feel quite hungry.</span>")
-				if(0 to NUTRITION_LEVEL_STARVING)
-					to_chat(src, "<span class='danger'>You're starving!</span>")
+			switch(hunger)
+				if(750 to INFINITY) // 75% or more
+					to_chat(src, "<span class='yellow'>Your stomach is sated for now.</span>")
+				if(500 to 749) // 50% or more
+					to_chat(src, "<span class='yellow'>Your stomach is roused. Eat something.</span>")
+				if(250 to 499) // 25% or more
+					to_chat(src, "<span class='yellow'>Your stomach screams for sustenance now.</span>")
+				if(0 to 249) // 0% or more
+					to_chat(src, "<span class='red'>Eat... Eat... Eat...</span>")
+
+			switch(toxicitygain)
+				if(0)
+					to_chat(src, "<span class='green'>Your veins are clear of toxins.</span>")
+				if(1 to 9)
+					to_chat(src, "<span class='green'>Something pains your veins.</span>")
+				if(10 to 39)
+					to_chat(src, "<span class='green'>Your veins slow, running pale.</span>")
+				if(40 to 49)
+					to_chat(src, "<span class='green'>Your veins hurt, sickness grows within.</span>")
+				if(50 to 99)
+					to_chat(src, "<span class='red'>Your veins burn! Cleanse your body!</span>")
+				if(100 to INFINITY)
+					to_chat(src, "<span class='red'>Your veins scream, burning with invasion!</span>")
 
 			if(roundstart_quirks.len)
 				to_chat(src, "<span class='notice'>You have these quirks: [get_trait_string()].</span>")

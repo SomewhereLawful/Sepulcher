@@ -233,8 +233,8 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 			dat += "<b>Gender:</b> <a href='?_src_=prefs;preference=gender'>[gender == MALE ? "Male" : "Female"]</a><BR>"
 			if(CONFIG_GET(flag/roundstart_traits))
-				dat += "<a href='?_src_=prefs;preference=trait;task=menu'>Configure Quirks</a><br></center>"
-				dat += "<center><b>Current Quirks:</b> [all_quirks.len ? all_quirks.Join(", ") : "None"]</center>"
+				dat += "<a href='?_src_=prefs;preference=trait;task=menu'>Configure Traits</a><br></center>"
+				dat += "<center><b>Current Traits:</b> [all_quirks.len ? all_quirks.Join(", ") : "None"]</center>"
 			
 			dat += "<td valign='center'>"
 
@@ -245,7 +245,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 			dat += "<h2>Body</h2>"
 			dat += "<a href='?_src_=prefs;preference=all;task=random'>Random Body</A><br>"
 
-			dat += "Note: This field is only used by the Bourgeoisie.<table width='100%'><tr><valign='top'>"
+			dat += "This is your Bourgeoisie form. It does not extend to other positions.<table width='100%'><tr><valign='top'>"
 
 			var/use_skintones = pref_species.use_skintones
 			if(use_skintones)
@@ -1084,14 +1084,14 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 		dat += "<center><a href='?_src_=prefs;preference=trait;task=close'>Done</a></center><br>"
 
 	else
-		dat += "<center><b>Choose quirk setup</b></center><br>"
-		dat += "<div align='center'>Left-click to add or remove quirks. You need negative quirks to have positive ones.<br>\
-		Quirks are applied at roundstart and cannot normally be removed.</div>"
+		dat += "<center><b>Choose your neurosis</b></center><br>"
+		dat += "<div align='center'>This realm warps the soul as much as the body.<br>\
+		Even torments may be of use in unexpected ways.</div>"
 		dat += "<center><a href='?_src_=prefs;preference=trait;task=close'>Done</a></center>"
 		dat += "<hr>"
-		dat += "<center><b>Current quirks:</b> [all_quirks.len ? all_quirks.Join(", ") : "None"]</center>"
-		dat += "<center>[positive_quirks.len] / [MAX_QUIRKS] max positive quirks<br>\
-		<b>Quirk balance remaining:</b> [GetQuirkBalance()]</center><br>"
+		dat += "<center><b>Current traits:</b> <br>\ [all_quirks.len ? all_quirks.Join(", ") : "None"]</center>"
+		dat += "<center>[positive_quirks.len] / [MAX_QUIRKS] maximum traits<br>\
+		<b>Outstanding points:</b> [GetQuirkBalance()]</center><br>"
 		for(var/V in SSquirks.quirks)
 			var/datum/quirk/T = SSquirks.quirks[V]
 			var/quirk_name = initial(T.name)
@@ -1131,7 +1131,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 		dat += "<br><center><a href='?_src_=prefs;preference=trait;task=reset'>Reset Traits</a></center>"
 
 	user << browse(null, "window=preferences")
-	var/datum/browser/popup = new(user, "mob_occupation", "<div align='center'>Quirk Preferences</div>", 900, 600) //no reason not to reuse the occupation window, as it's cleaner that way
+	var/datum/browser/popup = new(user, "mob_occupation", "<div align='center'>Virtues and Torments</div>", 900, 600) //no reason not to reuse the occupation window, as it's cleaner that way
 	popup.set_window_options("can_close=0")
 	popup.set_content(dat.Join())
 	popup.open(0)

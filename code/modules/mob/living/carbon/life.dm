@@ -29,6 +29,9 @@
 	//Updates the number of stored chemicals for powers
 	handle_changeling()
 
+	//ambient music and sounds - from STALKER 13
+	handle_sounds()
+
 	if(stat != DEAD)
 		return 1
 

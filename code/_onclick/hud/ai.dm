@@ -192,11 +192,6 @@
 	..()
 	var/obj/screen/using
 
-// Language menu
-	using = new /obj/screen/language_menu
-	using.screen_loc = ui_borg_language_menu
-	static_inventory += using
-
 //AI core
 	using = new /obj/screen/ai/aicore()
 	using.screen_loc = ui_ai_core

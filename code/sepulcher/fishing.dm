@@ -14,7 +14,7 @@
 		return
 	in_use = TRUE
 	if(istype(target, /obj/structure/fishing_spot))
-		if(!do_after(user, rand(10,30) SECONDS, target = target))
+		if(!do_after(user, rand(10,20) SECONDS, target = target))
 			in_use = FALSE
 			return
 		var/obj/structure/fishing_spot/W = target
@@ -34,10 +34,10 @@
 	anchored = TRUE
 	var/spot_life = null
 	var/list/fish_list = list(
-			/obj/item/food/fish = 25,
-			/obj/item/food/fish/sturgeon = 25,
-			/obj/item/food/fish/crab = 25,
-			/obj/item/food/fish/lamprey = 25)
+			/obj/item/consumable/food/fish = 25,
+			/obj/item/consumable/food/fish/sturgeon = 25,
+			/obj/item/consumable/food/fish/crab = 25,
+			/obj/item/consumable/food/fish/lamprey = 25)
 
 /obj/structure/fishing_spot/Initialize()
 	spot_life = rand(5,13)
@@ -45,7 +45,8 @@
 
 /obj/structure/fishing_spot/attackby(obj/item/O, mob/user, params) // Instead of burning the excess, just put it back
 	if(/obj/item/fishing_rod)
-		if(spot_life == 0)
+		if(spot_life <= 1)
+			to_chat(user, "<span class='warning'>The fishing spot exhausts, melting back into the water.</span>")
 			playsound(src, 'sound/effects/junk_rustling.ogg', 50, 0)
 			qdel(src)
 
@@ -55,6 +56,21 @@
 	icon = 'icons/obj/fishing.dmi'
 	icon_state = "fishing_spot" // this sprite gives me cancer
 	fish_list = list(
-		/obj/item/food/fish/crab = 50,
-		/obj/item/food/fish/axlotl = 40,
-		/obj/item/food/fish/burrower = 10)
+		/obj/item/consumable/food/fish/crab = 50,
+		/obj/item/consumable/food/fish/axlotl = 40,
+		/obj/item/consumable/food/fish/burrower = 10)
+
+/obj/effect/spawner/fishing_spot_random
+	name = "fishing spot spawner"
+	icon = 'icons/effects/landmarks_static.dmi'
+	icon_state = "x2"
+	var/fishing_spot_type = /obj/structure/fishing_spot
+
+/obj/effect/spawner/fishing_spot_random/Initialize(mapload)
+	. = ..()
+	if(prob(20))
+		new fishing_spot_type(get_turf(src))
+	return INITIALIZE_HINT_QDEL
+
+/obj/effect/spawner/fishing_spot_random/sewer
+	fishing_spot_type = /obj/structure/fishing_spot/sewer
