@@ -830,6 +830,10 @@
 "mr" = (
 /turf/closed/wall/beton,
 /area/interior/city)
+"mz" = (
+/obj/structure/simple_door/room,
+/turf/open/indestructible/ground/outside/road,
+/area/interior/city)
 "mH" = (
 /obj/structure/lattice/catwalk{
 	icon_state = "catwalk11-12"
@@ -2230,6 +2234,12 @@
 "HP" = (
 /obj/structure/decor/wood_scrap,
 /obj/effect/turf_decal/line,
+/turf/open/indestructible/ground/outside/road,
+/area/exterior/city)
+"If" = (
+/obj/effect/decal/cleanable/blood/tracks{
+	dir = 4
+	},
 /turf/open/indestructible/ground/outside/road,
 /area/exterior/city)
 "Il" = (
@@ -27289,10 +27299,10 @@ NV
 NV
 NV
 NV
-NV
-NV
-NV
-NV
+XX
+XX
+XX
+XX
 XX
 XX
 XX
@@ -27546,9 +27556,9 @@ Hd
 kb
 Fc
 NV
-td
-yi
-td
+NV
+NV
+NV
 NV
 NV
 XX
@@ -27766,7 +27776,7 @@ Ly
 Ly
 Ly
 Ly
-sj
+RX
 XX
 XX
 XX
@@ -28060,10 +28070,10 @@ kL
 kL
 By
 yi
+DH
 yi
 yi
-yi
-yi
+DH
 NV
 XX
 XX
@@ -28317,7 +28327,7 @@ Hd
 Hd
 fP
 yi
-DH
+yi
 yi
 yi
 vk
@@ -28831,10 +28841,10 @@ lH
 Hd
 aC
 yi
+td
 yi
 yi
-yi
-yi
+td
 NV
 XX
 XX
@@ -29088,7 +29098,7 @@ QT
 DI
 Sl
 yi
-DH
+yi
 yi
 yi
 yi
@@ -29859,8 +29869,8 @@ lH
 Hd
 aC
 yi
-cn
 yi
+cn
 yi
 yi
 NV
@@ -30630,8 +30640,8 @@ qx
 qx
 TF
 yi
-cn
 yi
+cn
 yi
 jI
 NV
@@ -37510,7 +37520,7 @@ mp
 Ly
 Ly
 Ly
-Ly
+sa
 Ly
 Ly
 Ly
@@ -37767,8 +37777,8 @@ sj
 sc
 sj
 sj
+Oe
 sa
-Ly
 sj
 sj
 sj
@@ -38025,7 +38035,7 @@ TQ
 TQ
 sj
 sj
-Oe
+Nz
 sj
 Yi
 Zr
@@ -38282,7 +38292,7 @@ TQ
 TQ
 TQ
 sj
-sj
+Ly
 sj
 lM
 Zr
@@ -38539,7 +38549,7 @@ TQ
 TQ
 TQ
 sj
-XX
+Ly
 sj
 Nu
 Zr
@@ -38796,7 +38806,7 @@ kJ
 TQ
 TQ
 sj
-XX
+Ly
 sj
 Zr
 Zr
@@ -39053,7 +39063,7 @@ sj
 sj
 sj
 sj
-XX
+Ly
 sj
 TQ
 sj
@@ -39306,11 +39316,11 @@ TQ
 sj
 XX
 XX
-XX
-XX
-XX
-XX
-XX
+Ly
+Ly
+Ly
+KP
+Ly
 sj
 TQ
 sj
@@ -39562,12 +39572,12 @@ TQ
 TQ
 sj
 XX
-XX
-XX
-XX
-XX
-XX
-XX
+sj
+sj
+Oe
+Ly
+Ly
+If
 sj
 TQ
 sc
@@ -39820,11 +39830,11 @@ sj
 sj
 XX
 XX
-XX
-XX
-XX
-XX
-XX
+sj
+sj
+mz
+sj
+If
 sj
 sj
 sj
@@ -40080,8 +40090,8 @@ XX
 XX
 XX
 XX
-XX
-XX
+sj
+If
 XX
 XX
 sj
@@ -40337,7 +40347,7 @@ XX
 XX
 XX
 XX
-XX
+sj
 XX
 XX
 XX
