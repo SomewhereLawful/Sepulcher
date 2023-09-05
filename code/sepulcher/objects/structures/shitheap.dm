@@ -10,11 +10,6 @@
 	will_points = 10
 	flavour_text = "Moist with solid kernels within. Tastes bitter."
 
-/obj/item/water_adder
-	name = "water adding item"
-	desc = "For adding water to shitheaps, alert if found outside of testing."
-	icon = 'icons/obj/food.dmi'
-
 // Rundown for readability (cause I suck at code)
 // Uses a system reminicent of (or horridly copy and pasted from) hydroponics on SS13
 // However, instead of tending a crop on a plot
@@ -30,27 +25,41 @@
 	desc = "The city's cultivation plots. Located upon hallowed ground."
 	icon = 'icons/obj/shitpiles.dmi'
 	icon_state = "sanctified"
-	obj_flags = INDESTRUCTIBLE
+	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF | FREEZE_PROOF
 	density = TRUE
 	anchored = TRUE
 	pixel_x = -16
 
-	/// Amount of water
-	var/waterlevel = 100
-	/// Maximum amount of water
-	var/maxwater = 100
 	/// How much fertilizer
 	var/fertilizerlevel = 10
 	/// Maximum amount of fertilizer
 	var/maxfertilizer = 10
 
 	var/lastcycle = 0
-	var/cycledelay = 200	//About 10 seconds / cycle
+	var/cycledelay = 20	//About 10 seconds / cycle
 
 	/// What grows there
 	var/product_list = SHITHEAP_PRODUCTS_NORMAL
+	var/self_sustaining
 
-	var/self_sustaining = FALSE
+/obj/structure/shitheap/Initialize()
+	. = ..()
+	START_PROCESSING(SSobj, src)
+
+/obj/structure/shitheap/Destroy()
+	STOP_PROCESSING(SSobj, src)
+	return ..()
+
+/obj/structure/shitheap/process()
+	if(world.time > (lastcycle + rand(cycledelay * 0.8, cycledelay * 2)))
+		lastcycle = world.time
+
+		// Nutrients deplete slowly as cultivars are produced
+		var/chosen_plant = pickweight(product_list)
+		if(prob(10))
+			if(!self_sustaining)
+				adjustFertilizer((-1))
+		new chosen_plant(get_turf(src))
 
 /obj/structure/shitheap/attackby(obj/item/I, mob/user, params)
 	if(/obj/item/consumable/food/dung)
@@ -58,33 +67,10 @@
 		playsound(src, 'sound/effects/blobattack.ogg', 50, 0)
 		qdel(I)
 		adjustFertilizer(1)
-	else if(/obj/item/water_adder)
-		to_chat(user, "You add some water to the heap.")
-		playsound(src, 'sound/effects/slosh.ogg', 50, 0)
-		qdel(I)
-		adjustWater(10)
-	return ..()
-
-/obj/structure/shitheap/process()
-	if(world.time > (lastcycle + cycledelay))
-		lastcycle = world.time
-		if(fertilizerlevel > 0 && waterlevel > 0)
-			var/randPlant = pickweight(product_list)
-			new randPlant(src)
-
-		// Nutrients deplete slowly
-		if(prob(50))
-			if(!self_sustaining)
-				adjustFertilizer(-1)
-				adjustWater(-rand(1,6))
 	return ..()
 
 /obj/structure/shitheap/proc/adjustFertilizer(adjustamt)
 	fertilizerlevel = CLAMP((fertilizerlevel + (adjustamt)), 0, maxfertilizer)
-	return adjustamt
-
-/obj/structure/shitheap/proc/adjustWater(adjustamt)
-	waterlevel = CLAMP((waterlevel + (adjustamt)), 0, maxwater)
 	return adjustamt
 
 /obj/structure/shitheap/examine(user)
@@ -98,16 +84,8 @@
 			to_chat(user, "<span class='magenta'>The soil is yearning for new dung.</span>")
 		else if(fertilizerlevel == 0)
 			to_chat(user, "<span class='magenta'>The pile is starved. It needs more shit.</span>")
-		if(waterlevel > maxwater*0.75)
-			to_chat(user, "<span class='magenta'>It is rich in dampness.</span>")
-		else if(waterlevel > maxwater*0.5)
-			to_chat(user, "<span class='magenta'>The nightsoil is beginning to dry.</span>")
-		else if(waterlevel > maxwater*0.25)
-			to_chat(user, "<span class='magenta'>The heap is only ever so moisturized.</span>")
-		else if(waterlevel == 0)
-			to_chat(user, "<span class='magenta'>The shit is dry. Arid. Screaming for water.</span>")
 	else
-		to_chat(user, "<span class='magenta'>It does not require water or fertilizer.</span>")
+		to_chat(user, "<span class='magenta'>It does not require fertilizer.</span>")
 
 
 // Spawns when shitheaps have sufficient 
@@ -117,15 +95,16 @@
 	icon = 'icons/obj/grown_plants.dmi'
 	icon_state = "done_goofed"
 	anchored = TRUE
+	layer = 4
 
 /obj/structure/farm_plant/Initialize()
 	. = ..()
-	pixel_x = rand(-16,16)
+	pixel_x = rand(-24,16)
 	pixel_y = rand(2,17)
 
 
 /obj/structure/shitheap/sewer
 	name = "repugnant cessheap"
 	desc = "Heap of shit, not sanctified. It grows dangerous product."
-	product_list = SHITHEAP_PRODUCTS_SEWER
 	self_sustaining = TRUE
+	product_list = SHITHEAP_PRODUCTS_SEWER

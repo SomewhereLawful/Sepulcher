@@ -59,5 +59,5 @@
 
 /obj/structure/foundry/mould/proc/ingot_cooling_end()
 	cooling = FALSE
-	cooling_time = null
+	cooling_time = 0
 	icon_state = "mould_filled_cool"
