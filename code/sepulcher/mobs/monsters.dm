@@ -32,9 +32,9 @@
 	attack_sound = 'sound/weapons/punch1.ogg'
 	ventcrawler = VENTCRAWLER_ALWAYS
 
-/mob/living/simple_animal/hostile/cambion
-	name = "Cambion"
-	desc = "Idle hands incarnate. Now only seeks hedonistic pleasure."
+/mob/living/simple_animal/hostile/mongrel
+	name = "Mongrel"
+	desc = "Rotted carrion-hunters, bred by tribals."
 	icon_state = "tomato"
 	icon_living = "tomato"
 	icon_dead = "tomato_dead"

@@ -10,13 +10,9 @@
 	will_points = 10
 	flavour_text = "Moist with solid kernels within. Tastes bitter."
 
-// Rundown for readability (cause I suck at code)
-// Uses a system reminicent of (or horridly copy and pasted from) hydroponics on SS13
-// However, instead of tending a crop on a plot
-// A single plot grows from a picklist so long as there's fertilizer(poop)
-
+// A single plot grows from a picklist so long as there's fertilizer
 // Picklist for each type of shitheap - NORMAL is for church yard, CONSTRUCTED is for illegal harvest, SEWER is sewer (go figure)
-#define SHITHEAP_PRODUCTS_NORMAL list(/obj/structure/farm_plant = 100)
+#define SHITHEAP_PRODUCTS_NORMAL list(/obj/structure/farm_plant/common_mushroom = 30, /obj/structure/farm_plant/crawler_cap = 20, /obj/structure/farm_plant/steelhead = 10, /obj/structure/farm_plant/thinhelmet = 20, /obj/structure/farm_plant/sinew = 20)
 #define SHITHEAP_PRODUCTS_CONSTRUCTED list(/obj/structure/flora/grass/wasteland = 10, /obj/structure/flora/wasteplant/wild_broc = 7, /obj/structure/flora/wasteplant/wild_feracactus = 5, /obj/structure/flora/wasteplant/wild_mutfruit = 5, /obj/structure/flora/wasteplant/wild_xander = 5, /obj/structure/flora/wasteplant/wild_agave = 5, /obj/structure/flora/tree/joshua = 3, /obj/structure/flora/tree/cactus = 2, /obj/structure/flora/tree/wasteland = 2)
 #define SHITHEAP_PRODUCTS_SEWER list(/obj/structure/farm_plant = 100)
 
@@ -31,20 +27,20 @@
 	pixel_x = -16
 
 	/// How much fertilizer
-	var/fertilizerlevel = 10
-	/// Maximum amount of fertilizer
+	var/fertilizerlevel = 0
 	var/maxfertilizer = 10
 
 	var/lastcycle = 0
-	var/cycledelay = 20	//About 10 seconds / cycle
+	// in deciseconds
+	var/cycledelay = 300
 
-	/// What grows there
 	var/product_list = SHITHEAP_PRODUCTS_NORMAL
 	var/self_sustaining
 
 /obj/structure/shitheap/Initialize()
 	. = ..()
 	START_PROCESSING(SSobj, src)
+	fertilizerlevel = rand(0,4)
 
 /obj/structure/shitheap/Destroy()
 	STOP_PROCESSING(SSobj, src)
@@ -59,7 +55,7 @@
 		if(prob(10))
 			if(!self_sustaining)
 				adjustFertilizer((-1))
-		new chosen_plant(get_turf(src))
+			new chosen_plant(get_turf(src))
 
 /obj/structure/shitheap/attackby(obj/item/I, mob/user, params)
 	if(/obj/item/consumable/food/dung)
@@ -86,22 +82,6 @@
 			to_chat(user, "<span class='magenta'>The pile is starved. It needs more shit.</span>")
 	else
 		to_chat(user, "<span class='magenta'>It does not require fertilizer.</span>")
-
-
-// Spawns when shitheaps have sufficient 
-/obj/structure/farm_plant
-	name = "busted plant"
-	desc = "Someone fucked up the generation."
-	icon = 'icons/obj/grown_plants.dmi'
-	icon_state = "done_goofed"
-	anchored = TRUE
-	layer = 4
-
-/obj/structure/farm_plant/Initialize()
-	. = ..()
-	pixel_x = rand(-24,16)
-	pixel_y = rand(2,17)
-
 
 /obj/structure/shitheap/sewer
 	name = "repugnant cessheap"

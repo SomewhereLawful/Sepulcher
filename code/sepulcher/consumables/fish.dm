@@ -4,8 +4,8 @@
 	icon_state = "fish"
 	feed_points = 10
 	toxicity_points = 10
-	flavour_text = "Bones and scales all. The offal within is sour."
-
+	flavour_text = "The offal within is sour."
+	var/gutted_flavour_text = "It tastes as fish should."
 	var/gutted = FALSE
 	var/gutting_text = "You gut the fish."
 
@@ -16,6 +16,7 @@
 		to_chat(H, "[gutting_text]")
 		toxicity_points = toxic_modification
 		gutted = TRUE
+		flavour_text = gutted_flavour_text
 
 /obj/item/consumable/food/fish/examine(mob/user)
 	..()
