@@ -62,7 +62,7 @@
 "aO" = (
 /obj/effect/step_trigger/teleporter{
 	teleport_x = 111;
-	teleport_y = 151;
+	teleport_y = 140;
 	teleport_z = 2
 	},
 /turf/open/indestructible/ground/floor/stairs{
@@ -72,7 +72,7 @@
 "aT" = (
 /obj/effect/step_trigger/teleporter{
 	teleport_x = 163;
-	teleport_y = 128;
+	teleport_y = 117;
 	teleport_z = 3
 	},
 /turf/open/indestructible/ground/floor/wood_floor,
@@ -738,6 +738,10 @@
 	},
 /turf/open/indestructible/ground/outside/road,
 /area/exterior/city/docks)
+"lc" = (
+/obj/item/flashlight/lantern,
+/turf/open/indestructible/ground/floor/wood_floor,
+/area/interior/apartments)
 "lk" = (
 /obj/effect/turf_decal/roadline/noshadow{
 	dir = 4
@@ -779,7 +783,7 @@
 /obj/effect/step_trigger/teleporter{
 	dir = 1;
 	teleport_x = 162;
-	teleport_y = 129;
+	teleport_y = 118;
 	teleport_z = 2
 	},
 /turf/open/indestructible/ground/floor/wood_floor,
@@ -957,7 +961,7 @@
 "pm" = (
 /obj/effect/step_trigger/teleporter{
 	teleport_x = 162;
-	teleport_y = 128;
+	teleport_y = 117;
 	teleport_z = 3
 	},
 /turf/open/indestructible/ground/floor/wood_floor,
@@ -2246,7 +2250,7 @@
 /obj/effect/step_trigger/teleporter{
 	dir = 1;
 	teleport_x = 163;
-	teleport_y = 129;
+	teleport_y = 118;
 	teleport_z = 2
 	},
 /turf/open/indestructible/ground/floor/wood_floor,
@@ -2700,6 +2704,14 @@
 	icon_state = "floorrustysolid"
 	},
 /area/interior/spawning/bioslave)
+"Pk" = (
+/obj/structure/table/stalker,
+/obj/structure/decor/carpet{
+	icon_state = "oldcover";
+	pixel_y = 32
+	},
+/turf/open/indestructible/ground/floor/wood_floor,
+/area/interior/city)
 "Pq" = (
 /turf/open/indestructible/ground/outside/sidewalk/tile,
 /area/exterior/city)
@@ -2711,7 +2723,7 @@
 /obj/effect/step_trigger/teleporter{
 	dir = 1;
 	teleport_x = 112;
-	teleport_y = 152;
+	teleport_y = 141;
 	teleport_z = 3
 	},
 /turf/open/indestructible/ground/floor/stairs/down{
@@ -3112,7 +3124,7 @@
 /obj/effect/step_trigger/teleporter{
 	dir = 1;
 	teleport_x = 111;
-	teleport_y = 152;
+	teleport_y = 141;
 	teleport_z = 3
 	},
 /turf/open/indestructible/ground/floor/stairs/down{
@@ -3142,7 +3154,7 @@
 "Yq" = (
 /obj/effect/step_trigger/teleporter{
 	teleport_x = 112;
-	teleport_y = 151;
+	teleport_y = 140;
 	teleport_z = 2
 	},
 /turf/open/indestructible/ground/floor/stairs{
@@ -26235,9 +26247,9 @@ sj
 XX
 XX
 XX
-XX
-XX
-XX
+Ly
+Ly
+Ly
 XX
 XX
 XX
@@ -38294,7 +38306,7 @@ TQ
 sj
 Ly
 sj
-lM
+Pk
 Zr
 Zr
 Zr
@@ -44238,7 +44250,7 @@ Vy
 Vy
 Vy
 LK
-WM
+lc
 Fj
 WM
 WM
@@ -47086,17 +47098,17 @@ XX
 XX
 XX
 XX
+bN
+VX
+ZF
+VX
+bN
 XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
+bN
+VX
+ZF
+VX
+bN
 XX
 XX
 XX
@@ -47343,17 +47355,17 @@ XX
 XX
 XX
 XX
+bN
+VX
+ZF
+VX
+bN
 XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
+bN
+VX
+ZF
+VX
+bN
 XX
 XX
 XX
