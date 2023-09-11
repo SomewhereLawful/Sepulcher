@@ -2,7 +2,6 @@
 // Spawns when shitheaps have sufficient fertilizer
 /obj/structure/farm_plant
 	name = "busted plant"
-	desc = "Someone fucked up the generation."
 	icon = 'icons/obj/grown_plants.dmi'
 	icon_state = "done_goofed"
 	anchored = TRUE

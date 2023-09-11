@@ -2796,6 +2796,7 @@
 #include "code\sepulcher\objects\effects\floor_effects.dm"
 #include "code\sepulcher\objects\effects\general_effects.dm"
 #include "code\sepulcher\objects\effects\spawners.dm"
+#include "code\sepulcher\objects\effects\teleporters.dm"
 #include "code\sepulcher\objects\items\items.dm"
 #include "code\sepulcher\objects\items\parasite.dm"
 #include "code\sepulcher\objects\items\weaponry\biological.dm"

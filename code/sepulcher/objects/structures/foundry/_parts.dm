@@ -1,6 +1,7 @@
 // Crafting materials
 /obj/item/parts
 	icon = 'icons/obj/foundry.dmi'
+	foundry_metal_amt = 1
 
 /obj/item/parts/ingot
 	name = "steel ingot"

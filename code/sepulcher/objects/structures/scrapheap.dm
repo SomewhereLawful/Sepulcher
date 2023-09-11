@@ -9,6 +9,7 @@
 	feed_points = 2
 	health_points = 200 // eating sharp metal wrecks your organs
 	flavour_text = "You shove the metal down your maw. Slicing, stabbing, poking - you feel your throat turn to fleshy ribbons."
+	foundry_metal_amt = 1
 
 /obj/item/consumable/food/scrap/New()
 	..()

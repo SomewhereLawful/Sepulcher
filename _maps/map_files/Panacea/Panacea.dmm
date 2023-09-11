@@ -478,6 +478,12 @@
 	icon_state = "floorrusty"
 	},
 /area/interior/clinic)
+"hz" = (
+/obj/effect/turf_decal/line{
+	dir = 1
+	},
+/turf/open/floor/carpet,
+/area/interior/spawning/kommandant)
 "hB" = (
 /obj/effect/turf_decal/roadline/noshadow/corner{
 	dir = 4
@@ -2557,6 +2563,12 @@
 /obj/structure/decor/spawner_part/prole/right,
 /turf/open/indestructible/ground/floor/lattice,
 /area/interior/spawning/prole)
+"MY" = (
+/obj/effect/turf_decal/line{
+	dir = 1
+	},
+/turf/open/indestructible/ground/floor/wood_floor,
+/area/interior/spawning/kommandant)
 "Na" = (
 /obj/effect/turf_decal/line{
 	dir = 4
@@ -31375,7 +31387,7 @@ jj
 sj
 sj
 XX
-sj
+XX
 sj
 sa
 Ly
@@ -31632,8 +31644,8 @@ TQ
 TQ
 sj
 XX
+XX
 sj
-sa
 Ly
 by
 sj
@@ -31889,12 +31901,12 @@ bn
 TQ
 sj
 XX
-sj
-Oe
+XX
+px
 Ly
 Ly
-sa
 sj
+XX
 XX
 sj
 Py
@@ -32146,11 +32158,11 @@ TQ
 TQ
 sj
 XX
+XX
 sj
-Oe
 Ly
 Ly
-sa
+sj
 sj
 XX
 sj
@@ -32403,11 +32415,11 @@ TQ
 TQ
 sj
 XX
-sj
+XX
 sj
 by
 Ly
-Ly
+sa
 sj
 XX
 XX
@@ -41397,7 +41409,7 @@ sm
 sm
 Hq
 sm
-qs
+MY
 sT
 sT
 sT
@@ -41655,7 +41667,7 @@ sm
 zJ
 sm
 Bf
-sS
+hz
 sS
 sS
 sS
@@ -41912,7 +41924,7 @@ vZ
 Hq
 sm
 dB
-sS
+hz
 sS
 sS
 sS
@@ -42169,7 +42181,7 @@ sm
 QV
 Tc
 Bf
-sS
+hz
 sS
 sS
 sS
@@ -42425,7 +42437,7 @@ sm
 sm
 Hq
 sm
-qs
+MY
 Od
 Od
 Od
@@ -47612,17 +47624,17 @@ XX
 XX
 XX
 XX
+bN
+VX
+ZF
+VX
+bN
 XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
+bN
+VX
+ZF
+VX
+bN
 XX
 XX
 XX

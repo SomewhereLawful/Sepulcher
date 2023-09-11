@@ -1,4 +1,5 @@
 // Fine, I'll do it myself
+// /obj/structure/simple_door redo
 /obj/structure/door
 	name = "door"
 	icon = 'icons/obj/doors/wastelanddoors.dmi'
