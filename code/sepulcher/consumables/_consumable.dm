@@ -15,6 +15,8 @@
 	var/will_points = 0
 	/// How much toxicity is given
 	var/toxicity_points = 0
+	/// How much drunkness is given
+	var/drunk_points = 0
 	/// Sound when the food is eaten
 	var/eat_sound = 'sound/items/food_crunchy_1.ogg'
 	/// Use sparingly. Determines what item is generated upon total consumption of the food.
@@ -88,6 +90,9 @@
 		M.adjustBruteLoss(health_points)		
 		M.adjustWillLoss(will_points)
 		M.adjustToxicityGain(toxicity_points)
+
+		var/mob/living/carbon/C = M
+		C.drunkenness = max((C.drunkenness + drunk_points),0) 
 
 		SEND_SIGNAL(src, COMSIG_FOOD_EATEN, M, user)
 		On_Consume(M)

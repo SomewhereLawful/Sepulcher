@@ -187,12 +187,12 @@
 /turf/open/indestructible/ground/outside/road,
 /area/exterior/city)
 "cG" = (
-/obj/effect/turf_decal/line{
-	dir = 1
+/obj/structure/simple_door/room,
+/turf/open/floor/f13{
+	tag = "icon-floorrusty";
+	icon_state = "floorrusty"
 	},
-/obj/structure/chair/stool/bar,
-/turf/open/indestructible/ground/floor/wood_floor/horizontal,
-/area/interior/city)
+/area/interior/sewer)
 "cQ" = (
 /obj/structure/decor/tire{
 	icon_state = "shina5";
@@ -701,6 +701,10 @@
 	icon_state = "floorrusty"
 	},
 /area/interior/clinic)
+"kA" = (
+/obj/structure/chair/wood/normal,
+/turf/open/indestructible/ground/floor/wood_floor/horizontal,
+/area/interior/city)
 "kD" = (
 /obj/effect/particle_effect/smoke/reality_edge,
 /obj/effect/particle_effect/smoke/reality_edge,
@@ -732,10 +736,9 @@
 /turf/open/indestructible/ground/outside/road,
 /area/exterior/city)
 "kY" = (
-/obj/machinery/light/small{
-	dir = 8
+/obj/structure/chair/wood/normal{
+	dir = 4
 	},
-/obj/structure/chair/stool/bar,
 /turf/open/indestructible/ground/floor/wood_floor/horizontal,
 /area/interior/city)
 "kZ" = (
@@ -1105,6 +1108,12 @@
 	icon_state = "floorrusty"
 	},
 /area/interior/sewer)
+"rv" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/open/indestructible/ground/floor/wood_floor/horizontal,
+/area/interior/city)
 "rI" = (
 /obj/effect/particle_effect/smoke/reality_edge,
 /obj/structure/flora/tree/tall,
@@ -1158,6 +1167,13 @@
 "sm" = (
 /turf/open/indestructible/ground/floor/lattice,
 /area/interior/spawning/kommandant)
+"sF" = (
+/obj/structure/decor/carpet{
+	icon_state = "oldcovertattered";
+	pixel_x = -16
+	},
+/turf/open/indestructible/ground/floor/wood_floor/horizontal,
+/area/interior/city)
 "sI" = (
 /turf/open/indestructible/ground/outside/road,
 /area/exterior/wastes)
@@ -1389,6 +1405,10 @@
 /obj/structure/foundry/mould,
 /turf/open/chasm/foundry,
 /area/interior/foundry)
+"vp" = (
+/obj/structure/decor/cig_trash,
+/turf/open/indestructible/ground/floor/wood_floor/horizontal,
+/area/interior/city)
 "vq" = (
 /obj/structure/campfire/drum,
 /turf/open/floor/f13{
@@ -1906,10 +1926,7 @@
 /turf/open/indestructible/ground/floor/wood_floor,
 /area/interior/spawning/kommandant)
 "Dm" = (
-/obj/effect/turf_decal/line{
-	dir = 1
-	},
-/obj/structure/table/bar,
+/obj/structure/simple_door/room,
 /turf/open/indestructible/ground/floor/wood_floor/horizontal,
 /area/interior/city)
 "Ds" = (
@@ -2319,6 +2336,10 @@
 	icon_state = "floorrusty"
 	},
 /area/interior/sewer)
+"Jp" = (
+/obj/structure/rack,
+/turf/open/indestructible/ground/floor/lattice,
+/area/interior/city)
 "Jt" = (
 /obj/structure/decor/wood_scrap,
 /obj/structure/decor/dump_bin{
@@ -2533,6 +2554,15 @@
 /obj/structure/fluff/rails,
 /turf/open/indestructible/ground/outside/desert,
 /area/exterior/city)
+"MM" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
+/obj/structure/chair/wood/normal{
+	dir = 1
+	},
+/turf/open/indestructible/ground/floor/wood_floor/horizontal,
+/area/interior/city)
 "MN" = (
 /obj/structure/rack,
 /turf/open/floor/f13{
@@ -2615,6 +2645,15 @@
 "NV" = (
 /turf/closed/wall/brickdark,
 /area/interior/foundry)
+"Oa" = (
+/obj/effect/turf_decal/line{
+	dir = 1
+	},
+/obj/structure/chair/wood/normal{
+	dir = 8
+	},
+/turf/open/indestructible/ground/floor/wood_floor/horizontal,
+/area/interior/city)
 "Od" = (
 /obj/structure/chair/pew/left{
 	dir = 1
@@ -2731,6 +2770,12 @@
 /obj/structure/decor/water_tank,
 /turf/open/indestructible/ground/outside/road,
 /area/exterior/city)
+"Px" = (
+/obj/structure/decor/apc{
+	pixel_y = 29
+	},
+/turf/open/indestructible/ground/floor/wood_floor,
+/area/interior/city)
 "Py" = (
 /obj/effect/step_trigger/teleporter{
 	dir = 1;
@@ -33453,7 +33498,7 @@ sj
 XX
 XX
 sj
-pC
+TO
 pC
 pC
 TO
@@ -33710,7 +33755,7 @@ sj
 XX
 XX
 sj
-TO
+sO
 pC
 pC
 TO
@@ -33967,7 +34012,7 @@ sj
 XX
 XX
 sj
-sO
+WP
 pC
 pC
 TO
@@ -34224,7 +34269,7 @@ sj
 XX
 XX
 sj
-WP
+yD
 pC
 pC
 sj
@@ -34481,7 +34526,7 @@ sj
 XX
 XX
 sj
-pC
+yD
 pC
 pC
 JJ
@@ -34738,9 +34783,9 @@ sj
 XX
 XX
 sj
-yD
-yD
-pC
+sj
+sj
+sj
 sj
 sj
 sj
@@ -34994,11 +35039,11 @@ Ly
 sj
 XX
 XX
+XX
+XX
 sj
-sj
-sj
-sj
-sj
+yN
+yN
 FA
 xg
 FA
@@ -35254,8 +35299,8 @@ XX
 XX
 XX
 sj
-yN
-yN
+FA
+FA
 FA
 FA
 FA
@@ -95638,15 +95683,15 @@ XX
 XX
 XX
 XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
+sj
+sj
+sj
+sj
+sj
+sj
+sj
+sj
+sj
 XX
 XX
 XX
@@ -95895,16 +95940,16 @@ XX
 XX
 XX
 XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
+sj
+kY
+rv
+kA
+Cq
+sj
+qQ
+kY
+sj
+sj
 XX
 XX
 XX
@@ -96152,16 +96197,16 @@ XX
 XX
 XX
 XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
+sj
+Cq
+qQ
+qQ
+md
+sj
+kA
+Cq
+MM
+sj
 XX
 XX
 XX
@@ -96409,16 +96454,16 @@ XX
 XX
 XX
 XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
+sj
+md
+qQ
+qQ
+qQ
+Dm
+sF
+md
+vp
+sj
 XX
 XX
 XX
@@ -96666,16 +96711,16 @@ XX
 XX
 XX
 XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
+sj
+sj
+qQ
+qQ
+qQ
+sj
+qQ
+qQ
+qQ
+sj
 XX
 XX
 XX
@@ -96925,14 +96970,14 @@ XX
 XX
 XX
 sj
+kY
+qQ
 sj
 sj
 sj
 sj
 sj
 sj
-sj
-XX
 XX
 XX
 XX
@@ -97182,10 +97227,10 @@ XX
 sj
 sj
 sj
-cG
 Cq
-kY
 qQ
+qQ
+rv
 qQ
 aO
 sj
@@ -97439,7 +97484,7 @@ sj
 sj
 Zr
 Zr
-de
+Oa
 qQ
 qQ
 qQ
@@ -97698,9 +97743,9 @@ Zr
 Zr
 de
 qQ
-ZV
-Cq
-ZV
+qQ
+qQ
+qQ
 sj
 sj
 XX
@@ -97955,9 +98000,9 @@ Zr
 Zr
 de
 qQ
-qQ
-qQ
-qQ
+ZV
+ZV
+ZV
 sj
 XX
 XX
@@ -98465,12 +98510,12 @@ XX
 XX
 sj
 sj
-Zr
+Px
 Zr
 EJ
 qQ
 wb
-qQ
+md
 qQ
 qQ
 sj
@@ -98724,10 +98769,10 @@ XX
 sj
 sj
 sj
-Dm
+Cq
 EY
 qQ
-md
+qQ
 qQ
 qQ
 sj
@@ -99239,8 +99284,8 @@ XX
 XX
 XX
 sj
-ds
-ds
+Jp
+Jp
 sj
 GD
 sj
@@ -100010,9 +100055,9 @@ XX
 XX
 XX
 sj
-sj
-sj
-sj
+Jp
+Jp
+Jp
 sj
 sj
 XX
@@ -100266,11 +100311,11 @@ XX
 XX
 XX
 XX
-XX
-XX
-XX
-XX
-XX
+sj
+sj
+sj
+sj
+sj
 XX
 XX
 XX
@@ -159902,14 +159947,14 @@ NF
 Lw
 Lw
 Lw
-Lw
+tq
 lY
 XX
 XX
 lY
 Lw
 Lw
-Lw
+tq
 lY
 vU
 vU
@@ -161185,12 +161230,12 @@ NF
 Lw
 lY
 XX
-XX
-XX
-XX
-XX
-XX
-XX
+lY
+lY
+lY
+lY
+lY
+lY
 XX
 lY
 vU
@@ -161441,12 +161486,12 @@ Lw
 NF
 Lw
 lY
-XX
 lY
 lY
-lY
-lY
-lY
+Lw
+Lw
+Lw
+Lw
 lY
 XX
 lY
@@ -161678,7 +161723,7 @@ lY
 Lw
 Lw
 NF
-NF
+gT
 Lw
 lY
 XX
@@ -161698,8 +161743,8 @@ Lw
 NF
 Lw
 lY
-lY
-lY
+Lw
+Lw
 Lw
 Lw
 Lw
@@ -161954,7 +161999,7 @@ lY
 Lw
 NF
 Lw
-Lw
+cG
 Lw
 Lw
 Lw
@@ -162191,7 +162236,7 @@ XX
 XX
 lY
 Lw
-NF
+gT
 NF
 Lw
 lY
@@ -162729,7 +162774,7 @@ Lw
 Lw
 lY
 lY
-Lw
+cG
 lY
 lY
 lY
@@ -162982,7 +163027,7 @@ lY
 Lw
 NF
 NF
-NF
+gT
 Lw
 Lw
 Lw
@@ -163244,7 +163289,7 @@ NF
 NF
 NF
 NF
-NF
+gT
 NF
 NF
 Lw
@@ -163489,8 +163534,8 @@ Lw
 Lw
 NF
 NF
-NF
-NF
+gT
+gT
 NF
 MD
 dd
@@ -163741,7 +163786,7 @@ MD
 NF
 NF
 NF
-NF
+gT
 NF
 NF
 NF
@@ -163996,19 +164041,19 @@ NF
 NF
 MD
 NF
+gT
 NF
 NF
 NF
 NF
-NF
-NF
+gT
 Lw
 Lw
 Lw
 Lw
 Lw
 Lw
-NF
+gT
 NF
 Lw
 lY
@@ -164522,6 +164567,7 @@ XX
 XX
 lY
 Lw
+gT
 NF
 NF
 NF
@@ -164530,8 +164576,7 @@ NF
 NF
 NF
 NF
-NF
-NF
+gT
 Lw
 lY
 lY
@@ -166045,10 +166090,10 @@ NF
 NF
 NF
 fJ
+gT
 NF
 NF
-NF
-Lw
+tq
 lY
 XX
 XX
