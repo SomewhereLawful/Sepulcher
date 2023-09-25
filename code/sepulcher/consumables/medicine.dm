@@ -36,6 +36,6 @@
 	name = "sterile gauze"
 	desc = "Staunches bleeding."
 	icon_state = "bruise_salve"
-	health_points = -10
+	bleed_suppression = 300 // Slightly arbitrary, should staunch all bleeds
 	uses_verb = "applies"
 	use_verb = "apply"

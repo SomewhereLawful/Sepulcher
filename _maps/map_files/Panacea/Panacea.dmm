@@ -3051,13 +3051,6 @@
 	},
 /turf/open/indestructible/ground/outside/road,
 /area/exterior/city)
-"Ve" = (
-/obj/item/chair/stool/wood,
-/turf/open/floor/f13{
-	tag = "icon-bluedirtychess2";
-	icon_state = "bluedirtychess2"
-	},
-/area/interior/city)
 "Vg" = (
 /obj/effect/turf_decal/line{
 	dir = 4
@@ -3236,13 +3229,10 @@
 /turf/open/indestructible/ground/floor/lattice,
 /area/interior/spawning/prole)
 "YH" = (
-/obj/structure/table,
-/obj/effect/turf_decal/line{
-	dir = 8
-	},
+/obj/item/chair/stool/wood,
 /turf/open/floor/f13{
-	tag = "icon-bluedirtychess2";
-	icon_state = "bluedirtychess2"
+	tag = "icon-floorrusty";
+	icon_state = "floorrusty"
 	},
 /area/interior/city)
 "YI" = (
@@ -33472,7 +33462,7 @@ lz
 sj
 GJ
 TQ
-TQ
+YH
 TQ
 GJ
 sj
@@ -33984,8 +33974,8 @@ lz
 lz
 lz
 sj
-YH
-YH
+hh
+hh
 Fq
 hh
 hh
@@ -34242,10 +34232,10 @@ lz
 Kc
 sj
 pC
-Ve
-pC
 pC
 TO
+jX
+pC
 Qz
 sa
 Pq
@@ -34500,8 +34490,8 @@ lz
 JJ
 pC
 pC
-pC
-jX
+TO
+TO
 TO
 Qz
 Ly

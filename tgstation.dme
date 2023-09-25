@@ -2811,6 +2811,7 @@
 #include "code\sepulcher\objects\structures\cultivation\shitheap.dm"
 #include "code\sepulcher\objects\structures\decor\objects.dm"
 #include "code\sepulcher\objects\structures\decor\signs.dm"
+#include "code\sepulcher\objects\structures\decor\statues.dm"
 #include "code\sepulcher\objects\structures\foundry\_foundry.dm"
 #include "code\sepulcher\objects\structures\foundry\_parts.dm"
 #include "code\sepulcher\objects\structures\foundry\anvil.dm"

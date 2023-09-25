@@ -21,6 +21,5 @@
 	var/inside_lock_dir = SOUTH
 
 	var/door_type = "house"
-	var/manual_opened = 0
-	var/hard_open = 1
+	var/open = 1
 	var/moving = 0
