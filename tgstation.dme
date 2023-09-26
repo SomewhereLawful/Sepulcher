@@ -2808,6 +2808,7 @@
 #include "code\sepulcher\objects\structures\lore_altar.dm"
 #include "code\sepulcher\objects\structures\scrapheap.dm"
 #include "code\sepulcher\objects\structures\cultivation\farmables.dm"
+#include "code\sepulcher\objects\structures\cultivation\shit_source.dm"
 #include "code\sepulcher\objects\structures\cultivation\shitheap.dm"
 #include "code\sepulcher\objects\structures\decor\objects.dm"
 #include "code\sepulcher\objects\structures\decor\signs.dm"

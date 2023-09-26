@@ -283,6 +283,13 @@
 	icon_state = "floorrusty"
 	},
 /area/interior/city)
+"et" = (
+/obj/item/melee/shovel,
+/turf/open/floor/f13{
+	tag = "icon-floorrusty";
+	icon_state = "floorrusty"
+	},
+/area/interior/sewer)
 "ez" = (
 /obj/structure/fence/post{
 	dir = 4
@@ -735,6 +742,12 @@
 /obj/structure/decor/dump_bin/red,
 /turf/open/indestructible/ground/outside/road,
 /area/exterior/city)
+"kR" = (
+/obj/structure/shit_source{
+	dir = 1
+	},
+/turf/closed/wall/brickdark,
+/area/interior/sewer)
 "kY" = (
 /obj/structure/chair/wood/normal{
 	dir = 4
@@ -788,6 +801,12 @@
 /obj/structure/table/stalker,
 /turf/open/indestructible/ground/floor/wood_floor,
 /area/interior/city)
+"lO" = (
+/obj/structure/shit_source{
+	dir = 8
+	},
+/turf/closed/wall/brickdark,
+/area/interior/sewer)
 "lS" = (
 /obj/effect/step_trigger/teleporter{
 	dir = 1;
@@ -843,6 +862,10 @@
 "mr" = (
 /turf/closed/wall/beton,
 /area/interior/city)
+"mu" = (
+/obj/structure/shit_source,
+/turf/closed/wall/brickdark,
+/area/interior/sewer)
 "mz" = (
 /obj/structure/simple_door/room,
 /turf/open/indestructible/ground/outside/road,
@@ -915,6 +938,12 @@
 /obj/structure/object_pass/foundry_bucket_rails,
 /turf/open/foundry,
 /area/interior/foundry)
+"oh" = (
+/obj/structure/shit_source{
+	dir = 4
+	},
+/turf/closed/wall/brickdark,
+/area/interior/sewer)
 "ok" = (
 /obj/structure/decor/water_tank,
 /turf/open/floor/f13{
@@ -158387,15 +158416,15 @@ XX
 XX
 XX
 XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
+lY
+lY
+lY
+lY
+lY
+lY
+lY
+lY
+lY
 XX
 XX
 XX
@@ -158644,15 +158673,15 @@ XX
 XX
 XX
 XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
+NF
+NF
+NF
+NF
+NF
+NF
+NF
+NF
+NF
 XX
 XX
 XX
@@ -158902,13 +158931,13 @@ XX
 XX
 XX
 XX
-XX
+NF
 lY
 lY
+fJ
 lY
 lY
-lY
-XX
+NF
 XX
 XX
 XX
@@ -159162,7 +159191,7 @@ XX
 XX
 lY
 Lw
-Lw
+NF
 Lw
 lY
 lY
@@ -160443,7 +160472,7 @@ XX
 XX
 XX
 XX
-lY
+mu
 Lw
 NF
 Lw
@@ -160961,7 +160990,7 @@ lY
 Lw
 NF
 Lw
-lY
+kR
 XX
 XX
 XX
@@ -161221,7 +161250,7 @@ Lw
 lY
 XX
 lY
-lY
+oh
 lY
 lY
 lY
@@ -161728,7 +161757,7 @@ XX
 XX
 XX
 XX
-lY
+mu
 Lw
 NF
 Lw
@@ -162224,7 +162253,7 @@ XX
 XX
 XX
 XX
-lY
+mu
 Lw
 gT
 NF
@@ -162242,7 +162271,7 @@ XX
 XX
 XX
 XX
-lY
+mu
 Lw
 NF
 Lw
@@ -163252,7 +163281,7 @@ XX
 XX
 XX
 XX
-lY
+mu
 Lw
 bX
 NF
@@ -164555,7 +164584,7 @@ Lw
 lY
 XX
 XX
-lY
+mu
 Lw
 gT
 NF
@@ -164812,7 +164841,7 @@ tq
 lY
 XX
 XX
-lY
+mu
 Lw
 Lw
 Lw
@@ -165075,11 +165104,11 @@ lY
 lY
 lY
 lY
+lO
 lY
 lY
 lY
-lY
-lY
+lO
 lY
 lY
 lY
@@ -165309,7 +165338,7 @@ lY
 XX
 XX
 XX
-lY
+mu
 Lw
 NF
 Lw
@@ -165567,7 +165596,7 @@ XX
 XX
 lY
 lY
-Lw
+et
 NF
 Lw
 lY
@@ -165598,7 +165627,7 @@ XX
 XX
 XX
 XX
-lY
+mu
 Lw
 NF
 NF
@@ -166883,7 +166912,7 @@ XX
 XX
 XX
 XX
-lY
+mu
 Lw
 Lw
 Lw

@@ -1,15 +1,6 @@
 // Shitheaps //
 // Cart shit to heap -> Add to heap -> Add water -> collect mushrooms //
 
-/obj/item/consumable/food/dung
-	name = "shit gobbet"
-	desc = "A filthy mass of waste. It piles nicely, so wet and repugnant."
-	icon_state = "poop"
-	feed_points = 10
-	toxicity_points = 20
-	will_points = 10
-	flavour_text = "Moist with solid kernels within. Tastes bitter."
-
 // A single plot grows from a picklist so long as there's fertilizer
 // Picklist for each type of shitheap - NORMAL is for church yard, CONSTRUCTED is for illegal harvest, SEWER is sewer (go figure)
 #define SHITHEAP_PRODUCTS_NORMAL list(/obj/structure/farm_plant/common_mushroom = 30, /obj/structure/farm_plant/crawler_cap = 20, /obj/structure/farm_plant/steelhead = 10, /obj/structure/farm_plant/thinhelmet = 20, /obj/structure/farm_plant/sinew = 20)

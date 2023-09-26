@@ -15,7 +15,6 @@
 
 /obj/item/melee/machete
 	name = "chopper"
-	desc = "Cleaves flesh, cuts rope."
 	icon_state = "machete"
 	item_state = "machete"
 	lefthand_file = 'icons/mob/inhands/weapons/melee_lefthand.dmi'
@@ -29,7 +28,6 @@
 
 /obj/item/melee/knife
 	name = "combat knife"
-	desc = "Once used by agents of a gone empire - now for cutting bread and meat."
 	icon_state = "knife"
 	item_state = "knife"
 	lefthand_file = 'icons/mob/inhands/weapons/melee_lefthand.dmi'
@@ -86,6 +84,18 @@
 	name = "axe"
 	icon_state = "axe"
 	item_state = "axe"
+	lefthand_file = 'icons/mob/inhands/weapons/melee_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/weapons/melee_righthand.dmi'
+	force = 15
+	throwforce = 7
+	w_class = WEIGHT_CLASS_BULKY
+	attack_verb = list("stabbed", "slashed", "sliced")
+	hitsound = 'sound/weapons/machetehit.ogg'
+
+/obj/item/melee/shovel
+	name = "shovel"
+	icon_state = "shovel"
+	item_state = "shovel"
 	lefthand_file = 'icons/mob/inhands/weapons/melee_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/melee_righthand.dmi'
 	force = 15
