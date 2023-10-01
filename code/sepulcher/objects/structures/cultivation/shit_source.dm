@@ -18,10 +18,12 @@
 	var/output_dir = SOUTH
 
 /obj/structure/shit_source/proc/shit_collection(mob/user, collect_time, parasite_chance)
-	var/turf/T = get_step(src,output_dir) // So ingots spawn south of the box
+	var/turf/T = get_step(src,output_dir) // Spawns product infront of the source
 	//var/mob/living/carbon/human/H = user
 	if(do_after(user, collect_time, target = src))
 		new /obj/item/consumable/food/dung(T)
+		if(prob(parasite_chance))
+			attempt_infect(user)
 		if(dung_amount == 0)
 			icon_state = "[icon_state]-empty"
 			desc = "Empty, only stench and grime remains."
@@ -35,14 +37,21 @@
 	output_dir = dir
 
 /obj/structure/shit_source/attack_hand(mob/user)
+	var/mob/living/carbon/human/H = user
 	if(dung_amount == 0)
 		to_chat(user, "<span class='red'>There is no amount of nightsoil worth collecting.</span>")
 		return
 	else
-		shit_collection(user,20,33)
+		if(H.gloves)
+			shit_collection(user,20,15)
+		else
+			shit_collection(user,20,33)
 	..()
 
 /obj/structure/shit_source/attackby(obj/item/O, mob/user, params)
+	if(dung_amount == 0)
+		to_chat(user, "<span class='red'>There is no amount of nightsoil worth collecting.</span>")
+		return
 	if(/obj/item/melee/shovel)
 		shit_collection(user,10,15)
 	else
