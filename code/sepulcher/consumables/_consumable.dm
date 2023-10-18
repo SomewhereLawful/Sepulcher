@@ -1,6 +1,7 @@
 // Sepulcher foodstuffs //
 // No reagents, instead simply adjusts the hunger bar
 // Some food gives special effects, but that should be the exception - and rarely should it be good
+// Code will need to be eventually culled down
 
 /obj/item/consumable
 	name = "fucked up consumable"
@@ -26,6 +27,8 @@
 
 	/// Description of eating the item for the user, predominantly taste and texture.
 	var/flavour_text = null
+
+	var/cures_parasite = null
 
 /obj/item/consumable/proc/canconsume(mob/eater, mob/user)
 	if(!iscarbon(eater))
@@ -86,7 +89,6 @@
 		var/mob/living/carbon/human/H = M // I hate it here
 		C.drunkenness = max((C.drunkenness + drunk_points),0) 
 		H.suppress_bloodloss(bleed_suppression)
-
 		SEND_SIGNAL(src, COMSIG_FOOD_EATEN, M, user)
 		On_Consume(M)
 		qdel(src)
@@ -94,7 +96,6 @@
 		user.visible_message("[user] [uses_verb] \the [src].", "<span class='magenta'>You [use_verb] \the [src].</span>")
 		if(flavour_text)
 			to_chat(user, flavour_text)
-
 		return 1
 	return 0
 

@@ -44,6 +44,7 @@
 		handle_breathing(times_fired)
 
 	handle_diseases() // DEAD check is in the proc itself; we want it to spread even if the mob is dead, but to handle its disease-y properties only if you're not.
+	handle_parasites()
 
 	if(stat != DEAD)
 		//Random events (vomiting etc)
@@ -79,6 +80,9 @@
 	return
 
 /mob/living/proc/handle_diseases()
+	return
+
+/mob/living/proc/handle_parasites()
 	return
 
 /mob/living/proc/handle_diginvis()
