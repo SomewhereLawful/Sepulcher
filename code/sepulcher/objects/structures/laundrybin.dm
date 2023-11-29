@@ -4,7 +4,10 @@
 	density = TRUE
 	anchored = TRUE
 	icon_state = "laundrybin"
-	
+		
+	var/list/hats = list(
+					/obj/item/clothing/head/flatcap = 100)
+
 	var/list/masks = list(
 					/obj/item/clothing/mask/ph_mask = 50,
 					/obj/item/clothing/mask/hypo_mask = 50)
@@ -30,33 +33,17 @@
 	if(do_after(user, 14.4, target = src))
 		switch(choice)
 			if("Hats")
-				new /obj/item/clothing/head/flatcap(get_turf(user))
-				to_chat(user, "You grab some headwear from the bin.")
+				grabClothing(user, pickweight(hats), "/obj/item/clothing/head/flatcap", "a hat")
 			if("Masks")
-				var/mask_choice = pickweight(masks)
-				var/obj/item/clothing/mask/M = new mask_choice
-				user.put_in_active_hand(M)
-				to_chat(user, "You pull a mask from the bin.")
+				grabClothing(user, pickweight(masks), "/obj/item/clothing/mask/M", "a mask")
 			if("Shirts")
-				var/shirt_choice = pickweight(shirts)
-				var/obj/item/clothing/under/S = new shirt_choice
-				user.put_in_active_hand(S)
-				to_chat(user, "You pull out an article of clothing.")
+				grabClothing(user, pickweight(shirts), "/obj/item/clothing/under/S", "an article of clothing")
 			if("Coats")
-				var/coat_choice = pickweight(coats)
-				var/obj/item/clothing/suit/C = new coat_choice
-				user.put_in_active_hand(C)
-				to_chat(user, "You pull a coat from the bin.")
+				grabClothing(user, pickweight(coats), "/obj/item/clothing/suit/C", "a coat")
 			if("Gloves")
-				var/glove_choice = pickweight(gloves)
-				var/obj/item/clothing/gloves/G = new glove_choice
-				user.put_in_active_hand(G)
-				to_chat(user, "You pull out a pair of gloves.")
+				grabClothing(user, pickweight(gloves), "/obj/item/clothing/gloves/G", "a pair of gloves")
 			if("Shoes")
-				var/shoe_choice = pickweight(shoes)
-				var/obj/item/clothing/shoes/F = new shoe_choice
-				user.put_in_active_hand(F)
-				to_chat(user, "You pull a pair of shoes from the bin.")
+				grabClothing(user, pickweight(shoes), "/obj/item/clothing/shoes/F", "a pair of shoes")
 	
 	playsound(src, 'sound/effects/cloth_rustle1.ogg', 50, 0)
 	..()
@@ -66,3 +53,8 @@
 		to_chat(user, "You throw the article into the bin.")
 		playsound(src, 'sound/effects/cloth_rustle1.ogg', 50, 0)
 		qdel(O)
+
+/obj/structure/laundry_bin/proc/grabClothing(mob/user, clothingType, itemType, message)
+    var/obj/item/clothing/C = new clothingType
+    user.put_in_active_hand(C)
+    to_chat(user, "You pull out [message] from the bin.")
