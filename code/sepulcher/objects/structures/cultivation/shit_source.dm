@@ -16,15 +16,18 @@
 	icon_state = "pipe1"
 	var/dung_amount = 1
 	var/output_dir = SOUTH
-	var/datum/parasite = /datum/parasite/corpse_worms
 
 /obj/structure/shit_source/proc/shit_collection(mob/user, collect_time, parasite_chance)
-	var/mob/living/carbon/I = user
 	var/turf/T = get_step(src,output_dir) // Spawns product infront of the source
+	if(dung_amount == 0)
+		to_chat(user, "<span class='warning'>Nothing remains within the pipe.</span>")
+		return
 	if(do_after(user, collect_time, target = src))
 		new /obj/item/consumable/food/dung(T)
+		--dung_amount
 		if(prob(parasite_chance))
-			I.ContactContractParasite(parasite)
+			//I.ContractParasite(parasite)
+			to_chat(user, "<span class='warning'>Something would have infected you, but code is hard.</span>")
 		if(dung_amount == 0)
 			icon_state = "[icon_state]-empty"
 			desc = "Empty, only stench and grime remains."

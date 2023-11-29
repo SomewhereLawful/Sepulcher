@@ -17,48 +17,62 @@
 	var/stage = 1
 	var/max_stages = 0
 	var/stage_prob = 4
+	var/stage_time = 3000
 
 	var/list/viable_mobtypes = list() //typepaths of viable mobs
+	var/list/infectable_biotypes = list(MOB_ORGANIC) // mostly redundancy since there may be mobs that are not organic
 	var/mob/living/carbon/affected_mob = null
-	/// Bodyparts this parasite will infect
-	var/list/limbs_affecting = list(BODY_ZONE_CHEST)
+	/// Bodyparts/organs this parasite can infect
+	var/list/required_organs = list()
 	/// Can you give it to somebody else?
 	var/transmittable = FALSE
 	/// Does it spread to other bodyparts?
 	var/body_spreading = FALSE
-	/// Time per stage, in deciseconds. Slight variation with host health.
+	var/process_dead = FALSE //if this ticks while the host is dead, good for stuff like corpseworms
 	var/curable = TRUE
 	/// Time per stage, in deciseconds. Slight variation with host health.
 	var/cure_chance = 8
-	var/stage_time = 3000
-	var/list/infectable_biotypes = list(MOB_ORGANIC) // mostly redundancy since there may be mobs that are not organic
-	var/process_dead = FALSE //if this ticks while the host is dead, good for stuff like corpseworms
+	var/copy_type = null //if this is null, copies will use the type of the instance being copied
+
+/datum/parasite/Destroy()
+	. = ..()
+	if(affected_mob)
+		remove_parasite()
+	SSparasite.active_parasites.Remove(src)
 
 //add this parasite if the host does not already have too many
-/datum/parasite/proc/attempt_infect(mob/living/infectee)
+/datum/parasite/proc/attempt_infect(mob/living/infectee, make_copy = TRUE)
 	if(infectee.parasites.len < PARASITE_LIMIT)
-		infect(infectee)
+		infect(infectee, make_copy)
 		return TRUE
 	return FALSE
 
 // INVOKE THE PARASITE
-/datum/parasite/proc/infect(mob/living/infectee)
-	// declare the vars
-//	var/missing_limbs = infectee.get_missing_limbs()
-	var/datum/parasite/P = src
-	var/obj/item/bodypart/L = pick(limbs_affecting)
-	// ensure we can infect this fool
-	if(!limbs_affecting)
-		return
-	if(L.affecting_parasite.len < LIMB_PARASITE_LIMIT) // Making sure there's space in a limb
-		L.affecting_parasite += P
-
-	// Infect
+/datum/parasite/proc/infect(mob/living/infectee, make_copy = TRUE)
+	var/datum/parasite/P = make_copy ? Copy() : src
 	infectee.parasites += P
 	P.affected_mob = infectee
-	P.after_add()
-	SSparasite.active_parasites += P //Add it to the active diseases list, now that it's actually in a mob and being processed.
+	SSparasite.active_parasites += P //Add it to the active parasites list, now that it's actually in a mob and being processed.
 
+	P.after_add()
+
+/datum/parasite/proc/Copy()
+	//note that stage is not copied over - the copy starts over at stage 1
+	var/static/list/copy_vars = list("name", "desc", "examine_hint",
+									"max_stages", "stage_prob", "stage_time",
+									"viable_mobtypes", "infectable_biotypes",
+									"required_organs", "transmittable",
+									"body_spreading", "process_dead",
+									"curable", "cure_chance")
+
+	var/datum/parasite/P = copy_type ? new copy_type() : new type()
+	for(var/V in copy_vars)
+		var/val = vars[V]
+		if(islist(val))
+			var/list/L = val
+			val = L.Copy()
+		P.vars[V] = val
+	return P
 
 // After infection, add stuff here that also happens to infectee that's out of the norm
 /datum/parasite/proc/after_add()
@@ -90,8 +104,15 @@
 //			ContactContractDisease(D)
 
 /datum/parasite/proc/has_cure()
-	if(curable == TRUE)
+	if(curable == FALSE)
 		return FALSE
 
 /datum/parasite/proc/cure()
 	qdel(src)
+
+/datum/parasite/proc/GetParasiteID()
+	return "[type]"
+
+/datum/parasite/proc/remove_parasite()
+	affected_mob.parasites -= src		//remove the datum from the list
+	affected_mob = null

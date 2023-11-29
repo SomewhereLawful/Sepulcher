@@ -6,16 +6,6 @@
 	desc = null
 	icon_state = "dumpster"
 
-/obj/structure/chair/pew
-	name = "pew"
-	icon_state = "bleacher"
-
-/obj/structure/chair/pew/left
-	icon_state = "bleacher_l"
-
-/obj/structure/chair/pew/right
-	icon_state = "bleacher_r"
-
 /obj/structure/table/stalker
 	name = "table"
 	desc = null

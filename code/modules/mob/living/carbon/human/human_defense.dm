@@ -717,7 +717,7 @@
 				else
 					to_chat(src, "<span class='yellow'>You feel fatigued.</span>")
 			// if(has_trait(TRAIT_SELF_AWARE)) reuse this for something
-				
+
 			switch(willloss)
 				if(0)
 					to_chat(src, "<span class='cyan'>Your mindflesh is stable.</span>")

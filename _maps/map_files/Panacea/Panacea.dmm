@@ -689,7 +689,7 @@
 /area/exterior/wastes)
 "kk" = (
 /obj/machinery/light/small,
-/turf/open/indestructible/ground/floor/wood_floor,
+/turf/open/indestructible/ground/floor/bath_tile,
 /area/interior/apartments)
 "kn" = (
 /obj/structure/lattice/catwalk{
@@ -996,6 +996,16 @@
 	},
 /turf/open/indestructible/ground/outside/road,
 /area/exterior/city)
+"pi" = (
+/obj/structure/rack,
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/f13{
+	tag = "icon-floorrusty";
+	icon_state = "floorrusty"
+	},
+/area/interior/clinic)
 "pm" = (
 /obj/effect/step_trigger/teleporter{
 	teleport_x = 162;
@@ -1603,7 +1613,7 @@
 /turf/closed/wall/brickdark,
 /area/interior/apartments)
 "xi" = (
-/obj/machinery/light,
+/obj/structure/simple_door/room,
 /turf/open/floor/f13{
 	tag = "icon-floorrusty";
 	icon_state = "floorrusty"
@@ -1767,6 +1777,10 @@
 	icon_state = "yellowdirtychess"
 	},
 /area/interior/clinic)
+"zE" = (
+/obj/structure/simple_door/room,
+/turf/open/indestructible/ground/floor/bath_tile,
+/area/interior/apartments)
 "zH" = (
 /obj/structure/lamp_post,
 /turf/open/indestructible/ground/outside/desert,
@@ -2683,6 +2697,17 @@
 	},
 /turf/open/indestructible/ground/floor/wood_floor/horizontal,
 /area/interior/city)
+"Oc" = (
+/obj/structure/window/fulltile/house{
+	tag = "icon-housewindow";
+	icon_state = "housewindow";
+	dir = 2
+	},
+/turf/open/floor/f13{
+	tag = "icon-floorrusty";
+	icon_state = "floorrusty"
+	},
+/area/interior/clinic)
 "Od" = (
 /obj/structure/chair/pew/left{
 	dir = 1
@@ -2971,6 +2996,9 @@
 /obj/structure/decor/candle,
 /turf/open/indestructible/ground/floor/lattice,
 /area/interior/spawning/kommandant)
+"Td" = (
+/turf/open/indestructible/ground/floor/bath_tile,
+/area/interior/apartments)
 "Ti" = (
 /turf/open/indestructible/ground/outside/road,
 /area/exterior)
@@ -3025,6 +3053,13 @@
 	icon_state = "floorrusty"
 	},
 /area/interior/city)
+"TK" = (
+/obj/structure/rack,
+/turf/open/floor/f13{
+	tag = "icon-floorrusty";
+	icon_state = "floorrusty"
+	},
+/area/interior/clinic)
 "TO" = (
 /obj/structure/table,
 /turf/open/floor/f13{
@@ -26056,7 +26091,7 @@ sj
 Ly
 Pq
 Pq
-Ly
+KP
 sj
 TQ
 bn
@@ -26567,7 +26602,7 @@ sj
 sj
 sj
 sj
-Ly
+sa
 Pq
 Pq
 Ly
@@ -26826,7 +26861,7 @@ XX
 sj
 Ly
 Pq
-Pq
+ZI
 Ly
 ud
 TQ
@@ -27082,7 +27117,7 @@ XX
 XX
 sj
 Ly
-Pq
+PT
 Pq
 Ly
 sj
@@ -27598,7 +27633,7 @@ sj
 Ly
 Pq
 Pq
-Ly
+sa
 sj
 sj
 sj
@@ -27857,7 +27892,7 @@ Pq
 Pq
 Ly
 Ly
-Ly
+KP
 Ly
 Ly
 Ly
@@ -28367,7 +28402,7 @@ sj
 XX
 sj
 tv
-Pq
+ZI
 Pq
 Ly
 Ly
@@ -28882,7 +28917,7 @@ XX
 sj
 sj
 Pq
-Pq
+PT
 Ly
 sj
 XX
@@ -31441,7 +31476,7 @@ XX
 sj
 Ly
 Pq
-Pq
+PT
 Ly
 ud
 TQ
@@ -38939,7 +38974,7 @@ Ov
 pD
 uG
 uG
-uG
+QK
 pD
 pD
 pD
@@ -39196,14 +39231,14 @@ uG
 uG
 uG
 uG
-QK
+uG
+uG
+uG
+uG
+uG
 pD
-Ov
-Ov
-Ov
 pD
-XX
-XX
+pD
 XX
 XX
 bN
@@ -39454,13 +39489,13 @@ uG
 uG
 uG
 uG
+uG
+uG
+uG
+uG
+xi
+Ov
 pD
-Ov
-Ov
-Ov
-pD
-XX
-XX
 XX
 XX
 bN
@@ -39711,16 +39746,16 @@ uG
 uG
 uG
 uG
+uG
+uG
+uG
+QK
+pD
 Ov
-Ov
-Ov
-xi
 pD
 XX
 XX
-XX
-XX
-bN
+tc
 tc
 tc
 tc
@@ -39969,15 +40004,15 @@ pD
 pD
 pD
 pD
-Ov
-Ov
+Oc
+wF
+Oc
+pD
 Ov
 pD
 XX
 XX
-XX
-XX
-bN
+tc
 tc
 tc
 tc
@@ -40226,12 +40261,12 @@ Ov
 Ov
 ht
 pD
+Ov
+Ov
+Ov
+Ov
+Ov
 pD
-pD
-pD
-pD
-XX
-XX
 XX
 XX
 bN
@@ -40483,12 +40518,12 @@ Ov
 Ov
 Ov
 pD
-XX
-XX
-XX
-XX
-XX
-XX
+Ov
+Ov
+Ov
+Ov
+Ov
+pD
 XX
 XX
 bN
@@ -40740,12 +40775,12 @@ ht
 ht
 Mh
 pD
-XX
-XX
-XX
-XX
-XX
-XX
+TK
+TK
+pi
+TK
+pD
+pD
 XX
 XX
 bN
@@ -40997,11 +41032,11 @@ pD
 pD
 pD
 pD
-XX
-XX
-XX
-XX
-XX
+pD
+pD
+pD
+pD
+pD
 XX
 XX
 XX
@@ -44556,7 +44591,7 @@ XX
 XX
 XX
 px
-Ly
+sa
 Ly
 ez
 Ly
@@ -45325,10 +45360,10 @@ XX
 Ly
 Ly
 Ly
+sa
 Ly
 Ly
-Ly
-Ly
+sa
 sj
 XX
 sj
@@ -109615,14 +109650,14 @@ XX
 uR
 WM
 uR
-OE
+zE
 uR
 uR
 XX
 uR
 WM
 uR
-OE
+zE
 uR
 uR
 XX
@@ -109872,14 +109907,14 @@ XX
 uR
 OE
 uR
-WM
+Td
 kk
 uR
 XX
 uR
 OE
 uR
-WM
+Td
 kk
 uR
 XX
@@ -111157,14 +111192,14 @@ XX
 uR
 OE
 uR
-WM
+Td
 kk
 uR
 XX
 uR
 OE
 uR
-WM
+Td
 kk
 uR
 XX
@@ -111414,14 +111449,14 @@ XX
 uR
 WM
 uR
-OE
+zE
 uR
 uR
 XX
 uR
 WM
 uR
-OE
+zE
 uR
 uR
 XX
