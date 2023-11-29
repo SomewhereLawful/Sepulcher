@@ -966,7 +966,7 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 
 // Stomach
 /datum/species/proc/handle_hunger(mob/living/carbon/human/H)
-	if (H.hunger > 0 && H.stat != DEAD && !H.has_trait(TRAIT_NOHUNGER))
+	if(H.hunger > 0 && H.stat != DEAD && !H.has_trait(TRAIT_NOHUNGER))
 		var/hunger_rate = HUNGER_FACTOR
 		if(H.hunger > H.maxHunger)
 			H.hunger--
@@ -974,16 +974,15 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 			H.hunger++
 		H.hunger = max(0, H.hunger - hunger_rate)
 
-	if (H.hunger > H.maxHunger)
-		if(H.overeatduration < 600) //capped so people don't take forever to unfat
-			H.overeatduration++
-	else
-		if(H.overeatduration > 1)
-			H.overeatduration -= 2 //doubled the unfat rate
+	// Thus begins the pain
+		if(H.hunger < 5)
+			H.adjustWillLoss(1)
 
 // Heart
 /datum/species/proc/handle_toxicity(mob/living/carbon/human/H)
 	if(H.toxicitygain > 0 && H.stat != DEAD)
+		if(H.toxicitygain > H.toxicitygain)
+			H.toxicitygain--
 		if(H.toxicitygain < 0)
 			H.toxicitygain++
 

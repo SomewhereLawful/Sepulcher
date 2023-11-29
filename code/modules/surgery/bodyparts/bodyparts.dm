@@ -60,6 +60,8 @@
 	var/medium_burn_msg = "blistered"
 	var/heavy_burn_msg = "peeling away"
 
+	var/list/affecting_parasite = list()
+
 /obj/item/bodypart/examine(mob/user)
 	..()
 	if(brute_dam > 0)

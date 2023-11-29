@@ -4,6 +4,7 @@
 	desc = "A hook for a lantern."
 	icon = 'icons/sepulcher/lamp_post.dmi'
 	icon_state = "post"
+	layer = FLY_LAYER
 	var/lantern_having = FALSE
 
 /obj/structure/lamp_post/Initialize()

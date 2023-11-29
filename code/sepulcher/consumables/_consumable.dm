@@ -1,38 +1,34 @@
 // Sepulcher foodstuffs //
 // No reagents, instead simply adjusts the hunger bar
 // Some food gives special effects, but that should be the exception - and rarely should it be good
+// Code will need to be eventually culled down
 
 /obj/item/consumable
 	name = "fucked up consumable"
 	desc = "fucked up"
 	icon = 'icons/obj/food.dmi'
 	icon_state = "broken"
-	/// Health added/lost when consumed
+
 	var/health_points = 0
-	/// Percentage of total hunger given when eaten
 	var/feed_points = 0
-	/// How much will is lost
 	var/will_points = 0
-	/// How much toxicity is given
 	var/toxicity_points = 0
-	/// Sound when the food is eaten
-	var/eat_sound = 'sound/items/food_crunchy_1.ogg'
-	/// Use sparingly. Determines what item is generated upon total consumption of the food.
-	var/trash = null
-	var/cooking_product = null
-	/// For mouth/face cover check. If TRUE, checks.
+	var/bleed_suppression = 0
+
+	/// How much drunkness is given
+	var/drunk_points = 0
+
+	/// Does this require an uncovered mouth?
 	var/ingest_consumption = TRUE
-	// string stuff for visiblemessage
+	var/eat_sound = 'sound/items/food_crunchy_1.ogg'
 	var/uses_verb = "uses"
 	var/use_verb = "use"
+	var/trash = null
+
 	/// Description of eating the item for the user, predominantly taste and texture.
 	var/flavour_text = null
 
-/obj/item/consumable/burn()
-	if(!cooking_product == null)
-		visible_message("[src] finishes cooking!")
-		new cooking_product(loc)
-		qdel(src)
+	var/cures_parasite = null
 
 /obj/item/consumable/proc/canconsume(mob/eater, mob/user)
 	if(!iscarbon(eater))
@@ -89,6 +85,10 @@
 		M.adjustWillLoss(will_points)
 		M.adjustToxicityGain(toxicity_points)
 
+		var/mob/living/carbon/C = M
+		var/mob/living/carbon/human/H = M // I hate it here
+		C.drunkenness = max((C.drunkenness + drunk_points),0) 
+		H.suppress_bloodloss(bleed_suppression)
 		SEND_SIGNAL(src, COMSIG_FOOD_EATEN, M, user)
 		On_Consume(M)
 		qdel(src)
@@ -96,7 +96,6 @@
 		user.visible_message("[user] [uses_verb] \the [src].", "<span class='magenta'>You [use_verb] \the [src].</span>")
 		if(flavour_text)
 			to_chat(user, flavour_text)
-
 		return 1
 	return 0
 

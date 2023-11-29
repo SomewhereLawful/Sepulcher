@@ -125,3 +125,7 @@
 	//List of active diseases
 	var/list/diseases = list() // list of all diseases in a mob
 	var/list/disease_resistances = list()
+
+	//List of active parasites
+	var/list/parasites = list() // list of all parasites in a mob
+	var/list/parasite_resistances = list()

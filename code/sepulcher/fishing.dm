@@ -2,7 +2,6 @@
 	name = "fishing rod"
 	icon = 'icons/obj/fishing.dmi'
 	icon_state = "fishing_rod"
-
 	var/in_use = FALSE
 
 /obj/item/fishing_rod/afterattack(atom/target, mob/user, proximity_flag, click_parameters)

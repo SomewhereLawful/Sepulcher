@@ -41,3 +41,12 @@
 
 /turf/open/indestructible/ground/floor/stairs/down
 	icon_state = "stairsdown"
+
+/turf/open/indestructible/ground/floor/bath_tile
+	name = "floor"
+	icon_state = "plitka1"
+
+/turf/open/indestructible/ground/floor/bath_tile/New()
+	if(icon_state == "plitka1")
+		icon_state = "plitka[rand(1,7)]"
+	..()

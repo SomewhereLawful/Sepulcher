@@ -47,6 +47,7 @@
 	cold_protection = CHEST|GROIN|LEGS|ARMS
 	heat_protection = CHEST|GROIN|LEGS|ARMS
 	dog_fashion = null
+	item_flags = NODROP
 
 /obj/item/clothing/gloves/kommandant
 	name = "leather gloves"

@@ -133,6 +133,11 @@
 			var/mob/living/silicon/robot/S = AM
 			qdel(S.mmi)
 
+		// For foundry chasm metal reclaimation
+		if(isitem(AM))
+			var/obj/item/M = AM
+			change_foundry_supply_value(M.foundry_metal_amt)
+
 		falling_atoms -= AM
 		qdel(AM)
 		if(AM && !QDELETED(AM))	//It's indestructible

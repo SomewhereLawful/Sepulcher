@@ -1,13 +1,9 @@
 <!-- Most valid html will work in here, excluding images. -->
 
-<h1>Sepulcher</h1>
-<b>Contains disturbing content, do not play if you cannot handle such themes.</b>
-<b>Witness our rules</b>
-
+						<u><b>Sepulcher</b></u>
 <i>
-	In a wasteland, a city lies. The proletariat labor to forge an existence.
-A dead world, consuming itself and festering with rot. Cruelty and malice are the fuel that continues to prolong the inevitable fate of the weak flesh.
-
-			No matter how much they work, the rot consumes all.
-
+	In a wasteland, a city lies. Soul-vessels labor to forge an existence.
+		A dead world in a dying dream. Churning with consumption.
+					<b>A Sepulcher for our sins.</b>
 </i>
+					<u><b>WITNESS OUR RULES</b></u>
