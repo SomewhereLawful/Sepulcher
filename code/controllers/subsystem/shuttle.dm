@@ -53,6 +53,8 @@ SUBSYSTEM_DEF(shuttle)
 
 	var/lockdown = FALSE	//disallow transit after nuke goes off
 
+	var/endvote_passed = FALSE
+
 /datum/controller/subsystem/shuttle/Initialize(timeofday)
 	ordernum = rand(1, 9000)
 
@@ -607,3 +609,12 @@ SUBSYSTEM_DEF(shuttle)
 		C.update_hidden_docking_ports(remove_images, add_images)
 
 	QDEL_LIST(remove_images)
+
+/datum/controller/subsystem/shuttle/proc/autoEnd() //CIT - allows shift to end without being a proper shuttle call
+	if(EMERGENCY_IDLE_OR_RECALLED)
+		SSshuttle.emergency.request(silent = TRUE)
+		priority_announce("The shift has come to an end and the shuttle called. [GLOB.security_level == SEC_LEVEL_RED ? "Red Alert state confirmed: Dispatching priority shuttle. " : "" ]It will arrive in [emergency.timeLeft(600)] minutes.", null, "shuttlecalled", "Priority")
+		log_game("Round end vote passed. Shuttle has been auto-called.")
+		message_admins("Round end vote passed. Shuttle has been auto-called.")
+	emergencyNoRecall = TRUE
+	endvote_passed = TRUE
