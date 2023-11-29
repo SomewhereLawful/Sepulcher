@@ -12,6 +12,7 @@
 		to_chat(user, "<span class='warning'>You are already fishing.</span>")
 		return
 	in_use = TRUE
+
 	if(istype(target, /obj/structure/fishing_spot))
 		if(!do_after(user, rand(10,20) SECONDS, target = target))
 			in_use = FALSE
@@ -21,8 +22,7 @@
 		new chosen_fish(get_turf(user))
 		to_chat(user, "<span class='warning'>You have caught something.</span>")
 		W.spot_life--
-		in_use = FALSE
-		return
+
 	in_use = FALSE
 
 /obj/structure/fishing_spot
