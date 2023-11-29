@@ -17,12 +17,11 @@
 	anchored = TRUE
 	pixel_x = -16
 
-	/// How much fertilizer
-	var/fertilizerlevel = 0
+	var/fertilizerlevel = 0 // How much is currently in the heap
 	var/maxfertilizer = 10
 
+	// both in deciseconds
 	var/lastcycle = 0
-	// in deciseconds
 	var/cycledelay = 300
 
 	var/product_list = SHITHEAP_PRODUCTS_NORMAL
@@ -62,17 +61,23 @@
 
 /obj/structure/shitheap/examine(user)
 	..()
+	var/message = ""
 	if(!self_sustaining)
-		if(fertilizerlevel > maxfertilizer*0.75)
-			to_chat(user, "<span class='magenta'>The stench tells of ample fertilization.</span>")
-		else if(fertilizerlevel > maxfertilizer*0.5)
-			to_chat(user, "<span class='magenta'>The heap is sufficiently fertilized.</span>")
-		else if(fertilizerlevel > maxfertilizer*0.25)
-			to_chat(user, "<span class='magenta'>The soil is yearning for new dung.</span>")
+		var/percentage = fertilizerlevel / maxfertilizer
+		if(percentage > 0.75)
+			message = "The stench tells of ample fertilization."
+		else if(percentage > 0.5)
+			message = "The heap is sufficiently fertilized."
+		else if(percentage > 0.25)
+			message = "The soil is yearning for new dung."
 		else if(fertilizerlevel == 0)
-			to_chat(user, "<span class='magenta'>The pile is starved. It needs more shit.</span>")
+			message = "The pile is starved. It needs more shit."
 	else
-		to_chat(user, "<span class='magenta'>It does not require fertilizer.</span>")
+		message = "It does not require fertilizer."
+
+	if(message)
+		to_chat(user, "<span class='magenta'>[message]</span>")
+	..()
 
 /obj/structure/shitheap/sewer
 	name = "repugnant cessheap"

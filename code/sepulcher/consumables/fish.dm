@@ -17,6 +17,8 @@
 		toxicity_points = toxic_modification
 		gutted = TRUE
 		flavour_text = gutted_flavour_text
+	else
+		return
 
 /obj/item/consumable/food/fish/examine(mob/user)
 	..()

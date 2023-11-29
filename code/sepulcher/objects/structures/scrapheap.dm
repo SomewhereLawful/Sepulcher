@@ -32,37 +32,44 @@
 
 /obj/structure/scrapheap/attack_hand(mob/user)
 	var/mob/living/carbon/human/H = user
+	var/bleed_chance = 30
+	var/drop_scrap_chance = 50
+	var/scrap_grabbed_message = "<span class='red'>You jagged yourself, but you manage to obtain some scrap regardless.</span>"
+	var/scrap_lost_message = "<span class='red'>You jagged yourself and lost grip on the scrap.</span>"
+
+	// If it's empty
 	if(scrap_health == 0)
 		to_chat(user, "<span class='red'>The scrapheap is barren.</span>")
 		return
+
 	if(do_after(user, 20, target = src))
 		playsound(src, 'sound/effects/junk_rustling.ogg', 50, 0)
 		to_chat(user, "You begin to sift through the metal.")
-		if(isbioslave(H) || isvagrant(H))
-			if(prob(30))
-				H.bleed_rate = 5
-				if(prob(50))
-					to_chat(user, "<span class='red'>You jagged yourself, but you manage to obtain some scrap regardless.</span>")
-				else
-					to_chat(user, "<span class='red'>You jagged yourself and lost grip on the scrap.</span>")
-					return		
-		if(isproletariat(H) || ishumanbasic(H))
-			if(prob(15))
-				H.bleed_rate = 5
-				if(prob(50))
-					to_chat(user, "<span class='red'>You jagged yourself, but you manage to obtain some scrap regardless.</span>")
-				else
-					to_chat(user, "<span class='red'>You jagged yourself and lost grip on the scrap.</span>")
-					return
 
+		if(isbioslave(H) || isvagrant(H))
+			bleed_chance = 30
+		else if(isproletariat(H) || ishumanbasic(H))
+			bleed_chance = 15
+
+		if(prob(bleed_chance))
+			H.bleed_rate = 5
+			if(prob(drop_scrap_chance))
+				to_chat(user, scrap_grabbed_message)
+			else
+				to_chat(user, scrap_lost_message)
+				return
+
+		// Obtain scrap and update heap status
 		var/obj/item/consumable/food/scrap/S = new /obj/item/consumable/food/scrap
 		user.put_in_active_hand(S)
 		scrap_health--
+
 		if(scrap_health == 0)
 			name = "barren scrapheap"
 			icon_state = "scrap_exhausted"
 			desc = "Once a pile of metal. Nothing more."
 			return
+
 	else
 		to_chat(user, "<span class='warning'>You stop pulling at the heap.</span>")
 	..()

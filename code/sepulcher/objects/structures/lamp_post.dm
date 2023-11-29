@@ -27,7 +27,7 @@
 		update_brightness()
 
 /obj/structure/lamp_post/attack_hand(mob/user)
-	if(lantern_having == TRUE)
+	if(lantern_having)
 		var/obj/item/flashlight/lantern/L = new /obj/item/flashlight/lantern
 		user.put_in_active_hand(L)
 		to_chat(user, "You take the lantern off the hook.")

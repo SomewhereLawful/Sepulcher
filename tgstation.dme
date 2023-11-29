@@ -2786,6 +2786,7 @@
 #include "code\sepulcher\clothing\uniform\prole.dm"
 #include "code\sepulcher\clothing\uniform\vagrant.dm"
 #include "code\sepulcher\consumables\_consumable.dm"
+#include "code\sepulcher\consumables\debug_consumable.dm"
 #include "code\sepulcher\consumables\drinks.dm"
 #include "code\sepulcher\consumables\fish.dm"
 #include "code\sepulcher\consumables\food.dm"
