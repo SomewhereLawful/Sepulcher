@@ -9,7 +9,7 @@
 	.[SCRIPTURE_APPLICATION] = GLOB.application_scripture_unlocked
 	//Application: APPLICATION_SERVANT_REQ or more non-brain servants, APPLICATION_CACHE_REQ or more clockwork caches, and at least APPLICATION_CV_REQ CV
 
-//reports to servants when scripture is locked or unlocked
+//reports to servants when scripture is locked or unlocked (SS13 Clock cult)
 /proc/scripture_unlock_alert(list/previous_states)
 	. = scripture_unlock_check()
 	if(!GLOB.servants_active)
