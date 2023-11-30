@@ -1,0 +1,84 @@
+#define DAYLIGHT_NEUTRAL "neutral"
+#define DAYLIGHT_SAMOSBOR "samosbor"
+#define DAYLIGHT_BLOOD_RAIN "blood rain"
+#define DAYLIGHT_ASH_BILLOW "ash billow"
+#define DAYLIGHT_FISHERMAN_RAIN "fisherman's rain"
+#define DAYLIGHT_MIASMA "miasma haze"
+
+GLOBAL_LIST_INIT(daylight_turfs, typecacheof(list(
+	/turf/open/indestructible/ground/outside,
+	/turf/open/floor/plating/f13/outside)))
+
+SUBSYSTEM_DEF(daylight)
+	name = "Daylight"
+	wait = 1 //was 4
+	//var/flags = 0	//see MC.dm in __DEFINES Most flags must be set on world start to take full effect. (You can also restart the mc to force them to process again
+	can_fire = TRUE
+
+	var/init_sunColour = "#e26060" // The average daylight color
+	var/init_sunPower = 0.75	// The average daylight strength
+	var/newColor
+	var/newPower
+
+	// The current, operating values
+	var/sunColour = "#e26060"
+	var/sunPower = 0.75
+	var/sunRange // Nothing uses this yet
+
+	var/currentColumn
+	var/working = 3
+	var/doColumns //number of columns to do at a time
+
+/datum/controller/subsystem/daylight/fire(resumed = FALSE)
+	if(working)
+		doWork()
+		return
+	if(nextBracket())
+		working = 1
+		currentColumn = 1
+
+// Checks for weather, updatelight according to weather's variables
+/datum/controller/subsystem/daylight/proc/nextBracket()
+	var/Time = station_time()
+	if(Time != currentTime)
+		currentTime = Time
+		updateLight(weather)
+		. = TRUE
+
+// This is the business end of the system, actually changing the turf set_light values
+/datum/controller/subsystem/daylight/proc/doWork()
+	var/list/currentTurfs = list()
+	var/x = min(currentColumn + doColumns, world.maxx)
+	for (var/z in SSmapping.levels_by_trait(ZTRAIT_STATION))
+		currentTurfs += block(locate(currentColumn,1,z), locate(x,world.maxy,z))
+	for (var/t in currentTurfs)
+		var/turf/T = t
+		if(T.type in GLOB.daylight_turfs)
+			T.set_light(T.turf_light_range, sunPower, sunColour)
+
+	currentColumn = x + 1
+	if (currentColumn > world.maxx)
+		currentColumn = 1
+		working = 0
+		return
+
+/datum/controller/subsystem/daylight/proc/updateLight(weather)
+	switch(weather)
+		if(DAYLIGHT_NEUTRAL)
+			newColor = "#e26060"
+			newPower = 0.75
+		if(DAYLIGHT_SAMOSBOR)
+			newColor = "#3c67ae"
+			newPower = 1
+		if(DAYLIGHT_BLOOD_RAIN)
+			newColor = "#3c67ae"
+			newPower = 1
+		if(DAYLIGHT_ASH_BILLOW)
+			newColor = "#3c67ae"
+			newPower = 1
+		if(DAYLIGHT_FISHERMAN_RAIN)
+			newColor = "#3c67ae"
+			newPower = 1
+		if(DAYLIGHT_MIASMA)
+			newColor = "#3c67ae"
+			newPower = 1
