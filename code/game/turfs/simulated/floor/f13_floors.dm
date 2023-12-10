@@ -32,7 +32,7 @@
 	icon = 'icons/turf/desert.dmi'
 	turf_light_colour = "#e26060"
 	turf_light_range = 3
-	turf_light_power = 0.75
+	turf_light_power = 0.3
 
 /* Outside turfs get global lighting */
 /turf/open/floor/plating/f13/outside/Initialize()

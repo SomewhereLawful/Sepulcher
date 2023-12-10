@@ -15,15 +15,9 @@ SUBSYSTEM_DEF(daylight)
 	//var/flags = 0	//see MC.dm in __DEFINES Most flags must be set on world start to take full effect. (You can also restart the mc to force them to process again
 	can_fire = TRUE
 
-	var/init_sunColour = "#e26060" // The average daylight color
-	var/init_sunPower = 0.75	// The average daylight strength
-	var/newColor
-	var/newPower
-
-	// The current, operating values
 	var/sunColour = "#e26060"
-	var/sunPower = 0.75
-	var/sunRange // Nothing uses this yet
+	var/sunPower = 0.3
+	var/sunRange = 0
 
 	var/currentColumn
 	var/working = 3
@@ -40,9 +34,10 @@ SUBSYSTEM_DEF(daylight)
 // Checks for weather, updatelight according to weather's variables
 /datum/controller/subsystem/daylight/proc/nextBracket()
 	var/Time = station_time()
+	var/currentTime
 	if(Time != currentTime)
 		currentTime = Time
-		updateLight(weather)
+		updateLight()
 		. = TRUE
 
 // This is the business end of the system, actually changing the turf set_light values
@@ -62,11 +57,16 @@ SUBSYSTEM_DEF(daylight)
 		working = 0
 		return
 
-/datum/controller/subsystem/daylight/proc/updateLight(weather)
+/datum/controller/subsystem/daylight/proc/updateLight(new_range, new_color, new_power)
+	if(new_range)
+		sunPower = new_range
+	if(new_color)
+		sunColour = new_color
+	if(new_power)
+		sunPower = new_power
+
+/*
 	switch(weather)
-		if(DAYLIGHT_NEUTRAL)
-			newColor = "#e26060"
-			newPower = 0.75
 		if(DAYLIGHT_SAMOSBOR)
 			newColor = "#3c67ae"
 			newPower = 1
@@ -82,3 +82,7 @@ SUBSYSTEM_DEF(daylight)
 		if(DAYLIGHT_MIASMA)
 			newColor = "#3c67ae"
 			newPower = 1
+		else
+			newColor = "#e26060"
+			newPower = 0.75
+*/
