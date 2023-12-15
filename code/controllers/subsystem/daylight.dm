@@ -19,6 +19,10 @@ SUBSYSTEM_DEF(daylight)
 	var/sunPower = 0.3
 	var/sunRange = 0
 
+	var/init_sunColour = "#e26060"
+	var/init_sunPower = 0.3
+	var/init_sunRange = 0
+
 	var/currentColumn
 	var/working = 3
 	var/doColumns //number of columns to do at a time
@@ -31,17 +35,31 @@ SUBSYSTEM_DEF(daylight)
 		working = 1
 		currentColumn = 1
 
-// Checks for weather, updatelight according to weather's variables
 /datum/controller/subsystem/daylight/proc/nextBracket()
 	var/Time = station_time()
 	var/currentTime
 	if(Time != currentTime)
 		currentTime = Time
-		updateLight()
 		. = TRUE
 
-// This is the business end of the system, actually changing the turf set_light values
 /datum/controller/subsystem/daylight/proc/doWork()
+	doInitialDaylightSetup()
+
+/datum/controller/subsystem/daylight/proc/updateDaylight(updating, new_range, new_color, new_power)
+	if(updating)
+		if(new_range)
+			sunPower = new_range
+		if(new_color)
+			sunColour = new_color
+		if(new_power)
+			sunPower = new_power
+	else
+		sunPower = init_sunPower
+		sunColour = init_sunColour
+		sunPower = init_sunPower
+	doInitialDaylightSetup()
+
+/datum/controller/subsystem/daylight/proc/doInitialDaylightSetup()
 	var/list/currentTurfs = list()
 	var/x = min(currentColumn + doColumns, world.maxx)
 	for (var/z in SSmapping.levels_by_trait(ZTRAIT_STATION))
@@ -56,14 +74,6 @@ SUBSYSTEM_DEF(daylight)
 		currentColumn = 1
 		working = 0
 		return
-
-/datum/controller/subsystem/daylight/proc/updateLight(new_range, new_color, new_power)
-	if(new_range)
-		sunPower = new_range
-	if(new_color)
-		sunColour = new_color
-	if(new_power)
-		sunPower = new_power
 
 /*
 	switch(weather)

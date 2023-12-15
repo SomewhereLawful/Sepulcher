@@ -4,15 +4,15 @@
 	probability = 1
 
 	telegraph_duration = 140
-	telegraph_overlay = "blood_trickle"
+	telegraph_overlay = "samosbor_fade"
 	telegraph_message = "<span class='userdanger'>SAMOSBOR APPROACHES.\nGET TO SHELTER.</span>"
-	telegraph_sound = 'sound/weather/rain/start_windthunder.ogg'
+	telegraph_sound = 'sound/weather/samosbor/samosbor_enters.ogg'
 
 	weather_message = "<span class='userdanger'><i>The world warps, bends. Silver essense begins to bead around you.</i></span>"
 	weather_overlay = "samosbor_static"
 	weather_duration_lower = 1200
 	weather_duration_upper = 2400
-	weather_sound = 'sound/weather/rain/outside/rainthunder.ogg'
+	weather_sound = 'sound/weather/samosbor/samosbor_mid.ogg'
 
 	end_duration = 100
 	end_message = "<span class='boldannounce'>The world has been viewed. SAMOSBOR leaves.</span>"
@@ -25,6 +25,11 @@
 	immunity_type = "bloodrain"
 	affects_turfs = TRUE
 	carbons_only = TRUE
+
+	daylight_changing = TRUE
+	daylight_sunColor = "#3c67ae"
+	daylight_sunPower = 1
+	daylight_sunRange = 0
 
 /datum/weather/acid_rain/weather_act(mob/living/L)
 	if(iscarbon(L))

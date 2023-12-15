@@ -31,6 +31,11 @@
 	var/aesthetic = FALSE //If the weather has no purpose other than looks
 	var/immunity_type = "storm" //Used by mobs to prevent them from being affected by the weather
 
+	var/daylight_changing = FALSE
+	var/daylight_sunColor
+	var/daylight_sunPower
+	var/daylight_sunRange
+
 	var/stage = END_STAGE //The stage of the weather, from 1-4
 
 	// These are read by the weather subsystem and used to determine when and where to run the weather.
@@ -78,6 +83,8 @@
 			if(telegraph_sound)
 				SEND_SOUND(M, sound(telegraph_sound))
 	addtimer(CALLBACK(src, .proc/start), telegraph_duration)
+	if(daylight_changing)
+		SSdaylight.updateDaylight(TRUE, daylight_sunRange, daylight_sunColor, daylight_sunPower)
 
 /datum/weather/proc/start()
 	if(stage >= MAIN_STAGE)
@@ -113,6 +120,7 @@
 	stage = END_STAGE
 	STOP_PROCESSING(SSweather, src)
 	update_areas()
+	SSdaylight.updateDaylight()
 
 /datum/weather/proc/can_weather_act(mob/living/L) //Can this weather impact a mob?
 	var/turf/mob_turf = get_turf(L)
