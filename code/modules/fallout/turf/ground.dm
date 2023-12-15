@@ -48,8 +48,9 @@
 //////////////////////////////////////////////////////////////////////
 
 /turf/open/indestructible/ground/outside
+	turf_light_colour = "#e26060"
 	turf_light_range = 3
-	turf_light_power = 0.75
+	turf_light_power = 0.3
 
 /turf/open/indestructible/ground/outside/Initialize()
 	. = ..()

@@ -30,8 +30,9 @@
 	var/bullet_sizzle = FALSE //used by ammo_casing/bounce_away() to determine if the shell casing should make a sizzle sound when it's ejected over the turf
 							//IE if the turf is supposed to be water, set TRUE.
 
-	var/turf_light_range = 0 // Used for the nightcycle subsystem
-	var/turf_light_power = 0 // Used for the nightcycle subsystem
+	var/turf_light_colour = null
+	var/turf_light_range = 0 // Used for the daylight subsystem
+	var/turf_light_power = 0 // Used for the daylight subsystem
 
 /turf/vv_edit_var(var_name, new_value)
 	var/static/list/banned_edits = list("x", "y", "z")
