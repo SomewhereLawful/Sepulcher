@@ -21,8 +21,9 @@
 
 	var/knocking_sounds = list('sound/f13items/door_knock1.wav', 'sound/f13items/door_knock2.wav', 'sound/f13items/door_knock3.wav', 'sound/f13items/door_knock4.wav')
 
-	var/lock_sound = 'sound/machines/door_open.ogg'
-	var/lock_attempt_sound = 'sound/machines/door_open.ogg'
+	var/lock_sound = 'sound/door/lock.ogg'
+	var/unlock_sound = 'sound/door/unlock.ogg'
+	var/lock_attempt_sound = 'sound/door/locked_attempt.ogg'
 	var/lockable = FALSE
 	var/locked = FALSE
 	var/visible_lock = FALSE
@@ -96,6 +97,12 @@
 			return
 		if(I.lock_id == src.lock_id) //if the key matches our id
 			if(locked)
+				to_chat(user,"You unlock the door.")
+				playsound(src.loc, unlock_sound, 30, 0, 0)
 				locked = FALSE
 			else
+				to_chat(user,"You lock the door.")
+				playsound(src.loc, lock_sound, 30, 0, 0)
 				locked = TRUE
+	else
+		return
