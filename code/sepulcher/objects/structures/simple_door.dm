@@ -69,12 +69,15 @@
 		if(/obj/structure/barricade in src.loc)
 			to_chat(user, "The door is barricaded.")
 			return
-
 		if(locked && !open)
 			playsound(src.loc, lock_attempt_sound, 80, 0, 0)
 			to_chat(user, "You try the door, but it is locked.")
 			return
 		else
+			for(var/atom/movable/M in get_turf(src))
+				if(M.density && M != src && open)
+					to_chat(user, "Something blocks the door from closing.")
+					return
 			if(!open)
 				doorOpen()
 			else
