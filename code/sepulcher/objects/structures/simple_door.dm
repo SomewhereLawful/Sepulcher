@@ -3,14 +3,11 @@
 // Alt-click to knock
 // Use keys to unlock/lock
 
-// Resolve - do we want an open locked door to close, remaining locked?
-// Some players would prefer to have a door locked open, though security is an issue for restricted areas
-
 /obj/structure/door
 	name = "door"
 	icon = 'icons/obj/doors/simple_doors.dmi'
-	icon_state = "house"
-	var/door_icon = "house"
+	icon_state = "room"
+	var/door_icon = "room"
 	opacity = TRUE
 	density = TRUE
 	anchored = TRUE
@@ -29,13 +26,11 @@
 	var/lockable = FALSE
 	var/locked = FALSE
 	var/visible_lock = FALSE
-	var/outside_lock_dir = NORTH
-	var/inside_lock_dir = SOUTH
+	var/lock_id
 	/// unless null, is tied via ID to toggle locking with keypads/buttons
 	var/remote_lock_id
 
 	var/open = FALSE
-	var/moving = FALSE
 
 /obj/structure/door/New(location)
 	..()
@@ -45,49 +40,45 @@
 
 /obj/structure/door/examine(mob/user)
 	..()
-	if(visible_lock)
+	to_chat(user, "Alt-click to knock.")
+	if(visible_lock && locked)
 		to_chat(user, "The door appears to be locked.")
 
-/obj/structure/door/proc/Open(animate)
+/obj/structure/door/proc/doorOpen()
 	playsound(src.loc, open_sound, 30, 0, 0)
-	if(animate)
-		moving = TRUE
-		flick("[door_icon]_opening", src)
-		sleep(opening_time)
-		moving = FALSE
+	flick("[door_icon]_opening", src)
+	sleep(opening_time)
 	set_opacity(0)
 	density = FALSE
 	icon_state = "[door_icon]_open"
 	layer = OPEN_DOOR_LAYER
+	open = TRUE
 
-/obj/structure/simple_door/proc/Close(animate)
+/obj/structure/door/proc/doorClose()
 	playsound(src.loc, close_sound, 30, 0, 0)
-	manual_opened = 0
-	if(animate)
-		moving = TRUE
-		flick("[door_icon]_closing", src)
-		sleep(closing_time)
+	flick("[door_icon]_closing", src)
+	sleep(closing_time)
 	icon_state = door_icon
 	set_opacity(opaque)
-	density = 1
-	moving = FALSE
+	density = TRUE
 	layer = CLOSED_DOOR_LAYER
+	open = FALSE
 
 /obj/structure/door/attack_hand(mob/user)
 	if(isliving(user)) //no spooky nonsense
-		var/mob/living/M = user
 		if(/obj/structure/barricade in src.loc)
 			to_chat(user, "The door is barricaded.")
 			return
-		if(locked)
+
+		if(locked && !open)
 			playsound(src.loc, lock_attempt_sound, 80, 0, 0)
 			to_chat(user, "You try the door, but it is locked.")
 			return
 		else
-			if(open)
-				Close(animate)
+			if(!open)
+				doorOpen()
 			else
-				Open(animate)
+				doorClose()
 	else
 		return
 
@@ -95,5 +86,13 @@
 	playsound(src.loc, pick(knocking_sounds), 80, 0, 0)
 	to_chat(user, "You knock upon the door.")
 
-/obj/structure/door/attackby(obj/item/weapon/I, mob/living/user, params)
+/obj/structure/door/attackby(obj/item/key/I, mob/living/user, params)
 	if(istype(I, /obj/item/key))
+		if(!lockable)
+			to_chat(user, "This door lacks the capability to be locked.")
+			return
+		if(I.lock_id == src.lock_id) //if the key matches our id
+			if(locked)
+				locked = FALSE
+			else
+				locked = TRUE
