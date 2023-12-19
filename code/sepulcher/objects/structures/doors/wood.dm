@@ -6,6 +6,6 @@
 	visible_lock = TRUE
 
 /obj/structure/door/cabin
-	name = "church door"
+	name = "cabin door"
 	icon_state = "church"
 	door_icon = "church"

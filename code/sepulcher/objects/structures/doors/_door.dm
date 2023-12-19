@@ -5,7 +5,7 @@
 
 /obj/structure/door
 	name = "door"
-	icon = 'icons/obj/doors/simple_doors.dmi'
+	icon = 'icons/obj/doors/doors.dmi'
 	icon_state = "room"
 	var/door_icon = "room"
 	opacity = TRUE
