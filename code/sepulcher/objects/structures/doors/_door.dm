@@ -13,13 +13,13 @@
 	anchored = TRUE
 	layer = CLOSED_DOOR_LAYER
 
-	var/opaque
-	var/open_sound = 'sound/machines/door_open.ogg'
-	var/close_sound = 'sound/machines/door_close.ogg'
+	var/opaque = TRUE
+	var/open_sound = 'sound/door/open.ogg'
+	var/close_sound = 'sound/door/close.ogg'
 	var/opening_time = 2
 	var/closing_time = 4
 
-	var/knocking_sounds = list('sound/f13items/door_knock1.wav', 'sound/f13items/door_knock2.wav', 'sound/f13items/door_knock3.wav', 'sound/f13items/door_knock4.wav')
+	var/knocking_sounds = list('sound/door/knocking/knock1.ogg', 'sound/door/knocking/knock2.ogg', 'sound/door/knocking/knock3.ogg', 'sound/door/knocking/knock4.ogg')
 
 	var/lock_sound = 'sound/door/lock.ogg'
 	var/unlock_sound = 'sound/door/unlock.ogg'
