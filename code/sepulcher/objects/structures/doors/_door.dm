@@ -27,9 +27,9 @@
 	var/lockable = FALSE
 	var/locked = FALSE
 	var/visible_lock = FALSE
-	var/lock_id
+	var/lock_id = "null"
 	/// unless null, is tied via ID to toggle locking with keypads/buttons
-	var/remote_lock_id
+	var/remote_lock_id = "null"
 
 	var/open = FALSE
 
@@ -95,7 +95,7 @@
 		if(!lockable)
 			to_chat(user, "This door lacks the capability to be locked.")
 			return
-		if(I.lock_id == src.lock_id) //if the key matches our id
+		if(I.lock_id == src.lock_id || istype(I, /obj/item/key/skeleton_key)) //if the key matches our id OR is the skeleton key
 			if(locked)
 				to_chat(user,"You unlock the door.")
 				playsound(src.loc, unlock_sound, 30, 0, 0)
