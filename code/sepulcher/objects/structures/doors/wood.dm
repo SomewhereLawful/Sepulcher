@@ -5,6 +5,13 @@
 	lockable = TRUE
 	visible_lock = TRUE
 
+/obj/structure/door/apartment
+	name = "apartment door"
+	icon_state = "room"
+	door_icon = "room"
+	lockable = TRUE
+	visible_lock = TRUE
+
 /obj/structure/door/cabin
 	name = "cabin door"
 	icon_state = "church"

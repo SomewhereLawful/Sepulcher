@@ -32,6 +32,7 @@
 	var/remote_lock_id = "null"
 
 	var/open = FALSE
+	var/inoperable = FALSE
 
 /obj/structure/door/New(location)
 	..()
@@ -42,6 +43,8 @@
 /obj/structure/door/examine(mob/user)
 	..()
 	to_chat(user, "Alt-click to knock.")
+	if(inoperable)
+		to_chat(user, "The door appears to be sealed.")
 	if(visible_lock && locked)
 		to_chat(user, "The door appears to be locked.")
 
@@ -67,6 +70,10 @@
 
 /obj/structure/door/attack_hand(mob/user)
 	if(isliving(user)) //no spooky nonsense
+		if(inoperable)
+			to_chat(user, "The door's function is impaired. It won't open.")
+			playsound(src.loc, lock_attempt_sound, 80, 0, 0)
+			return
 		if(/obj/structure/barricade in src.loc)
 			to_chat(user, "The door is barricaded.")
 			return
