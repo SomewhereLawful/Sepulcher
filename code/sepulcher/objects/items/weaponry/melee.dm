@@ -68,7 +68,7 @@
 
 /obj/item/melee/baton
 	name = "baton"
-	desc = "Indispensible tool of correction for Bioslaves."
+	desc = "Indispensible tool of correction of Bioslaves."
 	icon_state = "baton"
 	item_state = "baton"
 	lefthand_file = 'icons/mob/inhands/weapons/melee_lefthand.dmi'

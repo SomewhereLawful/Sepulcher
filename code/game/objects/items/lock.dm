@@ -63,28 +63,3 @@ GLOBAL_LIST_EMPTY(global_locks)
 			user.visible_message("<span class='notice'>[src] breaks off [A] and falls to pieces.</span>")
 			return TRUE
 	return FALSE
-
-/obj/item/key
-	name = "\improper key"
-	icon = 'icons/obj/key.dmi'
-	w_class = WEIGHT_CLASS_TINY
-	var/lock_data = ""
-
-/obj/item/key/Initialize()
-	. = ..()
-	desc = "A simple key for locks. It has [src.lock_data ? src.lock_data : "nothing"] engraved on it."
-
-/obj/item/key/attackby(obj/item/I, mob/user, params)
-	if(istype(I, /obj/item/stack/rods))
-		var/obj/item/stack/rods/M = I
-		to_chat(user, "<span class='notice'>You begin to shape a rod into [src]...</span>")
-		if(do_after(user, 35, target = src))
-			if(M.get_amount() < 1 || !M)
-				return
-			var/obj/item/key/S = new /obj/item/key
-			M.use(1)
-			user.put_in_hands(S)
-			to_chat(user, "<span class='notice'>You make a [S] identical to the old [src].</span>")
-			S.lock_data = src.lock_data
-	else
-		return ..()

@@ -5,7 +5,7 @@
 
 /obj/structure/door
 	name = "door"
-	icon = 'icons/obj/doors/simple_doors.dmi'
+	icon = 'icons/obj/doors/doors.dmi'
 	icon_state = "room"
 	var/door_icon = "room"
 	opacity = TRUE
@@ -13,13 +13,13 @@
 	anchored = TRUE
 	layer = CLOSED_DOOR_LAYER
 
-	var/opaque
-	var/open_sound = 'sound/machines/door_open.ogg'
-	var/close_sound = 'sound/machines/door_close.ogg'
+	var/opaque = TRUE
+	var/open_sound = 'sound/door/open.ogg'
+	var/close_sound = 'sound/door/close.ogg'
 	var/opening_time = 2
 	var/closing_time = 4
 
-	var/knocking_sounds = list('sound/f13items/door_knock1.wav', 'sound/f13items/door_knock2.wav', 'sound/f13items/door_knock3.wav', 'sound/f13items/door_knock4.wav')
+	var/knocking_sounds = list('sound/door/knocking/knock1.ogg', 'sound/door/knocking/knock2.ogg', 'sound/door/knocking/knock3.ogg', 'sound/door/knocking/knock4.ogg')
 
 	var/lock_sound = 'sound/door/lock.ogg'
 	var/unlock_sound = 'sound/door/unlock.ogg'
@@ -27,11 +27,12 @@
 	var/lockable = FALSE
 	var/locked = FALSE
 	var/visible_lock = FALSE
-	var/lock_id
+	var/lock_id = "null"
 	/// unless null, is tied via ID to toggle locking with keypads/buttons
-	var/remote_lock_id
+	var/remote_lock_id = "null"
 
 	var/open = FALSE
+	var/inoperable = FALSE
 
 /obj/structure/door/New(location)
 	..()
@@ -42,6 +43,8 @@
 /obj/structure/door/examine(mob/user)
 	..()
 	to_chat(user, "Alt-click to knock.")
+	if(inoperable)
+		to_chat(user, "The door appears to be sealed.")
 	if(visible_lock && locked)
 		to_chat(user, "The door appears to be locked.")
 
@@ -67,6 +70,10 @@
 
 /obj/structure/door/attack_hand(mob/user)
 	if(isliving(user)) //no spooky nonsense
+		if(inoperable)
+			to_chat(user, "The door's function is impaired. It won't open.")
+			playsound(src.loc, lock_attempt_sound, 80, 0, 0)
+			return
 		if(/obj/structure/barricade in src.loc)
 			to_chat(user, "The door is barricaded.")
 			return
@@ -95,7 +102,7 @@
 		if(!lockable)
 			to_chat(user, "This door lacks the capability to be locked.")
 			return
-		if(I.lock_id == src.lock_id) //if the key matches our id
+		if(I.lock_id == src.lock_id || istype(I, /obj/item/key/skeleton_key)) //if the key matches our id OR is the skeleton key
 			if(locked)
 				to_chat(user,"You unlock the door.")
 				playsound(src.loc, unlock_sound, 30, 0, 0)

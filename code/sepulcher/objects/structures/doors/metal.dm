@@ -1,9 +1,23 @@
 /obj/structure/door/metal
 	icon_state = "room"
 	door_icon = "room"
-	open_sound = 'sound/machines/door_open.ogg'
-	close_sound = 'sound/machines/door_close.ogg'
-	knocking_sounds = list('sound/f13items/door_knock1.wav', 'sound/f13items/door_knock2.wav', 'sound/f13items/door_knock3.wav', 'sound/f13items/door_knock4.wav')
-	lock_sound = 'sound/door/lock.ogg'
-	unlock_sound = 'sound/door/unlock.ogg'
-	lock_attempt_sound = 'sound/door/locked_attempt.ogg'
+
+/obj/structure/door/metal/barred
+	name = "barred door"
+	icon_state = "barred"
+	door_icon = "barred"
+	opaque = FALSE
+	lockable = TRUE
+
+/obj/structure/door/metal/store
+	name = "store entrance"
+	desc = "A place of commerce."
+	icon_state = "store"
+	door_icon = "store"
+	lockable = TRUE
+	visible_lock = TRUE
+
+/obj/structure/door/metal/hull
+	name = "bulkhead"
+	icon_state = "hull"
+	door_icon = "hull"

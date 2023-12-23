@@ -77,7 +77,6 @@
 
 	if(message)
 		to_chat(user, "<span class='magenta'>[message]</span>")
-	..()
 
 /obj/structure/shitheap/sewer
 	name = "repugnant cessheap"
