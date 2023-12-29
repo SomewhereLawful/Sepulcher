@@ -16,6 +16,7 @@
 	icon_state = "pipe1"
 	var/dung_amount = 1
 	var/output_dir = SOUTH
+	var/list/refill_sound = list("sound/effects/ssource_refill1.ogg", "sound/effects/ssource_refill2.ogg")
 
 /obj/structure/shit_source/proc/shit_collection(mob/user, collect_time, parasite_chance)
 	var/turf/T = get_step(src,output_dir) // Spawns product infront of the source
