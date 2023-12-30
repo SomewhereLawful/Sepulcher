@@ -15,7 +15,7 @@
 	var/obj/item/key/occupying_key
 
 	//Console Data
-	var/points = 0
+	var/scrips = 0
 
 	var/console_samosbor_warning = "MACHINATION AFFECTING CONSOLE. NO COMMANDS CAN BE ENTERED."
 
@@ -47,15 +47,3 @@
 		occupying_key = null
 	else
 		to_chat(usr, "<span class='magenta'>The console doesn't have a key.</span>")
-
-//======================UI STUFF==========================
-/obj/structure/commerce/commerce_console/ui_interact(mob/user, ui_key = "main", datum/tgui/ui = null, force_open = FALSE, \
-											datum/tgui/master_ui = null, datum/ui_state/state = GLOB.default_state)
-	ui = SStgui.try_update_ui(user, src, ui_key, ui, force_open)
-	if(!ui)
-		ui = new(user, src, ui_key, "commerce_console", name, 1000, 800, master_ui, state)
-		ui.open()
-
-/obj/structure/commerce/commerce_console/ui_data()
-	var/list/data = list()
-	data["points"] = points
