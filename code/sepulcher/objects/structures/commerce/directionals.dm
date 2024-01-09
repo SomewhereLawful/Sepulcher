@@ -1,9 +1,3 @@
-/obj/structure/commerce/commerce_console
-	name = "commerce console"
-	desc = "Device used by Bourgeoisie to divine imports and exports, amoungst other functions."
-	icon = 'icons/obj/commerce_console.dmi'
-	icon_state = "2"
-
 // Directionals for mapping ease
 /obj/structure/commerce/commerce_console/north
 	pixel_y = 26
