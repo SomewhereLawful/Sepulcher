@@ -32,7 +32,7 @@
 	faction = "City"
 	total_positions = -1
 	spawn_positions = -1
-	description = "You have ascended beyond the peon proletariat. Your job is to sell those below you products they make and secure contracts for due export."
+	description = "You are above the menial Proletariat. You task to divine imports to the city, through acquisitions from Proletariat workers - you have traded worldly resistance for greed."
 
 	outfit = /datum/outfit/city/bougie
 

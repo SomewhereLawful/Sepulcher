@@ -49,9 +49,7 @@
 /area/exterior/city/docks)
 "aC" = (
 /obj/structure/object_pass/foundry_bucket_rails,
-/obj/structure/lattice/catwalk{
-	icon_state = "catwalk12-0"
-	},
+/obj/structure/lattice/catwalk,
 /turf/open/foundry,
 /area/interior/foundry)
 "aD" = (
@@ -156,12 +154,11 @@
 /turf/open/indestructible/ground/outside/road,
 /area/exterior/city)
 "cf" = (
-/obj/structure/lattice/catwalk{
-	icon_state = "catwalk10-0"
+/obj/machinery/shower{
+	dir = 8
 	},
-/obj/structure/object_pass/foundry_bucket_rails,
-/turf/open/foundry,
-/area/interior/foundry)
+/turf/open/indestructible/ground/floor/bath_tile,
+/area/interior/apartments)
 "cn" = (
 /obj/structure/foundry/hydraulic_press,
 /turf/open/floor/f13{
@@ -394,11 +391,13 @@
 	},
 /area/interior/train_yard)
 "fP" = (
-/obj/structure/lattice/catwalk{
-	icon_state = "catwalk12-0"
+/obj/structure/fence/handrail{
+	dir = 4
 	},
-/obj/structure/object_pass/foundry_bucket_rails,
-/turf/open/foundry,
+/turf/open/floor/f13{
+	tag = "icon-floorrusty";
+	icon_state = "floorrusty"
+	},
 /area/interior/foundry)
 "fU" = (
 /obj/machinery/light/small{
@@ -615,13 +614,6 @@
 	},
 /turf/open/indestructible/ground/outside/sidewalk/stairs,
 /area/exterior/city)
-"ja" = (
-/obj/structure/lattice/catwalk{
-	icon_state = "catwalk4-0"
-	},
-/obj/machinery/conveyor_switch/oneway,
-/turf/open/foundry,
-/area/interior/foundry)
 "jj" = (
 /obj/machinery/light,
 /turf/open/floor/f13{
@@ -705,10 +697,6 @@
 	icon_state = "bluedirtychess2"
 	},
 /area/interior/city)
-"kb" = (
-/obj/structure/decor/foundry,
-/turf/open/chasm/foundry,
-/area/interior/foundry)
 "kd" = (
 /turf/closed/wall/ship_hull{
 	icon_state = "hull2"
@@ -729,15 +717,16 @@
 /turf/open/indestructible/ground/outside/road,
 /area/exterior/wastes)
 "kk" = (
-/obj/machinery/light/small,
+/obj/machinery/shower{
+	dir = 4
+	},
 /turf/open/indestructible/ground/floor/bath_tile,
 /area/interior/apartments)
-"kn" = (
-/obj/structure/lattice/catwalk{
-	icon_state = "catwalk15-12"
+"ku" = (
+/obj/structure/foundry/steel_bucket{
+	id = "bucket1"
 	},
-/obj/structure/object_pass/foundry_bucket_rails,
-/turf/open/foundry,
+/turf/open/chasm/foundry,
 /area/interior/foundry)
 "kx" = (
 /obj/machinery/light/small{
@@ -767,13 +756,6 @@
 	icon_state = "floorrusty"
 	},
 /area/interior/city)
-"kL" = (
-/obj/structure/lattice/catwalk{
-	icon_state = "catwalk11-12"
-	},
-/obj/structure/object_pass/foundry_bucket_rails,
-/turf/open/foundry,
-/area/interior/foundry)
 "kM" = (
 /obj/effect/turf_decal/line,
 /obj/structure/flora/tree/tall,
@@ -832,12 +814,6 @@
 	icon_state = "yellowdirtyfull"
 	},
 /area/interior/city)
-"lH" = (
-/obj/structure/lattice/catwalk{
-	icon_state = "catwalk12-0"
-	},
-/turf/open/foundry,
-/area/interior/foundry)
 "lM" = (
 /obj/structure/table/stalker,
 /turf/open/indestructible/ground/floor/wood_floor,
@@ -929,9 +905,6 @@
 /turf/open/indestructible/ground/outside/road,
 /area/interior/city)
 "mH" = (
-/obj/structure/lattice/catwalk{
-	icon_state = "catwalk11-12"
-	},
 /turf/open/foundry,
 /area/interior/foundry)
 "mK" = (
@@ -989,13 +962,6 @@
 	icon_state = "floorrustysolid"
 	},
 /area/interior/spawning/bioslave)
-"og" = (
-/obj/structure/lattice/catwalk{
-	icon_state = "catwalk5-0"
-	},
-/obj/structure/object_pass/foundry_bucket_rails,
-/turf/open/foundry,
-/area/interior/foundry)
 "oh" = (
 /obj/structure/shit_source{
 	dir = 4
@@ -1129,12 +1095,12 @@
 /turf/closed/wall/beton,
 /area/interior/clinic)
 "pE" = (
-/obj/structure/decoration/vent/rusty,
-/turf/open/floor/f13{
-	tag = "icon-floorrusty";
-	icon_state = "floorrusty"
+/obj/machinery/light{
+	dir = 4
 	},
-/area/interior/foundry)
+/obj/structure/decor/cig_trash,
+/turf/open/indestructible/ground/floor/wood_floor,
+/area/interior/apartments)
 "pJ" = (
 /obj/structure/decor/spawner_part/bougie/left,
 /turf/open/indestructible/ground/floor/lattice,
@@ -1170,9 +1136,6 @@
 /turf/open/indestructible/ground/floor/wood_floor,
 /area/interior/spawning/kommandant)
 "qx" = (
-/obj/structure/lattice/catwalk{
-	icon_state = "catwalk7-3"
-	},
 /obj/structure/object_pass/foundry_bucket_rails,
 /turf/open/foundry,
 /area/interior/foundry)
@@ -1538,12 +1501,6 @@
 	},
 /turf/open/indestructible/ground/floor/lattice,
 /area/interior/spawning/bougie)
-"vB" = (
-/obj/structure/lattice/catwalk{
-	icon_state = "catwalk10-8"
-	},
-/turf/open/foundry,
-/area/interior/foundry)
 "vC" = (
 /obj/structure/simple_door/room,
 /turf/open/floor/f13{
@@ -1582,9 +1539,7 @@
 	},
 /area/interior/spawning/bioslave)
 "vR" = (
-/obj/structure/lattice/catwalk{
-	icon_state = "catwalk13-1"
-	},
+/obj/structure/lattice/catwalk,
 /turf/open/foundry,
 /area/interior/foundry)
 "vU" = (
@@ -1719,12 +1674,6 @@
 	icon_state = "floorrusty"
 	},
 /area/interior/city)
-"xP" = (
-/obj/structure/lattice/catwalk{
-	icon_state = "catwalk13-4"
-	},
-/turf/open/foundry,
-/area/interior/foundry)
 "xS" = (
 /obj/structure/fluff/plaza_statue,
 /turf/open/indestructible/ground/outside/road,
@@ -1854,11 +1803,9 @@
 /turf/open/indestructible/ground/outside/desert,
 /area/exterior/wastes)
 "zu" = (
-/obj/structure/lattice/catwalk{
-	icon_state = "catwalk6-2"
-	},
-/turf/open/foundry,
-/area/interior/foundry)
+/obj/structure/decor/cig_trash,
+/turf/open/indestructible/ground/floor/wood_floor,
+/area/interior/apartments)
 "zD" = (
 /obj/effect/mob_spawn/human/cleanser,
 /turf/open/floor/f13{
@@ -1991,13 +1938,6 @@
 /obj/structure/decor/cig_trash,
 /turf/open/indestructible/ground/outside/road,
 /area/exterior/city/docks)
-"By" = (
-/obj/structure/lattice/catwalk{
-	icon_state = "catwalk13-4"
-	},
-/obj/structure/object_pass/foundry_bucket_rails,
-/turf/open/foundry,
-/area/interior/foundry)
 "BE" = (
 /obj/structure/campfire/drum,
 /obj/effect/turf_decal/line{
@@ -2095,13 +2035,6 @@
 	tag = "icon-floorrusty";
 	icon_state = "floorrusty"
 	},
-/area/interior/foundry)
-"DI" = (
-/obj/structure/object_pass/foundry_bucket_rails,
-/obj/structure/lattice/catwalk{
-	icon_state = "catwalk3-0"
-	},
-/turf/open/foundry,
 /area/interior/foundry)
 "DM" = (
 /obj/effect/landmark/latejoin/bougie,
@@ -2220,19 +2153,6 @@
 	},
 /turf/open/indestructible/ground/floor/wood_floor,
 /area/interior/spawning/kommandant)
-"Fa" = (
-/obj/structure/object_pass/foundry_bucket_rails,
-/obj/structure/lattice/catwalk{
-	icon_state = "catwalk7-0"
-	},
-/turf/open/foundry,
-/area/interior/foundry)
-"Fc" = (
-/obj/structure/lattice/catwalk{
-	icon_state = "catwalk4-0"
-	},
-/turf/open/foundry,
-/area/interior/foundry)
 "Fj" = (
 /obj/structure/decor/carpet{
 	icon_state = "oldcovertattered"
@@ -2384,12 +2304,6 @@
 /obj/structure/decor/spool,
 /turf/open/indestructible/ground/outside/road,
 /area/exterior)
-"HE" = (
-/obj/structure/lattice/catwalk{
-	icon_state = "catwalk7-3"
-	},
-/turf/open/foundry,
-/area/interior/foundry)
 "HH" = (
 /obj/effect/turf_decal/roadline/noshadow{
 	dir = 5
@@ -2764,11 +2678,11 @@
 /turf/open/indestructible/ground/outside/sidewalk/stairs,
 /area/exterior/city)
 "Ne" = (
-/obj/structure/lattice/catwalk{
-	icon_state = "catwalk6-0"
+/obj/structure/decor/foundry,
+/turf/open/floor/f13{
+	tag = "icon-floorrusty";
+	icon_state = "floorrusty"
 	},
-/obj/structure/object_pass/foundry_bucket_rails,
-/turf/open/foundry,
 /area/interior/foundry)
 "Nt" = (
 /obj/structure/simple_door/metal/store,
@@ -2857,12 +2771,14 @@
 /turf/open/indestructible/ground/outside/road,
 /area/exterior/city/docks)
 "Om" = (
-/obj/structure/flora/tree/tall,
-/obj/effect/turf_decal/line{
+/obj/structure/toilet{
+	dir = 4
+	},
+/obj/machinery/light/small{
 	dir = 1
 	},
-/turf/open/indestructible/ground/outside/dirt,
-/area/exterior/city)
+/turf/open/indestructible/ground/floor/bath_tile,
+/area/interior/apartments)
 "On" = (
 /obj/structure/shitheap,
 /obj/effect/turf_decal/line,
@@ -2878,6 +2794,7 @@
 /obj/structure/decor/saint_icon{
 	pixel_y = 32
 	},
+/obj/structure/decor/candle,
 /turf/open/indestructible/ground/floor/wood_floor,
 /area/interior/apartments)
 "OD" = (
@@ -2982,10 +2899,8 @@
 /turf/open/indestructible/ground/outside/road,
 /area/exterior/city)
 "Qe" = (
-/obj/structure/lattice/catwalk{
-	icon_state = "catwalk8-0"
-	},
 /obj/machinery/conveyor_switch/oneway,
+/obj/structure/lattice/catwalk,
 /turf/open/foundry,
 /area/interior/foundry)
 "Qo" = (
@@ -3050,13 +2965,6 @@
 	},
 /turf/open/indestructible/ground/floor/wood_floor,
 /area/interior/apartments)
-"QT" = (
-/obj/structure/object_pass/foundry_bucket_rails,
-/obj/structure/lattice/catwalk{
-	icon_state = "catwalk11-0"
-	},
-/turf/open/foundry,
-/area/interior/foundry)
 "QV" = (
 /obj/structure/decor/iconostasis/right,
 /turf/open/indestructible/ground/floor/lattice,
@@ -3101,12 +3009,14 @@
 /turf/open/indestructible/ground/outside/dirt,
 /area/exterior/city)
 "Sl" = (
-/obj/structure/lattice/catwalk{
-	icon_state = "catwalk9-0"
+/obj/structure/toilet{
+	dir = 8
 	},
-/obj/structure/object_pass/foundry_bucket_rails,
-/turf/open/foundry,
-/area/interior/foundry)
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/open/indestructible/ground/floor/bath_tile,
+/area/interior/apartments)
 "Ss" = (
 /obj/machinery/light{
 	dir = 8
@@ -3168,13 +3078,6 @@
 	},
 /turf/open/indestructible/ground/outside/road,
 /area/exterior/city)
-"TF" = (
-/obj/structure/lattice/catwalk{
-	icon_state = "catwalk13-1"
-	},
-/obj/structure/object_pass/foundry_bucket_rails,
-/turf/open/foundry,
-/area/interior/foundry)
 "TI" = (
 /obj/effect/turf_decal/line{
 	dir = 1
@@ -3204,12 +3107,6 @@
 	icon_state = "floorrusty"
 	},
 /area/interior/city)
-"Ua" = (
-/obj/structure/lattice/catwalk{
-	icon_state = "catwalk8-0"
-	},
-/turf/open/foundry,
-/area/interior/foundry)
 "Uc" = (
 /obj/structure/decor/spool{
 	pixel_x = 6
@@ -3220,13 +3117,6 @@
 /obj/structure/shitheap,
 /turf/open/indestructible/ground/outside/dirt,
 /area/exterior/city)
-"US" = (
-/obj/structure/lattice/catwalk{
-	icon_state = "catwalk15-3"
-	},
-/obj/structure/object_pass/foundry_bucket_rails,
-/turf/open/foundry,
-/area/interior/foundry)
 "UX" = (
 /obj/effect/turf_decal/roadline/noshadow{
 	dir = 9
@@ -27850,11 +27740,11 @@ XX
 XX
 NV
 Hd
-kb
-kb
 Hd
-kb
-Fc
+Hd
+Hd
+Hd
+vR
 NV
 NV
 NV
@@ -28106,11 +27996,11 @@ XX
 XX
 XX
 NV
-zu
-HE
-HE
-HE
-HE
+mH
+mH
+mH
+mH
+mH
 vR
 yi
 yi
@@ -28363,12 +28253,12 @@ XX
 XX
 XX
 NV
-vB
-kn
-kL
-kL
-kL
-By
+mH
+qx
+qx
+qx
+qx
+aC
 yi
 DH
 yi
@@ -28621,11 +28511,11 @@ XX
 XX
 NV
 Hd
-fP
+qx
 ff
 Hd
 Hd
-fP
+aC
 yi
 yi
 yi
@@ -28878,14 +28768,14 @@ XX
 XX
 NV
 Hd
-fP
+qx
 Hd
-ja
+Qe
 vo
-fP
+aC
 yi
 yi
-yi
+Ne
 yi
 yi
 NV
@@ -29135,9 +29025,9 @@ XX
 XX
 NV
 Hd
-aC
+qx
 Hd
-lH
+vR
 Hd
 aC
 yi
@@ -29392,11 +29282,11 @@ XX
 XX
 NV
 oI
-cf
-DI
-QT
-DI
-Sl
+qx
+qx
+qx
+qx
+aC
 yi
 yi
 yi
@@ -29650,13 +29540,13 @@ XX
 NV
 ww
 yi
-NV
-NV
+yi
+yi
 yi
 yi
 vX
 yi
-pE
+yi
 yi
 yi
 NV
@@ -29906,11 +29796,11 @@ XX
 XX
 NV
 oI
-Ne
-DI
-Fa
-DI
-og
+qx
+qx
+qx
+qx
+aC
 yi
 yi
 yi
@@ -30163,9 +30053,9 @@ XX
 XX
 NV
 Hd
-aC
+qx
 Hd
-lH
+vR
 Hd
 aC
 yi
@@ -30419,12 +30309,12 @@ XX
 XX
 XX
 NV
-kb
-fP
+Hd
+qx
 Hd
 Qe
 vo
-fP
+aC
 yi
 yi
 yi
@@ -30677,11 +30567,11 @@ XX
 XX
 NV
 Hd
-fP
+qx
 Hd
 Hd
-ff
-fP
+ku
+aC
 yi
 yi
 yi
@@ -30933,12 +30823,12 @@ XX
 XX
 XX
 NV
-zu
-US
+mH
 qx
 qx
 qx
-TF
+qx
+aC
 yi
 yi
 cn
@@ -31190,12 +31080,12 @@ XX
 XX
 XX
 NV
-vB
 mH
 mH
 mH
 mH
-xP
+mH
+vR
 yi
 yi
 yi
@@ -31449,10 +31339,10 @@ XX
 NV
 Hd
 Hd
-kb
 Hd
-kb
-Ua
+Hd
+Hd
+vR
 yi
 yi
 yi
@@ -31704,8 +31594,8 @@ XX
 XX
 NV
 NV
-yi
-yi
+fP
+fP
 NV
 NV
 NV
@@ -38863,8 +38753,8 @@ Zr
 Zr
 rX
 sj
-Om
-oO
+jm
+OR
 oO
 oO
 sh
@@ -110084,14 +109974,14 @@ XX
 uR
 OE
 uR
-Td
+Sl
 kk
 uR
 XX
 uR
 OE
 uR
-Td
+Sl
 kk
 uR
 XX
@@ -110602,7 +110492,7 @@ WM
 WM
 WM
 WM
-WM
+zu
 WM
 WM
 WM
@@ -110855,13 +110745,13 @@ Il
 WM
 WM
 WM
-Ft
+pE
 WM
 WM
 WM
 WM
 WM
-WM
+zu
 Ft
 WM
 uR
@@ -111369,15 +111259,15 @@ XX
 uR
 OE
 uR
-Td
-kk
+Om
+cf
 uR
 XX
 uR
 OE
 uR
-Td
-kk
+Om
+cf
 uR
 XX
 XX

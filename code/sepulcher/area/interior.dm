@@ -32,7 +32,7 @@
 /area/interior/spawning/kommandant
 	name = "kommandant"
 	icon_state = "kommandant"
-	narrate = "The air is electric, rubber and shoe polish come from the kasket. Here saints are remade -- and recycled."
+	narrate = "The air is electric, scents of rubber and shoe polish come from the kasket. Here saints are remade -- and recycled."
 
 /area/interior/city
 	name = "City Interiors"
@@ -50,6 +50,8 @@
 /area/interior/clinic
 	name = "Clinic"
 	icon_state = "interior"
+	ambient_background_cooldown = 26
+	ambient_background = list('sound/ambience/interiors/hospital.ogg')
 	narrate = "Acrid spirits billow through the thick air. A bite of gangrene hides within, here no respite from this world's decay."
 
 /area/interior/foundry
