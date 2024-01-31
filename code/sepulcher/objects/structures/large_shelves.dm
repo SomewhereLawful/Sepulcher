@@ -3,7 +3,7 @@
 /obj/structure/rack/large
 	name = "metal shelf"
 	bound_width = 64
-	icon = 'icons/obj/structures64.dmi'
+	icon = 'icons/obj/racks64.dmi'
 
 /obj/structure/rack/large/Initialize()
 	switch(dir)

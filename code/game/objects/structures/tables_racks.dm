@@ -449,13 +449,19 @@
  */
 /obj/structure/rack
 	name = "rack"
-	icon = 'icons/fallout/objects/structures/furniture.dmi'
-	icon_state = "polka"
+	icon = 'icons/obj/racks.dmi'
+	icon_state = "rack"
 	layer = TABLE_LAYER
 	density = TRUE
 	anchored = TRUE
 	pass_flags = LETPASSTHROW //You can throw objects over this, despite it's density.
 	max_integrity = 20
+	var/parts_type = /obj/item/rack_parts
+
+/obj/structure/rack/wood
+	name = "rack"
+	icon_state = "rack_wood"
+	parts_type = /obj/item/rack_parts/wood
 
 /obj/structure/rack/examine(mob/user)
 	..()
@@ -525,7 +531,7 @@
 /obj/structure/rack/deconstruct(disassembled = TRUE)
 	if(!(flags_1&NODECONSTRUCT_1))
 		density = FALSE
-		var/obj/item/rack_parts/newparts = new(loc)
+		var/obj/item/rack_parts/newparts = new parts_type(loc)
 		transfer_fingerprints_to(newparts)
 	qdel(src)
 
@@ -537,11 +543,16 @@
 /obj/item/rack_parts
 	name = "rack parts"
 	desc = "Parts of a rack."
-	icon = 'icons/obj/items_and_weapons.dmi'
+	icon = 'icons/obj/racks.dmi'
 	icon_state = "rack_parts"
 	flags_1 = CONDUCT_1
 	materials = list(MAT_METAL=2000)
 	var/building = FALSE
+	var/rack_type = /obj/structure/rack
+
+/obj/item/rack_parts/wood
+	name = "wooden rack parts"
+	rack_type = /obj/structure/rack/wood
 
 /obj/item/rack_parts/attackby(obj/item/W, mob/user, params)
 	if (istype(W, /obj/item/wrench))
@@ -558,7 +569,7 @@
 	if(do_after(user, 50, target = user, progress=TRUE))
 		if(!user.temporarilyRemoveItemFromInventory(src))
 			return
-		var/obj/structure/rack/R = new /obj/structure/rack(user.loc)
+		var/obj/structure/rack/R = new rack_type(user.loc)
 		user.visible_message("<span class='notice'>[user] assembles \a [R].\
 			</span>", "<span class='notice'>You assemble \a [R].</span>")
 		R.add_fingerprint(user)

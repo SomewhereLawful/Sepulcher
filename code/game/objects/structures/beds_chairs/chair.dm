@@ -267,7 +267,6 @@
 
 /obj/structure/chair/stool/bar
 	name = "bar stool"
-	desc = "It has some unsavory stains on it..."
 	icon_state = "bar"
 	item_chair = /obj/item/chair/stool/bar
 
