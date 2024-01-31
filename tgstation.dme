@@ -2816,6 +2816,7 @@
 #include "code\sepulcher\objects\items\weaponry\melee.dm"
 #include "code\sepulcher\objects\structures\barrier.dm"
 #include "code\sepulcher\objects\structures\lamp_post.dm"
+#include "code\sepulcher\objects\structures\large_shelves.dm"
 #include "code\sepulcher\objects\structures\laundrybin.dm"
 #include "code\sepulcher\objects\structures\lore_altar.dm"
 #include "code\sepulcher\objects\structures\scrapheap.dm"

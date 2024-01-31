@@ -200,6 +200,25 @@
 /obj/structure/fence/church/end
 	icon_state = "churchfenceend"
 
+/obj/structure/fence/church/corner
+	icon_state = "churchfencecorner"
+
+// wooden fence
+/obj/structure/fence/wooden
+	name = "wrought iron fence"
+	desc = null
+	icon_state = "wood_fence"
+	cuttable= FALSE
+
+/obj/structure/fence/wooden/post
+	icon_state = "wood_fence_post"
+
+/obj/structure/fence/wooden/end
+	icon_state = "wood_fence_end"
+
+/obj/structure/fence/wooden/corner
+	icon_state = "wood_fence_corner"
+
 /obj/structure/fence/sewer_grate
 	name = "sewer grate"
 	desc = null
