@@ -1,5 +1,5 @@
 /datum/species/proletariat
-	name = "Proletariat"
+	name = "City-Vessel"
 	id = "proletariat"
 	default_color = "FFFFFF"
 	species_traits = list(LIPS,NO_UNDERWEAR)

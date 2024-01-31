@@ -6,3 +6,11 @@
 /mob/living/simple_animal/rat
 	name = "rat"
 	desc = "Meat on little paws. Favorite of bioslaves."
+
+/mob/living/simple_animal/cityfowl //chicken
+	name = "cityfowl"
+	desc = "Flightless bird native to the city."
+
+/mob/living/simple_animal/shorthorn //cow
+	name = "shorthorn"
+	desc = "Emaciated creature native to the wastes."

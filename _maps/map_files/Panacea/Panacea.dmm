@@ -278,6 +278,15 @@
 	},
 /turf/open/indestructible/ground/outside/road,
 /area/exterior/city)
+"dL" = (
+/obj/structure/decor/carpet{
+	icon_state = "oldcovertattered"
+	},
+/turf/open/floor/f13{
+	tag = "icon-floorrusty";
+	icon_state = "floorrusty"
+	},
+/area/void)
 "dM" = (
 /obj/structure/commerce/commerce_console/east,
 /turf/open/indestructible/ground/floor/wood_floor,
@@ -352,10 +361,7 @@
 /turf/open/indestructible/ground/outside/dirt,
 /area/exterior/city)
 "eX" = (
-/obj/structure/decor/dump_bin/full{
-	pixel_x = -11;
-	pixel_y = 10
-	},
+/obj/structure/barricade/wooden/planks,
 /turf/open/indestructible/ground/outside/road,
 /area/exterior/city)
 "eY" = (
@@ -379,6 +385,16 @@
 	icon_state = "floorrusty"
 	},
 /area/interior/sewer)
+"fI" = (
+/obj/structure/rack,
+/obj/effect/turf_decal/line{
+	dir = 1
+	},
+/turf/open/floor/f13{
+	tag = "icon-floorrusty";
+	icon_state = "darkrustysolid"
+	},
+/area/void)
 "fJ" = (
 /obj/structure/fence/sewer_grate,
 /turf/open/indestructible/ground/sewer_water,
@@ -408,6 +424,13 @@
 	icon_state = "floorrustysolid"
 	},
 /area/interior/spawning/bioslave)
+"fZ" = (
+/obj/structure/decor/carpet,
+/turf/open/floor/f13{
+	tag = "icon-floorrusty";
+	icon_state = "floorrusty"
+	},
+/area/void)
 "gj" = (
 /obj/effect/turf_decal/roadline/noshadow{
 	dir = 9
@@ -415,12 +438,8 @@
 /turf/open/indestructible/ground/outside/road,
 /area/exterior/city/docks)
 "gq" = (
-/obj/structure/decor/wood_scrap{
-	pixel_x = -9;
-	pixel_y = 11
-	},
-/turf/open/indestructible/ground/outside/road,
-/area/exterior/city)
+/turf/open/indestructible/ground/outside/sidewalk/tile,
+/area/void)
 "gu" = (
 /obj/structure/simple_door/room,
 /turf/open/floor/f13{
@@ -453,6 +472,11 @@
 /obj/effect/spawner/fishing_spot_random/sewer,
 /turf/open/indestructible/ground/sewer_water,
 /area/interior/sewer)
+"gV" = (
+/turf/open/indestructible/ground/floor/lattice{
+	icon_state = "lattice_new14"
+	},
+/area/void)
 "gW" = (
 /turf/open/indestructible/ground/outside/water/sea,
 /area/exterior/city/docks)
@@ -525,6 +549,12 @@
 	},
 /turf/open/indestructible/ground/outside/road,
 /area/exterior/city/docks)
+"hI" = (
+/turf/open/floor/f13{
+	tag = "icon-floorrusty";
+	icon_state = "darkrustysolid"
+	},
+/area/void)
 "hR" = (
 /obj/effect/particle_effect/smoke/reality_edge,
 /turf/open/indestructible/ground/outside/desert,
@@ -572,6 +602,12 @@
 	icon_state = "floorrusty"
 	},
 /area/interior/sewer)
+"in" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/open/indestructible/ground/floor/lattice,
+/area/void)
 "ir" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -747,6 +783,13 @@
 /obj/effect/particle_effect/smoke/reality_edge,
 /turf/open/indestructible/ground/outside/desert,
 /area/exterior/wastes)
+"kE" = (
+/obj/effect/turf_decal/roadline/noshadow{
+	dir = 1
+	},
+/obj/structure/decor/cig_trash,
+/turf/open/indestructible/ground/outside/road,
+/area/void)
 "kJ" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -771,6 +814,13 @@
 	},
 /turf/closed/wall/brickdark,
 /area/interior/sewer)
+"kW" = (
+/obj/structure/simple_door/bunker,
+/turf/open/floor/f13{
+	tag = "icon-floorrusty";
+	icon_state = "floorrusty"
+	},
+/area/void)
 "kY" = (
 /obj/structure/chair/wood/normal{
 	dir = 4
@@ -876,6 +926,10 @@
 /obj/structure/table/bar,
 /turf/open/indestructible/ground/outside/road,
 /area/exterior/city)
+"mm" = (
+/obj/effect/mob_spawn/human/bougie,
+/turf/open/indestructible/ground/floor/lattice,
+/area/void)
 "mp" = (
 /obj/structure/decor/spool{
 	pixel_y = 16;
@@ -898,6 +952,15 @@
 /obj/structure/decor/carpet,
 /turf/open/indestructible/ground/floor/lattice,
 /area/interior/spawning/bougie)
+"my" = (
+/obj/effect/turf_decal/line{
+	dir = 1
+	},
+/turf/open/floor/f13{
+	tag = "icon-floorrusty";
+	icon_state = "darkrustysolid"
+	},
+/area/void)
 "mz" = (
 /obj/structure/door{
 	inoperable = 1
@@ -975,6 +1038,10 @@
 	icon_state = "floorrusty"
 	},
 /area/interior/city)
+"ou" = (
+/obj/structure/decor/cig_trash,
+/turf/open/indestructible/ground/outside/sidewalk/tile,
+/area/void)
 "oC" = (
 /obj/effect/turf_decal/line{
 	dir = 4
@@ -983,6 +1050,9 @@
 	dir = 1
 	},
 /area/exterior/city)
+"oG" = (
+/turf/open/indestructible/ground/outside/road,
+/area/void)
 "oI" = (
 /obj/structure/decor/apc{
 	pixel_y = 29
@@ -1037,6 +1107,9 @@
 	icon_state = "floorrusty"
 	},
 /area/interior/clinic)
+"pl" = (
+/turf/closed/wall/beton,
+/area/void)
 "pm" = (
 /obj/effect/step_trigger/teleporter{
 	teleport_x = 162;
@@ -1132,9 +1205,21 @@
 /obj/structure/decor/spawner_part/bougie/right,
 /turf/open/indestructible/ground/floor/lattice,
 /area/interior/spawning/bougie)
+"qq" = (
+/turf/closed/wall/ship,
+/area/void)
 "qs" = (
 /turf/open/indestructible/ground/floor/wood_floor,
 /area/interior/spawning/kommandant)
+"qu" = (
+/obj/machinery/door/poddoor/gate{
+	id = 12
+	},
+/turf/open/floor/f13{
+	tag = "icon-floorrusty";
+	icon_state = "floorrusty"
+	},
+/area/void)
 "qx" = (
 /obj/structure/object_pass/foundry_bucket_rails,
 /turf/open/foundry,
@@ -1255,6 +1340,13 @@
 "sJ" = (
 /turf/open/indestructible/ground/outside/desert,
 /area/interior/train_yard)
+"sM" = (
+/obj/machinery/light/small,
+/turf/open/floor/f13{
+	tag = "icon-floorrusty";
+	icon_state = "floorrusty"
+	},
+/area/void)
 "sO" = (
 /obj/structure/table,
 /obj/machinery/light{
@@ -1333,6 +1425,10 @@
 	},
 /turf/open/indestructible/ground/outside/road,
 /area/exterior/city)
+"tx" = (
+/obj/structure/decor/spawner_part/bougie/left,
+/turf/open/indestructible/ground/floor/lattice,
+/area/void)
 "tB" = (
 /obj/structure/decor/saint_icon{
 	pixel_x = -8;
@@ -1656,6 +1752,12 @@
 	icon_state = "floorrusty"
 	},
 /area/interior/clinic)
+"xl" = (
+/turf/open/floor/f13{
+	tag = "icon-floorrusty";
+	icon_state = "floorrusty"
+	},
+/area/void)
 "xo" = (
 /obj/effect/turf_decal/roadline/noshadow/corner{
 	dir = 1
@@ -1781,6 +1883,13 @@
 	icon_state = "floorrusty"
 	},
 /area/interior/city)
+"yY" = (
+/obj/structure/rack,
+/turf/open/floor/f13{
+	tag = "icon-floorrusty";
+	icon_state = "darkrustysolid"
+	},
+/area/void)
 "zj" = (
 /obj/machinery/button/door{
 	id = 12;
@@ -1960,6 +2069,15 @@
 	},
 /turf/open/indestructible/ground/outside/desert,
 /area/exterior/wastes)
+"Cc" = (
+/obj/structure/decor/carpet{
+	icon_state = "oldcovertatteredtwo"
+	},
+/turf/open/floor/f13{
+	tag = "icon-floorrusty";
+	icon_state = "floorrusty"
+	},
+/area/void)
 "Cd" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -1984,6 +2102,12 @@
 /obj/structure/decor/dump_bin/red/full,
 /turf/open/indestructible/ground/outside/road,
 /area/exterior/city)
+"Cl" = (
+/obj/effect/landmark/latejoin/bougie,
+/turf/open/indestructible/ground/floor/lattice{
+	icon_state = "lattice_new14"
+	},
+/area/void)
 "Cq" = (
 /obj/structure/table/bar,
 /turf/open/indestructible/ground/floor/wood_floor/horizontal,
@@ -2052,6 +2176,10 @@
 	icon_state = "floorrusty"
 	},
 /area/interior/city)
+"DV" = (
+/obj/structure/decor/spawner_part/bougie/right,
+/turf/open/indestructible/ground/floor/lattice,
+/area/void)
 "DZ" = (
 /obj/structure/simple_door/metal/barred,
 /turf/open/floor/f13{
@@ -2118,6 +2246,9 @@
 /obj/structure/fence/end,
 /turf/open/indestructible/ground/outside/road,
 /area/interior/train_yard)
+"ET" = (
+/turf/closed/wall/brickdark,
+/area/void)
 "EV" = (
 /turf/open/floor/f13{
 	tag = "icon-floorrusty";
@@ -2330,6 +2461,9 @@
 /obj/effect/turf_decal/line,
 /turf/open/indestructible/ground/outside/road,
 /area/exterior/city)
+"HW" = (
+/turf/open/indestructible/ground/floor/lattice,
+/area/void)
 "If" = (
 /obj/effect/decal/cleanable/blood/tracks{
 	dir = 4
@@ -2372,6 +2506,15 @@
 "IY" = (
 /obj/structure/cursed_money,
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
+/area/void)
+"Ja" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/open/floor/f13{
+	tag = "icon-floorrusty";
+	icon_state = "floorrusty"
+	},
 /area/void)
 "Jf" = (
 /turf/open/indestructible/ground/outside/sidewalk/stairs{
@@ -2522,6 +2665,10 @@
 /obj/structure/decor/cig_trash,
 /turf/open/indestructible/ground/outside/road,
 /area/exterior/city)
+"KS" = (
+/obj/structure/decor/cig_trash,
+/turf/open/indestructible/ground/outside/road,
+/area/void)
 "KZ" = (
 /obj/effect/turf_decal/roadline/noshadow{
 	dir = 4
@@ -2714,6 +2861,12 @@
 /obj/structure/chair/stool/wood,
 /turf/open/indestructible/ground/outside/road,
 /area/exterior/city/docks)
+"NN" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/open/indestructible/ground/floor/lattice,
+/area/void)
 "NV" = (
 /turf/closed/wall/brickdark,
 /area/interior/foundry)
@@ -2820,6 +2973,13 @@
 /obj/structure/decor/tire,
 /turf/open/indestructible/ground/outside/sidewalk/tile,
 /area/exterior/city)
+"OL" = (
+/obj/structure/ladder/unbreakable{
+	height = 1;
+	id = "Sew1"
+	},
+/turf/open/indestructible/ground/outside/road,
+/area/void)
 "OR" = (
 /obj/structure/flora/tree/tall,
 /turf/open/indestructible/ground/outside/dirt,
@@ -2921,6 +3081,11 @@
 	icon_state = "floorrusty"
 	},
 /area/interior/city)
+"Qy" = (
+/obj/structure/simple_door/bunker,
+/obj/structure/barricade/wooden/planks,
+/turf/closed/wall/beton,
+/area/void)
 "Qz" = (
 /obj/structure/window/fulltile/house{
 	tag = "icon-housewindow";
@@ -3002,6 +3167,13 @@
 	icon_state = "darkrustysolid"
 	},
 /area/interior/spawning/bougie)
+"Sd" = (
+/obj/structure/simple_door/bunker/glass,
+/turf/open/floor/f13{
+	tag = "icon-floorrusty";
+	icon_state = "floorrusty"
+	},
+/area/void)
 "Sg" = (
 /obj/effect/turf_decal/line{
 	dir = 10
@@ -3113,6 +3285,18 @@
 	},
 /turf/open/indestructible/ground/outside/road,
 /area/exterior/city)
+"UB" = (
+/obj/machinery/button/door{
+	id = 12;
+	name = "Exterior door button";
+	pixel_x = 24;
+	pixel_y = 7
+	},
+/turf/open/floor/f13{
+	tag = "icon-floorrusty";
+	icon_state = "floorrusty"
+	},
+/area/void)
 "UH" = (
 /obj/structure/shitheap,
 /turf/open/indestructible/ground/outside/dirt,
@@ -3372,6 +3556,15 @@
 	icon_state = "floorrusty"
 	},
 /area/interior/spawning/bougie)
+"Zh" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/open/floor/f13{
+	tag = "icon-floorrusty";
+	icon_state = "floorrusty"
+	},
+/area/void)
 "Zi" = (
 /obj/structure/table,
 /obj/item/clothing/head/wizard/marisa/fake,
@@ -3390,6 +3583,10 @@
 	icon_state = "floorrusty"
 	},
 /area/interior/spawning/bougie)
+"ZB" = (
+/obj/structure/decor/carpet,
+/turf/open/indestructible/ground/floor/lattice,
+/area/void)
 "ZC" = (
 /obj/structure/door{
 	inoperable = 1
@@ -7619,13 +7816,13 @@ XX
 XX
 XX
 XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
+pl
+pl
+Qy
+pl
+pl
+pl
+pl
 XX
 XX
 XX
@@ -7872,17 +8069,17 @@ XX
 XX
 XX
 XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
+qq
+qq
+qq
+qq
+pl
+xl
+xl
+Ja
+fI
+yY
+pl
 XX
 XX
 XX
@@ -8128,18 +8325,18 @@ XX
 XX
 XX
 XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
+qq
+qq
+gV
+NN
+gV
+pl
+xl
+xl
+fZ
+my
+hI
+pl
 XX
 XX
 XX
@@ -8385,18 +8582,18 @@ XX
 XX
 XX
 XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
+qq
+tx
+gV
+HW
+gV
+pl
+xl
+xl
+xl
+my
+hI
+pl
 XX
 XX
 XX
@@ -8642,18 +8839,18 @@ XX
 XX
 XX
 XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
+qq
+mm
+Cl
+ZB
+gV
+Sd
+Qs
+xl
+xl
+fI
+yY
+pl
 XX
 XX
 XX
@@ -8899,18 +9096,18 @@ XX
 XX
 XX
 XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
+qq
+DV
+gV
+HW
+gV
+pl
+xl
+xl
+sM
+pl
+pl
+pl
 XX
 XX
 XX
@@ -9156,16 +9353,16 @@ XX
 XX
 XX
 XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
+qq
+qq
+gV
+in
+gV
+pl
+xl
+xl
+xl
+pl
 XX
 XX
 XX
@@ -9414,17 +9611,17 @@ XX
 XX
 XX
 XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
+qq
+qq
+qq
+qq
+ET
+ET
+kW
+ET
+ET
+ET
+ET
 XX
 XX
 XX
@@ -9675,13 +9872,13 @@ XX
 XX
 XX
 XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
+ET
+xl
+xl
+xl
+ET
+oG
+OL
 XX
 XX
 XX
@@ -9932,13 +10129,13 @@ XX
 XX
 XX
 XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
+ET
+xl
+Cc
+xl
+qu
+gq
+ou
 XX
 XX
 XX
@@ -10189,13 +10386,13 @@ XX
 XX
 XX
 XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
+ET
+xl
+xl
+dL
+xl
+gq
+gq
 XX
 XX
 XX
@@ -10441,18 +10638,18 @@ XX
 XX
 XX
 XX
+ET
+ET
+ET
+ET
 XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
+ET
+xl
+Zh
+UB
+xl
+gq
+gq
 XX
 XX
 XX
@@ -10698,18 +10895,18 @@ XX
 XX
 XX
 XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
-XX
+kE
+oG
+oG
+ET
+ET
+ET
+ET
+ET
+ET
+ET
+KS
+gq
 XX
 XX
 XX
@@ -29551,18 +29748,18 @@ yi
 yi
 NV
 XX
-sj
-sj
-sj
-sj
-sj
-sj
-sj
-sj
-sj
-sj
-sj
-sj
+XX
+XX
+XX
+XX
+XX
+XX
+XX
+XX
+XX
+XX
+XX
+XX
 XX
 XX
 XX
@@ -29808,18 +30005,18 @@ yi
 yi
 NV
 XX
-Ly
-Ly
-Ly
-zX
-Ly
-Oe
-Oe
-zX
-Ly
-Ly
-Ly
-Ly
+XX
+XX
+XX
+XX
+XX
+XX
+XX
+XX
+XX
+XX
+XX
+XX
 XX
 XX
 XX
@@ -30065,18 +30262,18 @@ yi
 yi
 NV
 XX
-Ly
-Ly
-Ly
-Ly
-Ly
-Ly
-Ly
-Ly
-Ly
-Ly
-Ly
-Ly
+XX
+XX
+XX
+XX
+XX
+XX
+XX
+XX
+XX
+XX
+XX
+XX
 XX
 XX
 XX
@@ -30322,18 +30519,18 @@ yi
 yi
 NV
 XX
-sj
-sj
-sj
-sj
-Ly
-Ly
-zX
-Ly
-sj
-sj
-sj
-sj
+XX
+XX
+XX
+XX
+XX
+XX
+XX
+XX
+XX
+XX
+XX
+XX
 XX
 XX
 XX
@@ -30582,12 +30779,12 @@ XX
 XX
 XX
 XX
-sj
-by
-Ly
-sj
-sj
-sj
+XX
+XX
+XX
+XX
+XX
+XX
 XX
 XX
 XX
@@ -30839,10 +31036,10 @@ XX
 XX
 XX
 XX
-sj
-Nz
-Nz
-sj
+XX
+XX
+XX
+XX
 XX
 XX
 XX
@@ -31095,11 +31292,11 @@ NV
 XX
 XX
 XX
-sj
-sj
-eX
-gq
-sj
+XX
+XX
+XX
+XX
+XX
 XX
 XX
 XX
@@ -31352,13 +31549,13 @@ NV
 XX
 XX
 XX
-RX
-Ly
-Ly
-Ly
-sj
-sj
-sj
+XX
+XX
+XX
+XX
+XX
+XX
+XX
 XX
 XX
 XX
@@ -31609,13 +31806,13 @@ XX
 XX
 XX
 XX
-sj
-Ly
-Ly
-Ly
-Ly
-Ly
-sj
+XX
+XX
+XX
+XX
+XX
+XX
+XX
 XX
 XX
 XX
@@ -31865,14 +32062,14 @@ NV
 NV
 XX
 XX
-sj
-sj
-HO
-Ly
-Ly
-Ly
-Ly
-RX
+XX
+XX
+XX
+XX
+XX
+XX
+XX
+XX
 XX
 XX
 XX
@@ -32122,14 +32319,14 @@ jI
 NV
 XX
 XX
-sj
-mk
-Ly
-Ly
-Ly
-Ly
-Ly
-sj
+XX
+XX
+XX
+XX
+XX
+XX
+XX
+XX
 XX
 XX
 XX
@@ -32379,14 +32576,14 @@ yi
 NV
 XX
 XX
-sj
-Ly
-Ly
-Ly
-Ly
-Ly
-Ly
-sj
+XX
+XX
+XX
+XX
+XX
+XX
+XX
+XX
 XX
 XX
 XX
@@ -32636,14 +32833,14 @@ yi
 NV
 XX
 XX
-sj
-by
-Ly
-Ly
-Ly
-sj
-sj
-sj
+XX
+XX
+XX
+XX
+XX
+XX
+XX
+XX
 XX
 XX
 XX
@@ -32893,12 +33090,12 @@ jI
 NV
 XX
 XX
-sj
-Ly
-Ly
-Ly
-Ly
-sj
+XX
+XX
+XX
+XX
+XX
+XX
 XX
 XX
 XX
@@ -33150,12 +33347,12 @@ yi
 NV
 XX
 XX
-sj
-Pu
-Ly
-Ly
-by
-sj
+XX
+XX
+XX
+XX
+XX
+XX
 XX
 XX
 XX
@@ -33407,12 +33604,12 @@ yi
 NV
 XX
 XX
-sj
-Ly
-Ly
-Ly
-Ly
-sj
+XX
+XX
+XX
+XX
+XX
+XX
 XX
 sj
 sj
@@ -33664,11 +33861,11 @@ NV
 NV
 XX
 XX
+XX
+XX
 sj
-sj
-sj
-by
-Ly
+eX
+eX
 sj
 sj
 sj
