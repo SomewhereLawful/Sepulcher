@@ -4,7 +4,7 @@
 
 /obj/item/consumable/food/goyslop
 	name = "food pack"
-	desc = "Staple food of bioslave and the proletariat. Tasteless."
+	desc = "Staple food. Tasteless."
 	icon_state = "goyslop"
 	feed_points = 20
 

@@ -5,7 +5,7 @@
 
 /mob/living/simple_animal/rat
 	name = "rat"
-	desc = "Meat on little paws. Favorite of bioslaves."
+	desc = "Meat on little paws. Tastes like where it has been."
 
 /mob/living/simple_animal/cityfowl //chicken
 	name = "cityfowl"

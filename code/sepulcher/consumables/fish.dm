@@ -55,7 +55,7 @@
 //sewer
 /obj/item/consumable/food/fish/axlotl
 	name = "shit swimmer"
-	desc = "Mewing, small. Beady eyes of a bioslave."
+	desc = "Mewing, small. Beady eyes."
 	icon_state = "broken"
 	feed_points = 3
 	toxicity_points = 5

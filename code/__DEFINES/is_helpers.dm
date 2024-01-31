@@ -62,7 +62,6 @@
 
 //Sepulcher species
 #define isvagrant(A) (is_species(A, /datum/species/vagrant))
-#define isbioslave(A) (is_species(A, /datum/species/bioslave))
 #define isproletariat(A) (is_species(A, /datum/species/proletariat))
 #define iskommandant(A) (is_species(A, /datum/species/kommandant))
 

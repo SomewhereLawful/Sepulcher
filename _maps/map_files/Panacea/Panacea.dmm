@@ -2346,13 +2346,6 @@
 /obj/structure/decor/cig_trash,
 /turf/open/indestructible/ground/outside/road,
 /area/exterior/city/docks)
-"Gj" = (
-/obj/effect/mob_spawn/human/bioslave,
-/turf/open/floor/f13{
-	tag = "icon-floorrusty";
-	icon_state = "floorrustysolid"
-	},
-/area/interior/spawning/bioslave)
 "Gl" = (
 /obj/structure/flora/tree/tall,
 /obj/effect/particle_effect/smoke/reality_edge,
@@ -3001,13 +2994,6 @@
 /obj/structure/sign/warning/biohazard,
 /turf/closed/wall/bricks_white,
 /area/interior/city)
-"Pi" = (
-/obj/effect/landmark/latejoin/bioslave,
-/turf/open/floor/f13{
-	tag = "icon-floorrusty";
-	icon_state = "floorrustysolid"
-	},
-/area/interior/spawning/bioslave)
 "Pk" = (
 /obj/structure/table/stalker,
 /obj/structure/decor/carpet{
@@ -29463,16 +29449,16 @@ XX
 XX
 XX
 eY
-Gj
-Pi
+EV
+EV
 Ln
 qN
 EV
 EV
 qN
 AO
-Pi
-Gj
+EV
+EV
 eY
 XX
 XX
@@ -30748,16 +30734,16 @@ TQ
 TQ
 TQ
 eY
-Gj
-Pi
+EV
+EV
 Ln
 qN
 eG
 EV
 qN
 AO
-Pi
-Gj
+EV
+EV
 eY
 XX
 XX

@@ -14,7 +14,6 @@ SUBSYSTEM_DEF(job)
 	var/list/latejoin_trackers = list()	//Don't read this list, use GetLateJoinTurfs() instead
 
 	// Sepulcher addition - ripped off from Stalker-13
-	var/list/latejoin_bioslave = list()
 	var/list/latejoin_proletariat = list()
 	var/list/latejoin_bougie = list()
 	var/list/latejoin_kommandant = list()
@@ -573,8 +572,6 @@ SUBSYSTEM_DEF(job)
 
 	if(latejoin_trackers.len)
 		switch (rank)
-			if ("Bioslave")
-				SendToAtom(M, safepick(latejoin_bioslave), buckle)
 			if ("Proletariat")
 				SendToAtom(M, safepick(latejoin_proletariat), buckle)
 			if ("Bourgeoisie")

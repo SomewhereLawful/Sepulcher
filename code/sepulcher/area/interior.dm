@@ -15,7 +15,7 @@
 	ambientsounds = list('sound/f13ambience/battle_1.ogg','sound/f13ambience/battle_2.ogg','sound/f13ambience/battle_3.ogg')
 
 /area/interior/spawning/bioslave
-	name = "bioslave prison"
+	name = "prison"
 	icon_state = "bioslave"
 	narrate = "Rancid smell of shit and blood. There is nothing soft, nothing elegant of this pit."
 
