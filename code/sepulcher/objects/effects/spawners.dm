@@ -79,6 +79,21 @@
 	flavour_text = ""
 	assignedrole = "Vagrant"
 
+/obj/effect/mob_spawn/human/beater
+	name = "Lobotomizer"
+	desc = "Converts useless meat into useful meat."
+	icon = 'icons/obj/spawners.dmi'
+	icon_state = "bioslave"
+	density = TRUE
+	permanent = TRUE
+	roundstart = FALSE
+	death = FALSE
+	uses = -1
+	mob_gender = MALE
+	mob_species = /datum/species/beater
+	flavour_text = ""
+	assignedrole = "Beater"
+
 // latejoins (2
 /obj/effect/landmark/latejoin/proletariat
 	name = "JoinLateProle"

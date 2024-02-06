@@ -13,3 +13,10 @@
 /obj/item/clothing/head/cleanser/sealed
 	desc = "If only screams were filtered. You are sealed in."
 	item_flags = NODROP // sealed in
+
+/obj/item/clothing/head/safekeeper
+	name = "enforcer budenovka"
+	icon_state = "beater"
+	item_state = "kommandant"
+	desc = "If only screams were filtered."
+	flags_inv = HIDEEARS|HIDEHAIR

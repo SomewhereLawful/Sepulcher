@@ -57,12 +57,12 @@
 
 		if(ingest_consumption == TRUE)
 			if(M == user)								//If you're eating it yourself.
-				if(M.hunger <= 100)
+				if(M.hunger <= M.maxHunger)
 					user.visible_message("<span class='warning'>[user] fails to force \the [src] down [user.p_their()] maw!</span>", "<span class='warning'>You fail to force \the [src] down your maw!</span>")
 					return 0
 			else
 				if(!isbrain(M))		//If you're feeding it to someone else.
-					if(M.hunger <= 50)
+					if(M.hunger <= (M.maxHunger*0.5))
 						M.visible_message("<span class='danger'>[user] attempts to feed [M] [src].</span>", \
 											"<span class='userdanger'>[user] attempts to feed [M] [src].</span>")
 					else

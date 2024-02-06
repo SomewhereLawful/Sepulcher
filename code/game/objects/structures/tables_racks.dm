@@ -552,6 +552,7 @@
 
 /obj/item/rack_parts/wood
 	name = "wooden rack parts"
+	icon_state = "rack_parts_wood"
 	rack_type = /obj/structure/rack/wood
 
 /obj/item/rack_parts/attackby(obj/item/W, mob/user, params)
