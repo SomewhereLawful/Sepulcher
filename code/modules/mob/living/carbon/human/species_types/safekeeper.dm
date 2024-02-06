@@ -1,6 +1,6 @@
-/datum/species/beater
-	name = "Beater"
-	id = "beater"
+/datum/species/safekeeper
+	name = "Safekeeper"
+	id = "safekeeper"
 	default_color = "FFFFFF"
 	species_traits = list(LIPS,NO_UNDERWEAR,NOEYES)
 	default_features = list("mcolor" = "FFF", "tail_human" = "None", "ears" = "None", "wings" = "None")
@@ -8,7 +8,7 @@
 	skinned_type = /obj/item/stack/sheet/animalhide/human
 	sexes = 0
 
-/datum/species/beater/on_species_gain(mob/living/carbon/C, datum/species/old_species)
+/datum/species/safekeeper/on_species_gain(mob/living/carbon/C, datum/species/old_species)
 	. = ..()
 
 	C.gender = MALE

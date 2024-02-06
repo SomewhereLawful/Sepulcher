@@ -16,7 +16,7 @@
 
 /obj/item/clothing/head/safekeeper
 	name = "enforcer budenovka"
-	icon_state = "beater"
-	item_state = "kommandant"
+	icon_state = "safekeeper"
+	item_state = "safekeeper"
 	desc = "If only screams were filtered."
 	flags_inv = HIDEEARS|HIDEHAIR

@@ -79,7 +79,7 @@
 	flavour_text = ""
 	assignedrole = "Vagrant"
 
-/obj/effect/mob_spawn/human/beater
+/obj/effect/mob_spawn/human/safekeeper
 	name = "Lobotomizer"
 	desc = "Converts useless meat into useful meat."
 	icon = 'icons/obj/spawners.dmi'
@@ -90,7 +90,7 @@
 	death = FALSE
 	uses = -1
 	mob_gender = MALE
-	mob_species = /datum/species/beater
+	mob_species = /datum/species/safekeeper
 	flavour_text = ""
 	assignedrole = "Beater"
 
