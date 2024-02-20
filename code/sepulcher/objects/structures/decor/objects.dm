@@ -41,6 +41,11 @@
 	anchored = TRUE
 	layer = OBJ_LAYER
 
+/obj/structure/decor/washer
+	name = "clothes washer"
+	desc = "In disrepair. Smells of nightsoil."
+	icon_state = "washer"
+
 /obj/structure/decor/spool
 	name = "spool"
 	icon_state = "katushka"

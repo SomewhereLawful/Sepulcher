@@ -92,7 +92,8 @@
 	mob_gender = MALE
 	mob_species = /datum/species/safekeeper
 	flavour_text = ""
-	assignedrole = "Beater"
+	assignedrole = "Safekeeper"
+	outfit = /datum/outfit/city/safekeeper
 
 // latejoins (2
 /obj/effect/landmark/latejoin/proletariat

@@ -4,7 +4,7 @@
 	total_positions = -1
 	spawn_positions = -1
 	selection_color = "#ddffdd"
-	description = "You are the city's internal safekeepers, the hands of the Kommandant. You offer medical treatments to the citizenry such as parasite removal."
+	description = "You oversee the health of the populace. You offer medical treatments to the citizenry such as parasite removal."
 
 	outfit = /datum/outfit/city/cleanser
 
