@@ -76,9 +76,10 @@
 	},
 /area/interior/foundry)
 "aD" = (
-/obj/structure/decor/wood_scrap,
-/turf/open/indestructible/ground/outside/waste,
-/area/exterior/wastes)
+/obj/structure/railing,
+/obj/structure/decor/waste,
+/turf/open/indestructible/ground/outside/road,
+/area/exterior/city)
 "aG" = (
 /obj/machinery/light/small,
 /turf/open/floor/f13{
@@ -175,13 +176,6 @@
 /obj/structure/decor/wood_scrap,
 /turf/open/indestructible/ground/outside/road,
 /area/exterior/city)
-"bE" = (
-/obj/structure/decor/waste,
-/obj/effect/turf_decal/dirt_edge{
-	dir = 8
-	},
-/turf/open/indestructible/ground/outside/desert,
-/area/exterior/wastes)
 "bF" = (
 /obj/structure/chair/stool/wood,
 /turf/open/floor/f13{
@@ -254,11 +248,7 @@
 /turf/closed/wall/beton,
 /area/interior/clinic)
 "cE" = (
-/obj/structure/flora/tree/tall,
-/obj/effect/turf_decal/dirt_edge{
-	dir = 1
-	},
-/turf/open/indestructible/ground/outside/desert,
+/turf/open/indestructible/ground/outside/sidewalk/tile,
 /area/exterior/wastes)
 "cG" = (
 /obj/structure/simple_door/room,
@@ -360,9 +350,9 @@
 "dJ" = (
 /obj/structure/decoration/hatch{
 	icon_state = "hatch";
-	dir = 2
+	dir = 4
 	},
-/turf/open/indestructible/ground/outside/road,
+/turf/open/indestructible/ground/outside/sidewalk/tile,
 /area/exterior/city)
 "dL" = (
 /obj/structure/decor/carpet{
@@ -374,18 +364,11 @@
 	},
 /area/void)
 "dM" = (
-/obj/effect/turf_decal/line{
+/obj/effect/turf_decal/dirt_edge{
 	dir = 1
 	},
-/obj/structure/railing{
-	dir = 4;
-	pixel_y = 15
-	},
-/turf/open/floor/f13{
-	tag = "icon-floorrusty";
-	icon_state = "floorrusty"
-	},
-/area/interior/foundry)
+/turf/open/indestructible/ground/outside/desert,
+/area/exterior/wastes)
 "dS" = (
 /turf/open/indestructible/ground/outside/waste,
 /area/exterior/wastes)
@@ -441,9 +424,6 @@
 /obj/structure/bodycontainer/crematorium,
 /turf/closed/wall/beton,
 /area/interior/clinic)
-"eF" = (
-/turf/open/indestructible/ground/outside/sidewalk/tile,
-/area/exterior/wastes)
 "eG" = (
 /obj/item/melee/machete,
 /turf/open/floor/f13{
@@ -620,7 +600,7 @@
 /area/exterior/city/docks)
 "ha" = (
 /obj/effect/turf_decal/dirt_edge{
-	dir = 1
+	dir = 9
 	},
 /turf/open/indestructible/ground/outside/desert,
 /area/exterior/wastes)
@@ -677,20 +657,6 @@
 	icon_state = "floorrusty"
 	},
 /area/interior/clinic)
-"hw" = (
-/obj/structure/decor/spool{
-	pixel_y = 16;
-	pixel_x = -15;
-	plane = 0
-	},
-/obj/structure/decor/spool{
-	pixel_x = -2
-	},
-/turf/open/floor/f13{
-	tag = "icon-floorrusty";
-	icon_state = "floorrusty"
-	},
-/area/interior/foundry)
 "hz" = (
 /obj/effect/turf_decal/line{
 	dir = 1
@@ -786,6 +752,14 @@
 	},
 /turf/open/indestructible/ground/outside/road,
 /area/exterior/city)
+"iD" = (
+/obj/structure/decor/waste,
+/obj/structure/closet/crate/dumpster{
+	pixel_y = 12;
+	pixel_x = 8
+	},
+/turf/open/indestructible/ground/outside/sidewalk/tile,
+/area/exterior/city)
 "iE" = (
 /obj/structure/fence/church/post,
 /turf/open/indestructible/ground/outside/road,
@@ -805,13 +779,6 @@
 /obj/structure/fluff/rails,
 /turf/open/indestructible/ground/outside/desert,
 /area/interior/train_yard)
-"iQ" = (
-/obj/structure/flora/tree/tall,
-/obj/effect/turf_decal/dirt_edge{
-	dir = 8
-	},
-/turf/open/indestructible/ground/outside/desert,
-/area/exterior/wastes)
 "iS" = (
 /obj/machinery/door/poddoor/preopen,
 /turf/open/floor/f13{
@@ -883,13 +850,6 @@
 	},
 /turf/open/indestructible/ground/outside/road,
 /area/exterior/city)
-"js" = (
-/obj/structure/lamp_post{
-	pixel_x = 15;
-	pixel_y = -13
-	},
-/turf/open/indestructible/ground/outside/road,
-/area/exterior/wastes)
 "jF" = (
 /obj/structure/decor/cig_trash,
 /turf/open/floor/f13{
@@ -945,6 +905,14 @@
 	},
 /turf/open/indestructible/ground/floor/bath_tile,
 /area/interior/apartments)
+"ko" = (
+/obj/effect/particle_effect/smoke/reality_edge,
+/obj/structure/barrier,
+/obj/effect/turf_decal/dirt_edge{
+	dir = 1
+	},
+/turf/open/indestructible/ground/outside/desert,
+/area/exterior/wastes)
 "ks" = (
 /obj/structure/lattice/catwalk{
 	icon_state = "catwalk7-3"
@@ -1130,11 +1098,12 @@
 /turf/open/indestructible/ground/outside/road,
 /area/exterior/city)
 "mk" = (
-/obj/effect/turf_decal/dirt_edge{
-	dir = 5
+/obj/structure/railing{
+	dir = 1;
+	pixel_y = 14
 	},
-/turf/open/indestructible/ground/outside/desert,
-/area/exterior/wastes)
+/turf/open/indestructible/ground/outside/road,
+/area/exterior/city)
 "mm" = (
 /obj/effect/mob_spawn/human/bougie,
 /turf/open/indestructible/ground/floor/lattice,
@@ -1179,6 +1148,13 @@
 	icon_state = "floorrusty"
 	},
 /area/interior/foundry)
+"mJ" = (
+/obj/structure/fence/corner,
+/obj/structure/fence{
+	dir = 1
+	},
+/turf/open/indestructible/ground/outside/road,
+/area/exterior/city)
 "mN" = (
 /obj/effect/turf_decal/line{
 	dir = 5
@@ -1263,12 +1239,6 @@
 /obj/structure/decor/cig_trash,
 /turf/open/indestructible/ground/outside/sidewalk/tile,
 /area/void)
-"oy" = (
-/obj/effect/turf_decal/dirt_edge{
-	dir = 6
-	},
-/turf/open/indestructible/ground/outside/desert,
-/area/exterior/wastes)
 "oC" = (
 /obj/effect/turf_decal/line{
 	dir = 4
@@ -1359,9 +1329,10 @@
 	},
 /area/interior/city)
 "px" = (
-/obj/structure/decoration/hatch{
-	icon_state = "hatch";
-	dir = 4
+/obj/structure/decor/waste,
+/obj/structure/decor/tire{
+	icon_state = "shina5";
+	pixel_x = 10
 	},
 /turf/open/indestructible/ground/outside/road,
 /area/exterior/city)
@@ -1452,11 +1423,6 @@
 /obj/structure/railing,
 /turf/open/foundry,
 /area/interior/foundry)
-"qo" = (
-/obj/effect/particle_effect/smoke/reality_edge,
-/obj/structure/barrier,
-/turf/open/indestructible/ground/outside/waste,
-/area/exterior/wastes)
 "qq" = (
 /turf/closed/wall/ship,
 /area/void)
@@ -1514,6 +1480,16 @@
 /obj/structure/barricade/wooden/planks,
 /turf/closed/wall/beton_agro,
 /area/interior/spawning/kommandant)
+"qL" = (
+/obj/effect/turf_decal/roadline{
+	dir = 1
+	},
+/obj/structure/decor/wood_scrap,
+/obj/structure/decor/dump_bin/full{
+	pixel_x = -13
+	},
+/turf/open/indestructible/ground/outside/road,
+/area/exterior/city)
 "qM" = (
 /obj/effect/turf_decal/line{
 	dir = 9
@@ -1538,12 +1514,6 @@
 /obj/structure/chair/stool/wood,
 /turf/open/indestructible/ground/floor/lattice,
 /area/interior/city)
-"re" = (
-/obj/effect/turf_decal/dirt_edge{
-	dir = 8
-	},
-/turf/open/indestructible/ground/outside/desert,
-/area/exterior/wastes)
 "rg" = (
 /obj/effect/landmark/latejoin,
 /turf/open/indestructible/ground/outside/road,
@@ -1579,16 +1549,11 @@
 	},
 /turf/open/indestructible/ground/outside/dirt,
 /area/exterior/city)
-"rO" = (
-/obj/structure/lattice/catwalk{
-	icon_state = "catwalk12-0"
-	},
-/obj/structure/railing{
-	dir = 1;
-	pixel_y = 14
-	},
-/turf/open/foundry,
-/area/interior/foundry)
+"rK" = (
+/obj/effect/particle_effect/smoke/reality_edge,
+/obj/structure/barrier,
+/turf/open/indestructible/ground/outside/waste,
+/area/exterior/wastes)
 "rP" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -1786,30 +1751,12 @@
 /obj/effect/landmark/observer_start,
 /turf/open/indestructible/ground/outside/road,
 /area/exterior/city)
-"tK" = (
-/obj/structure/flora/tree/tall,
-/obj/effect/turf_decal/dirt_edge{
-	dir = 5
-	},
-/turf/open/indestructible/ground/outside/desert,
-/area/exterior/wastes)
 "tL" = (
 /obj/structure/decor/carpet{
 	icon_state = "oldcovertatteredtwo"
 	},
 /turf/open/indestructible/ground/floor/wood_floor,
 /area/interior/apartments)
-"tM" = (
-/obj/structure/decor/spool{
-	pixel_y = 15;
-	pixel_x = -23;
-	plane = 0
-	},
-/obj/structure/decor/spool{
-	pixel_x = -5
-	},
-/turf/open/indestructible/ground/outside/road,
-/area/exterior/city)
 "tQ" = (
 /turf/closed/indestructible/nothing,
 /area/interior/city)
@@ -1935,6 +1882,13 @@
 	},
 /turf/open/indestructible/ground/outside/sidewalk/tile,
 /area/exterior/city)
+"vh" = (
+/obj/structure/flora/tree/tall,
+/obj/effect/turf_decal/dirt_edge{
+	dir = 1
+	},
+/turf/open/indestructible/ground/outside/desert,
+/area/exterior/wastes)
 "vj" = (
 /obj/effect/turf_decal/roadline/corner,
 /turf/open/indestructible/ground/outside/road,
@@ -1980,14 +1934,6 @@
 /obj/effect/turf_decal/foundry_edge,
 /turf/open/foundry,
 /area/interior/foundry)
-"vy" = (
-/obj/structure/decor/waste,
-/obj/structure/closet/crate/dumpster{
-	pixel_y = 12;
-	pixel_x = 8
-	},
-/turf/open/indestructible/ground/outside/sidewalk/tile,
-/area/exterior/city)
 "vC" = (
 /obj/structure/simple_door/room,
 /turf/open/floor/f13{
@@ -2037,11 +1983,6 @@
 	},
 /turf/open/chasm/foundry,
 /area/interior/foundry)
-"vT" = (
-/obj/structure/decor/waste,
-/obj/structure/chair/stool/wood,
-/turf/open/indestructible/ground/outside/road,
-/area/exterior/city)
 "vU" = (
 /turf/open/indestructible/ground/floor/lattice,
 /area/interior/sewer)
@@ -2089,13 +2030,6 @@
 	icon_state = "lattice_new14"
 	},
 /area/interior/apartments)
-"wk" = (
-/obj/structure/fence/corner,
-/obj/structure/fence{
-	dir = 1
-	},
-/turf/open/indestructible/ground/outside/road,
-/area/exterior/city)
 "wm" = (
 /obj/effect/turf_decal/line{
 	dir = 8
@@ -2168,6 +2102,19 @@
 	icon_state = "lattice_new14"
 	},
 /area/interior/spawning/prole)
+"wQ" = (
+/obj/structure/fence{
+	dir = 1
+	},
+/turf/open/indestructible/ground/outside/road,
+/area/exterior/city)
+"wR" = (
+/obj/structure/flora/tree/tall,
+/obj/effect/turf_decal/dirt_edge{
+	dir = 4
+	},
+/turf/open/indestructible/ground/outside/desert,
+/area/exterior/wastes)
 "wV" = (
 /obj/effect/turf_decal/foundry_edge{
 	dir = 1
@@ -2285,9 +2232,14 @@
 	},
 /area/interior/city)
 "ye" = (
-/obj/structure/railing,
-/turf/open/indestructible/ground/outside/road,
-/area/exterior/city)
+/obj/structure/decor/spool{
+	pixel_x = 6
+	},
+/turf/open/floor/f13{
+	tag = "icon-floorrusty";
+	icon_state = "floorrusty"
+	},
+/area/interior/foundry)
 "yf" = (
 /obj/structure/lattice/catwalk{
 	icon_state = "catwalk3-0"
@@ -2317,10 +2269,6 @@
 	},
 /turf/open/indestructible/ground/outside/desert,
 /area/exterior/wastes)
-"yo" = (
-/obj/structure/decoration/hatch,
-/turf/open/indestructible/ground/outside/road,
-/area/exterior/city)
 "yt" = (
 /obj/structure/decor/spool{
 	pixel_x = 6
@@ -2356,6 +2304,12 @@
 /obj/structure/decor/waste,
 /turf/open/indestructible/ground/outside/waste,
 /area/exterior/wastes)
+"yL" = (
+/obj/structure/fence{
+	dir = 1
+	},
+/turf/open/indestructible/ground/outside/sidewalk/tile,
+/area/exterior/city)
 "yN" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -2480,10 +2434,7 @@
 /turf/open/indestructible/ground/floor/bath_tile,
 /area/interior/apartments)
 "zH" = (
-/obj/structure/railing{
-	dir = 1;
-	pixel_y = 14
-	},
+/obj/structure/railing,
 /turf/open/indestructible/ground/outside/road,
 /area/exterior/city)
 "zJ" = (
@@ -2540,6 +2491,13 @@
 	icon_state = "floorrusty"
 	},
 /area/interior/clinic)
+"Aq" = (
+/obj/structure/flora/tree/tall,
+/obj/effect/turf_decal/dirt_edge{
+	dir = 8
+	},
+/turf/open/indestructible/ground/outside/desert,
+/area/exterior/wastes)
 "Au" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -2608,6 +2566,13 @@
 /obj/effect/turf_decal/roadline,
 /turf/open/indestructible/ground/outside/water/sewer,
 /area/exterior/city)
+"Ba" = (
+/obj/structure/decoration/hatch{
+	icon_state = "hatch";
+	dir = 1
+	},
+/turf/open/indestructible/ground/outside/road,
+/area/exterior/city)
 "Be" = (
 /obj/structure/closet/crate/dumpster,
 /turf/open/indestructible/ground/outside/road,
@@ -2647,6 +2612,13 @@
 	},
 /turf/open/foundry,
 /area/interior/foundry)
+"Bt" = (
+/obj/structure/flora/tree/tall,
+/obj/effect/turf_decal/dirt_edge{
+	dir = 9
+	},
+/turf/open/indestructible/ground/outside/desert,
+/area/exterior/wastes)
 "BE" = (
 /obj/structure/campfire/drum,
 /obj/effect/turf_decal/line{
@@ -2663,6 +2635,13 @@
 "BL" = (
 /turf/closed/wall/bricks_white,
 /area/interior/city)
+"BU" = (
+/obj/structure/flora/tree/tall,
+/obj/effect/turf_decal/dirt_edge{
+	dir = 5
+	},
+/turf/open/indestructible/ground/outside/desert,
+/area/exterior/wastes)
 "BY" = (
 /obj/effect/turf_decal/roadline/noshadow/corner{
 	dir = 4
@@ -2760,12 +2739,6 @@
 /obj/structure/decor/wood_scrap,
 /turf/open/indestructible/ground/outside/desert,
 /area/exterior/wastes)
-"DA" = (
-/obj/structure/fence{
-	dir = 1
-	},
-/turf/open/indestructible/ground/outside/road,
-/area/exterior/city)
 "DD" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -2864,6 +2837,10 @@
 	icon_state = "bluedirtychess2"
 	},
 /area/interior/city)
+"Ew" = (
+/obj/structure/decoration/hatch,
+/turf/open/indestructible/ground/outside/road,
+/area/exterior/city)
 "EA" = (
 /obj/structure/window/fulltile/house{
 	tag = "icon-housewindow";
@@ -3039,12 +3016,20 @@
 /obj/structure/decor/cig_trash,
 /turf/open/indestructible/ground/outside/road,
 /area/exterior/city/docks)
-"Gd" = (
-/obj/effect/turf_decal/dirt_edge{
-	dir = 4
+"Gc" = (
+/obj/effect/turf_decal/roadline{
+	dir = 1
 	},
-/turf/open/indestructible/ground/outside/desert,
-/area/exterior/wastes)
+/obj/structure/decor/spool{
+	pixel_y = 7;
+	pixel_x = 5
+	},
+/obj/structure/decor/tire{
+	icon_state = "shina3";
+	pixel_x = -6
+	},
+/turf/open/indestructible/ground/outside/road,
+/area/exterior/city)
 "Ge" = (
 /obj/structure/decor/carpet{
 	icon_state = "oldcovertattered";
@@ -3121,6 +3106,13 @@
 /obj/structure/chair/stool/wood,
 /turf/open/indestructible/ground/outside/road,
 /area/exterior/city)
+"GX" = (
+/obj/structure/decor/waste,
+/obj/effect/turf_decal/dirt_edge{
+	dir = 8
+	},
+/turf/open/indestructible/ground/outside/desert,
+/area/exterior/wastes)
 "Ha" = (
 /obj/structure/fence/church{
 	dir = 4
@@ -3205,10 +3197,6 @@
 /obj/structure/fence/sewer_grate,
 /turf/open/foundry,
 /area/interior/foundry)
-"Ii" = (
-/obj/structure/scrapheap,
-/turf/open/indestructible/ground/outside/waste,
-/area/exterior/wastes)
 "Il" = (
 /obj/effect/step_trigger/teleporter{
 	dir = 1;
@@ -3238,6 +3226,19 @@
 	icon_state = "floorrusty"
 	},
 /area/interior/foundry)
+"IJ" = (
+/obj/effect/turf_decal/line{
+	dir = 1
+	},
+/obj/structure/railing{
+	dir = 4;
+	pixel_y = 15
+	},
+/turf/open/floor/f13{
+	tag = "icon-floorrusty";
+	icon_state = "floorrusty"
+	},
+/area/interior/foundry)
 "IY" = (
 /obj/structure/cursed_money,
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
@@ -3251,6 +3252,11 @@
 	icon_state = "floorrusty"
 	},
 /area/void)
+"Jb" = (
+/obj/structure/decor/waste,
+/obj/structure/chair/stool/wood,
+/turf/open/indestructible/ground/outside/road,
+/area/exterior/city)
 "Jf" = (
 /turf/open/indestructible/ground/outside/sidewalk/stairs{
 	dir = 8
@@ -3374,6 +3380,12 @@
 	},
 /turf/open/foundry,
 /area/interior/foundry)
+"Ka" = (
+/obj/effect/turf_decal/dirt_edge{
+	dir = 5
+	},
+/turf/open/indestructible/ground/outside/desert,
+/area/exterior/wastes)
 "Kb" = (
 /obj/structure/rack/large/shelf{
 	dir = 4
@@ -3484,6 +3496,10 @@
 /obj/structure/fence/church/end,
 /turf/open/indestructible/ground/outside/road,
 /area/exterior/city)
+"LI" = (
+/obj/structure/scrapheap,
+/turf/open/indestructible/ground/outside/waste,
+/area/exterior/wastes)
 "LK" = (
 /turf/closed/wall/brickdark,
 /area/interior/spawning/prole)
@@ -3515,14 +3531,6 @@
 	dir = 1
 	},
 /area/exterior/city)
-"Mq" = (
-/obj/effect/particle_effect/smoke/reality_edge,
-/obj/structure/barrier,
-/obj/effect/turf_decal/dirt_edge{
-	dir = 1
-	},
-/turf/open/indestructible/ground/outside/desert,
-/area/exterior/wastes)
 "Mw" = (
 /obj/structure/fence/church/end{
 	dir = 8
@@ -3603,6 +3611,13 @@
 	},
 /turf/open/indestructible/ground/outside/sidewalk/stairs,
 /area/exterior/city)
+"Nb" = (
+/obj/structure/lamp_post{
+	pixel_x = 15;
+	pixel_y = -13
+	},
+/turf/open/indestructible/ground/outside/road,
+/area/exterior/wastes)
 "Ne" = (
 /obj/structure/decor/foundry,
 /turf/open/floor/f13{
@@ -3627,6 +3642,12 @@
 /obj/structure/fence/post,
 /turf/open/indestructible/ground/outside/road,
 /area/exterior/city)
+"NA" = (
+/obj/effect/turf_decal/dirt_edge{
+	dir = 4
+	},
+/turf/open/indestructible/ground/outside/desert,
+/area/exterior/wastes)
 "NF" = (
 /turf/open/indestructible/ground/sewer_water,
 /area/interior/sewer)
@@ -3792,6 +3813,24 @@
 /obj/structure/sign/warning/biohazard,
 /turf/closed/wall/bricks_white,
 /area/interior/city)
+"Pi" = (
+/obj/structure/decor/spool{
+	pixel_y = 15;
+	pixel_x = -23;
+	plane = 0
+	},
+/obj/structure/decor/spool{
+	pixel_x = -5
+	},
+/turf/open/indestructible/ground/outside/road,
+/area/exterior/city)
+"Pj" = (
+/obj/structure/decoration/hatch{
+	icon_state = "hatch";
+	dir = 2
+	},
+/turf/open/indestructible/ground/outside/road,
+/area/exterior/city)
 "Pk" = (
 /obj/structure/table/stalker,
 /obj/structure/decor/carpet{
@@ -3974,18 +4013,6 @@
 	},
 /turf/open/indestructible/ground/outside/road,
 /area/exterior/city)
-"RA" = (
-/obj/effect/turf_decal/dirt_edge{
-	dir = 9
-	},
-/turf/open/indestructible/ground/outside/desert,
-/area/exterior/wastes)
-"RP" = (
-/obj/structure/fence{
-	dir = 1
-	},
-/turf/open/indestructible/ground/outside/sidewalk/tile,
-/area/exterior/city)
 "RS" = (
 /obj/item/flashlight/lantern,
 /turf/open/floor/f13{
@@ -4006,6 +4033,13 @@
 	},
 /turf/open/indestructible/ground/outside/road,
 /area/exterior/city/docks)
+"RZ" = (
+/obj/structure/decoration/hatch{
+	icon_state = "hatch";
+	dir = 8
+	},
+/turf/open/indestructible/ground/outside/road,
+/area/exterior/city)
 "Sa" = (
 /obj/effect/turf_decal/foundry_edge{
 	dir = 8
@@ -4097,13 +4131,6 @@
 	icon_state = "floorrusty"
 	},
 /area/interior/city)
-"Tq" = (
-/obj/structure/decoration/hatch{
-	icon_state = "hatch";
-	dir = 4
-	},
-/turf/open/indestructible/ground/outside/sidewalk/tile,
-/area/exterior/city)
 "Ts" = (
 /obj/effect/particle_effect/smoke/reality_edge,
 /obj/structure/barrier,
@@ -4113,12 +4140,11 @@
 /turf/open/indestructible/ground/outside/sidewalk/stairs,
 /area/exterior/city)
 "Tx" = (
-/obj/structure/decoration/hatch{
-	icon_state = "hatch";
-	dir = 8
+/obj/effect/turf_decal/dirt_edge{
+	dir = 6
 	},
-/turf/open/indestructible/ground/outside/road,
-/area/exterior/city)
+/turf/open/indestructible/ground/outside/desert,
+/area/exterior/wastes)
 "Tz" = (
 /obj/effect/turf_decal/line{
 	dir = 1
@@ -4175,29 +4201,12 @@
 	icon_state = "floorrusty"
 	},
 /area/interior/city)
-"TW" = (
-/obj/structure/decoration/hatch{
-	icon_state = "hatch";
-	dir = 1
-	},
-/turf/open/indestructible/ground/outside/road,
-/area/exterior/city)
 "Uc" = (
 /obj/structure/decor/spool{
 	pixel_x = 6
 	},
 /turf/open/indestructible/ground/outside/road,
 /area/exterior/city)
-"Ug" = (
-/obj/structure/lattice/catwalk{
-	icon_state = "catwalk13-5"
-	},
-/obj/structure/railing,
-/obj/effect/turf_decal/foundry_edge{
-	dir = 4
-	},
-/turf/open/foundry,
-/area/interior/foundry)
 "Uh" = (
 /obj/effect/turf_decal/line,
 /obj/structure/object_pass/foundry_bucket_rails,
@@ -4243,22 +4252,6 @@
 /obj/structure/shitheap,
 /turf/open/indestructible/ground/outside/dirt,
 /area/exterior/city)
-"UI" = (
-/obj/structure/flora/tree/tall,
-/obj/effect/turf_decal/dirt_edge{
-	dir = 9
-	},
-/turf/open/indestructible/ground/outside/desert,
-/area/exterior/wastes)
-"UR" = (
-/obj/structure/decor/spool{
-	pixel_x = 6
-	},
-/turf/open/floor/f13{
-	tag = "icon-floorrusty";
-	icon_state = "floorrusty"
-	},
-/area/interior/foundry)
 "UX" = (
 /obj/effect/turf_decal/roadline/noshadow{
 	dir = 9
@@ -4278,6 +4271,10 @@
 	},
 /turf/open/indestructible/ground/outside/road,
 /area/exterior/city)
+"Vb" = (
+/obj/structure/decor/wood_scrap,
+/turf/open/indestructible/ground/outside/waste,
+/area/exterior/wastes)
 "Vg" = (
 /obj/effect/turf_decal/line{
 	dir = 4
@@ -4441,9 +4438,22 @@
 	icon_state = "floorrustysolid"
 	},
 /area/interior/spawning/bioslave)
+"WH" = (
+/obj/structure/decoration/hatch{
+	icon_state = "hatch";
+	dir = 4
+	},
+/turf/open/indestructible/ground/outside/road,
+/area/exterior/city)
 "WM" = (
 /turf/open/indestructible/ground/floor/wood_floor,
 /area/interior/apartments)
+"WN" = (
+/obj/effect/turf_decal/dirt_edge{
+	dir = 8
+	},
+/turf/open/indestructible/ground/outside/desert,
+/area/exterior/wastes)
 "WP" = (
 /obj/structure/grill,
 /turf/open/floor/f13{
@@ -4501,6 +4511,20 @@
 /obj/structure/railing{
 	dir = 4;
 	pixel_y = 15
+	},
+/turf/open/floor/f13{
+	tag = "icon-floorrusty";
+	icon_state = "floorrusty"
+	},
+/area/interior/foundry)
+"XI" = (
+/obj/structure/decor/spool{
+	pixel_y = 16;
+	pixel_x = -15;
+	plane = 0
+	},
+/obj/structure/decor/spool{
+	pixel_x = -2
 	},
 /turf/open/floor/f13{
 	tag = "icon-floorrusty";
@@ -4615,12 +4639,25 @@
 	},
 /area/interior/city)
 "YM" = (
-/obj/structure/flora/tree/tall,
-/obj/effect/turf_decal/dirt_edge{
+/obj/structure/lattice/catwalk{
+	icon_state = "catwalk12-0"
+	},
+/obj/structure/railing{
+	dir = 1;
+	pixel_y = 14
+	},
+/turf/open/foundry,
+/area/interior/foundry)
+"YV" = (
+/obj/structure/lattice/catwalk{
+	icon_state = "catwalk13-5"
+	},
+/obj/structure/railing,
+/obj/effect/turf_decal/foundry_edge{
 	dir = 4
 	},
-/turf/open/indestructible/ground/outside/desert,
-/area/exterior/wastes)
+/turf/open/foundry,
+/area/interior/foundry)
 "YZ" = (
 /obj/structure/flora/tree/tall,
 /turf/open/indestructible/ground/outside/waste,
@@ -23080,8 +23117,8 @@ yi
 NV
 NV
 NV
-NV
-NV
+XX
+XX
 XX
 XX
 XX
@@ -23336,9 +23373,9 @@ yi
 yi
 yi
 yi
-yi
-yi
 NV
+XX
+XX
 XX
 XX
 XX
@@ -23593,9 +23630,9 @@ yi
 yi
 NV
 yi
-yi
-yi
 NV
+XX
+XX
 XX
 XX
 XX
@@ -23850,9 +23887,9 @@ yi
 yi
 NV
 pY
-pY
 NV
-NV
+sj
+sj
 sj
 XX
 XX
@@ -24107,9 +24144,9 @@ NV
 NV
 NV
 Ly
-Ly
-TI
-Ly
+zH
+Gc
+Va
 sj
 XX
 XX
@@ -24362,11 +24399,11 @@ qz
 ML
 yi
 NV
+sa
 Ly
-Ly
-Ly
-TI
-Ly
+aD
+qL
+px
 sj
 sj
 sj
@@ -24865,7 +24902,7 @@ Vq
 Vq
 Vq
 Jq
-dM
+IJ
 AC
 AC
 mH
@@ -24877,7 +24914,7 @@ xf
 yi
 NV
 Pu
-Ly
+sa
 Ly
 TI
 Ly
@@ -25381,7 +25418,7 @@ Ee
 Hd
 xK
 GR
-Ug
+YV
 xK
 xK
 xK
@@ -26404,7 +26441,7 @@ oI
 Eb
 wV
 Hd
-rO
+YM
 Hd
 Wu
 ML
@@ -26661,7 +26698,7 @@ yi
 yi
 wV
 Hd
-rO
+YM
 Hd
 Wu
 ML
@@ -27525,10 +27562,10 @@ XX
 XX
 XX
 sj
-qo
-qo
+rK
+rK
 Ts
-Mq
+ko
 Ts
 Ts
 Ts
@@ -27785,7 +27822,7 @@ sj
 dS
 YZ
 dS
-ha
+dM
 zp
 zp
 zp
@@ -28042,7 +28079,7 @@ sj
 dS
 dS
 dS
-tK
+BU
 zp
 zp
 zp
@@ -28208,7 +28245,7 @@ ks
 tG
 xf
 yi
-UR
+ye
 NV
 tv
 Ly
@@ -28300,10 +28337,10 @@ dS
 dS
 YZ
 dS
-ha
+dM
 zp
-Gd
-YM
+NA
+wR
 zp
 zp
 zp
@@ -28465,7 +28502,7 @@ Vq
 pF
 xf
 yi
-hw
+XI
 NV
 Ly
 Ly
@@ -28557,11 +28594,11 @@ dS
 YZ
 dS
 dS
-mk
-oy
+Ka
+Tx
 YZ
 dS
-mk
+Ka
 zp
 jl
 zp
@@ -28819,7 +28856,7 @@ dS
 dS
 dS
 dS
-mk
+Ka
 zp
 jl
 zp
@@ -28986,7 +29023,7 @@ yi
 yi
 yi
 NV
-TW
+Ba
 Pq
 Pq
 Ly
@@ -29077,7 +29114,7 @@ sI
 sI
 dS
 YZ
-mk
+Ka
 zp
 zp
 zp
@@ -29305,7 +29342,7 @@ Ly
 Ly
 Ly
 Ly
-ye
+zH
 Ld
 Xl
 Xl
@@ -29562,7 +29599,7 @@ nO
 Ly
 Ly
 Ly
-ye
+zH
 mN
 WS
 WS
@@ -29592,7 +29629,7 @@ EN
 dS
 dS
 YZ
-mk
+Ka
 zp
 zp
 zp
@@ -29850,7 +29887,7 @@ dS
 dS
 dS
 dS
-mk
+Ka
 jl
 zp
 zp
@@ -30108,8 +30145,8 @@ dS
 dS
 dS
 YZ
-mk
-Gd
+Ka
+NA
 zp
 jl
 zp
@@ -30333,7 +30370,7 @@ Ly
 Ly
 Ly
 Ly
-ye
+zH
 Ld
 Xl
 Xl
@@ -30367,7 +30404,7 @@ dS
 dS
 dS
 dS
-ha
+dM
 zp
 zp
 zp
@@ -30590,7 +30627,7 @@ Ly
 nO
 Ly
 Ly
-ye
+zH
 mN
 WS
 WS
@@ -30624,7 +30661,7 @@ YZ
 dS
 dS
 dS
-mk
+Ka
 jl
 zp
 zp
@@ -30882,7 +30919,7 @@ dS
 yJ
 dS
 dS
-ha
+dM
 zp
 jl
 zp
@@ -31139,7 +31176,7 @@ dS
 YZ
 dS
 dS
-ha
+dM
 zp
 zp
 zp
@@ -31361,7 +31398,7 @@ Ly
 Ly
 Ly
 Ly
-ye
+zH
 Ld
 Xl
 Xl
@@ -31395,7 +31432,7 @@ dS
 YZ
 dS
 dS
-RA
+ha
 zp
 zp
 jl
@@ -31618,7 +31655,7 @@ Ly
 Ly
 Ly
 Ly
-ye
+zH
 mN
 WS
 WS
@@ -31651,7 +31688,7 @@ dS
 dS
 dS
 dS
-RA
+ha
 jl
 zp
 zp
@@ -31906,8 +31943,8 @@ dS
 YZ
 dS
 dS
-RA
-iQ
+ha
+Aq
 zp
 zp
 zp
@@ -32162,7 +32199,7 @@ sI
 dS
 dS
 dS
-UI
+Bt
 zp
 zp
 zp
@@ -32340,7 +32377,7 @@ sj
 xn
 KP
 Ly
-px
+WH
 Ly
 Ly
 Ly
@@ -32389,7 +32426,7 @@ Ly
 Hg
 Ly
 Ly
-ye
+zH
 Ld
 Xl
 Xl
@@ -32419,7 +32456,7 @@ dU
 dS
 dS
 dS
-ha
+dM
 zp
 zp
 zp
@@ -32641,12 +32678,12 @@ sj
 sj
 sj
 sj
-tM
-vT
+Pi
+Jb
 Ly
 KP
 Ly
-ye
+zH
 mN
 WS
 WS
@@ -32675,7 +32712,7 @@ Zn
 EN
 dS
 dS
-RA
+ha
 jl
 zp
 ih
@@ -32932,7 +32969,7 @@ sI
 sI
 dS
 dS
-cE
+vh
 zp
 zp
 zp
@@ -33180,15 +33217,15 @@ XX
 XX
 sj
 dS
-Ii
+LI
 dS
 dS
 dS
-aD
+Vb
 dS
 dS
 yJ
-RA
+ha
 zp
 zp
 zp
@@ -33442,9 +33479,9 @@ YZ
 yJ
 dS
 dS
-RA
-re
-re
+ha
+WN
+WN
 zp
 zp
 zp
@@ -33696,9 +33733,9 @@ sj
 dS
 dS
 dS
-RA
-re
-bE
+ha
+WN
+GX
 zp
 zp
 zp
@@ -33950,9 +33987,9 @@ XX
 XX
 sj
 sj
-RA
-re
-re
+ha
+WN
+WN
 zp
 zp
 zp
@@ -34442,7 +34479,7 @@ Ly
 jf
 Ly
 Pq
-yo
+Ew
 sj
 XX
 XX
@@ -34640,7 +34677,7 @@ TQ
 Kb
 TQ
 BL
-TW
+Ba
 Pq
 Pq
 Ly
@@ -35210,10 +35247,10 @@ Ly
 Ly
 Ly
 Ly
-wk
-DA
-RP
-DA
+mJ
+wQ
+yL
+wQ
 wI
 Ly
 Ly
@@ -35489,7 +35526,7 @@ Pq
 Pq
 Pq
 Qb
-eF
+cE
 sI
 sI
 yl
@@ -35746,7 +35783,7 @@ Pq
 Pq
 Pq
 Pq
-eF
+cE
 sI
 sI
 yl
@@ -35943,7 +35980,7 @@ Ly
 Ly
 Ly
 Ly
-dJ
+Pj
 sj
 XX
 XX
@@ -36003,7 +36040,7 @@ Pq
 Pq
 Pq
 Pq
-eF
+cE
 sI
 sI
 yl
@@ -36185,7 +36222,7 @@ ud
 Ly
 Pq
 Pq
-dJ
+Pj
 sj
 TQ
 bn
@@ -36260,7 +36297,7 @@ Ly
 Ly
 sa
 sj
-js
+Nb
 qC
 UX
 xo
@@ -36492,7 +36529,7 @@ TE
 Re
 Ch
 UZ
-zH
+mk
 Ly
 Ly
 Ly
@@ -36749,7 +36786,7 @@ Pu
 KP
 Hg
 lD
-zH
+mk
 Ly
 Ly
 Ly
@@ -36997,7 +37034,7 @@ Pq
 Pq
 ZI
 Pq
-dJ
+Pj
 uE
 XX
 XX
@@ -37006,7 +37043,7 @@ Ly
 VP
 Ly
 lD
-zH
+mk
 Ly
 zX
 pa
@@ -37263,7 +37300,7 @@ tv
 Ly
 Ly
 lD
-zH
+mk
 Ly
 co
 dc
@@ -37520,7 +37557,7 @@ Ly
 KP
 Ly
 HP
-zH
+mk
 Ly
 jr
 Va
@@ -38247,7 +38284,7 @@ Ly
 Ly
 Ly
 Ly
-Tx
+RZ
 Ly
 Ly
 sa
@@ -38263,7 +38300,7 @@ Ly
 Ly
 Ly
 Ly
-Tx
+RZ
 Ly
 Ly
 Ly
@@ -39291,11 +39328,11 @@ VS
 Sg
 Pq
 Pq
-jm
-oO
-oO
-sh
-Kj
+qM
+VS
+VS
+FK
+Sg
 XP
 Pq
 Pq
@@ -40584,7 +40621,7 @@ Kj
 XP
 Pq
 Pq
-yo
+Ew
 pD
 XX
 XX
@@ -42652,7 +42689,7 @@ Ly
 sa
 ez
 iC
-Tx
+RZ
 Oe
 sa
 Ly
@@ -43166,7 +43203,7 @@ Pq
 eO
 KL
 mc
-vy
+iD
 Pq
 Pq
 eO
@@ -43669,7 +43706,7 @@ BL
 Ly
 Ly
 sa
-px
+WH
 Ly
 Ly
 PT
@@ -46225,7 +46262,7 @@ sj
 kO
 Pq
 Pq
-Tq
+dJ
 hs
 Wh
 Pq

@@ -2822,7 +2822,6 @@
 #include "code\sepulcher\objects\structures\large_shelves.dm"
 #include "code\sepulcher\objects\structures\laundrybin.dm"
 #include "code\sepulcher\objects\structures\lore_altar.dm"
-#include "code\sepulcher\objects\structures\railing.dm"
 #include "code\sepulcher\objects\structures\scrapheap.dm"
 #include "code\sepulcher\objects\structures\commerce\_commerce_console.dm"
 #include "code\sepulcher\objects\structures\commerce\directionals.dm"
