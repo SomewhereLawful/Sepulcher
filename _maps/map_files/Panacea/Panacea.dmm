@@ -148,6 +148,12 @@
 /obj/structure/barricade/wooden/planks,
 /turf/open/indestructible/ground/floor/lattice,
 /area/interior/spawning/kommandant)
+"bi" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/open/indestructible/ground/floor/lattice,
+/area/interior/spawning/kommandant)
 "bl" = (
 /obj/effect/turf_decal/line,
 /turf/open/floor/f13{
@@ -237,6 +243,12 @@
 	},
 /turf/open/indestructible/ground/outside/road,
 /area/exterior/city)
+"cr" = (
+/obj/effect/turf_decal/line{
+	dir = 9
+	},
+/turf/open/indestructible/ground/floor/wood_floor,
+/area/interior/spawning/kommandant)
 "cy" = (
 /turf/closed/wall/log,
 /area/exterior/city)
@@ -280,7 +292,7 @@
 /obj/structure/chair/pew/right{
 	dir = 1
 	},
-/obj/machinery/light{
+/obj/effect/turf_decal/line{
 	dir = 4
 	},
 /turf/open/indestructible/ground/floor/wood_floor,
@@ -444,6 +456,16 @@
 "eY" = (
 /turf/closed/wall/bricks_white,
 /area/interior/spawning/bioslave)
+"eZ" = (
+/obj/structure/railing{
+	dir = 4;
+	pixel_y = 15
+	},
+/turf/open/floor/f13{
+	tag = "icon-floorrusty";
+	icon_state = "floorrusty"
+	},
+/area/interior/foundry)
 "ff" = (
 /obj/structure/foundry/steel_bucket,
 /turf/open/chasm/foundry,
@@ -806,6 +828,13 @@
 	},
 /turf/open/indestructible/ground/outside/road,
 /area/exterior/city)
+"jA" = (
+/obj/machinery/light/small,
+/turf/open/floor/f13{
+	tag = "icon-yellowdirtyfull";
+	icon_state = "yellowdirtyfull"
+	},
+/area/interior/foundry)
 "jF" = (
 /obj/structure/decor/cig_trash,
 /turf/open/floor/f13{
@@ -826,6 +855,20 @@
 	},
 /turf/open/indestructible/ground/outside/road,
 /area/exterior/city/docks)
+"jN" = (
+/obj/structure/lattice/catwalk{
+	icon_state = "catwalk11-12"
+	},
+/obj/structure/railing{
+	dir = 4;
+	pixel_y = 15
+	},
+/obj/effect/turf_decal/foundry_edge{
+	dir = 1
+	},
+/obj/structure/object_pass/foundry_bucket_rails,
+/turf/open/foundry,
+/area/interior/foundry)
 "kd" = (
 /turf/closed/wall/ship_hull{
 	icon_state = "hull2"
@@ -978,6 +1021,12 @@
 	icon_state = "lattice_new14"
 	},
 /area/interior/city)
+"lR" = (
+/obj/effect/turf_decal/line{
+	dir = 5
+	},
+/turf/open/indestructible/ground/floor/wood_floor,
+/area/interior/spawning/kommandant)
 "lS" = (
 /obj/effect/step_trigger/teleporter{
 	dir = 1;
@@ -1138,6 +1187,12 @@
 	icon_state = "floorrustysolid"
 	},
 /area/interior/spawning/bioslave)
+"nY" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/open/indestructible/ground/floor/wood_floor,
+/area/interior/spawning/kommandant)
 "oa" = (
 /turf/open/indestructible/ground/outside/waste,
 /area/interior/train_yard)
@@ -1721,6 +1776,13 @@
 	},
 /turf/open/indestructible/ground/outside/road,
 /area/exterior/city/docks)
+"uD" = (
+/obj/structure/closet/utilty_locker,
+/turf/open/floor/f13{
+	tag = "icon-floorrusty";
+	icon_state = "floorrusty"
+	},
+/area/interior/foundry)
 "uE" = (
 /turf/closed/wall/bricks_yellow,
 /area/interior/city)
@@ -1827,6 +1889,12 @@
 /obj/effect/turf_decal/foundry_edge,
 /turf/open/foundry,
 /area/interior/foundry)
+"vB" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/open/indestructible/ground/floor/wood_floor,
+/area/interior/spawning/kommandant)
 "vC" = (
 /obj/structure/simple_door/room,
 /turf/open/floor/f13{
@@ -2291,7 +2359,10 @@
 /turf/open/indestructible/ground/floor/wood_floor,
 /area/interior/apartments)
 "zz" = (
-/obj/structure/decor/water_tank,
+/obj/structure/railing{
+	dir = 1;
+	pixel_y = 14
+	},
 /turf/open/floor/f13{
 	tag = "icon-floorrusty";
 	icon_state = "floorrusty"
@@ -2775,7 +2846,7 @@
 /obj/structure/chair/pew/left{
 	dir = 1
 	},
-/obj/machinery/light{
+/obj/effect/turf_decal/line{
 	dir = 8
 	},
 /turf/open/indestructible/ground/floor/wood_floor,
@@ -2831,6 +2902,7 @@
 	dir = 1;
 	pixel_y = 14
 	},
+/obj/structure/object_pass/foundry_bucket_rails,
 /turf/open/chasm/foundry,
 /area/interior/foundry)
 "FA" = (
@@ -2868,6 +2940,15 @@
 	},
 /turf/open/foundry,
 /area/interior/foundry)
+"FQ" = (
+/obj/structure/decor/apc{
+	pixel_y = 29
+	},
+/turf/open/floor/f13{
+	tag = "icon-floorrusty";
+	icon_state = "floorrusty"
+	},
+/area/interior/city)
 "FR" = (
 /obj/effect/landmark/latejoin/kommandant,
 /turf/open/indestructible/ground/floor/lattice,
@@ -2905,6 +2986,15 @@
 /obj/effect/particle_effect/smoke/reality_edge,
 /turf/open/indestructible/ground/outside/desert,
 /area/exterior/wastes)
+"Gn" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/open/floor/f13{
+	tag = "icon-floorrusty";
+	icon_state = "floorrusty"
+	},
+/area/interior/foundry)
 "Gp" = (
 /obj/structure/decor/cig_trash,
 /turf/open/floor/f13{
@@ -3089,7 +3179,9 @@
 /turf/open/chasm/foundry,
 /area/interior/foundry)
 "IC" = (
-/obj/structure/closet,
+/obj/effect/turf_decal/line{
+	dir = 8
+	},
 /turf/open/floor/f13{
 	tag = "icon-floorrusty";
 	icon_state = "floorrusty"
@@ -3112,6 +3204,13 @@
 /obj/structure/cursed_money,
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
 /area/void)
+"IZ" = (
+/obj/structure/coven_object/chapel_font,
+/obj/effect/turf_decal/line{
+	dir = 5
+	},
+/turf/open/indestructible/ground/floor/wood_floor,
+/area/interior/spawning/kommandant)
 "Ja" = (
 /obj/structure/railing{
 	dir = 1;
@@ -3212,6 +3311,20 @@
 	},
 /turf/open/foundry,
 /area/interior/foundry)
+"JB" = (
+/obj/structure/lattice/catwalk{
+	icon_state = "catwalk7-3"
+	},
+/obj/structure/railing{
+	dir = 8;
+	pixel_y = 15
+	},
+/obj/effect/turf_decal/foundry_edge{
+	dir = 1
+	},
+/obj/structure/object_pass/foundry_bucket_rails,
+/turf/open/foundry,
+/area/interior/foundry)
 "JJ" = (
 /obj/structure/simple_door/room,
 /turf/open/floor/f13{
@@ -3253,6 +3366,7 @@
 /obj/structure/lattice/catwalk{
 	icon_state = "catwalk15-10"
 	},
+/obj/structure/object_pass/foundry_bucket_rails,
 /turf/open/foundry,
 /area/interior/foundry)
 "Ka" = (
@@ -3402,6 +3516,15 @@
 	dir = 1
 	},
 /area/exterior/city)
+"Mu" = (
+/obj/effect/turf_decal/line{
+	dir = 4
+	},
+/turf/open/floor/f13{
+	tag = "icon-floorrusty";
+	icon_state = "floorrusty"
+	},
+/area/interior/foundry)
 "Mw" = (
 /obj/structure/fence/church/end{
 	dir = 8
@@ -3667,7 +3790,8 @@
 /area/interior/city)
 "Pd" = (
 /obj/structure/decor/carpet{
-	icon_state = "oldcovertattered"
+	icon_state = "oldcovertattered";
+	pixel_x = -16
 	},
 /turf/open/floor/f13{
 	tag = "icon-floorrusty";
@@ -3847,6 +3971,13 @@
 	},
 /turf/open/indestructible/ground/floor/wood_floor,
 /area/interior/apartments)
+"QT" = (
+/obj/effect/turf_decal/line{
+	dir = 8
+	},
+/obj/machinery/light/small,
+/turf/open/indestructible/ground/floor/wood_floor,
+/area/interior/spawning/kommandant)
 "QV" = (
 /obj/structure/decor/iconostasis/right,
 /turf/open/indestructible/ground/floor/lattice,
@@ -3953,6 +4084,16 @@
 	},
 /turf/open/indestructible/ground/outside/road,
 /area/exterior/wastes)
+"SU" = (
+/obj/structure/railing{
+	dir = 8;
+	pixel_y = 15
+	},
+/turf/open/floor/f13{
+	tag = "icon-floorrusty";
+	icon_state = "floorrusty"
+	},
+/area/interior/foundry)
 "SV" = (
 /obj/structure/decor/cig_trash,
 /turf/open/floor/f13{
@@ -3995,6 +4136,13 @@
 	},
 /turf/open/indestructible/ground/outside/desert,
 /area/exterior/wastes)
+"Ty" = (
+/obj/structure/decor/candle,
+/obj/machinery/light/small/broken{
+	dir = 1
+	},
+/turf/open/indestructible/ground/floor/lattice,
+/area/interior/spawning/kommandant)
 "Tz" = (
 /obj/effect/turf_decal/line{
 	dir = 1
@@ -4097,6 +4245,20 @@
 /obj/structure/shitheap,
 /turf/open/indestructible/ground/outside/dirt,
 /area/exterior/city)
+"UK" = (
+/obj/effect/turf_decal/line{
+	dir = 4
+	},
+/obj/machinery/light/small,
+/turf/open/indestructible/ground/floor/wood_floor,
+/area/interior/spawning/kommandant)
+"UR" = (
+/obj/structure/coven_object/chapel_phylactery,
+/obj/effect/turf_decal/line{
+	dir = 9
+	},
+/turf/open/indestructible/ground/floor/wood_floor,
+/area/interior/spawning/kommandant)
 "UX" = (
 /obj/effect/turf_decal/roadline/noshadow{
 	dir = 9
@@ -4165,6 +4327,10 @@
 /area/interior/apartments)
 "VH" = (
 /obj/structure/decor/waste,
+/obj/structure/railing{
+	dir = 8;
+	pixel_y = 15
+	},
 /turf/open/floor/f13{
 	tag = "icon-floorrusty";
 	icon_state = "floorrusty"
@@ -21133,15 +21299,15 @@ XX
 XX
 XX
 XX
-NV
-NV
-NV
-NV
-NV
-NV
-NV
-NV
-NV
+XX
+XX
+XX
+XX
+XX
+XX
+XX
+XX
+XX
 XX
 XX
 XX
@@ -21391,14 +21557,14 @@ XX
 XX
 XX
 NV
-jI
-yi
-DH
-yi
-yi
-DH
-yi
 NV
+NV
+NV
+NV
+NV
+NV
+NV
+XX
 XX
 XX
 XX
@@ -21653,9 +21819,9 @@ yi
 yi
 yi
 yi
-yi
-yi
+DH
 NV
+XX
 XX
 XX
 XX
@@ -21905,14 +22071,14 @@ NV
 NV
 NV
 NV
-NV
-QJ
+jI
 yi
-gh
-gh
 yi
-Gq
+yi
+yi
+yi
 NV
+XX
 XX
 XX
 XX
@@ -22161,15 +22327,15 @@ XX
 NV
 yi
 yi
-yi
-pY
-yi
-yi
-yi
-yi
-yi
-yi
 NV
+gh
+yi
+td
+yi
+yi
+DH
+NV
+XX
 XX
 XX
 XX
@@ -22418,15 +22584,15 @@ XX
 NV
 yi
 yi
-yi
 NV
-yi
-td
-yi
-yi
-td
-yi
 NV
+QJ
+gh
+yi
+yi
+Gq
+NV
+XX
 XX
 XX
 XX
@@ -22676,12 +22842,12 @@ NV
 QJ
 yi
 yi
-NV
-NV
-NV
 pY
-pY
-NV
+yi
+td
+yi
+yi
+cn
 NV
 NV
 NV
@@ -22934,13 +23100,13 @@ yi
 yi
 yi
 NV
-zz
+yi
 yi
 yi
 yi
 yi
 NV
-yi
+uD
 yi
 yi
 yi
@@ -23191,13 +23357,13 @@ NV
 gh
 gh
 NV
-yi
-yi
-yi
-yi
-yi
+NV
+NV
 pY
-yi
+pY
+NV
+NV
+uD
 yi
 yi
 yi
@@ -23450,10 +23616,10 @@ NV
 NV
 yi
 yi
-cn
 yi
 yi
-pY
+yi
+NV
 yi
 yi
 yi
@@ -23706,11 +23872,11 @@ yi
 NV
 yi
 yi
+eZ
+eZ
 yi
 yi
-yi
-yi
-NV
+pY
 yi
 uW
 yi
@@ -23962,10 +24128,10 @@ gh
 yi
 NV
 ww
-yi
-yi
-yi
-yi
+Eb
+Iv
+qz
+zz
 yi
 NV
 NV
@@ -24219,10 +24385,10 @@ yi
 yi
 pY
 yi
-yi
-yi
-cn
-yi
+Eb
+yZ
+ji
+zz
 Eb
 Iv
 qz
@@ -24477,7 +24643,7 @@ NV
 NV
 oI
 yi
-yi
+SU
 VH
 yi
 Eb
@@ -26030,7 +26196,7 @@ yi
 KS
 oG
 oG
-oG
+jA
 NV
 XX
 XX
@@ -26809,7 +26975,7 @@ XX
 XX
 XX
 XX
-XX
+sj
 Ly
 Ly
 Ly
@@ -27040,7 +27206,7 @@ PA
 Qe
 Qe
 Uh
-HT
+jN
 fB
 UG
 Vq
@@ -28068,7 +28234,7 @@ ku
 Qe
 Qe
 Uh
-xy
+JB
 JA
 aH
 ks
@@ -28107,10 +28273,10 @@ Zr
 Zr
 Zr
 sj
-sj
-sj
-sj
-sj
+XX
+XX
+XX
+XX
 XX
 mr
 mr
@@ -28364,9 +28530,9 @@ Zr
 Zr
 Zr
 sj
-Zr
-Zr
-Zr
+XX
+XX
+XX
 mr
 mr
 mr
@@ -28602,7 +28768,7 @@ Pq
 Ly
 Ly
 uE
-TQ
+FQ
 TQ
 TQ
 uE
@@ -28621,9 +28787,9 @@ Zr
 Zr
 Zr
 sj
-Zr
-Zr
-Zr
+XX
+XX
+XX
 mr
 YI
 VM
@@ -28847,8 +29013,8 @@ Wu
 ML
 yi
 NV
-yi
-yi
+mz
+NV
 yi
 yi
 yi
@@ -28878,9 +29044,9 @@ Zr
 Zr
 Zr
 sj
-Zr
-Zr
-Zr
+XX
+XX
+XX
 mr
 DD
 TQ
@@ -29104,8 +29270,8 @@ tG
 xf
 yi
 NV
-yi
-yi
+mz
+NV
 yi
 yi
 yi
@@ -29135,9 +29301,9 @@ Zr
 Zr
 Zr
 sj
-Zr
-Zr
-Zr
+XX
+XX
+XX
 mr
 bn
 TQ
@@ -29361,10 +29527,10 @@ pF
 xf
 vk
 NV
-QJ
+NV
+NV
 yi
-NV
-NV
+yi
 NV
 NV
 Ly
@@ -29392,9 +29558,9 @@ Zr
 Zr
 Zr
 sj
-Zr
-Zr
-Zr
+XX
+XX
+XX
 mr
 mr
 bn
@@ -29618,11 +29784,11 @@ Wu
 ML
 yi
 NV
-yi
-yi
+uD
+Gn
 IC
 IC
-IC
+uD
 NV
 Ly
 Pq
@@ -29875,11 +30041,11 @@ Wu
 ML
 yi
 NV
+uD
 yi
+mb
 yi
-yi
-yi
-yi
+uD
 NV
 Ly
 Pq
@@ -30132,11 +30298,11 @@ ji
 ML
 yi
 NV
-yi
+uD
 yi
 mb
-mb
-Gq
+yi
+uD
 NV
 Ly
 Pq
@@ -30389,11 +30555,11 @@ NV
 pY
 pY
 NV
+NV
 yi
+mb
 yi
-yi
-yi
-yi
+uD
 NV
 Ly
 Pq
@@ -30648,9 +30814,9 @@ yi
 yi
 yi
 yi
-IC
-IC
-IC
+yi
+Mu
+uD
 NV
 Ly
 ZI
@@ -30906,7 +31072,7 @@ yi
 yi
 yi
 NV
-NV
+pY
 NV
 NV
 KP
@@ -31163,8 +31329,8 @@ NV
 NV
 NV
 NV
-mz
-mz
+yi
+jI
 NV
 Ly
 Pq
@@ -31418,10 +31584,10 @@ NV
 NV
 NV
 mz
-mz
-mz
-mz
-mz
+NV
+uD
+uW
+jI
 NV
 Ly
 PT
@@ -33222,7 +33388,7 @@ BL
 BL
 BL
 BL
-Ly
+HO
 eO
 Pq
 Ly
@@ -34814,9 +34980,9 @@ uE
 uE
 uE
 Ly
+by
 Ly
-Ly
-Ly
+sa
 Ly
 Ly
 Ly
@@ -35076,7 +35242,7 @@ Ly
 Ly
 Ly
 Ly
-Ly
+by
 mJ
 wQ
 yL
@@ -35293,7 +35459,7 @@ XX
 XX
 sj
 sj
-Ly
+HO
 Ly
 sa
 Ly
@@ -35329,7 +35495,7 @@ Pq
 ca
 Pq
 Pq
-Pq
+ZI
 Pq
 Pq
 Pq
@@ -35588,11 +35754,11 @@ Pq
 Pq
 Pq
 Pq
+eO
 Pq
 Pq
 Pq
-Pq
-Pq
+ZI
 Pq
 Pq
 Pq
@@ -36103,7 +36269,7 @@ Ly
 Ly
 Ly
 Ly
-Ly
+sa
 Ly
 Ly
 Ly
@@ -36830,7 +36996,7 @@ TQ
 TQ
 TQ
 sj
-Ly
+HO
 sa
 Ly
 Ly
@@ -36895,8 +37061,8 @@ sj
 HO
 Ly
 sj
-Pd
 TQ
+Pd
 TQ
 pv
 Ka
@@ -41200,11 +41366,11 @@ XX
 XX
 XX
 Yn
-qs
-qs
+MY
+nY
 Od
 Od
-EZ
+Od
 Yn
 Av
 oO
@@ -41457,7 +41623,7 @@ Yn
 Yn
 Yn
 Yn
-qs
+IZ
 qs
 CZ
 CZ
@@ -41715,11 +41881,11 @@ sm
 sm
 bh
 sm
-MY
-sT
-sT
-sT
-qs
+lR
+da
+da
+da
+UK
 Yn
 Yn
 Av
@@ -41967,7 +42133,7 @@ XX
 XX
 XX
 Yn
-sm
+bi
 Tc
 sm
 zJ
@@ -42481,7 +42647,7 @@ XX
 XX
 XX
 Yn
-Tc
+Ty
 sm
 sm
 QV
@@ -42743,11 +42909,11 @@ sm
 sm
 bh
 sm
-MY
-Od
-Od
-Od
-qs
+cr
+EZ
+EZ
+EZ
+QT
 Yn
 Yn
 qM
@@ -42999,7 +43165,7 @@ Yn
 Yn
 qJ
 Yn
-qs
+UR
 qs
 CZ
 CZ
@@ -43256,11 +43422,11 @@ XX
 XX
 XX
 Yn
-qs
-qs
+MY
+vB
 sT
 sT
-da
+sT
 Yn
 qM
 oO
