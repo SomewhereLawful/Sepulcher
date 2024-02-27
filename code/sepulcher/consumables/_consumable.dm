@@ -9,6 +9,9 @@
 	icon = 'icons/obj/food.dmi'
 	icon_state = "broken"
 
+	/// amt of uses until the qdel is called
+	var/bites_left = 1
+
 	var/health_points = 0
 	var/feed_points = 0
 	var/will_points = 0
@@ -17,17 +20,14 @@
 
 	/// How much drunkness is given
 	var/drunk_points = 0
-
 	/// Does this require an uncovered mouth?
 	var/ingest_consumption = TRUE
 	var/eat_sound = 'sound/items/food_crunchy_1.ogg'
 	var/uses_verb = "uses"
 	var/use_verb = "use"
 	var/trash = null
-
 	/// Description of eating the item for the user, predominantly taste and texture.
 	var/flavour_text = null
-
 	var/cures_parasite = null
 
 /obj/item/consumable/proc/canconsume(mob/eater, mob/user)
@@ -57,7 +57,7 @@
 
 		if(ingest_consumption == TRUE)
 			if(M == user)								//If you're eating it yourself.
-				if(M.hunger <= M.maxHunger)
+				if(M.hunger < M.maxHunger * 0.9)
 					user.visible_message("<span class='warning'>[user] fails to force \the [src] down [user.p_their()] maw!</span>", "<span class='warning'>You fail to force \the [src] down your maw!</span>")
 					return 0
 			else
@@ -76,7 +76,7 @@
 										"<span class='userdanger'>[user] forces [M] to eat [src].</span>")
 				else
 					to_chat(user, "<span class='warning'>[M] doesn't seem to have a mouth!</span>")
-					return
+					return 0
 
 //Handle ingestion of the item.
 		playsound(M.loc, eat_sound, 60)
@@ -90,8 +90,11 @@
 		C.drunkenness = max((C.drunkenness + drunk_points),0) 
 		H.suppress_bloodloss(bleed_suppression)
 		SEND_SIGNAL(src, COMSIG_FOOD_EATEN, M, user)
-		On_Consume(M)
-		qdel(src)
+		--bites_left
+
+		if(bites_left <= 0) // actually finish the food
+			On_Consume(M)
+			qdel(src)
 
 		user.visible_message("[user] [uses_verb] \the [src].", "<span class='magenta'>You [use_verb] \the [src].</span>")
 		if(flavour_text)

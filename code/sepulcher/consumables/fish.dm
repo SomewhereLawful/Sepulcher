@@ -5,7 +5,7 @@
 	feed_points = 10
 	toxicity_points = 10
 	flavour_text = "The offal within is sour."
-	var/gutted_flavour_text = "It tastes as fish should."
+	var/gutted_flavour_text
 	var/gutted = FALSE
 	var/gutting_text = "You gut the fish."
 
@@ -37,6 +37,7 @@
 	icon_state = "broken"
 	feed_points = 20
 	toxicity_points = 20
+	bites_left = 4 //Get your fill
 
 /obj/item/consumable/food/fish/crab // Time for crab
 	name = "bottom feeder"

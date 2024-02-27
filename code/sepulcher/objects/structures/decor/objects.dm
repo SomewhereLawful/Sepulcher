@@ -119,14 +119,17 @@
 	name = "iconostasis"
 	icon_state = "deacon_door"
 	density = FALSE
+	layer = ABOVE_ALL_MOB_LAYER
 
 /obj/structure/decor/iconostasis/left
 	icon_state = "iconostasis_l"
 	density = TRUE
+	layer = 3
 
 /obj/structure/decor/iconostasis/right
 	icon_state = "iconostasis_r"
 	density = TRUE
+	layer = 3
 
 // decor objects with their own icon files
 /obj/structure/decor/carpet

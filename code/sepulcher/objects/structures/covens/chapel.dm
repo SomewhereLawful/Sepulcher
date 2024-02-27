@@ -2,7 +2,10 @@
 	name = "cleansing font"
 	desc = "Basin of untainted water, unknown in origin."
 	icon_state = "church_font"
-	density = FALSE
+
+	coven_title = "Cleanse your spirit..."
+	coven_msg = "Splash your face with the pure water?"
+	coven_initiate_msg = "You splash the water on your face, let whatever comes next come."
 
 /obj/structure/coven_object/chapel_font/examine(mob/user)
 	..()
@@ -12,6 +15,10 @@
 	name = "city phylactery"
 	desc = "Sealed container of texts. The city-faithful hold it in high importance."
 	icon_state = "phylactery"
+
+	coven_title = "The City-Mind Faithful..."
+	coven_msg = "Touch the welds?"
+	coven_initiate_msg = "Let the security of the city envelope you. The natural intelligences can rot with their outside world."
 
 /obj/structure/coven_object/chapel_phylactery/examine(mob/user)
 	..()

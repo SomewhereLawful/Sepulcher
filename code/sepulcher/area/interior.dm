@@ -47,6 +47,10 @@
 	icon_state = "interior"
 	narrate = "Someone cooks nearby. Packed like canfish, here the safest solitude."
 
+/area/interior/fishery
+	name = "Fishery"
+	icon_state = "interior"
+
 /area/interior/clinic
 	name = "Clinic"
 	icon_state = "interior"
@@ -61,6 +65,9 @@
 	ambient_background_cooldown = 26
 	ambient_background = list('sound/ambience/interiors/foundry.ogg')
 	narrate = "Opressively hot."
+
+/area/interior/foundry/sublevel
+	name = "foundry sublevel"
 
 /area/interior/train_yard
 	name = "train yard"
