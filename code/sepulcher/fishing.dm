@@ -42,7 +42,7 @@
 	spot_life = rand(5,13)
 	. = ..()
 
-/obj/structure/fishing_spot/attackby(obj/item/O, mob/user, params) // Instead of burning the excess, just put it back
+/obj/structure/fishing_spot/attackby(obj/item/O, mob/user, params)
 	if(/obj/item/fishing_rod)
 		if(spot_life <= 1)
 			to_chat(user, "<span class='warning'>The fishing spot exhausts, melting back into the water.</span>")

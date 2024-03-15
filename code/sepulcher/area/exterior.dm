@@ -13,6 +13,14 @@
 	name = "City Streets"
 	icon_state = "city"
 
+/area/exterior/city/spillage
+	name = "Spillage Zone"
+	icon_state = "city"
+
+/area/exterior/city/church_yard
+	name = "Church Yard"
+	icon_state = "city"
+
 /area/exterior/city/docks
 	name = "City Docks"
 	icon_state = "city_docks"

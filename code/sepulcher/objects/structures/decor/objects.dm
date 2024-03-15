@@ -41,6 +41,26 @@
 	anchored = TRUE
 	layer = OBJ_LAYER
 
+/obj/structure/decor/mirror/north
+	name = "mirror"
+	icon_state = "junk_mirror"
+	pixel_y = 28
+
+/obj/structure/decor/mirror/east
+	name = "mirror"
+	icon_state = "junk_mirror"
+	pixel_x = 26
+
+/obj/structure/decor/mirror/south
+	name = "mirror"
+	icon_state = "junk_mirror"
+	pixel_y = -28
+
+/obj/structure/decor/mirror/west
+	name = "mirror"
+	icon_state = "junk_mirror"
+	pixel_x = -26
+
 /obj/structure/decor/washer
 	name = "clothes washer"
 	desc = "In disrepair. Smells of nightsoil."
