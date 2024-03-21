@@ -9,7 +9,7 @@
 	if(!proximity_flag)
 		return
 	if(in_use)
-		to_chat(user, "<span class='warning'>You are already fishing.</span>")
+		to_chat(user, "<span class='red'>You are already fishing.</span>")
 		return
 	in_use = TRUE
 
@@ -20,8 +20,22 @@
 		var/obj/structure/fishing_spot/W = target
 		var/chosen_fish = pickweight(W.fish_list)
 		new chosen_fish(get_turf(user))
-		to_chat(user, "<span class='warning'>You have caught something.</span>")
+		to_chat(user, "<span class='red'>You have caught something.</span>")
 		W.spot_life--
+
+		if(W.spot_life <= 1)
+			to_chat(user, "<span class='red'>The fishing spot exhausts, melting back into the water.</span>")
+			playsound(src, 'sound/effects/junk_rustling.ogg', 50, 0)
+			qdel(W)
+
+		// FOR FISHING SPOT SPRITES
+		// Not the best code, I'm sure
+		if(W.spot_life >= 4)
+			W.icon_state = "fishing_spot_life_3"
+		else if(W.spot_life == 3)
+			W.icon_state = "fishing_spot_life_2"
+		else if(W.spot_life == 2)
+			W.icon_state = "fishing_spot_life_1"
 
 	in_use = FALSE
 
@@ -29,7 +43,7 @@
 	name = "fishing spot"
 	desc = "The red water bubbles, creatures of the deep swirl nearby."
 	icon = 'icons/obj/fishing.dmi'
-	icon_state = "fishing_spot" // this sprite gives me cancer
+	icon_state = "fishing_spot_shadow" // this sprite gives me cancer
 	anchored = TRUE
 	var/spot_life = null
 	var/list/fish_list = list(
@@ -39,21 +53,24 @@
 			/obj/item/consumable/food/fish/lamprey = 25)
 
 /obj/structure/fishing_spot/Initialize()
-	spot_life = rand(5,13)
+	spot_life = rand(2,6)
+	dir = pick(2,4,6,8) // Cardinal dirs for sprite variety
+	if(spot_life >= 4)
+		icon_state = "fishing_spot_life_3"
+	else if(spot_life == 3)
+		icon_state = "fishing_spot_life_2"
+	else if(spot_life == 2)
+		icon_state = "fishing_spot_life_1"
 	. = ..()
 
 /obj/structure/fishing_spot/attackby(obj/item/O, mob/user, params)
 	if(/obj/item/fishing_rod)
-		if(spot_life <= 1)
-			to_chat(user, "<span class='warning'>The fishing spot exhausts, melting back into the water.</span>")
-			playsound(src, 'sound/effects/junk_rustling.ogg', 50, 0)
-			qdel(src)
+		return
 
 /obj/structure/fishing_spot/sewer
 	name = "fishing spot"
 	desc = "The slurry bubbles, the dung-borne swirl nearby."
 	icon = 'icons/obj/fishing.dmi'
-	icon_state = "fishing_spot" // this sprite gives me cancer
 	fish_list = list(
 		/obj/item/consumable/food/fish/crab = 50,
 		/obj/item/consumable/food/fish/axlotl = 40,
@@ -73,3 +90,18 @@
 
 /obj/effect/spawner/fishing_spot_random/sewer
 	fishing_spot_type = /obj/structure/fishing_spot/sewer
+
+// Fishing net & 
+// Stationary actionable item, passively collects fish and is modified by coven behavior
+
+/obj/structure/fishing_net_line
+	name = "net line"
+	desc = "Nets are tied to the line, enabling the collection of water vermin."
+	icon = 'icons/obj/fishing.dmi'
+
+/obj/item/fishing_net
+	name = "fishing net"
+	desc = "Binding artifice, connect to a water-bound support to passively collect common fish."
+	icon = 'icons/obj/fishing.dmi'
+	icon_state = "fishing_net"
+
