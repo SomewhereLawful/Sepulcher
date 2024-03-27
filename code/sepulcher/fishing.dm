@@ -94,10 +94,11 @@
 // Fishing net & 
 // Stationary actionable item, passively collects fish and is modified by coven behavior
 
-/obj/structure/fishing_net_line
+/obj/structure/fishing_dragline
 	name = "net line"
 	desc = "Nets are tied to the line, enabling the collection of water vermin."
 	icon = 'icons/obj/fishing.dmi'
+	icon_state = "dragline_empty"
 
 /obj/item/fishing_net
 	name = "fishing net"
