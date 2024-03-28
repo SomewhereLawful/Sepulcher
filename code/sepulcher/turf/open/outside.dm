@@ -29,6 +29,11 @@
 	desc = "Mundane fluids used in ritual."
 	baseturfs = /turf/open/indestructible/ground/outside/water/knee_high
 
+/turf/open/indestructible/ground/outside/water/sewer
+	name = "waste"
+	desc = "Slurry of shit and urine. Repugnant and fermented."
+	baseturfs = /turf/open/indestructible/ground/outside/water/sewer
+
 /turf/open/indestructible/ground/sewer_water
 	name = "waste"
 	desc = "Slurry of shit and urine. Repugnant and fermented."

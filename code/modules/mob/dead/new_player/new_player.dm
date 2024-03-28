@@ -310,7 +310,7 @@
 	if(!job)
 		return JOB_UNAVAILABLE_GENERIC
 	if((job.current_positions >= job.total_positions) && job.total_positions != -1)
-		if(job.title == "Bioslave")
+		if(job.title == "Vagrant")
 			if(isnum(client.player_age) && client.player_age <= 14) //Newbies can always be assistants
 				return JOB_AVAILABLE
 			for(var/datum/job/J in SSjob.occupations)
@@ -449,7 +449,7 @@
 				dat += " [a.title], "
 			else
 				dat += " [a.title]. </div>"
-	dat += "<div align='center'>All must begin their first rebirth as Bioslave.<br/>Death is not an escape. Ablution at the chapel is required.</div>"
+	dat += "<div align='center'>You have no past - no name or memories.<br>First waking? Choose Proletariat, better to ask as a fool than act as one.</div>"
 	dat += "<br/>"
 	dat += "<div class='jobs'><div align='center'><div class='jobsColumn'></div>"
 	var/job_count = 0

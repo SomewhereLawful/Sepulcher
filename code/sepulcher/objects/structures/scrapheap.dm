@@ -1,6 +1,6 @@
 // Scrap pile
-// Found outside city limits, Bioslaves or proles go and pull parts out
-// Risk of lacerating yourself, dependent on position (bioslave (highest) - prole (lowest) //
+// Found outside city limits, proles go and pull parts out
+// Risk of lacerating yourself, dependent on race (vagrants r dum) //
 
 /obj/item/consumable/food/scrap
 	name = "scrap piece"
@@ -46,7 +46,7 @@
 		playsound(src, 'sound/effects/junk_rustling.ogg', 50, 0)
 		to_chat(user, "You begin to sift through the metal.")
 
-		if(isbioslave(H) || isvagrant(H))
+		if(isvagrant(H))
 			bleed_chance = 30
 		else if(isproletariat(H) || ishumanbasic(H))
 			bleed_chance = 15

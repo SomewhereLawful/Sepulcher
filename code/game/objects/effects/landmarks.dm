@@ -280,8 +280,6 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 /obj/effect/landmark/latejoin/Initialize(mapload)
 	..()
 	switch(name)
-		if ("JoinLateBioslave")
-			SSjob.latejoin_bioslave += loc
 		if ("JoinLateProle")
 			SSjob.latejoin_proletariat += loc
 		if ("JoinLateBougie")

@@ -975,7 +975,7 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 		H.hunger = max(0, H.hunger - hunger_rate)
 
 	// Thus begins the pain
-		if(H.hunger < 5)
+		if(H.hunger < (H.maxHunger*0.3))
 			H.adjustWillLoss(1)
 
 // Heart

@@ -1,7 +1,4 @@
 // Sepulcher name stuff, for spawners.
-/proc/bioslave_name()
-	return "[pick(GLOB.bioslave_first)] [pick(GLOB.bioslave_synonym)]"
-
 /proc/prole_name()
 	return "[pick(GLOB.prole_first)] [pick(GLOB.prole_synonym)]"
 

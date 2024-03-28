@@ -4,6 +4,8 @@
 	icon_state = "steel_bucket"
 	anchored = FALSE
 	pixel_y = 8
+	// ID for use by activating levers
+	var/id
 
 /obj/structure/foundry/steel_bucket/Move(newloc, direct)
 	if(!isturf(newloc) || get_dist(get_step(src,dir),get_turf(src)) > 1)
@@ -13,9 +15,9 @@
 
 /obj/structure/foundry/steel_bucket/examine(mob/user)
 	..()
-	to_chat(user, "<span class='red'>Alt-Click to fill the bucket. It must be unobstructed above the maw.</span>")
+	to_chat(user, "<span class='magenta'>Alt-Click to fill the bucket. It must be unobstructed above the maw.</span>")
 	if(occupied == TRUE)
-		to_chat(user, "<span class='red'>It is filled to the brim with liquid steel.</span>")
+		to_chat(user, "<span class='yellow'>It is filled to the brim with liquid steel.</span>")
 
 /obj/structure/foundry/steel_bucket/attack_hand(mob/user)
 	user.stop_pulling()
@@ -37,16 +39,19 @@
 		to_chat(user, "The bucket is already filled.")
 		return
 	else
-		if(GLOB.foundry_metal_supply >= 3)
-			to_chat(user, "<span class='red'>The bucket decends into the desolation, retrieving liquid steel from the maw.</span>")
-			flick("bucket_filling",src)
-			sleep(49) // length of flick
-			occupied = TRUE
-			icon_state = "filled_bucket"
-			change_foundry_supply_value(-3)
-		else
-			to_chat(user, "<span class='red'>The foundry lacks sufficent liquid steel. Throw metal objects into the maw.</span>")
-			return
+		bucket_fill()
+
+/obj/structure/foundry/steel_bucket/proc/bucket_fill(mob/user)
+	if(GLOB.foundry_metal_supply >= 3)
+		visible_message("<span class='red'>The bucket decends into the desolation, retrieving liquid steel from the maw.</span>")
+		flick("bucket_filling",src)
+		sleep(49) // length of flick
+		occupied = TRUE
+		icon_state = "filled_bucket"
+		change_foundry_supply_value(-3)
+	else
+		visible_message("<span class='red'>The foundry lacks steel. It hungers.</span>")
+		return
 
 /obj/structure/foundry/steel_bucket/proc/ingot_formation()
 	var/obj/structure/foundry/mould/M

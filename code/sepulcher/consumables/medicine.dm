@@ -8,6 +8,7 @@
 	ingest_consumption = FALSE
 	health_points = -100
 	eat_sound = 'sound/items/medicine_tablet.ogg'
+	bites_left = 1
 
 /obj/item/consumable/medicine/citalopram
 	name = "citalopram pill"

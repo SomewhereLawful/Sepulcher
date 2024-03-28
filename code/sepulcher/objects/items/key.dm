@@ -10,3 +10,7 @@
 	name = "skeleton key"
 	desc = "Debug item, unlocks all doors."
 	icon_state = "skeleton"
+
+/obj/item/key/apartment
+	name = "apartment key"
+	icon_state = "apartment"
