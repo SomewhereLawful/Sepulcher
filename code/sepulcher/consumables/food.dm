@@ -13,3 +13,8 @@
 	name = "failed abortion"
 	desc = "Waste not, want not."
 	feed_points = 25
+
+/obj/item/consumable/food/pemmican
+	name = "scab pemmican"
+	desc = "Don't ask, don't tell."
+	feed_points = 25

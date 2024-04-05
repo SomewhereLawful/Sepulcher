@@ -83,7 +83,7 @@
 	name = "Lobotomizer"
 	desc = "Converts useless meat into useful meat."
 	icon = 'icons/obj/spawners.dmi'
-	icon_state = "bioslave"
+	icon_state = "prole"
 	density = TRUE
 	permanent = TRUE
 	roundstart = FALSE
@@ -107,6 +107,9 @@
 
 /obj/effect/landmark/latejoin/cleanser
 	name = "JoinLateCleanser"
+
+/obj/effect/landmark/latejoin/safekeeper
+	name = "JoinLateSafekeeper"
 
 /obj/effect/landmark/latejoin/vagrant
 	name = "JoinLateVagrant"

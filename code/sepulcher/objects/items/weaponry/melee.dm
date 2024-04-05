@@ -56,8 +56,8 @@
 /obj/item/melee/whale_hook
 	name = "polehook"
 	desc = "A bizzare tool of no origin."
-	icon_state = "harpoon"
-	item_state = "harpoon"
+	icon_state = "whale_hook"
+	item_state = "whale_hook"
 	lefthand_file = 'icons/mob/inhands/weapons/melee_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/melee_righthand.dmi'
 	force = 15

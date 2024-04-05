@@ -134,6 +134,7 @@
 	name = "icon"
 	desc = "The spiritual look to him. Whoever he was."
 	icon_state = "saint_icon"
+	density = FALSE
 
 /obj/structure/decor/iconostasis
 	name = "iconostasis"
