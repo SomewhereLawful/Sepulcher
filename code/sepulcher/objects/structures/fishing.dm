@@ -60,6 +60,26 @@
 	name = "net line"
 	desc = "Nets are tied to the line, enabling the collection of water vermin."
 	icon = 'icons/obj/fishing.dmi'
-	icon_state = "dragline_empty"
+	icon_state = "dragline"
 	layer = FLY_LAYER
 	density = FALSE //Switches to TRUE when it has net
+	var/net_overlay_icon = "dragline-net"
+	var/net_occupied = FALSE
+
+/obj/structure/fishing_dragline/attack_hand(mob/user)
+	if(net_occupied)
+		to_chat(user, "You begin to untie the net from the line.")
+		if(do_after(user, rand(10,15) SECONDS, target = target))
+			add_overlay(net_overlay_icon)
+			net_occupied = FALSE
+
+/obj/structure/fishing_dragline/attackby(obj/item/L, mob/user, params)
+	if(/obj/item/fishing_net)
+		if(net_occupied)
+			to_chat(user, "The line is already occupied with a net.")
+			return
+		else
+			to_chat(user, "You begin to tie the net to the line.")
+			if(do_after(user, rand(10,15) SECONDS, target = target))
+				cut_overlay(net_overlay_icon)
+				net_occupied = TRUE

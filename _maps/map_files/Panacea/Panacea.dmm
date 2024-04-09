@@ -216,7 +216,9 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
-/turf/open/indestructible/ground/floor/lattice,
+/turf/open/indestructible/ground/floor/lattice{
+	icon_state = "lattice_new14"
+	},
 /area/interior/spawning/kommandant)
 "bl" = (
 /obj/effect/turf_decal/line,
@@ -1625,6 +1627,16 @@
 	icon_state = "floorrustysolid"
 	},
 /area/interior/train_yard)
+"mm" = (
+/obj/effect/turf_decal/roadline/noshadow{
+	dir = 6
+	},
+/obj/effect/turf_decal/roadline/noshadow{
+	dir = 9
+	},
+/obj/structure/flora/grass/wasteland,
+/turf/open/indestructible/ground/outside/dirt,
+/area/exterior/city)
 "mp" = (
 /obj/structure/decor/spool{
 	pixel_y = 16;
@@ -1687,7 +1699,9 @@
 /area/exterior/city/spillage)
 "mO" = (
 /obj/effect/mob_spawn/human/kommandant,
-/turf/open/indestructible/ground/floor/lattice,
+/turf/open/indestructible/ground/floor/lattice{
+	icon_state = "lattice_new14"
+	},
 /area/interior/spawning/kommandant)
 "mR" = (
 /obj/effect/landmark/latejoin/vagrant,
@@ -1700,9 +1714,12 @@
 /turf/open/foundry,
 /area/interior/foundry)
 "mV" = (
-/obj/structure/campfire/drum,
-/turf/closed/wall/brickdark,
-/area/interior/fishery)
+/obj/structure/decor/dump_bin/full{
+	pixel_y = 4;
+	pixel_x = 3
+	},
+/turf/open/indestructible/ground/outside/road,
+/area/exterior/city)
 "nh" = (
 /obj/structure/table/bar,
 /turf/open/floor/f13{
@@ -2542,11 +2559,15 @@
 	},
 /area/interior/clinic)
 "tb" = (
-/obj/structure/railing{
-	dir = 8
+/obj/effect/turf_decal/roadline/noshadow{
+	dir = 9
 	},
-/turf/open/indestructible/ground/outside/road,
-/area/exterior/city/spillage)
+/obj/effect/turf_decal/roadline/noshadow{
+	dir = 6
+	},
+/obj/structure/flora/grass/wasteland,
+/turf/open/indestructible/ground/outside/dirt,
+/area/exterior/city)
 "tc" = (
 /turf/open/indestructible/ground/outside/road,
 /area/interior/train_yard)
@@ -3042,7 +3063,9 @@
 	icon_state = "oldcovertattered";
 	pixel_x = -16
 	},
-/turf/open/indestructible/ground/floor/lattice,
+/turf/open/indestructible/ground/floor/lattice{
+	icon_state = "lattice_new14"
+	},
 /area/interior/spawning/kommandant)
 "wb" = (
 /obj/structure/table/wood/settler,
@@ -4901,12 +4924,12 @@
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
 /area/void)
 "IZ" = (
-/obj/structure/coven_object/chapel_font,
-/obj/effect/turf_decal/line{
-	dir = 5
+/obj/effect/turf_decal/roadline/corner{
+	dir = 1
 	},
-/turf/open/indestructible/ground/floor/wood_floor,
-/area/interior/spawning/kommandant)
+/obj/structure/decor/wood_scrap,
+/turf/open/indestructible/ground/outside/sidewalk/tile,
+/area/exterior/city/church_yard)
 "Ja" = (
 /obj/structure/railing{
 	dir = 1;
@@ -5480,6 +5503,7 @@
 /obj/effect/turf_decal/line{
 	dir = 1
 	},
+/obj/structure/coven_object/chapel_phylactery,
 /turf/open/indestructible/ground/floor/wood_floor,
 /area/interior/spawning/kommandant)
 "MZ" = (
@@ -5985,6 +6009,13 @@
 "Qw" = (
 /turf/closed/wall/brickdark,
 /area/interior/fishery)
+"Qx" = (
+/obj/effect/turf_decal/line{
+	dir = 1
+	},
+/obj/structure/coven_object/chapel_font,
+/turf/open/indestructible/ground/floor/wood_floor,
+/area/interior/spawning/kommandant)
 "Qz" = (
 /obj/structure/window/fulltile/house{
 	tag = "icon-housewindow";
@@ -6325,9 +6356,6 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/structure/railing{
-	dir = 8
-	},
 /turf/open/indestructible/ground/outside/road,
 /area/exterior/city/spillage)
 "Tc" = (
@@ -6389,7 +6417,9 @@
 /obj/machinery/light/small/broken{
 	dir = 1
 	},
-/turf/open/indestructible/ground/floor/lattice,
+/turf/open/indestructible/ground/floor/lattice{
+	icon_state = "lattice_new14"
+	},
 /area/interior/spawning/kommandant)
 "Tz" = (
 /obj/effect/turf_decal/line{
@@ -6580,12 +6610,12 @@
 	},
 /area/interior/city)
 "UR" = (
-/obj/structure/coven_object/chapel_phylactery,
-/obj/effect/turf_decal/line{
-	dir = 9
+/obj/structure/decor/spool{
+	pixel_x = -5;
+	pixel_y = -3
 	},
-/turf/open/indestructible/ground/floor/wood_floor,
-/area/interior/spawning/kommandant)
+/turf/open/indestructible/ground/outside/road,
+/area/exterior/city)
 "UT" = (
 /obj/effect/turf_decal/dirt_edge{
 	dir = 1
@@ -6834,6 +6864,7 @@
 	dir = 9
 	},
 /obj/effect/turf_decal/dirt_edge,
+/obj/structure/decor/candle,
 /turf/open/floor/f13{
 	tag = "icon-floorrusty";
 	icon_state = "floorrustysolid"
@@ -27236,7 +27267,7 @@ RZ
 sj
 sj
 sj
-Ly
+sa
 Ly
 Ly
 sj
@@ -28012,7 +28043,7 @@ Ly
 Ly
 Ly
 Ly
-Ly
+sa
 Ly
 Ly
 WH
@@ -28264,7 +28295,7 @@ sj
 sj
 XX
 sj
-Ly
+sa
 by
 Ly
 pD
@@ -29036,7 +29067,7 @@ XX
 XX
 sj
 Ly
-Ly
+sa
 pD
 XX
 XX
@@ -30063,7 +30094,7 @@ XX
 XX
 XX
 sj
-Ly
+sa
 Ly
 pD
 XX
@@ -30836,7 +30867,7 @@ Pq
 Pq
 Ly
 Ly
-Ly
+sa
 pD
 Pv
 Pv
@@ -31602,7 +31633,7 @@ TQ
 TQ
 TQ
 sj
-Ly
+sa
 Pq
 Pq
 Pq
@@ -32667,12 +32698,12 @@ XX
 XX
 XX
 XX
-sj
-sj
-sj
-sj
-sj
-sj
+XX
+XX
+XX
+XX
+XX
+XX
 XX
 XX
 XX
@@ -32924,12 +32955,12 @@ XX
 XX
 XX
 XX
-sj
-TQ
-TQ
-TQ
-TQ
-sj
+XX
+XX
+XX
+XX
+XX
+XX
 XX
 XX
 XX
@@ -33182,11 +33213,11 @@ BL
 BL
 BL
 BL
-Kk
-TQ
-TQ
-TQ
-sj
+XX
+XX
+XX
+XX
+XX
 XX
 XX
 XX
@@ -33439,11 +33470,11 @@ BL
 vq
 TQ
 BL
-TQ
-TQ
-TQ
-TQ
-sj
+XX
+XX
+XX
+XX
+XX
 XX
 XX
 XX
@@ -33697,8 +33728,8 @@ TQ
 TQ
 BL
 sj
-Nt
-Nt
+sj
+sj
 sj
 sj
 XX
@@ -33953,10 +33984,10 @@ BL
 FC
 Co
 BL
-Ld
-dk
-ua
-Ld
+nS
+nS
+nS
+nS
 sj
 XX
 XX
@@ -34210,10 +34241,10 @@ BL
 rP
 dU
 BL
-mN
-ZF
-CR
-mN
+nS
+nS
+nS
+nS
 sj
 XX
 XX
@@ -34470,7 +34501,7 @@ uE
 SV
 nS
 nS
-tb
+nS
 sj
 XX
 XX
@@ -42685,7 +42716,7 @@ XX
 XX
 XX
 bN
-ke
+bZ
 ke
 ke
 JO
@@ -43928,7 +43959,7 @@ PY
 PY
 PY
 Qw
-mV
+Qw
 Ly
 Ly
 uR
@@ -44468,7 +44499,7 @@ XX
 XX
 uR
 Pq
-Pq
+PT
 Pq
 ez
 Cy
@@ -45507,7 +45538,7 @@ kO
 Wh
 ke
 ke
-ke
+dJ
 ie
 ie
 dJ
@@ -45764,7 +45795,7 @@ kO
 ke
 ke
 ke
-ke
+dJ
 ke
 ke
 dJ
@@ -46021,7 +46052,7 @@ kO
 ke
 ke
 ke
-ke
+dJ
 ke
 ke
 dJ
@@ -46257,7 +46288,7 @@ Ly
 Ly
 RZ
 Ly
-Ly
+by
 Ly
 uR
 OE
@@ -46504,18 +46535,18 @@ lz
 dZ
 KP
 Pq
+PT
 Pq
 Pq
 Pq
-Pq
-Pq
+eO
 Pq
 Pq
 Pq
 ZI
 Pq
 Pq
-Pq
+PT
 Pq
 Pq
 Pq
@@ -47019,19 +47050,19 @@ bz
 Ly
 Ly
 Ly
-Ly
+by
 Ly
 sa
 Ly
+KP
 Ly
 Ly
-Ly
-Ly
+by
 Ly
 sa
 Pq
 Pq
-Ly
+by
 Ly
 Hg
 sa
@@ -49352,7 +49383,7 @@ Kj
 iE
 Pq
 Pq
-sj
+GQ
 XX
 XX
 XX
@@ -49845,7 +49876,7 @@ XX
 XX
 XX
 Yn
-MY
+Qx
 nY
 Od
 Od
@@ -50102,7 +50133,7 @@ Yn
 Yn
 Yn
 Yn
-IZ
+lR
 qs
 CZ
 CZ
@@ -50357,7 +50388,7 @@ XX
 Yn
 Yn
 sm
-sm
+Bf
 bh
 sm
 lR
@@ -50614,7 +50645,7 @@ XX
 Yn
 bi
 Tc
-sm
+Bf
 zJ
 sm
 Bf
@@ -50634,10 +50665,10 @@ xd
 xd
 xd
 xd
-OO
+IZ
+ZI
 Pq
-Pq
-Ly
+tb
 sj
 XX
 XX
@@ -50894,8 +50925,8 @@ ql
 ql
 Pq
 Pq
-Ly
-sj
+Pq
+GQ
 XX
 XX
 XX
@@ -51128,7 +51159,7 @@ XX
 Yn
 Ty
 sm
-sm
+Bf
 QV
 Tc
 Bf
@@ -51152,7 +51183,7 @@ Ha
 Pq
 Pq
 Pq
-sj
+QS
 XX
 XX
 XX
@@ -51385,7 +51416,7 @@ XX
 Yn
 Yn
 sm
-sm
+Bf
 bh
 sm
 cr
@@ -51407,8 +51438,8 @@ VS
 Sg
 nz
 Pq
-Pq
-Pq
+ZI
+mm
 sj
 XX
 XX
@@ -51644,7 +51675,7 @@ Yn
 Yn
 qJ
 Yn
-UR
+cr
 qs
 CZ
 CZ
@@ -51665,8 +51696,8 @@ jy
 XP
 Pq
 Pq
-Pq
-sj
+eO
+QS
 XX
 XX
 XX
@@ -51920,10 +51951,10 @@ oO
 oO
 Kj
 iE
+eO
 Pq
-Pq
-Ly
-sj
+ZI
+GQ
 XX
 XX
 XX
@@ -52179,7 +52210,7 @@ Kj
 XP
 Pq
 Pq
-Ly
+tb
 sj
 XX
 XX
@@ -52434,7 +52465,7 @@ oO
 oO
 Kj
 iE
-Pq
+ZI
 Pq
 Ew
 sj
@@ -52949,7 +52980,7 @@ oO
 Kj
 iE
 Pq
-Pq
+eO
 sj
 XX
 XX
@@ -53464,7 +53495,7 @@ Kj
 iE
 Pq
 Pq
-sj
+GQ
 XX
 XX
 XX
@@ -53976,7 +54007,7 @@ oO
 oO
 Kj
 iE
-Pq
+ZI
 Pq
 sj
 XX
@@ -54491,7 +54522,7 @@ yX
 kM
 FI
 Pq
-Pq
+PT
 Ly
 sj
 XX
@@ -54730,6 +54761,12 @@ XX
 XX
 sj
 Pq
+ZI
+eO
+Pq
+Pq
+Pq
+ZI
 Pq
 Pq
 Pq
@@ -54737,17 +54774,11 @@ Pq
 Pq
 Pq
 Pq
+ZI
 Pq
 Pq
 Pq
-Pq
-Pq
-Pq
-Pq
-Pq
-Pq
-Pq
-Pq
+eO
 Pq
 Ly
 sj
@@ -54989,17 +55020,17 @@ sj
 Pq
 Pq
 Pq
+ZI
 Pq
 Pq
 Pq
 Pq
+ZI
 Pq
+PT
 Pq
-Pq
-Pq
-Pq
-Pq
-Pq
+ZI
+eO
 Pq
 Pq
 Pq
@@ -55008,12 +55039,12 @@ Pq
 Pq
 Ly
 Ly
-Ly
+sa
 ez
+UR
+sa
 Ly
-Ly
-Ly
-Ly
+by
 Ly
 Ly
 XX
@@ -55245,33 +55276,33 @@ XX
 sj
 Ly
 Ly
-Ly
-Ly
-Ly
-WH
-Ly
-Ly
-Ly
-Ly
-Ly
-Ly
-Ly
-Ly
+sa
 Ly
 Ly
 WH
 Ly
 Ly
+by
+sa
 Ly
 Ly
 Ly
+Ly
+Ly
+by
+WH
+Ly
+sa
+Ly
+Ly
+KP
 VP
 ez
+mV
+by
+sa
 Ly
-Ly
-Ly
-Ly
-Ly
+by
 Ly
 XX
 XX
@@ -55519,7 +55550,7 @@ GQ
 sj
 sj
 sj
-Ly
+dc
 Ly
 Hg
 Ly
@@ -55776,10 +55807,10 @@ XX
 XX
 XX
 sj
-Ly
-Ly
-Ly
-Ly
+KP
+by
+sa
+KP
 sj
 XX
 XX
