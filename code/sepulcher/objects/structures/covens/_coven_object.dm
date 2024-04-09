@@ -3,6 +3,7 @@
 	name = "coven base object"
 	icon = 'icons/obj/coven.dmi'
 	density = TRUE
+	anchored = TRUE
 
 	var/coven_title
 	var/coven_msg

@@ -61,3 +61,5 @@
 	desc = "Nets are tied to the line, enabling the collection of water vermin."
 	icon = 'icons/obj/fishing.dmi'
 	icon_state = "dragline_empty"
+	layer = FLY_LAYER
+	density = FALSE //Switches to TRUE when it has net
