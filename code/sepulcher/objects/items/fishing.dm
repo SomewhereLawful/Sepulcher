@@ -43,6 +43,28 @@
 // Dragline stuff
 /obj/item/fishing_net
 	name = "fishing net"
-	desc = "Binding artifice, connect to a water-bound support to passively collect common fish."
+	desc = "Binding artifice. Utilize with dragline."
 	icon = 'icons/obj/fishing.dmi'
-	icon_state = "fishing_net"
+	icon_state = "net-bound"
+	/// Inital is TRUE, turns to FALSE for usage.
+	var/bound = TRUE
+	/// Has Coven-interaction object?
+	var/coven_pin = FALSE
+
+/obj/item/fishing_net/examine(mob/user)
+	..()
+	if(bound)
+		to_chat(user, "<span class='magenta'>The net is still bound. Unbind it to use.</span>")
+
+/obj/item/fishing_net/attack_self(mob/user)
+	if(bound)
+		to_chat(user, "You unbundle the net...")
+		if(do_after(user, rand(5,10), target = src))
+			bound = FALSE
+			icon_state = "net-loose"
+	else
+		// Add IF check for contents
+		to_chat(user, "You bundle the net...")
+		if(do_after(user, rand(5,10), target = src))
+			bound = TRUE
+			icon_state = "net-bound"
