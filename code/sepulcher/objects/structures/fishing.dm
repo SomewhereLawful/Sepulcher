@@ -57,31 +57,48 @@
 
 // Draglines
 /obj/structure/fishing_dragline
-	name = "net line"
+	name = "fishing dragline"
 	desc = "Nets are tied to the line, enabling the collection of water vermin."
 	icon = 'icons/obj/fishing.dmi'
 	icon_state = "dragline"
 	layer = FLY_LAYER
+	anchored = TRUE
 	density = FALSE //Switches to TRUE when it has net
-	var/net_overlay_icon = "dragline-net"
-	var/occupied = FALSE
+	var/obj/item/fishing_net/net
+
+/obj/structure/fishing_dragline/Initialize()
+	. = ..()
+	update_icon()
+
+/obj/structure/fishing_dragline/update_icon()
+	cut_overlays()
+	if(net)
+		add_overlay("dragline-net")
+
+/obj/structure/fishing_dragline/examine(mob/user)
+	..()
+	if(net)
+		to_chat(user, "<span class='magenta'>A net is tied to the line. You can unbind it with an empty hand.</span>")
 
 /obj/structure/fishing_dragline/attack_hand(mob/user)
-	if(occupied)
+	if(net)
 		to_chat(user, "You begin to untie the net from the line.")
-		if(do_after(user, rand(10,15) SECONDS, target = src))
-			cut_overlay(net_overlay_icon)
-			occupied = FALSE
+		if(do_after(user, rand(5,8) SECONDS, target = src))
+			user.put_in_active_hand(net)
+			net = null
 			density = FALSE
+			update_icon()
 
 /obj/structure/fishing_dragline/attackby(obj/item/L, mob/user, params)
 	if(/obj/item/fishing_net)
-		if(occupied)
-			to_chat(user, "The line is already occupied with a net.")
-			return
-		else
+		if(!net)
 			to_chat(user, "You begin to tie the net to the line.")
 			if(do_after(user, rand(10,15) SECONDS, target = src))
-				add_overlay(net_overlay_icon)
-				occupied = TRUE
+				if(!user.transferItemToLoc(L, src))
+					return
+				net = net
 				density = TRUE
+				update_icon()
+		else
+			to_chat(user, "The line is already occupied with a net.")
+			return

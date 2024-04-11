@@ -48,8 +48,17 @@
 	icon_state = "net-bound"
 	/// Inital is TRUE, turns to FALSE for usage.
 	var/bound = TRUE
-	/// Has Coven-interaction object?
-	var/coven_pin = FALSE
+	/// Coven-interaction object
+	var/obj/item/coven_item/tehom_yoni/net_pin
+
+/obj/item/fishing_net/Initialize()
+	. = ..()
+	update_icon()
+
+/obj/item/fishing_net/update_icon()
+	cut_overlays()
+	if(net_pin)
+		add_overlay("net-yoni")
 
 /obj/item/fishing_net/examine(mob/user)
 	..()
@@ -61,10 +70,14 @@
 		to_chat(user, "You unbundle the net...")
 		if(do_after(user, rand(5,10), target = src))
 			bound = FALSE
-			icon_state = "net-loose"
+			icon_state = "net-loose" // todo Make more sprites, cycles through random sprites each time
 	else
 		// Add IF check for contents
 		to_chat(user, "You bundle the net...")
 		if(do_after(user, rand(5,10), target = src))
 			bound = TRUE
 			icon_state = "net-bound"
+
+/obj/item/fishing_net/proc/gone_fishin()
+	if(bound)
+		return
