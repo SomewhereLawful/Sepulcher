@@ -96,9 +96,10 @@
 			if(do_after(user, rand(10,15) SECONDS, target = src))
 				if(!user.transferItemToLoc(L, src))
 					return
-				net = net
+				net = L
 				density = TRUE
 				update_icon()
+				net.gone_fishin()
 		else
 			to_chat(user, "The line is already occupied with a net.")
 			return

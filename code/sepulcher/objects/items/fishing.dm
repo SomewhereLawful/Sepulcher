@@ -78,6 +78,18 @@
 			bound = TRUE
 			icon_state = "net-bound"
 
+/obj/item/fishing_net/attackby(obj/item/L, mob/user, params)
+	if(/obj/item/coven_item/tehom_yoni)
+		if(bound)
+			to_chat(user, "The net is still bound.")
+			return	
+		if(!net_pin)
+			if(!user.transferItemToLoc(L, src))
+				return
+			net_pin = L
+			update_icon()
+		else
+			to_chat(user, "The net is already with decoration.")
+			return
+
 /obj/item/fishing_net/proc/gone_fishin()
-	if(bound)
-		return
