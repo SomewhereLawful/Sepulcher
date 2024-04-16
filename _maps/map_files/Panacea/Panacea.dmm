@@ -323,6 +323,7 @@
 /area/exterior/city/church_yard)
 "bV" = (
 /obj/structure/table/bar,
+/obj/item/clothing/head/f13/gambler,
 /turf/open/indestructible/ground/outside/road,
 /area/exterior/city/docks)
 "bX" = (
@@ -1154,6 +1155,7 @@
 /area/exterior/city/spillage)
 "io" = (
 /obj/structure/table/stalker,
+/obj/item/clothing/head/f13/gambler,
 /turf/open/indestructible/ground/floor/lattice,
 /area/interior/city)
 "iq" = (
@@ -2055,6 +2057,13 @@
 /obj/structure/decor/wood_scrap,
 /turf/open/indestructible/ground/outside/waste,
 /area/exterior/city/spillage)
+"oN" = (
+/obj/structure/flora/tree/tall,
+/obj/effect/turf_decal/line{
+	dir = 10
+	},
+/turf/open/indestructible/ground/outside/dirt,
+/area/exterior/city/church_yard)
 "oO" = (
 /turf/open/indestructible/ground/outside/dirt,
 /area/exterior/city/church_yard)
@@ -3957,6 +3966,10 @@
 	icon_state = "lattice_new14"
 	},
 /area/interior/spawning/kommandant)
+"Bh" = (
+/obj/structure/chair/pew/left,
+/turf/open/indestructible/ground/outside/road,
+/area/exterior/city/church_yard)
 "Bi" = (
 /obj/structure/lamp_post{
 	pixel_y = 19;
@@ -5594,6 +5607,10 @@
 	dir = 1
 	},
 /area/exterior/city)
+"Ml" = (
+/obj/structure/chair/pew/right,
+/turf/open/indestructible/ground/outside/road,
+/area/exterior/city/church_yard)
 "Ms" = (
 /obj/effect/turf_decal/water_edge,
 /obj/structure/fence/wooden{
@@ -46565,7 +46582,7 @@ gW
 lV
 gW
 gW
-lV
+gW
 gW
 gW
 gW
@@ -51727,8 +51744,8 @@ QT
 Yn
 Yn
 qM
-VS
 Sg
+Ml
 gs
 Vh
 qM
@@ -51984,8 +52001,8 @@ Yn
 Yn
 qM
 sh
-oO
 Kj
+Bh
 gs
 Vh
 jm
@@ -52242,7 +52259,7 @@ qM
 oO
 oO
 oO
-DD
+oN
 gs
 Vh
 jm

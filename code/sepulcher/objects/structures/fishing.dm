@@ -98,6 +98,7 @@
 			net = null
 			density = FALSE
 			update_icon()
+			net.fishing_cycle_time = initial(net.fishing_cycle_time)
 
 /obj/structure/fishing_dragline/attackby(obj/item/L, mob/user, params)
 	if(/obj/item/fishing_net)
@@ -109,6 +110,7 @@
 				net = L
 				density = TRUE
 				update_icon()
+				net.fishing_cycle_time = world.time
 		else
 			to_chat(user, "The line is already occupied with a net.")
 			return
