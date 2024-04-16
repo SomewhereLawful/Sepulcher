@@ -43,13 +43,24 @@
 // Dragline stuff
 /obj/item/fishing_net
 	name = "fishing net"
-	desc = "Binding artifice. Utilize with dragline."
+	desc = "Binding artifice. Used with draglines to capture mundane fish."
 	icon = 'icons/obj/fishing.dmi'
 	icon_state = "net-bound"
 	/// Inital is TRUE, turns to FALSE for usage.
 	var/bound = TRUE
 	/// Coven-interaction object
 	var/obj/item/coven_item/tehom_yoni/net_pin
+
+	// contents
+	var/obj/item/consumable/food/fish/fish_type
+	var/fish_amt = 0
+	var/fish_amt_max = 20
+
+	// fishing - influenced by coven pin
+	var/fishing_cycle_duration = 60 SECONDS
+	var/fishing_cycle_time = 0 SECONDS
+	var/fishing_cycle_modifier = 1
+	var/fishing_yield_modifier = 1
 
 /obj/item/fishing_net/Initialize()
 	. = ..()
@@ -64,6 +75,8 @@
 	..()
 	if(bound)
 		to_chat(user, "<span class='magenta'>The net is still bound. Unbind it to use.</span>")
+	if(fish_type)
+		to_chat(user, "<span class='magenta'>It is filled with [fish_type.name].</span>")
 
 /obj/item/fishing_net/attack_self(mob/user)
 	if(bound)
@@ -78,6 +91,13 @@
 			bound = TRUE
 			icon_state = "net-bound"
 
+	if(fish_amt && fish_type)
+		user.put_in_active_hand(new fish_type)
+		--fish_amt
+		if(!fish_amt)
+			fish_type = null
+			update_icon() // Will change the icon_state when full net sprites are added
+
 /obj/item/fishing_net/attackby(obj/item/L, mob/user, params)
 	if(/obj/item/coven_item/tehom_yoni)
 		if(bound)
@@ -88,8 +108,18 @@
 				return
 			net_pin = L
 			update_icon()
+			coven_update()
 		else
 			to_chat(user, "The net is already with decoration.")
 			return
 
-/obj/item/fishing_net/proc/gone_fishin()
+/obj/item/fishing_net/proc/coven_update()
+	if(net_pin)
+		fishing_cycle_duration = fishing_cycle_duration * net_pin.net_duration_mod
+		fishing_yield_modifier = fishing_yield_modifier * net_pin.net_yield_mod
+
+/obj/item/fishing_net/proc/gone_fishin(fishing_yield_modifier)
+	fish_type = /obj/item/consumable/food/fish
+	var/fish_added = rand(0,5)
+	fish_added = fish_added * fishing_yield_modifier
+	fish_amt = CLAMP((fish_amt + (fish_added)), 0, fish_amt_max)

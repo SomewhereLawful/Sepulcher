@@ -4880,6 +4880,10 @@
 /obj/structure/campfire/drum,
 /turf/open/indestructible/ground/outside/road,
 /area/exterior/city)
+"Hm" = (
+/obj/item/storage/backpack,
+/turf/open/indestructible/ground/outside/dirt,
+/area/void)
 "Hq" = (
 /obj/structure/decor/iconostasis,
 /turf/open/indestructible/ground/floor/lattice,
@@ -14346,7 +14350,7 @@ XX
 XX
 vV
 CB
-CB
+Hm
 CB
 ct
 XX

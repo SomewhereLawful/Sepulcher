@@ -69,6 +69,16 @@
 /obj/structure/fishing_dragline/Initialize()
 	. = ..()
 	update_icon()
+	START_PROCESSING(SSmachines, src)
+
+/obj/structure/fishing_dragline/Destroy()
+	STOP_PROCESSING(SSmachines, src)
+	return ..()	
+
+/obj/structure/fishing_dragline/process()
+	if(net) // Obtains the net's fishing vars
+		if(world.time - net.fishing_cycle_time >= net.fishing_cycle_duration)
+			net.gone_fishin(net.fishing_yield_modifier)
 
 /obj/structure/fishing_dragline/update_icon()
 	cut_overlays()
@@ -99,7 +109,6 @@
 				net = L
 				density = TRUE
 				update_icon()
-				net.gone_fishin()
 		else
 			to_chat(user, "The line is already occupied with a net.")
 			return

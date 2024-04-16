@@ -1,4 +1,5 @@
 // For filling action, check steel_bucket
+// TODO: make a container object, destroy flagged items inside container when cooling starts
 /obj/structure/foundry/mould
 	name = "ingot mould"
 	desc = "Pour steel, make ingots."
@@ -22,7 +23,7 @@
 	return ..()	
 
 /obj/structure/foundry/mould/process()
-	if(cooling == TRUE)
+	if(cooling)
 		if(world.time - cooling_time >= cooling_duration)
 			ingot_cooling_end()
 
@@ -36,7 +37,7 @@
 /obj/structure/foundry/mould/attack_hand(mob/user)
 	var/turf/T = get_step(src,output_dir) // So ingots spawn south of the box
 
-	if(cooling == TRUE)
+	if(cooling)
 		to_chat(user, "<span class='magenta'>The ingots within are still cooling. You stay your hand.</span>")
 		return
 	else
@@ -44,7 +45,7 @@
 			to_chat(user, "You open the mould, revealing the contents.")
 			icon_state = "mould_open"
 			opened = TRUE
-			if(occupied == TRUE) // Three ingots
+			if(occupied) // Three ingots
 				new /obj/item/parts/ingot(T)
 				new /obj/item/parts/ingot(T)
 				new /obj/item/parts/ingot(T)

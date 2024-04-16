@@ -21,3 +21,5 @@
 	name = "bauble"
 	icon_state = "yoni-womb"
 	coven_favor_lvl = COVEN_GOD_RELATION_NEUTRAL
+	var/net_duration_mod = 0.5
+	var/net_yield_mod = 2
