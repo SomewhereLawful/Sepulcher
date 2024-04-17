@@ -69,10 +69,10 @@
 /obj/structure/fishing_dragline/Initialize()
 	. = ..()
 	update_icon()
-	START_PROCESSING(SSmachines, src)
+	START_PROCESSING(SSobj, src)
 
 /obj/structure/fishing_dragline/Destroy()
-	STOP_PROCESSING(SSmachines, src)
+	STOP_PROCESSING(SSobj, src)
 	return ..()	
 
 /obj/structure/fishing_dragline/process()
@@ -94,7 +94,7 @@
 	if(net)
 		to_chat(user, "You begin to untie the net from the line.")
 		if(do_after(user, rand(5,8) SECONDS, target = src))
-			user.put_in_active_hand(net)
+			user.put_in_hands(net)
 			net = null
 			density = FALSE
 			update_icon()

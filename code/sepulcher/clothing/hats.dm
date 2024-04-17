@@ -16,7 +16,14 @@
 
 /obj/item/clothing/head/safekeeper
 	name = "enforcer budenovka"
+	desc = "Moldy natural fibre. Dignified."
 	icon_state = "safekeeper"
 	item_state = "safekeeper"
-	desc = "Moldy natural fibre. Dignified."
+	flags_inv = HIDEEARS|HIDEHAIR
+
+/obj/item/clothing/head/worker_hardhat
+	name = "brain bucket"
+	desc = "Couldn't stop a bullet."
+	icon_state = "safekeeper"
+	item_state = "safekeeper"
 	flags_inv = HIDEEARS|HIDEHAIR

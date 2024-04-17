@@ -68,44 +68,39 @@
 
 /obj/item/fishing_net/update_icon()
 	cut_overlays()
-	if(bound)
-		icon_state = "net-bound"
-	else
+	if(!bound)
+		icon_state = "net-loose"
 		if(fish_amt)
-			icon_state = "net-fish"
-		else
-			icon_state = "net-loose"
+			icon_state = "net-fish"	
+	else
+		icon_state = "net-bound"
+	
 	if(net_pin)
 		add_overlay("net-yoni")
 
 /obj/item/fishing_net/examine(mob/user)
 	..()
 	if(bound)
-		to_chat(user, "<span class='magenta'>The net is still bound. Alt-Click to unbind.</span>")
+		to_chat(user, "<span class='magenta'>The net is still bound.</span>")
 	if(fish_amt)
-		to_chat(user, "<span class='magenta'>It is filled with fish.</span>")
+		to_chat(user, "<span class='magenta'>It is filled with fish. Click with a empty hand to take one out.</span>")
 
 /obj/item/fishing_net/attack_self(mob/user)
-	if(fish_amt && fish)
-		user.put_in_inactive_hand(new fish)
+	if(fish_amt)
+		user.put_in_inactive_hand(new /obj/item/consumable/food/fish)
 		--fish_amt
-		if(!fish_amt)
-			fish = null
-			update_icon() // Will change the icon_state when full net sprites are added
-
-/obj/item/fishing_net/AltClick(mob/user)
-	. = ..()
-	if(bound)
-		to_chat(user, "You unbundle the net...")
-		if(do_after(user, rand(5,10), target = src))
-			bound = FALSE
-			icon_state = "net-loose" // todo Make more sprites, cycles through random sprites each time
+		update_icon() // Back to empty sprite
 	else
-		// Add IF check for contents
-		to_chat(user, "You bundle the net...")
-		if(do_after(user, rand(5,10), target = src))
-			bound = TRUE
-			icon_state = "net-bound"
+		if(bound)
+			to_chat(user, "You unbundle the net...")
+			if(do_after(user, rand(5,10), target = src))
+				bound = FALSE
+				icon_state = "net-loose" // todo Make more sprites, cycles through random sprites each time
+		else
+			to_chat(user, "You bundle the net...")
+			if(do_after(user, rand(5,10), target = src))
+				bound = TRUE
+				icon_state = "net-bound"
 
 /obj/item/fishing_net/attackby(obj/item/L, mob/user, params)
 	if(/obj/item/coven_item/tehom_yoni)
@@ -131,3 +126,4 @@
 	var/fish_added = rand(0,5)
 	fish_added = fish_added * fishing_yield_modifier
 	fish_amt = CLAMP((fish_amt + (fish_added)), 0, fish_amt_max)
+	update_icon() // To give it the filled sprite
