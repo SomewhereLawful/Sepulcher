@@ -54,10 +54,10 @@
 	// contents
 	var/obj/item/consumable/food/fish
 	var/fish_amt = 0
-	var/fish_amt_max = 20
+	var/fish_max = 20
 
-	// fishing - influenced by coven pin
-	var/fishing_cycle_duration = 300
+	// fishing vars
+	var/fishing_cycle_duration = 600
 	var/fishing_cycle_time = 0
 	var/fishing_cycle_modifier = 1
 	var/fishing_yield_modifier = 1
@@ -123,7 +123,5 @@
 		fishing_yield_modifier = fishing_yield_modifier * net_pin.net_yield_mod
 
 /obj/item/fishing_net/proc/gone_fishin(fishing_yield_modifier)
-	var/fish_added = rand(0,5)
-	fish_added = fish_added * fishing_yield_modifier
-	fish_amt = CLAMP((fish_amt + (fish_added)), 0, fish_amt_max)
+	fish_amt = CLAMP((fish_amt + (rand(0, 3) * fishing_yield_modifier)), 0, fish_max)
 	update_icon() // To give it the filled sprite

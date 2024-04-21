@@ -1583,7 +1583,7 @@
 /area/interior/city)
 "lL" = (
 /obj/structure/rack,
-/obj/item/melee/whale_hook,
+/obj/item/twohanded/melee/whale_hook,
 /turf/open/floor/f13{
 	tag = "icon-floorrusty";
 	icon_state = "floorrusty"
@@ -3275,11 +3275,12 @@
 	},
 /area/interior/foundry)
 "wB" = (
-/obj/item/melee/whale_hook,
-/turf/open/indestructible/ground/floor/lattice{
-	icon_state = "lattice_new14"
+/obj/item/twohanded/melee/whale_hook,
+/turf/open/floor/f13{
+	tag = "icon-floorrusty";
+	icon_state = "floorrusty"
 	},
-/area/interior/city)
+/area/interior/fishery)
 "wD" = (
 /obj/structure/decor/carpet{
 	icon_state = "oldcovertattered";
@@ -4378,7 +4379,7 @@
 /area/interior/foundry)
 "Eh" = (
 /obj/structure/table,
-/obj/item/melee/whale_hook,
+/obj/item/twohanded/melee/whale_hook,
 /turf/open/floor/f13{
 	tag = "icon-floorrusty";
 	icon_state = "floorrusty"
@@ -37322,7 +37323,7 @@ iK
 kd
 ds
 kd
-wB
+iK
 Cd
 kd
 kd
@@ -42975,7 +42976,7 @@ EF
 Qw
 Qw
 Qw
-pJ
+wB
 qP
 pJ
 pJ
@@ -43497,7 +43498,7 @@ eN
 Qw
 Rk
 pJ
-Eh
+Ri
 Ri
 eN
 Qw
@@ -44526,7 +44527,7 @@ Qw
 lL
 Ux
 RU
-Ri
+Eh
 Qw
 Qw
 Qw

@@ -5,7 +5,7 @@
 
 	coven_title = "Cleanse your spirit..."
 	coven_msg = "Splash your face with the pure water?"
-	coven_initiate_msg = "You splash the water on your face, let whatever comes next come."
+	coven_initiate_msg = "You splash the water on your face..."
 
 /obj/structure/coven_object/chapel_font/examine(mob/user)
 	..()

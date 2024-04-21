@@ -53,11 +53,12 @@
 	attack_verb = list("stabbed", "slashed", "sliced")
 	hitsound = 'sound/weapons/machetehit.ogg'
 
-/obj/item/melee/whale_hook
+/obj/item/twohanded/melee/whale_hook
 	name = "polehook"
 	desc = "A bizzare tool of no origin."
-	icon_state = "whale_hook"
-	item_state = "whale_hook"
+	icon = 'icons/obj/weapons/melee.dmi'
+	icon_state = "whale_hook0"
+	item_state = "whale_hook0"
 	lefthand_file = 'icons/mob/inhands/weapons/melee_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/melee_righthand.dmi'
 	force = 15
