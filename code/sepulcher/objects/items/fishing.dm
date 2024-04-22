@@ -2,6 +2,8 @@
 	name = "fishing rod"
 	icon = 'icons/obj/fishing.dmi'
 	icon_state = "fishing_rod"
+	lefthand_file = 'icons/mob/inhands/items_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/items_righthand.dmi'
 	var/in_use = FALSE
 
 /obj/item/fishing_rod/afterattack(atom/target, mob/user, proximity_flag, click_parameters)
@@ -46,6 +48,8 @@
 	desc = "Binding artifice. Used with draglines to capture mundane fish."
 	icon = 'icons/obj/fishing.dmi'
 	icon_state = "net-bound"
+	lefthand_file = 'icons/mob/inhands/items_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/items_righthand.dmi'
 	/// Inital is TRUE, turns to FALSE for usage.
 	var/bound = TRUE
 	/// Coven-interaction object
