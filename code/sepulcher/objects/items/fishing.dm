@@ -72,7 +72,7 @@
 
 /obj/item/fishing_net/update_icon()
 	cut_overlays()
-	if(!bound)
+	if(!bound) // Note: Inhands sprites also go off these icon_states
 		icon_state = "net-loose"
 		if(fish_amt)
 			icon_state = "net-fish"	
