@@ -58,14 +58,16 @@
 	desc = "A bizzare tool of no origin."
 	icon = 'icons/obj/weapons/melee.dmi'
 	icon_state = "whale_hook0"
-	item_state = "whale_hook0"
 	lefthand_file = 'icons/mob/inhands/weapons/melee_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/melee_righthand.dmi'
 	force = 15
 	throwforce = 7
 	w_class = WEIGHT_CLASS_BULKY
-	attack_verb = list("stabbed", "slashed", "sliced")
+	attack_verb = list("stabbed", "jabbed", "sliced")
 	hitsound = 'sound/weapons/machetehit.ogg'
+
+/obj/item/twohanded/melee/whale_hook/update_icon()
+	icon_state = "whale_hook[wielded]"
 
 /obj/item/melee/baton
 	name = "baton"
