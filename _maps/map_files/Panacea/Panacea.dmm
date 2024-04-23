@@ -2115,7 +2115,8 @@
 "oR" = (
 /obj/structure/ladder/unbreakable{
 	height = 1;
-	id = "Sew3"
+	id = "Sew3";
+	manhole_cover = 1
 	},
 /turf/open/indestructible/ground/outside/road,
 /area/exterior/city)

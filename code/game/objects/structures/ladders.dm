@@ -3,13 +3,17 @@
 	name = "ladder"
 	desc = "A sturdy metal ladder."
 	icon = 'icons/obj/structures.dmi'
-	icon_state = "ladder11"
+	icon_state = "manhole_closed"
 	anchored = TRUE
 	var/obj/structure/ladder/down   //the ladder below this one
 	var/obj/structure/ladder/up     //the ladder above this one
+	var/obj/item/twohanded/required/manhole/cover //the cover for this manhole
+	var/manhole_cover = FALSE
 
 /obj/structure/ladder/Initialize(mapload, obj/structure/ladder/up, obj/structure/ladder/down)
 	..()
+	if(manhole_cover)
+		cover = new /obj/item/twohanded/required/manhole
 	if (up)
 		src.up = up
 		up.down = src
@@ -56,17 +60,20 @@
 	up = down = null
 
 /obj/structure/ladder/update_icon()
-	if(up && down)
-		icon_state = "ladder11"
+	if(cover)
+		icon_state = "manhole_closed"
+	else
+		if(up && down)
+			icon_state = "ladder-middle"
 
-	else if(up)
-		icon_state = "ladder10"
+		else if(up)
+			icon_state = "ladder-bottom"
 
-	else if(down)
-		icon_state = "manhole_open"
+		else if(down)
+			icon_state = "manhole_open"
 
-	else	//wtf make your ladders properly assholes
-		icon_state = "ladder00"
+		else	//wtf make your ladders properly assholes
+			icon_state = "ladder-error"
 
 /obj/structure/ladder/singularity_pull()
 	if (!(resistance_flags & INDESTRUCTIBLE))
@@ -89,6 +96,10 @@
 
 /obj/structure/ladder/proc/use(mob/user, is_ghost=FALSE)
 	if (!is_ghost && !in_range(src, user))
+		return
+
+	if(cover)
+		to_chat(user, "<span class='red'>There is a cover in the way.</span>")
 		return
 
 	if (up && down)
@@ -122,7 +133,40 @@
 	return use(user)
 
 /obj/structure/ladder/attackby(obj/item/W, mob/user, params)
-	return use(user)
+	var/mob/living/carbon/human/H = user
+	if(/obj/item/twohanded/melee/whale_hook && cover)
+		if(!cover)
+			to_chat(user, "<span class='magenta'>There's nothing to obstructing this manhole.</span>")
+			return
+		else
+			H.visible_message("<span class='red'>[H] begins to pull the [cover.name] from the [name].</span>", \
+								"<span class='red'>You begins to pull the [cover.name] from the [name].</span>")
+			if(do_after(H, rand(5,8) SECONDS, target = src))
+				user.dropItemToGround(cover)
+				cover = null
+				update_icon()
+				playsound(src, 'sound/effects/manhole_move.ogg', 50, 0, 0)
+				to_chat(user, "<span class='magenta'>You pull off the [cover.name].</span>")
+
+	if(/obj/item/twohanded/required/manhole)
+		if(!cover)
+			if(up)
+				to_chat(user, "<span class='magenta'>The [name] lacks a place for the [W.name].</span>")
+				return
+			H.visible_message("<span class='red'>[H] begins to place a cover on the [name].</span>", \
+								"<span class='red'>You begins to place a cover on the [name].</span>")
+			if(do_after(H, rand(2,4) SECONDS, target = src))
+				if(!user.transferItemToLoc(W, src))
+					return
+				cover = W
+				update_icon()
+				playsound(src, 'sound/effects/manhole_move.ogg', 50, 0, 0)
+				to_chat(user, "<span class='magenta'>You place the [W.name] on the [name].</span>")
+		else
+			to_chat(user, "<span class='magenta'>There is already a cover in place.</span>")
+			return
+	else
+		return use(user)
 
 /obj/structure/ladder/attack_robot(mob/living/silicon/robot/R)
 	if(R.Adjacent(src))
