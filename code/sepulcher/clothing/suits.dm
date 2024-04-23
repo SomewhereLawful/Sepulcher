@@ -33,3 +33,13 @@
 	name = "smithing apron"
 	icon_state = "smithing"
 	item_state = "smithing"
+
+/obj/item/clothing/suit/fishing_waders
+	name = "waders"
+	icon_state = "waders"
+	item_state = "waders"
+
+/obj/item/clothing/suit/fishing_waders/green
+	name = "waders"
+	icon_state = "waders_green"
+	item_state = "waders_green"

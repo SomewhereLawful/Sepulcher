@@ -3734,6 +3734,14 @@
 	icon_state = "floorrusty"
 	},
 /area/interior/foundry)
+"zA" = (
+/obj/structure/table,
+/obj/item/clothing/suit/fishing_waders,
+/turf/open/floor/f13{
+	tag = "icon-floorrusty";
+	icon_state = "floorrusty"
+	},
+/area/interior/fishery)
 "zD" = (
 /obj/structure/chair/office{
 	dir = 4
@@ -43498,7 +43506,7 @@ eN
 Qw
 Rk
 pJ
-Ri
+zA
 Ri
 eN
 Qw
