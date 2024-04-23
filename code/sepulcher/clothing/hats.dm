@@ -21,9 +21,15 @@
 	item_state = "safekeeper"
 	flags_inv = HIDEEARS|HIDEHAIR
 
-/obj/item/clothing/head/worker_hardhat
-	name = "brain bucket"
+/obj/item/clothing/head/worker_helmet
+	name = "hardhat"
 	desc = "Couldn't stop a bullet."
-	icon_state = "safekeeper"
-	item_state = "safekeeper"
+	icon_state = "worker_helmet"
+	item_state = "worker_helmet"
 	flags_inv = HIDEEARS|HIDEHAIR
+
+/obj/item/clothing/head/straw_hat
+	name = "straw hat"
+	icon_state = "gambler"
+	item_state = "dethat"
+	flags_inv = HIDEHAIR
