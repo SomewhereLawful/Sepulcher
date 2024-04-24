@@ -14,12 +14,10 @@
 /obj/item/coven_item/svarhogg_ear
 	name = "wire ear"
 	icon_state = "hogg-ear"
-	coven_favor_lvl = COVEN_GOD_RELATION_NEUTRAL
 
 // Yoni Tehom cult (fishing)
 /obj/item/coven_item/tehom_yoni
 	name = "bauble"
 	icon_state = "yoni-womb"
-	coven_favor_lvl = COVEN_GOD_RELATION_NEUTRAL
 	var/net_duration_mod = 0.5
 	var/net_yield_mod = 2

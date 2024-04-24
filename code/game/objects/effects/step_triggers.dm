@@ -115,7 +115,8 @@
 	var/teleport_z = 0
 	icon = 'icons/effects/teleporter.dmi'
 	icon_state = "down"
-	affect_ghosts = 1
+	layer = FLY_LAYER
+	affect_ghosts = TRUE
 
 /obj/effect/step_trigger/teleporter/Trigger(atom/movable/A)
 	if(teleport_x && teleport_y && teleport_z)
