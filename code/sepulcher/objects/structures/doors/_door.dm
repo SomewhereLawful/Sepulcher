@@ -31,6 +31,10 @@
 	/// unless null, is tied via ID to toggle locking with keypads/buttons
 	var/remote_lock_id = "null"
 
+	// For locking proc, ensures the attackby can use lock_id of the item
+	var/obj/item/key/interacting_key
+	var/obj/item/key_ring/interacting_key_ring
+
 	var/open = FALSE
 	var/inoperable = FALSE
 
@@ -68,6 +72,16 @@
 	layer = CLOSED_DOOR_LAYER
 	open = FALSE
 
+/obj/structure/door/proc/doorLock(mob/user)
+	if(locked)
+		to_chat(user,"You unlock the door.")
+		playsound(src.loc, unlock_sound, 30, 0, 0)
+		locked = FALSE
+	else
+		to_chat(user,"You lock the door.")
+		playsound(src.loc, lock_sound, 30, 0, 0)
+		locked = TRUE
+
 /obj/structure/door/attack_hand(mob/user)
 	if(isliving(user)) //no spooky nonsense
 		if(inoperable)
@@ -97,19 +111,21 @@
 	playsound(src.loc, pick(knocking_sounds), 80, 0, 0)
 	to_chat(user, "You knock upon the door.")
 
-/obj/structure/door/attackby(obj/item/key/I, mob/living/user, params)
+/obj/structure/door/attackby(obj/item/I, mob/living/user, params)
 	if(istype(I, /obj/item/key))
+		interacting_key = I
 		if(!lockable)
 			to_chat(user, "This door lacks the capability to be locked.")
 			return
-		if(I.lock_id == src.lock_id || istype(I, /obj/item/key/skeleton_key)) //if the key matches our id OR is the skeleton key
-			if(locked)
-				to_chat(user,"You unlock the door.")
-				playsound(src.loc, unlock_sound, 30, 0, 0)
-				locked = FALSE
-			else
-				to_chat(user,"You lock the door.")
-				playsound(src.loc, lock_sound, 30, 0, 0)
-				locked = TRUE
+		if(interacting_key.lock_id == src.lock_id || istype(I, /obj/item/key/skeleton_key)) //if the key matches our id OR is the skeleton key
+			doorLock()
+
+	else if(istype(I, /obj/item/key_ring))
+		interacting_key_ring = I
+		if(!lockable)
+			to_chat(user, "This door lacks the capability to be locked.")
+			return
+		if(interacting_key_ring.active_lock_id == src.lock_id)
+			doorLock()
 	else
 		return
