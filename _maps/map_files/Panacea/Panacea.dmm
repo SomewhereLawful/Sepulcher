@@ -5579,7 +5579,9 @@
 /turf/open/indestructible/ground/outside/road,
 /area/exterior/city)
 "KS" = (
-/obj/structure/door/metal/barred,
+/obj/structure/door/metal/barred{
+	lock_id = "Safekeeper-Jail"
+	},
 /turf/open/floor/f13{
 	tag = "icon-yellowdirtyfull";
 	icon_state = "yellowdirtysolid"
@@ -6657,6 +6659,15 @@
 	},
 /turf/open/chasm/foundry,
 /area/interior/foundry)
+"Sc" = (
+/obj/structure/door/metal/barred{
+	lock_id = "Safekeeper-Jail"
+	},
+/turf/open/floor/f13{
+	tag = "icon-floorrusty";
+	icon_state = "floorrusty"
+	},
+/area/interior/city)
 "Sd" = (
 /obj/structure/table,
 /obj/structure/decor/apc{
@@ -7381,6 +7392,16 @@
 /turf/open/floor/f13{
 	tag = "icon-bluedirtychess2";
 	icon_state = "bluedirtychess2"
+	},
+/area/interior/city)
+"WQ" = (
+/obj/structure/door/metal/barred{
+	lock_id = "Safekeeper-Armory";
+	name = "Armory"
+	},
+/turf/open/floor/f13{
+	tag = "icon-floorrusty";
+	icon_state = "floorrusty"
 	},
 /area/interior/city)
 "WS" = (
@@ -34740,10 +34761,10 @@ bn
 bn
 BL
 dU
-rP
+Sc
 BL
 rP
-dU
+Sc
 BL
 nD
 Ry
@@ -36796,7 +36817,7 @@ de
 qQ
 EN
 TQ
-rP
+WQ
 ka
 Ko
 TM
