@@ -1,6 +1,7 @@
 /obj/item/key/cleanser
 	name = "Hospital Staff key"
 	icon_state = "apartment"
+	icon_state = "single"
 	lock_id = "Cleanser-Main"
 
 /obj/item/key/cleanser/pharmacy

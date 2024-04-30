@@ -1,5 +1,6 @@
 /obj/item/key/safekeeper
 	name = "Disciplinary Office key"
+	icon_state = "single"
 	lock_id = "Safekeeper-Main"
 
 /obj/item/key/safekeeper/jail

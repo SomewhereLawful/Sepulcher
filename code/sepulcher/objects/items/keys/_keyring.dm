@@ -9,6 +9,7 @@
 	var/active_lock_id
 	var/key_amt
 	var/key_amt_max = 5
+	var/selection_index = 1
 
 /obj/item/key_ring/update_icon()
 	cut_overlays()
@@ -28,19 +29,23 @@
 	if(active_key)
 		to_chat(user, "<span class='magenta'>You currently are holding the [active_key.name].</span>")
 
+/obj/item/key_ring/proc/keyRemove(mob/user)
+	var/obj/item/key/K = keys_in_keyring[selection_index]
+	user.put_in_hands(K)
+	keys_in_keyring -= active_key
+	--key_amt
+	keyCycle()
+
 /obj/item/key_ring/proc/keyCycle(mob/user)
-	if(!keys_in_keyring || keys_in_keyring.len == 0)
-		to_chat(user,"The keyring is empty.")
-		return
-
-	var/selection_index
-	// we can do this better
-	// 1 - iterate list 2 - move down list with selection 3 - set selection to actives
-	active_key = keys_in_keyring[1] 
+	active_key = keys_in_keyring[selection_index]
 	active_lock_id = active_key.lock_id
-	keys_in_keyring = list(keys_in_keyring, active_key) // Append the key back to the end
 
-// Interactions
+	// Check if we've reached the end of the key list, reset to position 1 or add for next position
+	if(selection_index == keys_in_keyring.len)
+		selection_index = 1
+		return
+	selection_index = CLAMP((selection_index + 1), 0, keys_in_keyring.len)
+
 /obj/item/key_ring/attackby(obj/item/key/I, mob/living/user, params)
 	if(!I.key_ringable)
 		to_chat(user,"The key refuses the key ring.")
@@ -49,20 +54,21 @@
 		key_amt = CLAMP((key_amt + 1), 0, key_amt_max)
 		keys_in_keyring += I
 		qdel(I)
+		to_chat(user,"You add the [active_key.name] to the key ring.")
 		update_icon()
 
 /obj/item/key_ring/AltClick(mob/user)
 	if(!keys_in_keyring)
-		to_chat(user,"The keyring is empty.")
+		to_chat(user,"The key ring is empty.")
 		return
-	var/index = _list_find(keys_in_keyring, active_key, 1, key_amt_max)
-	if(index)
-		to_chat(user,"You remove the [active_key.name].")
-		keys_in_keyring -= index
-		user.put_in_inactive_hand(new active_key)
-		--key_amt
+	keyRemove()
+	to_chat(user,"You remove the [active_key.name].")
+	update_icon()
 
 /obj/item/key_ring/attack_self(mob/user)
+	if(!keys_in_keyring || keys_in_keyring.len == 0)
+		to_chat(user,"The key ring is empty.")
+		return
 	keyCycle()
 	to_chat(user,"You cycle to the [active_key.name].")
 	update_icon()
