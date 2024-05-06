@@ -1,30 +1,28 @@
 // Sepulcher medicines //
-
 /obj/item/consumable/medicine
-	name = "health orb"
-	desc = "healing embrace of a machination"
+	name = "medical consumable"
 	icon = 'icons/obj/medicine.dmi'
 	icon_state = "broken"
-	ingest_consumption = FALSE
-	health_points = -100
-	eat_sound = 'sound/items/medicine_tablet.ogg'
-	bites_left = 1
 
-/obj/item/consumable/medicine/citalopram
+// Pills
+/obj/item/consumable/medicine/pill
+	consume_type = MOUTH_CONSUME
+	use_sound = 'sound/items/medicine_tablet.ogg'
+
+/obj/item/consumable/medicine/pill/citalopram
 	name = "citalopram pill"
 	desc = "Like fingers of warm light in a bleak mind."
 	icon_state = "citalopram"
-	ingest_consumption = TRUE
 	will_points = -15
 
-/obj/item/consumable/medicine/potassium_iodide
+/obj/item/consumable/medicine/pill/potassium_iodide
 	name = "iodide pill"
 	desc = "Toxicity Purgative. Effective, yet bitter."
 	icon_state = "iodide"
-	ingest_consumption = TRUE
 	toxicity_points = -15
 	will_points = 5
 
+// Salves and gauze
 /obj/item/consumable/medicine/bruise_salve
 	name = "bruise salve"
 	desc = "Painkiller and balm for bruises. Stings."

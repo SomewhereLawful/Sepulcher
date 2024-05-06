@@ -1,7 +1,7 @@
 /obj/item/consumable/food
 	uses_verb = "eats"
 	use_verb = "eat"
-	bites_left = 2
+	consume_type = MOUTH_CONSUME
 
 /obj/item/consumable/food/goyslop
 	name = "food pack"

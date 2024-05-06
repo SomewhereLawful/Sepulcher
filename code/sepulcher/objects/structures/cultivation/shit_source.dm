@@ -7,7 +7,6 @@
 	feed_points = 10
 	toxicity_points = 20
 	will_points = 10
-	flavour_text = "Moist with solid kernels within. Tastes bitter."
 
 /obj/structure/shit_source
 	name = "shit-ladden pipe"
