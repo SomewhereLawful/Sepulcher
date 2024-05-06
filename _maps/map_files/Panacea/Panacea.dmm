@@ -448,7 +448,7 @@
 /turf/open/indestructible/ground/outside/sidewalk/tile,
 /area/exterior/wastes)
 "cG" = (
-/obj/structure/simple_door/room,
+/obj/structure/door,
 /turf/open/floor/f13{
 	tag = "icon-floorrusty";
 	icon_state = "floorrusty"
@@ -492,6 +492,12 @@
 	},
 /turf/open/indestructible/ground/outside/road,
 /area/exterior/city)
+"cT" = (
+/obj/effect/turf_decal/dirt_edge{
+	dir = 10
+	},
+/turf/open/indestructible/ground/outside/road,
+/area/exterior/city/spillage)
 "cV" = (
 /obj/structure/closet/utilty_locker,
 /obj/item/clothing/suit/fishing_waders/green,
@@ -961,12 +967,6 @@
 	icon_state = "floorrusty"
 	},
 /area/interior/train_yard)
-"gH" = (
-/obj/machinery/light/small{
-	dir = 8
-	},
-/turf/open/indestructible/ground/floor/lattice,
-/area/interior/city)
 "gJ" = (
 /obj/structure/decor/dump_bin/full,
 /turf/open/floor/f13{
@@ -1166,7 +1166,7 @@
 	},
 /area/interior/train_yard)
 "ig" = (
-/obj/structure/simple_door/room,
+/obj/structure/door,
 /turf/open/floor/f13{
 	tag = "icon-floorrusty";
 	icon_state = "yellowdirtychess"
@@ -1384,6 +1384,13 @@
 /obj/structure/object_pass/foundry_bucket_rails,
 /turf/open/foundry,
 /area/interior/foundry)
+"jP" = (
+/obj/effect/turf_decal/dirt_edge{
+	dir = 5
+	},
+/obj/structure/decor/waste,
+/turf/open/indestructible/ground/outside/road,
+/area/exterior/city/spillage)
 "jS" = (
 /obj/effect/decal/roadline{
 	icon_state = "singlehorizontal"
@@ -1626,10 +1633,6 @@
 	},
 /turf/open/indestructible/ground/outside/road,
 /area/exterior/city/spillage)
-"lI" = (
-/obj/structure/rack/wood,
-/turf/open/indestructible/ground/floor/wood_floor,
-/area/interior/city)
 "lJ" = (
 /obj/effect/step_trigger/teleporter{
 	dir = 1
@@ -1899,7 +1902,7 @@
 /turf/open/indestructible/ground/outside/sidewalk/tile,
 /area/exterior/city)
 "nr" = (
-/obj/structure/simple_door/room,
+/obj/structure/door,
 /turf/open/indestructible/ground/floor/wood_floor,
 /area/interior/city)
 "ns" = (
@@ -2317,7 +2320,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
 /area/void)
 "pY" = (
-/obj/structure/simple_door/room,
+/obj/structure/door,
 /turf/open/floor/f13{
 	tag = "icon-floorrusty";
 	icon_state = "floorrusty"
@@ -2419,7 +2422,7 @@
 /turf/open/indestructible/ground/outside/desert,
 /area/exterior/wastes)
 "qJ" = (
-/obj/structure/simple_door/room,
+/obj/structure/door,
 /obj/structure/barricade/wooden/planks,
 /turf/closed/wall/beton_agro,
 /area/interior/spawning/kommandant)
@@ -2599,7 +2602,7 @@
 /turf/open/indestructible/ground/outside/road,
 /area/exterior/city)
 "sc" = (
-/obj/structure/simple_door/room,
+/obj/structure/door,
 /turf/open/floor/f13{
 	tag = "icon-floorrusty";
 	icon_state = "floorrusty"
@@ -3048,11 +3051,8 @@
 /turf/open/indestructible/ground/floor/wood_floor/horizontal,
 /area/interior/city)
 "uP" = (
-/obj/structure/simple_door/room,
-/turf/open/floor/f13{
-	tag = "icon-floorrusty";
-	icon_state = "floorrusty"
-	},
+/obj/structure/door,
+/turf/open/indestructible/ground/floor/wood_floor,
 /area/interior/fishery)
 "uR" = (
 /turf/closed/wall/brickdark,
@@ -3082,7 +3082,6 @@
 /area/interior/foundry)
 "va" = (
 /obj/structure/decor/waste,
-/obj/machinery/light,
 /turf/open/floor/f13{
 	tag = "icon-floorrusty";
 	icon_state = "floorrusty"
@@ -3186,14 +3185,14 @@
 /turf/open/indestructible/ground/floor/wood_floor,
 /area/interior/spawning/kommandant)
 "vC" = (
-/obj/structure/simple_door/room,
+/obj/structure/door,
 /turf/open/floor/f13{
 	tag = "icon-yellowdirtyfull";
 	icon_state = "yellowdirtyfull"
 	},
 /area/interior/city)
 "vE" = (
-/obj/structure/simple_door/room,
+/obj/structure/door,
 /turf/open/floor/f13{
 	tag = "icon-floorrusty";
 	icon_state = "floorrusty"
@@ -3331,6 +3330,12 @@
 	},
 /turf/open/indestructible/ground/floor/wood_floor/horizontal,
 /area/interior/city)
+"wr" = (
+/obj/effect/turf_decal/dirt_edge{
+	dir = 9
+	},
+/turf/open/indestructible/ground/outside/road,
+/area/exterior/city/spillage)
 "wt" = (
 /obj/structure/lattice/catwalk{
 	icon_state = "catwalk12-0"
@@ -3834,7 +3839,7 @@
 	},
 /area/interior/clinic)
 "zE" = (
-/obj/structure/simple_door/room,
+/obj/structure/door,
 /turf/open/indestructible/ground/floor/bath_tile,
 /area/interior/apartments)
 "zG" = (
@@ -4343,7 +4348,7 @@
 /turf/open/indestructible/ground/outside/dirt,
 /area/exterior/city/church_yard)
 "Dm" = (
-/obj/structure/simple_door/room,
+/obj/structure/door,
 /turf/open/indestructible/ground/floor/wood_floor/horizontal,
 /area/interior/city)
 "Dp" = (
@@ -4504,6 +4509,12 @@
 /obj/structure/barricade/wooden/planks,
 /turf/open/indestructible/ground/floor/wood_floor,
 /area/interior/apartments)
+"Eq" = (
+/obj/effect/turf_decal/dirt_edge{
+	dir = 8
+	},
+/turf/open/indestructible/ground/outside/road,
+/area/exterior/city/spillage)
 "Er" = (
 /obj/effect/turf_decal/roadline/noshadow,
 /turf/open/indestructible/ground/outside/road,
@@ -4907,7 +4918,7 @@
 /turf/open/indestructible/ground/outside/dirt,
 /area/exterior/city/church_yard)
 "GD" = (
-/obj/structure/simple_door/room,
+/obj/structure/door,
 /turf/open/indestructible/ground/floor/lattice,
 /area/interior/city)
 "GI" = (
@@ -5211,7 +5222,7 @@
 	},
 /area/interior/clinic)
 "IH" = (
-/obj/structure/simple_door/wood,
+/obj/structure/door/cabin,
 /turf/open/indestructible/ground/outside/waste,
 /area/interior/city)
 "II" = (
@@ -5343,6 +5354,13 @@
 	icon_state = "floorrusty"
 	},
 /area/interior/clinic)
+"Jw" = (
+/obj/effect/turf_decal/dirt_edge,
+/obj/effect/turf_decal/dirt_edge{
+	dir = 1
+	},
+/turf/open/indestructible/ground/outside/road,
+/area/exterior/wastes)
 "Jx" = (
 /obj/effect/turf_decal/dirt_edge{
 	dir = 8
@@ -5390,7 +5408,7 @@
 	},
 /area/interior/fishery)
 "JJ" = (
-/obj/structure/simple_door/room,
+/obj/structure/door,
 /turf/open/floor/f13{
 	tag = "icon-bluedirtychess2";
 	icon_state = "bluedirtychess2"
@@ -5587,6 +5605,10 @@
 	icon_state = "yellowdirtysolid"
 	},
 /area/interior/foundry/sublevel)
+"KU" = (
+/obj/structure/decor/waste,
+/turf/open/indestructible/ground/outside/waste,
+/area/exterior/city/spillage)
 "KZ" = (
 /obj/effect/turf_decal/roadline/noshadow{
 	dir = 4
@@ -5944,12 +5966,12 @@
 /turf/open/indestructible/ground/outside/water/sea,
 /area/interior/fishery)
 "Nt" = (
-/obj/structure/simple_door/metal/store,
+/obj/structure/door,
 /turf/open/floor/f13{
 	tag = "icon-floorrusty";
 	icon_state = "floorrusty"
 	},
-/area/interior/city)
+/area/interior/fishery)
 "Nu" = (
 /obj/structure/chair/wood/normal{
 	dir = 8
@@ -6140,6 +6162,10 @@
 	},
 /turf/open/indestructible/ground/outside/road,
 /area/exterior/city/docks)
+"OA" = (
+/obj/effect/turf_decal/dirt_edge,
+/turf/open/indestructible/ground/outside/road,
+/area/exterior/city/spillage)
 "OB" = (
 /obj/structure/fence/church/end{
 	dir = 1
@@ -6163,7 +6189,7 @@
 /turf/open/indestructible/ground/floor/wood_floor,
 /area/interior/city)
 "OE" = (
-/obj/structure/simple_door/room,
+/obj/structure/door,
 /turf/open/indestructible/ground/floor/wood_floor,
 /area/interior/apartments)
 "OG" = (
@@ -6335,6 +6361,12 @@
 	icon_state = "floorrusty"
 	},
 /area/interior/foundry)
+"PL" = (
+/obj/effect/turf_decal/dirt_edge{
+	dir = 6
+	},
+/turf/open/indestructible/ground/outside/road,
+/area/exterior/city/spillage)
 "PO" = (
 /obj/structure/door{
 	inoperable = 1
@@ -6678,6 +6710,16 @@
 	icon_state = "yellowdirtyfull"
 	},
 /area/interior/foundry/sublevel)
+"Sf" = (
+/obj/structure/table,
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/open/floor/f13{
+	tag = "icon-floorrusty";
+	icon_state = "floorrusty"
+	},
+/area/interior/foundry)
 "Sg" = (
 /obj/effect/turf_decal/line{
 	dir = 10
@@ -7429,10 +7471,6 @@
 	icon_state = "floorrustysolid"
 	},
 /area/interior/train_yard)
-"Xe" = (
-/obj/structure/simple_door/room,
-/turf/open/indestructible/ground/outside/road,
-/area/interior/fishery)
 "Xl" = (
 /obj/effect/turf_decal/line{
 	dir = 8
@@ -7556,6 +7594,9 @@
 /obj/structure/scrapheap,
 /turf/open/indestructible/ground/outside/desert,
 /area/exterior/wastes)
+"Yh" = (
+/turf/open/indestructible/ground/outside/waste,
+/area/exterior/city/spillage)
 "Yi" = (
 /obj/structure/chair/wood/normal{
 	dir = 4
@@ -7806,7 +7847,7 @@
 /turf/open/indestructible/ground/outside/sidewalk/tile,
 /area/exterior/city)
 "ZL" = (
-/obj/structure/simple_door/room,
+/obj/structure/door,
 /turf/open/floor/f13{
 	tag = "icon-floorrusty";
 	icon_state = "floorrusty"
@@ -24427,13 +24468,13 @@ XX
 XX
 NV
 NV
+Gn
 yi
 yi
-yi
-yi
-yi
-yi
-yi
+xl
+xl
+xl
+xl
 yi
 NV
 XX
@@ -24687,10 +24728,10 @@ Hd
 yi
 yi
 yi
-yi
-yi
-yi
-yi
+xl
+xl
+xl
+xl
 yi
 NV
 XX
@@ -25202,8 +25243,8 @@ yi
 yi
 yi
 xl
-xl
-xl
+mH
+mH
 xl
 yi
 NV
@@ -25458,10 +25499,10 @@ xl
 xl
 xl
 xl
-xl
-Hd
-Hd
-xl
+UB
+Iv
+qz
+ML
 yi
 NV
 XX
@@ -25715,11 +25756,11 @@ Hd
 yi
 yi
 yi
-xl
-Hd
-Hd
-xl
-yi
+UB
+wV
+Wu
+ML
+Gq
 NV
 XX
 NV
@@ -25969,13 +26010,13 @@ XX
 XX
 NV
 NV
-gh
+Sf
 gh
 yi
-xl
-Hd
-Hd
-xl
+UB
+wV
+Wu
+ML
 yi
 NV
 NV
@@ -26229,10 +26270,10 @@ NV
 NV
 NV
 yi
-xl
-Hd
-Hd
-xl
+UB
+wV
+Wu
+ML
 yi
 pY
 yi
@@ -26486,10 +26527,10 @@ XX
 XX
 NV
 yi
-xl
-Hd
-Hd
-xl
+UB
+yZ
+ji
+ML
 yi
 pY
 yi
@@ -26744,8 +26785,8 @@ NV
 NV
 yi
 xl
-xl
-xl
+Cf
+Cf
 xl
 yi
 NV
@@ -27779,7 +27820,7 @@ Eb
 wV
 YH
 VY
-yi
+vk
 NV
 Oe
 Ly
@@ -28807,7 +28848,7 @@ yO
 yf
 vx
 xf
-yi
+vk
 rc
 hI
 hI
@@ -34013,10 +34054,10 @@ sj
 sj
 sj
 nS
-nS
-nS
-nS
-nS
+PL
+Yh
+jP
+Gy
 GO
 Ag
 dS
@@ -34269,12 +34310,12 @@ sj
 tQ
 tQ
 sj
-nS
-nS
-nS
-nS
-nS
-bQ
+OA
+KU
+Yh
+Yh
+Yh
+Jw
 dS
 dS
 YZ
@@ -34527,11 +34568,11 @@ sj
 sj
 sj
 nS
-nS
-nS
-nS
-nS
-bQ
+cT
+Yh
+Yh
+KU
+Jw
 dS
 dS
 dS
@@ -34785,9 +34826,9 @@ xe
 nS
 nS
 nS
-nS
-nS
-nS
+cT
+Yh
+wr
 bQ
 dS
 dS
@@ -35009,7 +35050,7 @@ Pq
 Pq
 fQ
 mk
-Nt
+yb
 TQ
 TQ
 Pd
@@ -35043,7 +35084,7 @@ nS
 nS
 nS
 nS
-nS
+Eq
 nS
 sI
 Ag
@@ -35536,7 +35577,7 @@ TQ
 TQ
 TQ
 TQ
-Nt
+yb
 BX
 we
 nS
@@ -36502,7 +36543,7 @@ VJ
 ly
 ly
 ly
-ly
+VJ
 ly
 kd
 gW
@@ -36756,9 +36797,9 @@ kd
 kd
 io
 iK
+ds
 kd
-gH
-kd
+ds
 lQ
 Ac
 kd
@@ -37013,9 +37054,9 @@ kd
 qY
 ds
 iK
+ds
 XC
 ds
-kd
 iK
 ds
 ds
@@ -37053,10 +37094,10 @@ Nu
 sj
 XX
 sj
-Zr
-Zr
-Zr
-Zr
+sj
+sj
+sj
+sj
 Zr
 MP
 wo
@@ -37270,9 +37311,9 @@ kd
 iq
 ds
 iK
+ds
 kd
 ds
-XC
 iK
 ds
 ds
@@ -37309,10 +37350,10 @@ Zr
 Zr
 sj
 XX
-sj
-lI
-vW
-Zr
+XX
+XX
+XX
+XX
 sj
 sj
 sj
@@ -37527,9 +37568,9 @@ kd
 kd
 cO
 iK
-kd
 ds
 kd
+ds
 iK
 Cd
 kd
@@ -37566,7 +37607,7 @@ sj
 nr
 sj
 XX
-sj
+XX
 sj
 sj
 sj
@@ -37585,7 +37626,7 @@ XX
 uE
 uE
 uE
-Nt
+yb
 uE
 uE
 uE
@@ -37785,9 +37826,9 @@ ly
 ly
 VJ
 ly
+ly
 XC
-ly
-ly
+VJ
 ly
 kd
 Wx
@@ -37865,7 +37906,7 @@ by
 sj
 sj
 sj
-Nt
+yb
 sj
 sj
 XX
@@ -40435,7 +40476,7 @@ bN
 bN
 sa
 Ly
-Nt
+yb
 TQ
 ei
 GJ
@@ -41906,7 +41947,7 @@ lz
 Kc
 lz
 Qw
-uP
+Nt
 Qw
 Qw
 Qw
@@ -42426,7 +42467,7 @@ pJ
 Lt
 Qw
 Qw
-uP
+Nt
 Qw
 uC
 Ly
@@ -42929,7 +42970,7 @@ Qw
 Qw
 Qw
 Qw
-Xe
+uP
 Qw
 Qw
 qa
@@ -42938,7 +42979,7 @@ bR
 bR
 pJ
 pJ
-uP
+Nt
 pJ
 pJ
 cV
@@ -43513,7 +43554,7 @@ WG
 Iq
 YW
 Cg
-kx
+tp
 Ce
 MN
 ke
@@ -43770,7 +43811,7 @@ kx
 ml
 Tq
 Bx
-tV
+pc
 yG
 aT
 ke

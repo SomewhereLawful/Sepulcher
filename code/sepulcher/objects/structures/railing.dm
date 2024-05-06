@@ -5,23 +5,15 @@
 	name = "railing"
 	icon = 'icons/obj/fence.dmi'
 	icon_state = "railing"
-	layer = ABOVE_MOB_LAYER
 	density = TRUE
 	anchored = TRUE
-
-/obj/structure/railing_end
-	name = "railing"
-	icon = 'icons/obj/fence.dmi'
-	icon_state = "railing_end"
 	layer = ABOVE_MOB_LAYER
-	density = FALSE
-	anchored = TRUE
 
 /obj/structure/railing/Initialize()
 	. = ..()
 	if(dir == NORTH) // Keeps north directional railings on the same tile but appearing almost one tile above
 		pixel_y = 12
-	if(dir == 4 || dir == 8)
+	if(dir == EAST || dir == WEST)
 		pixel_y = 14
 
 /obj/structure/railing/CanPass(atom/movable/mover, turf/target)
