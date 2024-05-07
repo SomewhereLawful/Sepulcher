@@ -8,13 +8,12 @@
 	desc = "fucked up"
 	icon = 'icons/obj/food.dmi'
 	icon_state = "broken"
-	/// How is this consumed? - SKIN checks if covered, VAGUE is consumed regardless of covering
 	var/consume_type = VAGUE_CONSUME
 	var/use_sound = 'sound/items/food_crunchy_1.ogg'
 	var/uses_verb = "uses"
 	var/use_verb = "use"
 	var/uses_left = 1
-	/// Time, in deciseconds, for consuming item
+	/// in deciseconds
 	var/usage_time = null
 
 	// The meat and potatoes
