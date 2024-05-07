@@ -3178,6 +3178,13 @@
 	icon_state = "floorrusty"
 	},
 /area/interior/city)
+"vv" = (
+/obj/structure/closet/fridge,
+/turf/open/floor/f13{
+	tag = "icon-floorrusty";
+	icon_state = "floorrusty"
+	},
+/area/interior/city)
 "vx" = (
 /obj/structure/lattice/catwalk{
 	icon_state = "catwalk3-0"
@@ -3325,6 +3332,16 @@
 	icon_state = "floorrusty"
 	},
 /area/interior/train_yard)
+"wj" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
+/obj/structure/table,
+/turf/open/floor/f13{
+	tag = "icon-floorrusty";
+	icon_state = "floorrusty"
+	},
+/area/interior/foundry)
 "wk" = (
 /obj/structure/scrapheap,
 /obj/effect/turf_decal/roadline/noshadow/corner{
@@ -6290,6 +6307,13 @@
 	},
 /turf/open/indestructible/ground/outside/road,
 /area/exterior/city)
+"Po" = (
+/obj/structure/closet/utilty_locker,
+/turf/open/floor/f13{
+	tag = "icon-floorrusty";
+	icon_state = "floorrusty"
+	},
+/area/interior/foundry)
 "Pq" = (
 /turf/open/indestructible/ground/outside/sidewalk/tile,
 /area/exterior/city)
@@ -24465,8 +24489,8 @@ XX
 XX
 NV
 NV
-Gn
-yi
+wj
+gh
 yi
 xl
 xl
@@ -26018,9 +26042,9 @@ yi
 NV
 NV
 NV
-yi
-yi
-yi
+Po
+Po
+Po
 NV
 XX
 XX
@@ -31678,7 +31702,7 @@ Pq
 Ly
 sj
 TQ
-TQ
+Au
 TQ
 TQ
 sj
@@ -31934,7 +31958,7 @@ Pq
 Pq
 Ly
 sj
-Kk
+TQ
 TQ
 TQ
 TQ
@@ -42494,7 +42518,7 @@ sa
 Pq
 Pq
 sj
-bn
+vv
 TQ
 TQ
 TQ
