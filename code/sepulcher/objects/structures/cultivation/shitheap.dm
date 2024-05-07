@@ -4,7 +4,6 @@
 // A single plot grows from a picklist so long as there's fertilizer
 // Picklist for each type of shitheap - NORMAL is for church yard, CONSTRUCTED is for illegal harvest, SEWER is sewer (go figure)
 #define SHITHEAP_PRODUCTS_NORMAL list(/obj/structure/farm_plant/common_mushroom = 30, /obj/structure/farm_plant/crawler_cap = 20, /obj/structure/farm_plant/steelhead = 10, /obj/structure/farm_plant/thinhelmet = 20, /obj/structure/farm_plant/sinew = 20)
-#define SHITHEAP_PRODUCTS_CONSTRUCTED list(/obj/structure/flora/grass/wasteland = 10, /obj/structure/flora/wasteplant/wild_broc = 7, /obj/structure/flora/wasteplant/wild_feracactus = 5, /obj/structure/flora/wasteplant/wild_mutfruit = 5, /obj/structure/flora/wasteplant/wild_xander = 5, /obj/structure/flora/wasteplant/wild_agave = 5, /obj/structure/flora/tree/joshua = 3, /obj/structure/flora/tree/cactus = 2, /obj/structure/flora/tree/wasteland = 2)
 #define SHITHEAP_PRODUCTS_SEWER list(/obj/structure/farm_plant = 100)
 
 /obj/structure/shitheap
