@@ -2,9 +2,9 @@
 
 /obj/item/clothing/under/boiler
 	name = "boiler suit"
-	icon_state = "navy"
-	item_state = "bl_suit"
-	item_color = "navy"
+	icon_state = "boiler"
+	item_state = "boiler"
+	item_color = "boiler"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	equip_sound = 'sound/items/equip/jumpsuit_equip.ogg'
 
