@@ -3,6 +3,7 @@
 	desc = "report if found - modifies stat by ten points"
 	icon = 'icons/obj/drink.dmi'
 	icon_state = "broken"
+	consume_type = VAGUE_CONSUME
 
 /obj/item/consumable/debug/health_up
 	name = "healing consumable"

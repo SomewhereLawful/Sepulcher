@@ -33,6 +33,11 @@ GLOBAL_LIST_INIT(bitfields, list(
 		"USES_TGUI" = USES_TGUI,
 		"FROZEN" = FROZEN,
 		),
+	"consume_type" = list(
+		"MOUTH_CONSUME" = MOUTH_CONSUME,
+		"SKIN_CONSUME" = SKIN_CONSUME,
+		"VAGUE_CONSUME" = VAGUE_CONSUME,
+		),
 	"datum_flags" = list(
 		"DF_USE_TAG" = DF_USE_TAG,
 		"DF_VAR_EDITED" = DF_VAR_EDITED,

@@ -53,22 +53,25 @@
 	attack_verb = list("stabbed", "slashed", "sliced")
 	hitsound = 'sound/weapons/machetehit.ogg'
 
-/obj/item/melee/whale_hook
+/obj/item/twohanded/melee/whale_hook
 	name = "polehook"
 	desc = "A bizzare tool of no origin."
-	icon_state = "harpoon"
-	item_state = "harpoon"
+	icon = 'icons/obj/weapons/melee.dmi'
+	icon_state = "whale_hook0"
 	lefthand_file = 'icons/mob/inhands/weapons/melee_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/melee_righthand.dmi'
 	force = 15
 	throwforce = 7
 	w_class = WEIGHT_CLASS_BULKY
-	attack_verb = list("stabbed", "slashed", "sliced")
+	attack_verb = list("stabbed", "jabbed", "sliced")
 	hitsound = 'sound/weapons/machetehit.ogg'
+
+/obj/item/twohanded/melee/whale_hook/update_icon()
+	icon_state = "whale_hook[wielded]"
 
 /obj/item/melee/baton
 	name = "baton"
-	desc = "Indispensible tool of correction of Bioslaves."
+	desc = "Indispensible tool of correction."
 	icon_state = "baton"
 	item_state = "baton"
 	lefthand_file = 'icons/mob/inhands/weapons/melee_lefthand.dmi'

@@ -13,3 +13,23 @@
 /obj/item/clothing/head/cleanser/sealed
 	desc = "If only screams were filtered. You are sealed in."
 	item_flags = NODROP // sealed in
+
+/obj/item/clothing/head/safekeeper
+	name = "enforcer budenovka"
+	desc = "Moldy natural fibre. Dignified."
+	icon_state = "safekeeper"
+	item_state = "safekeeper"
+	flags_inv = HIDEEARS|HIDEHAIR
+
+/obj/item/clothing/head/worker_helmet
+	name = "hardhat"
+	desc = "Couldn't stop a bullet."
+	icon_state = "worker_helmet"
+	item_state = "worker_helmet"
+	flags_inv = HIDEEARS|HIDEHAIR
+
+/obj/item/clothing/head/straw_hat
+	name = "straw hat"
+	icon_state = "gambler"
+	item_state = "dethat"
+	flags_inv = HIDEHAIR

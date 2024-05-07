@@ -5,7 +5,7 @@
 	amount = 8
 	lifetime = INFINITE
 	opaque = 1
-
+	density = TRUE
 
 /obj/effect/particle_effect/smoke/reality_edge/process()
 	for(var/mob/living/L in range(0,src))

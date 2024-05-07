@@ -3,21 +3,6 @@
 // (2 - latejoin
 
 // Spawners // (1
-/obj/effect/mob_spawn/human/bioslave
-	name = "enslaved birthing womb"
-	desc = "Where all city-dwellers begin."
-	icon = 'icons/obj/spawners.dmi'
-	icon_state = "bioslave"
-	density = TRUE
-	permanent = TRUE
-	roundstart = FALSE
-	death = FALSE
-	uses = -1
-	mob_gender = MALE
-	flavour_text = "<span class='danger'><b>Birthed whole, you awake from dreams of soft, undefiled life. You are little more than rough, callous flesh without purpose. Get to carting shit and scrap metal.</b></span>"
-	assignedrole = "Bioslave"
-	outfit = /datum/outfit/city/bioslave
-
 /obj/effect/mob_spawn/human/prole
 	name = "utilitarian birthing machine"
 	desc = "Births Proletariat workers."
@@ -94,10 +79,23 @@
 	flavour_text = ""
 	assignedrole = "Vagrant"
 
-// latejoins (2
-/obj/effect/landmark/latejoin/bioslave
-	name = "JoinLateBioslave"
+/obj/effect/mob_spawn/human/safekeeper
+	name = "Lobotomizer"
+	desc = "Converts useless meat into useful meat."
+	icon = 'icons/obj/spawners.dmi'
+	icon_state = "prole"
+	density = TRUE
+	permanent = TRUE
+	roundstart = FALSE
+	death = FALSE
+	uses = -1
+	mob_gender = MALE
+	mob_species = /datum/species/safekeeper
+	flavour_text = ""
+	assignedrole = "Safekeeper"
+	outfit = /datum/outfit/city/safekeeper
 
+// latejoins (2
 /obj/effect/landmark/latejoin/proletariat
 	name = "JoinLateProle"
 
@@ -109,6 +107,9 @@
 
 /obj/effect/landmark/latejoin/cleanser
 	name = "JoinLateCleanser"
+
+/obj/effect/landmark/latejoin/safekeeper
+	name = "JoinLateSafekeeper"
 
 /obj/effect/landmark/latejoin/vagrant
 	name = "JoinLateVagrant"

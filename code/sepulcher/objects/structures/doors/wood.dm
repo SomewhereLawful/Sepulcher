@@ -14,5 +14,5 @@
 
 /obj/structure/door/cabin
 	name = "cabin door"
-	icon_state = "church"
-	door_icon = "church"
+	icon_state = "cabin"
+	door_icon = "cabin"

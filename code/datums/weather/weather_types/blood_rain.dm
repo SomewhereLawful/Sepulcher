@@ -31,15 +31,13 @@
 
 	carbons_only = TRUE
 
-/datum/weather/acid_rain/weather_act(mob/living/L)
+/datum/weather/blood_rain/weather_act(mob/living/L)
 	if(iscarbon(L))
-		if(is_acidrain_immune(L))
-			return
 		var/resist = L.getarmor(null, "acid")
 		if(prob(max(0, 100 - resist)))
 			L.adjustToxicityGain(1)
 
-/datum/weather/acid_rain/weather_act_turf(turf/T)
+/datum/weather/blood_rain/weather_act_turf(turf/T)
 	for(var/O in T) 
 		if(is_acidrain_cleanable(O)) //Clean cleanable decals and ammo casings in affected areas
 			qdel(O)

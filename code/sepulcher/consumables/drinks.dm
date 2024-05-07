@@ -4,7 +4,7 @@
 	icon = 'icons/obj/drink.dmi'
 	icon_state = "broken"
 
-	eat_sound = 'sound/items/drink_bottle.ogg'
+	use_sound = 'sound/items/drink_bottle.ogg'
 	uses_verb = "drinks"
 	use_verb = "drink"
 
@@ -15,7 +15,6 @@
 	feed_points = 2
 	will_points = -20
 	drunk_points = 20
-	flavour_text = "Let's drink the dawn away..."
 
 /obj/item/consumable/food/drink/rotgut
 	name = "rotgut"

@@ -16,16 +16,19 @@
 	name = "steelhead"
 	desc = "Tough to chew. Inspires confidence in some."
 	feed_points = 5
+	uses_left = 1
 
 /obj/item/consumable/food/thinhelmet
 	name = "thin helmet"
 	desc = "Cultivate of shitheaps. Used in food packs."
 	feed_points = 5
+	uses_left = 1
 
 /obj/item/consumable/food/sinew
 	name = "sinew strand"
 	desc = "Grown on shitheaps. Used for sutures."
 	feed_points = 3
+	uses_left = 1
 
 // Illegal harvest
 /obj/item/consumable/food/slime_mold

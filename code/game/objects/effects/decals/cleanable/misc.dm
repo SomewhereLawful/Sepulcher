@@ -100,8 +100,8 @@
 	name = "vomit"
 	desc = "Gosh, how unpleasant."
 	icon = 'icons/effects/blood.dmi'
-	icon_state = "vomit_1"
-	random_icon_states = list("vomit_1", "vomit_2", "vomit_3", "vomit_4")
+	icon_state = "bvomit_1"
+	random_icon_states = list("bvomit_1", "bvomit_2", "bvomit_3", "bvomit_4")
 
 /obj/effect/decal/cleanable/vomit/attack_hand(mob/user)
 	. = ..()

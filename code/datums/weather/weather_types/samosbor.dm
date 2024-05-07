@@ -30,16 +30,3 @@
 	daylight_sunColor = "#3c67ae"
 	daylight_sunPower = 1
 	daylight_sunRange = 0
-
-/datum/weather/acid_rain/weather_act(mob/living/L)
-	if(iscarbon(L))
-		if(is_acidrain_immune(L))
-			return
-		var/resist = L.getarmor(null, "acid")
-		if(prob(max(0, 100 - resist)))
-			L.adjustToxicityGain(1)
-
-/datum/weather/acid_rain/weather_act_turf(turf/T)
-	for(var/O in T) 
-		if(is_acidrain_cleanable(O)) //Clean cleanable decals and ammo casings in affected areas
-			qdel(O)

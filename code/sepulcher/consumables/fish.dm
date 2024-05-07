@@ -4,8 +4,6 @@
 	icon_state = "fish"
 	feed_points = 10
 	toxicity_points = 10
-	flavour_text = "The offal within is sour."
-	var/gutted_flavour_text = "It tastes as fish should."
 	var/gutted = FALSE
 	var/gutting_text = "You gut the fish."
 
@@ -16,7 +14,6 @@
 		to_chat(H, "[gutting_text]")
 		toxicity_points = toxic_modification
 		gutted = TRUE
-		flavour_text = gutted_flavour_text
 	else
 		return
 
@@ -37,6 +34,7 @@
 	icon_state = "broken"
 	feed_points = 20
 	toxicity_points = 20
+	uses_left = 4 //Get your fill
 
 /obj/item/consumable/food/fish/crab // Time for crab
 	name = "bottom feeder"
@@ -55,7 +53,7 @@
 //sewer
 /obj/item/consumable/food/fish/axlotl
 	name = "shit swimmer"
-	desc = "Mewing, small. Beady eyes of a bioslave."
+	desc = "Mewing, small. Beady eyes."
 	icon_state = "broken"
 	feed_points = 3
 	toxicity_points = 5
@@ -63,6 +61,13 @@
 /obj/item/consumable/food/fish/burrower
 	name = "strand burrower"
 	desc = "Lives in sediment and hunt with black venom tendrils."
+	icon_state = "burrower"
+	feed_points = 3
+	toxicity_points = 5
+
+/obj/item/consumable/food/fish/dope
+	name = "jadefish"
+	desc = "And yet, it lives."
 	icon_state = "burrower"
 	feed_points = 3
 	toxicity_points = 5

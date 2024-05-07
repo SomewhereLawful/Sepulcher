@@ -365,6 +365,8 @@
 
 /atom/proc/AltClick(mob/user)
 	SEND_SIGNAL(src, COMSIG_CLICK_ALT, user)
+
+/* - Sepulcher edit - Dunno what this is used for, but it's useless and messes with altclick uses
 	var/turf/T = get_turf(src)
 	if(T && user.TurfAdjacent(T))
 		if(user.listed_turf == T)
@@ -372,6 +374,7 @@
 		else
 			user.listed_turf = T
 			user.client.statpanel = T.name
+*/
 
 /mob/proc/TurfAdjacent(turf/T)
 	return T.Adjacent(src)

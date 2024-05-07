@@ -21,3 +21,14 @@
 	icon = 'icons/sepulcher/floor_effects.dmi'
 	icon_state = "redwater_motion_corner"
 	anchored = TRUE
+
+/obj/effect/turf_decal/dirt_edge // I swear this is temporary
+	icon = 'icons/sepulcher/floor_effects.dmi'
+	icon_state = "dirt_border"
+	anchored = TRUE
+
+/obj/effect/turf_decal/foundry_edge // I swear this is temporary
+	icon = 'icons/sepulcher/floor_effects.dmi'
+	icon_state = "foundry_decalborder"
+	anchored = TRUE
+	layer = TURF_PLATING_DECAL_LAYER

@@ -4,5 +4,10 @@
 	name = "symbol"
 	desc = "Previous scrawlings of the mad."
 
+/obj/structure/sign/alchemical/city
+	name = "city emblem"
+	desc = "Signifies alignment to the city-vessel home."
+	icon_state = "city-symbol"
+
 /obj/structure/sign/alchemical/magnesium
 	icon_state = "mg"

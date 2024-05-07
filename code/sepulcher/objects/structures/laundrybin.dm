@@ -13,8 +13,11 @@
 					/obj/item/clothing/mask/hypo_mask = 50)
 
 	var/list/shirts = list(
-					/obj/item/clothing/under/boiler = 50,
-					/obj/item/clothing/under/vest_slacks = 50)
+					/obj/item/clothing/under/boiler = 20,
+					/obj/item/clothing/under/coveralls = 20,
+					/obj/item/clothing/under/nightwear = 20,
+					/obj/item/clothing/under/bum = 20,
+					/obj/item/clothing/under/slacks = 20)
 
 	var/list/coats = list(
 					/obj/item/clothing/suit/hooded/bandit_coat = 50,
