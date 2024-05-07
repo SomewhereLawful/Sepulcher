@@ -334,7 +334,6 @@
 /area/exterior/city/church_yard)
 "bV" = (
 /obj/structure/table/bar,
-/obj/item/clothing/head/straw_hat,
 /turf/open/indestructible/ground/outside/road,
 /area/exterior/city/docks)
 "bX" = (
@@ -492,12 +491,6 @@
 	},
 /turf/open/indestructible/ground/outside/road,
 /area/exterior/city)
-"cT" = (
-/obj/effect/turf_decal/dirt_edge{
-	dir = 10
-	},
-/turf/open/indestructible/ground/outside/road,
-/area/exterior/city/spillage)
 "cV" = (
 /obj/structure/closet/utilty_locker,
 /obj/item/clothing/suit/fishing_waders/green,
@@ -899,6 +892,12 @@
 	icon_state = "yellowdirtyfull"
 	},
 /area/interior/foundry/sublevel)
+"gb" = (
+/obj/effect/turf_decal/dirt_edge{
+	dir = 10
+	},
+/turf/open/indestructible/ground/outside/road,
+/area/exterior/city/spillage)
 "gh" = (
 /obj/structure/table,
 /turf/open/floor/f13{
@@ -936,6 +935,12 @@
 	},
 /turf/open/indestructible/ground/outside/water/sea/deep,
 /area/interior/fishery)
+"gr" = (
+/obj/effect/turf_decal/dirt_edge{
+	dir = 6
+	},
+/turf/open/indestructible/ground/outside/road,
+/area/exterior/city/spillage)
 "gs" = (
 /obj/effect/turf_decal/roadline{
 	dir = 1
@@ -1197,7 +1202,6 @@
 /area/exterior/city/spillage)
 "io" = (
 /obj/structure/table/stalker,
-/obj/item/clothing/head/straw_hat,
 /turf/open/indestructible/ground/floor/lattice,
 /area/interior/city)
 "iq" = (
@@ -1370,6 +1374,10 @@
 	},
 /turf/open/indestructible/ground/outside/road,
 /area/exterior/city/docks)
+"jM" = (
+/obj/effect/turf_decal/dirt_edge,
+/turf/open/indestructible/ground/outside/road,
+/area/exterior/city/spillage)
 "jN" = (
 /obj/structure/lattice/catwalk{
 	icon_state = "catwalk11-12"
@@ -1384,13 +1392,6 @@
 /obj/structure/object_pass/foundry_bucket_rails,
 /turf/open/foundry,
 /area/interior/foundry)
-"jP" = (
-/obj/effect/turf_decal/dirt_edge{
-	dir = 5
-	},
-/obj/structure/decor/waste,
-/turf/open/indestructible/ground/outside/road,
-/area/exterior/city/spillage)
 "jS" = (
 /obj/effect/decal/roadline{
 	icon_state = "singlehorizontal"
@@ -1568,6 +1569,13 @@
 	icon_state = "lattice_new14"
 	},
 /area/interior/apartments)
+"lh" = (
+/obj/effect/turf_decal/dirt_edge,
+/obj/effect/turf_decal/dirt_edge{
+	dir = 1
+	},
+/turf/open/indestructible/ground/outside/road,
+/area/exterior/wastes)
 "lj" = (
 /obj/machinery/light/small/broken{
 	dir = 8
@@ -2587,6 +2595,10 @@
 	},
 /turf/open/indestructible/ground/floor/wood_floor,
 /area/interior/city)
+"rY" = (
+/obj/structure/decor/waste,
+/turf/open/indestructible/ground/outside/waste,
+/area/exterior/city/spillage)
 "rZ" = (
 /obj/effect/decal/waste{
 	tag = "icon-goo12";
@@ -2710,6 +2722,13 @@
 	icon_state = "floorrusty"
 	},
 /area/interior/train_yard)
+"sR" = (
+/obj/effect/turf_decal/dirt_edge{
+	dir = 5
+	},
+/obj/structure/decor/waste,
+/turf/open/indestructible/ground/outside/road,
+/area/exterior/city/spillage)
 "sS" = (
 /turf/open/floor/carpet,
 /area/interior/spawning/kommandant)
@@ -2952,6 +2971,12 @@
 	},
 /turf/open/indestructible/ground/floor/wood_floor,
 /area/interior/apartments)
+"uj" = (
+/obj/effect/turf_decal/dirt_edge{
+	dir = 8
+	},
+/turf/open/indestructible/ground/outside/road,
+/area/exterior/city/spillage)
 "uq" = (
 /obj/structure/campfire/drum,
 /turf/open/indestructible/ground/outside/road,
@@ -3330,12 +3355,6 @@
 	},
 /turf/open/indestructible/ground/floor/wood_floor/horizontal,
 /area/interior/city)
-"wr" = (
-/obj/effect/turf_decal/dirt_edge{
-	dir = 9
-	},
-/turf/open/indestructible/ground/outside/road,
-/area/exterior/city/spillage)
 "wt" = (
 /obj/structure/lattice/catwalk{
 	icon_state = "catwalk12-0"
@@ -4509,12 +4528,6 @@
 /obj/structure/barricade/wooden/planks,
 /turf/open/indestructible/ground/floor/wood_floor,
 /area/interior/apartments)
-"Eq" = (
-/obj/effect/turf_decal/dirt_edge{
-	dir = 8
-	},
-/turf/open/indestructible/ground/outside/road,
-/area/exterior/city/spillage)
 "Er" = (
 /obj/effect/turf_decal/roadline/noshadow,
 /turf/open/indestructible/ground/outside/road,
@@ -5354,13 +5367,6 @@
 	icon_state = "floorrusty"
 	},
 /area/interior/clinic)
-"Jw" = (
-/obj/effect/turf_decal/dirt_edge,
-/obj/effect/turf_decal/dirt_edge{
-	dir = 1
-	},
-/turf/open/indestructible/ground/outside/road,
-/area/exterior/wastes)
 "Jx" = (
 /obj/effect/turf_decal/dirt_edge{
 	dir = 8
@@ -5605,10 +5611,6 @@
 	icon_state = "yellowdirtysolid"
 	},
 /area/interior/foundry/sublevel)
-"KU" = (
-/obj/structure/decor/waste,
-/turf/open/indestructible/ground/outside/waste,
-/area/exterior/city/spillage)
 "KZ" = (
 /obj/effect/turf_decal/roadline/noshadow{
 	dir = 4
@@ -5658,13 +5660,8 @@
 /turf/open/indestructible/ground/outside/water/sewer,
 /area/exterior/city/spillage)
 "Lt" = (
-/obj/structure/table,
-/obj/item/clothing/head/straw_hat,
-/turf/open/floor/f13{
-	tag = "icon-floorrusty";
-	icon_state = "floorrusty"
-	},
-/area/interior/fishery)
+/turf/open/indestructible/ground/outside/waste,
+/area/exterior/city/spillage)
 "Lw" = (
 /turf/open/floor/f13{
 	tag = "icon-floorrusty";
@@ -6162,10 +6159,6 @@
 	},
 /turf/open/indestructible/ground/outside/road,
 /area/exterior/city/docks)
-"OA" = (
-/obj/effect/turf_decal/dirt_edge,
-/turf/open/indestructible/ground/outside/road,
-/area/exterior/city/spillage)
 "OB" = (
 /obj/structure/fence/church/end{
 	dir = 1
@@ -6278,6 +6271,12 @@
 	},
 /turf/open/indestructible/ground/floor/wood_floor,
 /area/interior/city)
+"Pm" = (
+/obj/effect/turf_decal/dirt_edge{
+	dir = 9
+	},
+/turf/open/indestructible/ground/outside/road,
+/area/exterior/city/spillage)
 "Pn" = (
 /obj/effect/decal/roadline{
 	icon_state = "dottedhorizontal"
@@ -6361,12 +6360,6 @@
 	icon_state = "floorrusty"
 	},
 /area/interior/foundry)
-"PL" = (
-/obj/effect/turf_decal/dirt_edge{
-	dir = 6
-	},
-/turf/open/indestructible/ground/outside/road,
-/area/exterior/city/spillage)
 "PO" = (
 /obj/structure/door{
 	inoperable = 1
@@ -7594,9 +7587,6 @@
 /obj/structure/scrapheap,
 /turf/open/indestructible/ground/outside/desert,
 /area/exterior/wastes)
-"Yh" = (
-/turf/open/indestructible/ground/outside/waste,
-/area/exterior/city/spillage)
 "Yi" = (
 /obj/structure/chair/wood/normal{
 	dir = 4
@@ -34054,9 +34044,9 @@ sj
 sj
 sj
 nS
-PL
-Yh
-jP
+gr
+Lt
+sR
 Gy
 GO
 Ag
@@ -34310,12 +34300,12 @@ sj
 tQ
 tQ
 sj
-OA
-KU
-Yh
-Yh
-Yh
-Jw
+jM
+rY
+Lt
+Lt
+Lt
+lh
 dS
 dS
 YZ
@@ -34568,11 +34558,11 @@ sj
 sj
 sj
 nS
-cT
-Yh
-Yh
-KU
-Jw
+gb
+Lt
+Lt
+rY
+lh
 dS
 dS
 dS
@@ -34826,9 +34816,9 @@ xe
 nS
 nS
 nS
-cT
-Yh
-wr
+gb
+Lt
+Pm
 bQ
 dS
 dS
@@ -35084,7 +35074,7 @@ nS
 nS
 nS
 nS
-Eq
+uj
 nS
 sI
 Ag
@@ -42464,7 +42454,7 @@ pJ
 pJ
 pJ
 pJ
-Lt
+Ri
 Qw
 Qw
 Nt

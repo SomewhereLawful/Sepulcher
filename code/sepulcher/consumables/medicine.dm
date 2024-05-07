@@ -27,6 +27,7 @@
 	name = "bruise salve"
 	desc = "Painkiller and balm for bruises. Stings."
 	icon_state = "bruise_salve"
+	consume_type = SKIN_CONSUME
 	health_points = -10
 	uses_verb = "applies"
 	use_verb = "apply"
@@ -34,6 +35,7 @@
 /obj/item/consumable/medicine/gauze
 	name = "sterile gauze"
 	desc = "Staunches bleeding."
+	consume_type = SKIN_CONSUME
 	icon_state = "bruise_salve"
 	bleed_suppression = 300 // Slightly arbitrary, should staunch all bleeds
 	uses_verb = "applies"

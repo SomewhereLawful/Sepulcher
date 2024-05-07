@@ -46,8 +46,11 @@
 		if(SKIN_CONSUME)
 			var/obj/item/bodypart/affecting
 			affecting = C.get_bodypart(check_zone(user.zone_selected))
-			if(!affecting) //Missing limb?
+			if(!affecting) // Missing limb?
 				to_chat(user, "<span class='warning'>[C] doesn't have \a [parse_zone(user.zone_selected)]!</span>")
+				return 0
+			if(!get_location_accessible(C, user.zone_selected)) // Check if clothing is in the way
+				to_chat(user, "<span class='warning'>There is clothing in the way.</span>")
 				return 0
 			return 1
 		if(VAGUE_CONSUME)
