@@ -14,6 +14,8 @@
 	var/uses_verb = "uses"
 	var/use_verb = "use"
 	var/uses_left = 1
+	/// Time, in deciseconds, for consuming item
+	var/usage_time = null
 
 	// The meat and potatoes
 	var/health_points = 0
@@ -66,12 +68,12 @@
 			return 0
 
 		if(consume_type & MOUTH_CONSUME)
-			if(M == user)								//If you're eating it yourself.
-				if(M.hunger < M.maxHunger * 0.9)
+			if(M == user)		//If you're eating it yourself.
+				if(!M.hunger >= M.maxHunger * 0.95)
 					user.visible_message("<span class='warning'>[user] fails to force \the [src] down [user.p_their()] maw!</span>", "<span class='warning'>You fail to force \the [src] down your maw!</span>")
 					return 0
 			else
-				if(!isbrain(M))		//If you're feeding it to someone else.
+				if(!isbrain(M))	//If you're feeding it to someone else.
 					if(M.hunger <= (M.maxHunger*0.5))
 						M.visible_message("<span class='danger'>[user] attempts to feed [M] [src].</span>", \
 											"<span class='userdanger'>[user] attempts to feed [M] [src].</span>")
@@ -89,6 +91,15 @@
 					return 0
 
 //Handle ingestion of the item.
+
+	if(usage_time)
+		M.visible_message("<span class='warning'>[user] begins to [use_verb] the [src]...</span>", \
+							"<span class='warning'>[user] begins to [use_verb] the [src]...</span>")
+		if(!do_after(user, usage_time, target = src))
+			M.visible_message("<span class='warning'>[user] fails to [use_verb] the [src].</span>", \
+								"<span class='warning'>[user] fails to [use_verb] the [src].</span>")
+			return
+	
 		playsound(M.loc, use_sound, 60)
 		M.adjustHunger(feed_points *= 10)
 		M.adjustBruteLoss(health_points)		

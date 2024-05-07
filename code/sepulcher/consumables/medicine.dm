@@ -31,6 +31,7 @@
 	health_points = -10
 	uses_verb = "applies"
 	use_verb = "apply"
+	usage_time = 10
 
 /obj/item/consumable/medicine/gauze
 	name = "sterile gauze"
@@ -40,3 +41,4 @@
 	bleed_suppression = 300 // Slightly arbitrary, should staunch all bleeds
 	uses_verb = "applies"
 	use_verb = "apply"
+	usage_time = 15

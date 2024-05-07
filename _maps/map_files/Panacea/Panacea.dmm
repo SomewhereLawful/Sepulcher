@@ -4891,9 +4891,6 @@
 /area/interior/foundry)
 "Gs" = (
 /obj/structure/railing{
-	dir = 8
-	},
-/obj/structure/railing{
 	dir = 1;
 	pixel_y = 14
 	},
@@ -5015,6 +5012,16 @@
 /area/interior/foundry)
 "Hg" = (
 /obj/structure/campfire/drum,
+/turf/open/indestructible/ground/outside/road,
+/area/exterior/city)
+"Hh" = (
+/obj/effect/turf_decal/line{
+	dir = 4
+	},
+/obj/structure/railing{
+	dir = 4;
+	pixel_y = 15
+	},
 /turf/open/indestructible/ground/outside/road,
 /area/exterior/city)
 "Hj" = (
@@ -34525,7 +34532,7 @@ Pq
 XA
 PT
 Pq
-dA
+Hh
 uE
 FC
 FC
