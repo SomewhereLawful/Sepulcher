@@ -23,7 +23,7 @@
 
 /obj/item/key_ring/examine(mob/user)
 	..()
-	to_chat(user, "<span class='magenta'>Alt-Click to cycle the key, click the [name] to remove a key.</span>")
+	to_chat(user, "<span class='magenta'>Alt-Click to remove the active key, click the [name] to cycle to the next key.</span>")
 	if(active_key)
 		to_chat(user, "<span class='magenta'>You currently are holding the [active_key.name].</span>")
 	if(keys_in_keyring)
@@ -34,8 +34,16 @@
 	else
 		to_chat(user, "<span class='magenta'>There are no keys on the [name].</span>")
 
+/obj/item/key_ring/proc/keyRemove(mob/user)
+	if(!active_key)
+		to_chat(user,"There is no active key to remove.")
+		return
+	active_key.forceMove(get_turf(src))
+	keys_in_keyring -= active_key
+	active_key = null
+
 /obj/item/key_ring/proc/keyCycle(mob/user)
-	if(!keys_in_keyring || keys_in_keyring.len == 0)
+	if(!keys_in_keyring)
 		to_chat(user,"The [name] is empty.")
 		return
 
@@ -46,7 +54,7 @@
 		selection_index = 1
 		return
 	selection_index = CLAMP((selection_index + 1), 0, keys_in_keyring.len)
-	to_chat(user,"You cycle to the [active_key.name].")
+	update_icon()
 
 /obj/item/key_ring/attackby(obj/item/I, mob/living/user, params)
 	if(istype(I, /obj/item/key))
@@ -55,25 +63,24 @@
 			keys_in_keyring += K
 			qdel(K)
 			to_chat(user,"You add the [active_key.name] to the [name].")
-			update_icon()
 			selection_index = 1
+			update_icon()
 		else
 			to_chat(user,"The [K.name] refuses the [name].")
 			return
-	update_icon()
 
 /obj/item/key_ring/AltClick(mob/user)
-	if(!keys_in_keyring || keys_in_keyring.len == 0)
+	if(keys_in_keyring.len)
+		to_chat(user,"You remove the [active_key.name].")
+		keyRemove()
+	else
 		to_chat(user,"The [name] is empty.")
 		return
-	usr.put_in_inactive_hand(active_key)
-	keys_in_keyring -= active_key
-	to_chat(user,"You remove the [active_key.name].")
-	keyCycle()
 
 /obj/item/key_ring/attack_self(mob/user)
-	if(keys_in_keyring.len == 1)
+	if(keys_in_keyring.len)
+		keyCycle()
+		to_chat(user,"You cycle to the [active_key.name].")
+	else
 		to_chat(user,"There's only the [active_key.name] on the [name].")
 		return
-	keyCycle()
-	update_icon()
