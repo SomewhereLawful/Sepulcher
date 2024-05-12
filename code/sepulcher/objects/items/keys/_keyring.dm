@@ -15,7 +15,7 @@
 	if(keys_in_keyring && !active_key)
 		add_overlay("key_ring-key-[keys_in_keyring.len]")
 	else if(keys_in_keyring && active_key)
-		var/key_amt_w_active = (keys_in_keyring.len - 1)
+		var/key_amt_w_active = min(keys_in_keyring.len, max_keys) - 1
 		add_overlay("key_ring-active")
 		add_overlay("key_ring-key-[key_amt_w_active]")
 	else
@@ -34,13 +34,24 @@
 	else
 		to_chat(user, "<span class='magenta'>There are no keys on the [name].</span>")
 
-/obj/item/key_ring/proc/keyRemove(mob/user)
-	if(!active_key)
-		to_chat(user,"There is no active key to remove.")
-		return
-	active_key.forceMove(get_turf(src))
-	keys_in_keyring -= active_key
-	active_key = null
+/obj/item/key_ring/proc/keyAdd(obj/item/key/k, mob/user)
+	if(k.key_ringable)
+		keys_in_keyring += k
+		qdel(k)
+		update_icon()
+		return 1
+	else
+		return 0
+
+/obj/item/key_ring/proc/keyRemove(obj/item/key/k, mob/user)
+	if(active_key)
+		keys_in_keyring -= k
+		user.put_in_inactive_hand(k)
+		active_key = null
+		update_icon()
+		return 1
+	else
+		return 0
 
 /obj/item/key_ring/proc/keyCycle(mob/user)
 	if(!keys_in_keyring)
@@ -52,35 +63,28 @@
 
 	if(selection_index == keys_in_keyring.len)// Check if we've reached the end of the key list, reset to position 1 or add for next position
 		selection_index = 1
-		return
+		return 0
 	selection_index = CLAMP((selection_index + 1), 0, keys_in_keyring.len)
 	update_icon()
+	return 1
 
 /obj/item/key_ring/attackby(obj/item/I, mob/living/user, params)
 	if(istype(I, /obj/item/key))
-		var/obj/item/key/K = I
-		if(K.key_ringable)
-			keys_in_keyring += K
-			qdel(K)
-			to_chat(user,"You add the [active_key.name] to the [name].")
-			selection_index = 1
-			update_icon()
-		else
-			to_chat(user,"The [K.name] refuses the [name].")
-			return
+		keyAdd(I)
+		to_chat(user,"You add the [active_key.name] to the [name].")
+	else
+		to_chat(user,"The [I.name] refuses the [name].")
+		return
 
 /obj/item/key_ring/AltClick(mob/user)
 	if(keys_in_keyring.len)
+		keyRemove(active_key)
 		to_chat(user,"You remove the [active_key.name].")
-		keyRemove()
 	else
 		to_chat(user,"The [name] is empty.")
 		return
 
 /obj/item/key_ring/attack_self(mob/user)
-	if(keys_in_keyring.len)
-		keyCycle()
-		to_chat(user,"You cycle to the [active_key.name].")
-	else
-		to_chat(user,"There's only the [active_key.name] on the [name].")
-		return
+	keyCycle()
+	to_chat(user,"You cycle to the [active_key.name].")
+
