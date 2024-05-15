@@ -1,3 +1,5 @@
+// ACTIVE DEV NOTE - ALL of this code is functional as intended, EXCEPT keyRemove shit
+// As to why that is, I don't know cause this whole thing is still under some code voodoo
 /obj/item/key_ring
 	name = "key ring"
 	icon = 'icons/obj/key.dmi'
@@ -87,4 +89,3 @@
 /obj/item/key_ring/attack_self(mob/user)
 	keyCycle()
 	to_chat(user,"You cycle to the [active_key.name].")
-
