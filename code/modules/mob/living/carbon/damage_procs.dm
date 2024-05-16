@@ -1,4 +1,26 @@
+/* - comment copied from mob/living
+	apply_damage(a,b,c)
+	args
+	a:damage - How much damage to take
+	b:damage_type - What type of damage to take (brute, burn, etc.)
+	c:def_zone - Where to take the damage if its applicible (Tox, Hunger, Will are abstract damages)
+	Returns
+	standard 0 if fail
+//
 
+	=FILE CONTENTS=
+	1) apply_damage proc
+	2) damage type procs
+		- BRUTE
+		- SLASH
+		- BURN
+		-v- ABSTRACTS -v-
+			HUNGER
+			TOXICITY
+			WILL
+			BRAIN
+	3) bodypart damage stuff
+*/
 
 /mob/living/carbon/apply_damage(damage, damagetype = BRUTE, def_zone = null, blocked = FALSE)
 	var/hit_percent = (100-blocked)/100
@@ -22,6 +44,12 @@
 					update_damage_overlays()
 			else //no bodypart, we deal damage with a more general method.
 				adjustBruteLoss(damage * hit_percent)
+		if(SLASH)
+			if(BP)
+				if(BP.receive_damage(damage * hit_percent, 0))
+					update_damage_overlays()
+			else
+				adjustBruteLoss(damage * hit_percent)
 		if(BURN)
 			if(BP)
 				if(BP.receive_damage(0, damage * hit_percent))
@@ -44,6 +72,7 @@
 			adjustBrainLoss(damage * hit_percent)
 	return TRUE
 
+// DAMAGE TYPES //
 
 //These procs fetch a cumulative total damage from all bodyparts
 /mob/living/carbon/getBruteLoss()
@@ -53,14 +82,6 @@
 		amount += BP.brute_dam
 	return amount
 
-/mob/living/carbon/getFireLoss()
-	var/amount = 0
-	for(var/X in bodyparts)
-		var/obj/item/bodypart/BP = X
-		amount += BP.burn_dam
-	return amount
-
-
 /mob/living/carbon/adjustBruteLoss(amount, updating_health = TRUE, forced = FALSE)
 	if(!forced && (status_flags & GODMODE))
 		return FALSE
@@ -68,6 +89,29 @@
 		take_overall_damage(amount, 0, 0, updating_health)
 	else
 		heal_overall_damage(abs(amount), 0, 0, FALSE, TRUE, updating_health)
+	return amount
+
+/mob/living/carbon/getSlashLoss()
+	var/amount = 0
+	for(var/X in bodyparts)
+		var/obj/item/bodypart/BP = X
+		amount += BP.brute_dam
+	return amount
+
+/mob/living/carbon/adjustSlashLoss(amount, updating_health = TRUE, forced = FALSE)
+	if(!forced && (status_flags & GODMODE))
+		return FALSE
+	if(amount > 0)
+		take_overall_damage(amount, 0, 0, updating_health)
+	else
+		heal_overall_damage(abs(amount), 0, 0, FALSE, TRUE, updating_health)
+	return amount
+
+/mob/living/carbon/getFireLoss()
+	var/amount = 0
+	for(var/X in bodyparts)
+		var/obj/item/bodypart/BP = X
+		amount += BP.burn_dam
 	return amount
 
 /mob/living/carbon/adjustFireLoss(amount, updating_health = TRUE, forced = FALSE)

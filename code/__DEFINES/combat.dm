@@ -3,16 +3,17 @@
 //Damage and status effect defines
 
 //Damage defines //TODO: merge these down to reduce on defines
+#define BRUTE		"brute"
+#define SLASH		"slash"
+#define BURN		"fire"
 #define WILL		"will"
 #define HUNGER		"hunger"
 #define TOXICITY	"toxicity"
-#define BRUTE		"brute"
-#define BURN		"fire"
-#define TOX			"tox"
 #define OXY			"oxy"
+#define BRAIN		"brain"
+#define TOX			"tox"
 #define CLONE		"clone"
 #define STAMINA 	"stamina"
-#define BRAIN		"brain"
 
 //bitflag damage defines used for suicide_act
 #define BRUTELOSS 		(1<<0)

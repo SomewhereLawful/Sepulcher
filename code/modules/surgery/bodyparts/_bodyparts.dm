@@ -21,8 +21,10 @@
 	var/disabled = FALSE //If TRUE, limb is as good as missing
 	var/body_damage_coeff = 1 //Multiplier of the limb's damage that gets applied to the mob
 	var/brutestate = 0
+	var/slashstate = 0
 	var/burnstate = 0
 	var/brute_dam = 0
+	var/slash_dam = 0
 	var/burn_dam = 0
 	var/stamina_dam = 0
 	var/max_damage = 0
