@@ -95,7 +95,7 @@
 	var/amount = 0
 	for(var/X in bodyparts)
 		var/obj/item/bodypart/BP = X
-		amount += BP.brute_dam
+		amount += BP.slash_dam
 	return amount
 
 /mob/living/carbon/adjustSlashLoss(amount, updating_health = TRUE, forced = FALSE)

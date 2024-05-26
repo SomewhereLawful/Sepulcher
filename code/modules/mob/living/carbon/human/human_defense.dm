@@ -701,10 +701,10 @@
 				var/no_damage
 				if(status == "fine" || status == "no damage")
 					no_damage = TRUE
-				to_chat(src, "\t <span class='[no_damage ? "magenta" : "red"]'>Your [LB.name] [has_trait(TRAIT_SELF_AWARE) ? "has" : "is"] [status].</span>")
+				to_chat(src, "* <span class='[no_damage ? "magenta" : "red"]'>Your [LB.name] [has_trait(TRAIT_SELF_AWARE) ? "has" : "is"] [status].</span>")
 
 				for(var/obj/item/I in LB.embedded_objects)
-					to_chat(src, "\t <a href='?src=[REF(src)];embedded_object=[REF(I)];embedded_limb=[REF(LB)]' class='red'>There is \a [I] embedded in your [LB.name]!</a>")
+					to_chat(src, "* <a href='?src=[REF(src)];embedded_object=[REF(I)];embedded_limb=[REF(LB)]' class='red'>There is \a [I] embedded in your [LB.name]!</a>")
 
 			for(var/t in missing)
 				to_chat(src, "<span class='red'>Your [parse_zone(t)] is missing!</span>")

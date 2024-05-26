@@ -380,7 +380,7 @@
 /mob/living/proc/updatehealth()
 	if(status_flags & GODMODE)
 		return
-	health = maxHealth - getBruteLoss() - getFireLoss()
+	health = maxHealth - getBruteLoss() - getSlashLoss() - getFireLoss()
 	staminaloss = getStaminaLoss()
 	update_stat()
 	med_hud_set_health()

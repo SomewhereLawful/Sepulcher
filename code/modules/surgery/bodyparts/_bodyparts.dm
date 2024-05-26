@@ -30,6 +30,7 @@
 	var/max_damage = 0
 
 	var/brute_reduction = 0 //Subtracted to brute damage taken
+	var/slash_reduction = 0 //Subtracted to slash damage taken
 	var/burn_reduction = 0	//Subtracted to burn damage taken
 
 	//Coloring and proper item icon update
@@ -131,6 +132,7 @@
 		return FALSE	//godmode
 	var/dmg_mlt = CONFIG_GET(number/damage_multiplier)
 	brute = round(max(brute * dmg_mlt, 0),DAMAGE_PRECISION)
+	slash = round(max(brute * dmg_mlt, 0),DAMAGE_PRECISION)
 	burn = round(max(burn * dmg_mlt, 0),DAMAGE_PRECISION)
 	stamina = round(max(stamina * dmg_mlt, 0),DAMAGE_PRECISION)
 	brute = max(0, brute - brute_reduction)
@@ -192,7 +194,7 @@
 
 //Returns total damage...kinda pointless really
 /obj/item/bodypart/proc/get_damage(include_stamina = FALSE)
-	var/total = brute_dam + burn_dam
+	var/total = brute_dam + slash_dam + burn_dam
 	if(include_stamina)
 		total += stamina_dam
 	return total

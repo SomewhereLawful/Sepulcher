@@ -19,8 +19,9 @@
 	item_state = "machete"
 	lefthand_file = 'icons/mob/inhands/weapons/melee_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/melee_righthand.dmi'
+	damtype = SLASH
 	force = 15
-	throwforce = 7
+	throwforce = 3
 	w_class = WEIGHT_CLASS_BULKY
 	attack_verb = list("chopped", "slashed", "sliced")
 	hitsound = 'sound/weapons/machetehit.ogg'
@@ -32,6 +33,7 @@
 	item_state = "knife"
 	lefthand_file = 'icons/mob/inhands/weapons/melee_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/melee_righthand.dmi'
+	damtype = SLASH
 	force = 15
 	slot_flags = ITEM_SLOT_BELT
 	throwforce = 7
@@ -101,6 +103,7 @@
 	item_state = "shovel"
 	lefthand_file = 'icons/mob/inhands/weapons/melee_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/melee_righthand.dmi'
+	damtype = SLASH
 	force = 15
 	throwforce = 7
 	w_class = WEIGHT_CLASS_BULKY
