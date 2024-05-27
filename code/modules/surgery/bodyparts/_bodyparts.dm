@@ -67,6 +67,8 @@
 	..()
 	if(brute_dam > 0)
 		to_chat(user, "<span class='warning'>This limb has [brute_dam > 30 ? "severe" : "minor"] bruising.</span>")
+	if(slash_dam > 0)
+		to_chat(user, "<span class='warning'>This limb has [slash_dam > 30 ? "severe" : "minor"] lacerations.</span>")
 	if(burn_dam > 0)
 		to_chat(user, "<span class='warning'>This limb has [burn_dam > 30 ? "severe" : "minor"] burns.</span>")
 
@@ -127,15 +129,16 @@
 //Applies brute and burn damage to the organ. Returns 1 if the damage-icon states changed at all.
 //Damage will not exceed max_damage using this proc
 //Cannot apply negative damage
-/obj/item/bodypart/proc/receive_damage(brute = 0, burn = 0, stamina = 0, updating_health = TRUE)
+/obj/item/bodypart/proc/receive_damage(brute = 0, slash = 0, burn = 0, stamina = 0, updating_health = TRUE)
 	if(owner && (owner.status_flags & GODMODE))
 		return FALSE	//godmode
 	var/dmg_mlt = CONFIG_GET(number/damage_multiplier)
 	brute = round(max(brute * dmg_mlt, 0),DAMAGE_PRECISION)
-	slash = round(max(brute * dmg_mlt, 0),DAMAGE_PRECISION)
+	slash = round(max(slash * dmg_mlt, 0),DAMAGE_PRECISION)
 	burn = round(max(burn * dmg_mlt, 0),DAMAGE_PRECISION)
 	stamina = round(max(stamina * dmg_mlt, 0),DAMAGE_PRECISION)
 	brute = max(0, brute - brute_reduction)
+	slash = max(0, slash - slash_reduction)
 	burn = max(0, burn - burn_reduction)
 	//No stamina scaling.. for now..
 
@@ -155,9 +158,11 @@
 	if(total_damage > can_inflict)
 		var/excess = total_damage - can_inflict
 		brute = round(brute * (excess / total_damage),DAMAGE_PRECISION)
+		slash = round(slash * (excess / total_damage),DAMAGE_PRECISION)
 		burn = round(burn * (excess / total_damage),DAMAGE_PRECISION)
 
 	brute_dam += brute
+	slash_dam += slash
 	burn_dam += burn
 
 	//We've dealt the physical damages, if there's room lets apply the stamina damage.
@@ -175,7 +180,7 @@
 //Heals brute and burn damage for the organ. Returns 1 if the damage-icon states changed at all.
 //Damage cannot go below zero.
 //Cannot remove negative damage (i.e. apply damage)
-/obj/item/bodypart/proc/heal_damage(brute, burn, stamina, only_robotic = FALSE, only_organic = TRUE, updating_health = TRUE)
+/obj/item/bodypart/proc/heal_damage(brute, slash, burn, stamina, only_robotic = FALSE, only_organic = TRUE, updating_health = TRUE)
 
 	if(only_robotic && status != BODYPART_ROBOTIC) //This makes organic limbs not heal when the proc is in Robotic mode.
 		return
@@ -184,6 +189,7 @@
 		return
 
 	brute_dam	= round(max(brute_dam - brute, 0), DAMAGE_PRECISION)
+	slash_dam	= round(max(slash_dam - slash, 0), DAMAGE_PRECISION)
 	burn_dam	= round(max(burn_dam - burn, 0), DAMAGE_PRECISION)
 	stamina_dam = round(max(stamina_dam - stamina, 0), DAMAGE_PRECISION)
 	if(owner && updating_health)

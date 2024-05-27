@@ -225,7 +225,7 @@
 	if(illusion)
 		adjustStaminaLoss(shock_damage)
 	else
-		take_overall_damage(0,shock_damage)
+		take_overall_damage(0, 0, shock_damage)
 	visible_message(
 		"<span class='danger'>[src] was shocked by \the [source]!</span>", \
 		"<span class='userdanger'>You feel a powerful shock coursing through your body!</span>", \

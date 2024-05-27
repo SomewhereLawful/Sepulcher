@@ -49,6 +49,15 @@
 			else
 				msg += "<B>[t_He] [t_has] severe bruising!</B>\n"
 
+		temp = getSlashLoss()
+		if(temp)
+			if (temp < 25)
+				msg += "[t_He] [t_has] some minor cuts.\n"
+			else if (temp < 50)
+				msg += "[t_He] [t_has] <b>moderate</b> slashes!\n"
+			else
+				msg += "<B>[t_He] [t_has] severe lacerations!</B>\n"
+
 		temp = getFireLoss()
 		if(temp)
 			if (temp < 25)

@@ -257,8 +257,9 @@
 	return
 
 // heal ONE external organ, organ gets randomly selected from damaged ones.
-/mob/living/proc/heal_bodypart_damage(brute = 0, burn = 0, stamina = 0, updating_health = TRUE)
+/mob/living/proc/heal_bodypart_damage(brute = 0, slash = 0, burn = 0, stamina = 0, updating_health = TRUE)
 	adjustBruteLoss(-brute, FALSE) //zero as argument for no instant health update
+	adjustSlashLoss(-slash, FALSE)
 	adjustFireLoss(-burn, FALSE)
 	adjustStaminaLoss(-stamina, FALSE)
 	if(updating_health)
@@ -266,8 +267,9 @@
 		update_stamina()
 
 // damage ONE external organ, organ gets randomly selected from damaged ones.
-/mob/living/proc/take_bodypart_damage(brute = 0, burn = 0, stamina = 0, updating_health = TRUE)
+/mob/living/proc/take_bodypart_damage(brute = 0, slash = 0, burn = 0, stamina = 0, updating_health = TRUE)
 	adjustBruteLoss(brute, FALSE) //zero as argument for no instant health update
+	adjustSlashLoss(slash, FALSE)
 	adjustFireLoss(burn, FALSE)
 	adjustStaminaLoss(stamina, FALSE)
 	if(updating_health)
@@ -275,8 +277,9 @@
 		update_stamina()
 
 // heal MANY bodyparts, in random order
-/mob/living/proc/heal_overall_damage(brute = 0, burn = 0, stamina = 0, only_robotic = FALSE, only_organic = TRUE, updating_health = TRUE)
+/mob/living/proc/heal_overall_damage(brute = 0, slash = 0, burn = 0, stamina = 0, only_robotic = FALSE, only_organic = TRUE, updating_health = TRUE)
 	adjustBruteLoss(-brute, FALSE) //zero as argument for no instant health update
+	adjustSlashLoss(-slash, FALSE)
 	adjustFireLoss(-burn, FALSE)
 	adjustStaminaLoss(-stamina, FALSE)
 	if(updating_health)
@@ -284,8 +287,9 @@
 		update_stamina()
 
 // damage MANY bodyparts, in random order
-/mob/living/proc/take_overall_damage(brute = 0, burn = 0, stamina = 0, updating_health = TRUE)
+/mob/living/proc/take_overall_damage(brute = 0, slash = 0, burn = 0, stamina = 0, updating_health = TRUE)
 	adjustBruteLoss(brute, FALSE) //zero as argument for no instant health update
+	adjustSlashLoss(slash, FALSE)
 	adjustFireLoss(burn, FALSE)
 	adjustStaminaLoss(stamina, FALSE)
 	if(updating_health)

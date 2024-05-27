@@ -34,6 +34,7 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 	var/speedmod = 0	// this affects the race's speed. positive numbers make it move slower, negative numbers make it move faster
 	var/armor = 0		// overall defense for the race... or less defense, if it's negative.
 	var/brutemod = 1	// multiplier for brute damage
+	var/slashmod = 1
 	var/burnmod = 1		// multiplier for burn damage
 	var/willmod = 1		// multiplier for will damage
 	var/hungermod = 1		// multiplier for hunger damage
@@ -1423,14 +1424,21 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 		if(BRUTE)
 			H.damageoverlaytemp = 20
 			if(BP)
-				if(BP.receive_damage(damage * hit_percent * brutemod * H.physiology.brute_mod, 0))
+				if(BP.receive_damage(damage * hit_percent * brutemod * H.physiology.brute_mod, 0, 0))
 					H.update_damage_overlays()
 			else//no bodypart, we deal damage with a more general method.
 				H.adjustBruteLoss(damage * hit_percent * brutemod * H.physiology.brute_mod)
+		if(SLASH)
+			H.damageoverlaytemp = 20
+			if(BP)
+				if(BP.receive_damage(0, damage * hit_percent * slashmod * H.physiology.slash_mod, 0))
+					H.update_damage_overlays()
+			else
+				H.adjustSlashLoss(damage * hit_percent * slashmod * H.physiology.slash_mod)
 		if(BURN)
 			H.damageoverlaytemp = 20
 			if(BP)
-				if(BP.receive_damage(0, damage * hit_percent * burnmod * H.physiology.burn_mod))
+				if(BP.receive_damage(0, 0, damage * hit_percent * burnmod * H.physiology.burn_mod))
 					H.update_damage_overlays()
 			else
 				H.adjustFireLoss(damage * hit_percent * burnmod * H.physiology.burn_mod)
@@ -1446,7 +1454,7 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 			H.adjustCloneLoss(damage * hit_percent * H.physiology.clone_mod)
 		if(STAMINA)
 			if(BP)
-				if(BP.receive_damage(0, 0, damage * hit_percent * H.physiology.stamina_mod))
+				if(BP.receive_damage(0, 0, 0, damage * hit_percent * H.physiology.stamina_mod))
 					H.update_stamina()
 			else
 				H.adjustStaminaLoss(damage * hit_percent * H.physiology.stamina_mod)
