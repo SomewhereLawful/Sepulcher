@@ -57,6 +57,10 @@
 	var/medium_brute_msg = "battered"
 	var/heavy_brute_msg = "mangled"
 
+	var/light_slash_msg = "scratched"
+	var/medium_slash_msg = "slashed"
+	var/heavy_slash_msg = "heavily lacerated"
+
 	var/light_burn_msg = "numb"
 	var/medium_burn_msg = "blistered"
 	var/heavy_burn_msg = "peeling away"
@@ -142,7 +146,7 @@
 	burn = max(0, burn - burn_reduction)
 	//No stamina scaling.. for now..
 
-	if(!brute && !burn && !stamina)
+	if(!brute && !slash && !burn && !stamina)
 		return FALSE
 
 	switch(animal_origin)
@@ -153,7 +157,7 @@
 	if(can_inflict <= 0)
 		return FALSE
 
-	var/total_damage = brute + burn
+	var/total_damage = brute + slash + burn
 
 	if(total_damage > can_inflict)
 		var/excess = total_damage - can_inflict
@@ -177,7 +181,7 @@
 	check_disabled()
 	return update_bodypart_damage_state()
 
-//Heals brute and burn damage for the organ. Returns 1 if the damage-icon states changed at all.
+//Heals brute, slash, and burn damage for the organ. Returns 1 if the damage-icon states changed at all.
 //Damage cannot go below zero.
 //Cannot remove negative damage (i.e. apply damage)
 /obj/item/bodypart/proc/heal_damage(brute, slash, burn, stamina, only_robotic = FALSE, only_organic = TRUE, updating_health = TRUE)
@@ -223,13 +227,15 @@
 	owner.update_body()
 	owner.update_canmove()
 
-//Updates an organ's brute/burn states for use by update_damage_overlays()
+//Updates an organ's brute/slash/burn states for use by update_damage_overlays()
 //Returns 1 if we need to update overlays. 0 otherwise.
 /obj/item/bodypart/proc/update_bodypart_damage_state()
 	var/tbrute	= round( (brute_dam/max_damage)*3, 1 )
+	var/tslash	= round( (slash_dam/max_damage)*3, 1 )
 	var/tburn	= round( (burn_dam/max_damage)*3, 1 )
-	if((tbrute != brutestate) || (tburn != burnstate))
+	if((tbrute != brutestate) || (tslash != slashstate) || (tburn != burnstate))
 		brutestate = tbrute
+		slashstate = tslash
 		burnstate = tburn
 		return TRUE
 	return FALSE
@@ -240,7 +246,9 @@
 	if(heal_limb)
 		burn_dam = 0
 		brute_dam = 0
+		slash_dam = 0
 		brutestate = 0
+		slashstate = 0
 		burnstate = 0
 
 	if(change_icon_to_default)
@@ -347,6 +355,8 @@
 		if(dmg_overlay_type)
 			if(brutestate)
 				. += image('icons/mob/dam_mob.dmi', "[dmg_overlay_type]_[body_zone]_[brutestate]0", -DAMAGE_LAYER, image_dir)
+			if(slashstate)
+				. += image('icons/mob/dam_mob.dmi', "[dmg_overlay_type]_[body_zone]_[slashstate]0", -DAMAGE_LAYER, image_dir)
 			if(burnstate)
 				. += image('icons/mob/dam_mob.dmi', "[dmg_overlay_type]_[body_zone]_0[burnstate]", -DAMAGE_LAYER, image_dir)
 

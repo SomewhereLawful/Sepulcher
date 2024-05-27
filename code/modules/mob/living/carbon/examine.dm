@@ -54,7 +54,7 @@
 			if (temp < 25)
 				msg += "[t_He] [t_has] some minor cuts.\n"
 			else if (temp < 50)
-				msg += "[t_He] [t_has] <b>moderate</b> slashes!\n"
+				msg += "[t_He] [t_has] <b>moderate</b> lacerations!\n"
 			else
 				msg += "<B>[t_He] [t_has] severe lacerations!</B>\n"
 

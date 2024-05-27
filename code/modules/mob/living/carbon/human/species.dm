@@ -34,7 +34,7 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 	var/speedmod = 0	// this affects the race's speed. positive numbers make it move slower, negative numbers make it move faster
 	var/armor = 0		// overall defense for the race... or less defense, if it's negative.
 	var/brutemod = 1	// multiplier for brute damage
-	var/slashmod = 1
+	var/slashmod = 1	// multiplier for slash damage
 	var/burnmod = 1		// multiplier for burn damage
 	var/willmod = 1		// multiplier for will damage
 	var/hungermod = 1		// multiplier for hunger damage
