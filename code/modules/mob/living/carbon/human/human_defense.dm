@@ -667,6 +667,7 @@
 				var/limb_max_damage = LB.max_damage
 				var/status = ""
 				var/brutedamage = LB.brute_dam
+				var/slashdamage = LB.slash_dam
 				var/burndamage = LB.burn_dam
 				if(hallucination)
 					if(prob(30))
@@ -686,7 +687,16 @@
 						status = LB.medium_brute_msg
 					if(brutedamage > (limb_max_damage*0.8))
 						status = LB.heavy_brute_msg
-					if(brutedamage > 0 && burndamage > 0)
+					if(brutedamage > 0 && slashdamage > 0)
+						status += " and "
+
+					if(slashdamage > 0)
+						status = LB.light_slash_msg
+					if(slashdamage > (limb_max_damage*0.4))
+						status = LB.medium_slash_msg
+					if(slashdamage > (limb_max_damage*0.8))
+						status = LB.heavy_slash_msg
+					if(slashdamage > 0 && burndamage > 0)
 						status += " and "
 
 					if(burndamage > (limb_max_damage*0.8))
