@@ -1,7 +1,15 @@
-// NOTE: UNTICKED - _blood is the used on, due to changes for simpler blood
 /****************************************************
-				BLOOD SYSTEM
+				   BLOOD SYSTEM
+	   Rewritten by Fajetti - May god have mercy
 ****************************************************/
+
+//Blood level defines
+#define BLOOD_EXCESS_HIGH		130
+#define BLOOD_EXCESS_LOW		110
+#define BLOOD_NORMAL			100
+#define BLOOD_UNSAFE			85
+#define BLOOD_CRITCAL			60
+#define BLOOD_DEATH_THRESHOLD	40
 
 /mob/living/carbon/human/proc/suppress_bloodloss(amount)
 	if(bleedsuppress)
@@ -15,15 +23,6 @@
 	if(stat != DEAD && bleed_rate)
 		to_chat(src, "<span class='warning'>The blood soaks through your bandage.</span>")
 
-
-/mob/living/carbon/monkey/handle_blood()
-	if(bodytemperature >= TCRYO && !(has_trait(TRAIT_NOCLONE))) //cryosleep or husked people do not pump the blood.
-		//Blood regeneration if there is some space
-		if(blood_volume < BLOOD_VOLUME_NORMAL)
-			blood_volume += 0.1 // regenerate blood VERY slowly
-			if(blood_volume < BLOOD_VOLUME_OKAY)
-				adjustOxyLoss(round((BLOOD_VOLUME_NORMAL - blood_volume) * 0.02, 1))
-
 // Takes care blood loss and regeneration
 /mob/living/carbon/human/handle_blood()
 
@@ -31,45 +30,51 @@
 		bleed_rate = 0
 		return
 
-	if(bodytemperature >= TCRYO && !(has_trait(TRAIT_NOCLONE))) //cryosleep or husked people do not pump the blood.
-
 		//Blood regeneration if there is some space
-		if(blood_volume < BLOOD_VOLUME_NORMAL && !has_trait(TRAIT_NOHUNGER))
+		if(blood_volume < BLOOD_NORMAL && !has_trait(TRAIT_NOHUNGER))
 			var/nutrition_ratio = 0
-			switch(nutrition)
-				if(0 to NUTRITION_LEVEL_STARVING)
+			switch(hunger)
+				if(0 to 249)
 					nutrition_ratio = 0.2
-				if(NUTRITION_LEVEL_STARVING to NUTRITION_LEVEL_HUNGRY)
+				if(250 to 499)
 					nutrition_ratio = 0.4
-				if(NUTRITION_LEVEL_HUNGRY to NUTRITION_LEVEL_FED)
+				if(500 to 749)
 					nutrition_ratio = 0.6
-				if(NUTRITION_LEVEL_FED to NUTRITION_LEVEL_WELL_FED)
+				if(750 to INFINITY)
 					nutrition_ratio = 0.8
 				else
 					nutrition_ratio = 1
 			if(satiety > 80)
 				nutrition_ratio *= 1.25
-			nutrition = max(0, nutrition - nutrition_ratio * HUNGER_FACTOR)
-			blood_volume = min(BLOOD_VOLUME_NORMAL, blood_volume + 0.5 * nutrition_ratio)
+			hunger = max(0, hunger - nutrition_ratio * HUNGER_FACTOR)
+			blood_volume = min(BLOOD_NORMAL, blood_volume + 0.5 * nutrition_ratio)
 
 		//Effects of bloodloss
-		var/word = pick("dizzy","woozy","faint")
+		var/absence_word = pick("dizzy","woozy","faint")
 		switch(blood_volume)
-			if(BLOOD_VOLUME_OKAY to BLOOD_VOLUME_SAFE)
+			if(BLOOD_EXCESS_LOW to BLOOD_EXCESS_HIGH)
+				if(prob(15))
+					to_chat(src, "<span class='red'>Ugh.... Your heart screams, your head splits...</span>")
+				adjustBruteLoss(5)
+			if(BLOOD_NORMAL to BLOOD_EXCESS_LOW)
+				if(prob(15))
+					to_chat(src, "<span class='red'>Your body feels swollen, your extremities hurt...</span>")
+				adjustBruteLoss(round((BLOOD_NORMAL + blood_volume) * 0.01, 1))
+			if(BLOOD_UNSAFE to BLOOD_NORMAL)
 				if(prob(5))
-					to_chat(src, "<span class='warning'>You feel [word].</span>")
-				adjustOxyLoss(round((BLOOD_VOLUME_NORMAL - blood_volume) * 0.01, 1))
-			if(BLOOD_VOLUME_BAD to BLOOD_VOLUME_OKAY)
-				adjustOxyLoss(round((BLOOD_VOLUME_NORMAL - blood_volume) * 0.02, 1))
+					to_chat(src, "<span class='red'>You feel [absence_word].</span>")
+				adjustOxyLoss(round((BLOOD_NORMAL - blood_volume) * 0.01, 1))
+			if(BLOOD_CRITCAL to BLOOD_UNSAFE)
+				adjustOxyLoss(round((BLOOD_NORMAL - blood_volume) * 0.02, 1))
 				if(prob(5))
 					blur_eyes(6)
-					to_chat(src, "<span class='warning'>You feel very [word].</span>")
-			if(BLOOD_VOLUME_SURVIVE to BLOOD_VOLUME_BAD)
+					to_chat(src, "<span class='red'>You feel very [absence_word].</span>")
+			if(BLOOD_DEATH_THRESHOLD to BLOOD_CRITCAL)
 				adjustOxyLoss(5)
 				if(prob(15))
 					Unconscious(rand(20,60))
-					to_chat(src, "<span class='warning'>You feel extremely [word].</span>")
-			if(-INFINITY to BLOOD_VOLUME_SURVIVE)
+					to_chat(src, "<span class='red'>You feel extremely [absence_word].</span>")
+			if(-INFINITY to BLOOD_DEATH_THRESHOLD)
 				if(!has_trait(TRAIT_NODEATH))
 					death()
 
@@ -106,20 +111,75 @@
 	if(!(NOBLOOD in dna.species.species_traits))
 		..()
 
-
-
 /mob/living/proc/restore_blood()
 	blood_volume = initial(blood_volume)
 
 /mob/living/carbon/human/restore_blood()
-	blood_volume = BLOOD_VOLUME_NORMAL
+	blood_volume = BLOOD_NORMAL
 	bleed_rate = 0
 
-/****************************************************
-				BLOOD TRANSFERS
-****************************************************/
+// This is has more potential uses, and is probably faster than the old proc.
+/proc/get_safe_blood(bloodtype)
+	. = list()
+	if(!bloodtype)
+		return
 
-//Gets blood from mob to a container or other mob, preserving all data in it.
+	var/static/list/bloodtypes_safe = list(
+		"A-" = list("A-", "O-"),
+		"A+" = list("A-", "A+", "O-", "O+"),
+		"B-" = list("B-", "O-"),
+		"B+" = list("B-", "B+", "O-", "O+"),
+		"AB-" = list("A-", "B-", "O-", "AB-"),
+		"AB+" = list("A-", "A+", "B-", "B+", "O-", "O+", "AB-", "AB+"),
+		"O-" = list("O-"),
+		"O+" = list("O-", "O+"),
+		"L" = list("L"),
+		"U" = list("A-", "A+", "B-", "B+", "O-", "O+", "AB-", "AB+", "L", "U")
+	)
+
+	var/safe = bloodtypes_safe[bloodtype]
+	if(safe)
+		. = safe
+
+//to add a splatter of blood or other mob liquid.
+/mob/living/proc/add_splatter_floor(turf/T, small_drip)
+	if(get_blood_id() != "blood")
+		return
+	if(!T)
+		T = get_turf(src)
+
+	var/list/temp_blood_DNA
+	if(small_drip)
+		// Only a certain number of drips (or one large splatter) can be on a given turf.
+		var/obj/effect/decal/cleanable/blood/drip/drop = locate() in T
+		if(drop)
+			if(drop.drips < 3)
+				drop.drips++
+				drop.add_overlay(pick(drop.random_icon_states))
+				drop.transfer_mob_blood_dna(src)
+				return
+			else
+				temp_blood_DNA = drop.return_blood_DNA() //we transfer the dna from the drip to the splatter
+				qdel(drop)//the drip is replaced by a bigger splatter
+		else
+			drop = new(T, get_static_viruses())
+			drop.transfer_mob_blood_dna(src)
+			return
+
+	// Find a blood decal or create a new one.
+	var/obj/effect/decal/cleanable/blood/B = locate() in T
+	if(!B)
+		B = new /obj/effect/decal/cleanable/blood/splatter(T, get_static_viruses())
+	B.transfer_mob_blood_dna(src) //give blood info to the blood decal.
+	if(temp_blood_DNA)
+		B.add_blood_DNA(temp_blood_DNA)
+
+/mob/living/carbon/human/add_splatter_floor(turf/T, small_drip)
+	if(!(NOBLOOD in dna.species.species_traits))
+		..()
+
+// LEGACY REAGENT / BLOOD_ID SHIT TO STOP ERRORS
+//get the id of the substance this mob use as blood.
 /mob/living/proc/transfer_blood_to(atom/movable/AM, amount, forced)
 	if(!blood_volume || !AM.reagents)
 		return 0
@@ -156,7 +216,6 @@
 
 	AM.reagents.add_reagent(blood_id, amount, blood_data, bodytemperature)
 	return 1
-
 
 /mob/living/proc/get_blood_data(blood_id)
 	return
@@ -219,78 +278,3 @@
 	else if((NOBLOOD in dna.species.species_traits) || (has_trait(TRAIT_NOCLONE)))
 		return
 	return "blood"
-
-// This is has more potential uses, and is probably faster than the old proc.
-/proc/get_safe_blood(bloodtype)
-	. = list()
-	if(!bloodtype)
-		return
-
-	var/static/list/bloodtypes_safe = list(
-		"A-" = list("A-", "O-"),
-		"A+" = list("A-", "A+", "O-", "O+"),
-		"B-" = list("B-", "O-"),
-		"B+" = list("B-", "B+", "O-", "O+"),
-		"AB-" = list("A-", "B-", "O-", "AB-"),
-		"AB+" = list("A-", "A+", "B-", "B+", "O-", "O+", "AB-", "AB+"),
-		"O-" = list("O-"),
-		"O+" = list("O-", "O+"),
-		"L" = list("L"),
-		"U" = list("A-", "A+", "B-", "B+", "O-", "O+", "AB-", "AB+", "L", "U")
-	)
-
-	var/safe = bloodtypes_safe[bloodtype]
-	if(safe)
-		. = safe
-
-//to add a splatter of blood or other mob liquid.
-/mob/living/proc/add_splatter_floor(turf/T, small_drip)
-	if(get_blood_id() != "blood")
-		return
-	if(!T)
-		T = get_turf(src)
-
-	var/list/temp_blood_DNA
-	if(small_drip)
-		// Only a certain number of drips (or one large splatter) can be on a given turf.
-		var/obj/effect/decal/cleanable/blood/drip/drop = locate() in T
-		if(drop)
-			if(drop.drips < 3)
-				drop.drips++
-				drop.add_overlay(pick(drop.random_icon_states))
-				drop.transfer_mob_blood_dna(src)
-				return
-			else
-				temp_blood_DNA = drop.return_blood_DNA() //we transfer the dna from the drip to the splatter
-				qdel(drop)//the drip is replaced by a bigger splatter
-		else
-			drop = new(T, get_static_viruses())
-			drop.transfer_mob_blood_dna(src)
-			return
-
-	// Find a blood decal or create a new one.
-	var/obj/effect/decal/cleanable/blood/B = locate() in T
-	if(!B)
-		B = new /obj/effect/decal/cleanable/blood/splatter(T, get_static_viruses())
-	B.transfer_mob_blood_dna(src) //give blood info to the blood decal.
-	if(temp_blood_DNA)
-		B.add_blood_DNA(temp_blood_DNA)
-
-/mob/living/carbon/human/add_splatter_floor(turf/T, small_drip)
-	if(!(NOBLOOD in dna.species.species_traits))
-		..()
-
-/mob/living/carbon/alien/add_splatter_floor(turf/T, small_drip)
-	if(!T)
-		T = get_turf(src)
-	var/obj/effect/decal/cleanable/xenoblood/B = locate() in T.contents
-	if(!B)
-		B = new(T)
-	B.add_blood_DNA(list("UNKNOWN DNA" = "X*"))
-
-/mob/living/silicon/robot/add_splatter_floor(turf/T, small_drip)
-	if(!T)
-		T = get_turf(src)
-	var/obj/effect/decal/cleanable/oil/B = locate() in T.contents
-	if(!B)
-		B = new(T)

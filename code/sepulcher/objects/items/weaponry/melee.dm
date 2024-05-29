@@ -20,7 +20,7 @@
 	lefthand_file = 'icons/mob/inhands/weapons/melee_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/melee_righthand.dmi'
 	damtype = SLASH
-	force = 15
+	force = 10
 	throwforce = 3
 	w_class = WEIGHT_CLASS_BULKY
 	attack_verb = list("chopped", "slashed", "sliced")
@@ -78,7 +78,7 @@
 	item_state = "baton"
 	lefthand_file = 'icons/mob/inhands/weapons/melee_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/melee_righthand.dmi'
-	force = 15
+	force = 5
 	throwforce = 7
 	slot_flags = ITEM_SLOT_BELT
 	w_class = WEIGHT_CLASS_SMALL
@@ -91,7 +91,7 @@
 	item_state = "axe"
 	lefthand_file = 'icons/mob/inhands/weapons/melee_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/melee_righthand.dmi'
-	force = 15
+	force = 20
 	throwforce = 7
 	w_class = WEIGHT_CLASS_BULKY
 	attack_verb = list("stabbed", "slashed", "sliced")
