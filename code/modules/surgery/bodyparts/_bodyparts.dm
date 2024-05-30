@@ -18,6 +18,8 @@
 	var/held_index = 0 //are we a hand? if so, which one!
 	var/is_pseudopart = FALSE //For limbs that don't really exist, eg chainsaws
 
+	var/bleed_rate = 0 // How much bleed is on this limb
+	var/bleed_suppressed = 0 // Has above bleeding been suppressed
 	var/disabled = FALSE //If TRUE, limb is as good as missing
 	var/body_damage_coeff = 1 //Multiplier of the limb's damage that gets applied to the mob
 	var/brutestate = 0
@@ -201,14 +203,12 @@
 	check_disabled()
 	return update_bodypart_damage_state()
 
-
 //Returns total damage...kinda pointless really
 /obj/item/bodypart/proc/get_damage(include_stamina = FALSE)
 	var/total = brute_dam + slash_dam + burn_dam
 	if(include_stamina)
 		total += stamina_dam
 	return total
-
 
 //Checks disabled status thresholds
 /obj/item/bodypart/proc/check_disabled()

@@ -15,7 +15,7 @@
 	var/heal_burn = 0
 	var/stop_bleeding = 0
 	var/self_delay = 50
-
+/*
 /obj/item/stack/medical/attack(mob/living/M, mob/user)
 
 	if(M.stat == DEAD && !stop_bleeding)
@@ -99,7 +99,7 @@
 		M.heal_bodypart_damage((src.heal_brute/2), (src.heal_burn/2))
 
 	use(1)
-
+*/
 
 
 /obj/item/stack/medical/bruise_pack

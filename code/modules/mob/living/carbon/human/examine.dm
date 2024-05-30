@@ -139,10 +139,13 @@
 
 	var/list/missing = list(BODY_ZONE_HEAD, BODY_ZONE_CHEST, BODY_ZONE_L_ARM, BODY_ZONE_R_ARM, BODY_ZONE_L_LEG, BODY_ZONE_R_LEG)
 	var/list/disabled = list()
+	var/list/bleeding = list()
 	for(var/X in bodyparts)
 		var/obj/item/bodypart/BP = X
 		if(BP.disabled)
 			disabled += BP
+		if(BP.bleed_suppressed)
+			bleeding += BP
 		missing -= BP.body_zone
 		for(var/obj/item/I in BP.embedded_objects)
 			msg += "<B>[t_He] [t_has] \a [icon2html(I, user)] [I] embedded in [t_his] [BP.name]!</B>\n"
@@ -172,6 +175,13 @@
 		msg += "[t_He] really keeps to the left.\n"
 	else if(l_limbs_missing >= 2 && r_limbs_missing >= 2)
 		msg += "[t_He] [p_do()]n't seem all there.\n"
+
+	for(var/X in bleeding)
+		var/obj/item/bodypart/BP = X
+		if(BP.bleed_suppressed)
+			msg += "[capitalize(t_his)] [BP.name] is bandaged.\n"
+		else if(BP.bleed_rate)
+			msg += "<B>[capitalize(t_his)] [BP.name] is bleeding!</B>\n"
 
 	if(!(user == src && src.hal_screwyhud == SCREWYHUD_HEALTHY)) //fake healthy
 		if(temp)
@@ -234,16 +244,8 @@
 		if(DISGUST_LEVEL_DISGUSTED to INFINITY)
 			msg += "[t_He] look[p_s()] extremely disgusted.\n"
 
-	if(blood_volume < BLOOD_VOLUME_SAFE)
+	if(blood_volume < BLOOD_NORMAL)
 		msg += "[t_He] [t_has] pale skin.\n"
-
-	if(bleedsuppress)
-		msg += "[t_He] [t_is] bandaged with something.\n"
-	else if(bleed_rate)
-		if(reagents.has_reagent("heparin"))
-			msg += "<b>[t_He] [t_is] bleeding uncontrollably!</b>\n"
-		else
-			msg += "<B>[t_He] [t_is] bleeding!</B>\n"
 
 	if(reagents.has_reagent("teslium"))
 		msg += "[t_He] [t_is] emitting a gentle blue glow!\n"

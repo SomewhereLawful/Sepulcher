@@ -14,7 +14,7 @@
 	var/health = 100
 
 	// Blood is handled like health and contributes to health calculation
-	//how much blood the mob has
+	var/maxblood_volume = 200
 	var/blood_volume = 100
 
 	//Will - The sanity stat - Affects movement speed, if it reaches zero you immediately die.

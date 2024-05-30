@@ -20,6 +20,14 @@
 #define BLOOD_VOLUME_BAD			224
 #define BLOOD_VOLUME_SURVIVE		122
 
+//Blood level defines for Sepulcher's code
+#define BLOOD_EXCESS_HIGH		130
+#define BLOOD_EXCESS_LOW		110
+#define BLOOD_NORMAL			100
+#define BLOOD_UNSAFE			85
+#define BLOOD_CRITCAL			60
+#define BLOOD_DEATH_THRESHOLD	40
+
 //Sizes of mobs, used by mob/living/var/mob_size
 #define MOB_SIZE_TINY 0
 #define MOB_SIZE_SMALL 1

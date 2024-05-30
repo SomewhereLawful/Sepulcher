@@ -386,6 +386,12 @@
 	med_hud_set_health()
 	med_hud_set_status()
 
+/mob/living/proc/updatebloodvolume()
+	if(status_flags & GODMODE)
+		return
+	blood_volume = maxblood_volume - getBloodvolume()
+	update_stat()
+
 /mob/living/proc/updatewill() // Be sure to do that soon, gramps
 	if(status_flags & GODMODE)
 		return

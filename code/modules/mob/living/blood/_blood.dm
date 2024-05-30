@@ -3,29 +3,8 @@
 	   Rewritten by Fajetti - May god have mercy
 ****************************************************/
 
-//Blood level defines
-#define BLOOD_EXCESS_HIGH		130
-#define BLOOD_EXCESS_LOW		110
-#define BLOOD_NORMAL			100
-#define BLOOD_UNSAFE			85
-#define BLOOD_CRITCAL			60
-#define BLOOD_DEATH_THRESHOLD	40
-
-/mob/living/carbon/human/proc/suppress_bloodloss(amount)
-	if(bleedsuppress)
-		return
-	else
-		bleedsuppress = TRUE
-		addtimer(CALLBACK(src, .proc/resume_bleeding), amount)
-
-/mob/living/carbon/human/proc/resume_bleeding()
-	bleedsuppress = 0
-	if(stat != DEAD && bleed_rate)
-		to_chat(src, "<span class='warning'>The blood soaks through your bandage.</span>")
-
 // Takes care blood loss and regeneration
 /mob/living/carbon/human/handle_blood()
-
 	if(NOBLOOD in dna.species.species_traits)
 		bleed_rate = 0
 		return
@@ -63,14 +42,11 @@
 			if(BLOOD_UNSAFE to BLOOD_NORMAL)
 				if(prob(5))
 					to_chat(src, "<span class='red'>You feel [absence_word].</span>")
-				adjustOxyLoss(round((BLOOD_NORMAL - blood_volume) * 0.01, 1))
 			if(BLOOD_CRITCAL to BLOOD_UNSAFE)
-				adjustOxyLoss(round((BLOOD_NORMAL - blood_volume) * 0.02, 1))
 				if(prob(5))
 					blur_eyes(6)
 					to_chat(src, "<span class='red'>You feel very [absence_word].</span>")
 			if(BLOOD_DEATH_THRESHOLD to BLOOD_CRITCAL)
-				adjustOxyLoss(5)
 				if(prob(15))
 					Unconscious(rand(20,60))
 					to_chat(src, "<span class='red'>You feel extremely [absence_word].</span>")
@@ -80,12 +56,12 @@
 
 		var/temp_bleed = 0
 		//Bleeding out
-		for(var/X in bodyparts)
+		for(var/X in bodyparts)// //
 			var/obj/item/bodypart/BP = X
 			var/brutedamage = BP.brute_dam
 
 			//We want an accurate reading of .len
-			listclearnulls(BP.embedded_objects)
+			listclearnulls(BP.embedded_objects) // Innate bleed from the amt of embedded objects
 			temp_bleed += 0.5*BP.embedded_objects.len
 
 			if(brutedamage >= 20)

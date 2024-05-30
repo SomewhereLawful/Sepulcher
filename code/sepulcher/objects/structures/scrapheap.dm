@@ -7,7 +7,7 @@
 	desc = "Some broken metal of unknown origin."
 	icon_state = "scrap1"
 	feed_points = 2
-	health_points = 200 // eating sharp metal wrecks your organs
+	brute_heal = -200 // eating sharp metal wrecks your organs
 	foundry_metal_amt = 1
 
 /obj/item/consumable/food/scrap/New()
@@ -51,7 +51,8 @@
 			bleed_chance = 15
 
 		if(prob(bleed_chance))
-			H.bleed_rate = 5
+			var/obj/item/bodypart/BP = H.get_bodypart("[(user.active_hand_index % 2 == 0) ? "r" : "l" ]_arm")
+			BP.bleed_rate += 5
 			if(prob(drop_scrap_chance))
 				to_chat(user, scrap_grabbed_message)
 			else
