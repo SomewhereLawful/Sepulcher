@@ -63,6 +63,7 @@
 			//We want an accurate reading of .len
 			listclearnulls(BP.embedded_objects) // Innate bleed from the amt of embedded objects
 			temp_bleed += 0.5*BP.embedded_objects.len
+			temp_bleed += BP.bleed_rate
 
 			if(brutedamage >= 20)
 				temp_bleed += (brutedamage * 0.013)
@@ -75,7 +76,7 @@
 //Makes a blood drop, leaking amt units of blood from the mob
 /mob/living/carbon/proc/bleed(amt)
 	if(blood_volume)
-		blood_volume = max(blood_volume - amt, 0)
+		adjustBloodvolume(-amt)
 		if(isturf(src.loc)) //Blood loss still happens in locker, floor stays clean
 			if(amt >= 10)
 				add_splatter_floor(src.loc)

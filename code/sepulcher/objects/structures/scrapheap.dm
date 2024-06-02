@@ -52,6 +52,7 @@
 
 		if(prob(bleed_chance))
 			var/obj/item/bodypart/BP = H.get_bodypart("[(user.active_hand_index % 2 == 0) ? "r" : "l" ]_arm")
+			H.apply_damage(5, SLASH, BP)
 			BP.bleed_rate += 5
 			if(prob(drop_scrap_chance))
 				to_chat(user, scrap_grabbed_message)

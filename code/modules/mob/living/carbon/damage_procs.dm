@@ -48,6 +48,7 @@
 			if(BP)
 				if(BP.receive_damage(0, damage * hit_percent, 0))
 					update_damage_overlays()
+					BP.bleed_rate += round(damage *= 0.5, 1) // This SUCKS
 			else
 				adjustSlashLoss(damage * hit_percent)
 		if(BURN)

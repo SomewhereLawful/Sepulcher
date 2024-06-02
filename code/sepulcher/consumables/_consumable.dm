@@ -108,7 +108,7 @@
 		M.adjustBruteLoss(brute_heal)
 		M.adjustSlashLoss(slash_heal)
 		M.adjustFireLoss(burn_heal)
-		if(bleed_suppression)
+		if(bleed_suppression) // This unfortunately assumes all bleedheal is SKIN_CONSUME
 			var/obj/item/bodypart/affecting
 			affecting = C.get_bodypart(check_zone(user.zone_selected))
 			affecting.suppress_bloodloss(bleed_suppression)
