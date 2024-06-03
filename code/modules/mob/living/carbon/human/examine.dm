@@ -144,7 +144,7 @@
 		var/obj/item/bodypart/BP = X
 		if(BP.disabled)
 			disabled += BP
-		if(BP.bleed_suppressed)
+		if(BP.bleed_rate)
 			bleeding += BP
 		missing -= BP.body_zone
 		for(var/obj/item/I in BP.embedded_objects)
@@ -154,6 +154,13 @@
 		var/obj/item/bodypart/BP = X
 		var/more_brute = BP.brute_dam >= BP.burn_dam
 		msg += "<B>[capitalize(t_his)] [BP.name] is [more_brute ? "broken and mangled" : "burnt and blistered"]!</B>\n"
+
+	for(var/X in bleeding)
+		var/obj/item/bodypart/BP = X
+		if(BP.bleed_suppressed)
+			msg += "[capitalize(t_his)] [BP.name] is bandaged.\n"
+		else if(BP.bleed_rate)
+			msg += "<B>[capitalize(t_his)] [BP.name] is bleeding!</B>\n"
 
 	//stores missing limbs
 	var/l_limbs_missing = 0
@@ -175,13 +182,6 @@
 		msg += "[t_He] really keeps to the left.\n"
 	else if(l_limbs_missing >= 2 && r_limbs_missing >= 2)
 		msg += "[t_He] [p_do()]n't seem all there.\n"
-
-	for(var/X in bleeding)
-		var/obj/item/bodypart/BP = X
-		if(BP.bleed_suppressed)
-			msg += "[capitalize(t_his)] [BP.name] is bandaged.\n"
-		else if(BP.bleed_rate)
-			msg += "<B>[capitalize(t_his)] [BP.name] is bleeding!</B>\n"
 
 	if(!(user == src && src.hal_screwyhud == SCREWYHUD_HEALTHY)) //fake healthy
 		if(temp)

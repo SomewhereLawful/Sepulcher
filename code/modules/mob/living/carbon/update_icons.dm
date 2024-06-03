@@ -106,6 +106,8 @@
 		if(BP.dmg_overlay_type)
 			if(BP.brutestate)
 				damage_overlay.add_overlay("[BP.dmg_overlay_type]_[BP.body_zone]_[BP.brutestate]0")	//we're adding icon_states of the base image as overlays
+			if(BP.slashstate)
+				damage_overlay.add_overlay("[BP.dmg_overlay_type]_[BP.body_zone]_[BP.slashstate]0")
 			if(BP.burnstate)
 				damage_overlay.add_overlay("[BP.dmg_overlay_type]_[BP.body_zone]_0[BP.burnstate]")
 

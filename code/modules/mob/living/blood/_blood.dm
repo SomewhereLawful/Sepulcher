@@ -54,8 +54,8 @@
 				if(!has_trait(TRAIT_NODEATH))
 					death()
 
-		var/temp_bleed = 0
 		//Bleeding out
+		var/temp_bleed = getSlashLoss()
 		for(var/X in bodyparts)// //
 			var/obj/item/bodypart/BP = X
 			var/brutedamage = BP.brute_dam
@@ -63,20 +63,19 @@
 			//We want an accurate reading of .len
 			listclearnulls(BP.embedded_objects) // Innate bleed from the amt of embedded objects
 			temp_bleed += 0.5*BP.embedded_objects.len
-			temp_bleed += BP.bleed_rate
 
 			if(brutedamage >= 20)
 				temp_bleed += (brutedamage * 0.013)
 
-		bleed_rate = max(bleed_rate - 0.5, temp_bleed)//if no wounds, other bleed effects (heparin) naturally decreases
+			bleed_rate += temp_bleed
 
-		if(bleed_rate && !bleedsuppress && !(has_trait(TRAIT_FAKEDEATH)))
+		if(bleed_rate && !(has_trait(TRAIT_FAKEDEATH)))
 			bleed(bleed_rate)
 
 //Makes a blood drop, leaking amt units of blood from the mob
 /mob/living/carbon/proc/bleed(amt)
 	if(blood_volume)
-		adjustBloodvolume(-amt)
+		adjustBloodloss(amt)
 		if(isturf(src.loc)) //Blood loss still happens in locker, floor stays clean
 			if(amt >= 10)
 				add_splatter_floor(src.loc)
@@ -95,6 +94,35 @@
 	blood_volume = BLOOD_NORMAL
 	bleed_rate = 0
 
+//to add a splatter of blood or other mob liquid.
+/mob/living/proc/add_splatter_floor(turf/T, small_drip)
+	if(!T)
+		T = get_turf(src)
+
+	if(small_drip)
+		// Only a certain number of drips (or one large splatter) can be on a given turf.
+		var/obj/effect/decal/cleanable/blood/drip/drop = locate() in T
+		if(drop)
+			if(drop.drips < 3)
+				drop.drips++
+				drop.add_overlay(pick(drop.random_icon_states))
+				return
+			else
+				qdel(drop)//the drip is replaced by a bigger splatter
+		else
+			//drop = new(T, get_static_viruses())
+			return
+
+	// Find a blood decal or create a new one.
+	var/obj/effect/decal/cleanable/blood/B = locate() in T
+	if(!B)
+		B = new /obj/effect/decal/cleanable/blood/splatter(T, get_static_viruses())
+
+/mob/living/carbon/human/add_splatter_floor(turf/T, small_drip)
+	if(!(NOBLOOD in dna.species.species_traits))
+		..()
+
+// LEGACY REAGENT / BLOOD_ID SHIT TO STOP ERRORS
 // This is has more potential uses, and is probably faster than the old proc.
 /proc/get_safe_blood(bloodtype)
 	. = list()
@@ -118,44 +146,6 @@
 	if(safe)
 		. = safe
 
-//to add a splatter of blood or other mob liquid.
-/mob/living/proc/add_splatter_floor(turf/T, small_drip)
-	if(get_blood_id() != "blood")
-		return
-	if(!T)
-		T = get_turf(src)
-
-	var/list/temp_blood_DNA
-	if(small_drip)
-		// Only a certain number of drips (or one large splatter) can be on a given turf.
-		var/obj/effect/decal/cleanable/blood/drip/drop = locate() in T
-		if(drop)
-			if(drop.drips < 3)
-				drop.drips++
-				drop.add_overlay(pick(drop.random_icon_states))
-				drop.transfer_mob_blood_dna(src)
-				return
-			else
-				temp_blood_DNA = drop.return_blood_DNA() //we transfer the dna from the drip to the splatter
-				qdel(drop)//the drip is replaced by a bigger splatter
-		else
-			drop = new(T, get_static_viruses())
-			drop.transfer_mob_blood_dna(src)
-			return
-
-	// Find a blood decal or create a new one.
-	var/obj/effect/decal/cleanable/blood/B = locate() in T
-	if(!B)
-		B = new /obj/effect/decal/cleanable/blood/splatter(T, get_static_viruses())
-	B.transfer_mob_blood_dna(src) //give blood info to the blood decal.
-	if(temp_blood_DNA)
-		B.add_blood_DNA(temp_blood_DNA)
-
-/mob/living/carbon/human/add_splatter_floor(turf/T, small_drip)
-	if(!(NOBLOOD in dna.species.species_traits))
-		..()
-
-// LEGACY REAGENT / BLOOD_ID SHIT TO STOP ERRORS
 //get the id of the substance this mob use as blood.
 /mob/living/proc/transfer_blood_to(atom/movable/AM, amount, forced)
 	if(!blood_volume || !AM.reagents)

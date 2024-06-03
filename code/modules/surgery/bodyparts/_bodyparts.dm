@@ -52,7 +52,7 @@
 	var/px_y = 0
 
 	var/species_flags_list = list()
-	var/dmg_overlay_type //the type of damage overlay (if any) to use when this bodypart is bruised/burned.
+	var/dmg_overlay_type //the type of damage overlay (if any) to use when this bodypart is bruised/slashed/burned.
 
 	//Damage messages used by help_shake_act()
 	var/light_brute_msg = "bruised"

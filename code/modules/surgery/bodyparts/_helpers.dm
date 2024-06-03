@@ -137,6 +137,18 @@
 			disabled += zone
 	return disabled
 
+/mob/living/proc/get_bleeding_limbs()
+	return list()
+
+/mob/living/carbon/get_bleeding_limbs()
+	var/list/full = list(BODY_ZONE_HEAD, BODY_ZONE_CHEST, BODY_ZONE_R_ARM, BODY_ZONE_L_ARM, BODY_ZONE_R_LEG, BODY_ZONE_L_LEG)
+	var/list/bleeding = list()
+	for(var/zone in full)
+		var/obj/item/bodypart/affecting = get_bodypart(zone)
+		if(affecting && affecting.bleed_rate)
+			bleeding += zone
+	return bleeding
+
 //Remove all embedded objects from all limbs on the carbon mob
 /mob/living/carbon/proc/remove_all_embedded_objects()
 	var/turf/T = get_turf(src)
