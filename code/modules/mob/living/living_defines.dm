@@ -33,6 +33,7 @@
 	var/bruteloss = 0		//Brutal damage caused by brute force (punching, being clubbed by a toolbox ect... this also accounts for pressure damage)
 	var/slashloss = 0		//Slashing damage caused by blades or other such sharp things. BLEEDING affector
 	var/fireloss = 0		//Burn damage caused by being way too hot, too cold or burnt.
+	var/bloodloss = 0		//Blood loss, semi-hidden stat. Too much does brute, too little will kill. Tied directly to slashdam on limbs
 
 	var/oxyloss = 0			//Oxygen depravation damage (no air in lungs)
 	var/willloss = 0		//Will damage, or sanity. Affects movement speed, affliction at zero. Dealt by certain weapons and exposure to various traumatic events.

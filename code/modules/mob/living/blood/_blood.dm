@@ -6,7 +6,6 @@
 // Takes care blood loss and regeneration
 /mob/living/carbon/human/handle_blood()
 	if(NOBLOOD in dna.species.species_traits)
-		bleed_rate = 0
 		return
 
 		//Blood regeneration if there is some space
@@ -23,17 +22,15 @@
 					nutrition_ratio = 0.8
 				else
 					nutrition_ratio = 1
-			if(satiety > 80)
-				nutrition_ratio *= 1.25
-			hunger = max(0, hunger - nutrition_ratio * HUNGER_FACTOR)
-			blood_volume = min(BLOOD_NORMAL, blood_volume + 0.5 * nutrition_ratio)
+			adjustHunger((max(0, hunger - nutrition_ratio * HUNGER_FACTOR) * -1))
+			adjustBloodloss((min(BLOOD_NORMAL, blood_volume + 0.5 * nutrition_ratio) * -1))
 
 		//Effects of bloodloss
 		var/absence_word = pick("dizzy","woozy","faint")
 		switch(blood_volume)
 			if(BLOOD_EXCESS_LOW to BLOOD_EXCESS_HIGH)
 				if(prob(15))
-					to_chat(src, "<span class='red'>Ugh.... Your heart screams, your head splits...</span>")
+					to_chat(src, "<span class='red'><B>Ugh.... Your heart screams, your head splits...</B></span>")
 				adjustBruteLoss(5)
 			if(BLOOD_NORMAL to BLOOD_EXCESS_LOW)
 				if(prob(15))
@@ -55,10 +52,11 @@
 					death()
 
 		//Bleeding out
-		var/temp_bleed = getSlashLoss()
-		for(var/X in bodyparts)// //
+		var/temp_bleed = 0
+		for(var/X in bodyparts)
 			var/obj/item/bodypart/BP = X
 			var/brutedamage = BP.brute_dam
+			var/bleeddamage = BP.bleed_rate
 
 			//We want an accurate reading of .len
 			listclearnulls(BP.embedded_objects) // Innate bleed from the amt of embedded objects
@@ -66,18 +64,18 @@
 
 			if(brutedamage >= 20)
 				temp_bleed += (brutedamage * 0.013)
+			if(bleeddamage >= 5)
+				temp_bleed += bleeddamage
 
-			bleed_rate += temp_bleed
-
-		if(bleed_rate && !(has_trait(TRAIT_FAKEDEATH)))
-			bleed(bleed_rate)
+		if(temp_bleed && !(has_trait(TRAIT_FAKEDEATH)))
+			bleed(temp_bleed)
 
 //Makes a blood drop, leaking amt units of blood from the mob
 /mob/living/carbon/proc/bleed(amt)
 	if(blood_volume)
 		adjustBloodloss(amt)
 		if(isturf(src.loc)) //Blood loss still happens in locker, floor stays clean
-			if(amt >= 10)
+			if(amt >= 20)
 				add_splatter_floor(src.loc)
 			else
 				add_splatter_floor(src.loc, 1)
@@ -92,7 +90,9 @@
 
 /mob/living/carbon/human/restore_blood()
 	blood_volume = BLOOD_NORMAL
-	bleed_rate = 0
+	for(var/X in bodyparts)
+		var/obj/item/bodypart/BP = X
+		BP.bleed_rate = 0
 
 //to add a splatter of blood or other mob liquid.
 /mob/living/proc/add_splatter_floor(turf/T, small_drip)

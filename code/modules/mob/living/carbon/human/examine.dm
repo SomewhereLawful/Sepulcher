@@ -158,8 +158,8 @@
 	for(var/X in bleeding)
 		var/obj/item/bodypart/BP = X
 		if(BP.bleed_suppressed)
-			msg += "[capitalize(t_his)] [BP.name] is bandaged.\n"
-		else if(BP.bleed_rate)
+			msg += "<B>[capitalize(t_his)] [BP.name] is bandaged.</B>\n"
+		else
 			msg += "<B>[capitalize(t_his)] [BP.name] is bleeding!</B>\n"
 
 	//stores missing limbs

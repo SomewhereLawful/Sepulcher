@@ -40,10 +40,11 @@
 
 	var/list/bleeding = get_bleeding_limbs()
 	for(var/b in bleeding)
-		if(b==BODY_ZONE_HEAD)
-			msg += "<span class='deadsay'><B>[t_His] [parse_zone(b)] is missing!</B></span>\n"
-			continue
-		msg += "<span class='warning'><B>[t_His] [parse_zone(b)] is missing!</B></span>\n"
+		var/obj/item/bodypart/BP = b
+		if(BP.bleed_suppressed)
+			msg += "<span class='warning'><B>[t_His] [parse_zone(b)] is bandaged.</B></span>\n"
+		else
+			msg += "<span class='warning'><B>[t_His] [parse_zone(b)] is bleeding!</B></span>\n"
 
 	msg += "<span class='warning'>"
 	var/temp = getBruteLoss()

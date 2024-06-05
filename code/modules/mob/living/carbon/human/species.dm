@@ -1432,6 +1432,7 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 			H.damageoverlaytemp = 20
 			if(BP)
 				if(BP.receive_damage(0, damage * hit_percent * slashmod * H.physiology.slash_mod, 0))
+					BP.bleed_rate += damage
 					H.update_damage_overlays()
 			else
 				H.adjustSlashLoss(damage * hit_percent * slashmod * H.physiology.slash_mod)

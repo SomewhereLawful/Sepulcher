@@ -386,10 +386,10 @@
 	med_hud_set_health()
 	med_hud_set_status()
 
-/mob/living/proc/updatebloodvolume()
+/mob/living/proc/updatebloodloss()
 	if(status_flags & GODMODE)
 		return
-	blood_volume = maxblood_volume - getBloodvolume()
+	blood_volume = maxblood_volume - getBloodloss()
 	update_stat()
 
 /mob/living/proc/updatewill() // Be sure to do that soon, gramps
@@ -563,7 +563,7 @@
 						TH.transfer_mob_blood_dna(src)
 
 /mob/living/carbon/human/makeTrail(turf/T)
-	if((NOBLOOD in dna.species.species_traits) || !bleed_rate)
+	if((NOBLOOD in dna.species.species_traits) || !human_bleed_rate)
 		return
 	..()
 

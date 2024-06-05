@@ -19,7 +19,7 @@
 	var/is_pseudopart = FALSE //For limbs that don't really exist, eg chainsaws
 
 	var/bleed_rate = 0 // How much bleed is on this limb
-	var/bleed_suppressed = 0 // Has above bleeding been suppressed
+	var/bleed_suppressed = FALSE // Has above bleeding been suppressed
 	var/disabled = FALSE //If TRUE, limb is as good as missing
 	var/body_damage_coeff = 1 //Multiplier of the limb's damage that gets applied to the mob
 	var/brutestate = 0
