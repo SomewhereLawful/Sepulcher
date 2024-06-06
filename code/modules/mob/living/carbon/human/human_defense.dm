@@ -667,6 +667,7 @@
 				var/limb_max_damage = LB.max_damage
 				var/status = ""
 				var/brutedamage = LB.brute_dam
+				var/slashdamage = LB.slash_dam
 				var/burndamage = LB.burn_dam
 				if(hallucination)
 					if(prob(30))
@@ -686,7 +687,16 @@
 						status = LB.medium_brute_msg
 					if(brutedamage > (limb_max_damage*0.8))
 						status = LB.heavy_brute_msg
-					if(brutedamage > 0 && burndamage > 0)
+					if(brutedamage > 0 && slashdamage > 0)
+						status += " and "
+
+					if(slashdamage > 0)
+						status = LB.light_slash_msg
+					if(slashdamage > (limb_max_damage*0.4))
+						status = LB.medium_slash_msg
+					if(slashdamage > (limb_max_damage*0.8))
+						status = LB.heavy_slash_msg
+					if(slashdamage > 0 && burndamage > 0)
 						status += " and "
 
 					if(burndamage > (limb_max_damage*0.8))
@@ -701,16 +711,20 @@
 				var/no_damage
 				if(status == "fine" || status == "no damage")
 					no_damage = TRUE
-				to_chat(src, "\t <span class='[no_damage ? "magenta" : "red"]'>Your [LB.name] [has_trait(TRAIT_SELF_AWARE) ? "has" : "is"] [status].</span>")
+				to_chat(src, "* <span class='[no_damage ? "magenta" : "red"]'>Your [LB.name] [has_trait(TRAIT_SELF_AWARE) ? "has" : "is"] [status].</span>")
+
+				if(LB.bleed_rate)
+					if(!LB.bleed_suppressed)
+						to_chat(src, "<span class='red'>Your [LB.name] is bleeding!</span>")
+					else
+						to_chat(src, "<span class='yellow'>Your [LB.name] is banadaged.</span>")
 
 				for(var/obj/item/I in LB.embedded_objects)
-					to_chat(src, "\t <a href='?src=[REF(src)];embedded_object=[REF(I)];embedded_limb=[REF(LB)]' class='red'>There is \a [I] embedded in your [LB.name]!</a>")
+					to_chat(src, "* <a href='?src=[REF(src)];embedded_object=[REF(I)];embedded_limb=[REF(LB)]' class='red'>There is \a [I] embedded in your [LB.name]!</a>")
 
 			for(var/t in missing)
 				to_chat(src, "<span class='red'>Your [parse_zone(t)] is missing!</span>")
 
-			if(bleed_rate)
-				to_chat(src, "<span class='red'>You are bleeding!</span>")
 			if(getStaminaLoss())
 				if(getStaminaLoss() > 30)
 					to_chat(src, "<span class='yellow'>You're completely exhausted.</span>")

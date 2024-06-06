@@ -38,6 +38,14 @@
 			continue
 		msg += "<span class='warning'><B>[t_His] [parse_zone(t)] is missing!</B></span>\n"
 
+	var/list/bleeding = get_bleeding_limbs()
+	for(var/b in bleeding)
+		var/obj/item/bodypart/BP = b
+		if(BP.bleed_suppressed)
+			msg += "<span class='warning'><B>[t_His] [parse_zone(b)] is bandaged.</B></span>\n"
+		else
+			msg += "<span class='warning'><B>[t_His] [parse_zone(b)] is bleeding!</B></span>\n"
+
 	msg += "<span class='warning'>"
 	var/temp = getBruteLoss()
 	if(!(user == src && src.hal_screwyhud == SCREWYHUD_HEALTHY)) //fake healthy
@@ -48,6 +56,15 @@
 				msg += "[t_He] [t_has] <b>moderate</b> bruising!\n"
 			else
 				msg += "<B>[t_He] [t_has] severe bruising!</B>\n"
+
+		temp = getSlashLoss()
+		if(temp)
+			if (temp < 25)
+				msg += "[t_He] [t_has] some minor cuts.\n"
+			else if (temp < 50)
+				msg += "[t_He] [t_has] <b>moderate</b> lacerations!\n"
+			else
+				msg += "<B>[t_He] [t_has] severe lacerations!</B>\n"
 
 		temp = getFireLoss()
 		if(temp)

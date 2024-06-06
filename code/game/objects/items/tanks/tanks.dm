@@ -129,7 +129,7 @@
 			if(prob(50))
 				step(W, pick(GLOB.alldirs))
 		H.add_trait(TRAIT_DISFIGURED, TRAIT_GENERIC)
-		H.bleed_rate = 5
+		H.human_bleed_rate = 5
 		H.gib_animation()
 		sleep(3)
 		H.adjustBruteLoss(1000) //to make the body super-bloody

@@ -10,31 +10,38 @@
 	var/lastattackerckey = null
 
 	//Health and life related vars
-	var/maxHealth = 100 //Maximum health that should be possible.
-	var/health = 100 	//A mob's health
+	var/maxHealth = 100
+	var/health = 100
+
+	// Blood is handled like health and contributes to health calculation
+	var/maxblood_volume = 200
+	var/blood_volume = 100
 
 	//Will - The sanity stat - Affects movement speed, if it reaches zero you immediately die.
-	var/maxWill = 100 //Maximum will that should be possible.
-	var/will = 100 	//A mob's will
+	var/maxWill = 100
+	var/will = 100
 
 	//Hunger - Slowly lowers with time, at zero hunger maxHealth lowers until it reaches zero.
-	var/maxHunger = 1000 //Maximum hunger that should be possible.
-	var/hunger = 1000 	//A mob's hunger
+	var/maxHunger = 1000
+	var/hunger = 1000
 
-	//Toxicity - Unlike other stats, you want this at zero. At certain thresholds, begins to tick health damage.
-	var/maxToxicity = 100 // Don't fuck with this, as threshold for toxicity is set with hard numbers.
-	var/toxicity = 0 	//A mob's toxicity
+	//Toxicity - Works inversely to other vars. At certain thresholds, begins to tick health damage.
+	var/maxToxicity = 100
+	var/toxicity = 0
 
 	//Damage related vars, NOTE: THESE SHOULD ONLY BE MODIFIED BY PROCS
-	var/bruteloss = 0	//Brutal damage caused by brute force (punching, being clubbed by a toolbox ect... this also accounts for pressure damage)
-	var/oxyloss = 0		//Oxygen depravation damage (no air in lungs)
-	var/toxloss = 0		//Toxic damage caused by being poisoned or radiated
-	var/fireloss = 0	//Burn damage caused by being way too hot, too cold or burnt.
-	var/cloneloss = 0	//Damage caused by being cloned or ejected from the cloner early. slimes also deal cloneloss damage to victims
-	var/staminaloss = 0	//Stamina damage, or exhaustion. You recover it slowly naturally, and are knocked down if it gets too high. Holodeck and hallucinations deal this.
-	var/willloss = 0	//Will damage, or sanity. Affects movement speed, affliction at zero. Dealt by certain weapons and exposure to various traumatic events.
-	var/toxicitygain = 0//Toxicity damage, handled inversely. At certain thresholds, starts lowering health. Dealt by various foods, touching dirty things, etc.
+	var/bruteloss = 0		//Brutal damage caused by brute force (punching, being clubbed by a toolbox ect... this also accounts for pressure damage)
+	var/slashloss = 0		//Slashing damage caused by blades or other such sharp things. BLEEDING affector
+	var/fireloss = 0		//Burn damage caused by being way too hot, too cold or burnt.
+	var/bloodloss = 0		//Blood loss, semi-hidden stat. Too much does brute, too little will kill. Tied directly to slashdam on limbs
 
+	var/oxyloss = 0			//Oxygen depravation damage (no air in lungs)
+	var/willloss = 0		//Will damage, or sanity. Affects movement speed, affliction at zero. Dealt by certain weapons and exposure to various traumatic events.
+	var/toxicitygain = 0	//Toxicity damage, handled inversely. At certain thresholds, starts lowering health. Dealt by various foods, touching dirty things, etc.
+
+	var/cloneloss = 0		//Damage caused by being cloned or ejected from the cloner early. slimes also deal cloneloss damage to victims
+	var/staminaloss = 0		//Stamina damage, or exhaustion. You recover it slowly naturally, and are knocked down if it gets too high. Holodeck and hallucinations deal this.
+	var/toxloss = 0			//Toxic damage caused by being poisoned or radiated
 
 	var/confused = 0	//Makes the mob move in random directions.
 
@@ -91,7 +98,6 @@
 
 	var/stun_absorption = null //converted to a list of stun absorption sources this mob has when one is added
 
-	var/blood_volume = 0 //how much blood the mob has
 	var/obj/effect/proc_holder/ranged_ability //Any ranged ability the mob has, as a click override
 
 	var/see_override = 0 //0 for no override, sets see_invisible = see_override in silicon & carbon life process via update_sight()

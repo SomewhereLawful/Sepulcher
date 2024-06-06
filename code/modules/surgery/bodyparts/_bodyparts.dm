@@ -1,7 +1,5 @@
-
 /obj/item/bodypart
 	name = "limb"
-	desc = "Why is it detached..."
 	force = 3
 	throwforce = 3
 	icon = 'icons/mob/human_parts.dmi'
@@ -20,16 +18,21 @@
 	var/held_index = 0 //are we a hand? if so, which one!
 	var/is_pseudopart = FALSE //For limbs that don't really exist, eg chainsaws
 
+	var/bleed_rate = 0 // How much bleed is on this limb
+	var/bleed_suppressed = FALSE // Has above bleeding been suppressed
 	var/disabled = FALSE //If TRUE, limb is as good as missing
 	var/body_damage_coeff = 1 //Multiplier of the limb's damage that gets applied to the mob
 	var/brutestate = 0
+	var/slashstate = 0
 	var/burnstate = 0
 	var/brute_dam = 0
+	var/slash_dam = 0
 	var/burn_dam = 0
 	var/stamina_dam = 0
 	var/max_damage = 0
 
 	var/brute_reduction = 0 //Subtracted to brute damage taken
+	var/slash_reduction = 0 //Subtracted to slash damage taken
 	var/burn_reduction = 0	//Subtracted to burn damage taken
 
 	//Coloring and proper item icon update
@@ -49,12 +52,16 @@
 	var/px_y = 0
 
 	var/species_flags_list = list()
-	var/dmg_overlay_type //the type of damage overlay (if any) to use when this bodypart is bruised/burned.
+	var/dmg_overlay_type //the type of damage overlay (if any) to use when this bodypart is bruised/slashed/burned.
 
 	//Damage messages used by help_shake_act()
 	var/light_brute_msg = "bruised"
 	var/medium_brute_msg = "battered"
 	var/heavy_brute_msg = "mangled"
+
+	var/light_slash_msg = "scratched"
+	var/medium_slash_msg = "slashed"
+	var/heavy_slash_msg = "heavily lacerated"
 
 	var/light_burn_msg = "numb"
 	var/medium_burn_msg = "blistered"
@@ -66,6 +73,8 @@
 	..()
 	if(brute_dam > 0)
 		to_chat(user, "<span class='warning'>This limb has [brute_dam > 30 ? "severe" : "minor"] bruising.</span>")
+	if(slash_dam > 0)
+		to_chat(user, "<span class='warning'>This limb has [slash_dam > 30 ? "severe" : "minor"] lacerations.</span>")
 	if(burn_dam > 0)
 		to_chat(user, "<span class='warning'>This limb has [burn_dam > 30 ? "severe" : "minor"] burns.</span>")
 
@@ -126,18 +135,20 @@
 //Applies brute and burn damage to the organ. Returns 1 if the damage-icon states changed at all.
 //Damage will not exceed max_damage using this proc
 //Cannot apply negative damage
-/obj/item/bodypart/proc/receive_damage(brute = 0, burn = 0, stamina = 0, updating_health = TRUE)
+/obj/item/bodypart/proc/receive_damage(brute = 0, slash = 0, burn = 0, stamina = 0, updating_health = TRUE)
 	if(owner && (owner.status_flags & GODMODE))
 		return FALSE	//godmode
 	var/dmg_mlt = CONFIG_GET(number/damage_multiplier)
 	brute = round(max(brute * dmg_mlt, 0),DAMAGE_PRECISION)
+	slash = round(max(slash * dmg_mlt, 0),DAMAGE_PRECISION)
 	burn = round(max(burn * dmg_mlt, 0),DAMAGE_PRECISION)
 	stamina = round(max(stamina * dmg_mlt, 0),DAMAGE_PRECISION)
 	brute = max(0, brute - brute_reduction)
+	slash = max(0, slash - slash_reduction)
 	burn = max(0, burn - burn_reduction)
 	//No stamina scaling.. for now..
 
-	if(!brute && !burn && !stamina)
+	if(!brute && !slash && !burn && !stamina)
 		return FALSE
 
 	switch(animal_origin)
@@ -148,14 +159,16 @@
 	if(can_inflict <= 0)
 		return FALSE
 
-	var/total_damage = brute + burn
+	var/total_damage = brute + slash + burn
 
 	if(total_damage > can_inflict)
 		var/excess = total_damage - can_inflict
 		brute = round(brute * (excess / total_damage),DAMAGE_PRECISION)
+		slash = round(slash * (excess / total_damage),DAMAGE_PRECISION)
 		burn = round(burn * (excess / total_damage),DAMAGE_PRECISION)
 
 	brute_dam += brute
+	slash_dam += slash
 	burn_dam += burn
 
 	//We've dealt the physical damages, if there's room lets apply the stamina damage.
@@ -170,10 +183,10 @@
 	check_disabled()
 	return update_bodypart_damage_state()
 
-//Heals brute and burn damage for the organ. Returns 1 if the damage-icon states changed at all.
+//Heals brute, slash, and burn damage for the organ. Returns 1 if the damage-icon states changed at all.
 //Damage cannot go below zero.
 //Cannot remove negative damage (i.e. apply damage)
-/obj/item/bodypart/proc/heal_damage(brute, burn, stamina, only_robotic = FALSE, only_organic = TRUE, updating_health = TRUE)
+/obj/item/bodypart/proc/heal_damage(brute, slash, burn, stamina, only_robotic = FALSE, only_organic = TRUE, updating_health = TRUE)
 
 	if(only_robotic && status != BODYPART_ROBOTIC) //This makes organic limbs not heal when the proc is in Robotic mode.
 		return
@@ -182,6 +195,7 @@
 		return
 
 	brute_dam	= round(max(brute_dam - brute, 0), DAMAGE_PRECISION)
+	slash_dam	= round(max(slash_dam - slash, 0), DAMAGE_PRECISION)
 	burn_dam	= round(max(burn_dam - burn, 0), DAMAGE_PRECISION)
 	stamina_dam = round(max(stamina_dam - stamina, 0), DAMAGE_PRECISION)
 	if(owner && updating_health)
@@ -189,14 +203,12 @@
 	check_disabled()
 	return update_bodypart_damage_state()
 
-
 //Returns total damage...kinda pointless really
 /obj/item/bodypart/proc/get_damage(include_stamina = FALSE)
-	var/total = brute_dam + burn_dam
+	var/total = brute_dam + slash_dam + burn_dam
 	if(include_stamina)
 		total += stamina_dam
 	return total
-
 
 //Checks disabled status thresholds
 /obj/item/bodypart/proc/check_disabled()
@@ -215,18 +227,18 @@
 	owner.update_body()
 	owner.update_canmove()
 
-//Updates an organ's brute/burn states for use by update_damage_overlays()
+//Updates an organ's brute/slash/burn states for use by update_damage_overlays()
 //Returns 1 if we need to update overlays. 0 otherwise.
 /obj/item/bodypart/proc/update_bodypart_damage_state()
 	var/tbrute	= round( (brute_dam/max_damage)*3, 1 )
+	var/tslash	= round( (slash_dam/max_damage)*3, 1 )
 	var/tburn	= round( (burn_dam/max_damage)*3, 1 )
-	if((tbrute != brutestate) || (tburn != burnstate))
+	if((tbrute != brutestate) || (tslash != slashstate) || (tburn != burnstate))
 		brutestate = tbrute
+		slashstate = tslash
 		burnstate = tburn
 		return TRUE
 	return FALSE
-
-
 
 //Change organ status
 /obj/item/bodypart/proc/change_bodypart_status(new_limb_status, heal_limb, change_icon_to_default)
@@ -234,7 +246,9 @@
 	if(heal_limb)
 		burn_dam = 0
 		brute_dam = 0
+		slash_dam = 0
 		brutestate = 0
+		slashstate = 0
 		burnstate = 0
 
 	if(change_icon_to_default)
@@ -341,6 +355,8 @@
 		if(dmg_overlay_type)
 			if(brutestate)
 				. += image('icons/mob/dam_mob.dmi', "[dmg_overlay_type]_[body_zone]_[brutestate]0", -DAMAGE_LAYER, image_dir)
+			if(slashstate)
+				. += image('icons/mob/dam_mob.dmi', "[dmg_overlay_type]_[body_zone]_[slashstate]0", -DAMAGE_LAYER, image_dir)
 			if(burnstate)
 				. += image('icons/mob/dam_mob.dmi', "[dmg_overlay_type]_[body_zone]_0[burnstate]", -DAMAGE_LAYER, image_dir)
 
@@ -395,7 +411,6 @@
 			. += aux
 		return
 
-
 	if(should_draw_greyscale)
 		var/draw_color = mutation_color || species_color || (skin_tone && skintone2hex(skin_tone))
 		if(draw_color)
@@ -406,237 +421,3 @@
 /obj/item/bodypart/deconstruct(disassembled = TRUE)
 	drop_organs()
 	qdel(src)
-
-/obj/item/bodypart/chest
-	name = BODY_ZONE_CHEST
-	desc = "It's impolite to stare at a person's chest."
-	icon_state = "default_human_chest"
-	max_damage = 200
-	body_zone = BODY_ZONE_CHEST
-	body_part = CHEST
-	px_x = 0
-	px_y = 0
-	var/obj/item/cavity_item
-
-/obj/item/bodypart/chest/Destroy()
-	if(cavity_item)
-		qdel(cavity_item)
-	return ..()
-
-/obj/item/bodypart/chest/drop_organs(mob/user)
-	if(cavity_item)
-		cavity_item.forceMove(user.loc)
-		cavity_item = null
-	..()
-
-/obj/item/bodypart/chest/monkey
-	icon = 'icons/mob/animal_parts.dmi'
-	icon_state = "default_monkey_chest"
-	animal_origin = MONKEY_BODYPART
-
-/obj/item/bodypart/chest/alien
-	icon = 'icons/mob/animal_parts.dmi'
-	icon_state = "alien_chest"
-	dismemberable = 0
-	max_damage = 500
-	animal_origin = ALIEN_BODYPART
-
-/obj/item/bodypart/chest/devil
-	dismemberable = 0
-	max_damage = 5000
-	animal_origin = DEVIL_BODYPART
-
-/obj/item/bodypart/chest/larva
-	icon = 'icons/mob/animal_parts.dmi'
-	icon_state = "larva_chest"
-	dismemberable = 0
-	max_damage = 50
-	animal_origin = LARVA_BODYPART
-
-/obj/item/bodypart/l_arm
-	name = "left arm"
-	desc = "Did you know that the word 'sinister' stems originally from the \
-		Latin 'sinestra' (left hand), because the left hand was supposed to \
-		be possessed by the devil? This arm appears to be possessed by no \
-		one though."
-	icon_state = "default_human_l_arm"
-	attack_verb = list("slapped", "punched")
-	max_damage = 50
-	body_zone =BODY_ZONE_L_ARM
-	body_part = ARM_LEFT
-	aux_zone = BODY_ZONE_PRECISE_L_HAND
-	aux_layer = HANDS_PART_LAYER
-	body_damage_coeff = 0.75
-	held_index = 1
-	px_x = -6
-	px_y = 0
-
-/obj/item/bodypart/l_arm/set_disabled(new_disabled = TRUE)
-	..()
-	if(disabled)
-		to_chat(owner, "<span class='userdanger'>Your [name] is too damaged to function!</span>")
-		owner.emote("scream")
-		if(held_index)
-			owner.dropItemToGround(owner.get_item_for_held_index(held_index))
-	if(owner.hud_used)
-		var/obj/screen/inventory/hand/L = owner.hud_used.hand_slots["[held_index]"]
-		if(L)
-			L.update_icon()
-
-/obj/item/bodypart/l_arm/monkey
-	icon = 'icons/mob/animal_parts.dmi'
-	icon_state = "default_monkey_l_arm"
-	animal_origin = MONKEY_BODYPART
-	px_x = -5
-	px_y = -3
-
-/obj/item/bodypart/l_arm/alien
-	icon = 'icons/mob/animal_parts.dmi'
-	icon_state = "alien_l_arm"
-	px_x = 0
-	px_y = 0
-	dismemberable = 0
-	max_damage = 100
-	animal_origin = ALIEN_BODYPART
-
-/obj/item/bodypart/l_arm/devil
-	dismemberable = 0
-	max_damage = 5000
-	animal_origin = DEVIL_BODYPART
-
-/obj/item/bodypart/r_arm
-	name = "right arm"
-	desc = "Over 87% of humans are right handed. That figure is much lower \
-		among humans missing their right arm."
-	icon_state = "default_human_r_arm"
-	attack_verb = list("slapped", "punched")
-	max_damage = 50
-	body_zone = BODY_ZONE_R_ARM
-	body_part = ARM_RIGHT
-	aux_zone = BODY_ZONE_PRECISE_R_HAND
-	aux_layer = HANDS_PART_LAYER
-	body_damage_coeff = 0.75
-	held_index = 2
-	px_x = 6
-	px_y = 0
-
-/obj/item/bodypart/r_arm/set_disabled(new_disabled = TRUE)
-	..()
-	if(disabled)
-		to_chat(owner, "<span class='userdanger'>Your [name] is too damaged to function!</span>")
-		owner.emote("scream")
-		if(held_index)
-			owner.dropItemToGround(owner.get_item_for_held_index(held_index))
-	if(owner.hud_used)
-		var/obj/screen/inventory/hand/R = owner.hud_used.hand_slots["[held_index]"]
-		if(R)
-			R.update_icon()
-
-/obj/item/bodypart/r_arm/monkey
-	icon = 'icons/mob/animal_parts.dmi'
-	icon_state = "default_monkey_r_arm"
-	animal_origin = MONKEY_BODYPART
-	px_x = 5
-	px_y = -3
-
-/obj/item/bodypart/r_arm/alien
-	icon = 'icons/mob/animal_parts.dmi'
-	icon_state = "alien_r_arm"
-	px_x = 0
-	px_y = 0
-	dismemberable = 0
-	max_damage = 100
-	animal_origin = ALIEN_BODYPART
-
-/obj/item/bodypart/r_arm/devil
-	dismemberable = 0
-	max_damage = 5000
-	animal_origin = DEVIL_BODYPART
-
-/obj/item/bodypart/l_leg
-	name = "left leg"
-	desc = "Some athletes prefer to tie their left shoelaces first for good \
-		luck. In this instance, it probably would not have helped."
-	icon_state = "default_human_l_leg"
-	attack_verb = list("kicked", "stomped")
-	max_damage = 50
-	body_zone = BODY_ZONE_L_LEG
-	body_part = LEG_LEFT
-	body_damage_coeff = 0.75
-	px_x = -2
-	px_y = 12
-
-/obj/item/bodypart/l_leg/set_disabled(new_disabled = TRUE)
-	..()
-	if(disabled)
-		to_chat(owner, "<span class='userdanger'>Your [name] is too damaged to function!</span>")
-		owner.emote("scream")
-
-/obj/item/bodypart/l_leg/digitigrade
-	name = "left digitigrade leg"
-	use_digitigrade = FULL_DIGITIGRADE
-
-/obj/item/bodypart/l_leg/monkey
-	icon = 'icons/mob/animal_parts.dmi'
-	icon_state = "default_monkey_l_leg"
-	animal_origin = MONKEY_BODYPART
-	px_y = 4
-
-/obj/item/bodypart/l_leg/alien
-	icon = 'icons/mob/animal_parts.dmi'
-	icon_state = "alien_l_leg"
-	px_x = 0
-	px_y = 0
-	dismemberable = 0
-	max_damage = 100
-	animal_origin = ALIEN_BODYPART
-
-/obj/item/bodypart/l_leg/devil
-	dismemberable = 0
-	max_damage = 5000
-	animal_origin = DEVIL_BODYPART
-
-/obj/item/bodypart/r_leg
-	name = "right leg"
-	desc = "You put your right leg in, your right leg out. In, out, in, out, \
-		shake it all about. And apparently then it detaches.\n\
-		The hokey pokey has certainly changed a lot since space colonisation."
-	// alternative spellings of 'pokey' are availible
-	icon_state = "default_human_r_leg"
-	attack_verb = list("kicked", "stomped")
-	max_damage = 50
-	body_zone = BODY_ZONE_R_LEG
-	body_part = LEG_RIGHT
-	body_damage_coeff = 0.75
-	px_x = 2
-	px_y = 12
-
-/obj/item/bodypart/r_leg/set_disabled(new_disabled = TRUE)
-	..()
-	if(disabled)
-		to_chat(owner, "<span class='userdanger'>Your [name] is too damaged to function!</span>")
-		owner.emote("scream")
-
-/obj/item/bodypart/r_leg/digitigrade
-	name = "right digitigrade leg"
-	use_digitigrade = FULL_DIGITIGRADE
-
-/obj/item/bodypart/r_leg/monkey
-	icon = 'icons/mob/animal_parts.dmi'
-	icon_state = "default_monkey_r_leg"
-	animal_origin = MONKEY_BODYPART
-	px_y = 4
-
-/obj/item/bodypart/r_leg/alien
-	icon = 'icons/mob/animal_parts.dmi'
-	icon_state = "alien_r_leg"
-	px_x = 0
-	px_y = 0
-	dismemberable = 0
-	max_damage = 100
-	animal_origin = ALIEN_BODYPART
-
-/obj/item/bodypart/r_leg/devil
-	dismemberable = 0
-	max_damage = 5000
-	animal_origin = DEVIL_BODYPART

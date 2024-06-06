@@ -28,7 +28,7 @@
 	desc = "Painkiller and balm for bruises. Stings."
 	icon_state = "bruise_salve"
 	consume_type = SKIN_CONSUME
-	health_points = -10
+	brute_heal = 10
 	uses_verb = "applies"
 	use_verb = "apply"
 	usage_time = 10

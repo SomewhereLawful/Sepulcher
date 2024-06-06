@@ -139,10 +139,13 @@
 
 	var/list/missing = list(BODY_ZONE_HEAD, BODY_ZONE_CHEST, BODY_ZONE_L_ARM, BODY_ZONE_R_ARM, BODY_ZONE_L_LEG, BODY_ZONE_R_LEG)
 	var/list/disabled = list()
+	var/list/bleeding = list()
 	for(var/X in bodyparts)
 		var/obj/item/bodypart/BP = X
 		if(BP.disabled)
 			disabled += BP
+		if(BP.bleed_rate)
+			bleeding += BP
 		missing -= BP.body_zone
 		for(var/obj/item/I in BP.embedded_objects)
 			msg += "<B>[t_He] [t_has] \a [icon2html(I, user)] [I] embedded in [t_his] [BP.name]!</B>\n"
@@ -151,6 +154,13 @@
 		var/obj/item/bodypart/BP = X
 		var/more_brute = BP.brute_dam >= BP.burn_dam
 		msg += "<B>[capitalize(t_his)] [BP.name] is [more_brute ? "broken and mangled" : "burnt and blistered"]!</B>\n"
+
+	for(var/X in bleeding)
+		var/obj/item/bodypart/BP = X
+		if(BP.bleed_suppressed)
+			msg += "<B>[capitalize(t_his)] [BP.name] is bandaged.</B>\n"
+		else
+			msg += "<B>[capitalize(t_his)] [BP.name] is bleeding!</B>\n"
 
 	//stores missing limbs
 	var/l_limbs_missing = 0
@@ -181,6 +191,15 @@
 				msg += "[t_He] [t_has] <b>moderate</b> bruising!\n"
 			else
 				msg += "<B>[t_He] [t_has] severe bruising!</B>\n"
+
+		temp = getSlashLoss()
+		if(temp)
+			if(temp < 25)
+				msg += "[t_He] [t_has] some minor cuts.\n"
+			else if (temp < 50)
+				msg += "[t_He] [t_has] <b>moderate</b> lacerations!\n"
+			else
+				msg += "<B>[t_He] [t_has] severe lacerations!</B>\n"
 
 		temp = getFireLoss()
 		if(temp)
@@ -225,16 +244,8 @@
 		if(DISGUST_LEVEL_DISGUSTED to INFINITY)
 			msg += "[t_He] look[p_s()] extremely disgusted.\n"
 
-	if(blood_volume < BLOOD_VOLUME_SAFE)
+	if(blood_volume < BLOOD_NORMAL)
 		msg += "[t_He] [t_has] pale skin.\n"
-
-	if(bleedsuppress)
-		msg += "[t_He] [t_is] bandaged with something.\n"
-	else if(bleed_rate)
-		if(reagents.has_reagent("heparin"))
-			msg += "<b>[t_He] [t_is] bleeding uncontrollably!</b>\n"
-		else
-			msg += "<B>[t_He] [t_is] bleeding!</B>\n"
 
 	if(reagents.has_reagent("teslium"))
 		msg += "[t_He] [t_is] emitting a gentle blue glow!\n"

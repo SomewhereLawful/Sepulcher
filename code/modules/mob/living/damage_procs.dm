@@ -15,6 +15,8 @@
 	switch(damagetype)
 		if(BRUTE)
 			adjustBruteLoss(damage * hit_percent)
+		if(SLASH)
+			adjustSlashLoss(damage * hit_percent)
 		if(BURN)
 			adjustFireLoss(damage * hit_percent)
 		if(WILL)
@@ -33,6 +35,8 @@
 	switch(damagetype)
 		if(BRUTE)
 			return adjustBruteLoss(damage)
+		if(SLASH)
+			return adjustSlashLoss(damage)
 		if(BURN)
 			return adjustFireLoss(damage)
 		if(WILL)
@@ -50,6 +54,8 @@
 	switch(damagetype)
 		if(BRUTE)
 			return getBruteLoss()
+		if(SLASH)
+			return getSlashLoss()
 		if(BURN)
 			return getFireLoss()
 		if(WILL)
@@ -64,11 +70,13 @@
 			return getBrainLoss()
 
 
-/mob/living/proc/apply_damages(brute = 0, burn = 0, will = 0, hunger = 0, toxicity = 0, def_zone = null, blocked = FALSE, stamina = 0, brain = 0)
+/mob/living/proc/apply_damages(brute = 0, slash = 0, burn = 0, will = 0, hunger = 0, toxicity = 0, def_zone = null, blocked = FALSE, stamina = 0, brain = 0)
 	if(blocked >= 100)
 		return 0
 	if(brute)
 		apply_damage(brute, BRUTE, def_zone, blocked)
+	if(slash)
+		apply_damage(slash, SLASH, def_zone, blocked)
 	if(burn)
 		apply_damage(burn, BURN, def_zone, blocked)
 	if(will)
@@ -151,6 +159,28 @@
 		updatehealth()
 	return amount
 
+/mob/living/proc/getSlashLoss()
+	return slashloss
+
+/mob/living/proc/adjustSlashLoss(amount, updating_health = TRUE, forced = FALSE)
+	if(!forced && (status_flags & GODMODE))
+		return FALSE
+	slashloss = CLAMP((slashloss + (amount * CONFIG_GET(number/damage_multiplier))), 0, maxHealth * 2)
+	if(updating_health)
+		updatehealth()
+	return amount
+
+/mob/living/proc/getFireLoss()
+	return fireloss
+
+/mob/living/proc/adjustFireLoss(amount, updating_health = TRUE, forced = FALSE)
+	if(!forced && (status_flags & GODMODE))
+		return FALSE
+	fireloss = CLAMP((fireloss + (amount * CONFIG_GET(number/damage_multiplier))), 0, maxHealth * 2)
+	if(updating_health)
+		updatehealth()
+	return amount
+
 /mob/living/proc/getOxyLoss()
 	return oxyloss
 
@@ -185,17 +215,6 @@
 	if(!forced && (status_flags & GODMODE))
 		return FALSE
 	toxloss = amount
-	if(updating_health)
-		updatehealth()
-	return amount
-
-/mob/living/proc/getFireLoss()
-	return fireloss
-
-/mob/living/proc/adjustFireLoss(amount, updating_health = TRUE, forced = FALSE)
-	if(!forced && (status_flags & GODMODE))
-		return FALSE
-	fireloss = CLAMP((fireloss + (amount * CONFIG_GET(number/damage_multiplier))), 0, maxHealth * 2)
 	if(updating_health)
 		updatehealth()
 	return amount
@@ -238,8 +257,9 @@
 	return
 
 // heal ONE external organ, organ gets randomly selected from damaged ones.
-/mob/living/proc/heal_bodypart_damage(brute = 0, burn = 0, stamina = 0, updating_health = TRUE)
+/mob/living/proc/heal_bodypart_damage(brute = 0, slash = 0, burn = 0, stamina = 0, updating_health = TRUE)
 	adjustBruteLoss(-brute, FALSE) //zero as argument for no instant health update
+	adjustSlashLoss(-slash, FALSE)
 	adjustFireLoss(-burn, FALSE)
 	adjustStaminaLoss(-stamina, FALSE)
 	if(updating_health)
@@ -247,8 +267,9 @@
 		update_stamina()
 
 // damage ONE external organ, organ gets randomly selected from damaged ones.
-/mob/living/proc/take_bodypart_damage(brute = 0, burn = 0, stamina = 0, updating_health = TRUE)
+/mob/living/proc/take_bodypart_damage(brute = 0, slash = 0, burn = 0, stamina = 0, updating_health = TRUE)
 	adjustBruteLoss(brute, FALSE) //zero as argument for no instant health update
+	adjustSlashLoss(slash, FALSE)
 	adjustFireLoss(burn, FALSE)
 	adjustStaminaLoss(stamina, FALSE)
 	if(updating_health)
@@ -256,8 +277,9 @@
 		update_stamina()
 
 // heal MANY bodyparts, in random order
-/mob/living/proc/heal_overall_damage(brute = 0, burn = 0, stamina = 0, only_robotic = FALSE, only_organic = TRUE, updating_health = TRUE)
+/mob/living/proc/heal_overall_damage(brute = 0, slash = 0, burn = 0, stamina = 0, only_robotic = FALSE, only_organic = TRUE, updating_health = TRUE)
 	adjustBruteLoss(-brute, FALSE) //zero as argument for no instant health update
+	adjustSlashLoss(-slash, FALSE)
 	adjustFireLoss(-burn, FALSE)
 	adjustStaminaLoss(-stamina, FALSE)
 	if(updating_health)
@@ -265,8 +287,9 @@
 		update_stamina()
 
 // damage MANY bodyparts, in random order
-/mob/living/proc/take_overall_damage(brute = 0, burn = 0, stamina = 0, updating_health = TRUE)
+/mob/living/proc/take_overall_damage(brute = 0, slash = 0, burn = 0, stamina = 0, updating_health = TRUE)
 	adjustBruteLoss(brute, FALSE) //zero as argument for no instant health update
+	adjustSlashLoss(slash, FALSE)
 	adjustFireLoss(burn, FALSE)
 	adjustStaminaLoss(stamina, FALSE)
 	if(updating_health)

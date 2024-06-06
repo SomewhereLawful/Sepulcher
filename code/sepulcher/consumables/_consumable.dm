@@ -14,14 +14,17 @@
 	var/use_verb = "use"
 	var/uses_left = 1
 	/// in deciseconds
-	var/usage_time = null
+	var/usage_time = 10
 
-	// The meat and potatoes
-	var/health_points = 0
+	// Health
+	var/brute_heal = 0
+	var/slash_heal = 0
+	var/burn_heal = 0
+	var/bleed_suppression = 0
+	//stats
 	var/feed_points = 0
 	var/will_points = 0
 	var/toxicity_points = 0
-	var/bleed_suppression = 0
 	var/drunk_points = 0
 	/// Cures the declared parasite
 	var/cures_parasite = null
@@ -100,15 +103,22 @@
 			return
 	
 		playsound(M.loc, use_sound, 60)
+		var/mob/living/carbon/C = M
+		// health
+		M.adjustBruteLoss(brute_heal)
+		M.adjustSlashLoss(slash_heal)
+		M.adjustFireLoss(burn_heal)
+		if(bleed_suppression) // This unfortunately assumes all bleedheal is SKIN_CONSUME
+			var/obj/item/bodypart/affecting
+			affecting = C.get_bodypart(check_zone(user.zone_selected))
+			affecting.suppress_bloodloss(bleed_suppression)
+		// stats
 		M.adjustHunger(feed_points *= 10)
-		M.adjustBruteLoss(health_points)		
 		M.adjustWillLoss(will_points)
 		M.adjustToxicityGain(toxicity_points)
+		// other
+		C.drunkenness = max((C.drunkenness + drunk_points),0)
 
-		var/mob/living/carbon/C = M
-		var/mob/living/carbon/human/H = M // I hate it here
-		C.drunkenness = max((C.drunkenness + drunk_points),0) 
-		H.suppress_bloodloss(bleed_suppression)
 		SEND_SIGNAL(src, COMSIG_FOOD_EATEN, M, user)
 		--uses_left
 

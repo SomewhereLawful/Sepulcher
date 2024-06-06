@@ -1,3 +1,4 @@
+// NOTE: UNTICKED - _blood is the used one, due to changes for simpler blood
 /****************************************************
 				BLOOD SYSTEM
 ****************************************************/

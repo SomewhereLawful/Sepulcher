@@ -380,11 +380,17 @@
 /mob/living/proc/updatehealth()
 	if(status_flags & GODMODE)
 		return
-	health = maxHealth - getBruteLoss() - getFireLoss()
+	health = maxHealth - getBruteLoss() - getSlashLoss() - getFireLoss()
 	staminaloss = getStaminaLoss()
 	update_stat()
 	med_hud_set_health()
 	med_hud_set_status()
+
+/mob/living/proc/updatebloodloss()
+	if(status_flags & GODMODE)
+		return
+	blood_volume = maxblood_volume - getBloodloss()
+	update_stat()
 
 /mob/living/proc/updatewill() // Be sure to do that soon, gramps
 	if(status_flags & GODMODE)
@@ -448,7 +454,7 @@
 	cure_blind()
 	cure_husk()
 	hallucination = 0
-	heal_overall_damage(INFINITY, INFINITY, INFINITY, FALSE, FALSE, TRUE) //heal brute and burn dmg on both organic and robotic limbs, and update health right away.
+	heal_overall_damage(INFINITY, INFINITY, INFINITY, INFINITY, FALSE, FALSE, TRUE) //heal brute and burn dmg on both organic and robotic limbs, and update health right away.
 	ExtinguishMob()
 	fire_stacks = 0
 	confused = 0
@@ -557,7 +563,7 @@
 						TH.transfer_mob_blood_dna(src)
 
 /mob/living/carbon/human/makeTrail(turf/T)
-	if((NOBLOOD in dna.species.species_traits) || !bleed_rate || bleedsuppress)
+	if((NOBLOOD in dna.species.species_traits) || !human_bleed_rate)
 		return
 	..()
 

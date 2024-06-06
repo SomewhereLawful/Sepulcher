@@ -2,6 +2,7 @@
 
 /datum/physiology
 	var/brute_mod = 1   	// % of brute damage taken from all sources
+	var/slash_mod = 1		// % of slash damage taken from all sources
 	var/burn_mod = 1    	// % of burn damage taken from all sources
 	var/will_mod = 1     	// % of will damage taken from all sources
 	var/hunger_mod = 1     	// % of hunger damage taken from all sources, no effect on natural hunger decrease
