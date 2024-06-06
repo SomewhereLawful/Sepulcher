@@ -14,7 +14,7 @@
 	var/use_verb = "use"
 	var/uses_left = 1
 	/// in deciseconds
-	var/usage_time = 10
+	var/usage_time = null
 
 	// Health
 	var/brute_heal = 0
@@ -93,7 +93,6 @@
 					return 0
 
 //Handle ingestion of the item.
-
 	if(usage_time)
 		M.visible_message("<span class='warning'>[user] begins to [use_verb] the [src]...</span>", \
 							"<span class='warning'>[user] begins to [use_verb] the [src]...</span>")
@@ -101,7 +100,7 @@
 			M.visible_message("<span class='warning'>[user] fails to [use_verb] the [src].</span>", \
 								"<span class='warning'>[user] fails to [use_verb] the [src].</span>")
 			return
-	
+
 		playsound(M.loc, use_sound, 60)
 		var/mob/living/carbon/C = M
 		// health

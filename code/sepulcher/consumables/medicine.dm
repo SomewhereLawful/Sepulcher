@@ -3,6 +3,7 @@
 	name = "medical consumable"
 	icon = 'icons/obj/medicine.dmi'
 	icon_state = "broken"
+	usage_time = 10
 
 // Pills
 /obj/item/consumable/medicine/pill
