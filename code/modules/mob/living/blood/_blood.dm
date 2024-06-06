@@ -8,74 +8,73 @@
 	if(NOBLOOD in dna.species.species_traits)
 		return
 
-		//Blood regeneration if there is some space
-		if(blood_volume < BLOOD_NORMAL && !has_trait(TRAIT_NOHUNGER))
-			var/nutrition_ratio = 0
-			switch(hunger)
-				if(0 to 249)
-					nutrition_ratio = 0.2
-				if(250 to 499)
-					nutrition_ratio = 0.4
-				if(500 to 749)
-					nutrition_ratio = 0.6
-				if(750 to INFINITY)
-					nutrition_ratio = 0.8
-				else
-					nutrition_ratio = 1
-			adjustHunger((max(0, hunger - nutrition_ratio * HUNGER_FACTOR) * -1))
-			adjustBloodloss((min(BLOOD_NORMAL, blood_volume + 0.5 * nutrition_ratio) * -1))
+	//Blood regeneration if there is some space
+	if(blood_volume < BLOOD_NORMAL && !has_trait(TRAIT_NOHUNGER))
+		var/nutrition_ratio = 0
+		switch(hunger)
+			if(0 to 249)
+				nutrition_ratio = 0.2
+			if(250 to 499)
+				nutrition_ratio = 0.4
+			if(500 to 749)
+				nutrition_ratio = 0.6
+			if(750 to INFINITY)
+				nutrition_ratio = 0.8
+			else
+				nutrition_ratio = 1
+		hunger = max(0, hunger - nutrition_ratio * HUNGER_FACTOR)
+		blood_volume = min(BLOOD_NORMAL, blood_volume + 0.5 * nutrition_ratio)
 
-		//Effects of bloodloss
-		var/absence_word = pick("dizzy","woozy","faint")
-		switch(blood_volume)
-			if(BLOOD_EXCESS_LOW to BLOOD_EXCESS_HIGH)
-				if(prob(15))
-					to_chat(src, "<span class='red'><B>Ugh.... Your heart screams, your head splits...</B></span>")
-				adjustBruteLoss(5)
-			if(BLOOD_NORMAL to BLOOD_EXCESS_LOW)
-				if(prob(15))
-					to_chat(src, "<span class='red'>Your body feels swollen, your extremities hurt...</span>")
-				adjustBruteLoss(round((BLOOD_NORMAL + blood_volume) * 0.01, 1))
-			if(BLOOD_UNSAFE to BLOOD_NORMAL)
-				if(prob(5))
-					to_chat(src, "<span class='red'>You feel [absence_word].</span>")
-			if(BLOOD_CRITCAL to BLOOD_UNSAFE)
-				if(prob(5))
-					blur_eyes(6)
-					to_chat(src, "<span class='red'>You feel very [absence_word].</span>")
-			if(BLOOD_DEATH_THRESHOLD to BLOOD_CRITCAL)
-				if(prob(15))
-					Unconscious(rand(20,60))
-					to_chat(src, "<span class='red'>You feel extremely [absence_word].</span>")
-			if(-INFINITY to BLOOD_DEATH_THRESHOLD)
-				if(!has_trait(TRAIT_NODEATH))
-					death()
+	//Effects of bloodloss
+	var/absence_word = pick("dizzy","woozy","faint")
+	switch(blood_volume)
+		if(BLOOD_EXCESS_HIGH to INFINITY)
+			if(prob(20))
+				to_chat(src, "<span class='red'><B>Ugh.... Your heart screams, your head splits...</B></span>")
+			adjustBruteLoss(5)
+		if(BLOOD_EXCESS_LOW to BLOOD_EXCESS_HIGH)
+			if(prob(15))
+				to_chat(src, "<span class='red'>Your body feels swollen, your extremities hurt...</span>")
+			adjustBruteLoss(round((BLOOD_NORMAL + blood_volume) * 0.01, 1))
+		if(BLOOD_UNSAFE to BLOOD_NORMAL)
+			if(prob(15))
+				to_chat(src, "<span class='red'>You feel [absence_word].</span>")
+		if(BLOOD_CRITCAL to BLOOD_UNSAFE)
+			if(prob(20))
+				blur_eyes(6)
+				to_chat(src, "<span class='red'>You feel very [absence_word].</span>")
+		if(BLOOD_DEATH_THRESHOLD to BLOOD_CRITCAL)
+			if(prob(15))
+				Unconscious(rand(20,60))
+				to_chat(src, "<span class='red'>You feel extremely [absence_word].</span>")
+		if(-INFINITY to BLOOD_DEATH_THRESHOLD)
+			if(!has_trait(TRAIT_NODEATH))
+				death()
 
-		//Bleeding out
-		var/temp_bleed = 0
-		for(var/X in bodyparts)
-			var/obj/item/bodypart/BP = X
-			var/brutedamage = BP.brute_dam
-			var/bleeddamage = BP.bleed_rate
+	//Bleeding out
+	var/temp_bleed = 0
+	for(var/X in bodyparts)
+		var/obj/item/bodypart/BP = X
+		var/brutedamage = BP.brute_dam
 
-			//We want an accurate reading of .len
-			listclearnulls(BP.embedded_objects) // Innate bleed from the amt of embedded objects
-			temp_bleed += 0.5*BP.embedded_objects.len
+		//We want an accurate reading of .len
+		listclearnulls(BP.embedded_objects) // Innate bleed from the amt of embedded objects
+		temp_bleed += 0.5*BP.embedded_objects.len
 
-			if(brutedamage >= 20)
-				temp_bleed += (brutedamage * 0.013)
-			if(bleeddamage >= 5)
-				temp_bleed += bleeddamage
+		if(brutedamage >= 20)
+			temp_bleed += (brutedamage * 0.013)
+		if(BP.bleed_rate >= 5)
+			temp_bleed += BP.bleed_rate
 
-		if(temp_bleed && !(has_trait(TRAIT_FAKEDEATH)))
-			bleed(temp_bleed)
+	if(temp_bleed && !(has_trait(TRAIT_FAKEDEATH)))
+		bleed(temp_bleed)
 
 //Makes a blood drop, leaking amt units of blood from the mob
 /mob/living/carbon/proc/bleed(amt)
 	if(blood_volume)
 		adjustBloodloss(amt)
 		if(isturf(src.loc)) //Blood loss still happens in locker, floor stays clean
-			if(amt >= 20)
+			if(amt >= 10)
 				add_splatter_floor(src.loc)
 			else
 				add_splatter_floor(src.loc, 1)

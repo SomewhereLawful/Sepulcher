@@ -22,7 +22,7 @@
 
 //Blood level defines for Sepulcher's code
 #define BLOOD_EXCESS_HIGH		130
-#define BLOOD_EXCESS_LOW		110
+#define BLOOD_EXCESS_LOW		105
 #define BLOOD_NORMAL			100
 #define BLOOD_UNSAFE			85
 #define BLOOD_CRITCAL			60
