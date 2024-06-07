@@ -6,7 +6,7 @@
 /obj/item/consumable
 	name = "fucked up consumable"
 	desc = "fucked up"
-	icon = 'icons/obj/food.dmi'
+	icon = 'icons/obj/consumables/food.dmi'
 	icon_state = "broken"
 	var/consume_type = VAGUE_CONSUME
 	var/use_sound = 'sound/items/food_crunchy_1.ogg'
@@ -17,9 +17,9 @@
 	var/usage_time = null
 
 	// Health
-	var/brute_heal = 0
-	var/slash_heal = 0 // also heals bleed_rate on bleed_supression
-	var/burn_heal = 0
+	var/brute_points = 0
+	var/slash_points = 0 // also heals bleed_rate on bleed_supression
+	var/burn_points = 0
 
 	// Bleeds
 	/// How long the bleed_suppression lasts
@@ -30,6 +30,8 @@
 	var/feed_points = 0
 	var/will_points = 0
 	var/toxicity_points = 0
+
+	//statuses
 	var/drunk_points = 0
 
 	/// Cures the declared parasite
@@ -109,14 +111,14 @@
 		playsound(M.loc, use_sound, 60)
 		var/mob/living/carbon/C = M
 		// health
-		M.adjustBruteLoss(brute_heal)
-		M.adjustSlashLoss(slash_heal)
-		M.adjustFireLoss(burn_heal)
-		if(bleed_suppression) // This unfortunately assumes all bleedheal is SKIN_CONSUME
+		M.adjustBruteLoss(brute_points)
+		M.adjustSlashLoss(slash_points)
+		M.adjustFireLoss(burn_points)
+		if(bleed_suppression) // This unfortunately assumes all bleed heals is SKIN_CONSUME
 			var/obj/item/bodypart/affecting
 			affecting = C.get_bodypart(check_zone(user.zone_selected))
-			affecting.suppress_bloodloss(bleed_suppression)
-			affecting.bleed_rate += (slash_heal * 0.25) // bleed_rate is added by 1/4th of slash recieved
+			affecting.suppress_bloodloss(bleed_suppression * 10) // the *10 is to make deciseconds/ticks into more managable seconds
+			affecting.bleed_rate += (slash_points * 0.25) // bleed_rate is added by 1/4th of slash recieved
 		// stats
 		M.adjustHunger(feed_points *= 10)
 		M.adjustWillLoss(will_points)

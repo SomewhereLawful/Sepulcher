@@ -1,7 +1,7 @@
 // Sepulcher medicines //
 /obj/item/consumable/medicine
 	name = "medical consumable"
-	icon = 'icons/obj/medicine.dmi'
+	icon = 'icons/obj/consumables/medicine.dmi'
 	icon_state = "broken"
 	usage_time = 5
 
@@ -28,7 +28,7 @@
 	name = "necrosleep"
 	desc = "Mysterious pill. Looks transparent in the light..."
 	icon_state = "necrosleep"
-	toxicity_points = -15
+	toxicity_points = 15
 	will_points = 5
 
 // Salves
@@ -41,7 +41,15 @@
 	name = "bruise salve"
 	desc = "Painkiller and balm for bruises. Stings."
 	icon_state = "bruise_salve"
-	brute_heal = 10
+	brute_points = -10
+	usage_time = 5
+
+/obj/item/consumable/medicine/salve/iodine_sponge
+	name = "iodine sponge"
+	desc = "Musky and filthy. Cleanses wounds and burns."
+	icon_state = "iodine_sponge"
+	burn_points = -10
+	toxicity_points = -10
 	usage_time = 5
 
 // Gauze
@@ -52,16 +60,16 @@
 
 /obj/item/consumable/medicine/bandage/makeshift
 	name = "makeshift bandage"
-	desc = "Staunches bleeding."
-	icon_state = "bruise_salve"
-	bleed_suppression = 125
-	slash_heal = -10
+	desc = "Little more than rag. Should stabilize a limb for a moment."
+	icon_state = "makeshift_bandage"
+	bleed_suppression = 15.25
+	slash_points = -10
 	usage_time = 5
 
 /obj/item/consumable/medicine/bandage/standard
 	name = "sterile gauze"
 	desc = "Staunches bleeding."
 	icon_state = "standard_bandage"
-	bleed_suppression = 300
-	slash_heal = -20
+	bleed_suppression = 30
+	slash_points = -20
 	usage_time = 3

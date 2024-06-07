@@ -1,7 +1,7 @@
 /obj/item/consumable/food/drink
 	name = "broken fluid"
 	desc = "fluid broken"
-	icon = 'icons/obj/drink.dmi'
+	icon = 'icons/obj/consumables/drink.dmi'
 	icon_state = "broken"
 
 	use_sound = 'sound/items/drink_bottle.ogg'
