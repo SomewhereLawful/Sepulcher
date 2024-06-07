@@ -13,22 +13,27 @@
 	var/uses_verb = "uses"
 	var/use_verb = "use"
 	var/uses_left = 1
-	/// in deciseconds
+	/// in seconds
 	var/usage_time = null
 
 	// Health
 	var/brute_heal = 0
-	var/slash_heal = 0
+	var/slash_heal = 0 // also heals bleed_rate on bleed_supression
 	var/burn_heal = 0
+
+	// Bleeds
+	/// How long the bleed_suppression lasts
 	var/bleed_suppression = 0
+	var/bleed_rate_heal = 0
+
 	//stats
 	var/feed_points = 0
 	var/will_points = 0
 	var/toxicity_points = 0
 	var/drunk_points = 0
+
 	/// Cures the declared parasite
 	var/cures_parasite = null
-
 	var/byproduct_item = null
 
 /obj/item/consumable/proc/canconsume(mob/consumer, mob/user)
@@ -96,7 +101,7 @@
 	if(usage_time)
 		M.visible_message("<span class='warning'>[user] begins to [use_verb] the [src]...</span>", \
 							"<span class='warning'>[user] begins to [use_verb] the [src]...</span>")
-		if(!do_after(user, usage_time, target = src))
+		if(!do_after(user, (usage_time SECONDS), target = src))
 			M.visible_message("<span class='warning'>[user] fails to [use_verb] the [src].</span>", \
 								"<span class='warning'>[user] fails to [use_verb] the [src].</span>")
 			return
@@ -111,6 +116,7 @@
 			var/obj/item/bodypart/affecting
 			affecting = C.get_bodypart(check_zone(user.zone_selected))
 			affecting.suppress_bloodloss(bleed_suppression)
+			affecting.bleed_rate += (slash_heal * 0.25) // bleed_rate is added by 1/4th of slash recieved
 		// stats
 		M.adjustHunger(feed_points *= 10)
 		M.adjustWillLoss(will_points)

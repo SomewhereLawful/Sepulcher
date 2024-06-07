@@ -2,7 +2,7 @@
 	uses_verb = "eats"
 	use_verb = "eat"
 	consume_type = MOUTH_CONSUME
-	usage_time = 10
+	usage_time = 5
 
 /obj/item/consumable/food/goyslop
 	name = "food pack"
