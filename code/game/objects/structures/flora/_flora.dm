@@ -11,7 +11,7 @@
 	var/harvested = FALSE
 	var/harvest_time = 20
 	var/harvested_msg = "It's been harvested."
-	var/harvest_item = /obj/item/consumable/food/common_mushroom
+	var/harvest_item = /obj/item/consumable/food/plant/common_mushroom
 	// Harvest regrowth vars
 	var/regrowth_time_low = 3 MINUTES
 	var/regrowth_time_high = 5 MINUTES

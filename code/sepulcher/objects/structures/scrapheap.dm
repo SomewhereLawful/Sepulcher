@@ -7,7 +7,7 @@
 	desc = "Some broken metal of unknown origin."
 	icon_state = "scrap1"
 	feed_points = 2
-	brute_heal = -200 // eating sharp metal wrecks your organs
+	brute_points = -200 // eating sharp metal wrecks your organs
 	foundry_metal_amt = 1
 
 /obj/item/consumable/food/scrap/New()

@@ -22,24 +22,24 @@
 /obj/structure/farm_plant/common_mushroom
 	name = "mushroom"
 	icon_state = "common"
-	plant_product = /obj/item/consumable/food/common_mushroom
+	plant_product = /obj/item/consumable/food/plant/common_mushroom
 
 /obj/structure/farm_plant/crawler_cap
 	name = "crawler cap"
 	icon_state = "crawler"
-	plant_product = /obj/item/consumable/food/crawler_cap
+	plant_product = /obj/item/consumable/food/plant/crawler_cap
 
 /obj/structure/farm_plant/steelhead
 	name = "steelhead"
 	icon_state = "steelhead"
-	plant_product = /obj/item/consumable/food/steelhead
+	plant_product = /obj/item/consumable/food/plant/steelhead
 
 /obj/structure/farm_plant/thinhelmet
 	name = "thin helmet"
 	icon_state = "thinhelmet"
-	plant_product = /obj/item/consumable/food/thinhelmet
+	plant_product = /obj/item/consumable/food/plant/thinhelmet
 
 /obj/structure/farm_plant/sinew
 	name = "sinew strand"
 	icon_state = "sinew"
-	plant_product = /obj/item/consumable/food/sinew
+	plant_product = /obj/item/consumable/food/plant/sinew
