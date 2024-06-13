@@ -31,11 +31,9 @@
 	var/will_points = 0
 	var/toxicity_points = 0
 
-	//statuses
+	//misc
 	var/drunk_points = 0
-
-	/// Cures the declared parasite
-	var/cures_parasite = null
+	var/list/cures_parasite = list()
 	var/byproduct_item = null
 
 /obj/item/consumable/proc/canconsume(mob/consumer, mob/user)
