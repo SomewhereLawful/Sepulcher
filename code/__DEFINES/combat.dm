@@ -90,11 +90,14 @@
 #define ATTACK_EFFECT_BOOP		"boop" //Honk
 
 //intent defines
-#define INTENT_HELP   "help"
-#define INTENT_HANDLE "handle"
-#define INTENT_GRAB   "grab"
-#define INTENT_DISARM "disarm"
-#define INTENT_HARM   "harm"
+#define INTENT_HELP		"help"
+#define INTENT_HANDLE	"handle"
+#define INTENT_HARM		"harm"
+
+//V DEPRECIATED INTENTS V
+#define INTENT_DISARM	"disarm"
+#define INTENT_GRAB		"grab"
+
 //NOTE: INTENT_HOTKEY_* defines are not actual intents!
 //they are here to support hotkeys
 #define INTENT_HOTKEY_LEFT  "left"
