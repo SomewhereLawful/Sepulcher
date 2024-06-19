@@ -91,6 +91,7 @@
 
 //intent defines
 #define INTENT_HELP   "help"
+#define INTENT_HANDLE "handle"
 #define INTENT_GRAB   "grab"
 #define INTENT_DISARM "disarm"
 #define INTENT_HARM   "harm"

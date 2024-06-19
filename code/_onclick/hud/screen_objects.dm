@@ -171,6 +171,7 @@
 
 /obj/screen/act_intent
 	name = "intent"
+	icon = 'icons/mob/screen/screen_intent.dmi'
 	icon_state = "help"
 	screen_loc = ui_acti
 
@@ -182,17 +183,15 @@
 		var/_x = text2num(params2list(params)["icon-x"])
 		var/_y = text2num(params2list(params)["icon-y"])
 
-		if(_x<=16 && _y<=16)
-			usr.a_intent_change(INTENT_HARM)
+		if(_y>=35)
+			usr.a_intent_change(INTENT_HANDLE)
 
-		else if(_x<=16 && _y>=17)
+		else if(_x<=31)
 			usr.a_intent_change(INTENT_HELP)
 
-		else if(_x>=17 && _y<=16)
-			usr.a_intent_change(INTENT_GRAB)
+		else if(_x>=36)
+			usr.a_intent_change(INTENT_HARM)
 
-		else if(_x>=17 && _y>=17)
-			usr.a_intent_change(INTENT_DISARM)
 	else
 		return ..()
 
