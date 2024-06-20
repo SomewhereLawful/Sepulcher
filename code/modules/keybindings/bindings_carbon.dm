@@ -7,12 +7,9 @@
 			a_intent_change("help")
 			return
 		if("2")
-			a_intent_change("disarm")
+			a_intent_change("handle")
 			return
 		if("3")
-			a_intent_change("grab")
-			return
-		if("4")
 			a_intent_change("harm")
 			return
 	return ..()

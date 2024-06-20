@@ -29,7 +29,7 @@
 	static_inventory += using
 
 	if(mymob.possible_a_intents)
-		if(mymob.possible_a_intents.len == 4)
+		if(mymob.possible_a_intents.len == 3)
 			// All possible intents - full intent selector
 			action_intent = new /obj/screen/act_intent/segmented
 		else
