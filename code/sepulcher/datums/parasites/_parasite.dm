@@ -1,7 +1,3 @@
-
-// A code hodgepodge (shitheap) of diseases, embedded objects, and mutations
-// Coder discretion and holy water is advised
-
 // One per limb, one for head and one for torso
 #define PARASITE_LIMIT 6
 // One parasite per limb, no roommates
@@ -12,6 +8,7 @@
 	var/name = "black empty"
 	var/desc = "The null void in us all."
 	var/examine_hint = "Their eyes are glassy, their flesh rotten. Nothing out of the normal, then."
+	var/obj/item/parasite_item = null // If the parasite has an item version
 
 	//Stages
 	var/stage = 1
@@ -19,17 +16,15 @@
 	var/stage_prob = 4
 	var/stage_time = 3000
 
-	var/list/viable_mobtypes = list() //typepaths of viable mobs
-	var/list/infectable_biotypes = list(MOB_ORGANIC) // mostly redundancy since there may be mobs that are not organic
 	var/mob/living/carbon/affected_mob = null
 	/// Bodyparts/organs this parasite can infect
-	var/list/required_organs = list()
-	/// Can you give it to somebody else?
+	var/list/required_limbs = list()
 	var/transmittable = FALSE
 	/// Does it spread to other bodyparts?
 	var/body_spreading = FALSE
 	var/process_dead = FALSE //if this ticks while the host is dead, good for stuff like corpseworms
 	var/curable = TRUE
+
 	/// Time per stage, in deciseconds. Slight variation with host health.
 	var/cure_chance = 8
 	var/copy_type = null //if this is null, copies will use the type of the instance being copied
@@ -41,27 +36,29 @@
 	SSparasite.active_parasites.Remove(src)
 
 //add this parasite if the host does not already have too many
-/datum/parasite/proc/attempt_infect(mob/living/infectee, make_copy = TRUE)
-	if(infectee.parasites.len < PARASITE_LIMIT)
-		infect(infectee, make_copy)
+/datum/parasite/proc/attempt_infect(mob/living/carbon/infectee, /obj/item/bodypart/part_infecting, make_copy = TRUE)
+	if(infectee.parasites.len <= PARASITE_LIMIT)
+		infect(infectee, part_infecting, make_copy)
 		return TRUE
 	return FALSE
 
 // INVOKE THE PARASITE
-/datum/parasite/proc/infect(mob/living/infectee, make_copy = TRUE)
+/datum/parasite/proc/infect(mob/living/carbon/infectee, /obj/item/bodypart/part_infecting, make_copy = TRUE)
 	var/datum/parasite/P = make_copy ? Copy() : src
+
+	for(part_infecting in infectee.bodyparts)
+		part_infecting.affecting_parasite += P
 	infectee.parasites += P
 	P.affected_mob = infectee
-	SSparasite.active_parasites += P //Add it to the active parasites list, now that it's actually in a mob and being processed.
 
+	SSparasite.active_parasites += P //Add it to the active parasites list, now that it's actually in a mob and being processed.
 	P.after_add()
 
 /datum/parasite/proc/Copy()
 	//note that stage is not copied over - the copy starts over at stage 1
 	var/static/list/copy_vars = list("name", "desc", "examine_hint",
 									"max_stages", "stage_prob", "stage_time",
-									"viable_mobtypes", "infectable_biotypes",
-									"required_organs", "transmittable",
+									"required_limbs", "transmittable",
 									"body_spreading", "process_dead",
 									"curable", "cure_chance")
 
@@ -113,6 +110,8 @@
 /datum/parasite/proc/GetParasiteID()
 	return "[type]"
 
-/datum/parasite/proc/remove_parasite()
+/datum/parasite/proc/remove_parasite(/obj/item/bodypart/part_infected)
+	if(part_infected)
+		part_infected.affecting_parasite -= src
 	affected_mob.parasites -= src		//remove the datum from the list
 	affected_mob = null
