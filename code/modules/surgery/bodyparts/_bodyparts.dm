@@ -67,6 +67,7 @@
 	var/medium_burn_msg = "blistered"
 	var/heavy_burn_msg = "peeling away"
 
+	var/parasite_max = 1
 	var/list/affecting_parasite = list()
 
 /obj/item/bodypart/examine(mob/user)

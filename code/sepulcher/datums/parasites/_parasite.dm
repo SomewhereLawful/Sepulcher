@@ -36,18 +36,17 @@
 	SSparasite.active_parasites.Remove(src)
 
 //add this parasite if the host does not already have too many
-/datum/parasite/proc/attempt_infect(mob/living/carbon/infectee, /obj/item/bodypart/part_infecting, make_copy = TRUE)
+/datum/parasite/proc/attempt_infect(mob/living/carbon/infectee, part_infecting, make_copy = TRUE)
 	if(infectee.parasites.len <= PARASITE_LIMIT)
 		infect(infectee, part_infecting, make_copy)
 		return TRUE
 	return FALSE
 
 // INVOKE THE PARASITE
-/datum/parasite/proc/infect(mob/living/carbon/infectee, /obj/item/bodypart/part_infecting, make_copy = TRUE)
+/datum/parasite/proc/infect(mob/living/carbon/infectee, part_infecting, make_copy = TRUE)
 	var/datum/parasite/P = make_copy ? Copy() : src
-
-	for(part_infecting in infectee.bodyparts)
-		part_infecting.affecting_parasite += P
+	var/obj/item/bodypart/part_to_infect = part_infecting
+	part_to_infect.affecting_parasite += P
 	infectee.parasites += P
 	P.affected_mob = infectee
 
@@ -110,8 +109,9 @@
 /datum/parasite/proc/GetParasiteID()
 	return "[type]"
 
-/datum/parasite/proc/remove_parasite(/obj/item/bodypart/part_infected)
+/datum/parasite/proc/remove_parasite(part_infected)
+	var/obj/item/bodypart/part_to_deinfect = part_infected
 	if(part_infected)
-		part_infected.affecting_parasite -= src
+		part_to_deinfect.affecting_parasite -= src
 	affected_mob.parasites -= src		//remove the datum from the list
 	affected_mob = null
