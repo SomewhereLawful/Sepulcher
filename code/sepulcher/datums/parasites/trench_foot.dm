@@ -2,3 +2,4 @@
 	name = "trench foot"
 	desc = "The feet rot. Caused by immersion in cold, stagnant water."
 	required_limbs = list(/obj/item/bodypart/l_leg, /obj/item/bodypart/r_leg)
+	max_stages = 3
