@@ -26,6 +26,8 @@
 	if(stat == DEAD)
 		stop_sound_channel(CHANNEL_HEARTBEAT)
 
+	handle_parasites()
+
 	//Updates the number of stored chemicals for powers
 	handle_changeling()
 
@@ -264,6 +266,12 @@
 
 		if(stat != DEAD || D.process_dead)
 			D.stage_act()
+
+/mob/living/carbon/proc/handle_parasites()
+	for(var/thing in parasites)
+		var/datum/parasite/P = thing
+		if(stat != DEAD || P.process_dead)
+			P.stage_act()
 
 //todo generalize this and move hud out
 /mob/living/carbon/proc/handle_changeling()

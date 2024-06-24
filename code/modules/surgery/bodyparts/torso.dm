@@ -8,6 +8,7 @@
 	px_x = 0
 	px_y = 0
 	var/obj/item/cavity_item
+	parasite_max = 3
 
 /obj/item/bodypart/chest/Destroy()
 	if(cavity_item)

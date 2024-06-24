@@ -20,14 +20,16 @@
 /obj/structure/shit_source/proc/shit_collection(mob/user, collect_time, parasite_chance)
 	var/turf/T = get_step(src,output_dir) // Spawns product infront of the source
 	if(dung_amount == 0)
-		to_chat(user, "<span class='warning'>Nothing remains within the pipe.</span>")
+		to_chat(user, "<span class='red'>Nothing remains within the pipe.</span>")
 		return
 	if(do_after(user, collect_time, target = src))
 		new /obj/item/consumable/food/dung(T)
 		--dung_amount
 		if(prob(parasite_chance))
-			//I.ContractParasite(parasite)
-			to_chat(user, "<span class='warning'>Something would have infected you, but code is hard.</span>")
+			var/mob/living/carbon/C = user
+			var/obj/item/bodypart/BP = C.get_bodypart("[(user.active_hand_index % 2 == 0) ? "r" : "l" ]_arm")
+			C.ContractParasite(/datum/parasite/corpse_worms, BP)
+			to_chat(user, "<span class='red'>Hrmph... Something bit you.</span>")
 		if(dung_amount == 0)
 			icon_state = "[icon_state]-empty"
 			desc = "Empty, only stench and grime remains."
