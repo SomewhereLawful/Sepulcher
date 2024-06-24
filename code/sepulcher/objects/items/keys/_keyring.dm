@@ -1,3 +1,5 @@
+// ACTIVE DEV NOTE - ALL of this code is functional as intended, EXCEPT keyRemove shit
+// As to why that is, I don't know cause this whole thing is still under some code voodoo
 /obj/item/key_ring
 	name = "key ring"
 	icon = 'icons/obj/key.dmi'
@@ -7,77 +9,83 @@
 	var/list/keys_in_keyring = list()
 	var/obj/item/key/active_key
 	var/active_lock_id
-	var/key_amt
-	var/key_amt_max = 5
 	var/selection_index = 1
+	var/max_keys = 5
 
 /obj/item/key_ring/update_icon()
 	cut_overlays()
-	if(key_amt)
-		if(active_key)
-			var/key_amt_w_active = (key_amt - 1)
-			add_overlay("key_ring-active")
-			add_overlay("key_ring-key-[key_amt_w_active]")
-		else
-			add_overlay("key_ring-key-[key_amt]")
+	if(keys_in_keyring && !active_key)
+		add_overlay("key_ring-key-[keys_in_keyring.len]")
+	else if(keys_in_keyring && active_key)
+		var/key_amt_w_active = min(keys_in_keyring.len, max_keys) - 1
+		add_overlay("key_ring-active")
+		add_overlay("key_ring-key-[key_amt_w_active]")
 	else
 		return
 
 /obj/item/key_ring/examine(mob/user)
 	..()
-	to_chat(user, "<span class='magenta'>Alt-Click to cycle the key, click the [name] to remove a key.</span>")
+	to_chat(user, "<span class='magenta'>Alt-Click to remove the active key, click the [name] to cycle to the next key.</span>")
 	if(active_key)
 		to_chat(user, "<span class='magenta'>You currently are holding the [active_key.name].</span>")
+	if(keys_in_keyring)
+		if(keys_in_keyring.len == 1)
+			to_chat(user, "<span class='magenta'>There is only one key on the [name].</span>")
+		else
+			to_chat(user, "<span class='magenta'>There are [keys_in_keyring.len] keys on the [name].</span>")
+	else
+		to_chat(user, "<span class='magenta'>There are no keys on the [name].</span>")
 
-/obj/item/key_ring/proc/keyRemove(mob/user)
-	active_key = keys_in_keyring[selection_index]
-	key_amt = CLAMP((key_amt - 1), 0, key_amt_max)
-	keys_in_keyring -= active_key
+/obj/item/key_ring/proc/keyAdd(obj/item/key/k, mob/user)
+	if(k.key_ringable)
+		keys_in_keyring += k
+		qdel(k)
+		update_icon()
+		return 1
+	else
+		return 0
+
+/obj/item/key_ring/proc/keyRemove(obj/item/key/k, mob/user)
+	if(active_key)
+		keys_in_keyring -= k
+		user.put_in_inactive_hand(k)
+		active_key = null
+		update_icon()
+		return 1
+	else
+		return 0
 
 /obj/item/key_ring/proc/keyCycle(mob/user)
+	if(!keys_in_keyring)
+		to_chat(user,"The [name] is empty.")
+		return
+
 	active_key = keys_in_keyring[selection_index]
 	active_lock_id = active_key.lock_id
+
 	if(selection_index == keys_in_keyring.len)// Check if we've reached the end of the key list, reset to position 1 or add for next position
 		selection_index = 1
-		return
+		return 0
 	selection_index = CLAMP((selection_index + 1), 0, keys_in_keyring.len)
+	update_icon()
+	return 1
 
-/obj/item/key_ring/attackby(obj/item/key/I, mob/living/user, params)
-	if(!I.key_ringable)
+/obj/item/key_ring/attackby(obj/item/I, mob/living/user, params)
+	if(istype(I, /obj/item/key))
+		keyAdd(I)
+		to_chat(user,"You add the [active_key.name] to the [name].")
+	else
 		to_chat(user,"The [I.name] refuses the [name].")
 		return
-	else
-		key_amt = CLAMP((key_amt + 1), 0, key_amt_max)
-		keys_in_keyring += I
-		qdel(I)
-		to_chat(user,"You add the [active_key.name] to the [name].")
-		update_icon()
 
 /obj/item/key_ring/AltClick(mob/user)
-	if(!keys_in_keyring || keys_in_keyring.len == 0)
+	if(keys_in_keyring.len)
+		keyRemove(active_key)
+		to_chat(user,"You remove the [active_key.name].")
+	else
 		to_chat(user,"The [name] is empty.")
 		return
-	active_key = keys_in_keyring[selection_index]
-	key_amt = CLAMP((key_amt - 1), 0, key_amt_max)
-	keys_in_keyring -= active_key
-	to_chat(user,"You remove the [active_key.name].")
-	update_icon()
 
 /obj/item/key_ring/attack_self(mob/user)
-	if(!keys_in_keyring || keys_in_keyring.len == 0)
-		to_chat(user,"The [name] is empty.")
-		return
-	var/choice = input(user, "Decide your action:", "Key Ring Commands") as null|anything in list("Cycle next key","Remove current key")
-	if(do_after(user, 8, target = src))
-		switch(choice)
-			if("Cycle next key")
-				if(keys_in_keyring.len == 1)
-					to_chat(user,"There's only the [active_key.name] on the [name].")
-					return
-				keyCycle()
-				to_chat(user,"You cycle to the [active_key.name].")
-			if("Remove current key")
-				keyRemove()
-				to_chat(user,"You remove the [active_key.name].")
-	playsound(src, 'sound/effects/cloth_rustle1.ogg', 50, 0)
-	update_icon()
+	keyCycle()
+	to_chat(user,"You cycle to the [active_key.name].")
