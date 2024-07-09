@@ -172,8 +172,8 @@
 	icon_state = "candle1"
 	density = 0
 	light_color = LIGHT_COLOR_TUNGSTEN
-	light_power = 1
-	light_range = 2
+	light_power = 0.5
+	light_range = 3
 	layer = TURF_DECAL_LAYER
 
 /obj/structure/decor/candle/New()

@@ -935,6 +935,20 @@
 	. = ..()
 	set_species(race)
 
+// SEPULCHER RACES
+/mob/living/carbon/human/species/proletariat
+	race = /datum/species/proletariat
+
+/mob/living/carbon/human/species/safekeeper
+	race = /datum/species/safekeeper
+
+/mob/living/carbon/human/species/kommandant
+	race = /datum/species/kommandant
+
+/mob/living/carbon/human/species/vagrant
+	race = /datum/species/vagrant
+
+// LEGACY RACES
 /mob/living/carbon/human/species/abductor
 	race = /datum/species/abductor
 
