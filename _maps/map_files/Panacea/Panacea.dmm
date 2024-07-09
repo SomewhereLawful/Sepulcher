@@ -133,7 +133,10 @@
 	dir = 1;
 	pixel_y = 14
 	},
-/turf/open/indestructible/ground/floor/wood_floor,
+/turf/open/floor/f13{
+	tag = "icon-floorrusty";
+	icon_state = "floorrusty"
+	},
 /area/interior/fishery)
 "aO" = (
 /obj/effect/step_trigger/teleporter{
@@ -437,13 +440,6 @@
 /obj/structure/flora/grass/wasteland,
 /turf/open/indestructible/ground/outside/dirt,
 /area/exterior/city)
-"cC" = (
-/obj/effect/turf_decal/roadline{
-	dir = 1
-	},
-/obj/structure/ladder/unbreakable,
-/turf/open/indestructible/ground/outside/road,
-/area/exterior/city)
 "cE" = (
 /turf/open/indestructible/ground/outside/sidewalk/tile,
 /area/exterior/wastes)
@@ -586,6 +582,15 @@
 "ds" = (
 /turf/open/indestructible/ground/floor/lattice,
 /area/interior/city)
+"dx" = (
+/obj/structure/decor/carpet{
+	icon_state = "oldcovertatteredtwo"
+	},
+/turf/open/floor/f13{
+	tag = "icon-floorrusty";
+	icon_state = "floorrusty"
+	},
+/area/interior/foundry)
 "dz" = (
 /obj/structure/ladder/unbreakable{
 	id = "Sew2"
@@ -824,6 +829,16 @@
 /obj/structure/bookcase,
 /turf/open/indestructible/ground/floor/wood_floor,
 /area/interior/apartments)
+"fj" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/structure/chair/wood/normal,
+/turf/open/floor/f13{
+	tag = "icon-floorrusty";
+	icon_state = "floorrusty"
+	},
+/area/interior/foundry)
 "fp" = (
 /obj/effect/turf_decal/dirt_edge{
 	dir = 5
@@ -845,7 +860,11 @@
 /area/void)
 "fr" = (
 /obj/item/fishing_net,
-/turf/open/indestructible/ground/floor/wood_floor,
+/obj/effect/turf_decal/line,
+/turf/open/floor/f13{
+	tag = "icon-floorrusty";
+	icon_state = "floorrusty"
+	},
 /area/interior/fishery)
 "fv" = (
 /obj/structure/railing{
@@ -1003,6 +1022,20 @@
 	icon_state = "floorrusty"
 	},
 /area/interior/train_yard)
+"gF" = (
+/obj/structure/fence/post{
+	dir = 4
+	},
+/obj/structure/fence/end{
+	dir = 4;
+	pixel_x = -15
+	},
+/obj/structure/fence/end{
+	dir = 8;
+	pixel_x = 15
+	},
+/turf/open/indestructible/ground/outside/road,
+/area/exterior/city)
 "gJ" = (
 /obj/structure/decor/dump_bin/full,
 /turf/open/floor/f13{
@@ -1168,7 +1201,10 @@
 "hM" = (
 /obj/structure/rack,
 /obj/item/fishing_rod,
-/turf/open/indestructible/ground/floor/wood_floor,
+/turf/open/floor/f13{
+	tag = "icon-floorrusty";
+	icon_state = "floorrusty"
+	},
 /area/interior/fishery)
 "hR" = (
 /obj/effect/particle_effect/smoke/reality_edge,
@@ -1343,15 +1379,6 @@
 /obj/structure/flora/tree/tall,
 /turf/open/indestructible/ground/outside/desert,
 /area/exterior/wastes)
-"jm" = (
-/obj/machinery/light{
-	dir = 4
-	},
-/turf/open/floor/f13{
-	tag = "icon-floorrusty";
-	icon_state = "floorrusty"
-	},
-/area/interior/city)
 "jo" = (
 /obj/effect/spawner/fishing_spot_random,
 /obj/effect/turf_decal/water_edge{
@@ -1797,7 +1824,11 @@
 /area/interior/city)
 "me" = (
 /obj/structure/decor/spool,
-/turf/open/indestructible/ground/floor/wood_floor,
+/obj/effect/turf_decal/line,
+/turf/open/floor/f13{
+	tag = "icon-floorrusty";
+	icon_state = "floorrusty"
+	},
 /area/interior/fishery)
 "mk" = (
 /obj/structure/railing{
@@ -2555,7 +2586,11 @@
 /area/interior/train_yard)
 "qP" = (
 /obj/structure/chair/stool/wood,
-/turf/open/indestructible/ground/floor/wood_floor,
+/obj/effect/turf_decal/line,
+/turf/open/floor/f13{
+	tag = "icon-floorrusty";
+	icon_state = "floorrusty"
+	},
 /area/interior/fishery)
 "qQ" = (
 /turf/open/indestructible/ground/floor/wood_floor/horizontal,
@@ -2837,8 +2872,9 @@
 	},
 /area/interior/train_yard)
 "sV" = (
-/turf/open/indestructible/ground/floor/wood_floor,
-/area/interior/fishery)
+/obj/structure/campfire/drum,
+/turf/open/indestructible/ground/outside/sidewalk/tile,
+/area/exterior/city/church_yard)
 "sW" = (
 /obj/structure/chair/wood/normal,
 /obj/machinery/light{
@@ -3342,6 +3378,12 @@
 	icon_state = "floorrusty"
 	},
 /area/interior/apartments)
+"vF" = (
+/obj/structure/wreck/car{
+	dir = 10
+	},
+/turf/open/indestructible/ground/outside/sidewalk/tile,
+/area/exterior/city)
 "vG" = (
 /obj/effect/turf_decal/line,
 /obj/structure/decor/cig_trash,
@@ -3504,7 +3546,10 @@
 /area/void)
 "wB" = (
 /obj/item/twohanded/melee/whale_hook,
-/turf/open/indestructible/ground/floor/wood_floor,
+/turf/open/floor/f13{
+	tag = "icon-floorrusty";
+	icon_state = "floorrusty"
+	},
 /area/interior/fishery)
 "wD" = (
 /obj/structure/decor/carpet{
@@ -3958,13 +4003,12 @@
 	},
 /area/void)
 "zA" = (
-/obj/structure/table,
-/obj/item/clothing/suit/fishing_waders,
+/obj/effect/turf_decal/line,
 /turf/open/floor/f13{
 	tag = "icon-floorrusty";
 	icon_state = "floorrusty"
 	},
-/area/interior/fishery)
+/area/interior/foundry)
 "zD" = (
 /obj/structure/decor/cig_trash,
 /obj/effect/turf_decal/line{
@@ -4216,7 +4260,10 @@
 	pixel_x = -16;
 	pixel_y = -9
 	},
-/turf/open/indestructible/ground/floor/wood_floor,
+/turf/open/floor/f13{
+	tag = "icon-floorrusty";
+	icon_state = "floorrusty"
+	},
 /area/interior/fishery)
 "Bq" = (
 /obj/effect/turf_decal/roadline/noshadow{
@@ -4576,8 +4623,9 @@
 "DO" = (
 /obj/structure/table/stalker,
 /obj/item/fishing_net,
-/turf/open/indestructible/ground/floor/lattice{
-	icon_state = "lattice_water"
+/turf/open/floor/f13{
+	tag = "icon-floorrusty";
+	icon_state = "floorrusty"
 	},
 /area/interior/fishery)
 "DR" = (
@@ -4624,13 +4672,9 @@
 /turf/open/chasm/foundry,
 /area/interior/foundry)
 "Eh" = (
-/obj/structure/table,
-/obj/item/twohanded/melee/whale_hook,
-/turf/open/floor/f13{
-	tag = "icon-floorrusty";
-	icon_state = "floorrusty"
-	},
-/area/interior/fishery)
+/obj/structure/decor/waste,
+/turf/open/indestructible/ground/outside/sidewalk/tile,
+/area/exterior/city/church_yard)
 "Ei" = (
 /obj/structure/chair/stool/wood,
 /turf/open/indestructible/ground/floor/wood_floor,
@@ -5599,8 +5643,9 @@
 	pixel_x = -13;
 	pixel_y = -8
 	},
-/turf/open/indestructible/ground/floor/lattice{
-	icon_state = "lattice_water"
+/turf/open/floor/f13{
+	tag = "icon-floorrusty";
+	icon_state = "floorrusty"
 	},
 /area/interior/fishery)
 "JJ" = (
@@ -5643,15 +5688,11 @@
 	},
 /area/interior/train_yard)
 "JT" = (
-/obj/machinery/light/small{
-	dir = 4
+/obj/structure/shitheap{
+	pixel_y = -3
 	},
-/obj/structure/closet/fridge,
-/turf/open/floor/f13{
-	tag = "icon-floorrusty";
-	icon_state = "floorrusty"
-	},
-/area/interior/city)
+/turf/open/indestructible/ground/outside/dirt,
+/area/exterior/city/church_yard)
 "JZ" = (
 /obj/structure/lattice/catwalk{
 	icon_state = "catwalk15-10"
@@ -5807,6 +5848,10 @@
 	icon_state = "yellowdirtysolid"
 	},
 /area/interior/foundry/sublevel)
+"KW" = (
+/obj/structure/decor/wood_scrap,
+/turf/open/indestructible/ground/outside/sidewalk/tile,
+/area/exterior/city/church_yard)
 "KZ" = (
 /obj/effect/turf_decal/roadline/noshadow{
 	dir = 4
@@ -6568,7 +6613,10 @@
 /area/interior/foundry)
 "PC" = (
 /obj/item/fishing_rod,
-/turf/open/indestructible/ground/floor/wood_floor,
+/turf/open/floor/f13{
+	tag = "icon-floorrusty";
+	icon_state = "floorrusty"
+	},
 /area/interior/fishery)
 "PD" = (
 /obj/structure/decor/dump_bin/full,
@@ -7335,7 +7383,10 @@
 "UF" = (
 /obj/structure/chair/stool/wood,
 /obj/item/clothing/head/straw_hat,
-/turf/open/indestructible/ground/floor/wood_floor,
+/turf/open/floor/f13{
+	tag = "icon-floorrusty";
+	icon_state = "floorrusty"
+	},
 /area/interior/fishery)
 "UG" = (
 /obj/structure/lattice/catwalk{
@@ -7400,6 +7451,16 @@
 	icon_state = "floorrustysolid"
 	},
 /area/interior/train_yard)
+"UU" = (
+/obj/structure/table,
+/obj/structure/barricade/bars{
+	plane = -ssssssssssssssssss0.5
+	},
+/turf/open/floor/f13{
+	tag = "icon-floorrusty";
+	icon_state = "floorrusty"
+	},
+/area/interior/foundry)
 "UX" = (
 /obj/effect/turf_decal/roadline/noshadow{
 	dir = 9
@@ -7530,8 +7591,9 @@
 	},
 /obj/structure/table/stalker,
 /obj/item/fishing_net,
-/turf/open/indestructible/ground/floor/lattice{
-	icon_state = "lattice_water"
+/turf/open/floor/f13{
+	tag = "icon-floorrusty";
+	icon_state = "floorrusty"
 	},
 /area/interior/fishery)
 "VJ" = (
@@ -8127,9 +8189,11 @@
 /turf/open/indestructible/ground/floor/wood_floor/horizontal,
 /area/interior/city)
 "ZF" = (
-/obj/machinery/light/small,
-/turf/open/indestructible/ground/floor/wood_floor,
-/area/interior/fishery)
+/obj/structure/wreck/car{
+	dir = 4
+	},
+/turf/open/indestructible/ground/outside/road,
+/area/exterior/city)
 "ZG" = (
 /obj/structure/chair/stool/wood,
 /turf/open/indestructible/ground/floor/wood_floor/horizontal,
@@ -26070,8 +26134,8 @@ XX
 XX
 sj
 sj
-Ly
-Ly
+sj
+sj
 Ly
 Ly
 Ly
@@ -26326,9 +26390,9 @@ XX
 XX
 XX
 XX
+XX
+XX
 sj
-Ly
-Ly
 Ly
 Ly
 vH
@@ -26583,9 +26647,9 @@ XX
 XX
 XX
 XX
+XX
+XX
 sj
-Ly
-Ly
 Ly
 vH
 yX
@@ -26840,9 +26904,9 @@ XX
 XX
 XX
 XX
+XX
+XX
 sj
-Ly
-Ly
 Ly
 Ha
 Kj
@@ -27097,9 +27161,9 @@ XX
 XX
 XX
 XX
+XX
+XX
 sj
-Ly
-Ly
 Ly
 Ha
 Vh
@@ -27355,8 +27419,8 @@ XX
 XX
 XX
 sj
-Ly
-Ly
+sj
+sj
 Ly
 Sn
 Vh
@@ -28631,7 +28695,7 @@ rc
 rc
 rc
 rc
-cC
+TI
 Ly
 KP
 Ly
@@ -30160,7 +30224,7 @@ wV
 Wu
 ML
 yi
-yi
+Mu
 NV
 NV
 NV
@@ -30416,10 +30480,10 @@ yA
 ks
 tG
 xf
-yi
+zA
 yi
 NV
-Ly
+zN
 Pq
 Pq
 eO
@@ -30673,7 +30737,7 @@ UG
 Vq
 pF
 xf
-yi
+zA
 yi
 xd
 Pq
@@ -30930,7 +30994,7 @@ qk
 wV
 Wu
 ML
-yi
+zA
 yi
 xd
 eO
@@ -30966,7 +31030,7 @@ Pq
 cy
 sj
 SB
-jm
+kJ
 jd
 sj
 Ly
@@ -31187,14 +31251,14 @@ mT
 Hd
 Wu
 xl
-yi
+zA
 vk
 NV
-Ly
+Ba
 Pq
 Pq
 Pq
-cR
+gF
 Ly
 Pq
 Pq
@@ -31444,15 +31508,15 @@ qk
 wV
 Wu
 ML
-yi
+zA
 yi
 xd
 Pq
 Pq
 PT
 Pq
-ez
-Ly
+Pq
+Pq
 eO
 Pq
 Ly
@@ -31701,15 +31765,15 @@ aH
 ks
 tG
 xf
-yi
+zA
 ye
 xd
 Pq
 Pq
 Pq
 Pq
-ee
-zN
+Pq
+Pq
 Pq
 ZI
 ah
@@ -31958,24 +32022,24 @@ YG
 Vq
 pF
 xf
-yi
+zA
 XI
 NV
-Ly
-Pq
-Pq
-Sm
-ez
 ab
 Pq
 Pq
+Sm
+cR
+Ly
+Pq
+Pq
 Ly
 Ly
 Ly
 Ly
-Ly
-Ly
-Ly
+ZF
+Oe
+Oe
 Ly
 Ly
 Pq
@@ -32473,12 +32537,12 @@ wV
 Wu
 ML
 yi
-NV
-mz
-NV
+pY
+yi
+UU
 yi
 Gn
-yi
+dx
 pY
 Pq
 Pq
@@ -32731,8 +32795,8 @@ tG
 xf
 yi
 NV
-mz
-NV
+fj
+UU
 yi
 yi
 yi
@@ -32742,7 +32806,7 @@ Pq
 Pq
 Pq
 Pq
-Pq
+vF
 Pq
 Pq
 Pq
@@ -32991,7 +33055,7 @@ NV
 NV
 NV
 pY
-pY
+NV
 NV
 NV
 Ba
@@ -36093,8 +36157,8 @@ sj
 sj
 YI
 eX
-JT
-sj
+kJ
+sc
 Ly
 Ly
 sj
@@ -36607,9 +36671,9 @@ XX
 XX
 XX
 XX
-XX
 sj
-sj
+Oe
+KP
 Ly
 sj
 XL
@@ -36864,10 +36928,10 @@ XX
 XX
 XX
 XX
-XX
-XX
 sj
+Oe
 Ly
+KP
 sj
 Py
 nr
@@ -37123,7 +37187,7 @@ XX
 XX
 sj
 sj
-sj
+Ly
 Ly
 sj
 sj
@@ -37378,8 +37442,8 @@ XX
 XX
 XX
 XX
+XX
 sj
-Ly
 Ly
 sa
 sj
@@ -37636,7 +37700,7 @@ XX
 XX
 XX
 sj
-Ly
+sj
 Ly
 Ly
 sj
@@ -42236,7 +42300,7 @@ gW
 jL
 lz
 Kc
-lz
+Qw
 Qw
 Nt
 Qw
@@ -42494,7 +42558,7 @@ jL
 lz
 Qw
 Qw
-Qw
+pJ
 pJ
 Sh
 Ri
@@ -42753,8 +42817,8 @@ Qw
 qa
 pJ
 pJ
-pJ
-pJ
+bR
+bR
 Ri
 Qw
 Qw
@@ -43265,9 +43329,9 @@ uP
 Qw
 Qw
 qa
+bR
 pJ
-bR
-bR
+Kl
 pJ
 pJ
 Nt
@@ -43517,15 +43581,15 @@ Qw
 Qw
 wB
 qP
-sV
-sV
-sV
+pJ
+pJ
+pJ
 Qw
 pJ
+bR
 pJ
-pJ
-Kl
-pJ
+bR
+bR
 pJ
 Qw
 wc
@@ -43775,13 +43839,13 @@ lm
 zn
 DL
 aK
-bR
-sV
+pJ
+pJ
 Qw
 po
+bR
 pJ
-bR
-bR
+pJ
 pJ
 pJ
 Qw
@@ -44031,15 +44095,15 @@ sx
 sx
 sx
 tf
-sV
-bR
-ZF
+pJ
+pJ
+eN
 Qw
 Rk
 pJ
-zA
-Ri
-eN
+pJ
+Qw
+Qw
 Qw
 Qw
 Qw
@@ -44290,19 +44354,19 @@ QZ
 pA
 aK
 JG
-sV
+pJ
 ZO
 pJ
-pJ
-bR
 bR
 pJ
 Qw
-bc
+PY
+PY
 PY
 PY
 bc
 Qw
+Ly
 Ly
 sa
 uR
@@ -44541,25 +44605,25 @@ Ds
 Ds
 EF
 Qw
-sV
+pJ
 PC
 UF
 fr
 Bm
-sV
-sV
+pJ
+pJ
 ZO
 pJ
-pJ
-pJ
-pJ
+bR
 pJ
 Fb
 PY
 PY
 om
+PY
 bc
 Qw
+Ly
 Ly
 Ly
 uR
@@ -44804,19 +44868,19 @@ Nr
 DL
 aK
 VI
-sV
+pJ
 ZO
 pJ
-pJ
-pJ
-pJ
+bR
 pJ
 Qw
 PY
 PY
 PY
+PY
+PY
 Qw
-Qw
+Ly
 Ly
 Ly
 uR
@@ -45059,17 +45123,17 @@ aF
 sx
 sx
 oD
-sV
+pJ
 DO
-ZF
+eN
 Qw
 lL
 Ux
 RU
-Eh
 Qw
-Qw
-Qw
+bc
+bc
+bc
 Qw
 Qw
 Qw
@@ -45316,18 +45380,18 @@ Pz
 do
 QZ
 pA
-sV
-bR
-sV
+pJ
+pJ
+pJ
 Qw
 Qw
 Qw
 Qw
 Qw
 Qw
-XX
-XX
-XX
+Qw
+Qw
+Qw
 XX
 Qw
 Ly
@@ -45573,9 +45637,9 @@ Qw
 Qw
 hM
 me
-sV
-sV
-sV
+pJ
+pJ
+pJ
 Qw
 XX
 XX
@@ -46117,7 +46181,7 @@ WM
 WM
 CP
 WM
-WM
+zb
 WM
 uR
 WM
@@ -46367,15 +46431,15 @@ XX
 PO
 WM
 WM
-WM
+uR
 Dr
 WM
 WM
 WM
-WM
-WM
+uR
+Ei
 zu
-WM
+zb
 uR
 Fj
 WM
@@ -48949,7 +49013,7 @@ oO
 oO
 UH
 zs
-ql
+Eh
 ql
 qM
 zs
@@ -49721,7 +49785,7 @@ oO
 OR
 oO
 wg
-ql
+Eh
 ql
 QO
 sj
@@ -50234,7 +50298,7 @@ OR
 oO
 oO
 zs
-ql
+KW
 ql
 ql
 EH
@@ -50486,7 +50550,7 @@ Av
 oO
 OR
 rq
-oO
+JT
 oO
 oO
 sh
@@ -51006,7 +51070,7 @@ ql
 ql
 ql
 ql
-ql
+KW
 EH
 oO
 oO
@@ -51259,7 +51323,7 @@ ql
 ql
 ql
 ql
-ql
+Eh
 ql
 ql
 ql
@@ -51514,9 +51578,9 @@ qs
 ql
 qM
 wg
+sV
 ql
-ql
-ql
+KW
 ql
 qM
 Si
